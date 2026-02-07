@@ -1,0 +1,171 @@
+{
+  "$schema": "https://melvoridle.com/assets/schema/gameData.json",
+  "namespace": "ntmyk",
+  "data": {
+    "shopDisplayOrder": [
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Multi_Tree",
+        "ids": [
+          "ntmyk:Multi_Tree_II",
+          "ntmyk:Multi_Tree_III"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Auto_Eat_Tier_III",
+        "ids": [
+          "ntmyk:Auto_Eat_Tier_IV",
+          "ntmyk:Auto_Eat_Tier_V"
+        ]
+      }
+    ],
+    "shopPurchases": [
+      {
+        "id": "Multi_Tree_II",
+        "media": "assets/shop/woodcutting_multi_tree.svg",
+        "category": "melvorD:General",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "treeCutLimit": 1
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 25000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "purchaseID": "melvorD:Multi_Tree",
+            "count": 1
+          }
+        ],
+        "purchaseRequirements": [],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Multi-Tree II",
+        "customDescription": "Unlock the ability to cut 3 different trees in Woodcutting. Logs, Skill XP and Mastery XP granted based on highest interval."
+      },
+      {
+        "id": "Multi_Tree_III",
+        "media": "assets/woodcutting_multi_tree.png",
+        "category": "melvorD:General",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "treeCutLimit": 1
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 150000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "purchaseID": "ntmyk:Multi_Tree_II",
+            "count": 1
+          }
+        ],
+        "purchaseRequirements": [],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Multi-Tree III",
+        "customDescription": "Unlock the ability to cut 4 different trees in Woodcutting. Logs, Skill XP and Mastery XP granted based on highest interval."
+      },
+      {
+        "id": "Auto_Eat_Tier_IV",
+        "media": "assets/shop/autoeat.svg",
+        "category": "melvorD:General",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "autoEatThreshold": 5,
+            "autoEatEfficiency": 10,
+            "autoEatHPLimit": 10
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 100000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "purchaseID": "melvorD:Auto_Eat_Tier_III",
+            "count": 1
+          }
+        ],
+        "purchaseRequirements": [],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Auto Eat - Tier IV",
+        "customDescription": "Using your current equipped food only, automatically consume the food to fill your Hitpoints to at least 90% when it is equal to or below 45% Hitpoints. Food Efficiency: 110% (Food heals for 110% of the value shown when Auto Eating)."
+      },
+      {
+        "id": "Auto_Eat_Tier_V",
+        "media": "assets/shop/autoeat.svg",
+        "category": "melvorD:General",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "autoEatThreshold": 5,
+            "autoEatEfficiency": 5,
+            "autoEatHPLimit": 5
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 500000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "purchaseID": "ntmyk:Auto_Eat_Tier_IV",
+            "count": 1
+          }
+        ],
+        "purchaseRequirements": [],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Auto Eat - Tier V",
+        "customDescription": "Using your current equipped food only, automatically consume the food to fill your Hitpoints to at least 95% when it is equal to or below 50% Hitpoints. Food Efficiency: 115% (Food heals for 115% of the value shown when Auto Eating)."
+      }
+    ]
+  },
+  "modifications": {}
+}
