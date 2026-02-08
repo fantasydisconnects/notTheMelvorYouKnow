@@ -57,6 +57,12 @@
           "ntmyk:Hoe_Adamant",
           "ntmyk:Hoe_Rune",
           "ntmyk:Hoe_Dragon",
+          "ntmyk:Mark_Stag",
+          "ntmyk:Mark_Beetle",
+          "ntmyk:Mark_Swan",
+          "ntmyk:Mark_Tiger",
+          "ntmyk:Mark_Bear",
+          "ntmyk:Mark_Bison",
           "ntmyk:Telescope_Iron",
           "ntmyk:Telescope_Steel",
           "ntmyk:Telescope_Black",
@@ -104,7 +110,7 @@
                 "value": -1
               }
             ],
-            "doubleItemsSkill": [
+            "skillItemDoublingChance": [
               {
                 "skillID": "melvorD:Smithing",
                 "value": 1
@@ -144,7 +150,7 @@
                 "value": -1
               }
             ],
-            "doubleItemsSkill": [
+            "skillItemDoublingChance": [
               {
                 "skillID": "melvorD:Smithing",
                 "value": 1
@@ -196,7 +202,7 @@
                 "value": -1
               }
             ],
-            "doubleItemsSkill": [
+            "skillItemDoublingChance": [
               {
                 "skillID": "melvorD:Smithing",
                 "value": 1
@@ -248,7 +254,7 @@
                 "value": -1
               }
             ],
-            "doubleItemsSkill": [
+            "skillItemDoublingChance": [
               {
                 "skillID": "melvorD:Smithing",
                 "value": 1
@@ -300,7 +306,7 @@
                 "value": -1
               }
             ],
-            "doubleItemsSkill": [
+            "skillItemDoublingChance": [
               {
                 "skillID": "melvorD:Smithing",
                 "value": 1
@@ -352,7 +358,7 @@
                 "value": -1
               }
             ],
-            "doubleItemsSkill": [
+            "skillItemDoublingChance": [
               {
                 "skillID": "melvorD:Smithing",
                 "value": 1
@@ -392,8 +398,8 @@
         "customDescription": "-1% Smithing Interval for a total of -6% applied from your Anvil. +1% chance to double smithed items per action for a total of +6% applied from your Anvil."
       },
       {
-        "id": "Anvil_Steel",
-        "media": "assets/shop/anvil_steel.png",
+        "id": "Anvil_Dragon",
+        "media": "assets/shop/anvil_dragon.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -404,7 +410,7 @@
                 "value": -1
               }
             ],
-            "doubleItemsSkill": [
+            "skillItemDoublingChance": [
               {
                 "skillID": "melvorD:Smithing",
                 "value": 1
@@ -451,7 +457,12 @@
           "items": [],
           "modifiers": {
             "altMagicRunePreservationChance": 5,
-            "altMagicSkillXP": 1
+            "skillItemDoublingChance": [
+              {
+                "skillID": "melvorD:Magic",
+                "value": 1
+              }
+            ]
           }
         },
         "cost": {
@@ -477,7 +488,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Tauric Arcanolinth",
-        "customDescription": "+1% Alt. Magic XP for a total of +1% Alt. Magic XP from your Arcanolinth. +5% chance to preserve runes in Alt. Magic for a total of +5% from your Arcanolinth."
+        "customDescription": "+1% chance to double items in Alt. Magic for a total of +1% from your Arcanolinth. +5% chance to preserve runes in Alt. Magic for a total of +5% from your Arcanolinth."
       },
       {
         "id": "Arcanolinth_Spheric",
@@ -487,7 +498,12 @@
           "items": [],
           "modifiers": {
             "altMagicRunePreservationChance": 5,
-            "altMagicSkillXP": 1
+            "skillItemDoublingChance": [
+              {
+                "skillID": "melvorD:Magic",
+                "value": 1
+              }
+            ]
           }
         },
         "cost": {
@@ -519,7 +535,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Spheric Arcanolinth",
-        "customDescription": "+1% Alt. Magic XP for a total of +2% Alt. Magic XP from your Arcanolinth. +5% chance to preserve runes in Alt. Magic for a total of +10% from your Arcanolinth."
+        "customDescription": "+1% chance to double items in Alt. Magic for a total of +2% from your Arcanolinth. +5% chance to preserve runes in Alt. Magic for a total of +10% from your Arcanolinth."
       },
       {
         "id": "Arcanolinth_Tetrahedric",
@@ -529,7 +545,12 @@
           "items": [],
           "modifiers": {
             "altMagicRunePreservationChance": 5,
-            "altMagicSkillXP": 1
+            "skillItemDoublingChance": [
+              {
+                "skillID": "melvorD:Magic",
+                "value": 1
+              }
+            ]
           }
         },
         "cost": {
@@ -561,7 +582,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Tetrahedric Arcanolinth",
-        "customDescription": "+1% Alt. Magic XP for a total of +3% Alt. Magic XP from your Arcanolinth. +5% chance to preserve runes in Alt. Magic for a total of +15% from your Arcanolinth."
+        "customDescription": "+1% to double items in Alt. Magic for a total of +3% chance from your Arcanolinth. +5% chance to preserve runes in Alt. Magic for a total of +15% from your Arcanolinth."
       },
       {
         "id": "Arcanolinth_Cubic",
@@ -571,7 +592,12 @@
           "items": [],
           "modifiers": {
             "altMagicRunePreservationChance": 5,
-            "altMagicSkillXP": 1
+            "skillItemDoublingChance": [
+              {
+                "skillID": "melvorD:Magic",
+                "value": 1
+              }
+            ]
           }
         },
         "cost": {
@@ -603,7 +629,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Cubic Arcanolinth",
-        "customDescription": "+1% Alt. Magic XP for a total of +4% Alt. Magic XP from your Arcanolinth. +5% chance to preserve runes in Alt. Magic for a total of +20% from your Arcanolinth."
+        "customDescription": "+1% to double items in Alt. Magic for a total of +4% chance from your Arcanolinth. +5% chance to preserve runes in Alt. Magic for a total of +20% from your Arcanolinth."
       },
       {
         "id": "Arcanolinth_Octahedric",
@@ -613,7 +639,12 @@
           "items": [],
           "modifiers": {
             "altMagicRunePreservationChance": 5,
-            "altMagicSkillXP": 1
+            "skillItemDoublingChance": [
+              {
+                "skillID": "melvorD:Magic",
+                "value": 1
+              }
+            ]
           }
         },
         "cost": {
@@ -645,7 +676,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Octahedric Arcanolinth",
-        "customDescription": "+1% Alt. Magic XP for a total of +5% Alt. Magic XP from your Arcanolinth. +5% chance to preserve runes in Alt. Magic for a total of +25% from your Arcanolinth."
+        "customDescription": "+1% to double items in Alt. Magic for a total of +5% chance from your Arcanolinth. +5% chance to preserve runes in Alt. Magic for a total of +25% from your Arcanolinth."
       },
       {
         "id": "Arcanolinth_Dodecahedric",
@@ -655,7 +686,12 @@
           "items": [],
           "modifiers": {
             "altMagicRunePreservationChance": 5,
-            "altMagicSkillXP": 1
+            "skillItemDoublingChance": [
+              {
+                "skillID": "melvorD:Magic",
+                "value": 1
+              }
+            ]
           }
         },
         "cost": {
@@ -687,7 +723,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Dodecahedric Arcanolinth",
-        "customDescription": "+1% Alt. Magic XP for a total of +6% Alt. Magic XP from your Arcanolinth. +5% chance to preserve runes in Alt. Magic for a total of +30% from your Arcanolinth."
+        "customDescription": "+1% to double items in Alt. Magic for a total of +6% chance from your Arcanolinth. +5% chance to preserve runes in Alt. Magic for a total of +30% from your Arcanolinth."
       },
       {
         "id": "Arcanolinth_Icosahedric",
@@ -697,7 +733,12 @@
           "items": [],
           "modifiers": {
             "altMagicRunePreservationChance": 5,
-            "altMagicSkillXP": 1
+            "skillItemDoublingChance": [
+              {
+                "skillID": "melvorD:Magic",
+                "value": 1
+              }
+            ]
           }
         },
         "cost": {
@@ -729,7 +770,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Icosahedric Arcanolinth",
-        "customDescription": "+1% Alt. Magic XP for a total of +7% Alt. Magic XP from your Arcanolinth. +5% chance to preserve runes in Alt. Magic for a total of +35% from your Arcanolinth."
+        "customDescription": "+1% to double items in Alt. Magic for a total of +7% chance from your Arcanolinth. +5% chance to preserve runes in Alt. Magic for a total of +35% from your Arcanolinth."
       },
       {
         "id": "Arcanolinth_Tesseractic",
@@ -739,7 +780,12 @@
           "items": [],
           "modifiers": {
             "altMagicRunePreservationChance": 5,
-            "altMagicSkillXP": 1
+            "skillItemDoublingChance": [
+              {
+                "skillID": "melvorD:Magic",
+                "value": 1
+              }
+            ]
           }
         },
         "cost": {
@@ -771,7 +817,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Tesseractic Arcanolinth",
-        "customDescription": "+1% Alt. Magic XP for a total of +8% Alt. Magic XP from your Arcanolinth. +5% chance to preserve runes in Alt. Magic for a total of +40% from your Arcanolinth."
+        "customDescription": "+1% to double items in Alt. Magic for a total of +8% chance from your Arcanolinth. +5% chance to preserve runes in Alt. Magic for a total of +40% from your Arcanolinth."
       },
       {
         "id": "Bunsen_Burner_Iron",
@@ -2034,6 +2080,1661 @@
         "customDescription": "+10% primary product yield from your Hoe (total: +70%)."
       },
       {
+        "id": "Mark_Stag",
+        "media": "assets/shop/mark_stag.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillCostReduction": [
+              {
+                "skillID": "melvorD:Summoning",
+                "value": -5
+              }
+            ],
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Summoning",
+                "value": -5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 1000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Summoning",
+            "level": 40,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Mark of the Stag",
+        "customDescription": "-5% Summoning cost reduction and -5% Summoning interval from your Summoning upgrades (total: -5%)."
+      },
+      {
+        "id": "Mark_Beetle",
+        "media": "assets/shop/mark_beetle.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillCostReduction": [
+              {
+                "skillID": "melvorD:Summoning",
+                "value": -5
+              }
+            ],
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Summoning",
+                "value": -5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 5000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Mark_Stag"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Summoning",
+            "level": 50,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Mark of the Beetle",
+        "customDescription": "-5% Summoning cost reduction and -5% Summoning interval from your Summoning upgrades (total: -10%)."
+      },
+      {
+        "id": "Mark_Swan",
+        "media": "assets/shop/mark_swan.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillCostReduction": [
+              {
+                "skillID": "melvorD:Summoning",
+                "value": -5
+              }
+            ],
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Summoning",
+                "value": -5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 10000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Mark_Beetle"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Summoning",
+            "level": 60,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Mark of the Swan",
+        "customDescription": "-5% Summoning cost reduction and -5% Summoning interval from your Summoning upgrades (total: -15%)."
+      },
+      {
+        "id": "Mark_Tiger",
+        "media": "assets/shop/mark_tiger.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillCostReduction": [
+              {
+                "skillID": "melvorD:Summoning",
+                "value": -5
+              }
+            ],
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Summoning",
+                "value": -5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 15000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Mark_Swan"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Summoning",
+            "level": 70,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Mark of the Tiger",
+        "customDescription": "-5% Summoning cost reduction and -5% Summoning interval from your Summoning upgrades (total: -20%)."
+      },
+      {
+        "id": "Mark_Bear",
+        "media": "assets/shop/mark_bear.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillCostReduction": [
+              {
+                "skillID": "melvorD:Summoning",
+                "value": -5
+              }
+            ],
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Summoning",
+                "value": -5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 30000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Mark_Tiger"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Summoning",
+            "level": 80,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Mark of the Bear",
+        "customDescription": "-5% Summoning cost reduction and -5% Summoning interval from your Summoning upgrades (total: -25%)."
+      },
+      {
+        "id": "Mark_Bison",
+        "media": "assets/shop/mark_bison.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillCostReduction": [
+              {
+                "skillID": "melvorD:Summoning",
+                "value": -5
+              }
+            ],
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Summoning",
+                "value": -5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 50000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Mark_Bear"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Summoning",
+            "level": 90,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Mark of the Bison",
+        "customDescription": "-5% Summoning cost reduction and -5% Summoning interval from your Summoning upgrades (total: -30%)."
+      },
+      {
+        "id": "Telescope_Iron",
+        "media": "assets/shop/telescope_iron.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "randomProductChance": [
+              {
+                "skillID": "melvorD:Astrology",
+                "itemID": "melvorF:Stardust",
+                "value": 2
+              },
+              {
+                "skillID": "melvorD:Astrology",
+                "itemID": "melvorF:Golden_Stardust",
+                "value": 2
+              }
+            ],
+            "meteoriteLocationChance": 1
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 100000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [],
+        "purchaseRequirements": [],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Topaz Iron Telescope",
+        "customDescription": "+2% random product chance and +1% meteorite location chance from your telescope (total: +2% / +1%)."
+      },
+      {
+        "id": "Telescope_Steel",
+        "media": "assets/shop/telescope_steel.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "randomProductChance": [
+              {
+                "skillID": "melvorD:Astrology",
+                "itemID": "melvorF:Stardust",
+                "value": 2
+              },
+              {
+                "skillID": "melvorD:Astrology",
+                "itemID": "melvorF:Golden_Stardust",
+                "value": 2
+              }
+            ],
+            "meteoriteLocationChance": 1
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 400000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Telescope_Iron"
+          }
+        ],
+        "purchaseRequirements": [],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Garnet Steel Telescope",
+        "customDescription": "+2% random product chance and +1% meteorite location chance from your telescope (total: +4% / +2%)."
+      },
+      {
+        "id": "Telescope_Black",
+        "media": "assets/shop/telescope_black.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "randomProductChance": [
+              {
+                "skillID": "melvorD:Astrology",
+                "itemID": "melvorF:Stardust",
+                "value": 2
+              },
+              {
+                "skillID": "melvorD:Astrology",
+                "itemID": "melvorF:Golden_Stardust",
+                "value": 2
+              }
+            ],
+            "meteoriteLocationChance": 1
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 750000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Telescope_Steel"
+          }
+        ],
+        "purchaseRequirements": [],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Turquoise Black Telescope",
+        "customDescription": "+2% random product chance and +1% meteorite location chance from your telescope (total: +6% / +3%)."
+      },
+      {
+        "id": "Telescope_Mithril",
+        "media": "assets/shop/telescope_mithril.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "randomProductChance": [
+              {
+                "skillID": "melvorD:Astrology",
+                "itemID": "melvorF:Stardust",
+                "value": 2
+              },
+              {
+                "skillID": "melvorD:Astrology",
+                "itemID": "melvorF:Golden_Stardust",
+                "value": 2
+              }
+            ],
+            "meteoriteLocationChance": 1
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 1200000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Telescope_Black"
+          }
+        ],
+        "purchaseRequirements": [],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Amber Mithril Telescope",
+        "customDescription": "+2% random product chance and +1% meteorite location chance from your telescope (total: +8% / +4%)."
+      },
+      {
+        "id": "Telescope_Adamant",
+        "media": "assets/shop/telescope_adamant.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "randomProductChance": [
+              {
+                "skillID": "melvorD:Astrology",
+                "itemID": "melvorF:Stardust",
+                "value": 2
+              },
+              {
+                "skillID": "melvorD:Astrology",
+                "itemID": "melvorF:Golden_Stardust",
+                "value": 2
+              }
+            ],
+            "meteoriteLocationChance": 1
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 2000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Telescope_Mithril"
+          }
+        ],
+        "purchaseRequirements": [],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Amethyst Adamant Telescope",
+        "customDescription": "+2% random product chance and +1% meteorite location chance from your telescope (total: +10% / +5%)."
+      },
+      {
+        "id": "Telescope_Rune",
+        "media": "assets/shop/telescope_rune.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "randomProductChance": [
+              {
+                "skillID": "melvorD:Astrology",
+                "itemID": "melvorF:Stardust",
+                "value": 2
+              },
+              {
+                "skillID": "melvorD:Astrology",
+                "itemID": "melvorF:Golden_Stardust",
+                "value": 2
+              }
+            ],
+            "meteoriteLocationChance": 1
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 3500000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Telescope_Adamant"
+          }
+        ],
+        "purchaseRequirements": [],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Beryl Rune Telescope",
+        "customDescription": "+2% random product chance and +1% meteorite location chance from your telescope (total: +12% / +6%)."
+      },
+      {
+        "id": "Telescope_Dragon",
+        "media": "assets/shop/telescope_dragon.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "randomProductChance": [
+              {
+                "skillID": "melvorD:Astrology",
+                "itemID": "melvorF:Stardust",
+                "value": 2
+              },
+              {
+                "skillID": "melvorD:Astrology",
+                "itemID": "melvorF:Golden_Stardust",
+                "value": 2
+              }
+            ],
+            "meteoriteLocationChance": 1
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 5000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Telescope_Rune"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Astrology",
+            "level": 80,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Dragonstone Dragon Telescope",
+        "customDescription": "+2% random product chance and +1% meteorite location chance from your telescope (total: +14% / +7%)."
+      },
+      {
+        "id": "Needle_Iron",
+        "media": "assets/shop/needle_iron.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillPreservationChance": [
+              {
+                "skillID": "melvorD:Crafting",
+                "value": 2
+              }
+            ],
+            "crafting30CurrencyGainChance": [
+              {
+                "currencyID": "melvorD:GP",
+                "value": 2
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 10000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [],
+        "purchaseRequirements": [],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Iron Needle",
+        "customDescription": "+2% Crafting preservation chance and +2% GP gain chance from your Needle (total: +2% / +2%)."
+      },
+      {
+        "id": "Needle_Steel",
+        "media": "assets/shop/needle_steel.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillPreservationChance": [
+              {
+                "skillID": "melvorD:Crafting",
+                "value": 2
+              }
+            ],
+            "crafting30CurrencyGainChance": [
+              {
+                "currencyID": "melvorD:GP",
+                "value": 2
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 100000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Needle_Iron"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Crafting",
+            "level": 15,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Steel Needle",
+        "customDescription": "+2% Crafting preservation chance and +2% GP gain chance from your Needle (total: +4% / +4%)."
+      },
+      {
+        "id": "Needle_Black",
+        "media": "assets/shop/needle_black.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillPreservationChance": [
+              {
+                "skillID": "melvorD:Crafting",
+                "value": 2
+              }
+            ],
+            "crafting30CurrencyGainChance": [
+              {
+                "currencyID": "melvorD:GP",
+                "value": 2
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 250000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Needle_Steel"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Crafting",
+            "level": 30,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Black Needle",
+        "customDescription": "+2% Crafting preservation chance and +2% GP gain chance from your Needle (total: +6% / +6%)."
+      },
+      {
+        "id": "Needle_Mithril",
+        "media": "assets/shop/needle_mithril.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillPreservationChance": [
+              {
+                "skillID": "melvorD:Crafting",
+                "value": 2
+              }
+            ],
+            "crafting30CurrencyGainChance": [
+              {
+                "currencyID": "melvorD:GP",
+                "value": 2
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 500000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Needle_Black"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Crafting",
+            "level": 45,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Mithril Needle",
+        "customDescription": "+2% Crafting preservation chance and +2% GP gain chance from your Needle (total: +8% / +8%)."
+      },
+      {
+        "id": "Needle_Adamant",
+        "media": "assets/shop/needle_adamant.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillPreservationChance": [
+              {
+                "skillID": "melvorD:Crafting",
+                "value": 2
+              }
+            ],
+            "crafting30CurrencyGainChance": [
+              {
+                "currencyID": "melvorD:GP",
+                "value": 2
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 1000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Needle_Mithril"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Crafting",
+            "level": 60,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Adamant Needle",
+        "customDescription": "+2% Crafting preservation chance and +2% GP gain chance from your Needle (total: +10% / +10%)."
+      },
+      {
+        "id": "Needle_Rune",
+        "media": "assets/shop/needle_rune.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillPreservationChance": [
+              {
+                "skillID": "melvorD:Crafting",
+                "value": 2
+              }
+            ],
+            "crafting30CurrencyGainChance": [
+              {
+                "currencyID": "melvorD:GP",
+                "value": 2
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 2000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Needle_Adamant"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Crafting",
+            "level": 70,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Rune Needle",
+        "customDescription": "+2% Crafting preservation chance and +2% GP gain chance from your Needle (total: +12% / +12%)."
+      },
+      {
+        "id": "Needle_Dragon",
+        "media": "assets/shop/needle_dragon.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillPreservationChance": [
+              {
+                "skillID": "melvorD:Crafting",
+                "value": 2
+              }
+            ],
+            "crafting30CurrencyGainChance": [
+              {
+                "currencyID": "melvorD:GP",
+                "value": 2
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 3500000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Needle_Rune"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Crafting",
+            "level": 85,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Dragon Needle",
+        "customDescription": "+2% Crafting preservation chance and +2% GP gain chance from your Needle (total: +14% / +14%)."
+      },
+      {
+        "id": "Thieving_Tools_Iron",
+        "media": "assets/shop/thieving_tools_iron.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Thieving",
+                "value": -5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 2500000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [],
+        "purchaseRequirements": [],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Iron Thieving Tools",
+        "customDescription": "-5% Thieving skill interval from your tools (total: -5%)."
+      },
+      {
+        "id": "Thieving_Tools_Steel",
+        "media": "assets/shop/thieving_tools_steel.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Thieving",
+                "value": -5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 8000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Thieving_Tools_Iron"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Thieving",
+            "level": 15,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Steel Thieving Tools",
+        "customDescription": "-5% Thieving skill interval from your tools (total: -10%)."
+      },
+      {
+        "id": "Thieving_Tools_Black",
+        "media": "assets/shop/thieving_tools_black.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Thieving",
+                "value": -5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 20000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Thieving_Tools_Steel"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Thieving",
+            "level": 30,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Black Thieving Tools",
+        "customDescription": "-5% Thieving skill interval from your tools (total: -15%)."
+      },
+      {
+        "id": "Thieving_Tools_Mithril",
+        "media": "assets/shop/thieving_tools_mithril.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Thieving",
+                "value": -5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 40000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Thieving_Tools_Black"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Thieving",
+            "level": 50,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Mithril Thieving Tools",
+        "customDescription": "-5% Thieving skill interval from your tools (total: -20%)."
+      },
+      {
+        "id": "Thieving_Tools_Adamant",
+        "media": "assets/shop/thieving_tools_adamant.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Thieving",
+                "value": -5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 70000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Thieving_Tools_Mithril"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Thieving",
+            "level": 65,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Adamant Thieving Tools",
+        "customDescription": "-5% Thieving skill interval from your tools (total: -25%)."
+      },
+      {
+        "id": "Thieving_Tools_Rune",
+        "media": "assets/shop/thieving_tools_rune.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Thieving",
+                "value": -5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 110000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Thieving_Tools_Adamant"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Thieving",
+            "level": 80,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Rune Thieving Tools",
+        "customDescription": "-5% Thieving skill interval from your tools (total: -30%)."
+      },
+      {
+        "id": "Thieving_Tools_Dragon",
+        "media": "assets/shop/thieving_tools_dragon.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Thieving",
+                "value": -5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 150000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Thieving_Tools_Rune"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Thieving",
+            "level": 95,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Dragon Thieving Tools",
+        "customDescription": "-5% Thieving skill interval from your tools (total: -35%)."
+      },
+      {
+        "id": "Whittling_Tools_Iron",
+        "media": "assets/shop/whittling_tools_iron.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "flatBasePrimaryProductQuantity": [
+              {
+                "skillID": "melvorD:Fletching",
+                "value": 1
+              }
+            ],
+            "skillPreservationChance": [
+              {
+                "skillID": "melvorD:Fletching",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 500000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Fletching",
+            "level": 30,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Iron Whittling Tools",
+        "customDescription": "+1 flat Fletching product and +1% Fletching preservation chance (total: +1 / +1%)."
+      },
+      {
+        "id": "Whittling_Tools_Steel",
+        "media": "assets/shop/whittling_tools_steel.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "flatBasePrimaryProductQuantity": [
+              {
+                "skillID": "melvorD:Fletching",
+                "value": 1
+              }
+            ],
+            "skillPreservationChance": [
+              {
+                "skillID": "melvorD:Fletching",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 1000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Whittling_Tools_Iron"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Fletching",
+            "level": 40,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Steel Whittling Tools",
+        "customDescription": "+1 flat Fletching product and +1% Fletching preservation chance (total: +2 / +2%)."
+      },
+      {
+        "id": "Whittling_Tools_Black",
+        "media": "assets/shop/whittling_tools_black.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "flatBasePrimaryProductQuantity": [
+              {
+                "skillID": "melvorD:Fletching",
+                "value": 1
+              }
+            ],
+            "skillPreservationChance": [
+              {
+                "skillID": "melvorD:Fletching",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 1500000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Whittling_Tools_Steel"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Fletching",
+            "level": 50,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Black Whittling Tools",
+        "customDescription": "+1 flat Fletching product and +1% Fletching preservation chance (total: +3 / +3%)."
+      },
+      {
+        "id": "Whittling_Tools_Mithril",
+        "media": "assets/shop/whittling_tools_mithril.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "flatBasePrimaryProductQuantity": [
+              {
+                "skillID": "melvorD:Fletching",
+                "value": 1
+              }
+            ],
+            "skillPreservationChance": [
+              {
+                "skillID": "melvorD:Fletching",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 2500000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Whittling_Tools_Black"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Fletching",
+            "level": 60,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Mithril Whittling Tools",
+        "customDescription": "+1 flat Fletching product and +1% Fletching preservation chance (total: +4 / +4%)."
+      },
+      {
+        "id": "Whittling_Tools_Adamant",
+        "media": "assets/shop/whittling_tools_adamant.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "flatBasePrimaryProductQuantity": [
+              {
+                "skillID": "melvorD:Fletching",
+                "value": 1
+              }
+            ],
+            "skillPreservationChance": [
+              {
+                "skillID": "melvorD:Fletching",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 3500000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Whittling_Tools_Mithril"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Fletching",
+            "level": 70,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Adamant Whittling Tools",
+        "customDescription": "+1 flat Fletching product and +1% Fletching preservation chance (total: +5 / +5%)."
+      },
+      {
+        "id": "Whittling_Tools_Rune",
+        "media": "assets/shop/whittling_tools_rune.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "flatBasePrimaryProductQuantity": [
+              {
+                "skillID": "melvorD:Fletching",
+                "value": 1
+              }
+            ],
+            "skillPreservationChance": [
+              {
+                "skillID": "melvorD:Fletching",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 5000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Whittling_Tools_Adamant"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Fletching",
+            "level": 85,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Rune Whittling Tools",
+        "customDescription": "+1 flat Fletching product and +1% Fletching preservation chance (total: +6 / +6%)."
+      },
+      {
+        "id": "Whittling_Tools_Dragon",
+        "media": "assets/shop/whittling_tools_dragon.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "flatBasePrimaryProductQuantity": [
+              {
+                "skillID": "melvorD:Fletching",
+                "value": 1
+              }
+            ],
+            "skillPreservationChance": [
+              {
+                "skillID": "melvorD:Fletching",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 7000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Whittling_Tools_Rune"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Fletching",
+            "level": 95,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Dragon Whittling Tools",
+        "customDescription": "+1 flat Fletching product and +1% Fletching preservation chance (total: +7 / +7%)."
+      },
+      {
         "id": "Multi_Tree_II",
         "media": "assets/shop/woodcutting_multi_tree.svg",
         "category": "melvorD:General",
@@ -2182,50 +3883,44 @@
       {
         "id": "Anvil",
         "chainName": "Current Anvil",
-        "rootUpgradeID": "ntmyk:Dragon_Anvil",
+        "rootUpgradeID": "ntmyk:Anvil_Dragon",
         "defaultName": "Bronze Anvil",
-        "defaultDescription": "No bonuses.",
-        "defaultMedia": "assets/shop/anvil_bronze.png"
+        "defaultDescription": "No bonuses."
       },
       {
         "id": "Arcanolinth",
         "chainName": "Current Arcanolinth",
-        "rootUpgradeID": "ntmyk:Tesseractic_Arcanolinth",
+        "rootUpgradeID": "ntmyk:Arcanolinth_Tesseractic",
         "defaultName": "Arcanolinth",
-        "defaultDescription": "No bonuses.",
-        "defaultMedia": "assets/shop/arcanolinth_circlic"
+        "defaultDescription": "No bonuses."
       },
       {
         "id": "BunsenBurner",
         "chainName": "Current Bunsen Burner",
-        "rootUpgradeID": "ntmyk:Dragon_Bunsen_Burner",
+        "rootUpgradeID": "ntmyk:Bunsen_Burner_Dragon",
         "defaultName": "Bronze Bunsen Burner",
-        "defaultDescription": "No bonuses.",
-        "defaultMedia": "assets/shop/bunsen_burner_bronze.png"
+        "defaultDescription": "No bonuses."
       },
       {
         "id": "EssenceResonator",
         "chainName": "Current Essence Resonator",
-        "rootUpgradeID": "ntmyk:Dragon_Essence_Resonator",
+        "rootUpgradeID": "ntmyk:Essence_Resonator_Dragon",
         "defaultName": "Bronze Essence Resonator",
-        "defaultDescription": "No bonuses.",
-        "defaultMedia": "assets/shop/essence_resonator_bronze.png"
+        "defaultDescription": "No bonuses."
       },
       {
         "id": "Firestarter",
         "chainName": "Current Firestarter",
-        "rootUpgradeID": "ntmyk:Dragon_Firestarter",
+        "rootUpgradeID": "ntmyk:Firestarter_Dragon",
         "defaultName": "Bronze Firestarter",
-        "defaultDescription": "No bonuses.",
-        "defaultMedia": "assets/shop/firestarter_bronze.png"
+        "defaultDescription": "No bonuses."
       },
       {
         "id": "Hoe",
         "chainName": "Current Hoe",
-        "rootUpgradeID": "ntmyk:Dragon_Hoe",
+        "rootUpgradeID": "ntmyk:Hoe_Dragon",
         "defaultName": "Bronze Hoe",
-        "defaultDescription": "No bonuses.",
-        "defaultMedia": "assets/shop/hoe_bronze.png"
+        "defaultDescription": "No bonuses."
       },
       {
         "id": "Mark",
@@ -2237,34 +3932,30 @@
       {
         "id": "Needle",
         "chainName": "Current Needle",
-        "rootUpgradeID": "ntmyk:Dragon_Needle",
+        "rootUpgradeID": "ntmyk:Needle_Dragon",
         "defaultName": "Bronze Needle",
-        "defaultDescription": "No bonuses.",
-        "defaultMedia": "assets/shop/needle_bronze.png"
+        "defaultDescription": "No bonuses."
       },
       {
         "id": "ThievingTools",
         "chainName": "Current Thieving Tools",
-        "rootUpgradeID": "ntmyk:Dragon_Tools",
+        "rootUpgradeID": "ntmyk:Thieving_Tools_Dragon",
         "defaultName": "Bronze Thieving Tools",
-        "defaultDescription": "No bonuses.",
-        "defaultMedia": "assets/shop/thieving_tools_bronze.png"
+        "defaultDescription": "No bonuses."
       },
       {
         "id": "WhittlingTools",
         "chainName": "Current Whittling Tools",
-        "rootUpgradeID": "ntmyk:Dragon_Whittling_Tools",
+        "rootUpgradeID": "ntmyk:Whittling_Tools_Dragon",
         "defaultName": "Bronze Whittling Tools",
-        "defaultDescription": "No bonuses.",
-        "defaultMedia": "assets/shop/whittling_tools_bronze.png"
+        "defaultDescription": "No bonuses."
       },
       {
         "id": "Telescope",
         "chainName": "Current Telescope",
-        "rootUpgradeID": "ntmyk:Dragon_Telescope",
+        "rootUpgradeID": "ntmyk:Telescope_Dragon",
         "defaultName": "Bronze Telescope",
-        "defaultDescription": "No bonuses.",
-        "defaultMedia": "assets/shop/telescope_bronze.png"
+        "defaultDescription": "No bonuses."
       }
     ]
   },
