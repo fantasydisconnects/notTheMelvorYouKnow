@@ -163,7 +163,96 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Auto Eat - Tier V",
-        "customDescription": "Using your current equipped food only, automatically consume the food to fill your Hitpoints to at least 95% when it is equal to or below 50% Hitpoints. Food Efficiency: 115% (Food heals for 115% of the value shown when Auto Eating)."
+        "customDescription": "Using your current equipped food only, automatically consume the food to fill your Hitpoints to at least 95% when it is equal to or below 50% Hitpoints. Food Efficiency: 120% (Food heals for 120% of the value shown when Auto Eating)."
+      }
+    ],
+    "shopUpgradeChains": [
+      {
+        "id": "Anvil",
+        "chainName": "Current Anvil",
+        "rootUpgradeID": "ntmyk:Dragon_Anvil",
+        "defaultName": "Bronze Anvil",
+        "defaultDescription": "No bonuses.",
+        "defaultMedia": "assets/shop/anvil_bronze.png"
+      },
+      {
+        "id": "Arcanolinth",
+        "chainName": "Current Arcanolinth",
+        "rootUpgradeID": "ntmyk:Tesseractic_Arcanolinth",
+        "defaultName": "Arcanolinth",
+        "defaultDescription": "No bonuses.",
+        "defaultMedia": "assets/shop/arcanolinth_circlic"
+      },
+      {
+        "id": "BunsenBurner",
+        "chainName": "Current Bunsen Burner",
+        "rootUpgradeID": "ntmyk:Dragon_Bunsen_Burner",
+        "defaultName": "Bronze Bunsen Burner",
+        "defaultDescription": "No bonuses.",
+        "defaultMedia": "assets/shop/bunsen_burner_bronze.png"
+      },
+      {
+        "id": "EssenceResonator",
+        "chainName": "Current Essence Resonator",
+        "rootUpgradeID": "ntmyk:Dragon_Essence_Resonator",
+        "defaultName": "Bronze Essence Resonator",
+        "defaultDescription": "No bonuses.",
+        "defaultMedia": "assets/shop/essence_resonator_bronze.png"
+      },
+      {
+        "id": "Firestarter",
+        "chainName": "Current Firestarter",
+        "rootUpgradeID": "ntmyk:Dragon_Firestarter",
+        "defaultName": "Bronze Firestarter",
+        "defaultDescription": "No bonuses.",
+        "defaultMedia": "assets/shop/firestarter_bronze.png"
+      },
+      {
+        "id": "Hoe",
+        "chainName": "Current Hoe",
+        "rootUpgradeID": "ntmyk:Dragon_Hoe",
+        "defaultName": "Bronze Hoe",
+        "defaultDescription": "No bonuses.",
+        "defaultMedia": "assets/shop/hoe_bronze.png"
+      },
+      {
+        "id": "Mark",
+        "chainName": "Current Mark",
+        "rootUpgradeID": "ntmyk:Mark_Bear",
+        "defaultName": "Mark of Nothing",
+        "defaultDescription": "No bonuses."
+      },
+      {
+        "id": "Needle",
+        "chainName": "Current Needle",
+        "rootUpgradeID": "ntmyk:Dragon_Needle",
+        "defaultName": "Bronze Needle",
+        "defaultDescription": "No bonuses.",
+        "defaultMedia": "assets/shop/needle_bronze.png"
+      },
+      {
+        "id": "ThievingTools",
+        "chainName": "Current Thieving Tools",
+        "rootUpgradeID": "ntmyk:Dragon_Tools",
+        "defaultName": "Bronze Thieving Tools",
+        "defaultDescription": "No bonuses.",
+        "defaultMedia": "assets/shop/thieving_tools_bronze.png"
+      },
+      {
+        "id": "WhittlingTools",
+        "chainName": "Current Whittling Tools",
+        "rootUpgradeID": "ntmyk:Dragon_Whittling_Tools",
+        "defaultName": "Bronze Whittling Tools",
+        "defaultDescription": "No bonuses.",
+        "defaultMedia": "assets/shop/whittling_tools_bronze.png"
+      },
+      {
+        "id": "Telescope",
+        "chainName": "Current Telescope",
+        "rootUpgradeID": "ntmyk:Dragon_Telescope",
+        "defaultName": "Bronze Telescope",
+        "defaultDescription": "No bonuses.",
+        "defaultMedia": "assets/shop/telescope_bronze.png"
       }
     ]
   },
