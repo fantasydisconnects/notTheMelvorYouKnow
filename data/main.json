@@ -1175,7 +1175,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Iron Essence Resonator",
-        "customDescription": "+1% Rune Preservation chance for a total of +1% chance from your Essence Resonator. +5% chance to preserve resources in Runecrafting for a total of +5% chance from your Essence Resonator."
+        "customDescription": "+1% Rune Preservation chance for a total of +1% chance applied from your Essence Resonator.<br>+5% chance to preserve resources in Runecrafting for a total of +5% chance from your Essence Resonator."
       },
       {
         "id": "Essence_Resonator_Steel",
@@ -1222,7 +1222,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Steel Essence Resonator",
-        "customDescription": "+1% Rune Preservation chance for a total of +2% chance from your Essence Resonator. +5% chance to preserve resources in Runecrafting for a total of +10% chance from your Essence Resonator."
+        "customDescription": "+1% Rune Preservation chance for a total of +2% chance applied from your Essence Resonator.<br>+5% chance to preserve resources in Runecrafting for a total of +10% chance from your Essence Resonator."
       },
       {
         "id": "Essence_Resonator_Black",
@@ -1269,7 +1269,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Black Essence Resonator",
-        "customDescription": "+1% Rune Preservation chance for a total of +3% chance from your Essence Resonator. +5% chance to preserve resources in Runecrafting for a total of +15% chance from your Essence Resonator."
+        "customDescription": "+1% Rune Preservation chance for a total of +3% chance applied from your Essence Resonator.<br>+5% chance to preserve resources in Runecrafting for a total of +15% chance from your Essence Resonator."
       },
       {
         "id": "Essence_Resonator_Mithril",
@@ -1316,7 +1316,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Mithril Essence Resonator",
-        "customDescription": "+1% Rune Preservation chance for a total of +4% chance from your Essence Resonator. +5% chance to preserve resources in Runecrafting for a total of +20% chance from your Essence Resonator."
+        "customDescription": "+1% Rune Preservation chance for a total of +4% chance applied from your Essence Resonator.<br>+5% chance to preserve resources in Runecrafting for a total of +20% chance from your Essence Resonator."
       },
       {
         "id": "Essence_Resonator_Adamant",
@@ -1363,7 +1363,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Adamant Essence Resonator",
-        "customDescription": "+1% Rune Preservation chance for a total of +5% chance from your Essence Resonator. +5% chance to preserve resources in Runecrafting for a total of +25% chance from your Essence Resonator."
+        "customDescription": "+1% Rune Preservation chance for a total of +5% chance applied from your Essence Resonator.<br>+5% chance to preserve resources in Runecrafting for a total of +25% chance from your Essence Resonator."
       },
       {
         "id": "Essence_Resonator_Rune",
@@ -1410,7 +1410,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Rune Essence Resonator",
-        "customDescription": "+1% Rune Preservation chance for a total of +6% chance from your Essence Resonator. +5% chance to preserve resources in Runecrafting for a total of +30% chance from your Essence Resonator."
+        "customDescription": "+1% Rune Preservation chance for a total of +6% chance applied from your Essence Resonator.<br>+5% chance to preserve resources in Runecrafting for a total of +30% chance from your Essence Resonator."
       },
       {
         "id": "Essence_Resonator_Dragon",
@@ -1457,7 +1457,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Dragon Essence Resonator",
-        "customDescription": "+1% Rune Preservation chance for a total of +7% chance from your Essence Resonator. +5% chance to preserve resources in Runecrafting for a total of +35% chance from your Essence Resonator."
+        "customDescription": "+1% Rune Preservation chance for a total of +7% chance applied from your Essence Resonator.<br>+5% chance to preserve resources in Runecrafting for a total of +35% chance from your Essence Resonator."
       },
       {
         "id": "Firestarter_Iron",
@@ -1491,7 +1491,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Iron Firestarter",
-        "customDescription": "-5% Firemaking interval reduction from your Firestarter (total: -5%)."
+        "customDescription": "-5% Firemaking interval reduction for a total of -5% applied from your Firestarter."
       },
       {
         "id": "Firestarter_Steel",
@@ -1537,7 +1537,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Steel Firestarter",
-        "customDescription": "-5% Firemaking interval reduction from your Firestarter (total: -10%)."
+        "customDescription": "-5% Firemaking interval reduction for a total of -10% applied from your Firestarter."
       },
       {
         "id": "Firestarter_Black",
@@ -1583,7 +1583,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Black Firestarter",
-        "customDescription": "-5% Firemaking interval reduction from your Firestarter (total: -15%)."
+        "customDescription": "-5% Firemaking interval reduction for a total of -15% applied from your Firestarter."
       },
       {
         "id": "Firestarter_Mithril",
@@ -1629,7 +1629,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Mithril Firestarter",
-        "customDescription": "-5% Firemaking interval reduction from your Firestarter (total: -20%)."
+        "customDescription": "-5% Firemaking interval reduction for a total of -20% applied from your Firestarter."
       },
       {
         "id": "Firestarter_Adamant",
@@ -1675,7 +1675,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Adamant Firestarter",
-        "customDescription": "-5% Firemaking interval reduction from your Firestarter (total: -25%)."
+        "customDescription": "-5% Firemaking interval reduction for a total of -25% applied from your Firestarter."
       },
       {
         "id": "Firestarter_Rune",
@@ -1721,7 +1721,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Rune Firestarter",
-        "customDescription": "-5% Firemaking interval reduction from your Firestarter (total: -30%)."
+        "customDescription": "-5% Firemaking interval reduction for a total of -30% applied from your Firestarter."
       },
       {
         "id": "Firestarter_Dragon",
@@ -1767,7 +1767,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Dragon Firestarter",
-        "customDescription": "-5% Firemaking interval reduction from your Firestarter (total: -35%)."
+        "customDescription": "-5% Firemaking interval reduction for a total of -35% applied from your Firestarter."
       },
       {
         "id": "Hoe_Iron",
@@ -1801,7 +1801,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Iron Hoe",
-        "customDescription": "+10% primary product yield from your Hoe (total: +10%)."
+        "customDescription": "+10% Farming Crop Yield for a total of +10% applied from your Hoe."
       },
       {
         "id": "Hoe_Steel",
@@ -1847,7 +1847,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Steel Hoe",
-        "customDescription": "+10% primary product yield from your Hoe (total: +20%)."
+        "customDescription": "+10% Farming Crop Yield for a total of +20% applied from your Hoe."
       },
       {
         "id": "Hoe_Black",
@@ -1893,7 +1893,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Black Hoe",
-        "customDescription": "+10% primary product yield from your Hoe (total: +30%)."
+        "customDescription": "+10% Farming Crop Yield for a total of +30% applied from your Hoe."
       },
       {
         "id": "Hoe_Mithril",
@@ -1939,7 +1939,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Mithril Hoe",
-        "customDescription": "+10% primary product yield from your Hoe (total: +40%)."
+        "customDescription": "+10% Farming Crop Yield for a total of +40% applied from your Hoe."
       },
       {
         "id": "Hoe_Adamant",
@@ -1985,7 +1985,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Adamant Hoe",
-        "customDescription": "+10% primary product yield from your Hoe (total: +50%)."
+        "customDescription": "+10% Farming Crop Yield for a total of +50% applied from your Hoe."
       },
       {
         "id": "Hoe_Rune",
@@ -2031,7 +2031,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Rune Hoe",
-        "customDescription": "+10% primary product yield from your Hoe (total: +60%)."
+        "customDescription": "+10% Farming Crop Yield for a total of +60% applied from your Hoe."
       },
       {
         "id": "Hoe_Dragon",
@@ -2077,7 +2077,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Dragon Hoe",
-        "customDescription": "+10% primary product yield from your Hoe (total: +70%)."
+        "customDescription": "+10% Farming Crop Yield for a total of +70% applied from your Hoe."
       },
       {
         "id": "Mark_Stag",
@@ -2123,7 +2123,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Mark of the Stag",
-        "customDescription": "-5% Summoning cost reduction and -5% Summoning interval from your Summoning upgrades (total: -5%)."
+        "customDescription": "-5% Summoning cost reduction for a total of -5% applied from your Marks.<br>-5% Summoning interval for a total of -5% from your Marks."
       },
       {
         "id": "Mark_Beetle",
@@ -2175,7 +2175,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Mark of the Beetle",
-        "customDescription": "-5% Summoning cost reduction and -5% Summoning interval from your Summoning upgrades (total: -10%)."
+        "customDescription": "-5% Summoning cost reduction for a total of -10% applied from your Marks.<br>-5% Summoning interval for a total of -10% from your Marks."
       },
       {
         "id": "Mark_Swan",
@@ -2227,7 +2227,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Mark of the Swan",
-        "customDescription": "-5% Summoning cost reduction and -5% Summoning interval from your Summoning upgrades (total: -15%)."
+        "customDescription": "-5% Summoning cost reduction for a total of -15% applied from your Marks.<br>-5% Summoning interval for a total of -15% from your Marks."
       },
       {
         "id": "Mark_Tiger",
@@ -2279,7 +2279,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Mark of the Tiger",
-        "customDescription": "-5% Summoning cost reduction and -5% Summoning interval from your Summoning upgrades (total: -20%)."
+        "customDescription": "-5% Summoning cost reduction for a total of -20% applied from your Marks.<br>-5% Summoning interval for a total of -20% from your Marks."
       },
       {
         "id": "Mark_Bear",
@@ -2331,7 +2331,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Mark of the Bear",
-        "customDescription": "-5% Summoning cost reduction and -5% Summoning interval from your Summoning upgrades (total: -25%)."
+        "customDescription": "-5% Summoning cost reduction for a total of -25% applied from your Marks.<br>-5% Summoning interval for a total of -25% from your Marks."
       },
       {
         "id": "Mark_Bison",
@@ -2383,7 +2383,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Mark of the Bison",
-        "customDescription": "-5% Summoning cost reduction and -5% Summoning interval from your Summoning upgrades (total: -30%)."
+        "customDescription": "-5% Summoning cost reduction for a total of -30% applied from your Marks.<br>-5% Summoning interval for a total of -30% from your Marks."
       },
       {
         "id": "Telescope_Iron",
@@ -2424,7 +2424,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Topaz Iron Telescope",
-        "customDescription": "+2% random product chance and +1% meteorite location chance from your telescope (total: +2% / +1%)."
+        "customDescription": "+2% chance per Astrology action to gain Stardust and Golden Stardust for a total of +2% applied from your Telescope.<br>+1% meteorite location chance for a total of +1% applied from your Telescope."
       },
       {
         "id": "Telescope_Steel",
@@ -2471,7 +2471,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Garnet Steel Telescope",
-        "customDescription": "+2% random product chance and +1% meteorite location chance from your telescope (total: +4% / +2%)."
+        "customDescription": "+2% chance per Astrology action to gain Stardust and Golden Stardust for a total of +4% applied from your Telescope.<br>+1% meteorite location chance for a total of +2% applied from your Telescope."
       },
       {
         "id": "Telescope_Black",
@@ -2518,7 +2518,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Turquoise Black Telescope",
-        "customDescription": "+2% random product chance and +1% meteorite location chance from your telescope (total: +6% / +3%)."
+        "customDescription": "+2% chance per Astrology action to gain Stardust and Golden Stardust for a total of +6% applied from your Telescope.<br>+1% meteorite location chance for a total of +3% applied from your Telescope."
       },
       {
         "id": "Telescope_Mithril",
@@ -2565,7 +2565,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Amber Mithril Telescope",
-        "customDescription": "+2% random product chance and +1% meteorite location chance from your telescope (total: +8% / +4%)."
+        "customDescription": "+2% chance per Astrology action to gain Stardust and Golden Stardust for a total of +8% applied from your Telescope.<br>+1% meteorite location chance for a total of +4% applied from your Telescope."
       },
       {
         "id": "Telescope_Adamant",
@@ -2612,7 +2612,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Amethyst Adamant Telescope",
-        "customDescription": "+2% random product chance and +1% meteorite location chance from your telescope (total: +10% / +5%)."
+        "customDescription": "+2% chance per Astrology action to gain Stardust and Golden Stardust for a total of +10% applied from your Telescope.<br>+1% meteorite location chance for a total of +5% applied from your Telescope."
       },
       {
         "id": "Telescope_Rune",
@@ -2659,7 +2659,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Beryl Rune Telescope",
-        "customDescription": "+2% random product chance and +1% meteorite location chance from your telescope (total: +12% / +6%)."
+        "customDescription": "+2% chance per Astrology action to gain Stardust and Golden Stardust for a total of +12% applied from your Telescope.<br>+1% meteorite location chance for a total of +6% applied from your Telescope."
       },
       {
         "id": "Telescope_Dragon",
@@ -2712,7 +2712,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Dragonstone Dragon Telescope",
-        "customDescription": "+2% random product chance and +1% meteorite location chance from your telescope (total: +14% / +7%)."
+        "customDescription": "+2% chance per Astrology action to gain Stardust and Golden Stardust for a total of +14% applied from your Telescope.<br>+1% meteorite location chance for a total of +7% applied from your Telescope."
       },
       {
         "id": "Needle_Iron",
@@ -2752,7 +2752,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Iron Needle",
-        "customDescription": "+2% Crafting preservation chance and +2% GP gain chance from your Needle (total: +2% / +2%)."
+        "customDescription": "+2% Crafting Preservation Chance for a total of +2% applied from your Needle.<br>+2% chance to gain GP when Crafting equal to 30% of the item's base sale price for a total of +2% applied from your Needle."
       },
       {
         "id": "Needle_Steel",
@@ -2804,7 +2804,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Steel Needle",
-        "customDescription": "+2% Crafting preservation chance and +2% GP gain chance from your Needle (total: +4% / +4%)."
+        "customDescription": "+2% Crafting Preservation Chance for a total of +4% applied from your Needle.<br>+2% chance to gain GP when Crafting equal to 30% of the item's base sale price for a total of +4% applied from your Needle."
       },
       {
         "id": "Needle_Black",
@@ -2856,7 +2856,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Black Needle",
-        "customDescription": "+2% Crafting preservation chance and +2% GP gain chance from your Needle (total: +6% / +6%)."
+        "customDescription": "+2% Crafting Preservation Chance for a total of +6% applied from your Needle.<br>+2% chance to gain GP when Crafting equal to 30% of the item's base sale price for a total of +6% applied from your Needle."
       },
       {
         "id": "Needle_Mithril",
@@ -2908,7 +2908,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Mithril Needle",
-        "customDescription": "+2% Crafting preservation chance and +2% GP gain chance from your Needle (total: +8% / +8%)."
+        "customDescription": "+2% Crafting Preservation Chance for a total of +8% applied from your Needle.<br>+2% chance to gain GP when Crafting equal to 30% of the item's base sale price for a total of +8% applied from your Needle."
       },
       {
         "id": "Needle_Adamant",
@@ -2960,7 +2960,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Adamant Needle",
-        "customDescription": "+2% Crafting preservation chance and +2% GP gain chance from your Needle (total: +10% / +10%)."
+        "customDescription": "+2% Crafting Preservation Chance for a total of +10% applied from your Needle.<br>+2% chance to gain GP when Crafting equal to 30% of the item's base sale price for a total of +10% applied from your Needle."
       },
       {
         "id": "Needle_Rune",
@@ -3012,7 +3012,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Rune Needle",
-        "customDescription": "+2% Crafting preservation chance and +2% GP gain chance from your Needle (total: +12% / +12%)."
+        "customDescription": "+2% Crafting Preservation Chance for a total of +12% applied from your Needle.<br>+2% chance to gain GP when Crafting equal to 30% of the item's base sale price for a total of +12% applied from your Needle."
       },
       {
         "id": "Needle_Dragon",
@@ -3064,7 +3064,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Dragon Needle",
-        "customDescription": "+2% Crafting preservation chance and +2% GP gain chance from your Needle (total: +14% / +14%)."
+        "customDescription": "+2% Crafting Preservation Chance for a total of +14% applied from your Needle.<br>+2% chance to gain GP when Crafting equal to 30% of the item's base sale price for a total of +14% applied from your Needle."
       },
       {
         "id": "Thieving_Tools_Iron",
@@ -3098,7 +3098,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Iron Thieving Tools",
-        "customDescription": "-5% Thieving skill interval from your tools (total: -5%)."
+        "customDescription": "-5% Thieving Interval for a total of -5% applied from your Thieving Tools."
       },
       {
         "id": "Thieving_Tools_Steel",
@@ -3144,7 +3144,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Steel Thieving Tools",
-        "customDescription": "-5% Thieving skill interval from your tools (total: -10%)."
+        "customDescription": "-5% Thieving Interval for a total of -10% applied from your Thieving Tools."
       },
       {
         "id": "Thieving_Tools_Black",
@@ -3190,7 +3190,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Black Thieving Tools",
-        "customDescription": "-5% Thieving skill interval from your tools (total: -15%)."
+        "customDescription": "-5% Thieving Interval for a total of -15% applied from your Thieving Tools."
       },
       {
         "id": "Thieving_Tools_Mithril",
@@ -3236,7 +3236,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Mithril Thieving Tools",
-        "customDescription": "-5% Thieving skill interval from your tools (total: -20%)."
+        "customDescription": "-5% Thieving Interval for a total of -20% applied from your Thieving Tools."
       },
       {
         "id": "Thieving_Tools_Adamant",
@@ -3282,7 +3282,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Adamant Thieving Tools",
-        "customDescription": "-5% Thieving skill interval from your tools (total: -25%)."
+        "customDescription": "-5% Thieving Interval for a total of -25% applied from your Thieving Tools."
       },
       {
         "id": "Thieving_Tools_Rune",
@@ -3328,7 +3328,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Rune Thieving Tools",
-        "customDescription": "-5% Thieving skill interval from your tools (total: -30%)."
+        "customDescription": "-5% Thieving Interval for a total of -30% applied from your Thieving Tools."
       },
       {
         "id": "Thieving_Tools_Dragon",
@@ -3374,7 +3374,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Dragon Thieving Tools",
-        "customDescription": "-5% Thieving skill interval from your tools (total: -35%)."
+        "customDescription": "-5% Thieving Interval for a total of -40% applied from your Thieving Tools."
       },
       {
         "id": "Whittling_Tools_Iron",
@@ -3420,7 +3420,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Iron Whittling Tools",
-        "customDescription": "+1 flat Fletching product and +1% Fletching preservation chance (total: +1 / +1%)."
+        "customDescription": "+1 flat base primary Fletching product for a total of +1 applied from your Whittling Tools.<br>+1% Fletching preservation chance for a total of +1% applied from your Whittling Tools."
       },
       {
         "id": "Whittling_Tools_Steel",
@@ -3429,12 +3429,6 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "flatBasePrimaryProductQuantity": [
-              {
-                "skillID": "melvorD:Fletching",
-                "value": 1
-              }
-            ],
             "skillPreservationChance": [
               {
                 "skillID": "melvorD:Fletching",
@@ -3472,7 +3466,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Steel Whittling Tools",
-        "customDescription": "+1 flat Fletching product and +1% Fletching preservation chance (total: +2 / +2%)."
+        "customDescription": "+1% Fletching preservation chance for a total of +2% applied from your Whittling Tools."
       },
       {
         "id": "Whittling_Tools_Black",
@@ -3524,7 +3518,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Black Whittling Tools",
-        "customDescription": "+1 flat Fletching product and +1% Fletching preservation chance (total: +3 / +3%)."
+        "customDescription": "+1 flat base primary Fletching product for a total of +2 applied from your Whittling Tools.<br>+1% Fletching preservation chance for a total of +3% applied from your Whittling Tools."
       },
       {
         "id": "Whittling_Tools_Mithril",
@@ -3533,12 +3527,6 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "flatBasePrimaryProductQuantity": [
-              {
-                "skillID": "melvorD:Fletching",
-                "value": 1
-              }
-            ],
             "skillPreservationChance": [
               {
                 "skillID": "melvorD:Fletching",
@@ -3576,7 +3564,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Mithril Whittling Tools",
-        "customDescription": "+1 flat Fletching product and +1% Fletching preservation chance (total: +4 / +4%)."
+        "customDescription": "+1% Fletching preservation chance for a total of +4% applied from your Whittling Tools."
       },
       {
         "id": "Whittling_Tools_Adamant",
@@ -3628,7 +3616,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Adamant Whittling Tools",
-        "customDescription": "+1 flat Fletching product and +1% Fletching preservation chance (total: +5 / +5%)."
+        "customDescription": "+1 flat base primary Fletching product for a total of +3 applied from your Whittling Tools.<br>+1% Fletching preservation chance for a total of +5% applied from your Whittling Tools."
       },
       {
         "id": "Whittling_Tools_Rune",
@@ -3637,12 +3625,6 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "flatBasePrimaryProductQuantity": [
-              {
-                "skillID": "melvorD:Fletching",
-                "value": 1
-              }
-            ],
             "skillPreservationChance": [
               {
                 "skillID": "melvorD:Fletching",
@@ -3680,7 +3662,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Rune Whittling Tools",
-        "customDescription": "+1 flat Fletching product and +1% Fletching preservation chance (total: +6 / +6%)."
+        "customDescription": "+1% Fletching preservation chance for a total of +6% applied from your Whittling Tools."
       },
       {
         "id": "Whittling_Tools_Dragon",
@@ -3732,11 +3714,11 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Dragon Whittling Tools",
-        "customDescription": "+1 flat Fletching product and +1% Fletching preservation chance (total: +7 / +7%)."
+        "customDescription": "+1 flat base primary Fletching product for a total of +4 applied from your Whittling Tools.<br>+1% Fletching preservation chance for a total of +7% applied from your Whittling Tools."
       },
       {
         "id": "Multi_Tree_II",
-        "media": "assets/shop/woodcutting_multi_tree.svg",
+        "media": "assets/shop/multitree_ii.png",
         "category": "melvorD:General",
         "contains": {
           "items": [],
@@ -3771,7 +3753,7 @@
       },
       {
         "id": "Multi_Tree_III",
-        "media": "assets/woodcutting_multi_tree.png",
+        "media": "assets/shop/multitree_iii.png",
         "category": "melvorD:General",
         "contains": {
           "items": [],
@@ -3806,7 +3788,7 @@
       },
       {
         "id": "Auto_Eat_Tier_IV",
-        "media": "assets/shop/autoeat.svg",
+        "media": "assets/shop/autoeat_iv.png",
         "category": "melvorD:General",
         "contains": {
           "items": [],
@@ -3843,12 +3825,12 @@
       },
       {
         "id": "Auto_Eat_Tier_V",
-        "media": "assets/shop/autoeat.svg",
+        "media": "assets/shop/autoeat_v.png",
         "category": "melvorD:General",
         "contains": {
           "items": [],
           "modifiers": {
-            "autoEatThreshold": 5,
+            "autoEatThreshold": 2.5,
             "autoEatEfficiency": 5,
             "autoEatHPLimit": 5
           }
@@ -3876,7 +3858,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Auto Eat - Tier V",
-        "customDescription": "Using your current equipped food only, automatically consume the food to fill your Hitpoints to at least 95% when it is equal to or below 50% Hitpoints. Food Efficiency: 120% (Food heals for 120% of the value shown when Auto Eating)."
+        "customDescription": "Using your current equipped food only, automatically consume the food to fill your Hitpoints to at least 95% when it is equal to or below 42.5% Hitpoints. Food Efficiency: 115% (Food heals for 115% of the value shown when Auto Eating)."
       }
     ],
     "shopUpgradeChains": [
@@ -3885,42 +3867,48 @@
         "chainName": "Current Anvil",
         "rootUpgradeID": "ntmyk:Anvil_Dragon",
         "defaultName": "Bronze Anvil",
-        "defaultDescription": "No bonuses."
+        "defaultDescription": "No bonuses.",
+        "defaultMedia": "assets/shop/anvil_bronze.png"
       },
       {
         "id": "Arcanolinth",
         "chainName": "Current Arcanolinth",
         "rootUpgradeID": "ntmyk:Arcanolinth_Tesseractic",
         "defaultName": "Arcanolinth",
-        "defaultDescription": "No bonuses."
+        "defaultDescription": "No bonuses.",
+        "defaultMedia": "assets/shop/arcanolinth_circlic.png"
       },
       {
         "id": "BunsenBurner",
         "chainName": "Current Bunsen Burner",
         "rootUpgradeID": "ntmyk:Bunsen_Burner_Dragon",
         "defaultName": "Bronze Bunsen Burner",
-        "defaultDescription": "No bonuses."
+        "defaultDescription": "No bonuses.",
+        "defaultMedia": "assets/shop/bunsen_burner_bronze.png"
       },
       {
         "id": "EssenceResonator",
         "chainName": "Current Essence Resonator",
         "rootUpgradeID": "ntmyk:Essence_Resonator_Dragon",
         "defaultName": "Bronze Essence Resonator",
-        "defaultDescription": "No bonuses."
+        "defaultDescription": "No bonuses.",
+        "defaultMedia": "assets/shop/essence_resonator_bronze.png"
       },
       {
         "id": "Firestarter",
         "chainName": "Current Firestarter",
         "rootUpgradeID": "ntmyk:Firestarter_Dragon",
         "defaultName": "Bronze Firestarter",
-        "defaultDescription": "No bonuses."
+        "defaultDescription": "No bonuses.",
+        "defaultMedia": "assets/shop/firestarter_bronze.png"
       },
       {
         "id": "Hoe",
         "chainName": "Current Hoe",
         "rootUpgradeID": "ntmyk:Hoe_Dragon",
         "defaultName": "Bronze Hoe",
-        "defaultDescription": "No bonuses."
+        "defaultDescription": "No bonuses.",
+        "defaultMedia": "assets/shop/hoe_bronze.png"
       },
       {
         "id": "Mark",
@@ -3934,28 +3922,47 @@
         "chainName": "Current Needle",
         "rootUpgradeID": "ntmyk:Needle_Dragon",
         "defaultName": "Bronze Needle",
-        "defaultDescription": "No bonuses."
+        "defaultDescription": "No bonuses.",
+        "defaultMedia": "assets/shop/needle_bronze.png"
       },
       {
         "id": "ThievingTools",
         "chainName": "Current Thieving Tools",
         "rootUpgradeID": "ntmyk:Thieving_Tools_Dragon",
         "defaultName": "Bronze Thieving Tools",
-        "defaultDescription": "No bonuses."
+        "defaultDescription": "No bonuses.",
+        "defaultMedia": "assets/shop/thieving_tools_bronze.png"
       },
       {
         "id": "WhittlingTools",
         "chainName": "Current Whittling Tools",
         "rootUpgradeID": "ntmyk:Whittling_Tools_Dragon",
         "defaultName": "Bronze Whittling Tools",
-        "defaultDescription": "No bonuses."
+        "defaultDescription": "No bonuses.",
+        "defaultMedia": "assets/shop/whittling_tools_bronze.png"
       },
       {
         "id": "Telescope",
         "chainName": "Current Telescope",
         "rootUpgradeID": "ntmyk:Telescope_Dragon",
         "defaultName": "Bronze Telescope",
-        "defaultDescription": "No bonuses."
+        "defaultDescription": "No bonuses.",
+        "defaultMedia": "assets/shop/telescope_bronze.png"
+      }
+    ],
+    "skillData": [
+      {
+        "skillID": "melvorD:Woodcutting",
+        "data": {
+          "minibar": {
+            "defaultItems": [],
+            "pets": [],
+            "upgrades": [
+              "ntmyk:Multitree_II",
+              "ntmyk:Multitree_III"
+            ]
+          }
+        }
       }
     ]
   },
