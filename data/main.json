@@ -14,13 +14,14 @@
           "ntmyk:Anvil_Adamant",
           "ntmyk:Anvil_Rune",
           "ntmyk:Anvil_Dragon",
-          "ntmyk:Needle_Iron",
-          "ntmyk:Needle_Steel",
-          "ntmyk:Needle_Black",
-          "ntmyk:Needle_Mithril",
-          "ntmyk:Needle_Adamant",
-          "ntmyk:Needle_Rune",
-          "ntmyk:Needle_Dragon",
+          "ntmyk:Arcanolinth_Tauric",
+          "ntmyk:Arcanolinth_Spheric",
+          "ntmyk:Arcanolinth_Cubic",
+          "ntmyk:Arcanolinth_Tetrahedric",
+          "ntmyk:Arcanolinth_Octahedric",
+          "ntmyk:Arcanolinth_Dodecahedric",
+          "ntmyk:Arcanolinth_Icosahedric",
+          "ntmyk:Arcanolinth_Tesseractic",
           "ntmyk:Bunsen_Burner_Iron",
           "ntmyk:Bunsen_Burner_Steel",
           "ntmyk:Bunsen_Burner_Black",
@@ -35,14 +36,6 @@
           "ntmyk:Essence_Resonator_Adamant",
           "ntmyk:Essence_Resonator_Rune",
           "ntmyk:Essence_Resonator_Dragon",
-          "ntmyk:Arcanolinth_Tauric",
-          "ntmyk:Arcanolinth_Spheric",
-          "ntmyk:Arcanolinth_Cubic",
-          "ntmyk:Arcanolinth_Tetrahedric",
-          "ntmyk:Arcanolinth_Octahedric",
-          "ntmyk:Arcanolinth_Dodecahedric",
-          "ntmyk:Arcanolinth_Icosahedric",
-          "ntmyk:Arcanolinth_Tesseractic",
           "ntmyk:Firestarter_Iron",
           "ntmyk:Firestarter_Steel",
           "ntmyk:Firestarter_Black",
@@ -63,6 +56,13 @@
           "ntmyk:Mark_Tiger",
           "ntmyk:Mark_Bear",
           "ntmyk:Mark_Bison",
+          "ntmyk:Needle_Iron",
+          "ntmyk:Needle_Steel",
+          "ntmyk:Needle_Black",
+          "ntmyk:Needle_Mithril",
+          "ntmyk:Needle_Adamant",
+          "ntmyk:Needle_Rune",
+          "ntmyk:Needle_Dragon",
           "ntmyk:Telescope_Iron",
           "ntmyk:Telescope_Steel",
           "ntmyk:Telescope_Black",
@@ -76,7 +76,21 @@
           "ntmyk:Thieving_Tools_Mithril",
           "ntmyk:Thieving_Tools_Adamant",
           "ntmyk:Thieving_Tools_Rune",
-          "ntmyk:Thieving_Tools_Dragon"
+          "ntmyk:Thieving_Tools_Dragon",
+          "ntmyk:Trainers_Leather",
+          "ntmyk:Trainers_Hardleather",
+          "ntmyk:Trainers_Green",
+          "ntmyk:Trainers_Blue",
+          "ntmyk:Trainers_Red",
+          "ntmyk:Trainers_Black",
+          "ntmyk:Trainers_Elite",
+          "ntmyk:Whittling_Tools_Iron",
+          "ntmyk:Whittling_Tools_Steel",
+          "ntmyk:Whittling_Tools_Black",
+          "ntmyk:Whittling_Tools_Mithril",
+          "ntmyk:Whittling_Tools_Adamant",
+          "ntmyk:Whittling_Tools_Rune",
+          "ntmyk:Whittling_Tools_Dragon"
         ]
       },
       {
@@ -3375,6 +3389,322 @@
         "showBuyLimit": false,
         "customName": "Dragon Thieving Tools",
         "customDescription": "-5% Thieving Interval for a total of -40% applied from your Thieving Tools."
+      },
+      {
+        "id": "Trainers_Leather",
+        "media": "assets/shop/trainers_leather.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Agility",
+                "value": 5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 750000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Agility",
+            "level": 20,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Leather Trainers",
+        "customDescription": "-5% Agility Interval for a total of -5% applied from your Trainers."
+      },
+      {
+        "id": "Trainers_Hardleather",
+        "media": "assets/shop/trainers_hardleather.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Agility",
+                "value": 5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 1800000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Trainers_Leather"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Agility",
+            "level": 30,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Hardleather Trainers",
+        "customDescription": "-5% Agility Interval for a total of -10% applied from your Trainers."
+      },
+      {
+        "id": "Trainers_Green",
+        "media": "assets/shop/trainers_green.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Agility",
+                "value": 5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 4200000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Trainers_Hardleather"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Agility",
+            "level": 40,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Green D-hide Trainers",
+        "customDescription": "-5% Agility Interval for a total of -15% applied from your Trainers."
+      },
+      {
+        "id": "Trainers_Blue",
+        "media": "assets/shop/trainers_blue.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Agility",
+                "value": 5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 9000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Trainers_Green"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Agility",
+            "level": 55,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Blue D-hide Trainers",
+        "customDescription": "-5% Agility Interval for a total of -20% applied from your Trainers."
+      },
+      {
+        "id": "Trainers_Red",
+        "media": "assets/shop/trainers_red.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Agility",
+                "value": 5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 18500000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Trainers_Blue"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Agility",
+            "level": 70,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Red D-hide Trainers",
+        "customDescription": "-5% Agility Interval for a total of -25% applied from your Trainers."
+      },
+      {
+        "id": "Trainers_Black",
+        "media": "assets/shop/trainers_black.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Agility",
+                "value": 5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 38000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Trainers_Red"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Agility",
+            "level": 85,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Black D-hide Trainers",
+        "customDescription": "-5% Agility Interval for a total of -30% applied from your Trainers."
+      },
+      {
+        "id": "Trainers_Elite",
+        "media": "assets/shop/trainers_elite.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Agility",
+                "value": 5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 100000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Trainers_Black"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Agility",
+            "level": 95,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Elite Trainers",
+        "customDescription": "-5% Agility Interval for a total of -35% applied from your Trainers."
       },
       {
         "id": "Whittling_Tools_Iron",

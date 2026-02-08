@@ -124,6 +124,18 @@
 | Rune Thieving Tools    | 80               | 110,000,000 | −5%                      | −30%                      |
 | Dragon Thieving Tools  | 95               | 150,000,000 | −5%                      | −35%                      |
 
+## Trainers — Agility
+| Name                  | Level (Agility) |   Cost (GP) | Agility Interval (This) | Agility Interval (Total) |
+| --------------------- | --------------: | ----------: | ----------------------: | -----------------------: |
+| Leather Trainers      |              20 |     750,000 |                     -5% |                      -5% |
+| Hardleather Trainers  |              35 |   2,500,000 |                     -5% |                     -10% |
+| Green D-hide Trainers |              50 |   7,500,000 |                     -5% |                     -15% |
+| Blue D-hide Trainers  |              65 |  20,000,000 |                     -5% |                     -20% |
+| Red D-hide Trainers   |              75 |  40,000,000 |                     -5% |                     -25% |
+| Black D-hide Trainers |              85 |  70,000,000 |                     -5% |                     -30% |
+| Elite Trainers        |              95 | 100,000,000 |                     -5% |                     -35% |
+
+
 ## Whittling Tools — Fletching
 | Name                    | Level (Fletching) | Cost (GP) | Flat Output (This) | Flat Output (Total) | Preservation Chance (This) | Preservation Chance (Total) |
 | ----------------------- | ----------------- | --------- | ------------------ | ------------------- | -------------------------- | --------------------------- |
