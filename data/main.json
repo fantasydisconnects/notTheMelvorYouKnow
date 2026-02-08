@@ -5,6 +5,68 @@
     "shopDisplayOrder": [
       {
         "insertAt": "After",
+        "afterID": "melvorD:Dragon_Pickaxe",
+        "ids": [
+          "ntmyk:Anvil_Iron",
+          "ntmyk:Anvil_Steel",
+          "ntmyk:Anvil_Black",
+          "ntmyk:Anvil_Mithril",
+          "ntmyk:Anvil_Adamant",
+          "ntmyk:Anvil_Rune",
+          "ntmyk:Anvil_Dragon",
+          "ntmyk:Needle_Iron",
+          "ntmyk:Needle_Steel",
+          "ntmyk:Needle_Black",
+          "ntmyk:Needle_Mithril",
+          "ntmyk:Needle_Adamant",
+          "ntmyk:Needle_Rune",
+          "ntmyk:Needle_Dragon",
+          "ntmyk:Bunsen_Burner_Iron",
+          "ntmyk:Bunsen_Burner_Steel",
+          "ntmyk:Bunsen_Burner_Black",
+          "ntmyk:Bunsen_Burner_Mithril",
+          "ntmyk:Bunsen_Burner_Adamant",
+          "ntmyk:Bunsen_Burner_Rune",
+          "ntmyk:Bunsen_Burner_Dragon",
+          "ntmyk:Essence_Resonator_Iron",
+          "ntmyk:Essence_Resonator_Steel",
+          "ntmyk:Essence_Resonator_Black",
+          "ntmyk:Essence_Resonator_Mithril",
+          "ntmyk:Essence_Resonator_Adamant",
+          "ntmyk:Essence_Resonator_Rune",
+          "ntmyk:Essence_Resonator_Dragon",
+          "ntmyk:Firestarter_Iron",
+          "ntmyk:Firestarter_Steel",
+          "ntmyk:Firestarter_Black",
+          "ntmyk:Firestarter_Mithril",
+          "ntmyk:Firestarter_Adamant",
+          "ntmyk:Firestarter_Rune",
+          "ntmyk:Firestarter_Dragon",
+          "ntmyk:Hoe_Iron",
+          "ntmyk:Hoe_Steel",
+          "ntmyk:Hoe_Black",
+          "ntmyk:Hoe_Mithril",
+          "ntmyk:Hoe_Adamant",
+          "ntmyk:Hoe_Rune",
+          "ntmyk:Hoe_Dragon",
+          "ntmyk:Telescope_Iron",
+          "ntmyk:Telescope_Steel",
+          "ntmyk:Telescope_Black",
+          "ntmyk:Telescope_Mithril",
+          "ntmyk:Telescope_Adamant",
+          "ntmyk:Telescope_Rune",
+          "ntmyk:Telescope_Dragon",
+          "ntmyk:Thieving_Tools_Iron",
+          "ntmyk:Thieving_Tools_Steel",
+          "ntmyk:Thieving_Tools_Black",
+          "ntmyk:Thieving_Tools_Mithril",
+          "ntmyk:Thieving_Tools_Adamant",
+          "ntmyk:Thieving_Tools_Rune",
+          "ntmyk:Thieving_Tools_Dragon"
+        ]
+      },
+      {
+        "insertAt": "After",
         "afterID": "melvorD:Multi_Tree",
         "ids": [
           "ntmyk:Multi_Tree_II",
@@ -21,6 +83,1948 @@
       }
     ],
     "shopPurchases": [
+      {
+        "id": "Anvil_Iron",
+        "media": "assets/shop/anvil_iron.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Smithing",
+                "value": -1
+              }
+            ],
+            "doubleItemsSkill": [
+              {
+                "skillID": "melvorD:Smithing",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 1250
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [],
+        "purchaseRequirements": [],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Iron Anvil",
+        "customDescription": "-1% Smithing Interval for a total of -1% applied from your Anvil. +1% chance to double smithed items per action for a total of +1% applied from your Anvil."
+      },
+      {
+        "id": "Anvil_Steel",
+        "media": "assets/shop/anvil_steel.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Smithing",
+                "value": -1
+              }
+            ],
+            "doubleItemsSkill": [
+              {
+                "skillID": "melvorD:Smithing",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 10000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "purchaseID": "ntmyk:Anvil_Iron",
+            "count": 1
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Smithing",
+            "level": 10
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Steel Anvil",
+        "customDescription": "-1% Smithing Interval for a total of -2% applied from your Anvil. +1% chance to double smithed items per action for a total of +2% applied from your Anvil."
+      },
+      {
+        "id": "Anvil_Black",
+        "media": "assets/shop/anvil_black.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Smithing",
+                "value": -1
+              }
+            ],
+            "doubleItemsSkill": [
+              {
+                "skillID": "melvorD:Smithing",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 50000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "purchaseID": "ntmyk:Anvil_Steel",
+            "count": 1
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Smithing",
+            "level": 20
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Black Anvil",
+        "customDescription": "-1% Smithing Interval for a total of -3% applied from your Anvil. +1% chance to double smithed items per action for a total of +3% applied from your Anvil."
+      },
+      {
+        "id": "Anvil_Mithril",
+        "media": "assets/shop/anvil_mithril.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Smithing",
+                "value": -1
+              }
+            ],
+            "doubleItemsSkill": [
+              {
+                "skillID": "melvorD:Smithing",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 250000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "purchaseID": "ntmyk:Anvil_Black",
+            "count": 1
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Smithing",
+            "level": 35
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Mithril Anvil",
+        "customDescription": "-1% Smithing Interval for a total of -4% applied from your Anvil. +1% chance to double smithed items per action for a total of +4% applied from your Anvil."
+      },
+      {
+        "id": "Anvil_Adamant",
+        "media": "assets/shop/anvil_adamant.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Smithing",
+                "value": -1
+              }
+            ],
+            "doubleItemsSkill": [
+              {
+                "skillID": "melvorD:Smithing",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 1000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "purchaseID": "ntmyk:Anvil_Mithril",
+            "count": 1
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Smithing",
+            "level": 50
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Adamant Anvil",
+        "customDescription": "-1% Smithing Interval for a total of -5% applied from your Anvil. +1% chance to double smithed items per action for a total of +5% applied from your Anvil."
+      },
+      {
+        "id": "Anvil_Rune",
+        "media": "assets/shop/anvil_rune.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Smithing",
+                "value": -1
+              }
+            ],
+            "doubleItemsSkill": [
+              {
+                "skillID": "melvorD:Smithing",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 5000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "purchaseID": "ntmyk:Anvil_Adamant",
+            "count": 1
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Smithing",
+            "level": 60
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Rune Anvil",
+        "customDescription": "-1% Smithing Interval for a total of -6% applied from your Anvil. +1% chance to double smithed items per action for a total of +6% applied from your Anvil."
+      },
+      {
+        "id": "Anvil_Steel",
+        "media": "assets/shop/anvil_steel.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Smithing",
+                "value": -1
+              }
+            ],
+            "doubleItemsSkill": [
+              {
+                "skillID": "melvorD:Smithing",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 25000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "purchaseID": "ntmyk:Anvil_Rune",
+            "count": 1
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Smithing",
+            "level": 80
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Dragon Anvil",
+        "customDescription": "-1% Smithing Interval for a total of -7% applied from your Anvil. +1% chance to double smithed items per action for a total of +7% applied from your Anvil."
+      },
+      {
+        "id": "Arcanolinth_Tauric",
+        "media": "assets/shop/arcanolinth_tauric.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "altMagicRunePreservationChance": 5,
+            "altMagicSkillXP": 1
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "cost": 12,
+              "type": "Fixed"
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Magic",
+            "level": 11,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Tauric Arcanolinth",
+        "customDescription": "+1% Alt. Magic XP for a total of +1% Alt. Magic XP from your Arcanolinth. +5% chance to preserve runes in Alt. Magic for a total of +5% from your Arcanolinth."
+      },
+      {
+        "id": "Arcanolinth_Spheric",
+        "media": "assets/shop/arcanolinth_spheric.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "altMagicRunePreservationChance": 5,
+            "altMagicSkillXP": 1
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "cost": 123,
+              "type": "Fixed"
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "purchaseID": "ntmyk:Arcanolinth_Tauric",
+            "count": 1
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Magic",
+            "level": 22
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Spheric Arcanolinth",
+        "customDescription": "+1% Alt. Magic XP for a total of +2% Alt. Magic XP from your Arcanolinth. +5% chance to preserve runes in Alt. Magic for a total of +10% from your Arcanolinth."
+      },
+      {
+        "id": "Arcanolinth_Tetrahedric",
+        "media": "assets/shop/arcanolinth_tetrahedric.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "altMagicRunePreservationChance": 5,
+            "altMagicSkillXP": 1
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "cost": 1234,
+              "type": "Fixed"
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "purchaseID": "ntmyk:Arcanolinth_Spheric",
+            "count": 1
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Magic",
+            "level": 33,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Tetrahedric Arcanolinth",
+        "customDescription": "+1% Alt. Magic XP for a total of +3% Alt. Magic XP from your Arcanolinth. +5% chance to preserve runes in Alt. Magic for a total of +15% from your Arcanolinth."
+      },
+      {
+        "id": "Arcanolinth_Cubic",
+        "media": "assets/shop/arcanolinth_cubic.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "altMagicRunePreservationChance": 5,
+            "altMagicSkillXP": 1
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 12345
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "purchaseID": "ntmyk:Arcanolinth_Tetrahedric",
+            "count": 1
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Magic",
+            "level": 44,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Cubic Arcanolinth",
+        "customDescription": "+1% Alt. Magic XP for a total of +4% Alt. Magic XP from your Arcanolinth. +5% chance to preserve runes in Alt. Magic for a total of +20% from your Arcanolinth."
+      },
+      {
+        "id": "Arcanolinth_Octahedric",
+        "media": "assets/shop/arcanolinth_octahedric.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "altMagicRunePreservationChance": 5,
+            "altMagicSkillXP": 1
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 123456
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "purchaseID": "ntmyk:Arcanolinth_Cubic",
+            "count": 1
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Magic",
+            "level": 55,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Octahedric Arcanolinth",
+        "customDescription": "+1% Alt. Magic XP for a total of +5% Alt. Magic XP from your Arcanolinth. +5% chance to preserve runes in Alt. Magic for a total of +25% from your Arcanolinth."
+      },
+      {
+        "id": "Arcanolinth_Dodecahedric",
+        "media": "assets/shop/arcanolinth_dodecahedric.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "altMagicRunePreservationChance": 5,
+            "altMagicSkillXP": 1
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 1234567
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "purchaseID": "ntmyk:Arcanolinth_Octahedric",
+            "count": 1
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Magic",
+            "level": 66,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Dodecahedric Arcanolinth",
+        "customDescription": "+1% Alt. Magic XP for a total of +6% Alt. Magic XP from your Arcanolinth. +5% chance to preserve runes in Alt. Magic for a total of +30% from your Arcanolinth."
+      },
+      {
+        "id": "Arcanolinth_Icosahedric",
+        "media": "assets/shop/arcanolinth_icosahedric.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "altMagicRunePreservationChance": 5,
+            "altMagicSkillXP": 1
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 12345678
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "purchaseID": "ntmyk:Arcanolinth_Dodecahedric",
+            "count": 1
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Magic",
+            "level": 77,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Icosahedric Arcanolinth",
+        "customDescription": "+1% Alt. Magic XP for a total of +7% Alt. Magic XP from your Arcanolinth. +5% chance to preserve runes in Alt. Magic for a total of +35% from your Arcanolinth."
+      },
+      {
+        "id": "Arcanolinth_Tesseractic",
+        "media": "assets/shop/arcanolinth_tesseractic.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "altMagicRunePreservationChance": 5,
+            "altMagicSkillXP": 1
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 123456789
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "purchaseID": "ntmyk:Arcanolinth_Octahedric",
+            "count": 1
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Magic",
+            "level": 88,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Tesseractic Arcanolinth",
+        "customDescription": "+1% Alt. Magic XP for a total of +8% Alt. Magic XP from your Arcanolinth. +5% chance to preserve runes in Alt. Magic for a total of +40% from your Arcanolinth."
+      },
+      {
+        "id": "Bunsen_Burner_Iron",
+        "media": "assets/shop/bunsen_burner_iron.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Herblore",
+                "value": -1
+              }
+            ],
+            "potionCharges": 10
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 60220
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Herblore",
+            "level": 10,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Iron Bunsen Burner",
+        "customDescription": "-1% Herblore Interval for a total of -1% Herblore Interval from your Bunsen Burner. +10% added to all potion charges for a total of +10% added to all potion charges from your Bunsen Burner."
+      },
+      {
+        "id": "Bunsen_Burner_Steel",
+        "media": "assets/shop/bunsen_burner_steel.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Herblore",
+                "value": -1
+              }
+            ],
+            "potionCharges": 10
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 1204400
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Bunsen_Burner_Iron"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Herblore",
+            "level": 20,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Steel Bunsen Burner",
+        "customDescription": "-1% Herblore Interval for a total of -2% Herblore Interval from your Bunsen Burner. +10% added to all potion charges for a total of +20% added to all potion charges from your Bunsen Burner."
+      },
+      {
+        "id": "Bunsen_Burner_Black",
+        "media": "assets/shop/bunsen_burner_black.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Herblore",
+                "value": -1
+              }
+            ],
+            "potionCharges": 10
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 2107700
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Bunsen_Burner_Steel"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Herblore",
+            "level": 35,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Black Bunsen Burner",
+        "customDescription": "-1% Herblore Interval for a total of -3% Herblore Interval from your Bunsen Burner. +10% added to all potion charges for a total of +30% added to all potion charges from your Bunsen Burner."
+      },
+      {
+        "id": "Bunsen_Burner_Mithril",
+        "media": "assets/shop/bunsen_burner_mithril.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Herblore",
+                "value": -1
+              }
+            ],
+            "potionCharges": 10
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 3312100
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Bunsen_Burner_Black"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Herblore",
+            "level": 55,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Mithril Bunsen Burner",
+        "customDescription": "-1% Herblore Interval for a total of -4% Herblore Interval from your Bunsen Burner. +10% added to all potion charges for a total of +40% added to all potion charges from your Bunsen Burner."
+      },
+      {
+        "id": "Bunsen_Burner_Adamant",
+        "media": "assets/shop/bunsen_burner_adamant.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Herblore",
+                "value": -1
+              }
+            ],
+            "potionCharges": 10
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 3914300
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Bunsen_Burner_Mithril"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Herblore",
+            "level": 65,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Adamant Bunsen Burner",
+        "customDescription": "-1% Herblore Interval for a total of -5% Herblore Interval from your Bunsen Burner. +10% added to all potion charges for a total of +50% added to all potion charges from your Bunsen Burner."
+      },
+      {
+        "id": "Bunsen_Burner_Rune",
+        "media": "assets/shop/bunsen_burner_rune.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Herblore",
+                "value": -1
+              }
+            ],
+            "potionCharges": 10
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 4516500
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Bunsen_Burner_Adamant"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Herblore",
+            "level": 75,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Rune Bunsen Burner",
+        "customDescription": "-1% Herblore Interval for a total of -6% Herblore Interval from your Bunsen Burner. +10% added to all potion charges for a total of +60% added to all potion charges from your Bunsen Burner."
+      },
+      {
+        "id": "Bunsen_Burner_Dragon",
+        "media": "assets/shop/bunsen_burner_dragon.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Herblore",
+                "value": -1
+              }
+            ],
+            "potionCharges": 10
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 5419800
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Bunsen_Burner_Rune"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Herblore",
+            "level": 90,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Dragon Bunsen Burner",
+        "customDescription": "-1% Herblore Interval for a total of -7% from your Bunsen Burner. +10% added to all potion charges for a total of +70% from your Bunsen Burner."
+      },
+      {
+        "id": "Essence_Resonator_Iron",
+        "media": "assets/shop/essence_resonator_iron.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "runePreservationChance": 1,
+            "skillPreservationChance": [
+              {
+                "skillID": "melvorD:Runecrafting",
+                "value": 5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 2002
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [],
+        "purchaseRequirements": [],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Iron Essence Resonator",
+        "customDescription": "+1% Rune Preservation chance for a total of +1% chance from your Essence Resonator. +5% chance to preserve resources in Runecrafting for a total of +5% chance from your Essence Resonator."
+      },
+      {
+        "id": "Essence_Resonator_Steel",
+        "media": "assets/shop/essence_resonator_steel.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "runePreservationChance": 1,
+            "skillPreservationChance": [
+              {
+                "skillID": "melvorD:Runecrafting",
+                "value": 5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 35453
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Essence_Resonator_Iron"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Runecrafting",
+            "level": 25,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Steel Essence Resonator",
+        "customDescription": "+1% Rune Preservation chance for a total of +2% chance from your Essence Resonator. +5% chance to preserve resources in Runecrafting for a total of +10% chance from your Essence Resonator."
+      },
+      {
+        "id": "Essence_Resonator_Black",
+        "media": "assets/shop/essence_resonator_black.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "runePreservationChance": 1,
+            "skillPreservationChance": [
+              {
+                "skillID": "melvorD:Runecrafting",
+                "value": 5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 80808
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Essence_Resonator_Steel"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Runecrafting",
+            "level": 30,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Black Essence Resonator",
+        "customDescription": "+1% Rune Preservation chance for a total of +3% chance from your Essence Resonator. +5% chance to preserve resources in Runecrafting for a total of +15% chance from your Essence Resonator."
+      },
+      {
+        "id": "Essence_Resonator_Mithril",
+        "media": "assets/shop/essence_resonator_mithril.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "runePreservationChance": 1,
+            "skillPreservationChance": [
+              {
+                "skillID": "melvorD:Runecrafting",
+                "value": 5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 161616
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Essence_Resonator_Black"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Runecrafting",
+            "level": 45,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Mithril Essence Resonator",
+        "customDescription": "+1% Rune Preservation chance for a total of +4% chance from your Essence Resonator. +5% chance to preserve resources in Runecrafting for a total of +20% chance from your Essence Resonator."
+      },
+      {
+        "id": "Essence_Resonator_Adamant",
+        "media": "assets/shop/essence_resonator_adamant.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "runePreservationChance": 1,
+            "skillPreservationChance": [
+              {
+                "skillID": "melvorD:Runecrafting",
+                "value": 5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 323232
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Essence_Resonator_Mithril"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Runecrafting",
+            "level": 55,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Adamant Essence Resonator",
+        "customDescription": "+1% Rune Preservation chance for a total of +5% chance from your Essence Resonator. +5% chance to preserve resources in Runecrafting for a total of +25% chance from your Essence Resonator."
+      },
+      {
+        "id": "Essence_Resonator_Rune",
+        "media": "assets/shop/essence_resonator_rune.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "runePreservationChance": 1,
+            "skillPreservationChance": [
+              {
+                "skillID": "melvorD:Runecrafting",
+                "value": 5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 6464464
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Essence_Resonator_Adamant"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Runecrafting",
+            "level": 70,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Rune Essence Resonator",
+        "customDescription": "+1% Rune Preservation chance for a total of +6% chance from your Essence Resonator. +5% chance to preserve resources in Runecrafting for a total of +30% chance from your Essence Resonator."
+      },
+      {
+        "id": "Essence_Resonator_Dragon",
+        "media": "assets/shop/essence_resonator_dragon.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "runePreservationChance": 1,
+            "skillPreservationChance": [
+              {
+                "skillID": "melvorD:Runecrafting",
+                "value": 5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 31133113
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Essence_Resonator_Rune"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Runecrafting",
+            "level": 85,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Dragon Essence Resonator",
+        "customDescription": "+1% Rune Preservation chance for a total of +7% chance from your Essence Resonator. +5% chance to preserve resources in Runecrafting for a total of +35% chance from your Essence Resonator."
+      },
+      {
+        "id": "Firestarter_Iron",
+        "media": "assets/shop/firestarter_iron.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Firemaking",
+                "value": -5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 30000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [],
+        "purchaseRequirements": [],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Iron Firestarter",
+        "customDescription": "-5% Firemaking interval reduction from your Firestarter (total: -5%)."
+      },
+      {
+        "id": "Firestarter_Steel",
+        "media": "assets/shop/firestarter_steel.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Firemaking",
+                "value": -5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 75000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Firestarter_Iron"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Firemaking",
+            "level": 25,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Steel Firestarter",
+        "customDescription": "-5% Firemaking interval reduction from your Firestarter (total: -10%)."
+      },
+      {
+        "id": "Firestarter_Black",
+        "media": "assets/shop/firestarter_black.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Firemaking",
+                "value": -5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 200000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Firestarter_Steel"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Firemaking",
+            "level": 30,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Black Firestarter",
+        "customDescription": "-5% Firemaking interval reduction from your Firestarter (total: -15%)."
+      },
+      {
+        "id": "Firestarter_Mithril",
+        "media": "assets/shop/firestarter_mithril.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Firemaking",
+                "value": -5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 500000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Firestarter_Black"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Firemaking",
+            "level": 45,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Mithril Firestarter",
+        "customDescription": "-5% Firemaking interval reduction from your Firestarter (total: -20%)."
+      },
+      {
+        "id": "Firestarter_Adamant",
+        "media": "assets/shop/firestarter_adamant.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Firemaking",
+                "value": -5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 1200000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Firestarter_Mithril"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Firemaking",
+            "level": 55,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Adamant Firestarter",
+        "customDescription": "-5% Firemaking interval reduction from your Firestarter (total: -25%)."
+      },
+      {
+        "id": "Firestarter_Rune",
+        "media": "assets/shop/firestarter_rune.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Firemaking",
+                "value": -5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 3000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Firestarter_Adamant"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Firemaking",
+            "level": 70,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Rune Firestarter",
+        "customDescription": "-5% Firemaking interval reduction from your Firestarter (total: -30%)."
+      },
+      {
+        "id": "Firestarter_Dragon",
+        "media": "assets/shop/firestarter_dragon.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Firemaking",
+                "value": -5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 10000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Firestarter_Rune"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Firemaking",
+            "level": 85,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Dragon Firestarter",
+        "customDescription": "-5% Firemaking interval reduction from your Firestarter (total: -35%)."
+      },
+      {
+        "id": "Hoe_Iron",
+        "media": "assets/shop/hoe_iron.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "basePrimaryProductQuantity": [
+              {
+                "skillID": "melvorD:Farming",
+                "value": 10
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 10365
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [],
+        "purchaseRequirements": [],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Iron Hoe",
+        "customDescription": "+10% primary product yield from your Hoe (total: +10%)."
+      },
+      {
+        "id": "Hoe_Steel",
+        "media": "assets/shop/hoe_steel.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "basePrimaryProductQuantity": [
+              {
+                "skillID": "melvorD:Farming",
+                "value": 10
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 50000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Hoe_Iron"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Farming",
+            "level": 25,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Steel Hoe",
+        "customDescription": "+10% primary product yield from your Hoe (total: +20%)."
+      },
+      {
+        "id": "Hoe_Black",
+        "media": "assets/shop/hoe_black.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "basePrimaryProductQuantity": [
+              {
+                "skillID": "melvorD:Farming",
+                "value": 10
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 150000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Hoe_Steel"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Farming",
+            "level": 30,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Black Hoe",
+        "customDescription": "+10% primary product yield from your Hoe (total: +30%)."
+      },
+      {
+        "id": "Hoe_Mithril",
+        "media": "assets/shop/hoe_mithril.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "basePrimaryProductQuantity": [
+              {
+                "skillID": "melvorD:Farming",
+                "value": 10
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 400000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Hoe_Black"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Farming",
+            "level": 45,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Mithril Hoe",
+        "customDescription": "+10% primary product yield from your Hoe (total: +40%)."
+      },
+      {
+        "id": "Hoe_Adamant",
+        "media": "assets/shop/hoe_adamant.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "basePrimaryProductQuantity": [
+              {
+                "skillID": "melvorD:Farming",
+                "value": 10
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 1000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Hoe_Mithril"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Farming",
+            "level": 55,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Adamant Hoe",
+        "customDescription": "+10% primary product yield from your Hoe (total: +50%)."
+      },
+      {
+        "id": "Hoe_Rune",
+        "media": "assets/shop/hoe_rune.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "basePrimaryProductQuantity": [
+              {
+                "skillID": "melvorD:Farming",
+                "value": 10
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 3500000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Hoe_Adamant"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Farming",
+            "level": 70,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Rune Hoe",
+        "customDescription": "+10% primary product yield from your Hoe (total: +60%)."
+      },
+      {
+        "id": "Hoe_Dragon",
+        "media": "assets/shop/hoe_dragon.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "basePrimaryProductQuantity": [
+              {
+                "skillID": "melvorD:Farming",
+                "value": 10
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 8473000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "ntmyk:Hoe_Rune"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Farming",
+            "level": 85,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Dragon Hoe",
+        "customDescription": "+10% primary product yield from your Hoe (total: +70%)."
+      },
       {
         "id": "Multi_Tree_II",
         "media": "assets/shop/woodcutting_multi_tree.svg",
