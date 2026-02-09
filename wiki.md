@@ -1,3 +1,12 @@
+# Slayer Equipment
+## Summoner Slayer Armour
+| Name                            | Bonuses | Modifiers                                                                                                                                                                                                                       | Equip Requirement     |
+| ------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| Slayer Summoner Mask (Basic)    | 1 DR    | Max Hit: -10%, +10% Chance to Preserve Summoning Charges, -10% Summoning Attack Interval, +10% Summoning Max Hit, +2.5% Slayer XP, +2.5% Slayer Area Effect Negation, +1% Damage Dealt to Slayer Tasks, +1% Slayer Coins Gained | Summoning 1, Slayer 1 |
+| Slayer Summoner Gown (Basic)    | 1 DR    | Max Hit: -10%, +10% Chance to Preserve Summoning Charges, -10% Summoning Attack Interval, +10% Summoning Max Hit, +2.5% Slayer XP, +2.5% Slayer Area Effect Negation, +1% Damage Dealt to Slayer Tasks, +1% Slayer Coins Gained | Summoning 1, Slayer 1 |
+| Slayer Summoner Kilt (Basic)    | 1 DR    | Max Hit: -10%, +10% Chance to Preserve Summoning Charges, -10% Summoning Attack Interval, +10% Summoning Max Hit, +2.5% Slayer XP, +2.5% Slayer Area Effect Negation, +1% Damage Dealt to Slayer Tasks, +1% Slayer Coins Gained | Summoning 1, Slayer 1 |
+| Slayer Summoner Sandals (Basic) | 1 DR    | Max Hit: -10%, +10% Chance to Preserve Summoning Charges, -10% Summoning Attack Interval, +10% Summoning Max Hit, +2.5% Slayer XP, +2.5% Slayer Area Effect Negation, +1% Damage Dealt to Slayer Tasks, +1% Slayer Coins Gained | Summoning 1, Slayer 1 |
+
 # General Upgrades
 ## Miscellaneous
 | Upgrade        | Description                                                 | Cost (GP)   | Requirements |
@@ -146,3 +155,12 @@
 | Adamant Fletching Tools | 70                | 3,500,000 | +1                 | +3                  | +1%                        | +5%                         |
 | Rune Fletching Tools    | 85                | 5,000,000 | —                  | +3                  | +1%                        | +6%                         |
 | Dragon Fletching Tools  | 95                | 7,000,000 | +1                 | +4                  | +1%                        | +7%                         |
+
+# Slayer
+## Summoner Slayer Armour
+| Name                            | Cost (SC) | Unlock Requirement | Purchase Requirement             |
+| ------------------------------- | --------- | ------------------ | -------------------------------- |
+| Slayer Summoner Mask (Basic)    | 10,000    | None               | 15 Normal Slayer Tasks Completed |
+| Slayer Summoner Gown (Basic)    | 10,000    | None               | 15 Normal Slayer Tasks Completed |
+| Slayer Summoner Kilt (Basic)    | 10,000    | None               | 15 Normal Slayer Tasks Completed |
+| Slayer Summoner Sandals (Basic) | 10,000    | None               | 15 Normal Slayer Tasks Completed |
