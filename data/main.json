@@ -2,7 +2,1169 @@
   "$schema": "https://melvoridle.com/assets/schema/gameData.json",
   "namespace": "ntmyk",
   "data": {
+    "bankSortOrder": [
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Slayer_Wizard_Robes_Master",
+        "ids": [
+          "ntmyk:Slayer_Summoner_Mask_Basic",
+          "ntmyk:Slayer_Summoner_Gown_Basic",
+          "ntmyk:Slayer_Summoner_Kilt_Basic",
+          "ntmyk:Slayer_Summoner_Sandals_Basic",
+          "ntmyk:Slayer_Summoner_Mask_Strong",
+          "ntmyk:Slayer_Summoner_Gown_Strong",
+          "ntmyk:Slayer_Summoner_Kilt_Strong",
+          "ntmyk:Slayer_Summoner_Sandals_Strong",
+          "ntmyk:Slayer_Summoner_Mask_Elite",
+          "ntmyk:Slayer_Summoner_Gown_Elite",
+          "ntmyk:Slayer_Summoner_Kilt_Elite",
+          "ntmyk:Slayer_Summoner_Sandals_Elite",
+          "ntmyk:Slayer_Summoner_Mask_Master",
+          "ntmyk:Slayer_Summoner_Gown_Master",
+          "ntmyk:Slayer_Summoner_Kilt_Master",
+          "ntmyk:Slayer_Summoner_Sandals_Master"
+        ]
+      }
+    ],
+    "items": [
+      {
+        "itemType": "Equipment",
+        "id": "Slayer_Summoner_Mask_Basic",
+        "name": "Slayer Summoner Mask (Basic)",
+        "category": "Combat",
+        "type": "Slayer Armour",
+        "media": "assets/bank/summoner_mask_slayer_basic.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 250,
+        "tier": "slayer",
+        "validSlots": [
+          "Helmet",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Slayer",
+            "level": 1
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "damageReduction",
+            "value": 1
+          }
+        ],
+        "modifiers": {
+          "maxHit": -10,
+          "summoningChargePreservationChance": 10,
+          "summoningAttackInterval": -10,
+          "summoningMaxHit": 10,
+          "skillXP": [
+            {
+              "skillID": "melvorD:Slayer",
+              "value": 2.5
+            }
+          ],
+          "flatSlayerAreaEffectNegation": 2.5,
+          "damageDealtToSlayerTasks": 1,
+          "currencyGain": [
+            {
+              "currencyID": "melvorD:SlayerCoins",
+              "value": 1
+            }
+          ]
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Slayer_Summoner_Gown_Basic",
+        "name": "Slayer Summoner Gown (Basic)",
+        "category": "Combat",
+        "type": "Slayer Armour",
+        "media": "assets/bank/summoner_gown_slayer_basic.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 250,
+        "tier": "slayer",
+        "validSlots": [
+          "Platebody",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Slayer",
+            "level": 1
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "damageReduction",
+            "value": 1
+          }
+        ],
+        "modifiers": {
+          "maxHit": -10,
+          "summoningChargePreservationChance": 10,
+          "summoningAttackInterval": -10,
+          "summoningMaxHit": 10,
+          "skillXP": [
+            {
+              "skillID": "melvorD:Slayer",
+              "value": 2.5
+            }
+          ],
+          "flatSlayerAreaEffectNegation": 2.5,
+          "damageDealtToSlayerTasks": 1,
+          "currencyGain": [
+            {
+              "currencyID": "melvorD:SlayerCoins",
+              "value": 1
+            }
+          ]
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Slayer_Summoner_Kilt_Basic",
+        "name": "Slayer Summoner Kilt (Basic)",
+        "category": "Combat",
+        "type": "Slayer Armour",
+        "media": "assets/bank/summoner_kilt_slayer_basic.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 250,
+        "tier": "slayer",
+        "validSlots": [
+          "Platelegs",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Slayer",
+            "level": 1
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "damageReduction",
+            "value": 1
+          }
+        ],
+        "modifiers": {
+          "maxHit": -10,
+          "summoningChargePreservationChance": 10,
+          "summoningAttackInterval": -10,
+          "summoningMaxHit": 10,
+          "skillXP": [
+            {
+              "skillID": "melvorD:Slayer",
+              "value": 2.5
+            }
+          ],
+          "flatSlayerAreaEffectNegation": 2.5,
+          "damageDealtToSlayerTasks": 1,
+          "currencyGain": [
+            {
+              "currencyID": "melvorD:SlayerCoins",
+              "value": 1
+            }
+          ]
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Slayer_Summoner_Sandals_Basic",
+        "name": "Slayer Summoner Sandals (Basic)",
+        "category": "Combat",
+        "type": "Slayer Armour",
+        "media": "assets/bank/summoner_sandals_slayer_basic.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 250,
+        "tier": "slayer",
+        "validSlots": [
+          "Boots",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Slayer",
+            "level": 1
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "damageReduction",
+            "value": 1
+          }
+        ],
+        "modifiers": {
+          "maxHit": -10,
+          "summoningChargePreservationChance": 10,
+          "summoningAttackInterval": -10,
+          "summoningMaxHit": 10,
+          "skillXP": [
+            {
+              "skillID": "melvorD:Slayer",
+              "value": 2.5
+            }
+          ],
+          "flatSlayerAreaEffectNegation": 2.5,
+          "damageDealtToSlayerTasks": 1,
+          "currencyGain": [
+            {
+              "currencyID": "melvorD:SlayerCoins",
+              "value": 1
+            }
+          ]
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Slayer_Summoner_Mask_Strong",
+        "name": "Slayer Summoner Mask (Strong)",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/summoner_mask_slayer_strong.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1300,
+        "tier": "slayer",
+        "validSlots": [
+          "Helmet",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Summoning",
+            "level": 30
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Slayer",
+            "level": 30
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "damageReduction",
+            "value": 2
+          }
+        ],
+        "modifiers": {
+          "maxHit": -15,
+          "summoningChargePreservationChance": 15,
+          "summoningAttackInterval": -15,
+          "summoningMaxHit": 15,
+          "skillXP": [
+            {
+              "skillID": "melvorD:Slayer",
+              "value": 7.5
+            }
+          ],
+          "flatSlayerAreaEffectNegation": 5,
+          "damageDealtToSlayerTasks": 1.5,
+          "currencyGain": [
+            {
+              "currencyID": "melvorD:SlayerCoins",
+              "value": 1.5
+            }
+          ]
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Slayer_Summoner_Gown_Strong",
+        "name": "Slayer Summoner Gown (Strong)",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/summoner_gown_slayer_strong.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1300,
+        "tier": "slayer",
+        "validSlots": [
+          "Platebody",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Summoning",
+            "level": 30
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Slayer",
+            "level": 30
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "damageReduction",
+            "value": 2
+          }
+        ],
+        "modifiers": {
+          "maxHit": -15,
+          "summoningChargePreservationChance": 15,
+          "summoningAttackInterval": -15,
+          "summoningMaxHit": 15,
+          "skillXP": [
+            {
+              "skillID": "melvorD:Slayer",
+              "value": 7.5
+            }
+          ],
+          "flatSlayerAreaEffectNegation": 5,
+          "damageDealtToSlayerTasks": 1.5,
+          "currencyGain": [
+            {
+              "currencyID": "melvorD:SlayerCoins",
+              "value": 1.5
+            }
+          ]
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Slayer_Summoner_Kilt_Strong",
+        "name": "Slayer Summoner Kilt (Strong)",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/summoner_kilt_slayer_strong.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1300,
+        "tier": "slayer",
+        "validSlots": [
+          "Platelegs",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Summoning",
+            "level": 30
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Slayer",
+            "level": 30
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "damageReduction",
+            "value": 2
+          }
+        ],
+        "modifiers": {
+          "maxHit": -15,
+          "summoningChargePreservationChance": 15,
+          "summoningAttackInterval": -15,
+          "summoningMaxHit": 15,
+          "skillXP": [
+            {
+              "skillID": "melvorD:Slayer",
+              "value": 7.5
+            }
+          ],
+          "flatSlayerAreaEffectNegation": 5,
+          "damageDealtToSlayerTasks": 1.5,
+          "currencyGain": [
+            {
+              "currencyID": "melvorD:SlayerCoins",
+              "value": 1.5
+            }
+          ]
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Slayer_Summoner_Sandals_Strong",
+        "name": "Slayer Summoner Sandals (Strong)",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/summoner_sandals_slayer_strong.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1300,
+        "tier": "slayer",
+        "validSlots": [
+          "Boots",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Summoning",
+            "level": 30
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Slayer",
+            "level": 30
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "damageReduction",
+            "value": 2
+          }
+        ],
+        "modifiers": {
+          "maxHit": -15,
+          "summoningChargePreservationChance": 15,
+          "summoningAttackInterval": -15,
+          "summoningMaxHit": 15,
+          "skillXP": [
+            {
+              "skillID": "melvorD:Slayer",
+              "value": 7.5
+            }
+          ],
+          "flatSlayerAreaEffectNegation": 5,
+          "damageDealtToSlayerTasks": 1.5,
+          "currencyGain": [
+            {
+              "currencyID": "melvorD:SlayerCoins",
+              "value": 1.5
+            }
+          ]
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Slayer_Summoner_Mask_Elite",
+        "name": "Slayer Summoner Mask (Elite)",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/summoner_mask_slayer_elite.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 4622,
+        "tier": "slayer",
+        "validSlots": [
+          "Helmet",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Summoning",
+            "level": 60
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Slayer",
+            "level": 60
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "damageReduction",
+            "value": 4
+          }
+        ],
+        "modifiers": {
+          "maxHit": -20,
+          "summoningChargePreservationChance": 20,
+          "summoningAttackInterval": -20,
+          "summoningMaxHit": 20,
+          "skillXP": [
+            {
+              "skillID": "melvorD:Slayer",
+              "value": 15
+            }
+          ],
+          "flatSlayerAreaEffectNegation": 7.5,
+          "damageDealtToSlayerTasks": 2,
+          "currencyGain": [
+            {
+              "currencyID": "melvorD:SlayerCoins",
+              "value": 2
+            }
+          ]
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Slayer_Summoner_Gown_Elite",
+        "name": "Slayer Summoner Gown (Elite)",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/summoner_gown_slayer_elite.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 4622,
+        "tier": "slayer",
+        "validSlots": [
+          "Platebody",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Summoning",
+            "level": 60
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Slayer",
+            "level": 60
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "damageReduction",
+            "value": 4
+          }
+        ],
+        "modifiers": {
+          "maxHit": -20,
+          "summoningChargePreservationChance": 20,
+          "summoningAttackInterval": -20,
+          "summoningMaxHit": 20,
+          "skillXP": [
+            {
+              "skillID": "melvorD:Slayer",
+              "value": 15
+            }
+          ],
+          "flatSlayerAreaEffectNegation": 7.5,
+          "damageDealtToSlayerTasks": 2,
+          "currencyGain": [
+            {
+              "currencyID": "melvorD:SlayerCoins",
+              "value": 2
+            }
+          ]
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Slayer_Summoner_Kilt_Elite",
+        "name": "Slayer Summoner Kilt (Elite)",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/summoner_kilt_slayer_elite.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 4622,
+        "tier": "slayer",
+        "validSlots": [
+          "Platelegs",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Summoning",
+            "level": 60
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Slayer",
+            "level": 60
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "damageReduction",
+            "value": 4
+          }
+        ],
+        "modifiers": {
+          "maxHit": -20,
+          "summoningChargePreservationChance": 20,
+          "summoningAttackInterval": -20,
+          "summoningMaxHit": 20,
+          "skillXP": [
+            {
+              "skillID": "melvorD:Slayer",
+              "value": 15
+            }
+          ],
+          "flatSlayerAreaEffectNegation": 7.5,
+          "damageDealtToSlayerTasks": 2,
+          "currencyGain": [
+            {
+              "currencyID": "melvorD:SlayerCoins",
+              "value": 2
+            }
+          ]
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Slayer_Summoner_Sandals_Elite",
+        "name": "Slayer Summoner Sandals (Elite)",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/summoner_sandals_slayer_elite.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 4622,
+        "tier": "slayer",
+        "validSlots": [
+          "Boots",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Summoning",
+            "level": 60
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Slayer",
+            "level": 60
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "damageReduction",
+            "value": 4
+          }
+        ],
+        "modifiers": {
+          "maxHit": -20,
+          "summoningChargePreservationChance": 20,
+          "summoningAttackInterval": -20,
+          "summoningMaxHit": 20,
+          "skillXP": [
+            {
+              "skillID": "melvorD:Slayer",
+              "value": 15
+            }
+          ],
+          "flatSlayerAreaEffectNegation": 7.5,
+          "damageDealtToSlayerTasks": 2,
+          "currencyGain": [
+            {
+              "currencyID": "melvorD:SlayerCoins",
+              "value": 2
+            }
+          ]
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Slayer_Summoner_Mask_Master",
+        "name": "Slayer Summoner Mask (Master)",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/summoner_mask_slayer_master.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 13600,
+        "tier": "slayer",
+        "validSlots": [
+          "Helmet",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Summoning",
+            "level": 80
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Slayer",
+            "level": 80
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "damageReduction",
+            "value": 6
+          }
+        ],
+        "modifiers": {
+          "maxHit": -22.5,
+          "summoningChargePreservationChance": 40,
+          "summoningAttackInterval": -40,
+          "summoningMaxHit": 40,
+          "summoningAttackLifesteal": 40,
+          "combatLootDoublingChance": 1.5,
+          "skillItemDoublingChance": [
+            {
+              "skillID": "melvorD:Thieving",
+              "value": 1.5
+            }
+          ],
+          "skillXP": [
+            {
+              "skillID": "melvorD:Slayer",
+              "value": 20
+            }
+          ],
+          "flatSlayerAreaEffectNegation": 10,
+          "damageDealtToSlayerTasks": 2.5,
+          "currencyGain": [
+            {
+              "currencyID": "melvorD:SlayerCoins",
+              "value": 2.5
+            }
+          ]
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Slayer_Summoner_Gown_Master",
+        "name": "Slayer Summoner Gown (Master)",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/summoner_gown_slayer_master.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 13600,
+        "tier": "slayer",
+        "validSlots": [
+          "Platebody",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Summoning",
+            "level": 80
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Slayer",
+            "level": 80
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "damageReduction",
+            "value": 6
+          }
+        ],
+        "modifiers": {
+          "maxHit": -22.5,
+          "summoningChargePreservationChance": 40,
+          "summoningAttackInterval": -40,
+          "summoningMaxHit": 40,
+          "summoningAttackLifesteal": 40,
+          "combatLootDoublingChance": 1.5,
+          "skillItemDoublingChance": [
+            {
+              "skillID": "melvorD:Thieving",
+              "value": 1.5
+            }
+          ],
+          "skillXP": [
+            {
+              "skillID": "melvorD:Slayer",
+              "value": 20
+            }
+          ],
+          "flatSlayerAreaEffectNegation": 10,
+          "damageDealtToSlayerTasks": 2.5,
+          "currencyGain": [
+            {
+              "currencyID": "melvorD:SlayerCoins",
+              "value": 2.5
+            }
+          ]
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Slayer_Summoner_Kilt_Master",
+        "name": "Slayer Summoner Kilt (Master)",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/summoner_kilt_slayer_master.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 13600,
+        "tier": "slayer",
+        "validSlots": [
+          "Platelegs",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Summoning",
+            "level": 80
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Slayer",
+            "level": 80
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "damageReduction",
+            "value": 6
+          }
+        ],
+        "modifiers": {
+          "maxHit": -22.5,
+          "summoningChargePreservationChance": 40,
+          "summoningAttackInterval": -40,
+          "summoningMaxHit": 40,
+          "summoningAttackLifesteal": 40,
+          "combatLootDoublingChance": 1.5,
+          "skillItemDoublingChance": [
+            {
+              "skillID": "melvorD:Thieving",
+              "value": 1.5
+            }
+          ],
+          "skillXP": [
+            {
+              "skillID": "melvorD:Slayer",
+              "value": 20
+            }
+          ],
+          "flatSlayerAreaEffectNegation": 10,
+          "damageDealtToSlayerTasks": 2.5,
+          "currencyGain": [
+            {
+              "currencyID": "melvorD:SlayerCoins",
+              "value": 2.5
+            }
+          ]
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Slayer_Summoner_Sandals_Master",
+        "name": "Slayer Summoner Sandals (Master)",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/summoner_sandals_slayer_master.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 13600,
+        "tier": "slayer",
+        "validSlots": [
+          "Boots",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Summoning",
+            "level": 80
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Slayer",
+            "level": 80
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "damageReduction",
+            "value": 6
+          }
+        ],
+        "modifiers": {
+          "maxHit": -22.5,
+          "summoningChargePreservationChance": 40,
+          "summoningAttackInterval": -40,
+          "summoningMaxHit": 40,
+          "summoningAttackLifesteal": 40,
+          "combatLootDoublingChance": 1.5,
+          "skillItemDoublingChance": [
+            {
+              "skillID": "melvorD:Thieving",
+              "value": 1.5
+            }
+          ],
+          "skillXP": [
+            {
+              "skillID": "melvorD:Slayer",
+              "value": 20
+            }
+          ],
+          "flatSlayerAreaEffectNegation": 10,
+          "damageDealtToSlayerTasks": 2.5,
+          "currencyGain": [
+            {
+              "currencyID": "melvorD:SlayerCoins",
+              "value": 2.5
+            }
+          ]
+        }
+      }
+    ],
+    "itemUpgrades": [
+      {
+        "upgradedItemID": "ntmyk:Slayer_Summoner_Mask_Strong",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Slayer_Summoner_Mask_Basic",
+            "quantity": 1
+          },
+          {
+            "id": "melvorF:Slayer_Upgrade_Kit_Strong",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Slayer_Summoner_Mask_Basic"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": []
+      },
+      {
+        "upgradedItemID": "ntmyk:Slayer_Summoner_Mask_Elite",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Slayer_Summoner_Mask_Strong",
+            "quantity": 1
+          },
+          {
+            "id": "melvorF:Slayer_Upgrade_Kit_Elite",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Slayer_Summoner_Mask_Basic"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": []
+      },
+      {
+        "upgradedItemID": "ntmyk:Slayer_Summoner_Mask_Master",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Slayer_Summoner_Mask_Elite",
+            "quantity": 1
+          },
+          {
+            "id": "melvorF:Slayer_Upgrade_Kit_Master",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Slayer_Summoner_Mask_Basic"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": []
+      },
+      {
+        "upgradedItemID": "ntmyk:Slayer_Summoner_Gown_Strong",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Slayer_Summoner_Gown_Basic",
+            "quantity": 1
+          },
+          {
+            "id": "melvorF:Slayer_Upgrade_Kit_Strong",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Slayer_Summoner_Gown_Basic"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": []
+      },
+      {
+        "upgradedItemID": "ntmyk:Slayer_Summoner_Gown_Elite",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Slayer_Summoner_Gown_Strong",
+            "quantity": 1
+          },
+          {
+            "id": "melvorF:Slayer_Upgrade_Kit_Elite",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Slayer_Summoner_Gown_Basic"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": []
+      },
+      {
+        "upgradedItemID": "ntmyk:Slayer_Summoner_Gown_Master",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Slayer_Summoner_Gown_Elite",
+            "quantity": 1
+          },
+          {
+            "id": "melvorF:Slayer_Upgrade_Kit_Master",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Slayer_Summoner_Gown_Basic"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": []
+      },
+      {
+        "upgradedItemID": "ntmyk:Slayer_Summoner_Kilt_Strong",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Slayer_Summoner_Kilt_Basic",
+            "quantity": 1
+          },
+          {
+            "id": "melvorF:Slayer_Upgrade_Kit_Strong",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Slayer_Summoner_Kilt_Basic"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": []
+      },
+      {
+        "upgradedItemID": "ntmyk:Slayer_Summoner_Kilt_Elite",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Slayer_Summoner_Kilt_Strong",
+            "quantity": 1
+          },
+          {
+            "id": "melvorF:Slayer_Upgrade_Kit_Elite",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Slayer_Summoner_Kilt_Basic"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": []
+      },
+      {
+        "upgradedItemID": "ntmyk:Slayer_Summoner_Kilt_Master",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Slayer_Summoner_Kilt_Elite",
+            "quantity": 1
+          },
+          {
+            "id": "melvorF:Slayer_Upgrade_Kit_Master",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Slayer_Summoner_Kilt_Basic"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": []
+      },
+      {
+        "upgradedItemID": "ntmyk:Slayer_Summoner_Sandals_Strong",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Slayer_Summoner_Sandals_Basic",
+            "quantity": 1
+          },
+          {
+            "id": "melvorF:Slayer_Upgrade_Kit_Strong",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Slayer_Summoner_Sandals_Basic"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": []
+      },
+      {
+        "upgradedItemID": "ntmyk:Slayer_Summoner_Sandals_Elite",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Slayer_Summoner_Sandals_Strong",
+            "quantity": 1
+          },
+          {
+            "id": "melvorF:Slayer_Upgrade_Kit_Elite",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Slayer_Summoner_Sandals_Basic"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": []
+      },
+      {
+        "upgradedItemID": "ntmyk:Slayer_Summoner_Sandals_Master",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Slayer_Summoner_Sandals_Elite",
+            "quantity": 1
+          },
+          {
+            "id": "melvorF:Slayer_Upgrade_Kit_Master",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Slayer_Summoner_Sandals_Basic"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": []
+      }
+    ],
     "shopDisplayOrder": [
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Slayer_Wizard_Robes_Master",
+        "ids": [
+          "ntmyk:Slayer_Summoner_Mask_Basic",
+          "ntmyk:Slayer_Summoner_Gown_Basic",
+          "ntmyk:Slayer_Summoner_Kilt_Basic",
+          "ntmyk:Slayer_Summoner_Sandals_Basic"
+        ]
+      },
       {
         "insertAt": "After",
         "afterID": "melvorD:Dragon_Pickaxe",
@@ -111,6 +1273,146 @@
       }
     ],
     "shopPurchases": [
+      {
+        "id": "Slayer_Summoner_Mask_Basic",
+        "media": "assets/bank/summoner_mask_slayer_basic.png",
+        "category": "melvorF:Slayer",
+        "contains": {
+          "items": [
+            {
+              "id": "ntmyk:Slayer_Summoner_Mask_Basic",
+              "quantity": 1
+            }
+          ]
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:SlayerCoins",
+              "type": "Fixed",
+              "cost": 10000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [],
+        "purchaseRequirements": [
+          {
+            "type": "SlayerTask",
+            "category": "melvorF:Normal",
+            "count": 15
+          }
+        ],
+        "defaultBuyLimit": 0,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false
+      },
+      {
+        "id": "Slayer_Summoner_Gown_Basic",
+        "media": "assets/bank/summoner_gown_slayer_basic.png",
+        "category": "melvorF:Slayer",
+        "contains": {
+          "items": [
+            {
+              "id": "ntmyk:Slayer_Summoner_Gown_Basic",
+              "quantity": 1
+            }
+          ]
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:SlayerCoins",
+              "type": "Fixed",
+              "cost": 10000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [],
+        "purchaseRequirements": [
+          {
+            "type": "SlayerTask",
+            "category": "melvorF:Normal",
+            "count": 15
+          }
+        ],
+        "defaultBuyLimit": 0,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false
+      },
+      {
+        "id": "Slayer_Summoner_Kilt_Basic",
+        "media": "assets/bank/summoner_kilt_slayer_basic.png",
+        "category": "melvorF:Slayer",
+        "contains": {
+          "items": [
+            {
+              "id": "ntmyk:Slayer_Summoner_Kilt_Basic",
+              "quantity": 1
+            }
+          ]
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:SlayerCoins",
+              "type": "Fixed",
+              "cost": 10000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [],
+        "purchaseRequirements": [
+          {
+            "type": "SlayerTask",
+            "category": "melvorF:Normal",
+            "count": 15
+          }
+        ],
+        "defaultBuyLimit": 0,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false
+      },
+      {
+        "id": "Slayer_Summoner_Sandals_Basic",
+        "media": "assets/bank/summoner_sandals_slayer_basic.png",
+        "category": "melvorF:Slayer",
+        "contains": {
+          "items": [
+            {
+              "id": "ntmyk:Slayer_Summoner_Sandals_Basic",
+              "quantity": 1
+            }
+          ]
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:SlayerCoins",
+              "type": "Fixed",
+              "cost": 10000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [],
+        "purchaseRequirements": [
+          {
+            "type": "SlayerTask",
+            "category": "melvorF:Normal",
+            "count": 15
+          }
+        ],
+        "defaultBuyLimit": 0,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false
+      },
       {
         "id": "Anvil_Iron",
         "media": "assets/shop/anvil_iron.png",
