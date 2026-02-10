@@ -5,6 +5,13 @@
     "bankSortOrder": [
       {
         "insertAt": "After",
+        "afterID": "melvorF:Natures_Wrath_Staff",
+        "ids": [
+          "ntmyk:Staff_Spiritcaller"
+        ]
+      },
+      {
+        "insertAt": "After",
         "afterID": "melvorF:Slayer_Wizard_Robes_Master",
         "ids": [
           "ntmyk:Slayer_Summoner_Mask_Basic",
@@ -27,6 +34,45 @@
       }
     ],
     "items": [
+      {
+        "id": "Staff_Spiritcaller",
+        "name": "Spiritcaller Staff",
+        "category": "Combat",
+        "type": "Magic Staff",
+        "media": "assets/bank/staff_spiritcaller.png",
+        "customDescription": "Passive: Can't attack while this is equipped. -10% Summoning Attack Interval and +100% Summoning Max Hit. +10% chance on Summon Attack to apply a random Elemental effect to the Enemy.<br><span class=\"text-warning\">When equipped with the Book of Occults, gain +10% chance on Summon Attack to inflict a random Curse on the Enemy.</span>",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 24500,
+        "tier": "staff",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Summoning",
+            "level": 40
+          }
+        ],
+        "equipmentStats": [],
+        "itemType": "Weapon",
+        "attackType": "magic",
+        "modifiers": {
+          "cantAttack": 1,
+          "summoningAttackInterval": -10,
+          "summoningMaxHit": 100
+        },
+        "combatEffects": [
+          {
+            "appliesWhen": "SummonAttack",
+            "tableID": "melvorF:ElementalEffect",
+            "chance": 10
+          }
+        ]
+      },
       {
         "itemType": "Equipment",
         "id": "Slayer_Summoner_Mask_Basic",
@@ -60,7 +106,6 @@
         "modifiers": {
           "maxHit": -10,
           "summoningChargePreservationChance": 10,
-          "summoningAttackInterval": -10,
           "summoningMaxHit": 10,
           "skillXP": [
             {
@@ -110,8 +155,7 @@
         ],
         "modifiers": {
           "maxHit": -10,
-          "summoningChargePreservationChance": 10,
-          "summoningAttackInterval": -10,
+          "summoningChargePreservationChance": 5,
           "summoningMaxHit": 10,
           "skillXP": [
             {
@@ -161,8 +205,7 @@
         ],
         "modifiers": {
           "maxHit": -10,
-          "summoningChargePreservationChance": 10,
-          "summoningAttackInterval": -10,
+          "summoningChargePreservationChance": 5,
           "summoningMaxHit": 10,
           "skillXP": [
             {
@@ -212,8 +255,7 @@
         ],
         "modifiers": {
           "maxHit": -10,
-          "summoningChargePreservationChance": 10,
-          "summoningAttackInterval": -10,
+          "summoningChargePreservationChance": 5,
           "summoningMaxHit": 10,
           "skillXP": [
             {
@@ -268,8 +310,7 @@
         ],
         "modifiers": {
           "maxHit": -15,
-          "summoningChargePreservationChance": 15,
-          "summoningAttackInterval": -15,
+          "summoningChargePreservationChance": 10,
           "summoningMaxHit": 15,
           "skillXP": [
             {
@@ -324,8 +365,7 @@
         ],
         "modifiers": {
           "maxHit": -15,
-          "summoningChargePreservationChance": 15,
-          "summoningAttackInterval": -15,
+          "summoningChargePreservationChance": 10,
           "summoningMaxHit": 15,
           "skillXP": [
             {
@@ -380,8 +420,7 @@
         ],
         "modifiers": {
           "maxHit": -15,
-          "summoningChargePreservationChance": 15,
-          "summoningAttackInterval": -15,
+          "summoningChargePreservationChance": 10,
           "summoningMaxHit": 15,
           "skillXP": [
             {
@@ -436,8 +475,7 @@
         ],
         "modifiers": {
           "maxHit": -15,
-          "summoningChargePreservationChance": 15,
-          "summoningAttackInterval": -15,
+          "summoningChargePreservationChance": 10,
           "summoningMaxHit": 15,
           "skillXP": [
             {
@@ -492,8 +530,7 @@
         ],
         "modifiers": {
           "maxHit": -20,
-          "summoningChargePreservationChance": 20,
-          "summoningAttackInterval": -20,
+          "summoningChargePreservationChance": 15,
           "summoningMaxHit": 20,
           "skillXP": [
             {
@@ -548,8 +585,7 @@
         ],
         "modifiers": {
           "maxHit": -20,
-          "summoningChargePreservationChance": 20,
-          "summoningAttackInterval": -20,
+          "summoningChargePreservationChance": 15,
           "summoningMaxHit": 20,
           "skillXP": [
             {
@@ -604,8 +640,7 @@
         ],
         "modifiers": {
           "maxHit": -20,
-          "summoningChargePreservationChance": 20,
-          "summoningAttackInterval": -20,
+          "summoningChargePreservationChance": 15,
           "summoningMaxHit": 20,
           "skillXP": [
             {
@@ -660,8 +695,7 @@
         ],
         "modifiers": {
           "maxHit": -20,
-          "summoningChargePreservationChance": 20,
-          "summoningAttackInterval": -20,
+          "summoningChargePreservationChance": 15,
           "summoningMaxHit": 20,
           "skillXP": [
             {
@@ -716,10 +750,8 @@
         ],
         "modifiers": {
           "maxHit": -22.5,
-          "summoningChargePreservationChance": 40,
-          "summoningAttackInterval": -40,
-          "summoningMaxHit": 40,
-          "summoningAttackLifesteal": 40,
+          "summoningChargePreservationChance": 20,
+          "summoningMaxHit": 30,
           "combatLootDoublingChance": 1.5,
           "skillItemDoublingChance": [
             {
@@ -780,10 +812,8 @@
         ],
         "modifiers": {
           "maxHit": -22.5,
-          "summoningChargePreservationChance": 40,
-          "summoningAttackInterval": -40,
-          "summoningMaxHit": 40,
-          "summoningAttackLifesteal": 40,
+          "summoningChargePreservationChance": 20,
+          "summoningMaxHit": 30,
           "combatLootDoublingChance": 1.5,
           "skillItemDoublingChance": [
             {
@@ -844,10 +874,8 @@
         ],
         "modifiers": {
           "maxHit": -22.5,
-          "summoningChargePreservationChance": 40,
-          "summoningAttackInterval": -40,
-          "summoningMaxHit": 40,
-          "summoningAttackLifesteal": 40,
+          "summoningChargePreservationChance": 20,
+          "summoningMaxHit": 30,
           "combatLootDoublingChance": 1.5,
           "skillItemDoublingChance": [
             {
@@ -908,10 +936,8 @@
         ],
         "modifiers": {
           "maxHit": -22.5,
-          "summoningChargePreservationChance": 40,
-          "summoningAttackInterval": -40,
-          "summoningMaxHit": 40,
-          "summoningAttackLifesteal": 40,
+          "summoningChargePreservationChance": 20,
+          "summoningMaxHit": 30,
           "combatLootDoublingChance": 1.5,
           "skillItemDoublingChance": [
             {
@@ -934,6 +960,21 @@
             }
           ]
         }
+      }
+    ],
+    "itemSynergies": [
+      {
+        "itemIDs": [
+          "melvorF:Book_of_Occults",
+          "ntmyk:Staff_Spiritcaller"
+        ],
+        "combatEffects": [
+          {
+            "appliesWhen": "SummonAttack",
+            "tableID": "melvorF:RandomCurse",
+            "chance": 10
+          }
+        ]
       }
     ],
     "itemUpgrades": [
@@ -968,7 +1009,7 @@
           }
         ],
         "rootItemIDs": [
-          "ntmyk:Slayer_Summoner_Mask_Basic"
+          "ntmyk:Slayer_Summoner_Mask_Strong"
         ],
         "isDowngrade": false,
         "currencyCosts": []
@@ -986,7 +1027,7 @@
           }
         ],
         "rootItemIDs": [
-          "ntmyk:Slayer_Summoner_Mask_Basic"
+          "ntmyk:Slayer_Summoner_Mask_Elite"
         ],
         "isDowngrade": false,
         "currencyCosts": []
@@ -1022,7 +1063,7 @@
           }
         ],
         "rootItemIDs": [
-          "ntmyk:Slayer_Summoner_Gown_Basic"
+          "ntmyk:Slayer_Summoner_Gown_Strong"
         ],
         "isDowngrade": false,
         "currencyCosts": []
@@ -1040,7 +1081,7 @@
           }
         ],
         "rootItemIDs": [
-          "ntmyk:Slayer_Summoner_Gown_Basic"
+          "ntmyk:Slayer_Summoner_Gown_Elite"
         ],
         "isDowngrade": false,
         "currencyCosts": []
@@ -1076,7 +1117,7 @@
           }
         ],
         "rootItemIDs": [
-          "ntmyk:Slayer_Summoner_Kilt_Basic"
+          "ntmyk:Slayer_Summoner_Kilt_Strong"
         ],
         "isDowngrade": false,
         "currencyCosts": []
@@ -1094,7 +1135,7 @@
           }
         ],
         "rootItemIDs": [
-          "ntmyk:Slayer_Summoner_Kilt_Basic"
+          "ntmyk:Slayer_Summoner_Kilt_Elite"
         ],
         "isDowngrade": false,
         "currencyCosts": []
@@ -1130,7 +1171,7 @@
           }
         ],
         "rootItemIDs": [
-          "ntmyk:Slayer_Summoner_Sandals_Basic"
+          "ntmyk:Slayer_Summoner_Sandals_Strong"
         ],
         "isDowngrade": false,
         "currencyCosts": []
@@ -1148,7 +1189,7 @@
           }
         ],
         "rootItemIDs": [
-          "ntmyk:Slayer_Summoner_Sandals_Basic"
+          "ntmyk:Slayer_Summoner_Sandals_Elite"
         ],
         "isDowngrade": false,
         "currencyCosts": []
@@ -1157,7 +1198,7 @@
     "shopDisplayOrder": [
       {
         "insertAt": "After",
-        "afterID": "melvorF:Slayer_Wizard_Robes_Master",
+        "afterID": "melvorF:Slayer_Wizard_Robes_Basic",
         "ids": [
           "ntmyk:Slayer_Summoner_Mask_Basic",
           "ntmyk:Slayer_Summoner_Gown_Basic",
@@ -5598,5 +5639,21 @@
       }
     ]
   },
-  "modifications": {}
+  "modifications": {
+    "monsters": [
+      {
+        "id": "melvorF:Shaman",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "ntmyk:Staff_Spiritcaller",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 5
+            }
+          ]
+        }
+      }
+    ]
+  }
 }
