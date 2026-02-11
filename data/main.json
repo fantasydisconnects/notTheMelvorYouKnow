@@ -4,6 +4,60 @@
   "data": {
     "bankSortOrder": [
       {
+        "insertAt": "Before",
+        "beforeID": "melvorD:Topaz",
+        "ids": [
+          "ntmyk:Amber",
+          "ntmyk:Garnet",
+          "ntmyk:Malachite"
+        ]
+      },
+      {
+        "insertAt": "Before",
+        "beforeID": "melvorD:Sapphire",
+        "ids": [
+          "ntmyk:Turquoise",
+          "ntmyk:Amethyst",
+          "ntmyk:Carnelian"
+        ]
+      },
+      {
+        "insertAt": "Before",
+        "beforeID": "melvorD:Ruby",
+        "ids": [
+          "ntmyk:Lapis",
+          "ntmyk:Peridot",
+          "ntmyk:Spinel"
+        ]
+      },
+      {
+        "insertAt": "Before",
+        "beforeID": "melvorD:Emerald",
+        "ids": [
+          "ntmyk:Sunstone",
+          "ntmyk:Opal",
+          "ntmyk:Coral"
+        ]
+      },
+      {
+        "insertAt": "Before",
+        "beforeID": "melvorD:Diamond",
+        "ids": [
+          "ntmyk:Chrysocola",
+          "ntmyk:Quartz",
+          "ntmyk:Dragonstone"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Jadestone",
+        "ids": [
+          "ntmyk:Moonstone",
+          "ntmyk:Arkoreefstone",
+          "ntmyk:Black_Diamond"
+        ]
+      },
+      {
         "insertAt": "After",
         "afterID": "melvorF:Natures_Wrath_Staff",
         "ids": [
@@ -6009,23 +6063,6 @@
               "ntmyk:Multi_Tree_III"
             ]
           }
-        }
-      }
-    ]
-  },
-  "modifications": {
-    "monsters": [
-      {
-        "id": "melvorF:Shaman",
-        "lootTable": {
-          "add": [
-            {
-              "itemID": "ntmyk:Staff_Spiritcaller",
-              "minQuantity": 1,
-              "maxQuantity": 1,
-              "weight": 5
-            }
-          ]
         }
       }
     ]

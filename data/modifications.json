@@ -1,0 +1,189 @@
+{
+  "$schema": "https://melvoridle.com/assets/schema/gameData.json",
+  "namespace": "ntmyk",
+  "modifications": {
+    "items": [
+      {
+        "id": "melvorD:Emerald",
+        "sellsFor": 885
+      },
+      {
+        "id": "melvorD:Diamond",
+        "sellsFor": 1500
+      },
+      {
+        "id": "melvorF:Chest_Of_Gems",
+        "dropTable": {
+          "remove": [
+            "melvorD:Topaz",
+            "melvorD:Sapphire",
+            "melvorD:Emerald",
+            "melvorD:Ruby",
+            "melvorD:Diamond"
+          ],
+          "add": [
+            {
+              "itemID": "ntmyk:Amber",
+              "weight": 1000,
+              "minQuantity": 1,
+              "maxQuantity": 200
+            },
+            {
+              "itemID": "ntmyk:Garnet",
+              "weight": 909,
+              "minQuantity": 1,
+              "maxQuantity": 200
+            },
+            {
+              "itemID": "ntmyk:Malachite",
+              "weight": 826,
+              "minQuantity": 1,
+              "maxQuantity": 200
+            },
+            {
+              "itemID": "melvorD:Topaz",
+              "weight": 751,
+              "minQuantity": 1,
+              "maxQuantity": 200
+            },
+            {
+              "itemID": "ntmyk:Turquoise",
+              "weight": 626,
+              "minQuantity": 1,
+              "maxQuantity": 200
+            },
+            {
+              "itemID": "ntmyk:Amethyst",
+              "weight": 522,
+              "minQuantity": 1,
+              "maxQuantity": 200
+            },
+            {
+              "itemID": "ntmyk:Carnelian",
+              "weight": 435,
+              "minQuantity": 1,
+              "maxQuantity": 200
+            },
+            {
+              "itemID": "melvorD:Sapphire",
+              "weight": 362,
+              "minQuantity": 1,
+              "maxQuantity": 200
+            },
+            {
+              "itemID": "ntmyk:Lapis",
+              "weight": 279,
+              "minQuantity": 1,
+              "maxQuantity": 200
+            },
+            {
+              "itemID": "ntmyk:Peridot",
+              "weight": 215,
+              "minQuantity": 1,
+              "maxQuantity": 200
+            },
+            {
+              "itemID": "ntmyk:Spinel",
+              "weight": 165,
+              "minQuantity": 1,
+              "maxQuantity": 200
+            },
+            {
+              "itemID": "melvorD:Ruby",
+              "weight": 127,
+              "minQuantity": 1,
+              "maxQuantity": 200
+            },
+            {
+              "itemID": "ntmyk:Sunstone",
+              "weight": 91,
+              "minQuantity": 1,
+              "maxQuantity": 200
+            },
+            {
+              "itemID": "ntmyk:Opal",
+              "weight": 65,
+              "minQuantity": 1,
+              "maxQuantity": 200
+            },
+            {
+              "itemID": "ntmyk:Coral",
+              "weight": 47,
+              "minQuantity": 1,
+              "maxQuantity": 200
+            },
+            {
+              "itemID": "melvorD:Emerald",
+              "weight": 34,
+              "minQuantity": 1,
+              "maxQuantity": 200
+            },
+            {
+              "itemID": "ntmyk:Chrysocola",
+              "weight": 23,
+              "minQuantity": 1,
+              "maxQuantity": 200
+            },
+            {
+              "itemID": "ntmyk:Quartz",
+              "weight": 15,
+              "minQuantity": 1,
+              "maxQuantity": 200
+            },
+            {
+              "itemID": "ntmyk:Dragonstone",
+              "weight": 10,
+              "minQuantity": 1,
+              "maxQuantity": 200
+            },
+            {
+              "itemID": "melvorD:Diamond",
+              "weight": 7,
+              "minQuantity": 1,
+              "maxQuantity": 200
+            },
+            {
+              "itemID": "melvorF:Jadestone",
+              "weight": 4,
+              "minQuantity": 1,
+              "maxQuantity": 200
+            },
+            {
+              "itemID": "ntmyk:Moonstone",
+              "weight": 2,
+              "minQuantity": 1,
+              "maxQuantity": 200
+            },
+            {
+              "itemID": "ntmyk:Arkoreefstone",
+              "weight": 1,
+              "minQuantity": 1,
+              "maxQuantity": 200
+            },
+            {
+              "itemID": "ntmyk:Black_Diamond",
+              "weight": 1,
+              "minQuantity": 1,
+              "maxQuantity": 200
+            }
+          ]
+        }
+      }
+    ],
+    "monsters": [
+      {
+        "id": "melvorF:Shaman",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "ntmyk:Staff_Spiritcaller",
+              "minQuantity": 1,
+              "maxQuantity": 200,
+              "weight": 5
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
