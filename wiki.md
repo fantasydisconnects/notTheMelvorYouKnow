@@ -1,12 +1,43 @@
+# EQUIPMENT
 # Slayer Equipment
-## Summoner Slayer Armour
-| Name                            | Bonuses | Modifiers                                                                                                                                                                                                                       | Equip Requirement     |
-| ------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
-| Slayer Summoner Mask (Basic)    | 1 DR    | Max Hit: -10%, +10% Chance to Preserve Summoning Charges, -10% Summoning Attack Interval, +10% Summoning Max Hit, +2.5% Slayer XP, +2.5% Slayer Area Effect Negation, +1% Damage Dealt to Slayer Tasks, +1% Slayer Coins Gained | Summoning 1, Slayer 1 |
-| Slayer Summoner Gown (Basic)    | 1 DR    | Max Hit: -10%, +10% Chance to Preserve Summoning Charges, -10% Summoning Attack Interval, +10% Summoning Max Hit, +2.5% Slayer XP, +2.5% Slayer Area Effect Negation, +1% Damage Dealt to Slayer Tasks, +1% Slayer Coins Gained | Summoning 1, Slayer 1 |
-| Slayer Summoner Kilt (Basic)    | 1 DR    | Max Hit: -10%, +10% Chance to Preserve Summoning Charges, -10% Summoning Attack Interval, +10% Summoning Max Hit, +2.5% Slayer XP, +2.5% Slayer Area Effect Negation, +1% Damage Dealt to Slayer Tasks, +1% Slayer Coins Gained | Summoning 1, Slayer 1 |
-| Slayer Summoner Sandals (Basic) | 1 DR    | Max Hit: -10%, +10% Chance to Preserve Summoning Charges, -10% Summoning Attack Interval, +10% Summoning Max Hit, +2.5% Slayer XP, +2.5% Slayer Area Effect Negation, +1% Damage Dealt to Slayer Tasks, +1% Slayer Coins Gained | Summoning 1, Slayer 1 |
+## Armour
+| Name                            | Bonuses | Modifiers                                                                                                                                                                                                                       | Equip Req. | Synergies | Upgradeable |
+| ------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------- | ----------- |
+| Slayer Summoner Mask (Basic)    | 1 DR    | Max Hit: -10%, +10% Chance to Preserve Summoning Charges, -10% Summoning Attack Interval, +10% Summoning Max Hit, +2.5% Slayer XP, +2.5% Slayer Area Effect Negation, +1% Damage Dealt to Slayer Tasks, +1% Slayer Coins Gained | None       | None      | Yes         |
+| Slayer Summoner Gown (Basic)    | 1 DR    | Max Hit: -10%, +10% Chance to Preserve Summoning Charges, -10% Summoning Attack Interval, +10% Summoning Max Hit, +2.5% Slayer XP, +2.5% Slayer Area Effect Negation, +1% Damage Dealt to Slayer Tasks, +1% Slayer Coins Gained | None       | None      | Yes         |
+| Slayer Summoner Kilt (Basic)    | 1 DR    | Max Hit: -10%, +10% Chance to Preserve Summoning Charges, -10% Summoning Attack Interval, +10% Summoning Max Hit, +2.5% Slayer XP, +2.5% Slayer Area Effect Negation, +1% Damage Dealt to Slayer Tasks, +1% Slayer Coins Gained | None       | None      | Yes         |
+| Slayer Summoner Sandals (Basic) | 1 DR    | Max Hit: -10%, +10% Chance to Preserve Summoning Charges, -10% Summoning Attack Interval, +10% Summoning Max Hit, +2.5% Slayer XP, +2.5% Slayer Area Effect Negation, +1% Damage Dealt to Slayer Tasks, +1% Slayer Coins Gained | None       | None      | Yes         |
 
+# Summoning Equipment
+## Weapons
+| Name               | Bonuses | Modifiers                                                                                                                                                           | Equip Req.   | Synergies                                                                          | Upgradeable |
+| ------------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ---------------------------------------------------------------------------------- | ----------- |
+| Spiritcaller Staff | None    | Your attacks deal no damage, -10% Summoning Attack Interval, +100% Summoning Max Hit. +10% chance on Summon Attack to apply a random Elemental Effect to the Enemy. | 40 Summoning | Book of Occults: +10% chance on Summon Attack to apply a random Curse to the Enemy | No          |
+
+# GEMS
+# Standard Gems
+| Gem           | Chance (Mining) | Acquisition | Uses | Price |
+| ------------- | --------------- | ----------- | ---- | ----- |
+| Amber         | 10.42%          | TBD         | TBD  | 50    |
+| Garnet        | 10.42%          | TBD         | TBD  | 75    |
+| Malachite     | 10.42%          | TBD         | TBD  | 100   |
+| Turquoise     | 10.42%          | TBD         | TBD  | 125   |
+| Amethyst      | 5.21%           | TBD         | TBD  | 250   |
+| Carnelian     | 5.21%           | TBD         | TBD  | 325   |
+| Lapis         | 5.21%           | TBD         | TBD  | 400   |
+| Peridot       | 5.21%           | TBD         | TBD  | 475   |
+| Spinel        | 5.21%           | TBD         | TBD  | 550   |
+| Sunstone      | 5.21%           | TBD         | TBD  | 625   |
+| Opal          | 1.82%           | TBD         | TBD  | 1200  |
+| Coral         | 1.82%           | TBD         | TBD  | 1500  |
+| Chrysocola    | 1.04%           | TBD         | TBD  | 3500  |
+| Quartz        | 1.04%           | TBD         | TBD  | 4500  |
+| Dragonstone   | 0.52%           | TBD         | TBD  | 7000  |
+| Moonstone     | 0.26%           | TBD         | TBD  | 8500  |
+| Arkoreefstone | 0.26%           | TBD         | TBD  | 9250  |
+| Black Diamond | 0.26%           | TBD         | TBD  | 10000 |
+
+# SHOP PURCHASES
 # General Upgrades
 ## Miscellaneous
 | Upgrade        | Description                                                 | Cost (GP)   | Requirements |
@@ -19,7 +50,6 @@
 | ---- | ----------------- | ---------- | ----------- | ----------- |
 | IV   | 45%               | 110%       | 90%         | 100,000,000 |
 | V    | 47.5%             | 115%       | 95%         | 500,000,000 |
-
 
 # Skill Upgrades
 ## Anvils — Smithing
