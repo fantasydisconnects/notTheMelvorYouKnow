@@ -40,7 +40,7 @@
         "category": "Combat",
         "type": "Magic Staff",
         "media": "assets/bank/staff_spiritcaller.png",
-        "customDescription": "Passive: Can't attack while this is equipped. -10% Summoning Attack Interval and +100% Summoning Max Hit. +10% chance on Summon Attack to apply a random Elemental effect to the Enemy.<br><span class=\"text-warning\">When equipped with the Book of Occults, gain +10% chance on Summon Attack to inflict a random Curse on the Enemy.</span>",
+        "customDescription": "Passive: Your attacks deal no damage while this is equipped. -10% Summoning Attack Interval and +100% Summoning Max Hit. +10% chance on Summon Attack to apply a random Elemental effect to the Enemy.<br><span class=\"text-warning\">When equipped with the Book of Occults, gain +10% chance on Summon Attack to inflict a random Curse on the Enemy.</span>",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -1193,6 +1193,116 @@
         ],
         "isDowngrade": false,
         "currencyCosts": []
+      }
+    ],
+    "randomGems": [
+      {
+        "itemID": "ntmyk:Amber",
+        "weight": 40,
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "itemID": "ntmyk:Garnet",
+        "weight": 40,
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "itemID": "ntmyk:Malachite",
+        "weight": 40,
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "itemID": "ntmyk:Turquoise",
+        "weight": 40,
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "itemID": "ntmyk:Amethyst",
+        "weight": 20,
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "itemID": "ntmyk:Carnelian",
+        "weight": 20,
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "itemID": "ntmyk:Lapis",
+        "weight": 20,
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "itemID": "ntmyk:Peridot",
+        "weight": 20,
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "itemID": "ntmyk:Spinel",
+        "weight": 20,
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "itemID": "ntmyk:Sunstone",
+        "weight": 20,
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "itemID": "ntmyk:Opal",
+        "weight": 7,
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "itemID": "ntmyk:Coral",
+        "weight": 7,
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "itemID": "ntmyk:Chrysocola",
+        "weight": 4,
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "itemID": "ntmyk:Quartz",
+        "weight": 4,
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "itemID": "ntmyk:Dragonstone",
+        "weight": 2,
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "itemID": "ntmyk:Moonstone",
+        "weight": 1,
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "itemID": "ntmyk:Arkoreefstone",
+        "weight": 1,
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "itemID": "ntmyk:Black_Diamond",
+        "weight": 1,
+        "minQuantity": 1,
+        "maxQuantity": 1
       }
     ],
     "shopDisplayOrder": [
@@ -3760,8 +3870,7 @@
                 "itemID": "melvorF:Golden_Stardust",
                 "value": 2
               }
-            ],
-            "meteoriteLocationChance": 1
+            ]
           }
         },
         "cost": {
@@ -3781,7 +3890,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Topaz Iron Telescope",
-        "customDescription": "+2% chance per Astrology action to gain Stardust and Golden Stardust for a total of +2% applied from your Telescope.<br>+1% meteorite location chance for a total of +1% applied from your Telescope."
+        "customDescription": "+2% chance per Astrology action to gain Stardust and Golden Stardust for a total of +2% applied from your Telescope."
       },
       {
         "id": "Telescope_Steel",
@@ -3801,8 +3910,7 @@
                 "itemID": "melvorF:Golden_Stardust",
                 "value": 2
               }
-            ],
-            "meteoriteLocationChance": 1
+            ]
           }
         },
         "cost": {
@@ -3828,7 +3936,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Garnet Steel Telescope",
-        "customDescription": "+2% chance per Astrology action to gain Stardust and Golden Stardust for a total of +4% applied from your Telescope.<br>+1% meteorite location chance for a total of +2% applied from your Telescope."
+        "customDescription": "+2% chance per Astrology action to gain Stardust and Golden Stardust for a total of +4% applied from your Telescope."
       },
       {
         "id": "Telescope_Black",
@@ -3848,8 +3956,7 @@
                 "itemID": "melvorF:Golden_Stardust",
                 "value": 2
               }
-            ],
-            "meteoriteLocationChance": 1
+            ]
           }
         },
         "cost": {
@@ -3875,7 +3982,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Turquoise Black Telescope",
-        "customDescription": "+2% chance per Astrology action to gain Stardust and Golden Stardust for a total of +6% applied from your Telescope.<br>+1% meteorite location chance for a total of +3% applied from your Telescope."
+        "customDescription": "+2% chance per Astrology action to gain Stardust and Golden Stardust for a total of +6% applied from your Telescope."
       },
       {
         "id": "Telescope_Mithril",
@@ -3895,8 +4002,7 @@
                 "itemID": "melvorF:Golden_Stardust",
                 "value": 2
               }
-            ],
-            "meteoriteLocationChance": 1
+            ]
           }
         },
         "cost": {
@@ -3922,7 +4028,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Amber Mithril Telescope",
-        "customDescription": "+2% chance per Astrology action to gain Stardust and Golden Stardust for a total of +8% applied from your Telescope.<br>+1% meteorite location chance for a total of +4% applied from your Telescope."
+        "customDescription": "+2% chance per Astrology action to gain Stardust and Golden Stardust for a total of +8% applied from your Telescope."
       },
       {
         "id": "Telescope_Adamant",
@@ -3942,8 +4048,7 @@
                 "itemID": "melvorF:Golden_Stardust",
                 "value": 2
               }
-            ],
-            "meteoriteLocationChance": 1
+            ]
           }
         },
         "cost": {
@@ -3969,7 +4074,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Amethyst Adamant Telescope",
-        "customDescription": "+2% chance per Astrology action to gain Stardust and Golden Stardust for a total of +10% applied from your Telescope.<br>+1% meteorite location chance for a total of +5% applied from your Telescope."
+        "customDescription": "+2% chance per Astrology action to gain Stardust and Golden Stardust for a total of +10% applied from your Telescope."
       },
       {
         "id": "Telescope_Rune",
@@ -3989,8 +4094,7 @@
                 "itemID": "melvorF:Golden_Stardust",
                 "value": 2
               }
-            ],
-            "meteoriteLocationChance": 1
+            ]
           }
         },
         "cost": {
@@ -4016,7 +4120,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Beryl Rune Telescope",
-        "customDescription": "+2% chance per Astrology action to gain Stardust and Golden Stardust for a total of +12% applied from your Telescope.<br>+1% meteorite location chance for a total of +6% applied from your Telescope."
+        "customDescription": "+2% chance per Astrology action to gain Stardust and Golden Stardust for a total of +12% applied from your Telescope."
       },
       {
         "id": "Telescope_Dragon",
@@ -4036,8 +4140,7 @@
                 "itemID": "melvorF:Golden_Stardust",
                 "value": 2
               }
-            ],
-            "meteoriteLocationChance": 1
+            ]
           }
         },
         "cost": {
@@ -4069,7 +4172,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Dragonstone Dragon Telescope",
-        "customDescription": "+2% chance per Astrology action to gain Stardust and Golden Stardust for a total of +14% applied from your Telescope.<br>+1% meteorite location chance for a total of +7% applied from your Telescope."
+        "customDescription": "+2% chance per Astrology action to gain Stardust and Golden Stardust for a total of +14% applied from your Telescope."
       },
       {
         "id": "Needle_Iron",
@@ -5624,6 +5727,43 @@
       }
     ],
     "skillData": [
+      {
+        "skillID": "melvorD:Magic",
+        "data": {
+          "altSpells": [
+            {
+              "id": "Stardust",
+              "name": "Stardust",
+              "media": "assets/skills/magic/stardust.png",
+              "level": 30,
+              "baseExperience": 10,
+              "description": "Convert 5 Stardust to 1 Golden Stardust",
+              "runesRequired": [
+                {
+                  "id": "melvorD:Light_Rune",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorF:Spirit_Rune",
+                  "quantity": 1
+                }
+              ],
+              "productionRatio": 1,
+              "fixedItemCosts": [
+                {
+                  "id": "melvorF:Stardust",
+                  "quantity": 5
+                }
+              ],
+              "specialCost": {
+                "type": "None",
+                "quantity": 1
+              },
+              "produces": "melvorF:Golden_Stardust"
+            }
+          ]
+        }
+      },
       {
         "skillID": "melvorD:Woodcutting",
         "data": {
