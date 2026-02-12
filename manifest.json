@@ -3,7 +3,7 @@
     "setup": "setup.mjs",
     "icon": "assets/ICON.png",
     "load": [
-        "data/modifications.json",
-        "data/main.json"
+        "data/main.json",
+        "data/modifications.json"
     ]
 }

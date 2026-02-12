@@ -8,4 +8,5 @@ export function setup(ctx) {
     ctx.patch(Corruption, 'maxLevelCap').get(function () { return 200; });
     ctx.patch(Harvesting, 'maxLevelCap').get(function () { return 200; });
   }
+ 
 }
