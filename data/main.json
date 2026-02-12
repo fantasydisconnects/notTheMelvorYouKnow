@@ -87,7 +87,287 @@
         ]
       }
     ],
+    "combatEffects": [
+      {
+        "id": "CreatureTypeAnimal",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Animal",
+        "media": "assets/status/animal.png",
+        "target": "Self",
+        "parameters": [],
+        "statGroups": []
+      },
+      {
+        "id": "CreatureTypeConstructed",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Constructed",
+        "media": "assets/status/constructed.png",
+        "target": "Self",
+        "parameters": [],
+        "statGroups": []
+      },
+      {
+        "id": "CreatureTypeDraconic",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Draconic",
+        "media": "assets/status/draconic.png",
+        "target": "Self",
+        "parameters": [],
+        "statGroups": []
+      },
+      {
+        "id": "CreatureTypeElemental",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Elemental",
+        "media": "assets/status/elemental.png",
+        "target": "Self",
+        "parameters": [],
+        "statGroups": []
+      },
+      {
+        "id": "CreatureTypeFae",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Fae",
+        "media": "assets/status/fae.png",
+        "target": "Self",
+        "parameters": [],
+        "statGroups": []
+      },
+      {
+        "id": "CreatureTypeGelatinous",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Gelatinous",
+        "media": "assets/status/gelatinous.png",
+        "target": "Self",
+        "parameters": [],
+        "statGroups": []
+      },
+      {
+        "id": "CreatureTypeGiantkin",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Giantkin",
+        "media": "assets/status/giantkin.png",
+        "target": "Self",
+        "parameters": [],
+        "statGroups": []
+      },
+      {
+        "id": "CreatureTypeHeavenly",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Heavenly",
+        "media": "assets/status/heavenly.png",
+        "target": "Self",
+        "parameters": [],
+        "statGroups": []
+      },
+      {
+        "id": "CreatureTypeHellish",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Hellish",
+        "media": "assets/status/hellish.png",
+        "target": "Self",
+        "parameters": [],
+        "statGroups": []
+      },
+      {
+        "id": "CreatureTypeHuman",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Human",
+        "media": "assets/status/human.png",
+        "target": "Self",
+        "parameters": [],
+        "statGroups": []
+      },
+      {
+        "id": "CreatureTypeMonstrous",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Monstrous",
+        "media": "assets/status/monstrous.png",
+        "target": "Self",
+        "parameters": [],
+        "statGroups": []
+      },
+      {
+        "id": "CreatureTypePlant",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Plant",
+        "media": "assets/status/plant.png",
+        "target": "Self",
+        "parameters": [],
+        "statGroups": []
+      },
+      {
+        "id": "CreatureTypeStrange",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Strange",
+        "media": "assets/status/strange.png",
+        "target": "Self",
+        "parameters": [],
+        "statGroups": []
+      },
+      {
+        "id": "CreatureTypeUndead",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Undead",
+        "media": "assets/status/undead.png",
+        "target": "Self",
+        "parameters": [],
+        "statGroups": []
+      },
+      {
+        "id": "CreatureSubtypeLycanthrope",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Lycanthrope",
+        "media": "assets/status/lycanthrope.png",
+        "tooltipSpans": [
+          {
+            "type": "String",
+            "value": "+50% Melee and Ranged Resistance when non-silvered weapons are equipped"
+          }
+        ],
+        "target": "Self",
+        "parameters": [],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "flatResistanceAgainstMelee": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": 50
+                }
+              ],
+              "flatResistanceAgainstRanged": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": 50
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "SilverVulnerability",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Silver Vulnerability",
+        "media": "noIcon",
+        "noIcon": true,
+        "target": "Self",
+        "parameters": [],
+        "statGroups": []
+      }
+    ],
+    "combatPassives": [
+      {
+        "id": "CreatureTypeHuman",
+        "name": "Human",
+        "customDescription": "The Enemy's Creature Type is <strong>Human</strong>.",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:CreatureTypeHuman"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeMonstrous",
+        "name": "Monstrous",
+        "customDescription": "The Enemy's Creature Type is <strong>Monstrous</strong>.",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:CreatureTypeMonstrous"
+          }
+        ]
+      },
+      {
+        "id": "CreatureSubtypeLycanthrope",
+        "name": "Lycanthrope",
+        "customDescription": "The Enemy's Creature Subtype is <strong>Lycanthrope</strong>.",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:CreatureSubtypeLycanthrope"
+          },
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:VulnerabilitySilver"
+          }
+        ]
+      },
+      {
+        "id": "VulnerabilitySilver",
+        "name": "Silver Vulnerability",
+        "customDescription": "The Enemy takes 50% more damage from silvered weapons and ammunition while the Player is using Melee or Ranged.",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:VulnerabilitySilver"
+          }
+        ]
+      }
+    ],
     "items": [
+      {
+        "id": "Sword_Dragon_S",
+        "name": "Dragon Sword (S)",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/sword_dragon_s.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 3500,
+        "tier": "dragon",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 60
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2400
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 67
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 41
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 26
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 63
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "character": "Enemy",
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 50
+            }
+          }
+        ]
+      },
       {
         "itemType": "Item",
         "id": "Amber",
