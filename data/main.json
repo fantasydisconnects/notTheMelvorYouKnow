@@ -4,6 +4,69 @@
   "data": {
     "bankSortOrder": [
       {
+        "insertAt": "After",
+        "afterID": "melvorD:Bronze_Sword",
+        "ids": [
+          "ntmyk:Bronze_Sword_S",
+          "ntmyk:Bronze_Sword_B",
+          "ntmyk:Bronze_Sword_S_B"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Iron_Sword",
+        "ids": [
+          "ntmyk:Iron_Sword_S",
+          "ntmyk:Iron_Sword_B",
+          "ntmyk:Iron_Sword_S_B"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Steel_Sword",
+        "ids": [
+          "ntmyk:Steel_Sword_S",
+          "ntmyk:Steel_Sword_B",
+          "ntmyk:Steel_Sword_S_B"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Mithril_Sword",
+        "ids": [
+          "ntmyk:Mithril_Sword_S",
+          "ntmyk:Mithril_Sword_B",
+          "ntmyk:Mithril_Sword_S_B"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Adamant_Sword",
+        "ids": [
+          "ntmyk:Adamant_Sword_S",
+          "ntmyk:Adamant_Sword_B",
+          "ntmyk:Adamant_Sword_S_B"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Rune_Sword",
+        "ids": [
+          "ntmyk:Rune_Sword_S",
+          "ntmyk:Rune_Sword_B",
+          "ntmyk:Rune_Sword_S_B"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Dragon_Sword",
+        "ids": [
+          "ntmyk:Dragon_Sword_S",
+          "ntmyk:Dragon_Sword_B",
+          "ntmyk:Dragon_Sword_S_B"
+        ]
+      },
+      {
         "insertAt": "Before",
         "beforeID": "melvorD:Topaz",
         "ids": [
@@ -95,7 +158,11 @@
         "media": "assets/status/animal.png",
         "target": "Self",
         "parameters": [],
-        "statGroups": []
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
       },
       {
         "id": "CreatureTypeConstructed",
@@ -104,7 +171,11 @@
         "media": "assets/status/constructed.png",
         "target": "Self",
         "parameters": [],
-        "statGroups": []
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
       },
       {
         "id": "CreatureTypeDraconic",
@@ -113,7 +184,11 @@
         "media": "assets/status/draconic.png",
         "target": "Self",
         "parameters": [],
-        "statGroups": []
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
       },
       {
         "id": "CreatureTypeElemental",
@@ -122,7 +197,11 @@
         "media": "assets/status/elemental.png",
         "target": "Self",
         "parameters": [],
-        "statGroups": []
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
       },
       {
         "id": "CreatureTypeFae",
@@ -131,7 +210,11 @@
         "media": "assets/status/fae.png",
         "target": "Self",
         "parameters": [],
-        "statGroups": []
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
       },
       {
         "id": "CreatureTypeGelatinous",
@@ -140,7 +223,11 @@
         "media": "assets/status/gelatinous.png",
         "target": "Self",
         "parameters": [],
-        "statGroups": []
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
       },
       {
         "id": "CreatureTypeGiantkin",
@@ -149,7 +236,11 @@
         "media": "assets/status/giantkin.png",
         "target": "Self",
         "parameters": [],
-        "statGroups": []
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
       },
       {
         "id": "CreatureTypeHeavenly",
@@ -158,7 +249,11 @@
         "media": "assets/status/heavenly.png",
         "target": "Self",
         "parameters": [],
-        "statGroups": []
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
       },
       {
         "id": "CreatureTypeHellish",
@@ -167,7 +262,23 @@
         "media": "assets/status/hellish.png",
         "target": "Self",
         "parameters": [],
-        "statGroups": []
+        "statGroups": [
+          {
+            "name": "stacks",
+            "combatEffects": [
+              {
+                "appliesWhen": "StartOfFight",
+                "effectID": "ntmyk:VulnerabilityBlessed",
+                "applyEffectWhenMerged": true
+              },
+              {
+                "appliesWhen": "StartOfFight",
+                "effectID": "ntmyk:VulnerabilitySilver",
+                "applyEffectWhenMerged": true
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "CreatureTypeHuman",
@@ -176,7 +287,11 @@
         "media": "assets/status/human.png",
         "target": "Self",
         "parameters": [],
-        "statGroups": []
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
       },
       {
         "id": "CreatureTypeMonstrous",
@@ -185,7 +300,11 @@
         "media": "assets/status/monstrous.png",
         "target": "Self",
         "parameters": [],
-        "statGroups": []
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
       },
       {
         "id": "CreatureTypePlant",
@@ -194,7 +313,11 @@
         "media": "assets/status/plant.png",
         "target": "Self",
         "parameters": [],
-        "statGroups": []
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
       },
       {
         "id": "CreatureTypeStrange",
@@ -203,7 +326,11 @@
         "media": "assets/status/strange.png",
         "target": "Self",
         "parameters": [],
-        "statGroups": []
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
       },
       {
         "id": "CreatureTypeUndead",
@@ -211,8 +338,38 @@
         "name": "Undead",
         "media": "assets/status/undead.png",
         "target": "Self",
+        "tooltipSpans": [
+          {
+            "type": "String",
+            "value": "Immune to Curses, Fear, Poison, and Sleep."
+          }
+        ],
         "parameters": [],
-        "statGroups": []
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "effectImmunity": [
+                {
+                  "effectGroupID": "melvorD:PoisonDOT",
+                  "value": 1
+                },
+                {
+                  "effectGroupID": "melvorD:Sleep",
+                  "value": 1
+                },
+                {
+                  "effectGroupID": "melvorD:Fear",
+                  "value": 1
+                },
+                {
+                  "effectGroupID": "melvorD:Curse",
+                  "value": 1
+                }
+              ]
+            }
+          }
+        ]
       },
       {
         "id": "CreatureSubtypeLycanthrope",
@@ -222,15 +379,195 @@
         "tooltipSpans": [
           {
             "type": "String",
-            "value": "+50% Melee and Ranged Resistance when non-silvered weapons are equipped"
+            "value": "+50% resistance against Melee and Ranged attacks from non-silvered weapons and ammunition."
           }
         ],
         "target": "Self",
         "parameters": [],
         "statGroups": [
           {
-            "name": "stacks",
-            "modifiers": {
+            "name": "stacks"
+          }
+        ]
+      },
+      {
+        "id": "AttacksBlessed",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Blessed Attacks",
+        "tooltipSpans": [
+          {
+            "type": "String",
+            "value": "Your attacks deal 10% extra damage to blessing-vulnerable monsters."
+          }
+        ],
+        "media": "assets/status/attacks_blessed.png",
+        "target": "Self",
+        "parameters": [],
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
+      },
+      {
+        "id": "AttacksSilvered",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Silvered Attacks",
+        "tooltipSpans": [
+          {
+            "type": "String",
+            "value": "Your attacks deal 10% extra damage to silver-vulnerable monsters."
+          }
+        ],
+        "media": "assets/status/attacks_silvered.png",
+        "target": "Self",
+        "parameters": [],
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
+      },
+      {
+        "id": "VulnerabilityCrush",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Crush Vulnerability",
+        "media": "assets/status/vulnerability_.png",
+        "target": "Self",
+        "parameters": [],
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
+      },
+      {
+        "id": "VulnerabilityStab",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Stab Vulnerability",
+        "media": "assets/status/vulnerability_stab.png",
+        "target": "Self",
+        "parameters": [],
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
+      },
+      {
+        "id": "VulnerabilitySlash",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Slash Vulnerability",
+        "media": "assets/status/vulnerability_slash.png",
+        "target": "Self",
+        "parameters": [],
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
+      },
+      {
+        "id": "VulnerabilityBlessed",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Blessed Vulnerability",
+        "media": "assets/status/vulnerability_blessed.png",
+        "tooltipSpans": [
+          {
+            "type": "String",
+            "value": "Takes 10% extra damage from blessed weapons."
+          }
+        ],
+        "target": "Self",
+        "parameters": [],
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
+      },
+      {
+        "id": "VulnerabilitySilver",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Silver Vulnerability",
+        "media": "assets/status/vulnerability_silver.png",
+        "tooltipSpans": [
+          {
+            "type": "String",
+            "value": "Takes 10% extra damage from silvered weapons."
+          }
+        ],
+        "target": "Self",
+        "parameters": [],
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
+      }
+    ],
+    "combatPassives": [
+      {
+        "id": "CreatureTypeHuman",
+        "name": "Human",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:CreatureTypeHuman"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeMonstrous",
+        "name": "Monstrous",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:CreatureTypeMonstrous"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeUndead",
+        "name": "Undead",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:CreatureTypeUndead"
+          },
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:VulnerabilityBlessed"
+          },
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:VulnerabilitySilver"
+          }
+        ]
+      },
+      {
+        "id": "CreatureSubtypeLycanthrope",
+        "name": "Lycanthrope",
+        "customDescription": "+50% resistance against Melee and Ranged attacks from non-silvered weapons and ammunition.",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:CreatureSubtypeLycanthrope"
+          },
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:VulnerabilitySilver"
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:AttacksSilvered",
+              "character": "Player",
+              "inverted": true,
+              "type": "CombatEffect"
+            },
+            "enemyModifiers": {
               "flatResistanceAgainstMelee": [
                 {
                   "damageTypeID": "melvorD:Normal",
@@ -248,58 +585,8 @@
         ]
       },
       {
-        "id": "SilverVulnerability",
-        "templateID": "melvorD:StaticNonCountingModifier",
-        "name": "Silver Vulnerability",
-        "media": "noIcon",
-        "noIcon": true,
-        "target": "Self",
-        "parameters": [],
-        "statGroups": []
-      }
-    ],
-    "combatPassives": [
-      {
-        "id": "CreatureTypeHuman",
-        "name": "Human",
-        "customDescription": "The Enemy's Creature Type is <strong>Human</strong>.",
-        "combatEffects": [
-          {
-            "appliesWhen": "StartOfFight",
-            "effectID": "ntmyk:CreatureTypeHuman"
-          }
-        ]
-      },
-      {
-        "id": "CreatureTypeMonstrous",
-        "name": "Monstrous",
-        "customDescription": "The Enemy's Creature Type is <strong>Monstrous</strong>.",
-        "combatEffects": [
-          {
-            "appliesWhen": "StartOfFight",
-            "effectID": "ntmyk:CreatureTypeMonstrous"
-          }
-        ]
-      },
-      {
-        "id": "CreatureSubtypeLycanthrope",
-        "name": "Lycanthrope",
-        "customDescription": "The Enemy's Creature Subtype is <strong>Lycanthrope</strong>.",
-        "combatEffects": [
-          {
-            "appliesWhen": "StartOfFight",
-            "effectID": "ntmyk:CreatureSubtypeLycanthrope"
-          },
-          {
-            "appliesWhen": "StartOfFight",
-            "effectID": "ntmyk:VulnerabilitySilver"
-          }
-        ]
-      },
-      {
         "id": "VulnerabilitySilver",
         "name": "Silver Vulnerability",
-        "customDescription": "The Enemy takes 50% more damage from silvered weapons and ammunition while the Player is using Melee or Ranged.",
         "combatEffects": [
           {
             "appliesWhen": "StartOfFight",
@@ -310,11 +597,1722 @@
     ],
     "items": [
       {
-        "id": "Sword_Dragon_S",
+        "id": "Adamant_Sword_B",
+        "name": "Adamant Sword (B)",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/sword_adamant_b.png",
+        "customDescription": "Deals extra damage to blessing-vulnerable monsters.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 290,
+        "tier": "adamant",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 30
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Prayer",
+            "level": 30
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2400
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 27
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 13
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 9
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 24
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:AttacksBlessed"
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilityBlessed",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 10
+            }
+          }
+        ]
+      },
+      {
+        "id": "Adamant_Sword_S",
+        "name": "Adamant Sword (S)",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/sword_adamant_s.png",
+        "customDescription": "Deals extra damage to silver-vulnerable monsters.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 205,
+        "tier": "adamant",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 30
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2400
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 27
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 13
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 9
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 24
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:AttacksSilvered"
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 10
+            }
+          }
+        ]
+      },
+      {
+        "id": "Mithril_Sword_S_B",
+        "name": "Mithril Sword (SB)",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/sword_mithril_s_b.png",
+        "customDescription": "Deals extra damage to blessing- and silver-vulnerable monsters.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 355,
+        "tier": "mithril",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 20
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Prayer",
+            "level": 20
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2400
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 20
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 8
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 6
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 17
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:AttacksBlessed"
+          },
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:AttacksSilvered"
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilityBlessed",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 10
+            }
+          },
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 10
+            }
+          }
+        ]
+      },
+      {
+        "id": "Mithril_Sword_B",
+        "name": "Mithril Sword (B)",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/sword_mithril_b.png",
+        "customDescription": "Deals extra damage to blessing-vulnerable monsters.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 230,
+        "tier": "mithril",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 20
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Prayer",
+            "level": 20
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2400
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 20
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 8
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 6
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 17
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:AttacksBlessed"
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilityBlessed",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 10
+            }
+          }
+        ]
+      },
+      {
+        "id": "Mithril_Sword_S",
+        "name": "Mithril Sword (S)",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/sword_mithril_s.png",
+        "customDescription": "Deals extra damage to silver-vulnerable monsters.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 165,
+        "tier": "mithril",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 20
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2400
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 20
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 8
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 6
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 17
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:AttacksSilvered"
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 10
+            }
+          }
+        ]
+      },
+      {
+        "id": "Black_Sword_S_B",
+        "name": "Black Sword (SB)",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/sword_black_s_b.png",
+        "customDescription": "Deals extra damage to blessing- and silver-vulnerable monsters.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 50,
+        "tier": "black",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 10
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Prayer",
+            "level": 10
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2400
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 18
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 7
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 5
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 12
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:AttacksBlessed"
+          },
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:AttacksSilvered"
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilityBlessed",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 10
+            }
+          },
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 10
+            }
+          }
+        ]
+      },
+      {
+        "id": "Black_Sword_B",
+        "name": "Black Sword (B)",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/sword_black_b.png",
+        "customDescription": "Deals extra damage to blessing-vulnerable monsters.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 35,
+        "tier": "black",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 10
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Prayer",
+            "level": 10
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2400
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 18
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 7
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 5
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 12
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:AttacksBlessed"
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilityBlessed",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 10
+            }
+          }
+        ]
+      },
+      {
+        "id": "Black_Sword_S",
+        "name": "Black Sword (S)",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/sword_black_s.png",
+        "customDescription": "Deals extra damage to silver-vulnerable monsters.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 25,
+        "tier": "black",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 10
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2400
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 18
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 7
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 5
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 12
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:AttacksSilvered"
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 10
+            }
+          }
+        ]
+      },
+      {
+        "id": "Iron_Sword_S",
+        "name": "Iron Sword (S)",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/weapon_sword_iron_s.png",
+        "customDescription": "Deals extra damage to silver-vulnerable monsters.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 19,
+        "tier": "iron",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 1
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2400
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 11
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 3
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 2
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 7
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:AttacksSilvered"
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 10
+            }
+          }
+        ]
+      },
+      {
+        "id": "Iron_Sword_B",
+        "name": "Iron Sword (B)",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/weapon_sword_iron_b.png",
+        "customDescription": "Deals extra damage to blessing-vulnerable monsters.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 27,
+        "tier": "iron",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 1
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Prayer",
+            "level": 1
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2400
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 11
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 3
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 2
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 7
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:AttacksBlessed"
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilityBlessed",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 10
+            }
+          }
+        ]
+      },
+      {
+        "id": "Iron_Sword_S_B",
+        "name": "Iron Sword (SB)",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/weapon_sword_iron_s_b.png",
+        "customDescription": "Deals extra damage to blessing- and silver-vulnerable monsters.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 41,
+        "tier": "iron",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 1
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Prayer",
+            "level": 1
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2400
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 11
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 3
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 2
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 7
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:AttacksBlessed"
+          },
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:AttacksSilvered"
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilityBlessed",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 10
+            }
+          },
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 10
+            }
+          }
+        ]
+      },
+      {
+        "id": "Bronze_Sword_S",
+        "name": "Bronze Sword (S)",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/weapon_sword_bronze_s.png",
+        "customDescription": "Deals extra damage to silver-vulnerable monsters.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 2,
+        "tier": "bronze",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 1
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2400
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 9
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 2
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 1
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 5
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:AttacksSilvered"
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 10
+            }
+          }
+        ]
+      },
+      {
+        "id": "Bronze_Sword_B",
+        "name": "Bronze Sword (B)",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/weapon_sword_bronze_b.png",
+        "customDescription": "Deals extra damage to blessing-vulnerable monsters.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 3,
+        "tier": "bronze",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 1
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Prayer",
+            "level": 1
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2400
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 9
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 2
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 1
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 5
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:AttacksBlessed"
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilityBlessed",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 10
+            }
+          }
+        ]
+      },
+      {
+        "id": "Bronze_Sword_S_B",
+        "name": "Bronze Sword (SB)",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/weapon_sword_bronze_s_b.png",
+        "customDescription": "Deals extra damage to blessing- and silver-vulnerable monsters.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 5,
+        "tier": "bronze",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 1
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Prayer",
+            "level": 1
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2400
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 9
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 2
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 1
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 5
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:AttacksBlessed"
+          },
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:AttacksSilvered"
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilityBlessed",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 10
+            }
+          },
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 10
+            }
+          }
+        ]
+      },
+      {
+        "id": "Steel_Sword_S",
+        "name": "Steel Sword (S)",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/weapon_sword_steel_s.png",
+        "customDescription": "Deals extra damage to silver-vulnerable monsters.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 24,
+        "tier": "steel",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 5
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2400
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 16
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 6
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 4
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 12
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:AttacksSilvered"
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 10
+            }
+          }
+        ]
+      },
+      {
+        "id": "Steel_Sword_B",
+        "name": "Steel Sword (B)",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/weapon_sword_steel_b.png",
+        "customDescription": "Deals extra damage to blessing-vulnerable monsters.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 34,
+        "tier": "steel",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 5
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Prayer",
+            "level": 5
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2400
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 16
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 6
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 4
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 12
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:AttacksBlessed"
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilityBlessed",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 10
+            }
+          }
+        ]
+      },
+      {
+        "id": "Steel_Sword_S_B",
+        "name": "Steel Sword (SB)",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/weapon_sword_steel_s_b.png",
+        "customDescription": "Deals extra damage to blessing- and silver-vulnerable monsters.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 52,
+        "tier": "steel",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 5
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Prayer",
+            "level": 5
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2400
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 16
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 6
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 4
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 12
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:AttacksBlessed"
+          },
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:AttacksSilvered"
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilityBlessed",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 10
+            }
+          },
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 10
+            }
+          }
+        ]
+      },
+      {
+        "id": "Adamant_Sword_S_B",
+        "name": "Adamant Sword (SB)",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/sword_adamant_s_b.png",
+        "customDescription": "Deals extra damage to blessing- and silver-vulnerable monsters.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 440,
+        "tier": "adamant",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 30
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Prayer",
+            "level": 30
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2400
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 27
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 13
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 9
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 24
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:AttacksBlessed"
+          },
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:AttacksSilvered"
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilityBlessed",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 10
+            }
+          },
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 10
+            }
+          }
+        ]
+      },
+      {
+        "id": "Rune_Sword_S_B",
+        "name": "Rune Sword (SB)",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/sword_rune_s_b.png",
+        "customDescription": "Deals extra damage to blessing- and silver-vulnerable monsters.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 750,
+        "tier": "rune",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 40
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Prayer",
+            "level": 60
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2400
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 40
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 19
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 15
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 39
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:AttacksBlessed"
+          },
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:AttacksSilvered"
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilityBlessed",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 10
+            }
+          },
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 10
+            }
+          }
+        ]
+      },
+      {
+        "id": "Rune_Sword_B",
+        "name": "Rune Sword (B)",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/sword_rune_b.png",
+        "customDescription": "Deals extra damage to blessing-vulnerable monsters.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 500,
+        "tier": "rune",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 40
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Prayer",
+            "level": 60
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2400
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 40
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 19
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 15
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 39
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:AttacksBlessed"
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilityBlessed",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 10
+            }
+          }
+        ]
+      },
+      {
+        "id": "Rune_Sword_S",
+        "name": "Rune Sword (S)",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/sword_rune_s.png",
+        "customDescription": "Deals extra damage to silver-vulnerable monsters.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 350,
+        "tier": "rune",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 40
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2400
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 40
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 19
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 15
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 39
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:AttacksSilvered"
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 10
+            }
+          }
+        ]
+      },
+      {
+        "id": "Dragon_Sword_S_B",
+        "name": "Dragon Sword (SB)",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/sword_dragon_s_b.png",
+        "customDescription": "Deals extra damage to blessing- and silver-vulnerable monsters.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 7500,
+        "tier": "dragon",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 60
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Prayer",
+            "level": 60
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2400
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 67
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 41
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 26
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 63
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:AttacksBlessed"
+          },
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:AttacksSilvered"
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilityBlessed",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 10
+            }
+          },
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 10
+            }
+          }
+        ]
+      },
+      {
+        "id": "Dragon_Sword_B",
+        "name": "Dragon Sword (B)",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/sword_dragon_b.png",
+        "customDescription": "Deals extra damage to blessing-vulnerable monsters.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 5000,
+        "tier": "dragon",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 60
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Prayer",
+            "level": 60
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2400
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 67
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 41
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 26
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 63
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:AttacksBlessed"
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilityBlessed",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 10
+            }
+          }
+        ]
+      },
+      {
+        "id": "Dragon_Sword_S",
         "name": "Dragon Sword (S)",
         "category": "Combat",
         "type": "Weapon",
         "media": "assets/bank/sword_dragon_s.png",
+        "customDescription": "Deals extra damage to silver-vulnerable monsters.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -355,15 +2353,21 @@
         ],
         "itemType": "Weapon",
         "attackType": "melee",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "ntmyk:AttacksSilvered"
+          }
+        ],
         "conditionalModifiers": [
           {
             "condition": {
-              "character": "Enemy",
               "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
               "type": "CombatEffect"
             },
             "modifiers": {
-              "meleeMaxHit": 50
+              "meleeMaxHit": 10
             }
           }
         ]
@@ -1546,6 +3550,839 @@
       }
     ],
     "itemUpgrades": [
+      {
+        "upgradedItemID": "ntmyk:Bronze_Sword_S",
+        "rootItemIDs": [
+          "melvorD:Bronze_Sword"
+        ],
+        "itemCosts": [
+          {
+            "id": "melvorD:Bronze_Sword",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Silver_Bar",
+            "quantity": 10
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 5000
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Bronze_Sword_B",
+        "rootItemIDs": [
+          "melvorD:Bronze_Sword"
+        ],
+        "itemCosts": [
+          {
+            "id": "melvorD:Bronze_Sword",
+            "quantity": 1
+          },
+          {
+            "id": "melvorF:Holy_Dust",
+            "quantity": 5
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 2500
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Bronze_Sword_S_B",
+        "rootItemIDs": [
+          "melvorD:Bronze_Sword"
+        ],
+        "itemCosts": [
+          {
+            "id": "melvorD:Bronze_Sword",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Silver_Bar",
+            "quantity": 10
+          },
+          {
+            "id": "melvorF:Holy_Dust",
+            "quantity": 5
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 7500
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Bronze_Sword_S_B",
+        "rootItemIDs": [
+          "ntmyk:Bronze_Sword_S"
+        ],
+        "itemCosts": [
+          {
+            "id": "ntmyk:Bronze_Sword_S",
+            "quantity": 1
+          },
+          {
+            "id": "melvorF:Holy_Dust",
+            "quantity": 5
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 2500
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Bronze_Sword_S_B",
+        "rootItemIDs": [
+          "ntmyk:Bronze_Sword_B"
+        ],
+        "itemCosts": [
+          {
+            "id": "ntmyk:Bronze_Sword_B",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Silver_Bar",
+            "quantity": 10
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 5000
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Iron_Sword_S",
+        "rootItemIDs": [
+          "melvorD:Iron_Sword"
+        ],
+        "itemCosts": [
+          {
+            "id": "melvorD:Iron_Sword",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Silver_Bar",
+            "quantity": 20
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 8000
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Iron_Sword_B",
+        "rootItemIDs": [
+          "melvorD:Iron_Sword"
+        ],
+        "itemCosts": [
+          {
+            "id": "melvorD:Iron_Sword",
+            "quantity": 1
+          },
+          {
+            "id": "melvorF:Holy_Dust",
+            "quantity": 10
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 4000
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Iron_Sword_S_B",
+        "rootItemIDs": [
+          "melvorD:Iron_Sword"
+        ],
+        "itemCosts": [
+          {
+            "id": "melvorD:Iron_Sword",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Silver_Bar",
+            "quantity": 20
+          },
+          {
+            "id": "melvorF:Holy_Dust",
+            "quantity": 10
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 12000
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Iron_Sword_S_B",
+        "rootItemIDs": [
+          "ntmyk:Iron_Sword_S"
+        ],
+        "itemCosts": [
+          {
+            "id": "ntmyk:Iron_Sword_S",
+            "quantity": 1
+          },
+          {
+            "id": "melvorF:Holy_Dust",
+            "quantity": 10
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 4000
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Iron_Sword_S_B",
+        "rootItemIDs": [
+          "ntmyk:Iron_Sword_B"
+        ],
+        "itemCosts": [
+          {
+            "id": "ntmyk:Iron_Sword_B",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Silver_Bar",
+            "quantity": 20
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 8000
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Steel_Sword_S",
+        "rootItemIDs": [
+          "melvorD:Steel_Sword"
+        ],
+        "itemCosts": [
+          {
+            "id": "melvorD:Steel_Sword",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Silver_Bar",
+            "quantity": 50
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 12000
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Steel_Sword_B",
+        "rootItemIDs": [
+          "melvorD:Steel_Sword"
+        ],
+        "itemCosts": [
+          {
+            "id": "melvorD:Steel_Sword",
+            "quantity": 1
+          },
+          {
+            "id": "melvorF:Holy_Dust",
+            "quantity": 20
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 12000
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Steel_Sword_S_B",
+        "rootItemIDs": [
+          "melvorD:Steel_Sword"
+        ],
+        "itemCosts": [
+          {
+            "id": "melvorD:Steel_Sword",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Silver_Bar",
+            "quantity": 50
+          },
+          {
+            "id": "melvorF:Holy_Dust",
+            "quantity": 20
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 24000
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Steel_Sword_S_B",
+        "rootItemIDs": [
+          "ntmyk:Steel_Sword_S"
+        ],
+        "itemCosts": [
+          {
+            "id": "ntmyk:Steel_Sword_S",
+            "quantity": 1
+          },
+          {
+            "id": "melvorF:Holy_Dust",
+            "quantity": 20
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 12000
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Steel_Sword_S_B",
+        "rootItemIDs": [
+          "ntmyk:Steel_Sword_B"
+        ],
+        "itemCosts": [
+          {
+            "id": "ntmyk:Steel_Sword_B",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Silver_Bar",
+            "quantity": 50
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 12000
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Mithril_Sword_S",
+        "rootItemIDs": [
+          "melvorD:Mithril_Sword"
+        ],
+        "itemCosts": [
+          {
+            "id": "melvorD:Mithril_Sword",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Silver_Bar",
+            "quantity": 175
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 35000
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Mithril_Sword_B",
+        "rootItemIDs": [
+          "melvorD:Mithril_Sword"
+        ],
+        "itemCosts": [
+          {
+            "id": "melvorD:Mithril_Sword",
+            "quantity": 1
+          },
+          {
+            "id": "melvorF:Holy_Dust",
+            "quantity": 50
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 35000
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Mithril_Sword_S_B",
+        "rootItemIDs": [
+          "melvorD:Mithril_Sword"
+        ],
+        "itemCosts": [
+          {
+            "id": "melvorD:Mithril_Sword",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Silver_Bar",
+            "quantity": 175
+          },
+          {
+            "id": "melvorF:Holy_Dust",
+            "quantity": 50
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 70000
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Mithril_Sword_S_B",
+        "rootItemIDs": [
+          "ntmyk:Mithril_Sword_S"
+        ],
+        "itemCosts": [
+          {
+            "id": "ntmyk:Mithril_Sword_S",
+            "quantity": 1
+          },
+          {
+            "id": "melvorF:Holy_Dust",
+            "quantity": 50
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 35000
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Mithril_Sword_S_B",
+        "rootItemIDs": [
+          "ntmyk:Mithril_Sword_B"
+        ],
+        "itemCosts": [
+          {
+            "id": "ntmyk:Mithril_Sword_B",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Silver_Bar",
+            "quantity": 175
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 35000
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Adamant_Sword_S",
+        "rootItemIDs": [
+          "melvorD:Adamant_Sword"
+        ],
+        "itemCosts": [
+          {
+            "id": "melvorD:Adamant_Sword",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Silver_Bar",
+            "quantity": 250
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 50000
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Adamant_Sword_B",
+        "rootItemIDs": [
+          "melvorD:Adamant_Sword"
+        ],
+        "itemCosts": [
+          {
+            "id": "melvorD:Adamant_Sword",
+            "quantity": 1
+          },
+          {
+            "id": "melvorF:Holy_Dust",
+            "quantity": 75
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 50000
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Adamant_Sword_S_B",
+        "rootItemIDs": [
+          "melvorD:Adamant_Sword"
+        ],
+        "itemCosts": [
+          {
+            "id": "melvorD:Adamant_Sword",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Silver_Bar",
+            "quantity": 250
+          },
+          {
+            "id": "melvorF:Holy_Dust",
+            "quantity": 75
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 100000
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Adamant_Sword_S_B",
+        "rootItemIDs": [
+          "ntmyk:Adamant_Sword_S"
+        ],
+        "itemCosts": [
+          {
+            "id": "ntmyk:Adamant_Sword_S",
+            "quantity": 1
+          },
+          {
+            "id": "melvorF:Holy_Dust",
+            "quantity": 75
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 50000
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Adamant_Sword_S_B",
+        "rootItemIDs": [
+          "ntmyk:Adamant_Sword_B"
+        ],
+        "itemCosts": [
+          {
+            "id": "ntmyk:Adamant_Sword_B",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Silver_Bar",
+            "quantity": 250
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 50000
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Rune_Sword_S",
+        "rootItemIDs": [
+          "melvorD:Rune_Sword"
+        ],
+        "itemCosts": [
+          {
+            "id": "melvorD:Rune_Sword",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Silver_Bar",
+            "quantity": 400
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 100000
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Rune_Sword_B",
+        "rootItemIDs": [
+          "melvorD:Rune_Sword"
+        ],
+        "itemCosts": [
+          {
+            "id": "melvorD:Rune_Sword",
+            "quantity": 1
+          },
+          {
+            "id": "melvorF:Holy_Dust",
+            "quantity": 100
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 100000
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Rune_Sword_S_B",
+        "rootItemIDs": [
+          "melvorD:Rune_Sword"
+        ],
+        "itemCosts": [
+          {
+            "id": "melvorD:Rune_Sword",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Silver_Bar",
+            "quantity": 400
+          },
+          {
+            "id": "melvorF:Holy_Dust",
+            "quantity": 100
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 200000
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Rune_Sword_S_B",
+        "rootItemIDs": [
+          "ntmyk:Rune_Sword_S"
+        ],
+        "itemCosts": [
+          {
+            "id": "ntmyk:Rune_Sword_S",
+            "quantity": 1
+          },
+          {
+            "id": "melvorF:Holy_Dust",
+            "quantity": 100
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 100000
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Rune_Sword_S_B",
+        "rootItemIDs": [
+          "ntmyk:Rune_Sword_B"
+        ],
+        "itemCosts": [
+          {
+            "id": "ntmyk:Rune_Sword_B",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Silver_Bar",
+            "quantity": 400
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 100000
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Dragon_Sword_S",
+        "rootItemIDs": [
+          "melvorD:Dragon_Sword"
+        ],
+        "itemCosts": [
+          {
+            "id": "melvorD:Dragon_Sword",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Silver_Bar",
+            "quantity": 800
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 250000
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Dragon_Sword_B",
+        "rootItemIDs": [
+          "melvorD:Dragon_Sword"
+        ],
+        "itemCosts": [
+          {
+            "id": "melvorD:Dragon_Sword",
+            "quantity": 1
+          },
+          {
+            "id": "melvorF:Holy_Dust",
+            "quantity": 1000
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 200000
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Dragon_Sword_S_B",
+        "rootItemIDs": [
+          "melvorD:Dragon_Sword"
+        ],
+        "itemCosts": [
+          {
+            "id": "melvorD:Dragon_Sword",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Silver_Bar",
+            "quantity": 800
+          },
+          {
+            "id": "melvorF:Holy_Dust",
+            "quantity": 1000
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 450000
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Dragon_Sword_S_B",
+        "rootItemIDs": [
+          "ntmyk:Dragon_Sword_S"
+        ],
+        "itemCosts": [
+          {
+            "id": "ntmyk:Dragon_Sword_S",
+            "quantity": 1
+          },
+          {
+            "id": "melvorF:Holy_Dust",
+            "quantity": 1000
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 200000
+          }
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "ntmyk:Dragon_Sword_S_B",
+        "rootItemIDs": [
+          "ntmyk:Dragon_Sword_B"
+        ],
+        "itemCosts": [
+          {
+            "id": "ntmyk:Dragon_Sword_B",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Silver_Bar",
+            "quantity": 800
+          }
+        ],
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 250000
+          }
+        ],
+        "isDowngrade": false
+      },
       {
         "upgradedItemID": "ntmyk:Slayer_Summoner_Mask_Strong",
         "itemCosts": [

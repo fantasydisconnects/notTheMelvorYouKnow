@@ -186,20 +186,11 @@
       },
       {
         "id": "melvorF:UndeadWerewolf",
-        "combatEffects": {
+        "passives": {
           "add": [
-            {
-              "appliesWhen": "StartOfFight",
-              "effectID": "ntmyk:CreatureTypeMonstrous"
-            },
-            {
-              "appliesWhen": "StartOfFight",
-              "effectID": "ntmyk:CreatureTypeUndead"
-            },
-            {
-              "appliesWhen": "StartOfFight",
-              "effectID": "ntmyk:CreatureSubtypeLycanthrope"
-            }
+            "ntmyk:CreatureTypeMonstrous",
+            "ntmyk:CreatureTypeUndead",
+            "ntmyk:CreatureSubtypeLycanthrope"
           ]
         }
       }
