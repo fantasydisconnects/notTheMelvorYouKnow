@@ -8,12 +8,6 @@
 | Slayer Summoner Kilt (Basic)    | 1 DR    | Max Hit: -10%, +10% Chance to Preserve Summoning Charges, -10% Summoning Attack Interval, +10% Summoning Max Hit, +2.5% Slayer XP, +2.5% Slayer Area Effect Negation, +1% Damage Dealt to Slayer Tasks, +1% Slayer Coins Gained | None       | None      | Yes         |
 | Slayer Summoner Sandals (Basic) | 1 DR    | Max Hit: -10%, +10% Chance to Preserve Summoning Charges, -10% Summoning Attack Interval, +10% Summoning Max Hit, +2.5% Slayer XP, +2.5% Slayer Area Effect Negation, +1% Damage Dealt to Slayer Tasks, +1% Slayer Coins Gained | None       | None      | Yes         |
 
-# Summoning Equipment
-## Weapons
-| Name               | Bonuses | Modifiers                                                                                                                                                           | Equip Req.   | Synergies                                                                          | Upgradeable |
-| ------------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ---------------------------------------------------------------------------------- | ----------- |
-| Spiritcaller Staff | None    | Your attacks deal no damage, -10% Summoning Attack Interval, +100% Summoning Max Hit. +10% chance on Summon Attack to apply a random Elemental Effect to the Enemy. | 40 Summoning | Book of Occults: +10% chance on Summon Attack to apply a random Curse to the Enemy | No          |
-
 # GEMS
 # Standard Gems
 | Gem           | Chance (Mining) | Acquisition | Uses | Price |
@@ -194,3 +188,49 @@
 | Slayer Summoner Gown (Basic)    | 10,000    | None               | 15 Normal Slayer Tasks Completed |
 | Slayer Summoner Kilt (Basic)    | 10,000    | None               | 15 Normal Slayer Tasks Completed |
 | Slayer Summoner Sandals (Basic) | 10,000    | None               | 15 Normal Slayer Tasks Completed |
+# Weapons
+## Magic Weapons
+### Staves
+| Name               | Bonuses | Modifiers                                                                                                                                                           | Equip Req.   | Synergies                                                                          | Upgradeable |
+| ------------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ---------------------------------------------------------------------------------- | ----------- |
+| Spiritcaller Staff | None    | Your attacks deal no damage, -10% Summoning Attack Interval, +100% Summoning Max Hit. +10% chance on Summon Attack to apply a random Elemental Effect to the Enemy. | 40 Summoning | Book of Occults: +10% chance on Summon Attack to apply a random Curse to the Enemy | No          |
+
+## Melee Weapons
+### Swords
+
+#### Blessed
+| Name              | Two Handed | Attack Speed | Stab Atk | Slash Atk | Block Atk | Melee Str | Ranged Str | Magic Str | Melee Def | Ranged Def | Magic Def | Resistance | Modifiers                                          | Effects | Equip Req            |
+| ----------------- | ---------- | ------------ | -------- | --------- | --------- | --------- | ---------- | --------- | --------- | ---------- | --------- | ---------- | -------------------------------------------------- | ------- | -------------------- |
+| Bronze Sword (B)  | No         | 2.3s         | 11       | 4         | 3         | 7         | 0          | 0         | 0         | 0          | 0         | —          | +10% melee max hit vs blessing-vulnerable monsters | —       | 1 Attack, 1 Prayer   |
+| Iron Sword (B)    | No         | 2.3s         | 13       | 5         | 4         | 9         | 0          | 0         | 0         | 0          | 0         | —          | +10% melee max hit vs blessing-vulnerable monsters | —       | 1 Attack, 1 Prayer   |
+| Steel Sword (B)   | No         | 2.3s         | 18       | 8         | 6         | 14        | 0          | 0         | 0         | 0          | 0         | —          | +10% melee max hit vs blessing-vulnerable monsters | —       | 5 Attack, 5 Prayer   |
+| Black Sword (B)   | No         | 2.3s         | 20       | 9         | 7         | 16        | 0          | 0         | 0         | 0          | 0         | —          | +10% melee max hit vs blessing-vulnerable monsters | —       | 10 Attack, 10 Prayer |
+| Mithril Sword (B) | No         | 2.3s         | 22       | 10        | 8         | 19        | 0          | 0         | 0         | 0          | 0         | —          | +10% melee max hit vs blessing-vulnerable monsters | —       | 20 Attack, 20 Prayer |
+| Adamant Sword (B) | No         | 2.3s         | 29       | 15        | 11        | 26        | 0          | 0         | 0         | 0          | 0         | —          | +10% melee max hit vs blessing-vulnerable monsters | —       | 30 Attack, 30 Prayer |
+| Rune Sword (B)    | No         | 2.3s         | 42       | 21        | 17        | 41        | 0          | 0         | 0         | 0          | 0         | —          | +10% melee max hit vs blessing-vulnerable monsters | —       | 40 Attack, 40 Prayer |
+| Dragon Sword (B)  | No         | 2.3s         | 69       | 43        | 28        | 65        | 0          | 0         | 0         | 0          | 0         | —          | +10% melee max hit vs blessing-vulnerable monsters | —       | 60 Attack, 60 Prayer |
+
+#### Silvered
+| Name              | Two Handed | Attack Speed | Stab Atk | Slash Atk | Block Atk | Melee Str | Ranged Str | Magic Str | Melee Def | Ranged Def | Magic Def | Resistance | Modifiers                                        | Effects | Equip Req |
+| ----------------- | ---------- | ------------ | -------- | --------- | --------- | --------- | ---------- | --------- | --------- | ---------- | --------- | ---------- | ------------------------------------------------ | ------- | --------- |
+| Bronze Sword (S)  | No         | 2.3s         | 11       | 4         | 3         | 7         | 0          | 0         | 0         | 0          | 0         | —          | +10% melee max hit vs silver-vulnerable monsters | —       | 1 Attack  |
+| Iron Sword (S)    | No         | 2.3s         | 13       | 5         | 4         | 9         | 0          | 0         | 0         | 0          | 0         | —          | +10% melee max hit vs silver-vulnerable monsters | —       | 1 Attack  |
+| Steel Sword (S)   | No         | 2.3s         | 18       | 8         | 6         | 14        | 0          | 0         | 0         | 0          | 0         | —          | +10% melee max hit vs silver-vulnerable monsters | —       | 5 Attack  |
+| Black Sword (S)   | No         | 2.3s         | 20       | 9         | 7         | 16        | 0          | 0         | 0         | 0          | 0         | —          | +10% melee max hit vs silver-vulnerable monsters | —       | 10 Attack |
+| Mithril Sword (S) | No         | 2.3s         | 22       | 10        | 8         | 19        | 0          | 0         | 0         | 0          | 0         | —          | +10% melee max hit vs silver-vulnerable monsters | —       | 20 Attack |
+| Adamant Sword (S) | No         | 2.3s         | 29       | 15        | 11        | 26        | 0          | 0         | 0         | 0          | 0         | —          | +10% melee max hit vs silver-vulnerable monsters | —       | 30 Attack |
+| Rune Sword (S)    | No         | 2.3s         | 42       | 21        | 17        | 41        | 0          | 0         | 0         | 0          | 0         | —          | +10% melee max hit vs silver-vulnerable monsters | —       | 40 Attack |
+| Dragon Sword (S)  | No         | 2.3s         | 69       | 43        | 28        | 65        | 0          | 0         | 0         | 0          | 0         | —          | +10% melee max hit vs silver-vulnerable monsters | —       | 60 Attack |
+
+#### Blessed + Silvered
+
+| Name               | Two Handed | Attack Speed | Stab Atk | Slash Atk | Block Atk | Melee Str | Ranged Str | Magic Str | Melee Def | Ranged Def | Magic Def | Resistance | Modifiers                                                         | Effects | Equip Req            |
+| ------------------ | ---------- | ------------ | -------- | --------- | --------- | --------- | ---------- | --------- | --------- | ---------- | --------- | ---------- | ----------------------------------------------------------------- | ------- | -------------------- |
+| Bronze Sword (SB)  | No         | 2.3s         | 13       | 6         | 5         | 9         | 0          | 0         | 0         | 0          | 0         | —          | +15% damage to blessing-vulnerable and silver-vulnerable monsters | —       | 1 Attack, 1 Prayer   |
+| Iron Sword (SB)    | No         | 2.3s         | 15       | 7         | 6         | 11        | 0          | 0         | 0         | 0          | 0         | —          | +15% damage to blessing-vulnerable and silver-vulnerable monsters | —       | 1 Attack, 1 Prayer   |
+| Steel Sword (SB)   | No         | 2.3s         | 20       | 10        | 8         | 16        | 0          | 0         | 0         | 0          | 0         | —          | +15% damage to blessing-vulnerable and silver-vulnerable monsters | —       | 5 Attack, 5 Prayer   |
+| Black Sword (SB)   | No         | 2.3s         | 22       | 11        | 9         | 18        | 0          | 0         | 0         | 0          | 0         | —          | +15% damage to blessing-vulnerable and silver-vulnerable monsters | —       | 10 Attack, 10 Prayer |
+| Mithril Sword (SB) | No         | 2.3s         | 24       | 12        | 10        | 21        | 0          | 0         | 0         | 0          | 0         | —          | +15% damage to blessing-vulnerable and silver-vulnerable monsters | —       | 20 Attack, 20 Prayer |
+| Adamant Sword (SB) | No         | 2.3s         | 31       | 17        | 13        | 28        | 0          | 0         | 0         | 0          | 0         | —          | +15% damage to blessing-vulnerable and silver-vulnerable monsters | —       | 30 Attack, 30 Prayer |
+| Rune Sword (SB)    | No         | 2.3s         | 44       | 23        | 19        | 43        | 0          | 0         | 0         | 0          | 0         | —          | +15% damage to blessing-vulnerable and silver-vulnerable monsters | —       | 40 Attack, 40 Prayer |
+| Dragon Sword (SB)  | No         | 2.3s         | 71       | 45        | 30        | 67        | 0          | 0         | 0         | 0          | 0         | —          | +15% damage to blessing-vulnerable and silver-vulnerable monsters | —       | 60 Attack, 60 Prayer |

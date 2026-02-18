@@ -4,6 +4,199 @@
   "modifications": {
     "items": [
       {
+        "id": "melvorD:Bronze_Dagger",
+        "modifiers": {
+          "add": {
+            "critChance": 10
+          }
+        },
+        "specialAttacks": {
+          
+        }
+      },
+      {
+        "id": "melvorD:Iron_Dagger",
+        "modifiers": {
+          "add": {
+            "critChance": 10
+          }
+        }
+      },
+      {
+        "id": "melvorD:Steel_Dagger",
+        "modifiers": {
+          "add": {
+            "critChance": 10
+          }
+        }
+      },
+      {
+        "id": "melvorD:Black_Dagger",
+        "modifiers": {
+          "add": {
+            "critChance": 10
+          }
+        }
+      },
+      {
+        "id": "melvorD:Mithril_Dagger",
+        "modifiers": {
+          "add": {
+            "critChance": 10
+          }
+        }
+      },
+      {
+        "id": "melvorD:Adamant_Dagger",
+        "modifiers": {
+          "add": {
+            "critChance": 10
+          }
+        }
+      },
+      {
+        "id": "melvorD:Rune_Dagger",
+        "modifiers": {
+          "add": {
+            "critChance": 10
+          }
+        }
+      },
+      {
+        "id": "melvorD:Dragon_Dagger",
+        "modifiers": {
+          "add": {
+            "critChance": 10
+          }
+        }
+      },
+      {
+        "id": "melvorD:Bronze_Sword",
+        "equipmentStats": {
+          "remove": [
+            "attackSpeed"
+          ],
+          "add": [
+            {
+              "key": "attackSpeed",
+              "value": 2300
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Iron_Sword",
+        "equipmentStats": {
+          "remove": [
+            "attackSpeed"
+          ],
+          "add": [
+            {
+              "key": "attackSpeed",
+              "value": 2300
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Steel_Sword",
+        "equipmentStats": {
+          "remove": [
+            "attackSpeed"
+          ],
+          "add": [
+            {
+              "key": "attackSpeed",
+              "value": 2300
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Black_Sword",
+        "equipmentStats": {
+          "remove": [
+            "attackSpeed"
+          ],
+          "add": [
+            {
+              "key": "attackSpeed",
+              "value": 2300
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Mithril_Sword",
+        "equipmentStats": {
+          "remove": [
+            "attackSpeed"
+          ],
+          "add": [
+            {
+              "key": "attackSpeed",
+              "value": 2300
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Adamant_Sword",
+        "equipmentStats": {
+          "remove": [
+            "attackSpeed"
+          ],
+          "add": [
+            {
+              "key": "attackSpeed",
+              "value": 2300
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Rune_Sword",
+        "equipmentStats": {
+          "remove": [
+            "attackSpeed"
+          ],
+          "add": [
+            {
+              "key": "attackSpeed",
+              "value": 2300
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Dragon_Sword",
+        "equipmentStats": {
+          "remove": [
+            "attackSpeed"
+          ],
+          "add": [
+            {
+              "key": "attackSpeed",
+              "value": 2300
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Ice_Sword",
+        "equipmentStats": {
+          "remove": [
+            "attackSpeed"
+          ],
+          "add": [
+            {
+              "key": "attackSpeed",
+              "value": 2300
+            }
+          ]
+        }
+      },
+      {
         "id": "melvorD:Emerald",
         "sellsFor": 885
       },
