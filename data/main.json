@@ -986,6 +986,10 @@
               ]
             }
           }
+        ],
+        "specialAttacks": [
+          "ntmyk:DisruptingStab",
+          "ntmyk:CripplingStrike"
         ]
       },
       {
@@ -1060,6 +1064,10 @@
               ]
             }
           }
+        ],
+        "specialAttacks": [
+          "ntmyk:DisruptingStab",
+          "ntmyk:CripplingStrike"
         ]
       },
       {
@@ -1140,6 +1148,10 @@
               ]
             }
           }
+        ],
+        "specialAttacks": [
+          "ntmyk:DisruptingStab",
+          "ntmyk:CripplingStrike"
         ]
       },
       {
@@ -1220,6 +1232,10 @@
               ]
             }
           }
+        ],
+        "specialAttacks": [
+          "ntmyk:DisruptingStab",
+          "ntmyk:CripplingStrike"
         ]
       },
       {
@@ -1300,6 +1316,10 @@
               ]
             }
           }
+        ],
+        "specialAttacks": [
+          "ntmyk:DisruptingStab",
+          "ntmyk:CripplingStrike"
         ]
       },
       {
@@ -1380,6 +1400,10 @@
               ]
             }
           }
+        ],
+        "specialAttacks": [
+          "ntmyk:DisruptingStab",
+          "ntmyk:CripplingStrike"
         ]
       },
       {
@@ -1460,6 +1484,10 @@
               ]
             }
           }
+        ],
+        "specialAttacks": [
+          "ntmyk:DisruptingStab",
+          "ntmyk:CripplingStrike"
         ]
       },
       {
@@ -1560,6 +1588,10 @@
               "reflectDamage": 5
             }
           }
+        ],
+        "specialAttacks": [
+          "ntmyk:DisruptingStab",
+          "ntmyk:CripplingStrike"
         ]
       },
       {
@@ -1640,6 +1672,10 @@
               ]
             }
           }
+        ],
+        "specialAttacks": [
+          "ntmyk:DisruptingStab",
+          "ntmyk:CripplingStrike"
         ]
       },
       {

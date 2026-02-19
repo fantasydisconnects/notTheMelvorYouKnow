@@ -190,6 +190,12 @@
               "value": 48
             }
           ]
+        },
+        "specialAttacks": {
+          "add": [
+            "ntmyk:DisruptingStab",
+            "ntmyk:CripplingStrike"
+          ]
         }
       },
       {
