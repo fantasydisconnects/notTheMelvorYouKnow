@@ -227,7 +227,13 @@
             ]
           }
         },
-        "specialAttacks": {}
+        "specialAttacks": {
+          "add": [
+            "ntmyk:WildStrike",
+            "ntmyk:Heartseeker",
+            "ntmyk:DeadlyDelivery"
+          ]
+        }
       },
       {
         "id": "melvorD:Iron_Dagger",
@@ -258,7 +264,13 @@
             ]
           }
         },
-        "specialAttacks": {}
+        "specialAttacks": {
+          "add": [
+            "ntmyk:WildStrike",
+            "ntmyk:Heartseeker",
+            "ntmyk:DeadlyDelivery"
+          ]
+        }
       },
       {
         "id": "melvorD:Steel_Dagger",
@@ -289,7 +301,13 @@
             ]
           }
         },
-        "specialAttacks": {}
+        "specialAttacks": {
+          "add": [
+            "ntmyk:WildStrike",
+            "ntmyk:Heartseeker",
+            "ntmyk:DeadlyDelivery"
+          ]
+        }
       },
       {
         "id": "melvorD:Black_Dagger",
@@ -320,7 +338,13 @@
             ]
           }
         },
-        "specialAttacks": {}
+        "specialAttacks": {
+          "add": [
+            "ntmyk:WildStrike",
+            "ntmyk:Heartseeker",
+            "ntmyk:DeadlyDelivery"
+          ]
+        }
       },
       {
         "id": "melvorD:Mithril_Dagger",
@@ -351,7 +375,13 @@
             ]
           }
         },
-        "specialAttacks": {}
+        "specialAttacks": {
+          "add": [
+            "ntmyk:WildStrike",
+            "ntmyk:Heartseeker",
+            "ntmyk:DeadlyDelivery"
+          ]
+        }
       },
       {
         "id": "melvorD:Adamant_Dagger",
@@ -382,7 +412,13 @@
             ]
           }
         },
-        "specialAttacks": {}
+        "specialAttacks": {
+          "add": [
+            "ntmyk:WildStrike",
+            "ntmyk:Heartseeker",
+            "ntmyk:DeadlyDelivery"
+          ]
+        }
       },
       {
         "id": "melvorD:Rune_Dagger",
@@ -413,7 +449,13 @@
             ]
           }
         },
-        "specialAttacks": {}
+        "specialAttacks": {
+          "add": [
+            "ntmyk:WildStrike",
+            "ntmyk:Heartseeker",
+            "ntmyk:DeadlyDelivery"
+          ]
+        }
       },
       {
         "id": "melvorD:Dragon_Dagger",
@@ -444,7 +486,13 @@
             ]
           }
         },
-        "specialAttacks": {}
+        "specialAttacks": {
+          "add": [
+            "ntmyk:WildStrike",
+            "ntmyk:Heartseeker",
+            "ntmyk:DeadlyDelivery"
+          ]
+        }
       },
       {
         "id": "melvorD:Bronze_Sword",

@@ -4,6 +4,92 @@
   "data": {
     "attacks": [
       {
+        "id": "WildStrike",
+        "defaultChance": 10,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 80
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "ntmyk:WildStrike0"
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 2,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Wild Strike",
+        "description": "Attack twice for 80%, then gain -10% Attack Interval for 2 turns.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "Heartseeker",
+        "defaultChance": 10,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 100
+          },
+          {
+            "damageType": "Custom",
+            "character": "Target",
+            "maxRoll": "CurrentHP",
+            "minRoll": "CurrentHP",
+            "minPercent": 7.5,
+            "maxPercent": 10.5,
+            "roll": true
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 100,
+        "lifesteal": 0,
+        "name": "Heartseeker",
+        "description": "Attack for 100% + 7.5-10.5% of Enemy's current HP.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "DeadlyDelivery",
+        "defaultChance": 10,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 80
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "ntmyk:Vulnerability",
+            "initialParams": [
+              {
+                "name": "debuff",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "effectID": "melvorD:Bleed100"
+          },
+          {
+            "effectID": "melvorD:Poison"
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 150,
+        "lifesteal": 0,
+        "name": "Deadly Delivery",
+        "description": "Attack for 80%. Inflict 1 stack of Vulnerability, a 100% Bleed, and Poison.",
+        "usesRunesPerProc": false
+      },
+      {
         "id": "CripplingStrike",
         "defaultChance": 10,
         "damage": [
@@ -23,7 +109,7 @@
               },
               {
                 "name": "turns",
-                "value": 2
+                "value": 1
               }
             ]
           },
@@ -33,10 +119,10 @@
         ],
         "cantMiss": false,
         "attackCount": 1,
-        "attackInterval": 50,
+        "attackInterval": 200,
         "lifesteal": 0,
         "name": "Crippling Strike",
-        "description": "Attack for 90%. Inflict a 50% Slow for 2 turns and a 100% Bleed.",
+        "description": "Attack for 90%. Inflict a 50% Slow for 1 turn and a 100% Bleed.",
         "usesRunesPerProc": false
       },
       {
@@ -56,10 +142,10 @@
         ],
         "cantMiss": false,
         "attackCount": 1,
-        "attackInterval": 50,
+        "attackInterval": 250,
         "lifesteal": 0,
         "name": "Disrupting Stab",
-        "description": "Attack for 150%. Removes Enemy buffs. Enemy can't receive buffs for 3 turns.",
+        "description": "Attack for 150%. Removes Enemy buffs. Enemy can't receive buffs for 2 turns.",
         "usesRunesPerProc": false
       },
       {
@@ -79,7 +165,7 @@
         "onhitEffects": [],
         "cantMiss": false,
         "attackCount": 2,
-        "attackInterval": 100,
+        "attackInterval": 50,
         "lifesteal": 0,
         "name": "Wide Slash",
         "description": "Gain +30% Evasion for 1 turn. Then, attack in an arc (2 attacks) for 100% each.",
@@ -98,7 +184,7 @@
         "onhitEffects": [],
         "cantMiss": false,
         "attackCount": 8,
-        "attackInterval": 50,
+        "attackInterval": 100,
         "lifesteal": 0,
         "name": "Whirlwind",
         "description": "Attack 8 times for 30% each.",
@@ -126,7 +212,7 @@
         "onhitEffects": [],
         "cantMiss": true,
         "attackCount": 1,
-        "attackInterval": 50,
+        "attackInterval": 150,
         "lifesteal": 0,
         "name": "True Strike",
         "description": "Guaranteed hit for 150% + 25-50% of the Enemy's Damage Resistance.",
@@ -193,7 +279,7 @@
         ],
         "cantMiss": false,
         "attackCount": 1,
-        "attackInterval": 150,
+        "attackInterval": 200,
         "lifesteal": 0,
         "name": "Pommel Bash",
         "description": "Attack for 120%, inflicting Daze for 3 turns on hit.",
@@ -302,6 +388,30 @@
     ],
     "combatEffects": [
       {
+        "id": "WildStrike0",
+        "templateID": "melvorD:SelfTurnCounting",
+        "name": "Wild Strike",
+        "media": "assets/status/speedup.svg",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 2
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "attackInterval": -10
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
         "id": "WideSlash0",
         "templateID": "melvorD:SelfTurnCounting",
         "name": "Wide Slash",
@@ -331,10 +441,16 @@
         "name": "Disrupting Stab",
         "media": "assets/status/null.svg",
         "target": "Target",
+        "tooltipSpans": [
+          {
+            "type": "String",
+            "value": "Can't receive Buffs."
+          }
+        ],
         "parameters": [
           {
             "name": "turns",
-            "initialValue": 3
+            "initialValue": 2
           }
         ],
         "statGroups": [
@@ -378,6 +494,33 @@
         ],
         "effectGroups": [
           "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "Vulnerability",
+        "name": "Vulnerability",
+        "media": "assets/status/vulnerability.png",
+        "templateID": "melvorD:Stacking",
+        "parameters": [
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 25
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "debuff",
+            "modifiers": {
+              "damageTaken": 1
+            }
+          }
+        ],
+        "effectGroups": [
+          "ntmyk:Debuff"
         ]
       },
       {
@@ -778,6 +921,11 @@
         "id": "Daze",
         "name": "Daze",
         "adjective": "Dazed"
+      },
+      {
+        "id": "Vulnerability",
+        "name": "Vulnerability",
+        "adjective": "Vulnerable"
       }
     ],
     "combatPassives": [
