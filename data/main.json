@@ -4,6 +4,65 @@
   "data": {
     "attacks": [
       {
+        "id": "CripplingStrike",
+        "defaultChance": 10,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 90
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Slow",
+            "initialParams": [
+              {
+                "name": "magnitude",
+                "value": 50
+              },
+              {
+                "name": "turns",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "effectID": "melvorD:Bleed100"
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Crippling Strike",
+        "description": "Attack for 90%. Inflict a 50% Slow for 2 turns and a 100% Bleed.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "DisruptingStab",
+        "defaultChance": 10,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 150
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "ntmyk:DisruptingStab0"
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Disrupting Stab",
+        "description": "Attack for 150%. Removes Enemy buffs. Enemy can't receive buffs for 3 turns.",
+        "usesRunesPerProc": false
+      },
+      {
         "id": "WideSlash",
         "defaultChance": 10,
         "damage": [
@@ -12,14 +71,18 @@
             "amplitude": 100
           }
         ],
-        "prehitEffects": [],
+        "prehitEffects": [
+          {
+            "effectID": "melvorF:RandomEvasion"
+          }
+        ],
         "onhitEffects": [],
         "cantMiss": false,
         "attackCount": 2,
         "attackInterval": 100,
         "lifesteal": 0,
         "name": "Wide Slash",
-        "description": "",
+        "description": "Gain +30% Evasion for 1 turn. Then, attack in an arc (2 attacks) for 100% each.",
         "usesRunesPerProc": false
       },
       {
@@ -38,7 +101,7 @@
         "attackInterval": 50,
         "lifesteal": 0,
         "name": "Whirlwind",
-        "description": "",
+        "description": "Attack 8 times for 30% each.",
         "usesRunesPerProc": false
       },
       {
@@ -47,7 +110,16 @@
         "damage": [
           {
             "damageType": "Normal",
-            "amplitude": 200
+            "amplitude": 150
+          },
+          {
+            "damageType": "Custom",
+            "character": "Target",
+            "maxRoll": "MaxHitDR",
+            "minRoll": "MaxHitDR",
+            "maxPercent": 50,
+            "minPercent": 25,
+            "roll": true
           }
         ],
         "prehitEffects": [],
@@ -57,7 +129,7 @@
         "attackInterval": 50,
         "lifesteal": 0,
         "name": "True Strike",
-        "description": "",
+        "description": "Guaranteed hit for 150% + 25-50% of the Enemy's Damage Resistance.",
         "usesRunesPerProc": false
       },
       {
@@ -67,7 +139,7 @@
           {
             "damageType": "Normal",
             "amplitude": 80,
-            "attackCount": 2
+            "attackCount": 1
           }
         ],
         "prehitEffects": [
@@ -81,21 +153,21 @@
             "initialParams": [
               {
                 "name": "magnitude",
-                "value": 10
+                "value": 20
               },
               {
                 "name": "turns",
-                "value": 2
+                "value": 1
               }
             ]
           }
         ],
         "cantMiss": false,
-        "attackCount": 2,
+        "attackCount": 1,
         "attackInterval": 3600,
         "lifesteal": 0,
         "name": "Counterattack",
-        "description": "",
+        "description": "Block all incoming attacks for 2 turns. Then, after 3.6s, perform a counterattack for 80%, and inflict a 20% Slow for 1 turn.",
         "usesRunesPerProc": false
       },
       {
@@ -124,7 +196,7 @@
         "attackInterval": 150,
         "lifesteal": 0,
         "name": "Pommel Bash",
-        "description": "",
+        "description": "Attack for 120%, inflicting Daze for 3 turns on hit.",
         "usesRunesPerProc": false
       }
     ],
@@ -229,6 +301,59 @@
       }
     ],
     "combatEffects": [
+      {
+        "id": "WideSlash0",
+        "templateID": "melvorD:SelfTurnCounting",
+        "name": "Wide Slash",
+        "media": "assets/status/evasion_increase.svg",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 1
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "evasion": 30
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "DisruptingStab0",
+        "templateID": "melvorD:SelfTurnCounting",
+        "name": "Disrupting Stab",
+        "media": "assets/status/null.svg",
+        "target": "Target",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "effectImmunity": [
+                {
+                  "effectGroupID": "melvorD:Buff",
+                  "value": 1
+                }
+              ]
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
       {
         "id": "Counterattack0",
         "templateID": "melvorD:SelfTurnCounting",
@@ -741,6 +866,54 @@
       }
     ],
     "items": [
+      {
+        "id": "Bronze_Sword",
+        "name": "Bronze Sword",
+        "category": "Combat",
+        "type": "Offhand",
+        "media": "assets/bank/offhand_sword_bronze.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1,
+        "tier": "bronze",
+        "validSlots": [
+          "Shield"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 1
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 1100
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 9
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 2
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 1
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 5
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "specialAttacks": []
+      },
       {
         "itemType": "Equipment",
         "id": "Bronze_Dirk",
