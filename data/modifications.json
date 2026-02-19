@@ -4,15 +4,40 @@
   "modifications": {
     "items": [
       {
+        "id": "melvorF:Knights_Defender",
+        "equipmentStats": {
+          "add": [
+            {
+              "key": "meleeStrengthBonus",
+              "value": 13
+            },
+            {
+              "key": "stabAttackBonus",
+              "value": 48
+            },
+            {
+              "key": "slashAttackBonus",
+              "value": 46
+            },
+            {
+              "key": "blockAttackBonus",
+              "value": 44
+            },
+            {
+              "key": "meleeDefenceBonus",
+              "value": 48
+            }
+          ]
+        }
+      },
+      {
         "id": "melvorD:Bronze_Dagger",
         "modifiers": {
           "add": {
             "critChance": 10
           }
         },
-        "specialAttacks": {
-          
-        }
+        "specialAttacks": {}
       },
       {
         "id": "melvorD:Iron_Dagger",

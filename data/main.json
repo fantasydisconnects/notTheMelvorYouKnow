@@ -205,13 +205,7 @@
             "combatEffects": [
               {
                 "appliesWhen": "StartOfFight",
-                "effectID": "ntmyk:VulnerabilityBlessed",
-                "applyEffectWhenMerged": true
-              },
-              {
-                "appliesWhen": "StartOfFight",
-                "effectID": "ntmyk:VulnerabilitySilver",
-                "applyEffectWhenMerged": true
+                "effectID": "ntmyk:VulnerabilitySilver"
               }
             ]
           }
@@ -353,12 +347,52 @@
                 "type": "EquipmentChanged",
                 "isNotEquipped": [
                   "ntmyk:Silver_Sword",
+                  "ntmyk:Silver_Crossbow",
+                  "ntmyk:Silver_Bolts",
                   "ntmyk:Silver_2H_Sword",
-                  "ntmyk:Silver_Dagger",
+                  "ntmyk:Silver_Scimitar",
                   "ntmyk:Silver_Battleaxe",
-                  "ntmyk:Silver_Mace",
-                  "ntmyk:Silver_Hammer",
-                  "ntmyk:Silver_Bolts"
+                  "ntmyk:Silver_Dagger",
+                  "ntmyk:Silver_Warhammer",
+                  "ntmyk:Silver_Greataxe",
+                  "ntmyk:Silver_Maul"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ArmourSilvered",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Silvered Armour",
+        "tooltipSpans": [
+          {
+            "type": "String",
+            "value": "Your armour reflects a small portion of the damage dealt by silver-vulnerable monsters."
+          }
+        ],
+        "media": "assets/status/armour_silvered.png",
+        "target": "Self",
+        "parameters": [],
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "ntmyk:Silver_Helmet",
+                  "ntmyk:Silver_Platebody",
+                  "ntmyk:Silver_Shield",
+                  "ntmyk:Silver_Gloves",
+                  "ntmyk:Silver_Platelegs",
+                  "ntmyk:Silver_Boots"
                 ]
               }
             ]
@@ -455,10 +489,6 @@
           },
           {
             "appliesWhen": "StartOfFight",
-            "effectID": "ntmyk:VulnerabilityBlessed"
-          },
-          {
-            "appliesWhen": "StartOfFight",
             "effectID": "ntmyk:VulnerabilitySilver"
           }
         ]
@@ -514,6 +544,672 @@
       }
     ],
     "items": [
+      {
+        "itemType": "Equipment",
+        "id": "Bronze_Dirk",
+        "name": "Bronze Dirk",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/weapon_dirk_bronze.png",
+        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.05s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 10,
+        "tier": "none",
+        "validSlots": [
+          "Shield",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [
+          {
+            "key": "meleeStrengthBonus",
+            "value": 2
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 6
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 4
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 2
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 6
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "CombatType",
+                  "character": "Player",
+                  "thisAttackType": "melee",
+                  "targetAttackType": "any"
+                },
+                {
+                  "character": "Player",
+                  "damageType": "melvorD:Normal",
+                  "type": "DamageType"
+                }
+              ]
+            },
+            "modifiers": {
+              "flatStabAttackBonus": 3,
+              "flatBlockAttackBonus": 3,
+              "flatSlashAttackBonus": 3,
+              "flatAttackInterval": -50,
+              "flatResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": -5
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Iron_Dirk",
+        "name": "Iron Dirk",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/weapon_dirk_iron.png",
+        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.05s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 20,
+        "tier": "none",
+        "validSlots": [
+          "Shield",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [
+          {
+            "key": "meleeStrengthBonus",
+            "value": 4
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 10
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 8
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 6
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 10
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "CombatType",
+                  "character": "Player",
+                  "thisAttackType": "melee",
+                  "targetAttackType": "any"
+                },
+                {
+                  "character": "Player",
+                  "damageType": "melvorD:Normal",
+                  "type": "DamageType"
+                }
+              ]
+            },
+            "modifiers": {
+              "flatStabAttackBonus": 3,
+              "flatBlockAttackBonus": 3,
+              "flatSlashAttackBonus": 3,
+              "flatAttackInterval": -50,
+              "flatResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": -5
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Steel_Dirk",
+        "name": "Steel Dirk",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/weapon_dirk_steel.png",
+        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.05s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 40,
+        "tier": "none",
+        "validSlots": [
+          "Shield",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [
+          {
+            "key": "meleeStrengthBonus",
+            "value": 6
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 14
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 12
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 10
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 14
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "CombatType",
+                  "character": "Player",
+                  "thisAttackType": "melee",
+                  "targetAttackType": "any"
+                },
+                {
+                  "character": "Player",
+                  "damageType": "melvorD:Normal",
+                  "type": "DamageType"
+                }
+              ]
+            },
+            "modifiers": {
+              "flatStabAttackBonus": 3,
+              "flatBlockAttackBonus": 3,
+              "flatSlashAttackBonus": 3,
+              "flatAttackInterval": -50,
+              "flatResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": -5
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Black_Dirk",
+        "name": "Black Dirk",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/weapon_dirk_black.png",
+        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.05s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 80,
+        "tier": "none",
+        "validSlots": [
+          "Shield",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [
+          {
+            "key": "meleeStrengthBonus",
+            "value": 8
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 18
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 16
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 14
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 18
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "CombatType",
+                  "character": "Player",
+                  "thisAttackType": "melee",
+                  "targetAttackType": "any"
+                },
+                {
+                  "character": "Player",
+                  "damageType": "melvorD:Normal",
+                  "type": "DamageType"
+                }
+              ]
+            },
+            "modifiers": {
+              "flatStabAttackBonus": 3,
+              "flatBlockAttackBonus": 3,
+              "flatSlashAttackBonus": 3,
+              "flatAttackInterval": -50,
+              "flatResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": -5
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Mithril_Dirk",
+        "name": "Mithril Dirk",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/weapon_dirk_mithril.png",
+        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.05s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 160,
+        "tier": "none",
+        "validSlots": [
+          "Shield",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [
+          {
+            "key": "meleeStrengthBonus",
+            "value": 10
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 20
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 18
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 16
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 20
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "CombatType",
+                  "character": "Player",
+                  "thisAttackType": "melee",
+                  "targetAttackType": "any"
+                },
+                {
+                  "character": "Player",
+                  "damageType": "melvorD:Normal",
+                  "type": "DamageType"
+                }
+              ]
+            },
+            "modifiers": {
+              "flatStabAttackBonus": 3,
+              "flatBlockAttackBonus": 3,
+              "flatSlashAttackBonus": 3,
+              "flatAttackInterval": -50,
+              "flatResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": -5
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Adamant_Dirk",
+        "name": "Adamant Dirk",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/weapon_dirk_adamant.png",
+        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.05s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 320,
+        "tier": "none",
+        "validSlots": [
+          "Shield",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [
+          {
+            "key": "meleeStrengthBonus",
+            "value": 12
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 26
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 24
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 22
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 26
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "CombatType",
+                  "character": "Player",
+                  "thisAttackType": "melee",
+                  "targetAttackType": "any"
+                },
+                {
+                  "character": "Player",
+                  "damageType": "melvorD:Normal",
+                  "type": "DamageType"
+                }
+              ]
+            },
+            "modifiers": {
+              "flatStabAttackBonus": 3,
+              "flatBlockAttackBonus": 3,
+              "flatSlashAttackBonus": 3,
+              "flatAttackInterval": -50,
+              "flatResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": -5
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Rune_Dirk",
+        "name": "Rune Dirk",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/weapon_dirk_rune.png",
+        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.05s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 640,
+        "tier": "none",
+        "validSlots": [
+          "Shield",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [
+          {
+            "key": "meleeStrengthBonus",
+            "value": 14
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 36
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 34
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 32
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 36
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "CombatType",
+                  "character": "Player",
+                  "thisAttackType": "melee",
+                  "targetAttackType": "any"
+                },
+                {
+                  "character": "Player",
+                  "damageType": "melvorD:Normal",
+                  "type": "DamageType"
+                }
+              ]
+            },
+            "modifiers": {
+              "flatStabAttackBonus": 3,
+              "flatBlockAttackBonus": 3,
+              "flatSlashAttackBonus": 3,
+              "flatAttackInterval": -50,
+              "flatResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": -5
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Dirk",
+        "name": "Silver Dirk",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/weapon_dirk_silver.png",
+        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.05s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1280,
+        "tier": "none",
+        "validSlots": [
+          "Shield",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [
+          {
+            "key": "meleeStrengthBonus",
+            "value": 16
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 42
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 40
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 38
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 42
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "CombatType",
+                  "character": "Player",
+                  "thisAttackType": "melee",
+                  "targetAttackType": "any"
+                },
+                {
+                  "character": "Player",
+                  "damageType": "melvorD:Normal",
+                  "type": "DamageType"
+                }
+              ]
+            },
+            "modifiers": {
+              "flatStabAttackBonus": 3,
+              "flatBlockAttackBonus": 3,
+              "flatSlashAttackBonus": 3,
+              "flatAttackInterval": -50,
+              "flatResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": -5
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Dragon_Dirk",
+        "name": "Dragon Dirk",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/weapon_dirk_dragon.png",
+        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.05s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 2560,
+        "tier": "none",
+        "validSlots": [
+          "Shield",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [
+          {
+            "key": "meleeStrengthBonus",
+            "value": 18
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 50
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 48
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 46
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 50
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "CombatType",
+                  "character": "Player",
+                  "thisAttackType": "melee",
+                  "targetAttackType": "any"
+                },
+                {
+                  "character": "Player",
+                  "damageType": "melvorD:Normal",
+                  "type": "DamageType"
+                }
+              ]
+            },
+            "modifiers": {
+              "flatStabAttackBonus": 3,
+              "flatBlockAttackBonus": 3,
+              "flatSlashAttackBonus": 3,
+              "flatAttackInterval": -50,
+              "flatResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": -5
+                }
+              ]
+            }
+          }
+        ]
+      },
       {
         "id": "Silver_Sword",
         "name": "Silver Sword",
@@ -1758,839 +2454,6 @@
       }
     ],
     "itemUpgrades": [
-      {
-        "upgradedItemID": "ntmyk:Bronze_Sword_S",
-        "rootItemIDs": [
-          "melvorD:Bronze_Sword"
-        ],
-        "itemCosts": [
-          {
-            "id": "melvorD:Bronze_Sword",
-            "quantity": 1
-          },
-          {
-            "id": "melvorD:Silver_Bar",
-            "quantity": 10
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 5000
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Bronze_Sword_B",
-        "rootItemIDs": [
-          "melvorD:Bronze_Sword"
-        ],
-        "itemCosts": [
-          {
-            "id": "melvorD:Bronze_Sword",
-            "quantity": 1
-          },
-          {
-            "id": "melvorF:Holy_Dust",
-            "quantity": 5
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 2500
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Bronze_Sword_S_B",
-        "rootItemIDs": [
-          "melvorD:Bronze_Sword"
-        ],
-        "itemCosts": [
-          {
-            "id": "melvorD:Bronze_Sword",
-            "quantity": 1
-          },
-          {
-            "id": "melvorD:Silver_Bar",
-            "quantity": 10
-          },
-          {
-            "id": "melvorF:Holy_Dust",
-            "quantity": 5
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 7500
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Bronze_Sword_S_B",
-        "rootItemIDs": [
-          "ntmyk:Bronze_Sword_S"
-        ],
-        "itemCosts": [
-          {
-            "id": "ntmyk:Bronze_Sword_S",
-            "quantity": 1
-          },
-          {
-            "id": "melvorF:Holy_Dust",
-            "quantity": 5
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 2500
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Bronze_Sword_S_B",
-        "rootItemIDs": [
-          "ntmyk:Bronze_Sword_B"
-        ],
-        "itemCosts": [
-          {
-            "id": "ntmyk:Bronze_Sword_B",
-            "quantity": 1
-          },
-          {
-            "id": "melvorD:Silver_Bar",
-            "quantity": 10
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 5000
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Iron_Sword_S",
-        "rootItemIDs": [
-          "melvorD:Iron_Sword"
-        ],
-        "itemCosts": [
-          {
-            "id": "melvorD:Iron_Sword",
-            "quantity": 1
-          },
-          {
-            "id": "melvorD:Silver_Bar",
-            "quantity": 20
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 8000
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Iron_Sword_B",
-        "rootItemIDs": [
-          "melvorD:Iron_Sword"
-        ],
-        "itemCosts": [
-          {
-            "id": "melvorD:Iron_Sword",
-            "quantity": 1
-          },
-          {
-            "id": "melvorF:Holy_Dust",
-            "quantity": 10
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 4000
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Iron_Sword_S_B",
-        "rootItemIDs": [
-          "melvorD:Iron_Sword"
-        ],
-        "itemCosts": [
-          {
-            "id": "melvorD:Iron_Sword",
-            "quantity": 1
-          },
-          {
-            "id": "melvorD:Silver_Bar",
-            "quantity": 20
-          },
-          {
-            "id": "melvorF:Holy_Dust",
-            "quantity": 10
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 12000
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Iron_Sword_S_B",
-        "rootItemIDs": [
-          "ntmyk:Iron_Sword_S"
-        ],
-        "itemCosts": [
-          {
-            "id": "ntmyk:Iron_Sword_S",
-            "quantity": 1
-          },
-          {
-            "id": "melvorF:Holy_Dust",
-            "quantity": 10
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 4000
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Iron_Sword_S_B",
-        "rootItemIDs": [
-          "ntmyk:Iron_Sword_B"
-        ],
-        "itemCosts": [
-          {
-            "id": "ntmyk:Iron_Sword_B",
-            "quantity": 1
-          },
-          {
-            "id": "melvorD:Silver_Bar",
-            "quantity": 20
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 8000
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Steel_Sword_S",
-        "rootItemIDs": [
-          "melvorD:Steel_Sword"
-        ],
-        "itemCosts": [
-          {
-            "id": "melvorD:Steel_Sword",
-            "quantity": 1
-          },
-          {
-            "id": "melvorD:Silver_Bar",
-            "quantity": 50
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 12000
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Steel_Sword_B",
-        "rootItemIDs": [
-          "melvorD:Steel_Sword"
-        ],
-        "itemCosts": [
-          {
-            "id": "melvorD:Steel_Sword",
-            "quantity": 1
-          },
-          {
-            "id": "melvorF:Holy_Dust",
-            "quantity": 20
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 12000
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Steel_Sword_S_B",
-        "rootItemIDs": [
-          "melvorD:Steel_Sword"
-        ],
-        "itemCosts": [
-          {
-            "id": "melvorD:Steel_Sword",
-            "quantity": 1
-          },
-          {
-            "id": "melvorD:Silver_Bar",
-            "quantity": 50
-          },
-          {
-            "id": "melvorF:Holy_Dust",
-            "quantity": 20
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 24000
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Steel_Sword_S_B",
-        "rootItemIDs": [
-          "ntmyk:Steel_Sword_S"
-        ],
-        "itemCosts": [
-          {
-            "id": "ntmyk:Steel_Sword_S",
-            "quantity": 1
-          },
-          {
-            "id": "melvorF:Holy_Dust",
-            "quantity": 20
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 12000
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Steel_Sword_S_B",
-        "rootItemIDs": [
-          "ntmyk:Steel_Sword_B"
-        ],
-        "itemCosts": [
-          {
-            "id": "ntmyk:Steel_Sword_B",
-            "quantity": 1
-          },
-          {
-            "id": "melvorD:Silver_Bar",
-            "quantity": 50
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 12000
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Mithril_Sword_S",
-        "rootItemIDs": [
-          "melvorD:Mithril_Sword"
-        ],
-        "itemCosts": [
-          {
-            "id": "melvorD:Mithril_Sword",
-            "quantity": 1
-          },
-          {
-            "id": "melvorD:Silver_Bar",
-            "quantity": 175
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 35000
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Mithril_Sword_B",
-        "rootItemIDs": [
-          "melvorD:Mithril_Sword"
-        ],
-        "itemCosts": [
-          {
-            "id": "melvorD:Mithril_Sword",
-            "quantity": 1
-          },
-          {
-            "id": "melvorF:Holy_Dust",
-            "quantity": 50
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 35000
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Mithril_Sword_S_B",
-        "rootItemIDs": [
-          "melvorD:Mithril_Sword"
-        ],
-        "itemCosts": [
-          {
-            "id": "melvorD:Mithril_Sword",
-            "quantity": 1
-          },
-          {
-            "id": "melvorD:Silver_Bar",
-            "quantity": 175
-          },
-          {
-            "id": "melvorF:Holy_Dust",
-            "quantity": 50
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 70000
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Mithril_Sword_S_B",
-        "rootItemIDs": [
-          "ntmyk:Mithril_Sword_S"
-        ],
-        "itemCosts": [
-          {
-            "id": "ntmyk:Mithril_Sword_S",
-            "quantity": 1
-          },
-          {
-            "id": "melvorF:Holy_Dust",
-            "quantity": 50
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 35000
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Mithril_Sword_S_B",
-        "rootItemIDs": [
-          "ntmyk:Mithril_Sword_B"
-        ],
-        "itemCosts": [
-          {
-            "id": "ntmyk:Mithril_Sword_B",
-            "quantity": 1
-          },
-          {
-            "id": "melvorD:Silver_Bar",
-            "quantity": 175
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 35000
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Adamant_Sword_S",
-        "rootItemIDs": [
-          "melvorD:Adamant_Sword"
-        ],
-        "itemCosts": [
-          {
-            "id": "melvorD:Adamant_Sword",
-            "quantity": 1
-          },
-          {
-            "id": "melvorD:Silver_Bar",
-            "quantity": 250
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 50000
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Adamant_Sword_B",
-        "rootItemIDs": [
-          "melvorD:Adamant_Sword"
-        ],
-        "itemCosts": [
-          {
-            "id": "melvorD:Adamant_Sword",
-            "quantity": 1
-          },
-          {
-            "id": "melvorF:Holy_Dust",
-            "quantity": 75
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 50000
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Adamant_Sword_S_B",
-        "rootItemIDs": [
-          "melvorD:Adamant_Sword"
-        ],
-        "itemCosts": [
-          {
-            "id": "melvorD:Adamant_Sword",
-            "quantity": 1
-          },
-          {
-            "id": "melvorD:Silver_Bar",
-            "quantity": 250
-          },
-          {
-            "id": "melvorF:Holy_Dust",
-            "quantity": 75
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 100000
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Adamant_Sword_S_B",
-        "rootItemIDs": [
-          "ntmyk:Adamant_Sword_S"
-        ],
-        "itemCosts": [
-          {
-            "id": "ntmyk:Adamant_Sword_S",
-            "quantity": 1
-          },
-          {
-            "id": "melvorF:Holy_Dust",
-            "quantity": 75
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 50000
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Adamant_Sword_S_B",
-        "rootItemIDs": [
-          "ntmyk:Adamant_Sword_B"
-        ],
-        "itemCosts": [
-          {
-            "id": "ntmyk:Adamant_Sword_B",
-            "quantity": 1
-          },
-          {
-            "id": "melvorD:Silver_Bar",
-            "quantity": 250
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 50000
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Rune_Sword_S",
-        "rootItemIDs": [
-          "melvorD:Rune_Sword"
-        ],
-        "itemCosts": [
-          {
-            "id": "melvorD:Rune_Sword",
-            "quantity": 1
-          },
-          {
-            "id": "melvorD:Silver_Bar",
-            "quantity": 400
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 100000
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Rune_Sword_B",
-        "rootItemIDs": [
-          "melvorD:Rune_Sword"
-        ],
-        "itemCosts": [
-          {
-            "id": "melvorD:Rune_Sword",
-            "quantity": 1
-          },
-          {
-            "id": "melvorF:Holy_Dust",
-            "quantity": 100
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 100000
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Rune_Sword_S_B",
-        "rootItemIDs": [
-          "melvorD:Rune_Sword"
-        ],
-        "itemCosts": [
-          {
-            "id": "melvorD:Rune_Sword",
-            "quantity": 1
-          },
-          {
-            "id": "melvorD:Silver_Bar",
-            "quantity": 400
-          },
-          {
-            "id": "melvorF:Holy_Dust",
-            "quantity": 100
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 200000
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Rune_Sword_S_B",
-        "rootItemIDs": [
-          "ntmyk:Rune_Sword_S"
-        ],
-        "itemCosts": [
-          {
-            "id": "ntmyk:Rune_Sword_S",
-            "quantity": 1
-          },
-          {
-            "id": "melvorF:Holy_Dust",
-            "quantity": 100
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 100000
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Rune_Sword_S_B",
-        "rootItemIDs": [
-          "ntmyk:Rune_Sword_B"
-        ],
-        "itemCosts": [
-          {
-            "id": "ntmyk:Rune_Sword_B",
-            "quantity": 1
-          },
-          {
-            "id": "melvorD:Silver_Bar",
-            "quantity": 400
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 100000
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Dragon_Sword_S",
-        "rootItemIDs": [
-          "melvorD:Dragon_Sword"
-        ],
-        "itemCosts": [
-          {
-            "id": "melvorD:Dragon_Sword",
-            "quantity": 1
-          },
-          {
-            "id": "melvorD:Silver_Bar",
-            "quantity": 800
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 250000
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Dragon_Sword_B",
-        "rootItemIDs": [
-          "melvorD:Dragon_Sword"
-        ],
-        "itemCosts": [
-          {
-            "id": "melvorD:Dragon_Sword",
-            "quantity": 1
-          },
-          {
-            "id": "melvorF:Holy_Dust",
-            "quantity": 1000
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 200000
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Dragon_Sword_S_B",
-        "rootItemIDs": [
-          "melvorD:Dragon_Sword"
-        ],
-        "itemCosts": [
-          {
-            "id": "melvorD:Dragon_Sword",
-            "quantity": 1
-          },
-          {
-            "id": "melvorD:Silver_Bar",
-            "quantity": 800
-          },
-          {
-            "id": "melvorF:Holy_Dust",
-            "quantity": 1000
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 450000
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Dragon_Sword_S_B",
-        "rootItemIDs": [
-          "ntmyk:Dragon_Sword_S"
-        ],
-        "itemCosts": [
-          {
-            "id": "ntmyk:Dragon_Sword_S",
-            "quantity": 1
-          },
-          {
-            "id": "melvorF:Holy_Dust",
-            "quantity": 1000
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 200000
-          }
-        ],
-        "isDowngrade": false
-      },
-      {
-        "upgradedItemID": "ntmyk:Dragon_Sword_S_B",
-        "rootItemIDs": [
-          "ntmyk:Dragon_Sword_B"
-        ],
-        "itemCosts": [
-          {
-            "id": "ntmyk:Dragon_Sword_B",
-            "quantity": 1
-          },
-          {
-            "id": "melvorD:Silver_Bar",
-            "quantity": 800
-          }
-        ],
-        "currencyCosts": [
-          {
-            "id": "melvorD:GP",
-            "quantity": 250000
-          }
-        ],
-        "isDowngrade": false
-      },
       {
         "upgradedItemID": "ntmyk:Slayer_Summoner_Mask_Strong",
         "itemCosts": [

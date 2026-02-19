@@ -4,7 +4,6 @@
     "icon": "assets/ICON.png",
     "load": [
         "data/main.json",
-        "data/modifications.json",
-        "patchSmithingOrder.mjs"
+        "data/modifications.json"
     ]
 }
