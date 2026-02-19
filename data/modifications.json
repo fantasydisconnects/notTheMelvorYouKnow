@@ -4,6 +4,168 @@
   "modifications": {
     "items": [
       {
+        "id": "melvorD:Bronze_2H_Sword",
+        "specialAttacks": {
+          "add": [
+            "ntmyk:WideSlash",
+            "ntmyk:Whirlwind",
+            "ntmyk:TrueStrike",
+            "ntmyk:Counterattack",
+            "ntmyk:PommelBash"
+          ]
+        },
+        "modifiers": {
+          "add": {
+            "meleeCritChance": 10,
+            "critMultiplier": 100
+          }
+        }
+      },
+      {
+        "id": "melvorD:Iron_2H_Sword",
+        "specialAttacks": {
+          "add": [
+            "ntmyk:WideSlash",
+            "ntmyk:Whirlwind",
+            "ntmyk:TrueStrike",
+            "ntmyk:Counterattack",
+            "ntmyk:PommelBash"
+          ]
+        },
+        "modifiers": {
+          "add": {
+            "meleeCritChance": 10,
+            "critMultiplier": 100
+          }
+        }
+      },
+      {
+        "id": "melvorD:Steel_2H_Sword",
+        "specialAttacks": {
+          "add": [
+            "ntmyk:WideSlash",
+            "ntmyk:Whirlwind",
+            "ntmyk:TrueStrike",
+            "ntmyk:Counterattack",
+            "ntmyk:PommelBash"
+          ]
+        },
+        "modifiers": {
+          "add": {
+            "meleeCritChance": 10,
+            "critMultiplier": 100
+          }
+        }
+      },
+      {
+        "id": "melvorD:Black_2H_Sword",
+        "specialAttacks": {
+          "add": [
+            "ntmyk:WideSlash",
+            "ntmyk:Whirlwind",
+            "ntmyk:TrueStrike",
+            "ntmyk:Counterattack",
+            "ntmyk:PommelBash"
+          ]
+        },
+        "modifiers": {
+          "add": {
+            "meleeCritChance": 10,
+            "critMultiplier": 100
+          }
+        }
+      },
+      {
+        "id": "melvorD:Mithril_2H_Sword",
+        "specialAttacks": {
+          "add": [
+            "ntmyk:WideSlash",
+            "ntmyk:Whirlwind",
+            "ntmyk:TrueStrike",
+            "ntmyk:Counterattack",
+            "ntmyk:PommelBash"
+          ]
+        },
+        "modifiers": {
+          "add": {
+            "meleeCritChance": 10,
+            "critMultiplier": 100
+          }
+        }
+      },
+      {
+        "id": "melvorD:Adamant_2H_Sword",
+        "specialAttacks": {
+          "add": [
+            "ntmyk:WideSlash",
+            "ntmyk:Whirlwind",
+            "ntmyk:TrueStrike",
+            "ntmyk:Counterattack",
+            "ntmyk:PommelBash"
+          ]
+        },
+        "modifiers": {
+          "add": {
+            "meleeCritChance": 10,
+            "critMultiplier": 100
+          }
+        }
+      },
+      {
+        "id": "melvorD:Rune_2H_Sword",
+        "specialAttacks": {
+          "add": [
+            "ntmyk:WideSlash",
+            "ntmyk:Whirlwind",
+            "ntmyk:TrueStrike",
+            "ntmyk:Counterattack",
+            "ntmyk:PommelBash"
+          ]
+        },
+        "modifiers": {
+          "add": {
+            "meleeCritChance": 10,
+            "critMultiplier": 100
+          }
+        }
+      },
+      {
+        "id": "ntmyk:Silver_2H_Sword",
+        "specialAttacks": {
+          "add": [
+            "ntmyk:WideSlash",
+            "ntmyk:Whirlwind",
+            "ntmyk:TrueStrike",
+            "ntmyk:Counterattack",
+            "ntmyk:PommelBash"
+          ]
+        },
+        "modifiers": {
+          "add": {
+            "meleeCritChance": 10,
+            "critMultiplier": 100
+          }
+        }
+      },
+      {
+        "id": "melvorD:Dragon_2H_Sword",
+        "specialAttacks": {
+          "add": [
+            "ntmyk:WideSlash",
+            "ntmyk:Whirlwind",
+            "ntmyk:TrueStrike",
+            "ntmyk:Counterattack",
+            "ntmyk:PommelBash"
+          ]
+        },
+        "modifiers": {
+          "add": {
+            "meleeCritChance": 10,
+            "critMultiplier": 100
+          }
+        }
+      },
+      {
         "id": "melvorF:Knights_Defender",
         "equipmentStats": {
           "add": [
@@ -32,68 +194,251 @@
       },
       {
         "id": "melvorD:Bronze_Dagger",
+        "equipmentStats": {
+          "add": [
+            {
+              "key": "stabAttackBonus",
+              "value": 7
+            },
+            {
+              "key": "meleeStrengthBonus",
+              "value": -2
+            }
+          ]
+        },
         "modifiers": {
           "add": {
-            "critChance": 10
+            "critChance": 25
+          }
+        },
+        "enemyModifiers": {
+          "add": {
+            "flatResistanceAgainstMelee": [
+              {
+                "damageTypeID": "melvorD:Normal",
+                "value": -10
+              }
+            ]
           }
         },
         "specialAttacks": {}
       },
       {
         "id": "melvorD:Iron_Dagger",
+        "equipmentStats": {
+          "add": [
+            {
+              "key": "stabAttackBonus",
+              "value": 8
+            },
+            {
+              "key": "meleeStrengthBonus",
+              "value": -2
+            }
+          ]
+        },
         "modifiers": {
           "add": {
-            "critChance": 10
+            "critChance": 25
           }
-        }
+        },
+        "enemyModifiers": {
+          "add": {
+            "flatResistanceAgainstMelee": [
+              {
+                "damageTypeID": "melvorD:Normal",
+                "value": -10
+              }
+            ]
+          }
+        },
+        "specialAttacks": {}
       },
       {
         "id": "melvorD:Steel_Dagger",
+        "equipmentStats": {
+          "add": [
+            {
+              "key": "stabAttackBonus",
+              "value": 13
+            },
+            {
+              "key": "meleeStrengthBonus",
+              "value": -4
+            }
+          ]
+        },
         "modifiers": {
           "add": {
-            "critChance": 10
+            "critChance": 25
           }
-        }
+        },
+        "enemyModifiers": {
+          "add": {
+            "flatResistanceAgainstMelee": [
+              {
+                "damageTypeID": "melvorD:Normal",
+                "value": -10
+              }
+            ]
+          }
+        },
+        "specialAttacks": {}
       },
       {
         "id": "melvorD:Black_Dagger",
+        "equipmentStats": {
+          "add": [
+            {
+              "key": "stabAttackBonus",
+              "value": 15
+            },
+            {
+              "key": "meleeStrengthBonus",
+              "value": -3
+            }
+          ]
+        },
         "modifiers": {
           "add": {
-            "critChance": 10
+            "critChance": 25
           }
-        }
+        },
+        "enemyModifiers": {
+          "add": {
+            "flatResistanceAgainstMelee": [
+              {
+                "damageTypeID": "melvorD:Normal",
+                "value": -10
+              }
+            ]
+          }
+        },
+        "specialAttacks": {}
       },
       {
         "id": "melvorD:Mithril_Dagger",
+        "equipmentStats": {
+          "add": [
+            {
+              "key": "stabAttackBonus",
+              "value": 18
+            },
+            {
+              "key": "meleeStrengthBonus",
+              "value": -5
+            }
+          ]
+        },
         "modifiers": {
           "add": {
-            "critChance": 10
+            "critChance": 25
           }
-        }
+        },
+        "enemyModifiers": {
+          "add": {
+            "flatResistanceAgainstMelee": [
+              {
+                "damageTypeID": "melvorD:Normal",
+                "value": -10
+              }
+            ]
+          }
+        },
+        "specialAttacks": {}
       },
       {
         "id": "melvorD:Adamant_Dagger",
+        "equipmentStats": {
+          "add": [
+            {
+              "key": "stabAttackBonus",
+              "value": 22
+            },
+            {
+              "key": "meleeStrengthBonus",
+              "value": -7
+            }
+          ]
+        },
         "modifiers": {
           "add": {
-            "critChance": 10
+            "critChance": 25
           }
-        }
+        },
+        "enemyModifiers": {
+          "add": {
+            "flatResistanceAgainstMelee": [
+              {
+                "damageTypeID": "melvorD:Normal",
+                "value": -10
+              }
+            ]
+          }
+        },
+        "specialAttacks": {}
       },
       {
         "id": "melvorD:Rune_Dagger",
+        "equipmentStats": {
+          "add": [
+            {
+              "key": "stabAttackBonus",
+              "value": 35
+            },
+            {
+              "key": "meleeStrengthBonus",
+              "value": -12
+            }
+          ]
+        },
         "modifiers": {
           "add": {
-            "critChance": 10
+            "critChance": 25
           }
-        }
+        },
+        "enemyModifiers": {
+          "add": {
+            "flatResistanceAgainstMelee": [
+              {
+                "damageTypeID": "melvorD:Normal",
+                "value": -10
+              }
+            ]
+          }
+        },
+        "specialAttacks": {}
       },
       {
         "id": "melvorD:Dragon_Dagger",
+        "equipmentStats": {
+          "add": [
+            {
+              "key": "stabAttackBonus",
+              "value": 50
+            },
+            {
+              "key": "meleeStrengthBonus",
+              "value": -20
+            }
+          ]
+        },
         "modifiers": {
           "add": {
-            "critChance": 10
+            "critChance": 25
           }
-        }
+        },
+        "enemyModifiers": {
+          "add": {
+            "flatResistanceAgainstMelee": [
+              {
+                "damageTypeID": "melvorD:Normal",
+                "value": -10
+              }
+            ]
+          }
+        },
+        "specialAttacks": {}
       },
       {
         "id": "melvorD:Bronze_Sword",

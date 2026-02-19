@@ -19,8 +19,7 @@
         "attackInterval": 100,
         "lifesteal": 0,
         "name": "Wide Slash",
-        "description": "Perform ${hitCount} consecutive attacks.",
-        "descriptionGenerator": "Perform <count> consecutive attacks.",
+        "description": "",
         "usesRunesPerProc": false
       },
       {
@@ -39,8 +38,7 @@
         "attackInterval": 50,
         "lifesteal": 0,
         "name": "Whirlwind",
-        "description": "Perform ${hitCount} consecutive attacks.",
-        "descriptionGenerator": "Perform <count> consecutive attacks.",
+        "description": "",
         "usesRunesPerProc": false
       },
       {
@@ -59,8 +57,7 @@
         "attackInterval": 50,
         "lifesteal": 0,
         "name": "True Strike",
-        "description": "Perform ${hitCount} consecutive attacks.",
-        "descriptionGenerator": "Perform <count> consecutive attacks.",
+        "description": "",
         "usesRunesPerProc": false
       },
       {
@@ -98,8 +95,7 @@
         "attackInterval": 3600,
         "lifesteal": 0,
         "name": "Counterattack",
-        "description": "Perform ${hitCount} consecutive attacks.",
-        "descriptionGenerator": "Perform <count> consecutive attacks.",
+        "description": "",
         "usesRunesPerProc": false
       },
       {
@@ -128,8 +124,7 @@
         "attackInterval": 150,
         "lifesteal": 0,
         "name": "Pommel Bash",
-        "description": "Perform ${hitCount} consecutive attacks.",
-        "descriptionGenerator": "Perform <count> consecutive attacks.",
+        "description": "",
         "usesRunesPerProc": false
       }
     ],
@@ -238,8 +233,8 @@
         "id": "Counterattack0",
         "templateID": "melvorD:SelfTurnCounting",
         "name": "Counterattack",
-        "nameLang": "SPECIAL_ATTACK_NAME_IntotheMist",
         "media": "assets/status/evasion_increase.svg",
+        "target": "Self",
         "parameters": [
           {
             "name": "turns",
@@ -263,9 +258,9 @@
       {
         "id": "Daze",
         "name": "Daze",
-        "media": "assets/status/daze.png",
+        "media": "assets/status/dazed.png",
         "templateID": "melvorD:SelfTurnCounting",
-        "target": "Self",
+        "target": "Target",
         "tooltipSpans": [
           {
             "type": "Stats",
@@ -555,16 +550,7 @@
               {
                 "type": "EquipmentChanged",
                 "isNotEquipped": [
-                  "ntmyk:Silver_Sword",
-                  "ntmyk:Silver_Crossbow",
-                  "ntmyk:Silver_Bolts",
-                  "ntmyk:Silver_2H_Sword",
-                  "ntmyk:Silver_Scimitar",
-                  "ntmyk:Silver_Battleaxe",
-                  "ntmyk:Silver_Dagger",
-                  "ntmyk:Silver_Warhammer",
-                  "ntmyk:Silver_Greataxe",
-                  "ntmyk:Silver_Maul"
+                  "ntmyk:Silver_Sword"
                 ]
               }
             ]
@@ -596,12 +582,7 @@
               {
                 "type": "EquipmentChanged",
                 "isNotEquipped": [
-                  "ntmyk:Silver_Helmet",
-                  "ntmyk:Silver_Platebody",
-                  "ntmyk:Silver_Shield",
-                  "ntmyk:Silver_Gloves",
-                  "ntmyk:Silver_Platelegs",
-                  "ntmyk:Silver_Boots"
+                  "ntmyk:Silver_Sword"
                 ]
               }
             ]
@@ -1531,6 +1512,72 @@
           {
             "key": "meleeStrengthBonus",
             "value": 50
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "combatEffects": [
+          {
+            "appliesWhen": "PreAttack",
+            "effectID": "ntmyk:AttacksSilvered"
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 100
+            }
+          }
+        ]
+      },
+      {
+        "id": "Silver_2H_Sword",
+        "name": "Silver Sword",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/weapon_2h_sword_silver.png",
+        "customDescription": "Deals extra damage to silver-vulnerable monsters.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 750,
+        "tier": "silver",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 50
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3600
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": -4
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 100
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 100
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 142
           }
         ],
         "itemType": "Weapon",
