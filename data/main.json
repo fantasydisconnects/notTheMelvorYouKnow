@@ -4,8 +4,8 @@
   "data": {
     "attacks": [
       {
-        "id": "PommelBash",
-        "defaultChance": 5,
+        "id": "WideSlash",
+        "defaultChance": 10,
         "damage": [
           {
             "damageType": "Normal",
@@ -14,6 +14,115 @@
         ],
         "prehitEffects": [],
         "onhitEffects": [],
+        "cantMiss": false,
+        "attackCount": 2,
+        "attackInterval": 100,
+        "lifesteal": 0,
+        "name": "Wide Slash",
+        "description": "Perform ${hitCount} consecutive attacks.",
+        "descriptionGenerator": "Perform <count> consecutive attacks.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "Whirlwind",
+        "defaultChance": 10,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 30
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [],
+        "cantMiss": false,
+        "attackCount": 8,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Whirlwind",
+        "description": "Perform ${hitCount} consecutive attacks.",
+        "descriptionGenerator": "Perform <count> consecutive attacks.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "TrueStrike",
+        "defaultChance": 10,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 200
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [],
+        "cantMiss": true,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "True Strike",
+        "description": "Perform ${hitCount} consecutive attacks.",
+        "descriptionGenerator": "Perform <count> consecutive attacks.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "Counterattack",
+        "defaultChance": 10,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 80,
+            "attackCount": 2
+          }
+        ],
+        "prehitEffects": [
+          {
+            "effectID": "ntmyk:Counterattack0"
+          }
+        ],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Slow",
+            "initialParams": [
+              {
+                "name": "magnitude",
+                "value": 10
+              },
+              {
+                "name": "turns",
+                "value": 2
+              }
+            ]
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 2,
+        "attackInterval": 3600,
+        "lifesteal": 0,
+        "name": "Counterattack",
+        "description": "Perform ${hitCount} consecutive attacks.",
+        "descriptionGenerator": "Perform <count> consecutive attacks.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "PommelBash",
+        "defaultChance": 10,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 120
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "ntmyk:Daze",
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 3
+              }
+            ]
+          }
+        ],
         "cantMiss": false,
         "attackCount": 1,
         "attackInterval": 150,
@@ -126,6 +235,32 @@
     ],
     "combatEffects": [
       {
+        "id": "Counterattack0",
+        "templateID": "melvorD:SelfTurnCounting",
+        "name": "Counterattack",
+        "nameLang": "SPECIAL_ATTACK_NAME_IntotheMist",
+        "media": "assets/status/evasion_increase.svg",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 2
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "meleeImmunity": 1,
+              "rangedImmunity": 1,
+              "magicImmunity": 1
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
         "id": "Daze",
         "name": "Daze",
         "media": "assets/status/daze.png",
@@ -159,7 +294,7 @@
           }
         ],
         "effectGroups": [
-          "ntmyk:Dazed"
+          "ntmyk:Daze"
         ]
       },
       {
