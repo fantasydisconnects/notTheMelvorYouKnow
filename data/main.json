@@ -2,7 +2,44 @@
   "$schema": "https://melvoridle.com/assets/schema/gameData.json",
   "namespace": "ntmyk",
   "data": {
+    "attacks": [
+      {
+        "id": "PommelBash",
+        "defaultChance": 5,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 100
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 150,
+        "lifesteal": 0,
+        "name": "Pommel Bash",
+        "description": "Perform ${hitCount} consecutive attacks.",
+        "descriptionGenerator": "Perform <count> consecutive attacks.",
+        "usesRunesPerProc": false
+      }
+    ],
     "bankSortOrder": [
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Training_Shield",
+        "ids": [
+          "ntmyk:Bronze_Dirk",
+          "ntmyk:Iron_Dirk",
+          "ntmyk:Steel_Dirk",
+          "ntmyk:Black_Dirk",
+          "ntmyk:Mithril_Dirk",
+          "ntmyk:Adamant_Dirk",
+          "ntmyk:Rune_Dirk",
+          "ntmyk:Silver_Dirk",
+          "ntmyk:Dragon_Dirk"
+        ]
+      },
       {
         "insertAt": "Before",
         "beforeID": "melvorD:Topaz",
@@ -88,6 +125,43 @@
       }
     ],
     "combatEffects": [
+      {
+        "id": "Daze",
+        "name": "Daze",
+        "media": "assets/status/daze.png",
+        "templateID": "melvorD:SelfTurnCounting",
+        "target": "Self",
+        "tooltipSpans": [
+          {
+            "type": "Stats",
+            "statGroupName": "stacks"
+          },
+          {
+            "type": "Turns",
+            "turns": "p.turns"
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "cantEvade": 1,
+              "cantSpecialAttack": 1,
+              "cantRegenBarrier": 1,
+              "attackInterval": 10
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 1
+          }
+        ],
+        "effectGroups": [
+          "ntmyk:Dazed"
+        ]
+      },
       {
         "id": "CreatureTypeAnimal",
         "templateID": "melvorD:StaticNonCountingModifier",
@@ -458,6 +532,13 @@
         ]
       }
     ],
+    "combatEffectGroups": [
+      {
+        "id": "Daze",
+        "name": "Daze",
+        "adjective": "Dazed"
+      }
+    ],
     "combatPassives": [
       {
         "id": "CreatureTypeHuman",
@@ -551,7 +632,7 @@
         "category": "Combat",
         "type": "Weapon",
         "media": "assets/bank/weapon_dirk_bronze.png",
-        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.05s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus",
+        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.01s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -607,7 +688,7 @@
               "flatStabAttackBonus": 3,
               "flatBlockAttackBonus": 3,
               "flatSlashAttackBonus": 3,
-              "flatAttackInterval": -50,
+              "flatAttackInterval": -10,
               "flatResistance": [
                 {
                   "damageTypeID": "melvorD:Normal",
@@ -625,7 +706,7 @@
         "category": "Combat",
         "type": "Weapon",
         "media": "assets/bank/weapon_dirk_iron.png",
-        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.05s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus",
+        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.02s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -681,7 +762,7 @@
               "flatStabAttackBonus": 3,
               "flatBlockAttackBonus": 3,
               "flatSlashAttackBonus": 3,
-              "flatAttackInterval": -50,
+              "flatAttackInterval": -20,
               "flatResistance": [
                 {
                   "damageTypeID": "melvorD:Normal",
@@ -699,7 +780,7 @@
         "category": "Combat",
         "type": "Weapon",
         "media": "assets/bank/weapon_dirk_steel.png",
-        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.05s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus",
+        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.03s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -710,7 +791,13 @@
           "Passive"
         ],
         "occupiesSlots": [],
-        "equipRequirements": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 5
+          }
+        ],
         "equipmentStats": [
           {
             "key": "meleeStrengthBonus",
@@ -755,7 +842,7 @@
               "flatStabAttackBonus": 3,
               "flatBlockAttackBonus": 3,
               "flatSlashAttackBonus": 3,
-              "flatAttackInterval": -50,
+              "flatAttackInterval": -30,
               "flatResistance": [
                 {
                   "damageTypeID": "melvorD:Normal",
@@ -773,7 +860,7 @@
         "category": "Combat",
         "type": "Weapon",
         "media": "assets/bank/weapon_dirk_black.png",
-        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.05s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus",
+        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.04s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -784,7 +871,13 @@
           "Passive"
         ],
         "occupiesSlots": [],
-        "equipRequirements": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 10
+          }
+        ],
         "equipmentStats": [
           {
             "key": "meleeStrengthBonus",
@@ -829,7 +922,7 @@
               "flatStabAttackBonus": 3,
               "flatBlockAttackBonus": 3,
               "flatSlashAttackBonus": 3,
-              "flatAttackInterval": -50,
+              "flatAttackInterval": -40,
               "flatResistance": [
                 {
                   "damageTypeID": "melvorD:Normal",
@@ -858,7 +951,13 @@
           "Passive"
         ],
         "occupiesSlots": [],
-        "equipRequirements": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 20
+          }
+        ],
         "equipmentStats": [
           {
             "key": "meleeStrengthBonus",
@@ -921,7 +1020,7 @@
         "category": "Combat",
         "type": "Weapon",
         "media": "assets/bank/weapon_dirk_adamant.png",
-        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.05s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus",
+        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.06s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -932,7 +1031,13 @@
           "Passive"
         ],
         "occupiesSlots": [],
-        "equipRequirements": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 30
+          }
+        ],
         "equipmentStats": [
           {
             "key": "meleeStrengthBonus",
@@ -977,7 +1082,7 @@
               "flatStabAttackBonus": 3,
               "flatBlockAttackBonus": 3,
               "flatSlashAttackBonus": 3,
-              "flatAttackInterval": -50,
+              "flatAttackInterval": -60,
               "flatResistance": [
                 {
                   "damageTypeID": "melvorD:Normal",
@@ -995,7 +1100,7 @@
         "category": "Combat",
         "type": "Weapon",
         "media": "assets/bank/weapon_dirk_rune.png",
-        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.05s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus",
+        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.07s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -1006,7 +1111,13 @@
           "Passive"
         ],
         "occupiesSlots": [],
-        "equipRequirements": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 40
+          }
+        ],
         "equipmentStats": [
           {
             "key": "meleeStrengthBonus",
@@ -1051,7 +1162,7 @@
               "flatStabAttackBonus": 3,
               "flatBlockAttackBonus": 3,
               "flatSlashAttackBonus": 3,
-              "flatAttackInterval": -50,
+              "flatAttackInterval": -70,
               "flatResistance": [
                 {
                   "damageTypeID": "melvorD:Normal",
@@ -1069,18 +1180,23 @@
         "category": "Combat",
         "type": "Weapon",
         "media": "assets/bank/weapon_dirk_silver.png",
-        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.05s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus",
+        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.08s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus<br>(MELEE ONLY) Against monsters with vulnerability to silver, gain +5% Reflect Damage.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 1280,
         "tier": "none",
         "validSlots": [
-          "Shield",
-          "Passive"
+          "Shield"
         ],
         "occupiesSlots": [],
-        "equipRequirements": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 50
+          }
+        ],
         "equipmentStats": [
           {
             "key": "meleeStrengthBonus",
@@ -1125,13 +1241,34 @@
               "flatStabAttackBonus": 3,
               "flatBlockAttackBonus": 3,
               "flatSlashAttackBonus": 3,
-              "flatAttackInterval": -50,
+              "flatAttackInterval": -80,
               "flatResistance": [
                 {
                   "damageTypeID": "melvorD:Normal",
                   "value": -5
                 }
               ]
+            }
+          },
+          {
+            "condition": {
+              "type": "Every",
+              "conditions": [
+                {
+                  "character": "Enemy",
+                  "effectID": "ntmyk:VulnerabilitySilver",
+                  "type": "CombatEffect"
+                },
+                {
+                  "character": "Player",
+                  "thisAttackType": "melee",
+                  "targetAttackType": "melee",
+                  "type": "CombatType"
+                }
+              ]
+            },
+            "modifiers": {
+              "reflectDamage": 5
             }
           }
         ]
@@ -1143,7 +1280,7 @@
         "category": "Combat",
         "type": "Weapon",
         "media": "assets/bank/weapon_dirk_dragon.png",
-        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.05s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus",
+        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.09s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -1154,7 +1291,13 @@
           "Passive"
         ],
         "occupiesSlots": [],
-        "equipRequirements": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 60
+          }
+        ],
         "equipmentStats": [
           {
             "key": "meleeStrengthBonus",
@@ -1199,7 +1342,7 @@
               "flatStabAttackBonus": 3,
               "flatBlockAttackBonus": 3,
               "flatSlashAttackBonus": 3,
-              "flatAttackInterval": -50,
+              "flatAttackInterval": -90,
               "flatResistance": [
                 {
                   "damageTypeID": "melvorD:Normal",
