@@ -17,7 +17,17 @@
         "modifiers": {
           "add": {
             "meleeCritChance": 10,
-            "critMultiplier": 100
+            "critMultiplier": 100,
+            "flatHiddenSkillLevelBasedOnLevels": [
+              {
+                "skillID": "melvorD:Strength",
+                "value": 50
+              },
+              {
+                "skillID": "melvorD:Attack",
+                "value": 50
+              }
+            ]
           }
         }
       },
@@ -35,7 +45,17 @@
         "modifiers": {
           "add": {
             "meleeCritChance": 10,
-            "critMultiplier": 100
+            "critMultiplier": 100,
+            "flatHiddenSkillLevelBasedOnLevels": [
+              {
+                "skillID": "melvorD:Strength",
+                "value": 50
+              },
+              {
+                "skillID": "melvorD:Attack",
+                "value": 50
+              }
+            ]
           }
         }
       },
@@ -53,7 +73,17 @@
         "modifiers": {
           "add": {
             "meleeCritChance": 10,
-            "critMultiplier": 100
+            "critMultiplier": 100,
+            "flatHiddenSkillLevelBasedOnLevels": [
+              {
+                "skillID": "melvorD:Strength",
+                "value": 50
+              },
+              {
+                "skillID": "melvorD:Attack",
+                "value": 50
+              }
+            ]
           }
         }
       },
@@ -71,7 +101,17 @@
         "modifiers": {
           "add": {
             "meleeCritChance": 10,
-            "critMultiplier": 100
+            "critMultiplier": 100,
+            "flatHiddenSkillLevelBasedOnLevels": [
+              {
+                "skillID": "melvorD:Strength",
+                "value": 50
+              },
+              {
+                "skillID": "melvorD:Attack",
+                "value": 50
+              }
+            ]
           }
         }
       },
@@ -89,7 +129,17 @@
         "modifiers": {
           "add": {
             "meleeCritChance": 10,
-            "critMultiplier": 100
+            "critMultiplier": 100,
+            "flatHiddenSkillLevelBasedOnLevels": [
+              {
+                "skillID": "melvorD:Strength",
+                "value": 50
+              },
+              {
+                "skillID": "melvorD:Attack",
+                "value": 50
+              }
+            ]
           }
         }
       },
@@ -107,7 +157,17 @@
         "modifiers": {
           "add": {
             "meleeCritChance": 10,
-            "critMultiplier": 100
+            "critMultiplier": 100,
+            "flatHiddenSkillLevelBasedOnLevels": [
+              {
+                "skillID": "melvorD:Strength",
+                "value": 50
+              },
+              {
+                "skillID": "melvorD:Attack",
+                "value": 50
+              }
+            ]
           }
         }
       },
@@ -125,7 +185,17 @@
         "modifiers": {
           "add": {
             "meleeCritChance": 10,
-            "critMultiplier": 100
+            "critMultiplier": 100,
+            "flatHiddenSkillLevelBasedOnLevels": [
+              {
+                "skillID": "melvorD:Strength",
+                "value": 50
+              },
+              {
+                "skillID": "melvorD:Attack",
+                "value": 50
+              }
+            ]
           }
         }
       },
@@ -143,7 +213,17 @@
         "modifiers": {
           "add": {
             "meleeCritChance": 10,
-            "critMultiplier": 100
+            "critMultiplier": 100,
+            "flatHiddenSkillLevelBasedOnLevels": [
+              {
+                "skillID": "melvorD:Strength",
+                "value": 50
+              },
+              {
+                "skillID": "melvorD:Attack",
+                "value": 50
+              }
+            ]
           }
         }
       },
@@ -161,7 +241,185 @@
         "modifiers": {
           "add": {
             "meleeCritChance": 10,
-            "critMultiplier": 100
+            "critMultiplier": 100,
+            "flatHiddenSkillLevelBasedOnLevels": [
+              {
+                "skillID": "melvorD:Strength",
+                "value": 50
+              },
+              {
+                "skillID": "melvorD:Attack",
+                "value": 50
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "melvorD:Ice_2h_Sword",
+        "specialAttacks": {
+          "add": [
+            "ntmyk:WideSlash",
+            "ntmyk:Whirlwind",
+            "ntmyk:TrueStrike",
+            "ntmyk:Counterattack",
+            "ntmyk:PommelBash"
+          ]
+        },
+        "modifiers": {
+          "add": {
+            "meleeCritChance": 10,
+            "critMultiplier": 100,
+            "flatHiddenSkillLevelBasedOnLevels": [
+              {
+                "skillID": "melvorD:Strength",
+                "value": 50
+              },
+              {
+                "skillID": "melvorD:Attack",
+                "value": 50
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "melvorF:Ancient_2H_Sword",
+        "specialAttacks": {
+          "add": [
+            "ntmyk:WideSlash",
+            "ntmyk:Whirlwind",
+            "ntmyk:TrueStrike",
+            "ntmyk:Counterattack",
+            "ntmyk:PommelBash"
+          ]
+        },
+        "modifiers": {
+          "add": {
+            "meleeCritChance": 10,
+            "critMultiplier": 100,
+            "flatHiddenSkillLevelBasedOnLevels": [
+              {
+                "skillID": "melvorD:Strength",
+                "value": 50
+              },
+              {
+                "skillID": "melvorD:Attack",
+                "value": 50
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "melvorF:Aeris_Godsword",
+        "specialAttacks": {
+          "add": [
+            "ntmyk:WideSlash",
+            "ntmyk:Whirlwind",
+            "ntmyk:TrueStrike",
+            "ntmyk:Counterattack",
+            "ntmyk:PommelBash"
+          ]
+        },
+        "modifiers": {
+          "add": {
+            "meleeCritChance": 10,
+            "critMultiplier": 100,
+            "flatHiddenSkillLevelBasedOnLevels": [
+              {
+                "skillID": "melvorD:Strength",
+                "value": 50
+              },
+              {
+                "skillID": "melvorD:Attack",
+                "value": 50
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "melvorF:Glacia_Godsword",
+        "specialAttacks": {
+          "add": [
+            "ntmyk:WideSlash",
+            "ntmyk:Whirlwind",
+            "ntmyk:TrueStrike",
+            "ntmyk:Counterattack",
+            "ntmyk:PommelBash"
+          ]
+        },
+        "modifiers": {
+          "add": {
+            "meleeCritChance": 10,
+            "critMultiplier": 100,
+            "flatHiddenSkillLevelBasedOnLevels": [
+              {
+                "skillID": "melvorD:Strength",
+                "value": 50
+              },
+              {
+                "skillID": "melvorD:Attack",
+                "value": 50
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "melvorF:Terran_Godsword",
+        "specialAttacks": {
+          "add": [
+            "ntmyk:WideSlash",
+            "ntmyk:Whirlwind",
+            "ntmyk:TrueStrike",
+            "ntmyk:Counterattack",
+            "ntmyk:PommelBash"
+          ]
+        },
+        "modifiers": {
+          "add": {
+            "meleeCritChance": 10,
+            "critMultiplier": 100,
+            "flatHiddenSkillLevelBasedOnLevels": [
+              {
+                "skillID": "melvorD:Strength",
+                "value": 50
+              },
+              {
+                "skillID": "melvorD:Attack",
+                "value": 50
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "melvorF:Ragnar_Godsword",
+        "specialAttacks": {
+          "add": [
+            "ntmyk:WideSlash",
+            "ntmyk:Whirlwind",
+            "ntmyk:TrueStrike",
+            "ntmyk:Counterattack",
+            "ntmyk:PommelBash"
+          ]
+        },
+        "modifiers": {
+          "add": {
+            "meleeCritChance": 10,
+            "critMultiplier": 100,
+            "flatHiddenSkillLevelBasedOnLevels": [
+              {
+                "skillID": "melvorD:Strength",
+                "value": 50
+              },
+              {
+                "skillID": "melvorD:Attack",
+                "value": 50
+              }
+            ]
           }
         }
       },

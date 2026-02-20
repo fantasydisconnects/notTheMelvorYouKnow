@@ -9,7 +9,7 @@
         "damage": [
           {
             "damageType": "Normal",
-            "amplitude": 80
+            "amplitude": 60
           }
         ],
         "prehitEffects": [],
@@ -23,7 +23,8 @@
         "attackInterval": 50,
         "lifesteal": 0,
         "name": "Wild Strike",
-        "description": "Attack twice for 80%, then gain -10% Attack Interval for 2 turns.",
+        "description": "Attack twice for 60%, then gain -10% Attack Interval for 2 turns.",
+        "descriptionGenerator": "Attack",
         "usesRunesPerProc": false
       },
       {
@@ -32,7 +33,7 @@
         "damage": [
           {
             "damageType": "Normal",
-            "amplitude": 100
+            "amplitude": 80
           },
           {
             "damageType": "Custom",
@@ -51,7 +52,8 @@
         "attackInterval": 100,
         "lifesteal": 0,
         "name": "Heartseeker",
-        "description": "Attack for 100% + 7.5-10.5% of Enemy's current HP.",
+        "description": "Attack for 80% + 7.5-10.5% of Enemy's current HP.",
+        "descriptionGenerator": "Attack",
         "usesRunesPerProc": false
       },
       {
@@ -60,25 +62,16 @@
         "damage": [
           {
             "damageType": "Normal",
-            "amplitude": 80
+            "amplitude": 60
           }
         ],
         "prehitEffects": [],
         "onhitEffects": [
           {
-            "effectID": "ntmyk:Vulnerability",
-            "initialParams": [
-              {
-                "name": "debuff",
-                "value": 1
-              }
-            ]
+            "effectID": "ntmyk:Vulnerability"
           },
           {
             "effectID": "melvorD:Bleed100"
-          },
-          {
-            "effectID": "melvorD:Poison"
           }
         ],
         "cantMiss": false,
@@ -86,7 +79,8 @@
         "attackInterval": 150,
         "lifesteal": 0,
         "name": "Deadly Delivery",
-        "description": "Attack for 80%. Inflict 1 stack of Vulnerability, a 100% Bleed, and Poison.",
+        "description": "Attack for 60%. Inflict 1 stack of Vulnerability and a 100% Bleed.",
+        "descriptionGenerator": "Attack",
         "usesRunesPerProc": false
       },
       {
@@ -95,7 +89,7 @@
         "damage": [
           {
             "damageType": "Normal",
-            "amplitude": 90
+            "amplitude": 70
           }
         ],
         "prehitEffects": [],
@@ -105,7 +99,7 @@
             "initialParams": [
               {
                 "name": "magnitude",
-                "value": 50
+                "value": 30
               },
               {
                 "name": "turns",
@@ -122,7 +116,8 @@
         "attackInterval": 200,
         "lifesteal": 0,
         "name": "Crippling Strike",
-        "description": "Attack for 90%. Inflict a 50% Slow for 1 turn and a 100% Bleed.",
+        "description": "Attack for 70%. Inflict a 30% Slow for 1 turn and a 100% Bleed.",
+        "descriptionGenerator": "Attack",
         "usesRunesPerProc": false
       },
       {
@@ -131,7 +126,7 @@
         "damage": [
           {
             "damageType": "Normal",
-            "amplitude": 150
+            "amplitude": 85
           }
         ],
         "prehitEffects": [],
@@ -145,7 +140,8 @@
         "attackInterval": 250,
         "lifesteal": 0,
         "name": "Disrupting Stab",
-        "description": "Attack for 150%. Removes Enemy buffs. Enemy can't receive buffs for 2 turns.",
+        "description": "Attack for 85%. Removes Enemy buffs. Enemy can't receive buffs for 2 turns.",
+        "descriptionGenerator": "Attack",
         "usesRunesPerProc": false
       },
       {
@@ -154,12 +150,12 @@
         "damage": [
           {
             "damageType": "Normal",
-            "amplitude": 100
+            "amplitude": 120
           }
         ],
         "prehitEffects": [
           {
-            "effectID": "melvorF:RandomEvasion"
+            "effectID": "ntmyk:WideSlash0"
           }
         ],
         "onhitEffects": [],
@@ -168,7 +164,8 @@
         "attackInterval": 50,
         "lifesteal": 0,
         "name": "Wide Slash",
-        "description": "Gain +30% Evasion for 1 turn. Then, attack in an arc (2 attacks) for 100% each.",
+        "description": "Gain +30% Evasion for 1 turn. Then, attack in an arc (2 attacks) for 120% each.",
+        "descriptionGenerator": "Attack",
         "usesRunesPerProc": false
       },
       {
@@ -177,7 +174,7 @@
         "damage": [
           {
             "damageType": "Normal",
-            "amplitude": 30
+            "amplitude": 35
           }
         ],
         "prehitEffects": [],
@@ -187,7 +184,8 @@
         "attackInterval": 100,
         "lifesteal": 0,
         "name": "Whirlwind",
-        "description": "Attack 8 times for 30% each.",
+        "description": "Attack 8 times for 35% each.",
+        "descriptionGenerator": "Attack",
         "usesRunesPerProc": false
       },
       {
@@ -196,7 +194,7 @@
         "damage": [
           {
             "damageType": "Normal",
-            "amplitude": 150
+            "amplitude": 200
           },
           {
             "damageType": "Custom",
@@ -215,7 +213,8 @@
         "attackInterval": 150,
         "lifesteal": 0,
         "name": "True Strike",
-        "description": "Guaranteed hit for 150% + 25-50% of the Enemy's Damage Resistance.",
+        "description": "Guaranteed hit for 200% + 25-50% of the Enemy's Damage Resistance.",
+        "descriptionGenerator": "Attack",
         "usesRunesPerProc": false
       },
       {
@@ -224,8 +223,8 @@
         "damage": [
           {
             "damageType": "Normal",
-            "amplitude": 80,
-            "attackCount": 1
+            "amplitude": 100,
+            "attackCount": 2
           }
         ],
         "prehitEffects": [
@@ -249,11 +248,12 @@
           }
         ],
         "cantMiss": false,
-        "attackCount": 1,
+        "attackCount": 2,
         "attackInterval": 3600,
         "lifesteal": 0,
         "name": "Counterattack",
-        "description": "Block all incoming attacks for 2 turns. Then, after 3.6s, perform a counterattack for 80%, and inflict a 20% Slow for 1 turn.",
+        "description": "Block all incoming attacks for 1 turn. Then, after 3.6s, perform a counterattack for 80%, and inflict a 20% Slow for 2 turns.",
+        "descriptionGenerator": "Attack",
         "usesRunesPerProc": false
       },
       {
@@ -262,7 +262,7 @@
         "damage": [
           {
             "damageType": "Normal",
-            "amplitude": 120
+            "amplitude": 140
           }
         ],
         "prehitEffects": [],
@@ -272,7 +272,7 @@
             "initialParams": [
               {
                 "name": "turns",
-                "value": 3
+                "value": 2
               }
             ]
           }
@@ -282,7 +282,8 @@
         "attackInterval": 200,
         "lifesteal": 0,
         "name": "Pommel Bash",
-        "description": "Attack for 120%, inflicting Daze for 3 turns on hit.",
+        "description": "Attack for 140%, inflicting Daze for 2 turns on hit.",
+        "descriptionGenerator": "Attack",
         "usesRunesPerProc": false
       }
     ],
@@ -389,10 +390,20 @@
     "combatEffects": [
       {
         "id": "WildStrike0",
-        "templateID": "melvorD:SelfTurnCounting",
+        "templateID": "melvorD:StaticSelfCountingModifier",
         "name": "Wild Strike",
         "media": "assets/status/speedup.svg",
         "target": "Self",
+        "tooltipSpans": [
+          {
+            "type": "Stats",
+            "statGroupName": "stacks"
+          },
+          {
+            "type": "Turns",
+            "turns": "p.turns"
+          }
+        ],
         "parameters": [
           {
             "name": "turns",
@@ -413,10 +424,20 @@
       },
       {
         "id": "WideSlash0",
-        "templateID": "melvorD:SelfTurnCounting",
+        "templateID": "melvorD:StaticSelfCountingModifier",
         "name": "Wide Slash",
         "media": "assets/status/evasion_increase.svg",
         "target": "Self",
+        "tooltipSpans": [
+          {
+            "type": "Stats",
+            "statGroupName": "stacks"
+          },
+          {
+            "type": "Turns",
+            "turns": "p.turns"
+          }
+        ],
         "parameters": [
           {
             "name": "turns",
@@ -437,20 +458,14 @@
       },
       {
         "id": "DisruptingStab0",
-        "templateID": "melvorD:SelfTurnCounting",
+        "templateID": "melvorD:StaticSelfCountingModifier",
         "name": "Disrupting Stab",
         "media": "assets/status/null.svg",
         "target": "Target",
-        "tooltipSpans": [
-          {
-            "type": "String",
-            "value": "Can't receive Buffs."
-          }
-        ],
         "parameters": [
           {
             "name": "turns",
-            "initialValue": 2
+            "initialValue": 1
           }
         ],
         "statGroups": [
@@ -472,14 +487,24 @@
       },
       {
         "id": "Counterattack0",
-        "templateID": "melvorD:SelfTurnCounting",
+        "templateID": "melvorD:StaticSelfCountingModifier",
         "name": "Counterattack",
         "media": "assets/status/evasion_increase.svg",
         "target": "Self",
+        "tooltipSpans": [
+          {
+            "type": "Stats",
+            "statGroupName": "stacks"
+          },
+          {
+            "type": "Turns",
+            "turns": "p.turns"
+          }
+        ],
         "parameters": [
           {
             "name": "turns",
-            "initialValue": 2
+            "initialValue": 1
           }
         ],
         "statGroups": [
@@ -500,8 +525,13 @@
         "id": "Vulnerability",
         "name": "Vulnerability",
         "media": "assets/status/vulnerability.png",
-        "templateID": "melvorD:Stacking",
+        "templateID": "melvorD:StackingNonCountingModifier",
+        "target": "Target",
         "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
           {
             "name": "stacksToAdd",
             "initialValue": 1
@@ -513,21 +543,21 @@
         ],
         "statGroups": [
           {
-            "name": "debuff",
+            "name": "stacks",
             "modifiers": {
               "damageTaken": 1
             }
           }
         ],
         "effectGroups": [
-          "ntmyk:Debuff"
+          "melvorD:Debuff"
         ]
       },
       {
         "id": "Daze",
         "name": "Daze",
         "media": "assets/status/dazed.png",
-        "templateID": "melvorD:SelfTurnCounting",
+        "templateID": "melvorD:StaticSelfCountingModifier",
         "target": "Target",
         "tooltipSpans": [
           {
@@ -557,7 +587,8 @@
           }
         ],
         "effectGroups": [
-          "ntmyk:Daze"
+          "ntmyk:Daze",
+          "melvorD:Debuff"
         ]
       },
       {
@@ -1014,54 +1045,6 @@
       }
     ],
     "items": [
-      {
-        "id": "Bronze_Sword",
-        "name": "Bronze Sword",
-        "category": "Combat",
-        "type": "Offhand",
-        "media": "assets/bank/offhand_sword_bronze.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 1,
-        "tier": "bronze",
-        "validSlots": [
-          "Shield"
-        ],
-        "occupiesSlots": [],
-        "equipRequirements": [
-          {
-            "type": "SkillLevel",
-            "skillID": "melvorD:Attack",
-            "level": 1
-          }
-        ],
-        "equipmentStats": [
-          {
-            "key": "attackSpeed",
-            "value": 1100
-          },
-          {
-            "key": "stabAttackBonus",
-            "value": 9
-          },
-          {
-            "key": "slashAttackBonus",
-            "value": 2
-          },
-          {
-            "key": "blockAttackBonus",
-            "value": 1
-          },
-          {
-            "key": "meleeStrengthBonus",
-            "value": 5
-          }
-        ],
-        "itemType": "Weapon",
-        "attackType": "melee",
-        "specialAttacks": []
-      },
       {
         "itemType": "Equipment",
         "id": "Bronze_Dirk",
