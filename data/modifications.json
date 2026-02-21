@@ -22,10 +22,6 @@
               {
                 "skillID": "melvorD:Strength",
                 "value": 50
-              },
-              {
-                "skillID": "melvorD:Attack",
-                "value": 50
               }
             ]
           }
@@ -49,10 +45,6 @@
             "flatHiddenSkillLevelBasedOnLevels": [
               {
                 "skillID": "melvorD:Strength",
-                "value": 50
-              },
-              {
-                "skillID": "melvorD:Attack",
                 "value": 50
               }
             ]
@@ -78,10 +70,6 @@
               {
                 "skillID": "melvorD:Strength",
                 "value": 50
-              },
-              {
-                "skillID": "melvorD:Attack",
-                "value": 50
               }
             ]
           }
@@ -105,10 +93,6 @@
             "flatHiddenSkillLevelBasedOnLevels": [
               {
                 "skillID": "melvorD:Strength",
-                "value": 50
-              },
-              {
-                "skillID": "melvorD:Attack",
                 "value": 50
               }
             ]
@@ -134,10 +118,6 @@
               {
                 "skillID": "melvorD:Strength",
                 "value": 50
-              },
-              {
-                "skillID": "melvorD:Attack",
-                "value": 50
               }
             ]
           }
@@ -161,10 +141,6 @@
             "flatHiddenSkillLevelBasedOnLevels": [
               {
                 "skillID": "melvorD:Strength",
-                "value": 50
-              },
-              {
-                "skillID": "melvorD:Attack",
                 "value": 50
               }
             ]
@@ -190,10 +166,6 @@
               {
                 "skillID": "melvorD:Strength",
                 "value": 50
-              },
-              {
-                "skillID": "melvorD:Attack",
-                "value": 50
               }
             ]
           }
@@ -217,10 +189,6 @@
             "flatHiddenSkillLevelBasedOnLevels": [
               {
                 "skillID": "melvorD:Strength",
-                "value": 50
-              },
-              {
-                "skillID": "melvorD:Attack",
                 "value": 50
               }
             ]
@@ -246,10 +214,6 @@
               {
                 "skillID": "melvorD:Strength",
                 "value": 50
-              },
-              {
-                "skillID": "melvorD:Attack",
-                "value": 50
               }
             ]
           }
@@ -273,10 +237,6 @@
             "flatHiddenSkillLevelBasedOnLevels": [
               {
                 "skillID": "melvorD:Strength",
-                "value": 50
-              },
-              {
-                "skillID": "melvorD:Attack",
                 "value": 50
               }
             ]
@@ -302,10 +262,6 @@
               {
                 "skillID": "melvorD:Strength",
                 "value": 50
-              },
-              {
-                "skillID": "melvorD:Attack",
-                "value": 50
               }
             ]
           }
@@ -329,10 +285,6 @@
             "flatHiddenSkillLevelBasedOnLevels": [
               {
                 "skillID": "melvorD:Strength",
-                "value": 50
-              },
-              {
-                "skillID": "melvorD:Attack",
                 "value": 50
               }
             ]
@@ -358,10 +310,6 @@
               {
                 "skillID": "melvorD:Strength",
                 "value": 50
-              },
-              {
-                "skillID": "melvorD:Attack",
-                "value": 50
               }
             ]
           }
@@ -386,10 +334,6 @@
               {
                 "skillID": "melvorD:Strength",
                 "value": 50
-              },
-              {
-                "skillID": "melvorD:Attack",
-                "value": 50
               }
             ]
           }
@@ -413,10 +357,6 @@
             "flatHiddenSkillLevelBasedOnLevels": [
               {
                 "skillID": "melvorD:Strength",
-                "value": 50
-              },
-              {
-                "skillID": "melvorD:Attack",
                 "value": 50
               }
             ]
@@ -472,7 +412,7 @@
         },
         "modifiers": {
           "add": {
-            "critChance": 25
+            "meleeCritChance": 25
           }
         },
         "enemyModifiers": {
@@ -509,7 +449,7 @@
         },
         "modifiers": {
           "add": {
-            "critChance": 25
+            "meleeCritChance": 25
           }
         },
         "enemyModifiers": {
@@ -546,7 +486,7 @@
         },
         "modifiers": {
           "add": {
-            "critChance": 25
+            "meleeCritChance": 25
           }
         },
         "enemyModifiers": {
@@ -583,7 +523,7 @@
         },
         "modifiers": {
           "add": {
-            "critChance": 25
+            "meleeCritChance": 25
           }
         },
         "enemyModifiers": {
@@ -620,7 +560,7 @@
         },
         "modifiers": {
           "add": {
-            "critChance": 25
+            "meleeCritChance": 25
           }
         },
         "enemyModifiers": {
@@ -657,7 +597,7 @@
         },
         "modifiers": {
           "add": {
-            "critChance": 25
+            "meleeCritChance": 25
           }
         },
         "enemyModifiers": {
@@ -694,7 +634,7 @@
         },
         "modifiers": {
           "add": {
-            "critChance": 25
+            "meleeCritChance": 25
           }
         },
         "enemyModifiers": {
@@ -731,7 +671,7 @@
         },
         "modifiers": {
           "add": {
-            "critChance": 25
+            "meleeCritChance": 25
           }
         },
         "enemyModifiers": {

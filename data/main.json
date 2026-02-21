@@ -16,14 +16,18 @@
         "onhitEffects": [
           {
             "effectID": "ntmyk:WildStrike0"
+          },
+          {
+            "effectID": "melvorD:Bleed100"
           }
         ],
         "cantMiss": false,
+        "canNormalAttack": true,
         "attackCount": 2,
         "attackInterval": 50,
         "lifesteal": 0,
         "name": "Wild Strike",
-        "description": "Attack twice for 60%, then gain -10% Attack Interval for 2 turns.",
+        "description": "Attack twice for 60%. On hit, inflict a 100% Bleed on the Enemy, then gain -10% Attack Interval for 2 turns.",
         "descriptionGenerator": "Attack",
         "usesRunesPerProc": false
       },
@@ -62,7 +66,7 @@
         "damage": [
           {
             "damageType": "Normal",
-            "amplitude": 60
+            "amplitude": 110
           }
         ],
         "prehitEffects": [],
@@ -71,7 +75,7 @@
             "effectID": "ntmyk:Vulnerability"
           },
           {
-            "effectID": "melvorD:Bleed100"
+            "effectID": "ntmyk:Vulnerability"
           }
         ],
         "cantMiss": false,
@@ -79,7 +83,7 @@
         "attackInterval": 150,
         "lifesteal": 0,
         "name": "Deadly Delivery",
-        "description": "Attack for 60%. Inflict 1 stack of Vulnerability and a 100% Bleed.",
+        "description": "Attack for 110%. Inflict 2 stacks of Vulnerability on hit.",
         "descriptionGenerator": "Attack",
         "usesRunesPerProc": false
       },
@@ -112,6 +116,7 @@
           }
         ],
         "cantMiss": false,
+        "canNormalAttack": true,
         "attackCount": 1,
         "attackInterval": 200,
         "lifesteal": 0,
@@ -126,7 +131,7 @@
         "damage": [
           {
             "damageType": "Normal",
-            "amplitude": 85
+            "amplitude": 45
           }
         ],
         "prehitEffects": [],
@@ -136,11 +141,12 @@
           }
         ],
         "cantMiss": false,
+        "canNormalAttack": true,
         "attackCount": 1,
         "attackInterval": 250,
         "lifesteal": 0,
         "name": "Disrupting Stab",
-        "description": "Attack for 85%. Removes Enemy buffs. Enemy can't receive buffs for 2 turns.",
+        "description": "Attack for 45%. Removes Enemy buffs. Enemy can't receive buffs for 2 turns.",
         "descriptionGenerator": "Attack",
         "usesRunesPerProc": false
       },
@@ -150,7 +156,8 @@
         "damage": [
           {
             "damageType": "Normal",
-            "amplitude": 120
+            "amplitude": 120,
+            "attackCount": 2
           }
         ],
         "prehitEffects": [
@@ -160,6 +167,7 @@
         ],
         "onhitEffects": [],
         "cantMiss": false,
+        "canNormalAttack": false,
         "attackCount": 2,
         "attackInterval": 50,
         "lifesteal": 0,
@@ -183,6 +191,7 @@
         "attackCount": 8,
         "attackInterval": 100,
         "lifesteal": 0,
+        "canNormalAttack": false,
         "name": "Whirlwind",
         "description": "Attack 8 times for 35% each.",
         "descriptionGenerator": "Attack",
@@ -194,7 +203,7 @@
         "damage": [
           {
             "damageType": "Normal",
-            "amplitude": 200
+            "amplitude": 100
           },
           {
             "damageType": "Custom",
@@ -213,7 +222,7 @@
         "attackInterval": 150,
         "lifesteal": 0,
         "name": "True Strike",
-        "description": "Guaranteed hit for 200% + 25-50% of the Enemy's Damage Resistance.",
+        "description": "Guaranteed hit for 100% + 25-50% of the Enemy's Damage Resistance.",
         "descriptionGenerator": "Attack",
         "usesRunesPerProc": false
       },
@@ -248,11 +257,12 @@
           }
         ],
         "cantMiss": false,
+        "canNormalAttack": true,
         "attackCount": 2,
         "attackInterval": 3600,
         "lifesteal": 0,
         "name": "Counterattack",
-        "description": "Block all incoming attacks for 1 turn. Then, after 3.6s, perform a counterattack for 80%, and inflict a 20% Slow for 2 turns.",
+        "description": "Block all incoming attacks for 1 turn. Then, after 3.6s, perform a counterattack for 100%, and inflict a 20% Slow for 2 turns.",
         "descriptionGenerator": "Attack",
         "usesRunesPerProc": false
       },
@@ -278,11 +288,12 @@
           }
         ],
         "cantMiss": false,
+        "canNormalAttack": true,
         "attackCount": 1,
         "attackInterval": 200,
         "lifesteal": 0,
         "name": "Pommel Bash",
-        "description": "Attack for 140%, inflicting Daze for 2 turns on hit.",
+        "description": "Attack for 140%, inflicting Daze on the Enemy for 2 turns on hit.",
         "descriptionGenerator": "Attack",
         "usesRunesPerProc": false
       }
@@ -592,9 +603,9 @@
         ]
       },
       {
-        "id": "CreatureTypeAnimal",
+        "id": "CreatureTypeBestial",
         "templateID": "melvorD:StaticNonCountingModifier",
-        "name": "Animal",
+        "name": "Bestial",
         "media": "assets/status/animal.png",
         "target": "Self",
         "parameters": [],
@@ -741,9 +752,9 @@
         ]
       },
       {
-        "id": "CreatureTypePlant",
+        "id": "CreatureTypePlantlike",
         "templateID": "melvorD:StaticNonCountingModifier",
-        "name": "Plant",
+        "name": "Plantlike",
         "media": "assets/status/plant.png",
         "target": "Self",
         "parameters": [],
@@ -825,76 +836,18 @@
         ]
       },
       {
-        "id": "AttacksSilvered",
-        "templateID": "melvorD:StaticNonCountingModifier",
-        "name": "Silvered Attacks",
-        "tooltipSpans": [
-          {
-            "type": "String",
-            "value": "Your attacks deal double damage to silver-vulnerable monsters."
-          }
-        ],
-        "media": "assets/status/attacks_silvered.png",
-        "target": "Self",
-        "parameters": [],
-        "statGroups": [
-          {
-            "name": "stacks"
-          }
-        ],
-        "behaviours": [
-          {
-            "type": "RemoveEffect",
-            "triggersOn": [
-              {
-                "type": "EquipmentChanged",
-                "isNotEquipped": [
-                  "ntmyk:Silver_Sword"
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "ArmourSilvered",
-        "templateID": "melvorD:StaticNonCountingModifier",
-        "name": "Silvered Armour",
-        "tooltipSpans": [
-          {
-            "type": "String",
-            "value": "Your armour reflects a small portion of the damage dealt by silver-vulnerable monsters."
-          }
-        ],
-        "media": "assets/status/armour_silvered.png",
-        "target": "Self",
-        "parameters": [],
-        "statGroups": [
-          {
-            "name": "stacks"
-          }
-        ],
-        "behaviours": [
-          {
-            "type": "RemoveEffect",
-            "triggersOn": [
-              {
-                "type": "EquipmentChanged",
-                "isNotEquipped": [
-                  "ntmyk:Silver_Sword"
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
         "id": "VulnerabilityCrush",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Crush Vulnerability",
         "media": "assets/status/vulnerability_crush.png",
         "target": "Self",
         "parameters": [],
+        "tooltipSpans": [
+          {
+            "type": "String",
+            "value": "Takes extra damage from crushing weapons, such as hammers."
+          }
+        ],
         "statGroups": [
           {
             "name": "stacks"
@@ -908,6 +861,12 @@
         "media": "assets/status/vulnerability_stab.png",
         "target": "Self",
         "parameters": [],
+        "tooltipSpans": [
+          {
+            "type": "String",
+            "value": "Takes extra damage from stabbing weapons, such as daggers."
+          }
+        ],
         "statGroups": [
           {
             "name": "stacks"
@@ -921,6 +880,12 @@
         "media": "assets/status/vulnerability_slash.png",
         "target": "Self",
         "parameters": [],
+        "tooltipSpans": [
+          {
+            "type": "String",
+            "value": "Takes extra damage from slashing weapons, such as scimitars."
+          }
+        ],
         "statGroups": [
           {
             "name": "stacks"
@@ -935,7 +900,7 @@
         "tooltipSpans": [
           {
             "type": "String",
-            "value": "Takes double damage from silver weapons and ammunition."
+            "value": "Takes extra damage from silver weapons and ammunition."
           }
         ],
         "target": "Self",
@@ -1008,30 +973,20 @@
             "effectID": "ntmyk:VulnerabilitySilver"
           }
         ],
-        "conditionalModifiers": [
-          {
-            "condition": {
-              "effectID": "ntmyk:AttacksSilvered",
-              "character": "Player",
-              "inverted": true,
-              "type": "CombatEffect"
-            },
-            "enemyModifiers": {
-              "flatResistanceAgainstMelee": [
-                {
-                  "damageTypeID": "melvorD:Normal",
-                  "value": 50
-                }
-              ],
-              "flatResistanceAgainstRanged": [
-                {
-                  "damageTypeID": "melvorD:Normal",
-                  "value": 50
-                }
-              ]
+        "modifiers": {
+          "flatResistanceAgainstMelee": [
+            {
+              "damageTypeID": "melvorD:Normal",
+              "value": 50
             }
-          }
-        ]
+          ],
+          "flatResistanceAgainstRanged": [
+            {
+              "damageTypeID": "melvorD:Normal",
+              "value": 50
+            }
+          ]
+        }
       },
       {
         "id": "VulnerabilitySilver",
@@ -1856,12 +1811,6 @@
         ],
         "itemType": "Weapon",
         "attackType": "melee",
-        "combatEffects": [
-          {
-            "appliesWhen": "PreAttack",
-            "effectID": "ntmyk:AttacksSilvered"
-          }
-        ],
         "conditionalModifiers": [
           {
             "condition": {
@@ -1922,12 +1871,6 @@
         ],
         "itemType": "Weapon",
         "attackType": "melee",
-        "combatEffects": [
-          {
-            "appliesWhen": "PreAttack",
-            "effectID": "ntmyk:AttacksSilvered"
-          }
-        ],
         "conditionalModifiers": [
           {
             "condition": {
