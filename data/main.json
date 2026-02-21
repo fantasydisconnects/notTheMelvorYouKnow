@@ -4,6 +4,95 @@
   "data": {
     "attacks": [
       {
+        "id": "LightningWand",
+        "defaultChance": 15,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "minRoll": "Fixed",
+            "minPercent": 6,
+            "maxRoll": "Fixed",
+            "maxPercent": 48,
+            "roll": true,
+            "attackCount": 1
+          },
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "minRoll": "Fixed",
+            "minPercent": 6,
+            "maxRoll": "Fixed",
+            "maxPercent": 24,
+            "roll": true,
+            "attackCount": 2
+          },
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "minRoll": "Fixed",
+            "minPercent": 6,
+            "maxRoll": "Fixed",
+            "maxPercent": 12,
+            "roll": true,
+            "attackCount": 3
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "ntmyk:Shock"
+          },
+          {
+            "effectID": "melvorD:Stun",
+            "chance": 10,
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 2
+              }
+            ]
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 3,
+        "attackInterval": 400,
+        "lifesteal": 0,
+        "name": "Lightning Arc",
+        "description": "An arc of lightning zaps the target ${hitCount} times over ${duration}s, dealing ${attackDamageMaxValue0}-${attackDamageMaxValue1} damage on the first hit, ${attackDamageMaxValue2}-${attackDamageMaxValue3} damage on the second hit, and ${attackDamageMaxValue4}-${attackDamageMaxValue5} damage on the third hit. Each hit applies 1 stack of Shock (-5% Accuracy, up to 10 stacks) and has a ${onHitEffect1chance}% chance to apply Stun for ${onHitEffect1turns} turns.",
+        "descriptionGenerator": "An arc of lightning zaps the <target> dealing <damage> damage <count> times over <duration>. On a hit, <hitEffect>. <Avoidable>.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "FireballWand",
+        "defaultChance": 15,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "minRoll": "Fixed",
+            "minPercent": 6,
+            "maxRoll": "Fixed",
+            "maxPercent": 60,
+            "roll": true
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Burn"
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "FIREBALL!",
+        "description": "Launch an avoidable fireball that deals ${attackDamageMaxValue0}-${attackDamageMaxValue1} damage. On a hit, inflicts Burn that deals ${onHitEffect0DamageMaxValue0}% of the target's current hitpoints as damage over ${onHitEffect0duration}s.",
+        "descriptionGenerator": "Launch an <avoidable> fireball that deals <damage> damage. On a hit, <hitEffect>.",
+        "usesRunesPerProc": false
+      },
+      {
         "id": "WildStrike",
         "defaultChance": 10,
         "damage": [
@@ -399,6 +488,38 @@
       }
     ],
     "combatEffects": [
+      {
+        "id": "Shock",
+        "templateID": "melvorD:StackingNonCountingModifier",
+        "name": "Shocked",
+        "media": "assets/status/shocked.svg",
+        "target": "Target",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "accuracyRating": -5
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
       {
         "id": "WildStrike0",
         "templateID": "melvorD:StaticSelfCountingModifier",
@@ -1000,6 +1121,171 @@
       }
     ],
     "items": [
+      
+      {
+        "itemType": "Equipment",
+        "id": "Wand_of_Lightning",
+        "name": "Wand of Lightning",
+        "category": "Weapon",
+        "type": "Weapon",
+        "media": "assets/bank/wand_lightning.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 500000,
+        "tier": "none",
+        "validSlots": [
+          "melvorD:Shield"
+        ],
+        "equipRequirements": [
+          {
+            "skillID": "melvorD:Magic",
+            "level": 60,
+            "type": "SkillLevel"
+          }
+        ],
+        "occupiesSlots": [],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 500
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "ItemCharge",
+              "itemID": "ntmyk:Wand_of_Lightning",
+              "operator": "<",
+              "value": 1
+            },
+            "modifiers": {
+              "cantAttack": 1
+            }
+          }
+        ],
+        "consumesChargesOn": [
+          {
+            "type": "PlayerAttack"
+          }
+        ],
+        "specialAttacks": [
+          "ntmyk:LightningWand"
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Wand_of_Fireball",
+        "name": "Wand of FIREBALL!",
+        "category": "Weapon",
+        "type": "Weapon",
+        "media": "assets/bank/wand_fireball.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 500000,
+        "tier": "none",
+        "validSlots": [
+          "melvorD:Shield"
+        ],
+        "equipRequirements": [
+          {
+            "skillID": "melvorD:Magic",
+            "level": 60,
+            "type": "SkillLevel"
+          }
+        ],
+        "occupiesSlots": [],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 500
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "ItemCharge",
+              "itemID": "ntmyk:Wand_of_Fireball",
+              "operator": "<",
+              "value": 1
+            },
+            "modifiers": {
+              "cantAttack": 1
+            }
+          }
+        ],
+        "consumesChargesOn": [
+          {
+            "type": "PlayerAttack"
+          }
+        ],
+        "specialAttacks": [
+          "ntmyk:FireballWand"
+        ]
+      },
+      {
+        "itemType": "Weapon",
+        "attackType": "ranged",
+        "id": "Lasercannon",
+        "name": "Lasercannon",
+        "category": "Weapon",
+        "type": "Weapon",
+        "media": "assets/bank/lasercannon.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 10000000,
+        "tier": "none",
+        "validSlots": [
+          "melvorD:Weapon"
+        ],
+        "ammoType": "None",
+        "occupiesSlots": [
+          "Shield"
+        ],
+        "equipRequirements": [],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 20000
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 500
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": 250
+          }
+        ],
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithFirstAttack",
+            "effectID": "melvorD:Burn"
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "ItemCharge",
+              "itemID": "ntmyk:Lasercannon",
+              "operator": ">",
+              "value": 0
+            },
+            "modifiers": {
+              "flatAttackInterval": -10000,
+              "flatRangedAttackBonus": 500,
+              "flatRangedStrengthBonus": 1000
+            }
+          }
+        ],
+        "consumesChargesOn": [
+          {
+            "type": "PlayerAttack"
+          }
+        ]
+      },
       {
         "itemType": "Equipment",
         "id": "Bronze_Dirk",
@@ -3363,33 +3649,33 @@
         "weight": 4,
         "minQuantity": 1,
         "maxQuantity": 1
-      },
+      }
+    ],
+    "shopCategories": [
       {
-        "itemID": "ntmyk:Dragonstone",
-        "weight": 2,
-        "minQuantity": 1,
-        "maxQuantity": 1
-      },
+        "id": "ChargeableItems",
+        "name": "Chargeable Items",
+        "media": "assets/bank/lasercannon.png"
+      }
+    ],
+    "shopCategoryOrder": [
       {
-        "itemID": "ntmyk:Moonstone",
-        "weight": 1,
-        "minQuantity": 1,
-        "maxQuantity": 1
-      },
-      {
-        "itemID": "ntmyk:Arkoreefstone",
-        "weight": 1,
-        "minQuantity": 1,
-        "maxQuantity": 1
-      },
-      {
-        "itemID": "ntmyk:Black_Diamond",
-        "weight": 1,
-        "minQuantity": 1,
-        "maxQuantity": 1
+        "afterID": "melvorD:Gloves",
+        "insertAt": "After",
+        "ids": [
+          "ntmyk:ChargeableItems"
+        ]
       }
     ],
     "shopDisplayOrder": [
+      {
+        "insertAt": "Start",
+        "ids": [
+          "ntmyk:Lasercannon",
+          "ntmyk:Wand_of_Fireball",
+          "ntmyk:Wand_of_Lightning"
+        ]
+      },
       {
         "insertAt": "After",
         "afterID": "melvorF:Slayer_Wizard_Robes_Basic",
@@ -3508,6 +3794,90 @@
       }
     ],
     "shopPurchases": [
+      {
+        "id": "Wand_of_Lightning",
+        "media": "assets/bank/wand_lightning.png",
+        "category": "ntmyk:ChargeableItems",
+        "contains": {
+          "items": [],
+          "itemCharges": {
+            "id": "ntmyk:Wand_of_Lightning",
+            "quantity": 10
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 500000
+            }
+          ]
+        },
+        "allowQuantityPurchase": true,
+        "unlockRequirements": [],
+        "purchaseRequirements": [],
+        "defaultBuyLimit": 0,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false
+      },
+      {
+        "id": "Wand_of_Fireball",
+        "media": "assets/bank/wand_fireball.png",
+        "category": "ntmyk:ChargeableItems",
+        "contains": {
+          "items": [],
+          "itemCharges": {
+            "id": "ntmyk:Wand_of_Fireball",
+            "quantity": 10
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 500000
+            }
+          ]
+        },
+        "allowQuantityPurchase": true,
+        "unlockRequirements": [],
+        "purchaseRequirements": [],
+        "defaultBuyLimit": 0,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false
+      },
+      {
+        "id": "Lasercannon",
+        "media": "assets/bank/lasercannon.png",
+        "category": "ntmyk:ChargeableItems",
+        "contains": {
+          "items": [],
+          "itemCharges": {
+            "id": "ntmyk:Lasercannon",
+            "quantity": 500
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 50000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": true,
+        "unlockRequirements": [],
+        "purchaseRequirements": [],
+        "defaultBuyLimit": 0,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false
+      },
       {
         "id": "Slayer_Summoner_Mask_Basic",
         "media": "assets/bank/summoner_mask_slayer_basic.png",
@@ -7812,6 +8182,14 @@
     ],
     "skillData": [
       {
+        "skillID": "melvorD:Ranged",
+        "data": {
+          "headerItemCharges": [
+            "ntmyk:Lasercannon"
+          ]
+        }
+      },
+      {
         "skillID": "melvorD:Magic",
         "data": {
           "altSpells": [
@@ -7867,11 +8245,20 @@
             "defaultItems": [],
             "pets": [],
             "upgrades": [
+              "melvorD:Multi_Tree",
               "ntmyk:Multi_Tree_II",
               "ntmyk:Multi_Tree_III"
             ]
           }
         }
+      }
+    ],
+    "skillTreesDisplayOrder": [
+      {
+        "insertAt": "Start",
+        "ids": [
+          "melvorD:Attack"
+        ]
       }
     ]
   }

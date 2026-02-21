@@ -4,6 +4,17 @@
   "modifications": {
     "items": [
       {
+        "id": "melvorF:Summoning_Familiar_Dragon",
+        "specialAttacks": {
+          "add": [
+            "melvorD:LesserDragonbreath"
+          ]
+        },
+        "overrideSpecialChances": [
+          4
+        ]
+      },
+      {
         "id": "melvorD:Bronze_2H_Sword",
         "specialAttacks": {
           "add": [
