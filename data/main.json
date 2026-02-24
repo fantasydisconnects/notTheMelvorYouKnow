@@ -4,6 +4,120 @@
   "data": {
     "attacks": [
       {
+        "id": "WandDeath",
+        "defaultChance": 25,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Target",
+            "maxPercent": 25,
+            "maxRoll": "MaxHP",
+            "roll": false
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "ntmyk:Instakill"
+          }
+        ],
+        "cantMiss": true,
+        "attackCount": 1,
+        "attackInterval": 1000,
+        "lifesteal": 0,
+        "name": "Death",
+        "description": "(Unavoidable.) The target is instantly killed. If immune to Instakill, the target instead takes damage equal to ${attackDamageMaxValue0}% of their Max HP.",
+        "descriptionGenerator": "<Avoidable>. Kills the target instantly. If immune to Instakill, takes <damage> instead.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "WandFrost",
+        "defaultChance": 15,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Target",
+            "minPercent": 5,
+            "minRoll": "MagicScaling",
+            "maxPercent": 10,
+            "maxRoll": "MagicScaling",
+            "roll": true
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Freeze",
+            "chance": 25
+          },
+          {
+            "effectID": "melvorD:Slow",
+            "initialParams": [
+              {
+                "name": "magnitude",
+                "value": 15
+              },
+              {
+                "name": "turns",
+                "value": 5
+              }
+            ]
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 300,
+        "lifesteal": 0,
+        "name": "Feelin' Frosty?",
+        "description": "A ray of biting cold pierces the target, dealing damage equal to 1 + ${attackDamageMaxValue0}%-${attackDamageMaxValue1}% of their Magic level. On hit, Slows the target for ${onHitEffect1modValue0}%, and has a ${onHitEffect0chance}% to Freeze the target for ${onHitEffect0turns} of its turns.",
+        "descriptionGenerator": "Make an attack that deals <damage>. On hit, <hitEffect>.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "PolymorphWandOops",
+        "defaultChance": 0.001,
+        "damage": [],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "ntmyk:PolymorphCow",
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 300,
+        "lifesteal": 0,
+        "name": "Polymorph: Oops! (0.001% Chance)",
+        "description": "Oops! Turns YOU into a harmless cow for 1 turn.",
+        "descriptionGenerator": "Oops! Turns YOU into a harmless cow for 1 turn.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "PolymorphWand",
+        "defaultChance": 15,
+        "damage": [],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "ntmyk:PolymorphCow"
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 300,
+        "lifesteal": 0,
+        "name": "Polymorph: Cow",
+        "description": "Turns the target into a harmless cow for 3 turns.",
+        "descriptionGenerator": "Turns the target into a harmless cow for 3 turns.",
+        "usesRunesPerProc": false
+      },
+      {
         "id": "LightningWand",
         "defaultChance": 15,
         "damage": [
@@ -56,7 +170,7 @@
         ],
         "cantMiss": false,
         "attackCount": 3,
-        "attackInterval": 400,
+        "attackInterval": 300,
         "lifesteal": 0,
         "name": "Lightning Arc",
         "description": "An arc of lightning zaps the target ${hitCount} times over ${duration}s, dealing ${attackDamageMaxValue0}-${attackDamageMaxValue1} damage on the first hit, ${attackDamageMaxValue2}-${attackDamageMaxValue3} damage on the second hit, and ${attackDamageMaxValue4}-${attackDamageMaxValue5} damage on the third hit. Each hit applies 1 stack of Shock (-5% Accuracy, up to 10 stacks) and has a ${onHitEffect1chance}% chance to apply Stun for ${onHitEffect1turns} turns.",
@@ -85,7 +199,7 @@
         ],
         "cantMiss": false,
         "attackCount": 1,
-        "attackInterval": 50,
+        "attackInterval": 300,
         "lifesteal": 0,
         "name": "FIREBALL!",
         "description": "Launch an avoidable fireball that deals ${attackDamageMaxValue0}-${attackDamageMaxValue1} damage. On a hit, inflicts Burn that deals ${onHitEffect0DamageMaxValue0}% of the target's current hitpoints as damage over ${onHitEffect0duration}s.",
@@ -487,7 +601,141 @@
         ]
       }
     ],
+    "combatEffectGroups": [
+      {
+        "id": "Daze",
+        "name": "Daze",
+        "adjective": "Dazed"
+      },
+      {
+        "id": "Vulnerability",
+        "name": "Vulnerability",
+        "adjective": "Vulnerable"
+      },
+      {
+        "id": "Instakill",
+        "name": "Instakill",
+        "adjective": "Cursed by Death Itself"
+      }
+    ],
+    "combatEffectTemplates": [
+      {
+        "id": "Instakill",
+        "baseTemplates": [
+          "melvorD:DOT"
+        ],
+        "baseEffectData": {
+          "name": "Instakill",
+          "media": "assets/status/instakill.png",
+          "behaviours": [
+            {
+              "type": "DamageCharacter",
+              "value": "p.damagePerProc",
+              "triggersOn": [
+                {
+                  "type": "TimerFired",
+                  "timerName": "proc"
+                }
+              ]
+            }
+          ],
+          "effectGroups": [
+            "ntmyk:Instakill"
+          ],
+          "exclusiveGroups": [
+            "ntmyk:Instakill"
+          ]
+        }
+      }
+    ],
     "combatEffects": [
+      {
+        "id": "Instakill",
+        "templateID": "ntmyk:Instakill",
+        "parameters": [
+          {
+            "name": "procs",
+            "initialValue": 1
+          },
+          {
+            "name": "interval",
+            "initialValue": 50
+          }
+        ],
+        "damageGroups": [
+          {
+            "name": "total",
+            "damage": [
+              {
+                "character": "Target",
+                "roll": false,
+                "maxRoll": "MaxHP",
+                "maxPercent": 666
+              }
+            ],
+            "applyDamageModifiers": false,
+            "applyResistance": false
+          }
+        ]
+      },
+      {
+        "id": "PolymorphCow",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Polymorphed",
+        "media": "assets/status/polymorphed.png",
+        "target": "Target",
+        "tooltipSpans": [
+          {
+            "type": "String",
+            "value": "As harmless as a cow."
+          },
+          {
+            "type": "Turns",
+            "turns": "p.turns"
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 2
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "effectImmunity": [
+                {
+                  "effectGroupID": "melvorD:FearImmune",
+                  "value": 1
+                },
+                {
+                  "effectGroupID": "melvorD:StunImmune",
+                  "value": 1
+                },
+                {
+                  "effectGroupID": "melvorD:SleepImmune",
+                  "value": 1
+                }
+              ],
+              "cantSpecialAttack": 1,
+              "damageDealt": -99,
+              "accuracyRating": -99,
+              "evasion": -99,
+              "maxHitpoints": -99,
+              "resistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": -99
+                }
+              ]
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
       {
         "id": "Shock",
         "templateID": "melvorD:StackingNonCountingModifier",
@@ -1033,18 +1281,6 @@
         ]
       }
     ],
-    "combatEffectGroups": [
-      {
-        "id": "Daze",
-        "name": "Daze",
-        "adjective": "Dazed"
-      },
-      {
-        "id": "Vulnerability",
-        "name": "Vulnerability",
-        "adjective": "Vulnerable"
-      }
-    ],
     "combatPassives": [
       {
         "id": "CreatureTypeHuman",
@@ -1121,7 +1357,154 @@
       }
     ],
     "items": [
-      
+      {
+        "itemType": "Equipment",
+        "id": "Wand_of_Death",
+        "name": "Wand of Death",
+        "category": "Weapon",
+        "type": "Weapon",
+        "media": "assets/bank/wand_death.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 2500000,
+        "tier": "none",
+        "validSlots": [
+          "melvorD:Shield"
+        ],
+        "equipRequirements": [
+          {
+            "skillID": "melvorD:Magic",
+            "level": 95,
+            "type": "SkillLevel"
+          }
+        ],
+        "occupiesSlots": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "attackInterval": 50
+        },
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "ItemCharge",
+              "itemID": "ntmyk:Wand_of_Death",
+              "operator": "<",
+              "value": 1
+            },
+            "modifiers": {
+              "cantAttack": 1
+            }
+          }
+        ],
+        "consumesChargesOn": [
+          {
+            "type": "MonsterKilled"
+          }
+        ],
+        "specialAttacks": [
+          "ntmyk:WandDeath"
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Wand_of_Polymorph",
+        "name": "Wand of Polymorph",
+        "category": "Weapon",
+        "type": "Weapon",
+        "media": "assets/bank/wand_polymorph.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1000000,
+        "tier": "none",
+        "validSlots": [
+          "melvorD:Shield"
+        ],
+        "equipRequirements": [
+          {
+            "skillID": "melvorD:Magic",
+            "level": 80,
+            "type": "SkillLevel"
+          }
+        ],
+        "occupiesSlots": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "attackInterval": 30
+        },
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "ItemCharge",
+              "itemID": "ntmyk:Wand_of_Polymorph",
+              "operator": "<",
+              "value": 1
+            },
+            "modifiers": {
+              "cantAttack": 1
+            }
+          }
+        ],
+        "consumesChargesOn": [
+          {
+            "type": "PlayerAttack"
+          }
+        ],
+        "specialAttacks": [
+          "ntmyk:PolymorphWand",
+          "ntmyk:PolymorphWandOops"
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Wand_of_Frost",
+        "name": "Wand of Frost",
+        "category": "Weapon",
+        "type": "Weapon",
+        "media": "assets/bank/wand_frost.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 500000,
+        "tier": "none",
+        "validSlots": [
+          "melvorD:Shield"
+        ],
+        "equipRequirements": [
+          {
+            "skillID": "melvorD:Magic",
+            "level": 60,
+            "type": "SkillLevel"
+          }
+        ],
+        "occupiesSlots": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "attackInterval": 20
+        },
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "ItemCharge",
+              "itemID": "ntmyk:Wand_of_Frost",
+              "operator": "<",
+              "value": 1
+            },
+            "modifiers": {
+              "cantAttack": 1
+            }
+          }
+        ],
+        "consumesChargesOn": [
+          {
+            "type": "PlayerAttack"
+          }
+        ],
+        "specialAttacks": [
+          "ntmyk:WandFrost"
+        ]
+      },
       {
         "itemType": "Equipment",
         "id": "Wand_of_Lightning",
@@ -1145,12 +1528,10 @@
           }
         ],
         "occupiesSlots": [],
-        "equipmentStats": [
-          {
-            "key": "attackSpeed",
-            "value": 500
-          }
-        ],
+        "equipmentStats": [],
+        "modifiers": {
+          "attackInterval": 20
+        },
         "conditionalModifiers": [
           {
             "condition": {
@@ -1196,12 +1577,10 @@
           }
         ],
         "occupiesSlots": [],
-        "equipmentStats": [
-          {
-            "key": "attackSpeed",
-            "value": 500
-          }
-        ],
+        "equipmentStats": [],
+        "modifiers": {
+          "attackInterval": 20
+        },
         "conditionalModifiers": [
           {
             "condition": {
@@ -3673,7 +4052,10 @@
         "ids": [
           "ntmyk:Lasercannon",
           "ntmyk:Wand_of_Fireball",
-          "ntmyk:Wand_of_Lightning"
+          "ntmyk:Wand_of_Frost",
+          "ntmyk:Wand_of_Lightning",
+          "ntmyk:Wand_of_Polymorph",
+          "ntmyk:Wand_of_Death"
         ]
       },
       {
@@ -3795,6 +4177,80 @@
     ],
     "shopPurchases": [
       {
+        "id": "Wand_of_Death",
+        "media": "assets/bank/wand_death.png",
+        "category": "ntmyk:ChargeableItems",
+        "contains": {
+          "items": [],
+          "itemCharges": {
+            "id": "ntmyk:Wand_of_Death",
+            "quantity": 10
+          }
+        },
+        "cost": {
+          "items": [
+            {
+              "id": "melvorD:Magic_Bones",
+              "quantity": 1000
+            }
+          ],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 5000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": true,
+        "unlockRequirements": [],
+        "purchaseRequirements": [],
+        "defaultBuyLimit": 0,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false
+      },
+      {
+        "id": "Wand_of_Polymorph",
+        "media": "assets/bank/wand_polymorph.png",
+        "category": "ntmyk:ChargeableItems",
+        "contains": {
+          "items": [],
+          "itemCharges": {
+            "id": "ntmyk:Wand_of_Polymorph",
+            "quantity": 25
+          }
+        },
+        "cost": {
+          "items": [
+            {
+              "id": "melvorD:Leather",
+              "quantity": 25
+            },
+            {
+              "id": "melvorD:Raw_Beef",
+              "quantity": 25
+            },
+            {
+              "id": "melvorD:Bones",
+              "quantity": 25
+            }
+          ],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 500000
+            }
+          ]
+        },
+        "allowQuantityPurchase": true,
+        "unlockRequirements": [],
+        "purchaseRequirements": [],
+        "defaultBuyLimit": 0,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false
+      },
+      {
         "id": "Wand_of_Lightning",
         "media": "assets/bank/wand_lightning.png",
         "category": "ntmyk:ChargeableItems",
@@ -3802,7 +4258,35 @@
           "items": [],
           "itemCharges": {
             "id": "ntmyk:Wand_of_Lightning",
-            "quantity": 10
+            "quantity": 100
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 500000
+            }
+          ]
+        },
+        "allowQuantityPurchase": true,
+        "unlockRequirements": [],
+        "purchaseRequirements": [],
+        "defaultBuyLimit": 0,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false
+      },
+      {
+        "id": "Wand_of_Frost",
+        "media": "assets/bank/wand_frost.png",
+        "category": "ntmyk:ChargeableItems",
+        "contains": {
+          "items": [],
+          "itemCharges": {
+            "id": "ntmyk:Wand_of_Frost",
+            "quantity": 100
           }
         },
         "cost": {
@@ -3830,7 +4314,7 @@
           "items": [],
           "itemCharges": {
             "id": "ntmyk:Wand_of_Fireball",
-            "quantity": 10
+            "quantity": 100
           }
         },
         "cost": {
