@@ -8691,6 +8691,196 @@
           }
         }
       }
+    ],
+    "strongholds": [
+      {
+        "id": "StrongholdOfRatsAndBatsAndGnats",
+        "name": "Stronghold of Rats and Bats and Gnats",
+        "media": "assets/combat/combatAreas/StrongholdOfRatsAndBatsAndGnats.png",
+        "monsterIDs": [
+          "melvorD:Bat",
+          "melvorD:Bat",
+          "melvorD:Bat",
+          "melvorD:Bat",
+          "melvorD:Bat",
+          "melvorD:Bat",
+          "melvorD:Bat",
+          "melvorD:Bat",
+          "melvorD:Bat",
+          "melvorD:Bat",
+          "melvorD:BigBat",
+          "melvorD:BigBat",
+          "melvorD:BigBat",
+          "melvorD:BigBat",
+          "melvorD:BigBat",
+          "melvorD:BigBat",
+          "melvorD:BigBat",
+          "melvorD:BigBat",
+          "melvorD:BigBat",
+          "melvorD:BigBat",
+          "ntmyk:Vampire_Bat",
+          "ntmyk:Vampire_Bat",
+          "ntmyk:Vampire_Bat",
+          "ntmyk:Vampire_Bat",
+          "ntmyk:Vampire_Bat",
+          "ntmyk:Vampire_Bat",
+          "ntmyk:Vampire_Bat",
+          "ntmyk:Vampire_Bat",
+          "ntmyk:Vampire_Bat",
+          "ntmyk:Vampire_Bat",
+          "ntmyk:Bat_Man",
+          "ntmyk:Rat",
+          "ntmyk:Rat",
+          "ntmyk:Rat",
+          "ntmyk:Rat",
+          "ntmyk:Rat",
+          "ntmyk:Rat",
+          "ntmyk:Rat",
+          "ntmyk:Rat",
+          "ntmyk:Rat",
+          "ntmyk:Rat",
+          "ntmyk:Giant_Rat",
+          "ntmyk:Giant_Rat",
+          "ntmyk:Giant_Rat",
+          "ntmyk:Giant_Rat",
+          "ntmyk:Giant_Rat",
+          "ntmyk:Giant_Rat",
+          "ntmyk:Giant_Rat",
+          "ntmyk:Giant_Rat",
+          "ntmyk:Giant_Rat",
+          "ntmyk:Giant_Rat",
+          "ntmyk:Diseased_Rat",
+          "ntmyk:Diseased_Rat",
+          "ntmyk:Diseased_Rat",
+          "ntmyk:Diseased_Rat",
+          "ntmyk:Diseased_Rat",
+          "ntmyk:Diseased_Rat",
+          "ntmyk:Diseased_Rat",
+          "ntmyk:Diseased_Rat",
+          "ntmyk:Diseased_Rat",
+          "ntmyk:Diseased_Rat",
+          "ntmyk:Ratticus",
+          "ntmyk:Gnat",
+          "ntmyk:Gnat",
+          "ntmyk:Gnat",
+          "ntmyk:Gnat",
+          "ntmyk:Gnat",
+          "ntmyk:Gnat",
+          "ntmyk:Gnat",
+          "ntmyk:Gnat",
+          "ntmyk:Gnat",
+          "ntmyk:Gnat",
+          "ntmyk:Giant_Gnat",
+          "ntmyk:Giant_Gnat",
+          "ntmyk:Giant_Gnat",
+          "ntmyk:Giant_Gnat",
+          "ntmyk:Giant_Gnat",
+          "ntmyk:Giant_Gnat",
+          "ntmyk:Giant_Gnat",
+          "ntmyk:Giant_Gnat",
+          "ntmyk:Giant_Gnat",
+          "ntmyk:Giant_Gnat",
+          "ntmyk:Swarm_of_Gnats",
+          "ntmyk:Swarm_of_Gnats",
+          "ntmyk:Swarm_of_Gnats",
+          "ntmyk:Swarm_of_Gnats",
+          "ntmyk:Swarm_of_Gnats",
+          "ntmyk:Swarm_of_Gnats",
+          "ntmyk:Swarm_of_Gnats",
+          "ntmyk:Swarm_of_Gnats",
+          "ntmyk:Swarm_of_Gnats",
+          "ntmyk:Swarm_of_Gnats",
+          "ntmyk:The_Mad_Gnatter"
+        ],
+        "difficulty": [
+          2
+        ],
+        "entryRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Slayer",
+            "level": 10
+          },
+          {
+            "type": "DungeonCompletion",
+            "dungeonID": "melvorD:Undead_Graveyard",
+            "count": 25
+          }
+        ],
+        "combatTriangleSet": "melvorD:Normal",
+        "realm": "melvorD:Melvor",
+        "bossOnlyPassives": [
+          "melvorF:StrongholdBossBuff"
+        ],
+        "pet": {
+          "petID": "melvorF:UndeadStronghold",
+          "weight": 250
+        },
+        "tiers": {
+          "Standard": {
+            "requiredItems": [],
+            "passives": [
+              "melvorF:StandardStrongholdBuff",
+              "melvorF:StrongholdDamageModifier40"
+            ],
+            "rewards": {
+              "items": [
+                {
+                  "id": "melvorF:Undead_Enhancement_Scroll",
+                  "quantity": 1
+                }
+              ],
+              "chance": 100
+            }
+          },
+          "Augmented": {
+            "requiredItems": [
+              "melvorF:Undead_Enhancement_1",
+              "melvorF:Undead_Enhancement_2",
+              "melvorF:Undead_Enhancement_3"
+            ],
+            "passives": [
+              "melvorF:UndeadI",
+              "melvorF:AugmentedStrongholdBuff",
+              "melvorF:StrongholdDamageModifier35"
+            ],
+            "rewards": {
+              "items": [
+                {
+                  "id": "melvorF:Undead_Enhancement_Scroll_Augmented",
+                  "quantity": 1
+                }
+              ],
+              "chance": 100
+            }
+          },
+          "Superior": {
+            "requiredItems": [
+              "melvorF:Undead_Enhancement_1_Augmented",
+              "melvorF:Undead_Enhancement_2_Augmented",
+              "melvorF:Undead_Enhancement_3_Augmented"
+            ],
+            "passives": [
+              "melvorF:UndeadII",
+              "melvorF:SuperiorStrongholdBuff",
+              "melvorF:StrongholdDamageModifier25"
+            ],
+            "rewards": {
+              "items": [
+                {
+                  "id": "melvorF:Undead_Enhancement_Superior",
+                  "quantity": 1
+                }
+              ],
+              "chance": 1
+            }
+          }
+        },
+        "overrideDamageType": "melvorF:Pure",
+        "allowedDamageTypeIDs": [
+          "melvorD:Normal"
+        ]
+      }
     ]
   }
 }
