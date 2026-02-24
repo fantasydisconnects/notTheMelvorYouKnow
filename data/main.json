@@ -8666,51 +8666,6 @@
     ],
     "skillData": [
       {
-        "skillID": "melvorD:Ranged",
-        "data": {
-          "headerItemCharges": [
-            "ntmyk:Lasercannon"
-          ]
-        }
-      },
-      {
-        "skillID": "melvorD:Magic",
-        "data": {
-          "altSpells": [
-            {
-              "id": "Stardust",
-              "name": "Stardust",
-              "media": "assets/skills/magic/stardust.png",
-              "level": 30,
-              "baseExperience": 10,
-              "description": "Convert 5 Stardust to 1 Golden Stardust",
-              "runesRequired": [
-                {
-                  "id": "melvorD:Light_Rune",
-                  "quantity": 1
-                },
-                {
-                  "id": "melvorF:Spirit_Rune",
-                  "quantity": 1
-                }
-              ],
-              "productionRatio": 1,
-              "fixedItemCosts": [
-                {
-                  "id": "melvorF:Stardust",
-                  "quantity": 5
-                }
-              ],
-              "specialCost": {
-                "type": "None",
-                "quantity": 1
-              },
-              "produces": "melvorF:Golden_Stardust"
-            }
-          ]
-        }
-      },
-      {
         "skillID": "melvorD:Smithing",
         "data": {
           "categories": [
@@ -8735,14 +8690,6 @@
             ]
           }
         }
-      }
-    ],
-    "skillTreesDisplayOrder": [
-      {
-        "insertAt": "Start",
-        "ids": [
-          "melvorD:Attack"
-        ]
       }
     ]
   }
