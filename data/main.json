@@ -1386,9 +1386,6 @@
             "value": 5
           }
         ],
-        "modifiers": {
-          "maxHitBasedOnTargetCurrentHitpoints": 0.01
-        },
         "ammoType": "Bolts"
       },
       {
@@ -1411,7 +1408,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 1
+            "level": 10
           }
         ],
         "equipmentStats": [
@@ -1445,7 +1442,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 5
+            "level": 20
           }
         ],
         "equipmentStats": [
@@ -1455,7 +1452,7 @@
           }
         ],
         "modifiers": {
-          "maxHitBasedOnTargetCurrentHitpoints": 0.01
+          "maxHitBasedOnTargetCurrentHitpoints": 0.02
         },
         "ammoType": "Bolts"
       },
@@ -1479,7 +1476,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 10
+            "level": 30
           }
         ],
         "equipmentStats": [
@@ -1489,7 +1486,7 @@
           }
         ],
         "modifiers": {
-          "maxHitBasedOnTargetCurrentHitpoints": 0.01
+          "maxHitBasedOnTargetCurrentHitpoints": 0.03
         },
         "ammoType": "Bolts"
       },
@@ -1513,7 +1510,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 20
+            "level": 40
           }
         ],
         "equipmentStats": [
@@ -1523,7 +1520,7 @@
           }
         ],
         "modifiers": {
-          "maxHitBasedOnTargetCurrentHitpoints": 0.02
+          "maxHitBasedOnTargetCurrentHitpoints": 0.04
         },
         "ammoType": "Bolts"
       },
@@ -1547,7 +1544,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 30
+            "level": 50
           }
         ],
         "equipmentStats": [
@@ -1557,7 +1554,7 @@
           }
         ],
         "modifiers": {
-          "maxHitBasedOnTargetCurrentHitpoints": 0.03
+          "maxHitBasedOnTargetCurrentHitpoints": 0.05
         },
         "ammoType": "Bolts"
       },
@@ -1581,7 +1578,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 40
+            "level": 60
           }
         ],
         "equipmentStats": [
@@ -1591,7 +1588,7 @@
           }
         ],
         "modifiers": {
-          "maxHitBasedOnTargetCurrentHitpoints": 0.04
+          "maxHitBasedOnTargetCurrentHitpoints": 0.06
         },
         "ammoType": "Bolts"
       },
@@ -1615,7 +1612,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 50
+            "level": 70
           }
         ],
         "equipmentStats": [
@@ -1625,7 +1622,7 @@
           }
         ],
         "modifiers": {
-          "maxHitBasedOnTargetCurrentHitpoints": 0.05
+          "maxHitBasedOnTargetCurrentHitpoints": 0.07
         },
         "ammoType": "Bolts"
       },
@@ -1649,7 +1646,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 60
+            "level": 80
           }
         ],
         "equipmentStats": [
@@ -1659,7 +1656,7 @@
           }
         ],
         "modifiers": {
-          "maxHitBasedOnTargetCurrentHitpoints": 0.06
+          "maxHitBasedOnTargetCurrentHitpoints": 0.08
         },
         "ammoType": "Bolts"
       },
@@ -1707,11 +1704,11 @@
           },
           {
             "key": "rangedAttackBonus",
-            "value": 32
+            "value": 10
           },
           {
             "key": "rangedStrengthBonus",
-            "value": 48
+            "value": 30
           }
         ],
         "modifiers": {
@@ -1762,7 +1759,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 1
+            "level": 10
           }
         ],
         "equipmentStats": [
@@ -1772,11 +1769,11 @@
           },
           {
             "key": "rangedAttackBonus",
-            "value": 44
+            "value": 20
           },
           {
             "key": "rangedStrengthBonus",
-            "value": 54
+            "value": 60
           }
         ],
         "modifiers": {
@@ -1827,7 +1824,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 5
+            "level": 20
           }
         ],
         "equipmentStats": [
@@ -1837,11 +1834,11 @@
           },
           {
             "key": "rangedAttackBonus",
-            "value": 56
+            "value": 30
           },
           {
             "key": "rangedStrengthBonus",
-            "value": 70
+            "value": 90
           }
         ],
         "modifiers": {
@@ -1892,7 +1889,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 10
+            "level": 30
           }
         ],
         "equipmentStats": [
@@ -1902,11 +1899,11 @@
           },
           {
             "key": "rangedAttackBonus",
-            "value": 62
+            "value": 40
           },
           {
             "key": "rangedStrengthBonus",
-            "value": 80
+            "value": 120
           }
         ],
         "modifiers": {
@@ -1944,7 +1941,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 20
+            "level": 40
           }
         ],
         "cantEquipWith": [
@@ -1967,11 +1964,11 @@
           },
           {
             "key": "rangedAttackBonus",
-            "value": 32
+            "value": 50
           },
           {
             "key": "rangedStrengthBonus",
-            "value": 48
+            "value": 150
           }
         ],
         "modifiers": {
@@ -2022,7 +2019,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 30
+            "level": 50
           }
         ],
         "equipmentStats": [
@@ -2032,11 +2029,11 @@
           },
           {
             "key": "rangedAttackBonus",
-            "value": 80
+            "value": 60
           },
           {
             "key": "rangedStrengthBonus",
-            "value": 108
+            "value": 180
           }
         ],
         "modifiers": {
@@ -2074,7 +2071,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 40
+            "level": 60
           }
         ],
         "cantEquipWith": [
@@ -2097,11 +2094,11 @@
           },
           {
             "key": "rangedAttackBonus",
-            "value": 112
+            "value": 70
           },
           {
             "key": "rangedStrengthBonus",
-            "value": 140
+            "value": 210
           }
         ],
         "modifiers": {
@@ -2152,7 +2149,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 50
+            "level": 70
           }
         ],
         "equipmentStats": [
@@ -2162,11 +2159,11 @@
           },
           {
             "key": "rangedAttackBonus",
-            "value": 120
+            "value": 90
           },
           {
             "key": "rangedStrengthBonus",
-            "value": 176
+            "value": 270
           }
         ],
         "modifiers": {
@@ -2217,7 +2214,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 60
+            "level": 80
           }
         ],
         "equipmentStats": [
@@ -2227,11 +2224,11 @@
           },
           {
             "key": "rangedAttackBonus",
-            "value": 148
+            "value": 100
           },
           {
             "key": "rangedStrengthBonus",
-            "value": 204
+            "value": 300
           }
         ],
         "modifiers": {
