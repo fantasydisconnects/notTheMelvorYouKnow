@@ -4,17 +4,6 @@
   "modifications": {
     "items": [
       {
-        "id": "melvorF:Summoning_Familiar_Dragon",
-        "specialAttacks": {
-          "add": [
-            "melvorD:LesserDragonbreath"
-          ]
-        },
-        "overrideSpecialChances": [
-          4
-        ]
-      },
-      {
         "id": "melvorD:Bronze_2H_Sword",
         "specialAttacks": {
           "add": [
@@ -27,8 +16,6 @@
         },
         "modifiers": {
           "add": {
-            "meleeCritChance": 10,
-            "critMultiplier": 100,
             "flatHiddenSkillLevelBasedOnLevels": [
               {
                 "skillID": "melvorD:Strength",
@@ -51,8 +38,6 @@
         },
         "modifiers": {
           "add": {
-            "meleeCritChance": 10,
-            "critMultiplier": 100,
             "flatHiddenSkillLevelBasedOnLevels": [
               {
                 "skillID": "melvorD:Strength",
@@ -75,8 +60,6 @@
         },
         "modifiers": {
           "add": {
-            "meleeCritChance": 10,
-            "critMultiplier": 100,
             "flatHiddenSkillLevelBasedOnLevels": [
               {
                 "skillID": "melvorD:Strength",
@@ -99,8 +82,6 @@
         },
         "modifiers": {
           "add": {
-            "meleeCritChance": 10,
-            "critMultiplier": 100,
             "flatHiddenSkillLevelBasedOnLevels": [
               {
                 "skillID": "melvorD:Strength",
@@ -123,8 +104,6 @@
         },
         "modifiers": {
           "add": {
-            "meleeCritChance": 10,
-            "critMultiplier": 100,
             "flatHiddenSkillLevelBasedOnLevels": [
               {
                 "skillID": "melvorD:Strength",
@@ -147,8 +126,6 @@
         },
         "modifiers": {
           "add": {
-            "meleeCritChance": 10,
-            "critMultiplier": 100,
             "flatHiddenSkillLevelBasedOnLevels": [
               {
                 "skillID": "melvorD:Strength",
@@ -171,32 +148,6 @@
         },
         "modifiers": {
           "add": {
-            "meleeCritChance": 10,
-            "critMultiplier": 100,
-            "flatHiddenSkillLevelBasedOnLevels": [
-              {
-                "skillID": "melvorD:Strength",
-                "value": 50
-              }
-            ]
-          }
-        }
-      },
-      {
-        "id": "ntmyk:Silver_2H_Sword",
-        "specialAttacks": {
-          "add": [
-            "ntmyk:WideSlash",
-            "ntmyk:Whirlwind",
-            "ntmyk:TrueStrike",
-            "ntmyk:Counterattack",
-            "ntmyk:PommelBash"
-          ]
-        },
-        "modifiers": {
-          "add": {
-            "meleeCritChance": 10,
-            "critMultiplier": 100,
             "flatHiddenSkillLevelBasedOnLevels": [
               {
                 "skillID": "melvorD:Strength",
@@ -219,8 +170,6 @@
         },
         "modifiers": {
           "add": {
-            "meleeCritChance": 10,
-            "critMultiplier": 100,
             "flatHiddenSkillLevelBasedOnLevels": [
               {
                 "skillID": "melvorD:Strength",
@@ -243,8 +192,6 @@
         },
         "modifiers": {
           "add": {
-            "meleeCritChance": 10,
-            "critMultiplier": 100,
             "flatHiddenSkillLevelBasedOnLevels": [
               {
                 "skillID": "melvorD:Strength",
@@ -267,8 +214,6 @@
         },
         "modifiers": {
           "add": {
-            "meleeCritChance": 10,
-            "critMultiplier": 100,
             "flatHiddenSkillLevelBasedOnLevels": [
               {
                 "skillID": "melvorD:Strength",
@@ -291,8 +236,6 @@
         },
         "modifiers": {
           "add": {
-            "meleeCritChance": 10,
-            "critMultiplier": 100,
             "flatHiddenSkillLevelBasedOnLevels": [
               {
                 "skillID": "melvorD:Strength",
@@ -315,8 +258,6 @@
         },
         "modifiers": {
           "add": {
-            "meleeCritChance": 10,
-            "critMultiplier": 100,
             "flatHiddenSkillLevelBasedOnLevels": [
               {
                 "skillID": "melvorD:Strength",
@@ -339,8 +280,6 @@
         },
         "modifiers": {
           "add": {
-            "meleeCritChance": 10,
-            "critMultiplier": 100,
             "flatHiddenSkillLevelBasedOnLevels": [
               {
                 "skillID": "melvorD:Strength",
@@ -363,8 +302,6 @@
         },
         "modifiers": {
           "add": {
-            "meleeCritChance": 10,
-            "critMultiplier": 100,
             "flatHiddenSkillLevelBasedOnLevels": [
               {
                 "skillID": "melvorD:Strength",
@@ -426,16 +363,6 @@
             "meleeCritChance": 25
           }
         },
-        "enemyModifiers": {
-          "add": {
-            "flatResistanceAgainstMelee": [
-              {
-                "damageTypeID": "melvorD:Normal",
-                "value": -10
-              }
-            ]
-          }
-        },
         "specialAttacks": {
           "add": [
             "ntmyk:WildStrike",
@@ -461,16 +388,6 @@
         "modifiers": {
           "add": {
             "meleeCritChance": 25
-          }
-        },
-        "enemyModifiers": {
-          "add": {
-            "flatResistanceAgainstMelee": [
-              {
-                "damageTypeID": "melvorD:Normal",
-                "value": -10
-              }
-            ]
           }
         },
         "specialAttacks": {
@@ -500,16 +417,6 @@
             "meleeCritChance": 25
           }
         },
-        "enemyModifiers": {
-          "add": {
-            "flatResistanceAgainstMelee": [
-              {
-                "damageTypeID": "melvorD:Normal",
-                "value": -10
-              }
-            ]
-          }
-        },
         "specialAttacks": {
           "add": [
             "ntmyk:WildStrike",
@@ -535,16 +442,6 @@
         "modifiers": {
           "add": {
             "meleeCritChance": 25
-          }
-        },
-        "enemyModifiers": {
-          "add": {
-            "flatResistanceAgainstMelee": [
-              {
-                "damageTypeID": "melvorD:Normal",
-                "value": -10
-              }
-            ]
           }
         },
         "specialAttacks": {
@@ -574,16 +471,6 @@
             "meleeCritChance": 25
           }
         },
-        "enemyModifiers": {
-          "add": {
-            "flatResistanceAgainstMelee": [
-              {
-                "damageTypeID": "melvorD:Normal",
-                "value": -10
-              }
-            ]
-          }
-        },
         "specialAttacks": {
           "add": [
             "ntmyk:WildStrike",
@@ -609,16 +496,6 @@
         "modifiers": {
           "add": {
             "meleeCritChance": 25
-          }
-        },
-        "enemyModifiers": {
-          "add": {
-            "flatResistanceAgainstMelee": [
-              {
-                "damageTypeID": "melvorD:Normal",
-                "value": -10
-              }
-            ]
           }
         },
         "specialAttacks": {
@@ -648,16 +525,6 @@
             "meleeCritChance": 25
           }
         },
-        "enemyModifiers": {
-          "add": {
-            "flatResistanceAgainstMelee": [
-              {
-                "damageTypeID": "melvorD:Normal",
-                "value": -10
-              }
-            ]
-          }
-        },
         "specialAttacks": {
           "add": [
             "ntmyk:WildStrike",
@@ -685,14 +552,31 @@
             "meleeCritChance": 25
           }
         },
-        "enemyModifiers": {
+        "specialAttacks": {
+          "add": [
+            "ntmyk:WildStrike",
+            "ntmyk:Heartseeker",
+            "ntmyk:DeadlyDelivery"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Ice_Dagger",
+        "equipmentStats": {
+          "add": [
+            {
+              "key": "stabAttackBonus",
+              "value": 50
+            },
+            {
+              "key": "meleeStrengthBonus",
+              "value": -20
+            }
+          ]
+        },
+        "modifiers": {
           "add": {
-            "flatResistanceAgainstMelee": [
-              {
-                "damageTypeID": "melvorD:Normal",
-                "value": -10
-              }
-            ]
+            "meleeCritChance": 25
           }
         },
         "specialAttacks": {
@@ -704,128 +588,69 @@
         }
       },
       {
-        "id": "melvorD:Bronze_Sword",
+        "id": "melvorF:Poisoned_Dagger",
         "equipmentStats": {
-          "remove": [
-            "attackSpeed"
-          ],
           "add": [
             {
-              "key": "attackSpeed",
-              "value": 2300
+              "key": "stabAttackBonus",
+              "value": 50
+            },
+            {
+              "key": "meleeStrengthBonus",
+              "value": -20
             }
+          ]
+        },
+        "modifiers": {
+          "add": {
+            "meleeCritChance": 25
+          }
+        },
+        "combatEffects": {
+          "add": [
+            {
+              "appliesWhen": "HitWithAttack",
+              "chance": 20,
+              "effectID": "melvorD:Poison"
+            },
+            {
+              "appliesWhen": "CritWithAttack",
+              "effectID": "melvorD:Poison"
+            }
+          ]
+        },
+        "specialAttacks": {
+          "add": [
+            "ntmyk:SerpentsBite",
+            "ntmyk:Heartseeker",
+            "ntmyk:DeadlyDelivery"
           ]
         }
       },
       {
-        "id": "melvorD:Iron_Sword",
+        "id": "melvorF:Darksteel_Dagger",
         "equipmentStats": {
-          "remove": [
-            "attackSpeed"
-          ],
           "add": [
             {
-              "key": "attackSpeed",
-              "value": 2300
+              "key": "stabAttackBonus",
+              "value": 120
+            },
+            {
+              "key": "meleeStrengthBonus",
+              "value": -25
             }
           ]
-        }
-      },
-      {
-        "id": "melvorD:Steel_Sword",
-        "equipmentStats": {
-          "remove": [
-            "attackSpeed"
-          ],
+        },
+        "modifiers": {
+          "add": {
+            "meleeCritChance": 25
+          }
+        },
+        "specialAttacks": {
           "add": [
-            {
-              "key": "attackSpeed",
-              "value": 2300
-            }
-          ]
-        }
-      },
-      {
-        "id": "melvorD:Black_Sword",
-        "equipmentStats": {
-          "remove": [
-            "attackSpeed"
-          ],
-          "add": [
-            {
-              "key": "attackSpeed",
-              "value": 2300
-            }
-          ]
-        }
-      },
-      {
-        "id": "melvorD:Mithril_Sword",
-        "equipmentStats": {
-          "remove": [
-            "attackSpeed"
-          ],
-          "add": [
-            {
-              "key": "attackSpeed",
-              "value": 2300
-            }
-          ]
-        }
-      },
-      {
-        "id": "melvorD:Adamant_Sword",
-        "equipmentStats": {
-          "remove": [
-            "attackSpeed"
-          ],
-          "add": [
-            {
-              "key": "attackSpeed",
-              "value": 2300
-            }
-          ]
-        }
-      },
-      {
-        "id": "melvorD:Rune_Sword",
-        "equipmentStats": {
-          "remove": [
-            "attackSpeed"
-          ],
-          "add": [
-            {
-              "key": "attackSpeed",
-              "value": 2300
-            }
-          ]
-        }
-      },
-      {
-        "id": "melvorD:Dragon_Sword",
-        "equipmentStats": {
-          "remove": [
-            "attackSpeed"
-          ],
-          "add": [
-            {
-              "key": "attackSpeed",
-              "value": 2300
-            }
-          ]
-        }
-      },
-      {
-        "id": "melvorD:Ice_Sword",
-        "equipmentStats": {
-          "remove": [
-            "attackSpeed"
-          ],
-          "add": [
-            {
-              "key": "attackSpeed",
-              "value": 2300
-            }
+            "ntmyk:DeadlyCut",
+            "ntmyk:Heartseeker",
+            "ntmyk:DeadlyDelivery"
           ]
         }
       },
