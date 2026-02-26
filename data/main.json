@@ -1359,6 +1359,897 @@
     "items": [
       {
         "itemType": "Equipment",
+        "id": "Bronze_Shot",
+        "name": "Bronze Shot",
+        "category": "Combat",
+        "type": "Ammo",
+        "media": "assets/bank/ammo_shot_bronze.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1,
+        "tier": "none",
+        "validSlots": [
+          "Quiver"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 1
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedStrengthBonus",
+            "value": 5
+          }
+        ],
+        "modifiers": {
+          "maxHitBasedOnTargetCurrentHitpoints": 0.01
+        },
+        "ammoType": "Bolts"
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Iron_Shot",
+        "name": "Iron Shot",
+        "category": "Combat",
+        "type": "Ammo",
+        "media": "assets/bank/ammo_shot_iron.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 3,
+        "tier": "none",
+        "validSlots": [
+          "Quiver"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 1
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedStrengthBonus",
+            "value": 8
+          }
+        ],
+        "modifiers": {
+          "maxHitBasedOnTargetCurrentHitpoints": 0.01
+        },
+        "ammoType": "Bolts"
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Steel_Shot",
+        "name": "Steel Shot",
+        "category": "Combat",
+        "type": "Ammo",
+        "media": "assets/bank/ammo_shot_steel.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 10,
+        "tier": "none",
+        "validSlots": [
+          "Quiver"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 5
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedStrengthBonus",
+            "value": 14
+          }
+        ],
+        "modifiers": {
+          "maxHitBasedOnTargetCurrentHitpoints": 0.01
+        },
+        "ammoType": "Bolts"
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Black_Shot",
+        "name": "Black Shot",
+        "category": "Combat",
+        "type": "Ammo",
+        "media": "assets/bank/ammo_shot_black.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 16,
+        "tier": "none",
+        "validSlots": [
+          "Quiver"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 10
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedStrengthBonus",
+            "value": 18
+          }
+        ],
+        "modifiers": {
+          "maxHitBasedOnTargetCurrentHitpoints": 0.01
+        },
+        "ammoType": "Bolts"
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Mithril_Shot",
+        "name": "Mithril Shot",
+        "category": "Combat",
+        "type": "Ammo",
+        "media": "assets/bank/ammo_shot_mithril.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 30,
+        "tier": "none",
+        "validSlots": [
+          "Quiver"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 20
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedStrengthBonus",
+            "value": 25
+          }
+        ],
+        "modifiers": {
+          "maxHitBasedOnTargetCurrentHitpoints": 0.02
+        },
+        "ammoType": "Bolts"
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Adamant_Shot",
+        "name": "Adamant Shot",
+        "category": "Combat",
+        "type": "Ammo",
+        "media": "assets/bank/ammo_shot_adamant.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 75,
+        "tier": "none",
+        "validSlots": [
+          "Quiver"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 30
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedStrengthBonus",
+            "value": 40
+          }
+        ],
+        "modifiers": {
+          "maxHitBasedOnTargetCurrentHitpoints": 0.03
+        },
+        "ammoType": "Bolts"
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Rune_Shot",
+        "name": "Rune Shot",
+        "category": "Combat",
+        "type": "Ammo",
+        "media": "assets/bank/ammo_shot_rune.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 205,
+        "tier": "none",
+        "validSlots": [
+          "Quiver"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 40
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedStrengthBonus",
+            "value": 66
+          }
+        ],
+        "modifiers": {
+          "maxHitBasedOnTargetCurrentHitpoints": 0.04
+        },
+        "ammoType": "Bolts"
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Shot",
+        "name": "Silver Shot",
+        "category": "Combat",
+        "type": "Ammo",
+        "media": "assets/bank/ammo_shot_silver.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 300,
+        "tier": "none",
+        "validSlots": [
+          "Quiver"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 50
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedStrengthBonus",
+            "value": 76
+          }
+        ],
+        "modifiers": {
+          "maxHitBasedOnTargetCurrentHitpoints": 0.05
+        },
+        "ammoType": "Bolts"
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Dragon_Shot",
+        "name": "Dragon Shot",
+        "category": "Combat",
+        "type": "Ammo",
+        "media": "assets/bank/ammo_shot_dragon.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 420,
+        "tier": "none",
+        "validSlots": [
+          "Quiver"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 60
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedStrengthBonus",
+            "value": 99
+          }
+        ],
+        "modifiers": {
+          "maxHitBasedOnTargetCurrentHitpoints": 0.06
+        },
+        "ammoType": "Bolts"
+      },
+      {
+        "id": "Bronze_Rifle",
+        "name": "Bronze Rifle",
+        "category": "Combat",
+        "type": "Ranged Weapon",
+        "media": "assets/bank/weapon_rifle_bronze.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 150,
+        "tier": "bronze",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [
+          "Shield"
+        ],
+        "cantEquipWith": [
+          "melvorF:Ruby_Bolts",
+          "melvorF:Topaz_Bolts",
+          "melvorF:Diamond_Bolts",
+          "melvorF:Emerald_Bolts",
+          "melvorF:Sapphire_Bolts",
+          "melvorF:Jadestone_Bolts",
+          "melvorD:Enchanted_Ruby_Bolts",
+          "melvorD:Enchanted_Diamond_Bolts",
+          "melvorD:Enchanted_Emerald_Bolts",
+          "melvorD:Enchanted_Sapphire_Bolts",
+          "melvorD:Enchanted_Topaz_Bolts"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 1
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 4000
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": 32
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 48
+          }
+        ],
+        "modifiers": {
+          "critMultiplier": 200,
+          "rangedCritChance": 25,
+          "flatHiddenSkillLevelBasedOnLevels": [
+            {
+              "skillID": "melvorD:Ranged",
+              "value": 35
+            }
+          ]
+        },
+        "itemType": "Weapon",
+        "attackType": "ranged",
+        "ammoTypeRequired": "Bolts"
+      },
+      {
+        "id": "Iron_Rifle",
+        "name": "Iron Rifle",
+        "category": "Combat",
+        "type": "Ranged Weapon",
+        "media": "assets/bank/weapon_rifle_iron.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 300,
+        "tier": "iron",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [
+          "Shield"
+        ],
+        "cantEquipWith": [
+          "melvorF:Ruby_Bolts",
+          "melvorF:Topaz_Bolts",
+          "melvorF:Diamond_Bolts",
+          "melvorF:Emerald_Bolts",
+          "melvorF:Sapphire_Bolts",
+          "melvorF:Jadestone_Bolts",
+          "melvorD:Enchanted_Ruby_Bolts",
+          "melvorD:Enchanted_Diamond_Bolts",
+          "melvorD:Enchanted_Emerald_Bolts",
+          "melvorD:Enchanted_Sapphire_Bolts",
+          "melvorD:Enchanted_Topaz_Bolts"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 1
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 4000
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": 44
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 54
+          }
+        ],
+        "modifiers": {
+          "critMultiplier": 200,
+          "rangedCritChance": 25,
+          "flatHiddenSkillLevelBasedOnLevels": [
+            {
+              "skillID": "melvorD:Ranged",
+              "value": 35
+            }
+          ]
+        },
+        "itemType": "Weapon",
+        "attackType": "ranged",
+        "ammoTypeRequired": "Bolts"
+      },
+      {
+        "id": "Steel_Rifle",
+        "name": "Steel Rifle",
+        "category": "Combat",
+        "type": "Ranged Weapon",
+        "media": "assets/bank/weapon_rifle_steel.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 700,
+        "tier": "steel",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [
+          "Shield"
+        ],
+        "cantEquipWith": [
+          "melvorF:Ruby_Bolts",
+          "melvorF:Topaz_Bolts",
+          "melvorF:Diamond_Bolts",
+          "melvorF:Emerald_Bolts",
+          "melvorF:Sapphire_Bolts",
+          "melvorF:Jadestone_Bolts",
+          "melvorD:Enchanted_Ruby_Bolts",
+          "melvorD:Enchanted_Diamond_Bolts",
+          "melvorD:Enchanted_Emerald_Bolts",
+          "melvorD:Enchanted_Sapphire_Bolts",
+          "melvorD:Enchanted_Topaz_Bolts"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 5
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 4000
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": 56
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 70
+          }
+        ],
+        "modifiers": {
+          "critMultiplier": 200,
+          "rangedCritChance": 25,
+          "flatHiddenSkillLevelBasedOnLevels": [
+            {
+              "skillID": "melvorD:Ranged",
+              "value": 35
+            }
+          ]
+        },
+        "itemType": "Weapon",
+        "attackType": "ranged",
+        "ammoTypeRequired": "Bolts"
+      },
+      {
+        "id": "Black_Rifle",
+        "name": "Black Rifle",
+        "category": "Combat",
+        "type": "Ranged Weapon",
+        "media": "assets/bank/weapon_rifle_black.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1500,
+        "tier": "black",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [
+          "Shield"
+        ],
+        "cantEquipWith": [
+          "melvorF:Ruby_Bolts",
+          "melvorF:Topaz_Bolts",
+          "melvorF:Diamond_Bolts",
+          "melvorF:Emerald_Bolts",
+          "melvorF:Sapphire_Bolts",
+          "melvorF:Jadestone_Bolts",
+          "melvorD:Enchanted_Ruby_Bolts",
+          "melvorD:Enchanted_Diamond_Bolts",
+          "melvorD:Enchanted_Emerald_Bolts",
+          "melvorD:Enchanted_Sapphire_Bolts",
+          "melvorD:Enchanted_Topaz_Bolts"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 10
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 4000
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": 62
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 80
+          }
+        ],
+        "modifiers": {
+          "critMultiplier": 200,
+          "rangedCritChance": 25,
+          "flatHiddenSkillLevelBasedOnLevels": [
+            {
+              "skillID": "melvorD:Ranged",
+              "value": 35
+            }
+          ]
+        },
+        "itemType": "Weapon",
+        "attackType": "ranged",
+        "ammoTypeRequired": "Bolts"
+      },
+      {
+        "id": "Mithril_Rifle",
+        "name": "Mithril Rifle",
+        "category": "Combat",
+        "type": "Ranged Weapon",
+        "media": "assets/bank/weapon_rifle_mithril.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 2550,
+        "tier": "mithril",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [
+          "Shield"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 20
+          }
+        ],
+        "cantEquipWith": [
+          "melvorF:Ruby_Bolts",
+          "melvorF:Topaz_Bolts",
+          "melvorF:Diamond_Bolts",
+          "melvorF:Emerald_Bolts",
+          "melvorF:Sapphire_Bolts",
+          "melvorF:Jadestone_Bolts",
+          "melvorD:Enchanted_Ruby_Bolts",
+          "melvorD:Enchanted_Diamond_Bolts",
+          "melvorD:Enchanted_Emerald_Bolts",
+          "melvorD:Enchanted_Sapphire_Bolts",
+          "melvorD:Enchanted_Topaz_Bolts"
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 4000
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": 32
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 48
+          }
+        ],
+        "modifiers": {
+          "critMultiplier": 200,
+          "rangedCritChance": 25,
+          "flatHiddenSkillLevelBasedOnLevels": [
+            {
+              "skillID": "melvorD:Ranged",
+              "value": 35
+            }
+          ]
+        },
+        "itemType": "Weapon",
+        "attackType": "ranged",
+        "ammoTypeRequired": "Bolts"
+      },
+      {
+        "id": "Adamant_Rifle",
+        "name": "Adamant Rifle",
+        "category": "Combat",
+        "type": "Ranged Weapon",
+        "media": "assets/bank/weapon_rifle_adamant.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 3750,
+        "tier": "adamant",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [
+          "Shield"
+        ],
+        "cantEquipWith": [
+          "melvorF:Ruby_Bolts",
+          "melvorF:Topaz_Bolts",
+          "melvorF:Diamond_Bolts",
+          "melvorF:Emerald_Bolts",
+          "melvorF:Sapphire_Bolts",
+          "melvorF:Jadestone_Bolts",
+          "melvorD:Enchanted_Ruby_Bolts",
+          "melvorD:Enchanted_Diamond_Bolts",
+          "melvorD:Enchanted_Emerald_Bolts",
+          "melvorD:Enchanted_Sapphire_Bolts",
+          "melvorD:Enchanted_Topaz_Bolts"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 30
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 4000
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": 80
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 108
+          }
+        ],
+        "modifiers": {
+          "critMultiplier": 200,
+          "rangedCritChance": 25,
+          "flatHiddenSkillLevelBasedOnLevels": [
+            {
+              "skillID": "melvorD:Ranged",
+              "value": 35
+            }
+          ]
+        },
+        "itemType": "Weapon",
+        "attackType": "ranged",
+        "ammoTypeRequired": "Bolts"
+      },
+      {
+        "id": "Rune_Rifle",
+        "name": "Rune Rifle",
+        "category": "Combat",
+        "type": "Ranged Weapon",
+        "media": "assets/bank/weapon_rifle_rune.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 4750,
+        "tier": "rune",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [
+          "Shield"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 40
+          }
+        ],
+        "cantEquipWith": [
+          "melvorF:Ruby_Bolts",
+          "melvorF:Topaz_Bolts",
+          "melvorF:Diamond_Bolts",
+          "melvorF:Emerald_Bolts",
+          "melvorF:Sapphire_Bolts",
+          "melvorF:Jadestone_Bolts",
+          "melvorD:Enchanted_Ruby_Bolts",
+          "melvorD:Enchanted_Diamond_Bolts",
+          "melvorD:Enchanted_Emerald_Bolts",
+          "melvorD:Enchanted_Sapphire_Bolts",
+          "melvorD:Enchanted_Topaz_Bolts"
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 4000
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": 112
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 140
+          }
+        ],
+        "modifiers": {
+          "critMultiplier": 200,
+          "rangedCritChance": 25,
+          "flatHiddenSkillLevelBasedOnLevels": [
+            {
+              "skillID": "melvorD:Ranged",
+              "value": 35
+            }
+          ]
+        },
+        "itemType": "Weapon",
+        "attackType": "ranged",
+        "ammoTypeRequired": "Bolts"
+      },
+      {
+        "id": "Silver_Rifle",
+        "name": "Silver Rifle",
+        "category": "Combat",
+        "type": "Ranged Weapon",
+        "media": "assets/bank/weapon_rifle_silver.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 6000,
+        "tier": "silver",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [
+          "Shield"
+        ],
+        "cantEquipWith": [
+          "melvorF:Ruby_Bolts",
+          "melvorF:Topaz_Bolts",
+          "melvorF:Diamond_Bolts",
+          "melvorF:Emerald_Bolts",
+          "melvorF:Sapphire_Bolts",
+          "melvorF:Jadestone_Bolts",
+          "melvorD:Enchanted_Ruby_Bolts",
+          "melvorD:Enchanted_Diamond_Bolts",
+          "melvorD:Enchanted_Emerald_Bolts",
+          "melvorD:Enchanted_Sapphire_Bolts",
+          "melvorD:Enchanted_Topaz_Bolts"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 50
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 4000
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": 120
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 176
+          }
+        ],
+        "modifiers": {
+          "critMultiplier": 200,
+          "rangedCritChance": 25,
+          "flatHiddenSkillLevelBasedOnLevels": [
+            {
+              "skillID": "melvorD:Ranged",
+              "value": 35
+            }
+          ]
+        },
+        "itemType": "Weapon",
+        "attackType": "ranged",
+        "ammoTypeRequired": "Bolts"
+      },
+      {
+        "id": "Dragon_Rifle",
+        "name": "Dragon Rifle",
+        "category": "Combat",
+        "type": "Ranged Weapon",
+        "media": "assets/bank/weapon_rifle_dragon.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 10750,
+        "tier": "dragon",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [
+          "Shield"
+        ],
+        "cantEquipWith": [
+          "melvorF:Ruby_Bolts",
+          "melvorF:Topaz_Bolts",
+          "melvorF:Diamond_Bolts",
+          "melvorF:Emerald_Bolts",
+          "melvorF:Sapphire_Bolts",
+          "melvorF:Jadestone_Bolts",
+          "melvorD:Enchanted_Ruby_Bolts",
+          "melvorD:Enchanted_Diamond_Bolts",
+          "melvorD:Enchanted_Emerald_Bolts",
+          "melvorD:Enchanted_Sapphire_Bolts",
+          "melvorD:Enchanted_Topaz_Bolts"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 60
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 4000
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": 148
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 204
+          }
+        ],
+        "modifiers": {
+          "critMultiplier": 200,
+          "rangedCritChance": 25,
+          "flatHiddenSkillLevelBasedOnLevels": [
+            {
+              "skillID": "melvorD:Ranged",
+              "value": 35
+            }
+          ]
+        },
+        "itemType": "Weapon",
+        "attackType": "ranged",
+        "ammoTypeRequired": "Bolts"
+      },
+      {
+        "itemType": "Equipment",
         "id": "Wand_of_Death",
         "name": "Wand of Death",
         "category": "Weapon",
@@ -8690,196 +9581,6 @@
             ]
           }
         }
-      }
-    ],
-    "strongholds": [
-      {
-        "id": "StrongholdOfRatsAndBatsAndGnats",
-        "name": "Stronghold of Rats and Bats and Gnats",
-        "media": "assets/combat/combatAreas/StrongholdOfRatsAndBatsAndGnats.png",
-        "monsterIDs": [
-          "melvorD:Bat",
-          "melvorD:Bat",
-          "melvorD:Bat",
-          "melvorD:Bat",
-          "melvorD:Bat",
-          "melvorD:Bat",
-          "melvorD:Bat",
-          "melvorD:Bat",
-          "melvorD:Bat",
-          "melvorD:Bat",
-          "melvorD:BigBat",
-          "melvorD:BigBat",
-          "melvorD:BigBat",
-          "melvorD:BigBat",
-          "melvorD:BigBat",
-          "melvorD:BigBat",
-          "melvorD:BigBat",
-          "melvorD:BigBat",
-          "melvorD:BigBat",
-          "melvorD:BigBat",
-          "ntmyk:Vampire_Bat",
-          "ntmyk:Vampire_Bat",
-          "ntmyk:Vampire_Bat",
-          "ntmyk:Vampire_Bat",
-          "ntmyk:Vampire_Bat",
-          "ntmyk:Vampire_Bat",
-          "ntmyk:Vampire_Bat",
-          "ntmyk:Vampire_Bat",
-          "ntmyk:Vampire_Bat",
-          "ntmyk:Vampire_Bat",
-          "ntmyk:Bat_Man",
-          "ntmyk:Rat",
-          "ntmyk:Rat",
-          "ntmyk:Rat",
-          "ntmyk:Rat",
-          "ntmyk:Rat",
-          "ntmyk:Rat",
-          "ntmyk:Rat",
-          "ntmyk:Rat",
-          "ntmyk:Rat",
-          "ntmyk:Rat",
-          "ntmyk:Giant_Rat",
-          "ntmyk:Giant_Rat",
-          "ntmyk:Giant_Rat",
-          "ntmyk:Giant_Rat",
-          "ntmyk:Giant_Rat",
-          "ntmyk:Giant_Rat",
-          "ntmyk:Giant_Rat",
-          "ntmyk:Giant_Rat",
-          "ntmyk:Giant_Rat",
-          "ntmyk:Giant_Rat",
-          "ntmyk:Diseased_Rat",
-          "ntmyk:Diseased_Rat",
-          "ntmyk:Diseased_Rat",
-          "ntmyk:Diseased_Rat",
-          "ntmyk:Diseased_Rat",
-          "ntmyk:Diseased_Rat",
-          "ntmyk:Diseased_Rat",
-          "ntmyk:Diseased_Rat",
-          "ntmyk:Diseased_Rat",
-          "ntmyk:Diseased_Rat",
-          "ntmyk:Ratticus",
-          "ntmyk:Gnat",
-          "ntmyk:Gnat",
-          "ntmyk:Gnat",
-          "ntmyk:Gnat",
-          "ntmyk:Gnat",
-          "ntmyk:Gnat",
-          "ntmyk:Gnat",
-          "ntmyk:Gnat",
-          "ntmyk:Gnat",
-          "ntmyk:Gnat",
-          "ntmyk:Giant_Gnat",
-          "ntmyk:Giant_Gnat",
-          "ntmyk:Giant_Gnat",
-          "ntmyk:Giant_Gnat",
-          "ntmyk:Giant_Gnat",
-          "ntmyk:Giant_Gnat",
-          "ntmyk:Giant_Gnat",
-          "ntmyk:Giant_Gnat",
-          "ntmyk:Giant_Gnat",
-          "ntmyk:Giant_Gnat",
-          "ntmyk:Swarm_of_Gnats",
-          "ntmyk:Swarm_of_Gnats",
-          "ntmyk:Swarm_of_Gnats",
-          "ntmyk:Swarm_of_Gnats",
-          "ntmyk:Swarm_of_Gnats",
-          "ntmyk:Swarm_of_Gnats",
-          "ntmyk:Swarm_of_Gnats",
-          "ntmyk:Swarm_of_Gnats",
-          "ntmyk:Swarm_of_Gnats",
-          "ntmyk:Swarm_of_Gnats",
-          "ntmyk:The_Mad_Gnatter"
-        ],
-        "difficulty": [
-          2
-        ],
-        "entryRequirements": [
-          {
-            "type": "SkillLevel",
-            "skillID": "melvorD:Slayer",
-            "level": 10
-          },
-          {
-            "type": "DungeonCompletion",
-            "dungeonID": "melvorD:Undead_Graveyard",
-            "count": 25
-          }
-        ],
-        "combatTriangleSet": "melvorD:Normal",
-        "realm": "melvorD:Melvor",
-        "bossOnlyPassives": [
-          "melvorF:StrongholdBossBuff"
-        ],
-        "pet": {
-          "petID": "melvorF:UndeadStronghold",
-          "weight": 250
-        },
-        "tiers": {
-          "Standard": {
-            "requiredItems": [],
-            "passives": [
-              "melvorF:StandardStrongholdBuff",
-              "melvorF:StrongholdDamageModifier40"
-            ],
-            "rewards": {
-              "items": [
-                {
-                  "id": "melvorF:Undead_Enhancement_Scroll",
-                  "quantity": 1
-                }
-              ],
-              "chance": 100
-            }
-          },
-          "Augmented": {
-            "requiredItems": [
-              "melvorF:Undead_Enhancement_1",
-              "melvorF:Undead_Enhancement_2",
-              "melvorF:Undead_Enhancement_3"
-            ],
-            "passives": [
-              "melvorF:UndeadI",
-              "melvorF:AugmentedStrongholdBuff",
-              "melvorF:StrongholdDamageModifier35"
-            ],
-            "rewards": {
-              "items": [
-                {
-                  "id": "melvorF:Undead_Enhancement_Scroll_Augmented",
-                  "quantity": 1
-                }
-              ],
-              "chance": 100
-            }
-          },
-          "Superior": {
-            "requiredItems": [
-              "melvorF:Undead_Enhancement_1_Augmented",
-              "melvorF:Undead_Enhancement_2_Augmented",
-              "melvorF:Undead_Enhancement_3_Augmented"
-            ],
-            "passives": [
-              "melvorF:UndeadII",
-              "melvorF:SuperiorStrongholdBuff",
-              "melvorF:StrongholdDamageModifier25"
-            ],
-            "rewards": {
-              "items": [
-                {
-                  "id": "melvorF:Undead_Enhancement_Superior",
-                  "quantity": 1
-                }
-              ],
-              "chance": 1
-            }
-          }
-        },
-        "overrideDamageType": "melvorF:Pure",
-        "allowedDamageTypeIDs": [
-          "melvorD:Normal"
-        ]
       }
     ]
   }
