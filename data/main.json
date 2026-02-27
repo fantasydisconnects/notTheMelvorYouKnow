@@ -612,6 +612,15 @@
         "insertAt": "After",
         "afterID": "melvorF:Shockwave",
         "ids": [
+          "ntmyk:Bronze_Pistol",
+          "ntmyk:Iron_Pistol",
+          "ntmyk:Steel_Pistol",
+          "ntmyk:Black_Pistol",
+          "ntmyk:Mithril_Pistol",
+          "ntmyk:Adamant_Pistol",
+          "ntmyk:Rune_Pistol",
+          "ntmyk:Silver_Pistol",
+          "ntmyk:Dragon_Pistol",
           "ntmyk:Bronze_Rifle",
           "ntmyk:Iron_Rifle",
           "ntmyk:Steel_Rifle",
@@ -636,15 +645,15 @@
           "ntmyk:Rune_Dirk",
           "ntmyk:Silver_Dirk",
           "ntmyk:Dragon_Dirk",
-          "ntmyk:Bronze_Pistol",
-          "ntmyk:Iron_Pistol",
-          "ntmyk:Steel_Pistol",
-          "ntmyk:Black_Pistol",
-          "ntmyk:Mithril_Pistol",
-          "ntmyk:Adamant_Pistol",
-          "ntmyk:Rune_Pistol",
-          "ntmyk:Silver_Pistol",
-          "ntmyk:Dragon_Pistol"
+          "ntmyk:Bronze_Pistol_Offhand",
+          "ntmyk:Iron_Pistol_Offhand",
+          "ntmyk:Steel_Pistol_Offhand",
+          "ntmyk:Black_Pistol_Offhand",
+          "ntmyk:Mithril_Pistol_Offhand",
+          "ntmyk:Adamant_Pistol_Offhand",
+          "ntmyk:Rune_Pistol_Offhand",
+          "ntmyk:Silver_Pistol_Offhand",
+          "ntmyk:Dragon_Pistol_Offhand"
         ]
       },
       {
@@ -1803,6 +1812,390 @@
         "ammoType": "Bolts"
       },
       {
+        "itemType": "Item",
+        "id": "Bronze_Pistol_Barrel",
+        "name": "Bronze Pistol Barrel",
+        "category": "Smithing",
+        "type": "Pistol",
+        "media": "assets/bank/pistol_barrel_bronze.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 10
+      },
+      {
+        "itemType": "Item",
+        "id": "Iron_Pistol_Barrel",
+        "name": "Iron Pistol Barrel",
+        "category": "Smithing",
+        "type": "Pistol",
+        "media": "assets/bank/pistol_barrel_iron.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 20
+      },
+      {
+        "itemType": "Item",
+        "id": "Steel_Pistol_Barrel",
+        "name": "Steel Pistol Barrel",
+        "category": "Smithing",
+        "type": "Pistol",
+        "media": "assets/bank/pistol_barrel_steel.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 40
+      },
+      {
+        "itemType": "Item",
+        "id": "Mithril_Pistol_Barrel",
+        "name": "Mithril Pistol Barrel",
+        "category": "Smithing",
+        "type": "Pistol",
+        "media": "assets/bank/pistol_barrel_mithril.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 150
+      },
+      {
+        "itemType": "Item",
+        "id": "Adamant_Pistol_Barrel",
+        "name": "Adamant Pistol Barrel",
+        "category": "Smithing",
+        "type": "Pistol",
+        "media": "assets/bank/pistol_barrel_adamant.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 300
+      },
+      {
+        "itemType": "Item",
+        "id": "Rune_Pistol_Barrel",
+        "name": "Rune Pistol Barrel",
+        "category": "Smithing",
+        "type": "Pistol",
+        "media": "assets/bank/pistol_barrel_rune.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 600
+      },
+      {
+        "itemType": "Item",
+        "id": "Silver_Pistol_Barrel",
+        "name": "Silver Pistol Barrel",
+        "category": "Smithing",
+        "type": "Pistol",
+        "media": "assets/bank/pistol_barrel_silver.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 800
+      },
+      {
+        "itemType": "Item",
+        "id": "Dragon_Pistol_Barrel",
+        "name": "Dragon Pistol Barrel",
+        "category": "Smithing",
+        "type": "Pistol",
+        "media": "assets/bank/pistol_barrel_dragon.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1200
+      },
+      {
+        "itemType": "Item",
+        "id": "Wooden_Pistol_Frame",
+        "name": "Wooden Pistol Frame",
+        "category": "Fletching",
+        "type": "Pistol",
+        "media": "assets/bank/pistol_frame_wooden.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1
+      },
+      {
+        "itemType": "Item",
+        "id": "Oak_Pistol_Frame",
+        "name": "Oak Pistol Frame",
+        "category": "Fletching",
+        "type": "Pistol",
+        "media": "assets/bank/pistol_frame_oak.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 5
+      },
+      {
+        "itemType": "Item",
+        "id": "Willow_Pistol_Frame",
+        "name": "Willow Pistol Frame",
+        "category": "Fletching",
+        "type": "Pistol",
+        "media": "assets/bank/pistol_frame_willow.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 10
+      },
+      {
+        "itemType": "Item",
+        "id": "Maple_Pistol_Frame",
+        "name": "Maple Pistol Frame",
+        "category": "Fletching",
+        "type": "Pistol",
+        "media": "assets/bank/pistol_frame_maple.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 20
+      },
+      {
+        "itemType": "Item",
+        "id": "Mahogany_Pistol_Frame",
+        "name": "Mahogany Pistol Frame",
+        "category": "Fletching",
+        "type": "Pistol",
+        "media": "assets/bank/pistol_frame_mahogany.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 40
+      },
+      {
+        "itemType": "Item",
+        "id": "Yew_Pistol_Frame",
+        "name": "Yew Pistol Frame",
+        "category": "Fletching",
+        "type": "Pistol",
+        "media": "assets/bank/pistol_frame_yew.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 60
+      },
+      {
+        "itemType": "Item",
+        "id": "Magic_Pistol_Frame",
+        "name": "Magic Pistol Frame",
+        "category": "Fletching",
+        "type": "Pistol",
+        "media": "assets/bank/pistol_frame_magic.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 80
+      },
+      {
+        "itemType": "Item",
+        "id": "Redwood_Pistol_Frame",
+        "name": "Redwood Pistol Frame",
+        "category": "Fletching",
+        "type": "Pistol",
+        "media": "assets/bank/pistol_frame_redwood.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 100
+      },
+      {
+        "itemType": "Item",
+        "id": "Bronze_Rifle_Barrel",
+        "name": "Bronze Rifle Barrel",
+        "category": "Smithing",
+        "type": "Rifle",
+        "media": "assets/bank/rifle_barrel_bronze.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 30
+      },
+      {
+        "itemType": "Item",
+        "id": "Iron_Rifle_Barrel",
+        "name": "Iron Rifle Barrel",
+        "category": "Smithing",
+        "type": "Rifle",
+        "media": "assets/bank/rifle_barrel_iron.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 60
+      },
+      {
+        "itemType": "Item",
+        "id": "Steel_Rifle_Barrel",
+        "name": "Steel Rifle Barrel",
+        "category": "Smithing",
+        "type": "Rifle",
+        "media": "assets/bank/rifle_barrel_steel.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 120
+      },
+      {
+        "itemType": "Item",
+        "id": "Mithril_Rifle_Barrel",
+        "name": "Mithril Rifle Barrel",
+        "category": "Smithing",
+        "type": "Rifle",
+        "media": "assets/bank/rifle_barrel_mithril.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 480
+      },
+      {
+        "itemType": "Item",
+        "id": "Adamant_Rifle_Barrel",
+        "name": "Adamant Rifle Barrel",
+        "category": "Smithing",
+        "type": "Rifle",
+        "media": "assets/bank/rifle_barrel_adamant.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 900
+      },
+      {
+        "itemType": "Item",
+        "id": "Rune_Rifle_Barrel",
+        "name": "Rune Rifle Barrel",
+        "category": "Smithing",
+        "type": "Rifle",
+        "media": "assets/bank/rifle_barrel_rune.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1400
+      },
+      {
+        "itemType": "Item",
+        "id": "Silver_Rifle_Barrel",
+        "name": "Silver Rifle Barrel",
+        "category": "Smithing",
+        "type": "Rifle",
+        "media": "assets/bank/rifle_barrel_silver.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1700
+      },
+      {
+        "itemType": "Item",
+        "id": "Dragon_Rifle_Barrel",
+        "name": "Dragon Rifle Barrel",
+        "category": "Smithing",
+        "type": "Rifle",
+        "media": "assets/bank/rifle_barrel_dragon.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 2250
+      },
+      {
+        "itemType": "Item",
+        "id": "Wooden_Rifle_Stock",
+        "name": "Wooden Rifle Stock",
+        "category": "Fletching",
+        "type": "Rifle",
+        "media": "assets/bank/rifle_stock_wooden.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 20
+      },
+      {
+        "itemType": "Item",
+        "id": "Oak_Rifle_Stock",
+        "name": "Oak Rifle Stock",
+        "category": "Fletching",
+        "type": "Rifle",
+        "media": "assets/bank/rifle_stock_oak.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 40
+      },
+      {
+        "itemType": "Item",
+        "id": "Willow_Rifle_Stock",
+        "name": "Willow Rifle Stock",
+        "category": "Fletching",
+        "type": "Rifle",
+        "media": "assets/bank/rifle_stock_willow.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 60
+      },
+      {
+        "itemType": "Item",
+        "id": "Maple_Rifle_Stock",
+        "name": "Maple Rifle Stock",
+        "category": "Fletching",
+        "type": "Rifle",
+        "media": "assets/bank/rifle_stock_maple.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 80
+      },
+      {
+        "itemType": "Item",
+        "id": "Mahogany_Rifle_Stock",
+        "name": "Mahogany Rifle Stock",
+        "category": "Fletching",
+        "type": "Rifle",
+        "media": "assets/bank/rifle_stock_mahogany.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 100
+      },
+      {
+        "itemType": "Item",
+        "id": "Yew_Rifle_Stock",
+        "name": "Yew Rifle Stock",
+        "category": "Fletching",
+        "type": "Rifle",
+        "media": "assets/bank/rifle_stock_yew.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 120
+      },
+      {
+        "itemType": "Item",
+        "id": "Magic_Rifle_Stock",
+        "name": "Magic Rifle Stock",
+        "category": "Fletching",
+        "type": "Rifle",
+        "media": "assets/bank/rifle_stock_magic.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 140
+      },
+      {
+        "itemType": "Item",
+        "id": "Redwood_Rifle_Stock",
+        "name": "Redwood Rifle Stock",
+        "category": "Fletching",
+        "type": "Rifle",
+        "media": "assets/bank/rifle_stock_redwood.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 200
+      },
+      {
         "itemType": "Weapon",
         "attackType": "ranged",
         "id": "Bronze_Pistol",
@@ -2330,10 +2723,6 @@
         ],
         "equipmentStats": [
           {
-            "key": "attackSpeed",
-            "value": 2800
-          },
-          {
             "key": "rangedAttackBonus",
             "value": 7
           },
@@ -2381,10 +2770,6 @@
           }
         ],
         "equipmentStats": [
-          {
-            "key": "attackSpeed",
-            "value": 2800
-          },
           {
             "key": "rangedAttackBonus",
             "value": 10
@@ -2434,10 +2819,6 @@
         ],
         "equipmentStats": [
           {
-            "key": "attackSpeed",
-            "value": 2800
-          },
-          {
             "key": "rangedAttackBonus",
             "value": 15
           },
@@ -2485,10 +2866,6 @@
           }
         ],
         "equipmentStats": [
-          {
-            "key": "attackSpeed",
-            "value": 2800
-          },
           {
             "key": "rangedAttackBonus",
             "value": 22
@@ -2538,10 +2915,6 @@
         ],
         "equipmentStats": [
           {
-            "key": "attackSpeed",
-            "value": 2800
-          },
-          {
             "key": "rangedAttackBonus",
             "value": 17
           },
@@ -2589,10 +2962,6 @@
           }
         ],
         "equipmentStats": [
-          {
-            "key": "attackSpeed",
-            "value": 2800
-          },
           {
             "key": "rangedAttackBonus",
             "value": 22
@@ -2642,10 +3011,6 @@
         ],
         "equipmentStats": [
           {
-            "key": "attackSpeed",
-            "value": 2800
-          },
-          {
             "key": "rangedAttackBonus",
             "value": 32
           },
@@ -2693,10 +3058,6 @@
           }
         ],
         "equipmentStats": [
-          {
-            "key": "attackSpeed",
-            "value": 2800
-          },
           {
             "key": "rangedAttackBonus",
             "value": 37
@@ -2757,10 +3118,6 @@
           }
         ],
         "equipmentStats": [
-          {
-            "key": "attackSpeed",
-            "value": 2800
-          },
           {
             "key": "rangedAttackBonus",
             "value": 47
@@ -5730,6 +6087,258 @@
       }
     ],
     "itemUpgrades": [
+      {
+        "upgradedItemID": "ntmyk:Bronze_Pistol_Offhand",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Bronze_Pistol",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Bronze_Pistol"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": []
+      },
+      {
+        "upgradedItemID": "ntmyk:Bronze_Pistol",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Bronze_Pistol_Offhand",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Bronze_Pistol_Offhand"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": []
+      },
+      {
+        "upgradedItemID": "ntmyk:Iron_Pistol_Offhand",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Iron_Pistol",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Iron_Pistol"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": []
+      },
+      {
+        "upgradedItemID": "ntmyk:Iron_Pistol",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Iron_Pistol_Offhand",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Iron_Pistol_Offhand"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": []
+      },
+      {
+        "upgradedItemID": "ntmyk:Steel_Pistol_Offhand",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Steel_Pistol",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Steel_Pistol"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": []
+      },
+      {
+        "upgradedItemID": "ntmyk:Steel_Pistol",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Steel_Pistol_Offhand",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Steel_Pistol_Offhand"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": []
+      },
+      {
+        "upgradedItemID": "ntmyk:Black_Pistol_Offhand",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Black_Pistol",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Black_Pistol"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": []
+      },
+      {
+        "upgradedItemID": "ntmyk:Black_Pistol",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Black_Pistol_Offhand",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Black_Pistol_Offhand"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": []
+      },
+      {
+        "upgradedItemID": "ntmyk:Mithril_Pistol_Offhand",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Mithril_Pistol",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Mithril_Pistol"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": []
+      },
+      {
+        "upgradedItemID": "ntmyk:Mithril_Pistol",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Mithril_Pistol_Offhand",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Mithril_Pistol_Offhand"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": []
+      },
+      {
+        "upgradedItemID": "ntmyk:Adamant_Pistol_Offhand",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Adamant_Pistol",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Adamant_Pistol"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": []
+      },
+      {
+        "upgradedItemID": "ntmyk:Adamant_Pistol",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Adamant_Pistol_Offhand",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Adamant_Pistol_Offhand"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": []
+      },
+      {
+        "upgradedItemID": "ntmyk:Rune_Pistol_Offhand",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Rune_Pistol",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Rune_Pistol"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": []
+      },
+      {
+        "upgradedItemID": "ntmyk:Rune_Pistol",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Rune_Pistol_Offhand",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Rune_Pistol_Offhand"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": []
+      },
+      {
+        "upgradedItemID": "ntmyk:Silver_Pistol_Offhand",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Silver_Pistol",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Silver_Pistol"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": []
+      },
+      {
+        "upgradedItemID": "ntmyk:Silver_Pistol",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Silver_Pistol_Offhand",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Silver_Pistol_Offhand"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": []
+      },
+      {
+        "upgradedItemID": "ntmyk:Dragon_Pistol_Offhand",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Dragon_Pistol",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Dragon_Pistol"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": []
+      },
+      {
+        "upgradedItemID": "ntmyk:Dragon_Pistol",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Dragon_Pistol_Offhand",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Dragon_Pistol_Offhand"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": []
+      },
       {
         "upgradedItemID": "ntmyk:Slayer_Summoner_Mask_Strong",
         "itemCosts": [
@@ -10668,6 +11277,586 @@
       }
     ],
     "skillData": [
+      {
+        "skillID": "melvorD:Fletching",
+        "data": {
+          "categories": [
+            {
+              "id": "Firearms",
+              "name": "Firearms",
+              "media": "asssets/bank/offhand_pistol_dragon.png"
+            }
+          ],
+          "recipes": [
+            {
+              "id": "Wooden_Pistol_Frame",
+              "level": 3,
+              "productID": "ntmyk:Wooden_Pistol_Frame",
+              "baseQuantity": 1,
+              "baseExperience": 3,
+              "categoryID": "ntmyk:Firearms",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Normal_Logs",
+                  "quantity": 2
+                }
+              ],
+              "currencyCosts": [],
+              "subcategoryID": "ntmyk:FirearmComponents"
+            },
+            {
+              "id": "Oak_Pistol_Frame",
+              "level": 16,
+              "productID": "ntmyk:Oak_Pistol_Frame",
+              "baseQuantity": 1,
+              "baseExperience": 45,
+              "categoryID": "ntmyk:Firearms",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Oak_Logs",
+                  "quantity": 2
+                }
+              ],
+              "currencyCosts": [],
+              "subcategoryID": "ntmyk:FirearmComponents"
+            },
+            {
+              "id": "Willow_Pistol_Frame",
+              "level": 29,
+              "productID": "ntmyk:Willow_Pistol_Frame",
+              "baseQuantity": 1,
+              "baseExperience": 87,
+              "categoryID": "ntmyk:Firearms",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Willow_Logs",
+                  "quantity": 2
+                }
+              ],
+              "currencyCosts": [],
+              "subcategoryID": "ntmyk:FirearmComponents"
+            },
+            {
+              "id": "Maple_Pistol_Frame",
+              "level": 42,
+              "productID": "ntmyk:Maple_Pistol_Frame",
+              "baseQuantity": 1,
+              "baseExperience": 129,
+              "categoryID": "ntmyk:Firearms",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Maple_Logs",
+                  "quantity": 2
+                }
+              ],
+              "currencyCosts": [],
+              "subcategoryID": "ntmyk:FirearmComponents"
+            },
+            {
+              "id": "Mahogany_Pistol_Frame",
+              "level": 55,
+              "productID": "ntmyk:Mahogany_Pistol_Frame",
+              "baseQuantity": 1,
+              "baseExperience": 171,
+              "categoryID": "ntmyk:Firearms",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Mahogany_Logs",
+                  "quantity": 2
+                }
+              ],
+              "currencyCosts": [],
+              "subcategoryID": "ntmyk:FirearmComponents"
+            },
+            {
+              "id": "Yew_Pistol_Frame",
+              "level": 68,
+              "productID": "ntmyk:Yew_Pistol_Frame",
+              "baseQuantity": 1,
+              "baseExperience": 213,
+              "categoryID": "ntmyk:Firearms",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Yew_Logs",
+                  "quantity": 2
+                }
+              ],
+              "currencyCosts": [],
+              "subcategoryID": "ntmyk:FirearmComponents"
+            },
+            {
+              "id": "Magic_Pistol_Frame",
+              "level": 81,
+              "productID": "ntmyk:Magic_Pistol_Frame",
+              "baseQuantity": 1,
+              "baseExperience": 255,
+              "categoryID": "ntmyk:Firearms",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Magic_Logs",
+                  "quantity": 2
+                }
+              ],
+              "currencyCosts": [],
+              "subcategoryID": "ntmyk:FirearmComponents"
+            },
+            {
+              "id": "Redwood_Pistol_Frame",
+              "level": 94,
+              "productID": "ntmyk:Redwood_Pistol_Frame",
+              "baseQuantity": 1,
+              "baseExperience": 291,
+              "categoryID": "ntmyk:Firearms",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Redwood_Logs",
+                  "quantity": 2
+                }
+              ],
+              "currencyCosts": [],
+              "subcategoryID": "ntmyk:FirearmComponents"
+            },
+            {
+              "id": "Bronze_Pistol",
+              "level": 3,
+              "productID": "ntmyk:Bronze_Pistol",
+              "baseQuantity": 1,
+              "baseExperience": 3,
+              "categoryID": "ntmyk:Firearms",
+              "itemCosts": [
+                {
+                  "id": "ntmyk:Wooden_Pistol_Frame",
+                  "quantity": 1
+                },
+                {
+                  "id": "ntmyk:Bronze_Pistol_Barrel",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Iron_Pistol",
+              "level": 16,
+              "productID": "ntmyk:Iron_Pistol",
+              "baseQuantity": 1,
+              "baseExperience": 45,
+              "categoryID": "ntmyk:Firearms",
+              "itemCosts": [
+                {
+                  "id": "ntmyk:Oak_Pistol_Frame",
+                  "quantity": 1
+                },
+                {
+                  "id": "ntmyk:Iron_Pistol_Barrel",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Steel_Pistol",
+              "level": 29,
+              "productID": "ntmyk:Steel_Pistol",
+              "baseQuantity": 1,
+              "baseExperience": 87,
+              "categoryID": "ntmyk:Firearms",
+              "itemCosts": [
+                {
+                  "id": "ntmyk:Willow_Pistol_Frame",
+                  "quantity": 1
+                },
+                {
+                  "id": "ntmyk:Steel_Pistol_Barrel",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Mithril_Pistol",
+              "level": 42,
+              "productID": "ntmyk:Mithril_Pistol",
+              "baseQuantity": 1,
+              "baseExperience": 129,
+              "categoryID": "ntmyk:Firearms",
+              "itemCosts": [
+                {
+                  "id": "ntmyk:Maple_Pistol_Frame",
+                  "quantity": 1
+                },
+                {
+                  "id": "ntmyk:Mithril_Pistol_Barrel",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Adamant_Pistol",
+              "level": 55,
+              "productID": "ntmyk:Adamant_Pistol",
+              "baseQuantity": 1,
+              "baseExperience": 171,
+              "categoryID": "ntmyk:Firearms",
+              "itemCosts": [
+                {
+                  "id": "ntmyk:Mahogany_Pistol_Frame",
+                  "quantity": 1
+                },
+                {
+                  "id": "ntmyk:Adamant_Pistol_Barrel",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Rune_Pistol",
+              "level": 68,
+              "productID": "ntmyk:Rune_Pistol",
+              "baseQuantity": 1,
+              "baseExperience": 213,
+              "categoryID": "ntmyk:Firearms",
+              "itemCosts": [
+                {
+                  "id": "ntmyk:Yew_Pistol_Frame",
+                  "quantity": 1
+                },
+                {
+                  "id": "ntmyk:Rune_Pistol_Barrel",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Pistol",
+              "level": 81,
+              "productID": "ntmyk:Silver_Pistol",
+              "baseQuantity": 1,
+              "baseExperience": 255,
+              "categoryID": "ntmyk:Firearms",
+              "itemCosts": [
+                {
+                  "id": "ntmyk:Magic_Pistol_Frame",
+                  "quantity": 1
+                },
+                {
+                  "id": "ntmyk:Silver_Pistol_Barrel",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Dragon_Pistol",
+              "level": 94,
+              "productID": "ntmyk:Dragon_Pistol",
+              "baseQuantity": 1,
+              "baseExperience": 291,
+              "categoryID": "ntmyk:Firearms",
+              "itemCosts": [
+                {
+                  "id": "ntmyk:Redwood_Pistol_Frame",
+                  "quantity": 1
+                },
+                {
+                  "id": "ntmyk:Dragon_Pistol_Barrel",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Wooden_Rifle_Stock",
+              "level": 5,
+              "productID": "ntmyk:Wooden_Rifle_Stock",
+              "baseQuantity": 1,
+              "baseExperience": 4,
+              "categoryID": "ntmyk:Firearms",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Normal_Logs",
+                  "quantity": 4
+                }
+              ],
+              "currencyCosts": [],
+              "subcategoryID": "ntmyk:FirearmComponents"
+            },
+            {
+              "id": "Oak_Rifle_Stock",
+              "level": 18,
+              "productID": "ntmyk:Oak_Rifle_Stock",
+              "baseQuantity": 1,
+              "baseExperience": 51,
+              "categoryID": "ntmyk:Firearms",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Oak_Logs",
+                  "quantity": 4
+                }
+              ],
+              "currencyCosts": [],
+              "subcategoryID": "ntmyk:FirearmComponents"
+            },
+            {
+              "id": "Willow_Rifle_Stock",
+              "level": 31,
+              "productID": "ntmyk:Willow_Rifle_Stock",
+              "baseQuantity": 1,
+              "baseExperience": 99,
+              "categoryID": "ntmyk:Firearms",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Willow_Logs",
+                  "quantity": 4
+                }
+              ],
+              "currencyCosts": [],
+              "subcategoryID": "ntmyk:FirearmComponents"
+            },
+            {
+              "id": "Maple_Rifle_Stock",
+              "level": 45,
+              "productID": "ntmyk:Maple_Rifle_Stock",
+              "baseQuantity": 1,
+              "baseExperience": 146,
+              "categoryID": "ntmyk:Firearms",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Maple_Logs",
+                  "quantity": 4
+                }
+              ],
+              "currencyCosts": [],
+              "subcategoryID": "ntmyk:FirearmComponents"
+            },
+            {
+              "id": "Mahogany_Rifle_Stock",
+              "level": 58,
+              "productID": "ntmyk:Mahogany_Rifle_Stock",
+              "baseQuantity": 1,
+              "baseExperience": 196,
+              "categoryID": "ntmyk:Firearms",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Mahogany_Logs",
+                  "quantity": 4
+                }
+              ],
+              "currencyCosts": [],
+              "subcategoryID": "ntmyk:FirearmComponents"
+            },
+            {
+              "id": "Yew_Rifle_Stock",
+              "level": 71,
+              "productID": "ntmyk:Yew_Rifle_Stock",
+              "baseQuantity": 1,
+              "baseExperience": 241,
+              "categoryID": "ntmyk:Firearms",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Yew_Logs",
+                  "quantity": 4
+                }
+              ],
+              "currencyCosts": [],
+              "subcategoryID": "ntmyk:FirearmComponents"
+            },
+            {
+              "id": "Magic_Rifle_Stock",
+              "level": 84,
+              "productID": "ntmyk:Magic_Rifle_Stock",
+              "baseQuantity": 1,
+              "baseExperience": 287,
+              "categoryID": "ntmyk:Firearms",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Magic_Logs",
+                  "quantity": 4
+                }
+              ],
+              "currencyCosts": [],
+              "subcategoryID": "ntmyk:FirearmComponents"
+            },
+            {
+              "id": "Redwood_Rifle_Stock",
+              "level": 97,
+              "productID": "ntmyk:Redwood_Rifle_Stock",
+              "baseQuantity": 1,
+              "baseExperience": 332,
+              "categoryID": "ntmyk:Firearms",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Redwood_Logs",
+                  "quantity": 4
+                }
+              ],
+              "currencyCosts": [],
+              "subcategoryID": "ntmyk:FirearmComponents"
+            },
+            {
+              "id": "Bronze_Rifle",
+              "level": 5,
+              "productID": "ntmyk:Bronze_Rifle",
+              "baseQuantity": 1,
+              "baseExperience": 4,
+              "categoryID": "ntmyk:Firearms",
+              "itemCosts": [
+                {
+                  "id": "ntmyk:Wooden_Rifle_Stock",
+                  "quantity": 1
+                },
+                {
+                  "id": "ntmyk:Bronze_Rifle_Barrel",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Iron_Rifle",
+              "level": 18,
+              "productID": "ntmyk:Iron_Rifle",
+              "baseQuantity": 1,
+              "baseExperience": 51,
+              "categoryID": "ntmyk:Firearms",
+              "itemCosts": [
+                {
+                  "id": "ntmyk:Oak_Rifle_Stock",
+                  "quantity": 1
+                },
+                {
+                  "id": "ntmyk:Iron_Rifle_Barrel",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Steel_Rifle",
+              "level": 31,
+              "productID": "ntmyk:Steel_Rifle",
+              "baseQuantity": 1,
+              "baseExperience": 99,
+              "categoryID": "ntmyk:Firearms",
+              "itemCosts": [
+                {
+                  "id": "ntmyk:Willow_Rifle_Stock",
+                  "quantity": 1
+                },
+                {
+                  "id": "ntmyk:Steel_Rifle_Barrel",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Mithril_Rifle",
+              "level": 45,
+              "productID": "ntmyk:Mithril_Rifle",
+              "baseQuantity": 1,
+              "baseExperience": 146,
+              "categoryID": "ntmyk:Firearms",
+              "itemCosts": [
+                {
+                  "id": "ntmyk:Maple_Rifle_Stock",
+                  "quantity": 1
+                },
+                {
+                  "id": "ntmyk:Mithril_Rifle_Barrel",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Adamant_Rifle",
+              "level": 58,
+              "productID": "ntmyk:Adamant_Rifle",
+              "baseQuantity": 1,
+              "baseExperience": 196,
+              "categoryID": "ntmyk:Firearms",
+              "itemCosts": [
+                {
+                  "id": "ntmyk:Mahogany_Rifle_Stock",
+                  "quantity": 1
+                },
+                {
+                  "id": "ntmyk:Adamant_Rifle_Barrel",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Rune_Rifle",
+              "level": 71,
+              "productID": "ntmyk:Rune_Rifle",
+              "baseQuantity": 1,
+              "baseExperience": 241,
+              "categoryID": "ntmyk:Firearms",
+              "itemCosts": [
+                {
+                  "id": "ntmyk:Yew_Rifle_Stock",
+                  "quantity": 1
+                },
+                {
+                  "id": "ntmyk:Rune_Rifle_Barrel",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Rifle",
+              "level": 84,
+              "productID": "ntmyk:Silver_Rifle",
+              "baseQuantity": 1,
+              "baseExperience": 287,
+              "categoryID": "ntmyk:Firearms",
+              "itemCosts": [
+                {
+                  "id": "ntmyk:Magic_Rifle_Stock",
+                  "quantity": 1
+                },
+                {
+                  "id": "ntmyk:Silver_Rifle_Barrel",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Dragon_Rifle",
+              "level": 97,
+              "productID": "ntmyk:Dragon_Rifle",
+              "baseQuantity": 1,
+              "baseExperience": 332,
+              "categoryID": "ntmyk:Firearms",
+              "itemCosts": [
+                {
+                  "id": "ntmyk:Redwood_Rifle_Stock",
+                  "quantity": 1
+                },
+                {
+                  "id": "ntmyk:Dragon_Rifle_Barrel",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            }
+          ],
+          "subcategories": [
+            {
+              "id": "FirearmComponents",
+              "name": "FirearmComponents"
+            }
+          ]
+        }
+      },
       {
         "skillID": "melvorD:Smithing",
         "data": {
