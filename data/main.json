@@ -11866,6 +11866,270 @@
               "media": "assets/bank/armour_helmet_silver.png",
               "name": "Silver Gear"
             }
+          ],
+          "recipes": [
+            {
+              "id": "Bronze_Pistol_Barrel",
+              "level": 13,
+              "productID": "ntmyk:Bronze_Pistol_Barrel",
+              "baseQuantity": 1,
+              "baseExperience": 27,
+              "categoryID": "melvorD:BronzeGear",
+              "subcategoryID": "ntmyk:FirearmComponents",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Bronze_Bar",
+                  "quantity": 2
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Iron_Pistol_Barrel",
+              "level": 22,
+              "productID": "ntmyk:Iron_Pistol_Barrel",
+              "baseQuantity": 1,
+              "baseExperience": 54,
+              "categoryID": "melvorD:IronGear",
+              "subcategoryID": "ntmyk:FirearmComponents",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Iron_Bar",
+                  "quantity": 2
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Steel_Pistol_Barrel",
+              "level": 37,
+              "productID": "ntmyk:Steel_Pistol_Barrel",
+              "baseQuantity": 1,
+              "baseExperience": 81,
+              "categoryID": "melvorD:SteelGear",
+              "subcategoryID": "ntmyk:FirearmComponents",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Steel_Bar",
+                  "quantity": 2
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Mithril_Pistol_Barrel",
+              "level": 52,
+              "productID": "ntmyk:Mithril_Pistol_Barrel",
+              "baseQuantity": 1,
+              "baseExperience": 135,
+              "categoryID": "melvorD:MithrilGear",
+              "subcategoryID": "ntmyk:FirearmComponents",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Mithril_Bar",
+                  "quantity": 2
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Adamant_Pistol_Barrel",
+              "level": 67,
+              "productID": "ntmyk:Adamant_Pistol_Barrel",
+              "baseQuantity": 1,
+              "baseExperience": 162,
+              "categoryID": "melvorD:AdamantGear",
+              "subcategoryID": "ntmyk:FirearmComponents",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Adamantite_Bar",
+                  "quantity": 2
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Rune_Pistol_Barrel",
+              "level": 82,
+              "productID": "ntmyk:Rune_Pistol_Barrel",
+              "baseQuantity": 1,
+              "baseExperience": 203,
+              "categoryID": "melvorD:RuneGear",
+              "subcategoryID": "ntmyk:FirearmComponents",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Runite_Bar",
+                  "quantity": 2
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Pistol_Barrel",
+              "level": 91,
+              "productID": "ntmyk:Silver_Pistol_Barrel",
+              "baseQuantity": 1,
+              "baseExperience": 240,
+              "categoryID": "ntmyk:SilverGear",
+              "subcategoryID": "ntmyk:FirearmComponents",
+              "itemCosts": [
+                {
+                  "id": "ntmyk:Silver_Bar",
+                  "quantity": 2
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Dragon_Pistol_Barrel",
+              "level": 99,
+              "productID": "ntmyk:Dragon_Pistol_Barrel",
+              "baseQuantity": 1,
+              "baseExperience": 270,
+              "categoryID": "melvorD:DragonGear",
+              "subcategoryID": "ntmyk:FirearmComponents",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Dragonite_Bar",
+                  "quantity": 2
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Bronze_Rifle_Barrel",
+              "level": 17,
+              "productID": "ntmyk:Bronze_Rifle_Barrel",
+              "baseQuantity": 1,
+              "baseExperience": 34,
+              "categoryID": "melvorD:BronzeGear",
+              "subcategoryID": "ntmyk:FirearmComponents",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Bronze_Bar",
+                  "quantity": 4
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Iron_Rifle_Barrel",
+              "level": 26,
+              "productID": "ntmyk:Iron_Rifle_Barrel",
+              "baseQuantity": 1,
+              "baseExperience": 68,
+              "categoryID": "melvorD:IronGear",
+              "subcategoryID": "ntmyk:FirearmComponents",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Iron_Bar",
+                  "quantity": 4
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Steel_Rifle_Barrel",
+              "level": 41,
+              "productID": "ntmyk:Steel_Rifle_Barrel",
+              "baseQuantity": 1,
+              "baseExperience": 103,
+              "categoryID": "melvorD:SteelGear",
+              "subcategoryID": "ntmyk:FirearmComponents",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Steel_Bar",
+                  "quantity": 4
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Mithril_Rifle_Barrel",
+              "level": 56,
+              "productID": "ntmyk:Mithril_Rifle_Barrel",
+              "baseQuantity": 1,
+              "baseExperience": 169,
+              "categoryID": "melvorD:MithrilGear",
+              "subcategoryID": "ntmyk:FirearmComponents",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Mithril_Bar",
+                  "quantity": 4
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Adamant_Rifle_Barrel",
+              "level": 71,
+              "productID": "ntmyk:Adamant_Rifle_Barrel",
+              "baseQuantity": 1,
+              "baseExperience": 205,
+              "categoryID": "melvorD:AdamantGear",
+              "subcategoryID": "ntmyk:FirearmComponents",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Adamantite_Bar",
+                  "quantity": 4
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Rune_Rifle_Barrel",
+              "level": 86,
+              "productID": "ntmyk:Rune_Rifle_Barrel",
+              "baseQuantity": 1,
+              "baseExperience": 273,
+              "categoryID": "melvorD:RuneGear",
+              "subcategoryID": "ntmyk:FirearmComponents",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Runite_Bar",
+                  "quantity": 4
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Rifle_Barrel",
+              "level": 95,
+              "productID": "ntmyk:Silver_Rifle_Barrel",
+              "baseQuantity": 1,
+              "baseExperience": 320,
+              "categoryID": "ntmyk:SilverGear",
+              "subcategoryID": "ntmyk:FirearmComponents",
+              "itemCosts": [
+                {
+                  "id": "ntmyk:Silver_Bar",
+                  "quantity": 4
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Dragon_Rifle_Barrel",
+              "level": 99,
+              "productID": "ntmyk:Dragon_Rifle_Barrel",
+              "baseQuantity": 1,
+              "baseExperience": 342,
+              "categoryID": "melvorD:DragonGear",
+              "subcategoryID": "ntmyk:FirearmComponents",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Dragonite_Bar",
+                  "quantity": 4
+                }
+              ],
+              "currencyCosts": []
+            }
+          ],
+          "subcategories": [
+            {
+              "id": "FirearmComponents",
+              "name": "Firearm Components"
+            }
           ]
         }
       },
