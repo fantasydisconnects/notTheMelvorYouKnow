@@ -4844,14 +4844,14 @@
               "type": "CombatEffect"
             },
             "modifiers": {
-              "meleeMaxHit": 100
+              "meleeMaxHit": 25
             }
           }
         ]
       },
       {
         "id": "Silver_2H_Sword",
-        "name": "Silver Sword",
+        "name": "Silver 2H Sword",
         "category": "Combat",
         "type": "Weapon",
         "media": "assets/bank/weapon_2h_sword_silver.png",
@@ -4896,6 +4896,14 @@
         ],
         "itemType": "Weapon",
         "attackType": "melee",
+        "modifiers": {
+          "flatHiddenSkillLevelBasedOnLevels": [
+            {
+              "skillID": "melvorD:Strength",
+              "value": 50
+            }
+          ]
+        },
         "conditionalModifiers": [
           {
             "condition": {
@@ -4904,7 +4912,7 @@
               "type": "CombatEffect"
             },
             "modifiers": {
-              "meleeMaxHit": 100
+              "meleeMaxHit": 25
             }
           }
         ]
@@ -11869,6 +11877,126 @@
           ],
           "recipes": [
             {
+              "id": "Bronze_Shot",
+              "level": 5,
+              "productID": "ntmyk:Bronze_Shot",
+              "baseQuantity": 7,
+              "baseExperience": 7.5,
+              "categoryID": "melvorD:BronzeGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Bronze_Bar",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Iron_Shot",
+              "level": 16,
+              "productID": "ntmyk:Iron_Shot",
+              "baseQuantity": 7,
+              "baseExperience": 24,
+              "categoryID": "melvorD:IronGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Iron_Bar",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Steel_Shot",
+              "level": 28,
+              "productID": "ntmyk:Steel_Shot",
+              "baseQuantity": 7,
+              "baseExperience": 42,
+              "categoryID": "melvorD:SteelGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Steel_Bar",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Mithril_Shot",
+              "level": 41,
+              "productID": "ntmyk:Mithril_Shot",
+              "baseQuantity": 7,
+              "baseExperience": 61.5,
+              "categoryID": "melvorD:MithrilGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Mithril_Bar",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Adamant_Shot",
+              "level": 54,
+              "productID": "ntmyk:Adamant_Shot",
+              "baseQuantity": 7,
+              "baseExperience": 81,
+              "categoryID": "melvorD:AdamantGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Adamantite_Bar",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Rune_Shot",
+              "level": 70,
+              "productID": "ntmyk:Rune_Shot",
+              "baseQuantity": 7,
+              "baseExperience": 105,
+              "categoryID": "melvorD:RuneGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Runite_Bar",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Shot",
+              "level": 80,
+              "productID": "ntmyk:Silver_Shot",
+              "baseQuantity": 7,
+              "baseExperience": 120,
+              "categoryID": "ntmyk:SilverGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Silver_Bar",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Dragon_Shot",
+              "level": 90,
+              "productID": "ntmyk:Dragon_Shot",
+              "baseQuantity": 7,
+              "baseExperience": 135,
+              "categoryID": "melvorD:DragonGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Dragonite_Bar",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
               "id": "Bronze_Pistol_Barrel",
               "level": 13,
               "productID": "ntmyk:Bronze_Pistol_Barrel",
@@ -11974,7 +12102,7 @@
               "subcategoryID": "ntmyk:FirearmComponents",
               "itemCosts": [
                 {
-                  "id": "ntmyk:Silver_Bar",
+                  "id": "melvorD:Silver_Bar",
                   "quantity": 2
                 }
               ],
@@ -12102,7 +12230,7 @@
               "subcategoryID": "ntmyk:FirearmComponents",
               "itemCosts": [
                 {
-                  "id": "ntmyk:Silver_Bar",
+                  "id": "melvorD:Silver_Bar",
                   "quantity": 4
                 }
               ],
