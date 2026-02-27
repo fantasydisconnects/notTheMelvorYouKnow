@@ -624,6 +624,9 @@
             "ntmyk:SerpentsBite",
             "ntmyk:Heartseeker",
             "ntmyk:DeadlyDelivery"
+          ],
+          "remove": [
+            "melvorF:PoisonedHit"
           ]
         }
       },
@@ -665,6 +668,9 @@
             "ntmyk:DeadlyCut",
             "ntmyk:Heartseeker",
             "ntmyk:DeadlyDelivery"
+          ],
+          "remove": [
+            "melvorF:DeadlyCut"
           ]
         }
       },

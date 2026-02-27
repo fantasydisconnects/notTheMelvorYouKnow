@@ -2198,6 +2198,7 @@
       {
         "itemType": "Weapon",
         "attackType": "ranged",
+        "ammoTypeRequired": "Bolts",
         "id": "Bronze_Pistol",
         "name": "Bronze Pistol",
         "category": "Combat",
@@ -2251,6 +2252,7 @@
       {
         "itemType": "Weapon",
         "attackType": "ranged",
+        "ammoTypeRequired": "Bolts",
         "id": "Iron_Pistol",
         "name": "Iron Pistol",
         "category": "Combat",
@@ -2304,6 +2306,7 @@
       {
         "itemType": "Weapon",
         "attackType": "ranged",
+        "ammoTypeRequired": "Bolts",
         "id": "Steel_Pistol",
         "name": "Steel Pistol",
         "category": "Combat",
@@ -2357,6 +2360,7 @@
       {
         "itemType": "Weapon",
         "attackType": "ranged",
+        "ammoTypeRequired": "Bolts",
         "id": "Black_Pistol",
         "name": "Black Pistol",
         "category": "Combat",
@@ -2410,6 +2414,7 @@
       {
         "itemType": "Weapon",
         "attackType": "ranged",
+        "ammoTypeRequired": "Bolts",
         "id": "Mithril_Pistol",
         "name": "Mithril Pistol",
         "category": "Combat",
@@ -2463,6 +2468,7 @@
       {
         "itemType": "Weapon",
         "attackType": "ranged",
+        "ammoTypeRequired": "Bolts",
         "id": "Adamant_Pistol",
         "name": "Adamant Pistol",
         "category": "Combat",
@@ -2516,6 +2522,7 @@
       {
         "itemType": "Weapon",
         "attackType": "ranged",
+        "ammoTypeRequired": "Bolts",
         "id": "Rune_Pistol",
         "name": "Rune Pistol",
         "category": "Combat",
@@ -2569,6 +2576,7 @@
       {
         "itemType": "Weapon",
         "attackType": "ranged",
+        "ammoTypeRequired": "Bolts",
         "id": "Silver_Pistol",
         "name": "Silver Pistol",
         "category": "Combat",
@@ -2634,6 +2642,7 @@
       {
         "itemType": "Weapon",
         "attackType": "ranged",
+        "ammoTypeRequired": "Bolts",
         "id": "Dragon_Pistol",
         "name": "Dragon Pistol",
         "category": "Combat",
@@ -11881,7 +11890,7 @@
               "level": 5,
               "productID": "ntmyk:Bronze_Shot",
               "baseQuantity": 7,
-              "baseExperience": 7.5,
+              "baseExperience": 8,
               "categoryID": "melvorD:BronzeGear",
               "itemCosts": [
                 {
@@ -11926,7 +11935,7 @@
               "level": 41,
               "productID": "ntmyk:Mithril_Shot",
               "baseQuantity": 7,
-              "baseExperience": 61.5,
+              "baseExperience": 62,
               "categoryID": "melvorD:MithrilGear",
               "itemCosts": [
                 {
