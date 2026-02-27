@@ -646,6 +646,20 @@
             "meleeCritChance": 25
           }
         },
+        "combatEffects": {
+          "add": [
+            {
+              "effectID": "melvorD:Bleed200",
+              "appliesWhen": "HitWithAttack",
+              "chance": 20
+            },
+            {
+              "appliesWhen": "CritWithAttack",
+              "effectID": "melvorD:Bleed400",
+              "chance": 50
+            }
+          ]
+        },
         "specialAttacks": {
           "add": [
             "ntmyk:DeadlyCut",

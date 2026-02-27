@@ -1856,6 +1856,443 @@
         ]
       },
       {
+        "itemType": "Weapon",
+        "attackType": "ranged",
+        "id": "Iron_Pistol",
+        "name": "Iron Pistol",
+        "category": "Combat",
+        "type": "Ranged Weapon",
+        "media": "assets/bank/offhand_pistol_iron.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 120,
+        "tier": "iron",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "cantEquipWith": [
+          "melvorF:Ruby_Bolts",
+          "melvorF:Topaz_Bolts",
+          "melvorF:Diamond_Bolts",
+          "melvorF:Emerald_Bolts",
+          "melvorF:Sapphire_Bolts",
+          "melvorF:Jadestone_Bolts",
+          "melvorD:Enchanted_Diamond_Bolts",
+          "melvorD:Enchanted_Jadestone_Bolts",
+          "melvorD:Enchanted_Emerald_Bolts",
+          "melvorD:Enchanted_Ruby_Bolts",
+          "melvorD:Enchanted_Sapphire_Bolts",
+          "melvorD:Enchanted_Topaz_Bolts"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 5
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2800
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": 20
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 15
+          }
+        ]
+      },
+      {
+        "itemType": "Weapon",
+        "attackType": "ranged",
+        "id": "Steel_Pistol",
+        "name": "Steel Pistol",
+        "category": "Combat",
+        "type": "Ranged Weapon",
+        "media": "assets/bank/offhand_pistol_steel.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 280,
+        "tier": "steel",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "cantEquipWith": [
+          "melvorF:Ruby_Bolts",
+          "melvorF:Topaz_Bolts",
+          "melvorF:Diamond_Bolts",
+          "melvorF:Emerald_Bolts",
+          "melvorF:Sapphire_Bolts",
+          "melvorF:Jadestone_Bolts",
+          "melvorD:Enchanted_Diamond_Bolts",
+          "melvorD:Enchanted_Jadestone_Bolts",
+          "melvorD:Enchanted_Emerald_Bolts",
+          "melvorD:Enchanted_Ruby_Bolts",
+          "melvorD:Enchanted_Sapphire_Bolts",
+          "melvorD:Enchanted_Topaz_Bolts"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 10
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2800
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": 30
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 25
+          }
+        ]
+      },
+      {
+        "itemType": "Weapon",
+        "attackType": "ranged",
+        "id": "Black_Pistol",
+        "name": "Black Pistol",
+        "category": "Combat",
+        "type": "Ranged Weapon",
+        "media": "assets/bank/offhand_pistol_black.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 600,
+        "tier": "black",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "cantEquipWith": [
+          "melvorF:Ruby_Bolts",
+          "melvorF:Topaz_Bolts",
+          "melvorF:Diamond_Bolts",
+          "melvorF:Emerald_Bolts",
+          "melvorF:Sapphire_Bolts",
+          "melvorF:Jadestone_Bolts",
+          "melvorD:Enchanted_Diamond_Bolts",
+          "melvorD:Enchanted_Jadestone_Bolts",
+          "melvorD:Enchanted_Emerald_Bolts",
+          "melvorD:Enchanted_Ruby_Bolts",
+          "melvorD:Enchanted_Sapphire_Bolts",
+          "melvorD:Enchanted_Topaz_Bolts"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 15
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2800
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": 45
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 40
+          }
+        ]
+      },
+      {
+        "itemType": "Weapon",
+        "attackType": "ranged",
+        "id": "Mithril_Pistol",
+        "name": "Mithril Pistol",
+        "category": "Combat",
+        "type": "Ranged Weapon",
+        "media": "assets/bank/offhand_pistol_mithril.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1020,
+        "tier": "mithril",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "cantEquipWith": [
+          "melvorF:Ruby_Bolts",
+          "melvorF:Topaz_Bolts",
+          "melvorF:Diamond_Bolts",
+          "melvorF:Emerald_Bolts",
+          "melvorF:Sapphire_Bolts",
+          "melvorF:Jadestone_Bolts",
+          "melvorD:Enchanted_Diamond_Bolts",
+          "melvorD:Enchanted_Jadestone_Bolts",
+          "melvorD:Enchanted_Emerald_Bolts",
+          "melvorD:Enchanted_Ruby_Bolts",
+          "melvorD:Enchanted_Sapphire_Bolts",
+          "melvorD:Enchanted_Topaz_Bolts"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 25
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2800
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": 35
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 30
+          }
+        ]
+      },
+      {
+        "itemType": "Weapon",
+        "attackType": "ranged",
+        "id": "Adamant_Pistol",
+        "name": "Adamant Pistol",
+        "category": "Combat",
+        "type": "Ranged Weapon",
+        "media": "assets/bank/offhand_pistol_adamant.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1500,
+        "tier": "adamant",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "cantEquipWith": [
+          "melvorF:Ruby_Bolts",
+          "melvorF:Topaz_Bolts",
+          "melvorF:Diamond_Bolts",
+          "melvorF:Emerald_Bolts",
+          "melvorF:Sapphire_Bolts",
+          "melvorF:Jadestone_Bolts",
+          "melvorD:Enchanted_Diamond_Bolts",
+          "melvorD:Enchanted_Jadestone_Bolts",
+          "melvorD:Enchanted_Emerald_Bolts",
+          "melvorD:Enchanted_Ruby_Bolts",
+          "melvorD:Enchanted_Sapphire_Bolts",
+          "melvorD:Enchanted_Topaz_Bolts"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 35
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2800
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": 45
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 40
+          }
+        ]
+      },
+      {
+        "itemType": "Weapon",
+        "attackType": "ranged",
+        "id": "Rune_Pistol",
+        "name": "Rune Pistol",
+        "category": "Combat",
+        "type": "Ranged Weapon",
+        "media": "assets/bank/offhand_pistol_rune.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1900,
+        "tier": "rune",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "cantEquipWith": [
+          "melvorF:Ruby_Bolts",
+          "melvorF:Topaz_Bolts",
+          "melvorF:Diamond_Bolts",
+          "melvorF:Emerald_Bolts",
+          "melvorF:Sapphire_Bolts",
+          "melvorF:Jadestone_Bolts",
+          "melvorD:Enchanted_Diamond_Bolts",
+          "melvorD:Enchanted_Jadestone_Bolts",
+          "melvorD:Enchanted_Emerald_Bolts",
+          "melvorD:Enchanted_Ruby_Bolts",
+          "melvorD:Enchanted_Sapphire_Bolts",
+          "melvorD:Enchanted_Topaz_Bolts"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 50
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2800
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": 65
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 60
+          }
+        ]
+      },
+      {
+        "itemType": "Weapon",
+        "attackType": "ranged",
+        "id": "Silver_Pistol",
+        "name": "Silver Pistol",
+        "category": "Combat",
+        "type": "Ranged Weapon",
+        "media": "assets/bank/offhand_pistol_silver.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 2100,
+        "tier": "silver",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "cantEquipWith": [
+          "melvorF:Ruby_Bolts",
+          "melvorF:Topaz_Bolts",
+          "melvorF:Diamond_Bolts",
+          "melvorF:Emerald_Bolts",
+          "melvorF:Sapphire_Bolts",
+          "melvorF:Jadestone_Bolts",
+          "melvorD:Enchanted_Diamond_Bolts",
+          "melvorD:Enchanted_Jadestone_Bolts",
+          "melvorD:Enchanted_Emerald_Bolts",
+          "melvorD:Enchanted_Ruby_Bolts",
+          "melvorD:Enchanted_Sapphire_Bolts",
+          "melvorD:Enchanted_Topaz_Bolts"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 60
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2800
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": 75
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 70
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "rangedMaxHit": 25
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Weapon",
+        "attackType": "ranged",
+        "id": "Dragon_Pistol",
+        "name": "Dragon Pistol",
+        "category": "Combat",
+        "type": "Ranged Weapon",
+        "media": "assets/bank/offhand_pistol_dragon.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 2300,
+        "tier": "dragon",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "cantEquipWith": [
+          "melvorF:Ruby_Bolts",
+          "melvorF:Topaz_Bolts",
+          "melvorF:Diamond_Bolts",
+          "melvorF:Emerald_Bolts",
+          "melvorF:Sapphire_Bolts",
+          "melvorF:Jadestone_Bolts",
+          "melvorD:Enchanted_Diamond_Bolts",
+          "melvorD:Enchanted_Jadestone_Bolts",
+          "melvorD:Enchanted_Emerald_Bolts",
+          "melvorD:Enchanted_Ruby_Bolts",
+          "melvorD:Enchanted_Sapphire_Bolts",
+          "melvorD:Enchanted_Topaz_Bolts"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 75
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2800
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": 95
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 80
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
         "id": "Bronze_Pistol_Offhand",
         "name": "Bronze Pistol (Offhand)",
         "category": "Combat",
@@ -1864,13 +2301,26 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 50,
+        "sellsFor": 60,
         "tier": "bronze",
         "validSlots": [
           "Shield"
         ],
         "occupiesSlots": [],
-        "cantEquipWith": [],
+        "cantEquipWith": [
+          "melvorF:Ruby_Bolts",
+          "melvorF:Topaz_Bolts",
+          "melvorF:Diamond_Bolts",
+          "melvorF:Emerald_Bolts",
+          "melvorF:Sapphire_Bolts",
+          "melvorF:Jadestone_Bolts",
+          "melvorD:Enchanted_Diamond_Bolts",
+          "melvorD:Enchanted_Jadestone_Bolts",
+          "melvorD:Enchanted_Emerald_Bolts",
+          "melvorD:Enchanted_Ruby_Bolts",
+          "melvorD:Enchanted_Sapphire_Bolts",
+          "melvorD:Enchanted_Topaz_Bolts"
+        ],
         "equipRequirements": [
           {
             "type": "SkillLevel",
@@ -1880,15 +2330,446 @@
         ],
         "equipmentStats": [
           {
+            "key": "attackSpeed",
+            "value": 2800
+          },
+          {
             "key": "rangedAttackBonus",
-            "value": 10
+            "value": 7
           },
           {
             "key": "rangedStrengthBonus",
             "value": 5
           }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Iron_Pistol_Offhand",
+        "name": "Iron Pistol (Offhand)",
+        "category": "Combat",
+        "type": "Offhand Weapon",
+        "media": "assets/bank/offhand_pistol_iron.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 120,
+        "tier": "iron",
+        "validSlots": [
+          "Shield"
         ],
-        "itemType": "Equipment"
+        "occupiesSlots": [],
+        "cantEquipWith": [
+          "melvorF:Ruby_Bolts",
+          "melvorF:Topaz_Bolts",
+          "melvorF:Diamond_Bolts",
+          "melvorF:Emerald_Bolts",
+          "melvorF:Sapphire_Bolts",
+          "melvorF:Jadestone_Bolts",
+          "melvorD:Enchanted_Diamond_Bolts",
+          "melvorD:Enchanted_Jadestone_Bolts",
+          "melvorD:Enchanted_Emerald_Bolts",
+          "melvorD:Enchanted_Ruby_Bolts",
+          "melvorD:Enchanted_Sapphire_Bolts",
+          "melvorD:Enchanted_Topaz_Bolts"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 5
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2800
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": 10
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 7
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Steel_Pistol_Offhand",
+        "name": "Steel Pistol (Offhand)",
+        "category": "Combat",
+        "type": "Offhand Weapon",
+        "media": "assets/bank/offhand_pistol_steel.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 280,
+        "tier": "steel",
+        "validSlots": [
+          "Shield"
+        ],
+        "occupiesSlots": [],
+        "cantEquipWith": [
+          "melvorF:Ruby_Bolts",
+          "melvorF:Topaz_Bolts",
+          "melvorF:Diamond_Bolts",
+          "melvorF:Emerald_Bolts",
+          "melvorF:Sapphire_Bolts",
+          "melvorF:Jadestone_Bolts",
+          "melvorD:Enchanted_Diamond_Bolts",
+          "melvorD:Enchanted_Jadestone_Bolts",
+          "melvorD:Enchanted_Emerald_Bolts",
+          "melvorD:Enchanted_Ruby_Bolts",
+          "melvorD:Enchanted_Sapphire_Bolts",
+          "melvorD:Enchanted_Topaz_Bolts"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 10
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2800
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": 15
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 12
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Black_Pistol_Offhand",
+        "name": "Black Pistol (Offhand)",
+        "category": "Combat",
+        "type": "Offhand Weapon",
+        "media": "assets/bank/offhand_pistol_black.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 600,
+        "tier": "black",
+        "validSlots": [
+          "Shield"
+        ],
+        "occupiesSlots": [],
+        "cantEquipWith": [
+          "melvorF:Ruby_Bolts",
+          "melvorF:Topaz_Bolts",
+          "melvorF:Diamond_Bolts",
+          "melvorF:Emerald_Bolts",
+          "melvorF:Sapphire_Bolts",
+          "melvorF:Jadestone_Bolts",
+          "melvorD:Enchanted_Diamond_Bolts",
+          "melvorD:Enchanted_Jadestone_Bolts",
+          "melvorD:Enchanted_Emerald_Bolts",
+          "melvorD:Enchanted_Ruby_Bolts",
+          "melvorD:Enchanted_Sapphire_Bolts",
+          "melvorD:Enchanted_Topaz_Bolts"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 15
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2800
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": 22
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 20
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Mithril_Pistol_Offhand",
+        "name": "Mithril Pistol (Offhand)",
+        "category": "Combat",
+        "type": "Offhand Weapon",
+        "media": "assets/bank/offhand_pistol_mithril.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1020,
+        "tier": "mithril",
+        "validSlots": [
+          "Shield"
+        ],
+        "occupiesSlots": [],
+        "cantEquipWith": [
+          "melvorF:Ruby_Bolts",
+          "melvorF:Topaz_Bolts",
+          "melvorF:Diamond_Bolts",
+          "melvorF:Emerald_Bolts",
+          "melvorF:Sapphire_Bolts",
+          "melvorF:Jadestone_Bolts",
+          "melvorD:Enchanted_Diamond_Bolts",
+          "melvorD:Enchanted_Jadestone_Bolts",
+          "melvorD:Enchanted_Emerald_Bolts",
+          "melvorD:Enchanted_Ruby_Bolts",
+          "melvorD:Enchanted_Sapphire_Bolts",
+          "melvorD:Enchanted_Topaz_Bolts"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 25
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2800
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": 17
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 15
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Adamant_Pistol_Offhand",
+        "name": "Adamant Pistol (Offhand)",
+        "category": "Combat",
+        "type": "Offhand Weapon",
+        "media": "assets/bank/offhand_pistol_adamant.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1500,
+        "tier": "adamant",
+        "validSlots": [
+          "Shield"
+        ],
+        "occupiesSlots": [],
+        "cantEquipWith": [
+          "melvorF:Ruby_Bolts",
+          "melvorF:Topaz_Bolts",
+          "melvorF:Diamond_Bolts",
+          "melvorF:Emerald_Bolts",
+          "melvorF:Sapphire_Bolts",
+          "melvorF:Jadestone_Bolts",
+          "melvorD:Enchanted_Diamond_Bolts",
+          "melvorD:Enchanted_Jadestone_Bolts",
+          "melvorD:Enchanted_Emerald_Bolts",
+          "melvorD:Enchanted_Ruby_Bolts",
+          "melvorD:Enchanted_Sapphire_Bolts",
+          "melvorD:Enchanted_Topaz_Bolts"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 35
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2800
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": 22
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 20
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Rune_Pistol_Offhand",
+        "name": "Rune Pistol (Offhand)",
+        "category": "Combat",
+        "type": "Offhand Weapon",
+        "media": "assets/bank/offhand_pistol_rune.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1900,
+        "tier": "rune",
+        "validSlots": [
+          "Shield"
+        ],
+        "occupiesSlots": [],
+        "cantEquipWith": [
+          "melvorF:Ruby_Bolts",
+          "melvorF:Topaz_Bolts",
+          "melvorF:Diamond_Bolts",
+          "melvorF:Emerald_Bolts",
+          "melvorF:Sapphire_Bolts",
+          "melvorF:Jadestone_Bolts",
+          "melvorD:Enchanted_Diamond_Bolts",
+          "melvorD:Enchanted_Jadestone_Bolts",
+          "melvorD:Enchanted_Emerald_Bolts",
+          "melvorD:Enchanted_Ruby_Bolts",
+          "melvorD:Enchanted_Sapphire_Bolts",
+          "melvorD:Enchanted_Topaz_Bolts"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 50
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2800
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": 32
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 30
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Pistol_Offhand",
+        "name": "Silver Pistol (Offhand)",
+        "category": "Combat",
+        "type": "Offhand Weapon",
+        "media": "assets/bank/offhand_pistol_silver.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 2100,
+        "tier": "silver",
+        "validSlots": [
+          "Shield"
+        ],
+        "occupiesSlots": [],
+        "cantEquipWith": [
+          "melvorF:Ruby_Bolts",
+          "melvorF:Topaz_Bolts",
+          "melvorF:Diamond_Bolts",
+          "melvorF:Emerald_Bolts",
+          "melvorF:Sapphire_Bolts",
+          "melvorF:Jadestone_Bolts",
+          "melvorD:Enchanted_Diamond_Bolts",
+          "melvorD:Enchanted_Jadestone_Bolts",
+          "melvorD:Enchanted_Emerald_Bolts",
+          "melvorD:Enchanted_Ruby_Bolts",
+          "melvorD:Enchanted_Sapphire_Bolts",
+          "melvorD:Enchanted_Topaz_Bolts"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 60
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2800
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": 37
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 35
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "rangedMaxHit": 25
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Dragon_Pistol_Offhand",
+        "name": "Dragon Pistol (Offhand)",
+        "category": "Combat",
+        "type": "Offhand Weapon",
+        "media": "assets/bank/offhand_pistol_dragon.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 2300,
+        "tier": "dragon",
+        "validSlots": [
+          "Shield"
+        ],
+        "occupiesSlots": [],
+        "cantEquipWith": [
+          "melvorF:Ruby_Bolts",
+          "melvorF:Topaz_Bolts",
+          "melvorF:Diamond_Bolts",
+          "melvorF:Emerald_Bolts",
+          "melvorF:Sapphire_Bolts",
+          "melvorF:Jadestone_Bolts",
+          "melvorD:Enchanted_Diamond_Bolts",
+          "melvorD:Enchanted_Jadestone_Bolts",
+          "melvorD:Enchanted_Emerald_Bolts",
+          "melvorD:Enchanted_Ruby_Bolts",
+          "melvorD:Enchanted_Sapphire_Bolts",
+          "melvorD:Enchanted_Topaz_Bolts"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 75
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2800
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": 47
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 40
+          }
+        ]
       },
       {
         "id": "Bronze_Rifle",
