@@ -2603,7 +2603,7 @@
       {
         "itemType": "Weapon",
         "attackType": "ranged",
-        "ammoTypeRequired": "Bolts",
+        "ammoTypeRequired": "Javelins",
         "id": "Bronze_Pistol",
         "name": "Bronze Pistol",
         "category": "Combat",
@@ -2681,7 +2681,7 @@
       {
         "itemType": "Weapon",
         "attackType": "ranged",
-        "ammoTypeRequired": "Bolts",
+        "ammoTypeRequired": "Javelins",
         "id": "Iron_Pistol",
         "name": "Iron Pistol",
         "customDescription": "+2% Ranged Crit Chance and -22% Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
@@ -2701,7 +2701,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 5
+            "level": 1
           }
         ],
         "equipmentStats": [
@@ -2759,7 +2759,7 @@
       {
         "itemType": "Weapon",
         "attackType": "ranged",
-        "ammoTypeRequired": "Bolts",
+        "ammoTypeRequired": "Javelins",
         "id": "Steel_Pistol",
         "name": "Steel Pistol",
         "customDescription": "+3% Ranged Crit Chance and -20% Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
@@ -2779,7 +2779,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 10
+            "level": 5
           }
         ],
         "equipmentStats": [
@@ -2837,7 +2837,7 @@
       {
         "itemType": "Weapon",
         "attackType": "ranged",
-        "ammoTypeRequired": "Bolts",
+        "ammoTypeRequired": "Javelins",
         "id": "Mithril_Pistol",
         "name": "Mithril Pistol",
         "customDescription": "+4% Ranged Crit Chance and -18% Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
@@ -2857,7 +2857,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 25
+            "level": 20
           }
         ],
         "equipmentStats": [
@@ -2915,7 +2915,7 @@
       {
         "itemType": "Weapon",
         "attackType": "ranged",
-        "ammoTypeRequired": "Bolts",
+        "ammoTypeRequired": "Javelins",
         "id": "Adamant_Pistol",
         "name": "Adamant Pistol",
         "customDescription": "+5% Ranged Crit Chance and -16% Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
@@ -2935,7 +2935,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 35
+            "level": 30
           }
         ],
         "equipmentStats": [
@@ -2993,7 +2993,7 @@
       {
         "itemType": "Weapon",
         "attackType": "ranged",
-        "ammoTypeRequired": "Bolts",
+        "ammoTypeRequired": "Javelins",
         "id": "Rune_Pistol",
         "name": "Rune Pistol",
         "customDescription": "+6% Ranged Crit Chance and -14% Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
@@ -3013,7 +3013,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 50
+            "level": 40
           }
         ],
         "equipmentStats": [
@@ -3071,7 +3071,7 @@
       {
         "itemType": "Weapon",
         "attackType": "ranged",
-        "ammoTypeRequired": "Bolts",
+        "ammoTypeRequired": "Javelins",
         "id": "Silver_Pistol",
         "name": "Silver Pistol",
         "customDescription": "+7% Ranged Crit Chance and -12% Accuracy Rating.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
@@ -3149,7 +3149,7 @@
       {
         "itemType": "Weapon",
         "attackType": "ranged",
-        "ammoTypeRequired": "Bolts",
+        "ammoTypeRequired": "Javelins",
         "id": "Dragon_Pistol",
         "name": "Dragon Pistol",
         "customDescription": "+10% Ranged Crit Chance and -10% Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
@@ -3169,7 +3169,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 75
+            "level": 60
           }
         ],
         "equipmentStats": [
@@ -3444,7 +3444,7 @@
         "itemType": "Equipment",
         "id": "Mithril_Pistol_Offhand",
         "name": "Mithril Pistol (Offhand)",
-        "customDescription": "+45% Crit Chance and -45% Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
+        "customDescription": "+5% Crit Chance and -45% Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Offhand Weapon",
         "media": "assets/bank/offhand_pistol_mithril.png",
@@ -3677,7 +3677,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 60
+            "level": 50
           }
         ],
         "equipmentStats": [
@@ -3749,7 +3749,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 75
+            "level": 60
           }
         ],
         "equipmentStats": [
@@ -3803,7 +3803,7 @@
       {
         "id": "Bronze_Arquebus",
         "name": "Bronze Arquebus",
-        "customDescription": "+30% Ranged Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.",
+        "customDescription": "+5% Chance to convert Miss into Hit<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/weapon_arquebus_bronze.png",
@@ -3832,7 +3832,7 @@
           },
           {
             "key": "rangedAttackBonus",
-            "value": 12
+            "value": 26
           },
           {
             "key": "rangedStrengthBonus",
@@ -3873,16 +3873,16 @@
           ]
         },
         "modifiers": {
-          "rangedAccuracyRating": 30
+          "convertMissIntoHit": 5
         },
         "itemType": "Weapon",
         "attackType": "ranged",
-        "ammoTypeRequired": "Bolts"
+        "ammoTypeRequired": "Javelins"
       },
       {
         "id": "Iron_Arquebus",
         "name": "Iron Arquebus",
-        "customDescription": "+30% Ranged Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.",
+        "customDescription": "+10% Chance to convert Miss into Hit.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/weapon_arquebus_iron.png",
@@ -3911,7 +3911,7 @@
           },
           {
             "key": "rangedAttackBonus",
-            "value": 16
+            "value": 35
           },
           {
             "key": "rangedStrengthBonus",
@@ -3952,16 +3952,16 @@
           ]
         },
         "modifiers": {
-          "rangedAccuracyRating": 30
+          "convertMissIntoHit": 10
         },
         "itemType": "Weapon",
         "attackType": "ranged",
-        "ammoTypeRequired": "Bolts"
+        "ammoTypeRequired": "Javelins"
       },
       {
         "id": "Steel_Arquebus",
         "name": "Steel Arquebus",
-        "customDescription": "+30% Ranged Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.",
+        "customDescription": "+15% Chance to convert Miss into Hit<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/weapon_arquebus_steel.png",
@@ -3990,7 +3990,7 @@
           },
           {
             "key": "rangedAttackBonus",
-            "value": 20
+            "value": 44
           },
           {
             "key": "rangedStrengthBonus",
@@ -4031,16 +4031,16 @@
           ]
         },
         "modifiers": {
-          "rangedAccuracyRating": 30
+          "convertMissIntoHit": 15
         },
         "itemType": "Weapon",
         "attackType": "ranged",
-        "ammoTypeRequired": "Bolts"
+        "ammoTypeRequired": "Javelins"
       },
       {
         "id": "Mithril_Arquebus",
         "name": "Mithril Arquebus",
-        "customDescription": "+30% Ranged Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.",
+        "customDescription": "+20% Chance to convert Miss into Hit<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/weapon_arquebus_mithril.png",
@@ -4069,7 +4069,7 @@
           },
           {
             "key": "rangedAttackBonus",
-            "value": 30
+            "value": 53
           },
           {
             "key": "rangedStrengthBonus",
@@ -4110,16 +4110,16 @@
           ]
         },
         "modifiers": {
-          "rangedAccuracyRating": 30
+          "convertMissIntoHit": 20
         },
         "itemType": "Weapon",
         "attackType": "ranged",
-        "ammoTypeRequired": "Bolts"
+        "ammoTypeRequired": "Javelins"
       },
       {
         "id": "Adamant_Arquebus",
         "name": "Adamant Arquebus",
-        "customDescription": "+30% Ranged Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.",
+        "customDescription": "+25% Chance to convert Miss into Hit<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/weapon_arquebus_adamant.png",
@@ -4148,7 +4148,7 @@
           },
           {
             "key": "rangedAttackBonus",
-            "value": 44
+            "value": 67
           },
           {
             "key": "rangedStrengthBonus",
@@ -4189,16 +4189,16 @@
           ]
         },
         "modifiers": {
-          "rangedAccuracyRating": 30
+          "convertMissIntoHit": 25
         },
         "itemType": "Weapon",
         "attackType": "ranged",
-        "ammoTypeRequired": "Bolts"
+        "ammoTypeRequired": "Javelins"
       },
       {
         "id": "Rune_Arquebus",
         "name": "Rune Arquebus",
-        "customDescription": "+30% Ranged Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.",
+        "customDescription": "+30% Chance to convert Miss into Hit<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/weapon_arquebus_rune.png",
@@ -4227,7 +4227,7 @@
           },
           {
             "key": "rangedAttackBonus",
-            "value": 70
+            "value": 84
           },
           {
             "key": "rangedStrengthBonus",
@@ -4268,16 +4268,16 @@
           ]
         },
         "modifiers": {
-          "rangedAccuracyRating": 30
+          "convertMissIntoHit": 30
         },
         "itemType": "Weapon",
         "attackType": "ranged",
-        "ammoTypeRequired": "Bolts"
+        "ammoTypeRequired": "Javelins"
       },
       {
         "id": "Silver_Arquebus",
         "name": "Silver Arquebus",
-        "customDescription": "+30% Ranged Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.<br>+25% Ranged Max Hit against Silver-Vulnerable monsters.",
+        "customDescription": "+35% Chance to convert Miss into Hit.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.<br>+25% Ranged Max Hit against Silver-Vulnerable monsters.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/weapon_arquebus_silver.png",
@@ -4306,7 +4306,7 @@
           },
           {
             "key": "rangedAttackBonus",
-            "value": 104
+            "value": 126
           },
           {
             "key": "rangedStrengthBonus",
@@ -4314,7 +4314,7 @@
           }
         ],
         "modifiers": {
-          "rangedAccuracyRating": 30
+          "convertMissIntoHit": 35
         },
         "conditionalModifiers": [
           {
@@ -4361,12 +4361,12 @@
         },
         "itemType": "Weapon",
         "attackType": "ranged",
-        "ammoTypeRequired": "Bolts"
+        "ammoTypeRequired": "Javelins"
       },
       {
         "id": "Dragon_Arquebus",
         "name": "Dragon Arquebus",
-        "customDescription": "+30% Ranged Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.",
+        "customDescription": "+40% Chance to convert Miss into Hit<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/weapon_arquebus_dragon.png",
@@ -4395,7 +4395,7 @@
           },
           {
             "key": "rangedAttackBonus",
-            "value": 117
+            "value": 140
           },
           {
             "key": "rangedStrengthBonus",
@@ -4436,11 +4436,11 @@
           ]
         },
         "modifiers": {
-          "rangedAccuracyRating": 30
+          "convertMissIntoHit": 40
         },
         "itemType": "Weapon",
         "attackType": "ranged",
-        "ammoTypeRequired": "Bolts"
+        "ammoTypeRequired": "Javelins"
       },
       {
         "id": "Bronze_Handcannon",
