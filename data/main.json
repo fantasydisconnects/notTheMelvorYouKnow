@@ -1717,7 +1717,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 10
+            "level": 1
           }
         ],
         "equipmentStats": [
@@ -1751,7 +1751,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 20
+            "level": 5
           }
         ],
         "equipmentStats": [
@@ -1785,7 +1785,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 30
+            "level": 10
           }
         ],
         "equipmentStats": [
@@ -1819,7 +1819,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 40
+            "level": 20
           }
         ],
         "equipmentStats": [
@@ -1853,7 +1853,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 50
+            "level": 30
           }
         ],
         "equipmentStats": [
@@ -1887,7 +1887,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 60
+            "level": 40
           }
         ],
         "equipmentStats": [
@@ -1908,6 +1908,7 @@
         "category": "Combat",
         "type": "Ammo",
         "media": "assets/bank/ammo_shot_silver.png",
+        "customDescription": "+0.07% Max Hit per 1% of Target's Missing Hitpoints<br>+25% Ranged Max Hit against Silver-Vulnerable monsters",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -1921,7 +1922,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 70
+            "level": 50
           }
         ],
         "equipmentStats": [
@@ -1967,7 +1968,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 80
+            "level": 60
           }
         ],
         "equipmentStats": [
@@ -2374,7 +2375,7 @@
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/offhand_pistol_bronze.png",
-        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
+        "customDescription": "+10% Ranged Crit Chance and -10% Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -2419,13 +2420,28 @@
             "value": 10
           }
         ],
+        "modifiers": {
+          "rangedCritChance": 10,
+          "rangedAccuracyRating": -10
+        },
         "conditionalModifiers": [
           {
             "condition": {
-              "type": "BankItem",
-              "itemID": "ntmyk:Gunpowder",
-              "value": 1,
-              "operator": "<"
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Gunpowder",
+                  "value": 1,
+                  "operator": "<"
+                },
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Pyrite_Chunk",
+                  "value": 1,
+                  "operator": "<"
+                }
+              ]
             },
             "modifiers": {
               "cantAttack": 1
@@ -2448,7 +2464,7 @@
         "ammoTypeRequired": "Bolts",
         "id": "Iron_Pistol",
         "name": "Iron Pistol",
-        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
+        "customDescription": "+10% Ranged Crit Chance and -10% Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/offhand_pistol_iron.png",
@@ -2496,13 +2512,28 @@
             "value": 15
           }
         ],
+        "modifiers": {
+          "rangedCritChance": 10,
+          "rangedAccuracyRating": -10
+        },
         "conditionalModifiers": [
           {
             "condition": {
-              "type": "BankItem",
-              "itemID": "ntmyk:Gunpowder",
-              "value": 1,
-              "operator": "<"
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Gunpowder",
+                  "value": 1,
+                  "operator": "<"
+                },
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Pyrite_Chunk",
+                  "value": 1,
+                  "operator": "<"
+                }
+              ]
             },
             "modifiers": {
               "cantAttack": 1
@@ -2525,7 +2556,7 @@
         "ammoTypeRequired": "Bolts",
         "id": "Steel_Pistol",
         "name": "Steel Pistol",
-        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
+        "customDescription": "+10% Ranged Crit Chance and -10% Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/offhand_pistol_steel.png",
@@ -2573,13 +2604,28 @@
             "value": 25
           }
         ],
+        "modifiers": {
+          "rangedCritChance": 10,
+          "rangedAccuracyRating": -10
+        },
         "conditionalModifiers": [
           {
             "condition": {
-              "type": "BankItem",
-              "itemID": "ntmyk:Gunpowder",
-              "value": 1,
-              "operator": "<"
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Gunpowder",
+                  "value": 1,
+                  "operator": "<"
+                },
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Pyrite_Chunk",
+                  "value": 1,
+                  "operator": "<"
+                }
+              ]
             },
             "modifiers": {
               "cantAttack": 1
@@ -2602,7 +2648,7 @@
         "ammoTypeRequired": "Bolts",
         "id": "Black_Pistol",
         "name": "Black Pistol",
-        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
+        "customDescription": "+10% Ranged Crit Chance and -10% Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/offhand_pistol_black.png",
@@ -2650,13 +2696,28 @@
             "value": 40
           }
         ],
+        "modifiers": {
+          "rangedCritChance": 10,
+          "rangedAccuracyRating": -10
+        },
         "conditionalModifiers": [
           {
             "condition": {
-              "type": "BankItem",
-              "itemID": "ntmyk:Gunpowder",
-              "value": 1,
-              "operator": "<"
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Gunpowder",
+                  "value": 1,
+                  "operator": "<"
+                },
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Pyrite_Chunk",
+                  "value": 1,
+                  "operator": "<"
+                }
+              ]
             },
             "modifiers": {
               "cantAttack": 1
@@ -2679,7 +2740,7 @@
         "ammoTypeRequired": "Bolts",
         "id": "Mithril_Pistol",
         "name": "Mithril Pistol",
-        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
+        "customDescription": "+10% Ranged Crit Chance and -10% Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/offhand_pistol_mithril.png",
@@ -2727,13 +2788,28 @@
             "value": 30
           }
         ],
+        "modifiers": {
+          "rangedCritChance": 10,
+          "rangedAccuracyRating": -10
+        },
         "conditionalModifiers": [
           {
             "condition": {
-              "type": "BankItem",
-              "itemID": "ntmyk:Gunpowder",
-              "value": 1,
-              "operator": "<"
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Gunpowder",
+                  "value": 1,
+                  "operator": "<"
+                },
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Pyrite_Chunk",
+                  "value": 1,
+                  "operator": "<"
+                }
+              ]
             },
             "modifiers": {
               "cantAttack": 1
@@ -2756,7 +2832,7 @@
         "ammoTypeRequired": "Bolts",
         "id": "Adamant_Pistol",
         "name": "Adamant Pistol",
-        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
+        "customDescription": "+10% Ranged Crit Chance and -10% Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/offhand_pistol_adamant.png",
@@ -2804,13 +2880,28 @@
             "value": 40
           }
         ],
+        "modifiers": {
+          "rangedCritChance": 10,
+          "rangedAccuracyRating": -10
+        },
         "conditionalModifiers": [
           {
             "condition": {
-              "type": "BankItem",
-              "itemID": "ntmyk:Gunpowder",
-              "value": 1,
-              "operator": "<"
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Gunpowder",
+                  "value": 1,
+                  "operator": "<"
+                },
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Pyrite_Chunk",
+                  "value": 1,
+                  "operator": "<"
+                }
+              ]
             },
             "modifiers": {
               "cantAttack": 1
@@ -2833,7 +2924,7 @@
         "ammoTypeRequired": "Bolts",
         "id": "Rune_Pistol",
         "name": "Rune Pistol",
-        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
+        "customDescription": "+10% Ranged Crit Chance and -10% Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/offhand_pistol_rune.png",
@@ -2881,13 +2972,28 @@
             "value": 60
           }
         ],
+        "modifiers": {
+          "rangedCritChance": 10,
+          "rangedAccuracyRating": -10
+        },
         "conditionalModifiers": [
           {
             "condition": {
-              "type": "BankItem",
-              "itemID": "ntmyk:Gunpowder",
-              "value": 1,
-              "operator": "<"
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Gunpowder",
+                  "value": 1,
+                  "operator": "<"
+                },
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Pyrite_Chunk",
+                  "value": 1,
+                  "operator": "<"
+                }
+              ]
             },
             "modifiers": {
               "cantAttack": 1
@@ -2910,7 +3016,7 @@
         "ammoTypeRequired": "Bolts",
         "id": "Silver_Pistol",
         "name": "Silver Pistol",
-        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.<br>+25% Ranged Max Hit against Silver-Vulnerable monsters.",
+        "customDescription": "+10% Ranged Crit Chance and -10% Accuracy Rating.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.<br>+25% Ranged Max Hit against Silver-Vulnerable monsters.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/offhand_pistol_silver.png",
@@ -2958,13 +3064,28 @@
             "value": 70
           }
         ],
+        "modifiers": {
+          "rangedCritChance": 10,
+          "rangedAccuracyRating": -10
+        },
         "conditionalModifiers": [
           {
             "condition": {
-              "type": "BankItem",
-              "itemID": "ntmyk:Gunpowder",
-              "value": 1,
-              "operator": "<"
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Gunpowder",
+                  "value": 1,
+                  "operator": "<"
+                },
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Pyrite_Chunk",
+                  "value": 1,
+                  "operator": "<"
+                }
+              ]
             },
             "modifiers": {
               "cantAttack": 1
@@ -2997,7 +3118,7 @@
         "ammoTypeRequired": "Bolts",
         "id": "Dragon_Pistol",
         "name": "Dragon Pistol",
-        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
+        "customDescription": "+10% Ranged Crit Chance and -10% Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/offhand_pistol_dragon.png",
@@ -3045,13 +3166,28 @@
             "value": 80
           }
         ],
+        "modifiers": {
+          "rangedCritChance": 10,
+          "rangedAccuracyRating": -10
+        },
         "conditionalModifiers": [
           {
             "condition": {
-              "type": "BankItem",
-              "itemID": "ntmyk:Gunpowder",
-              "value": 1,
-              "operator": "<"
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Gunpowder",
+                  "value": 1,
+                  "operator": "<"
+                },
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Pyrite_Chunk",
+                  "value": 1,
+                  "operator": "<"
+                }
+              ]
             },
             "modifiers": {
               "cantAttack": 1
@@ -3072,7 +3208,7 @@
         "itemType": "Equipment",
         "id": "Bronze_Pistol_Offhand",
         "name": "Bronze Pistol (Offhand)",
-        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
+        "customDescription": "+5% Crit Chance and -5% Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Offhand Weapon",
         "media": "assets/bank/offhand_pistol_bronze.png",
@@ -3115,13 +3251,50 @@
             "key": "rangedStrengthBonus",
             "value": 5
           }
-        ]
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Gunpowder",
+                  "value": 1,
+                  "operator": "<"
+                },
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Pyrite_Chunk",
+                  "value": 1,
+                  "operator": "<"
+                }
+              ]
+            },
+            "modifiers": {
+              "cantAttack": 1
+            }
+          }
+        ],
+        "consumesItemOn": {
+          "itemID": "ntmyk:Gunpowder",
+          "chance": 0.1,
+          "matchers": [
+            {
+              "type": "PlayerAttack"
+            }
+          ]
+        },
+        "modifiers": {
+          "critChance": 5,
+          "accuracyRating": -5
+        }
       },
       {
         "itemType": "Equipment",
         "id": "Iron_Pistol_Offhand",
         "name": "Iron Pistol (Offhand)",
-        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
+        "customDescription": "+5% Crit Chance and -5% Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Offhand Weapon",
         "media": "assets/bank/offhand_pistol_iron.png",
@@ -3164,13 +3337,50 @@
             "key": "rangedStrengthBonus",
             "value": 7
           }
-        ]
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Gunpowder",
+                  "value": 1,
+                  "operator": "<"
+                },
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Pyrite_Chunk",
+                  "value": 1,
+                  "operator": "<"
+                }
+              ]
+            },
+            "modifiers": {
+              "cantAttack": 1
+            }
+          }
+        ],
+        "consumesItemOn": {
+          "itemID": "ntmyk:Gunpowder",
+          "chance": 0.1,
+          "matchers": [
+            {
+              "type": "PlayerAttack"
+            }
+          ]
+        },
+        "modifiers": {
+          "critChance": 5,
+          "accuracyRating": -5
+        }
       },
       {
         "itemType": "Equipment",
         "id": "Steel_Pistol_Offhand",
         "name": "Steel Pistol (Offhand)",
-        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
+        "customDescription": "+5% Crit Chance and -5% Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Offhand Weapon",
         "media": "assets/bank/offhand_pistol_steel.png",
@@ -3213,13 +3423,50 @@
             "key": "rangedStrengthBonus",
             "value": 12
           }
-        ]
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Gunpowder",
+                  "value": 1,
+                  "operator": "<"
+                },
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Pyrite_Chunk",
+                  "value": 1,
+                  "operator": "<"
+                }
+              ]
+            },
+            "modifiers": {
+              "cantAttack": 1
+            }
+          }
+        ],
+        "consumesItemOn": {
+          "itemID": "ntmyk:Gunpowder",
+          "chance": 0.1,
+          "matchers": [
+            {
+              "type": "PlayerAttack"
+            }
+          ]
+        },
+        "modifiers": {
+          "critChance": 5,
+          "accuracyRating": -5
+        }
       },
       {
         "itemType": "Equipment",
         "id": "Black_Pistol_Offhand",
         "name": "Black Pistol (Offhand)",
-        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
+        "customDescription": "+5% Crit Chance and -5% Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Offhand Weapon",
         "media": "assets/bank/offhand_pistol_black.png",
@@ -3253,6 +3500,39 @@
             "level": 15
           }
         ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Gunpowder",
+                  "value": 1,
+                  "operator": "<"
+                },
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Pyrite_Chunk",
+                  "value": 1,
+                  "operator": "<"
+                }
+              ]
+            },
+            "modifiers": {
+              "cantAttack": 1
+            }
+          }
+        ],
+        "consumesItemOn": {
+          "itemID": "ntmyk:Gunpowder",
+          "chance": 0.1,
+          "matchers": [
+            {
+              "type": "PlayerAttack"
+            }
+          ]
+        },
         "equipmentStats": [
           {
             "key": "rangedAttackBonus",
@@ -3262,13 +3542,17 @@
             "key": "rangedStrengthBonus",
             "value": 20
           }
-        ]
+        ],
+        "modifiers": {
+          "critChance": 5,
+          "accuracyRating": -5
+        }
       },
       {
         "itemType": "Equipment",
         "id": "Mithril_Pistol_Offhand",
         "name": "Mithril Pistol (Offhand)",
-        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
+        "customDescription": "+5% Crit Chance and -5% Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Offhand Weapon",
         "media": "assets/bank/offhand_pistol_mithril.png",
@@ -3311,13 +3595,50 @@
             "key": "rangedStrengthBonus",
             "value": 15
           }
-        ]
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Gunpowder",
+                  "value": 1,
+                  "operator": "<"
+                },
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Pyrite_Chunk",
+                  "value": 1,
+                  "operator": "<"
+                }
+              ]
+            },
+            "modifiers": {
+              "cantAttack": 1
+            }
+          }
+        ],
+        "consumesItemOn": {
+          "itemID": "ntmyk:Gunpowder",
+          "chance": 0.1,
+          "matchers": [
+            {
+              "type": "PlayerAttack"
+            }
+          ]
+        },
+        "modifiers": {
+          "critChance": 5,
+          "accuracyRating": -5
+        }
       },
       {
         "itemType": "Equipment",
         "id": "Adamant_Pistol_Offhand",
         "name": "Adamant Pistol (Offhand)",
-        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
+        "customDescription": "+5% Crit Chance and -5% Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Offhand Weapon",
         "media": "assets/bank/offhand_pistol_adamant.png",
@@ -3360,13 +3681,50 @@
             "key": "rangedStrengthBonus",
             "value": 20
           }
-        ]
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Gunpowder",
+                  "value": 1,
+                  "operator": "<"
+                },
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Pyrite_Chunk",
+                  "value": 1,
+                  "operator": "<"
+                }
+              ]
+            },
+            "modifiers": {
+              "cantAttack": 1
+            }
+          }
+        ],
+        "consumesItemOn": {
+          "itemID": "ntmyk:Gunpowder",
+          "chance": 0.1,
+          "matchers": [
+            {
+              "type": "PlayerAttack"
+            }
+          ]
+        },
+        "modifiers": {
+          "critChance": 5,
+          "accuracyRating": -5
+        }
       },
       {
         "itemType": "Equipment",
         "id": "Rune_Pistol_Offhand",
         "name": "Rune Pistol (Offhand)",
-        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
+        "customDescription": "+5% Crit Chance and -5% Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Offhand Weapon",
         "media": "assets/bank/offhand_pistol_rune.png",
@@ -3409,13 +3767,50 @@
             "key": "rangedStrengthBonus",
             "value": 30
           }
-        ]
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Gunpowder",
+                  "value": 1,
+                  "operator": "<"
+                },
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Pyrite_Chunk",
+                  "value": 1,
+                  "operator": "<"
+                }
+              ]
+            },
+            "modifiers": {
+              "cantAttack": 1
+            }
+          }
+        ],
+        "consumesItemOn": {
+          "itemID": "ntmyk:Gunpowder",
+          "chance": 0.1,
+          "matchers": [
+            {
+              "type": "PlayerAttack"
+            }
+          ]
+        },
+        "modifiers": {
+          "critChance": 5,
+          "accuracyRating": -5
+        }
       },
       {
         "itemType": "Equipment",
         "id": "Silver_Pistol_Offhand",
         "name": "Silver Pistol (Offhand)",
-        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.<br>+10% Maximum Hit against Silver-Vulnerable monsters.",
+        "customDescription": "+5% Crit Chance and -5% Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.<br>+10% Maximum Hit against Silver-Vulnerable monsters.",
         "category": "Combat",
         "type": "Offhand Weapon",
         "media": "assets/bank/offhand_pistol_silver.png",
@@ -3459,7 +3854,33 @@
             "value": 35
           }
         ],
+        "modifiers": {
+          "critChance": 5,
+          "accuracyRating": -5
+        },
         "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Gunpowder",
+                  "value": 1,
+                  "operator": "<"
+                },
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Pyrite_Chunk",
+                  "value": 1,
+                  "operator": "<"
+                }
+              ]
+            },
+            "modifiers": {
+              "cantAttack": 1
+            }
+          },
           {
             "condition": {
               "effectID": "ntmyk:VulnerabilitySilver",
@@ -3470,13 +3891,22 @@
               "maxHit": 10
             }
           }
-        ]
+        ],
+        "consumesItemOn": {
+          "matchers": [
+            {
+              "type": "PlayerAttack"
+            }
+          ],
+          "itemID": "ntmyk:Gunpowder",
+          "chance": 0.1
+        }
       },
       {
         "itemType": "Equipment",
         "id": "Dragon_Pistol_Offhand",
         "name": "Dragon Pistol (Offhand)",
-        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
+        "customDescription": "+5% Crit Chance and -5% Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Offhand Weapon",
         "media": "assets/bank/offhand_pistol_dragon.png",
@@ -3519,12 +3949,49 @@
             "key": "rangedStrengthBonus",
             "value": 40
           }
-        ]
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Gunpowder",
+                  "value": 1,
+                  "operator": "<"
+                },
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Pyrite_Chunk",
+                  "value": 1,
+                  "operator": "<"
+                }
+              ]
+            },
+            "modifiers": {
+              "cantAttack": 1
+            }
+          }
+        ],
+        "consumesItemOn": {
+          "itemID": "ntmyk:Gunpowder",
+          "chance": 0.1,
+          "matchers": [
+            {
+              "type": "PlayerAttack"
+            }
+          ]
+        },
+        "modifiers": {
+          "critChance": 5,
+          "accuracyRating": -5
+        }
       },
       {
         "id": "Bronze_Rifle",
         "name": "Bronze Rifle",
-        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.2% chance for a barrel to be consumed per attack.",
+        "customDescription": "+30% Ranged Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/weapon_rifle_bronze.png",
@@ -3562,26 +4029,52 @@
         "equipmentStats": [
           {
             "key": "attackSpeed",
-            "value": 4000
+            "value": 3600
           },
           {
             "key": "rangedAttackBonus",
-            "value": 10
+            "value": 12
           },
           {
             "key": "rangedStrengthBonus",
-            "value": 30
+            "value": 50
           }
         ],
-        "modifiers": {
-          "critMultiplier": 200,
-          "rangedCritChance": 10,
-          "flatHiddenSkillLevelBasedOnLevels": [
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Gunpowder",
+                  "value": 1,
+                  "operator": "<"
+                },
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Pyrite_Chunk",
+                  "value": 1,
+                  "operator": "<"
+                }
+              ]
+            },
+            "modifiers": {
+              "cantAttack": 1
+            }
+          }
+        ],
+        "consumesItemOn": {
+          "itemID": "ntmyk:Gunpowder",
+          "chance": 0.3,
+          "matchers": [
             {
-              "skillID": "melvorD:Ranged",
-              "value": 50
+              "type": "PlayerAttack"
             }
           ]
+        },
+        "modifiers": {
+          "rangedAccuracyRating": 30
         },
         "itemType": "Weapon",
         "attackType": "ranged",
@@ -3590,7 +4083,7 @@
       {
         "id": "Iron_Rifle",
         "name": "Iron Rifle",
-        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.2% chance for a barrel to be consumed per attack.",
+        "customDescription": "+30% Ranged Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/weapon_rifle_iron.png",
@@ -3622,31 +4115,58 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 10
+            "level": 1
           }
         ],
         "equipmentStats": [
           {
             "key": "attackSpeed",
-            "value": 4000
+            "value": 3600
           },
           {
             "key": "rangedAttackBonus",
-            "value": 20
+            "value": 16
           },
           {
             "key": "rangedStrengthBonus",
-            "value": 60
+            "value": 56
           }
         ],
-        "modifiers": {
-          "rangedCritChance": 10,
-          "flatHiddenSkillLevelBasedOnLevels": [
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Gunpowder",
+                  "value": 1,
+                  "operator": "<"
+                },
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Pyrite_Chunk",
+                  "value": 1,
+                  "operator": "<"
+                }
+              ]
+            },
+            "modifiers": {
+              "cantAttack": 1
+            }
+          }
+        ],
+        "consumesItemOn": {
+          "itemID": "ntmyk:Gunpowder",
+          "chance": 0.3,
+          "matchers": [
             {
-              "skillID": "melvorD:Ranged",
-              "value": 50
+              "type": "PlayerAttack"
             }
           ]
+        },
+        "modifiers": {
+          "rangedAccuracyRating": 30
         },
         "itemType": "Weapon",
         "attackType": "ranged",
@@ -3655,7 +4175,7 @@
       {
         "id": "Steel_Rifle",
         "name": "Steel Rifle",
-        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.2% chance for a barrel to be consumed per attack.",
+        "customDescription": "+30% Ranged Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/weapon_rifle_steel.png",
@@ -3687,31 +4207,58 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 20
+            "level": 5
           }
         ],
         "equipmentStats": [
           {
             "key": "attackSpeed",
-            "value": 4000
+            "value": 3600
           },
           {
             "key": "rangedAttackBonus",
-            "value": 30
+            "value": 20
           },
           {
             "key": "rangedStrengthBonus",
-            "value": 90
+            "value": 60
           }
         ],
-        "modifiers": {
-          "rangedCritChance": 10,
-          "flatHiddenSkillLevelBasedOnLevels": [
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Gunpowder",
+                  "value": 1,
+                  "operator": "<"
+                },
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Pyrite_Chunk",
+                  "value": 1,
+                  "operator": "<"
+                }
+              ]
+            },
+            "modifiers": {
+              "cantAttack": 1
+            }
+          }
+        ],
+        "consumesItemOn": {
+          "itemID": "ntmyk:Gunpowder",
+          "chance": 0.3,
+          "matchers": [
             {
-              "skillID": "melvorD:Ranged",
-              "value": 50
+              "type": "PlayerAttack"
             }
           ]
+        },
+        "modifiers": {
+          "rangedAccuracyRating": 30
         },
         "itemType": "Weapon",
         "attackType": "ranged",
@@ -3720,7 +4267,7 @@
       {
         "id": "Black_Rifle",
         "name": "Black Rifle",
-        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.2% chance for a barrel to be consumed per attack.",
+        "customDescription": "+30% Ranged Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/weapon_rifle_black.png",
@@ -3752,31 +4299,58 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 30
+            "level": 10
           }
         ],
         "equipmentStats": [
           {
             "key": "attackSpeed",
-            "value": 4000
+            "value": 3600
           },
           {
             "key": "rangedAttackBonus",
-            "value": 40
+            "value": 23
           },
           {
             "key": "rangedStrengthBonus",
-            "value": 120
+            "value": 65
           }
         ],
-        "modifiers": {
-          "rangedCritChance": 10,
-          "flatHiddenSkillLevelBasedOnLevels": [
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Gunpowder",
+                  "value": 1,
+                  "operator": "<"
+                },
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Pyrite_Chunk",
+                  "value": 1,
+                  "operator": "<"
+                }
+              ]
+            },
+            "modifiers": {
+              "cantAttack": 1
+            }
+          }
+        ],
+        "consumesItemOn": {
+          "itemID": "ntmyk:Gunpowder",
+          "chance": 0.3,
+          "matchers": [
             {
-              "skillID": "melvorD:Ranged",
-              "value": 50
+              "type": "PlayerAttack"
             }
           ]
+        },
+        "modifiers": {
+          "rangedAccuracyRating": 30
         },
         "itemType": "Weapon",
         "attackType": "ranged",
@@ -3785,7 +4359,7 @@
       {
         "id": "Mithril_Rifle",
         "name": "Mithril Rifle",
-        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.2% chance for a barrel to be consumed per attack.",
+        "customDescription": "+30% Ranged Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/weapon_rifle_mithril.png",
@@ -3804,7 +4378,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 40
+            "level": 20
           }
         ],
         "cantEquipWith": [
@@ -3823,25 +4397,52 @@
         "equipmentStats": [
           {
             "key": "attackSpeed",
-            "value": 4000
+            "value": 3600
           },
           {
             "key": "rangedAttackBonus",
-            "value": 50
+            "value": 30
           },
           {
             "key": "rangedStrengthBonus",
-            "value": 150
+            "value": 75
           }
         ],
-        "modifiers": {
-          "rangedCritChance": 10,
-          "flatHiddenSkillLevelBasedOnLevels": [
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Gunpowder",
+                  "value": 1,
+                  "operator": "<"
+                },
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Pyrite_Chunk",
+                  "value": 1,
+                  "operator": "<"
+                }
+              ]
+            },
+            "modifiers": {
+              "cantAttack": 1
+            }
+          }
+        ],
+        "consumesItemOn": {
+          "itemID": "ntmyk:Gunpowder",
+          "chance": 0.3,
+          "matchers": [
             {
-              "skillID": "melvorD:Ranged",
-              "value": 50
+              "type": "PlayerAttack"
             }
           ]
+        },
+        "modifiers": {
+          "rangedAccuracyRating": 30
         },
         "itemType": "Weapon",
         "attackType": "ranged",
@@ -3850,7 +4451,7 @@
       {
         "id": "Adamant_Rifle",
         "name": "Adamant Rifle",
-        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.2% chance for a barrel to be consumed per attack.",
+        "customDescription": "+30% Ranged Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/weapon_rifle_adamant.png",
@@ -3882,31 +4483,58 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 50
+            "level": 30
           }
         ],
         "equipmentStats": [
           {
             "key": "attackSpeed",
-            "value": 4000
+            "value": 3600
           },
           {
             "key": "rangedAttackBonus",
-            "value": 60
+            "value": 44
           },
           {
             "key": "rangedStrengthBonus",
-            "value": 180
+            "value": 88
           }
         ],
-        "modifiers": {
-          "rangedCritChance": 10,
-          "flatHiddenSkillLevelBasedOnLevels": [
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Gunpowder",
+                  "value": 1,
+                  "operator": "<"
+                },
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Pyrite_Chunk",
+                  "value": 1,
+                  "operator": "<"
+                }
+              ]
+            },
+            "modifiers": {
+              "cantAttack": 1
+            }
+          }
+        ],
+        "consumesItemOn": {
+          "itemID": "ntmyk:Gunpowder",
+          "chance": 0.3,
+          "matchers": [
             {
-              "skillID": "melvorD:Ranged",
-              "value": 50
+              "type": "PlayerAttack"
             }
           ]
+        },
+        "modifiers": {
+          "rangedAccuracyRating": 30
         },
         "itemType": "Weapon",
         "attackType": "ranged",
@@ -3915,7 +4543,7 @@
       {
         "id": "Rune_Rifle",
         "name": "Rune Rifle",
-        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.2% chance for a barrel to be consumed per attack.",
+        "customDescription": "+30% Ranged Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/weapon_rifle_rune.png",
@@ -3934,7 +4562,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 60
+            "level": 40
           }
         ],
         "cantEquipWith": [
@@ -3953,7 +4581,7 @@
         "equipmentStats": [
           {
             "key": "attackSpeed",
-            "value": 4000
+            "value": 3600
           },
           {
             "key": "rangedAttackBonus",
@@ -3961,17 +4589,44 @@
           },
           {
             "key": "rangedStrengthBonus",
-            "value": 210
+            "value": 100
           }
         ],
-        "modifiers": {
-          "rangedCritChance": 10,
-          "flatHiddenSkillLevelBasedOnLevels": [
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Gunpowder",
+                  "value": 1,
+                  "operator": "<"
+                },
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Pyrite_Chunk",
+                  "value": 1,
+                  "operator": "<"
+                }
+              ]
+            },
+            "modifiers": {
+              "cantAttack": 1
+            }
+          }
+        ],
+        "consumesItemOn": {
+          "itemID": "ntmyk:Gunpowder",
+          "chance": 0.3,
+          "matchers": [
             {
-              "skillID": "melvorD:Ranged",
-              "value": 50
+              "type": "PlayerAttack"
             }
           ]
+        },
+        "modifiers": {
+          "rangedAccuracyRating": 30
         },
         "itemType": "Weapon",
         "attackType": "ranged",
@@ -3980,7 +4635,7 @@
       {
         "id": "Silver_Rifle",
         "name": "Silver Rifle",
-        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.2% chance for a barrel to be consumed per attack.<br>+25% Ranged Max Hit against Silver-Vulnerable monsters.",
+        "customDescription": "+30% Ranged Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.<br>+25% Ranged Max Hit against Silver-Vulnerable monsters.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/weapon_rifle_silver.png",
@@ -4012,33 +4667,49 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 70
+            "level": 50
           }
         ],
         "equipmentStats": [
           {
             "key": "attackSpeed",
-            "value": 4000
+            "value": 3600
           },
           {
             "key": "rangedAttackBonus",
-            "value": 90
+            "value": 104
           },
           {
             "key": "rangedStrengthBonus",
-            "value": 270
+            "value": 113
           }
         ],
         "modifiers": {
-          "rangedCritChance": 10,
-          "flatHiddenSkillLevelBasedOnLevels": [
-            {
-              "skillID": "melvorD:Ranged",
-              "value": 50
-            }
-          ]
+          "rangedAccuracyRating": 30
         },
         "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Gunpowder",
+                  "value": 1,
+                  "operator": "<"
+                },
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Pyrite_Chunk",
+                  "value": 1,
+                  "operator": "<"
+                }
+              ]
+            },
+            "modifiers": {
+              "cantAttack": 1
+            }
+          },
           {
             "condition": {
               "effectID": "ntmyk:VulnerabilitySilver",
@@ -4050,6 +4721,15 @@
             }
           }
         ],
+        "consumesItemOn": {
+          "itemID": "ntmyk:Gunpowder",
+          "chance": 0.3,
+          "matchers": [
+            {
+              "type": "PlayerAttack"
+            }
+          ]
+        },
         "itemType": "Weapon",
         "attackType": "ranged",
         "ammoTypeRequired": "Bolts"
@@ -4057,7 +4737,7 @@
       {
         "id": "Dragon_Rifle",
         "name": "Dragon Rifle",
-        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.2% chance for a barrel to be consumed per attack.",
+        "customDescription": "+30% Ranged Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/weapon_rifle_dragon.png",
@@ -4089,31 +4769,58 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Ranged",
-            "level": 80
+            "level": 60
           }
         ],
         "equipmentStats": [
           {
             "key": "attackSpeed",
-            "value": 4000
+            "value": 3600
           },
           {
             "key": "rangedAttackBonus",
-            "value": 100
+            "value": 117
           },
           {
             "key": "rangedStrengthBonus",
-            "value": 300
+            "value": 125
           }
         ],
-        "modifiers": {
-          "rangedCritChance": 10,
-          "flatHiddenSkillLevelBasedOnLevels": [
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Gunpowder",
+                  "value": 1,
+                  "operator": "<"
+                },
+                {
+                  "type": "BankItem",
+                  "itemID": "ntmyk:Pyrite_Chunk",
+                  "value": 1,
+                  "operator": "<"
+                }
+              ]
+            },
+            "modifiers": {
+              "cantAttack": 1
+            }
+          }
+        ],
+        "consumesItemOn": {
+          "itemID": "ntmyk:Gunpowder",
+          "chance": 0.3,
+          "matchers": [
             {
-              "skillID": "melvorD:Ranged",
-              "value": 50
+              "type": "PlayerAttack"
             }
           ]
+        },
+        "modifiers": {
+          "rangedAccuracyRating": 30
         },
         "itemType": "Weapon",
         "attackType": "ranged",
