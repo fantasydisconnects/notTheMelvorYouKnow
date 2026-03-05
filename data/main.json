@@ -1503,10 +1503,24 @@
         "category": "Mining",
         "type": "Ore",
         "media": "assets/bank/item_ore_pyrite.png",
+        "customDescription": "Refine into chunks.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 15
+      },
+      {
+        "itemType": "Item",
+        "id": "Chunk_Pyrite",
+        "name": "Pyrite Chunk",
+        "category": "Mining",
+        "type": "Ore",
+        "media": "assets/bank/item_chunk_pyrite.png",
+        "customDescription": "Useful for starting fires.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 30
       },
       {
         "itemType": "Item",
@@ -1515,6 +1529,7 @@
         "category": "Mining",
         "type": "Ore",
         "media": "assets/bank/item_saltpetre.png",
+        "customDescription": "Used in the creation of explosives…among other things.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -1527,10 +1542,129 @@
         "category": "Mining",
         "type": "Ore",
         "media": "assets/bank/item_sulphur.png",
+        "customDescription": "Stinky. Used in the creation of explosives…among other things.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 45
+      },
+      {
+        "itemType": "Item",
+        "id": "Gunpowder",
+        "name": "Gunpowder",
+        "customDescription": "Volatile!",
+        "category": "Combat",
+        "type": "Combat",
+        "media": "assets/bank/item_gunpowder.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 5000
+      },
+      {
+        "itemType": "Compost",
+        "compostValue": 30,
+        "harvestBonus": 30,
+        "buttonStyle": "btn-warning",
+        "barStyle": "bg-farming",
+        "id": "Insecticide",
+        "name": "Insecticide",
+        "category": "Farming",
+        "type": "Miscellaneous",
+        "media": "assets/bank/compost_insecticide.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 375,
+        "compostAllCost": {
+          "id": "melvorD:GP",
+          "quantity": 1000
+        },
+        "customDescription": "Used to ward off bugs in Farming. Each use of Insecticide on a Farming Plot increases the crop survival chance and crop harvest by +30%."
+      },
+      {
+        "itemType": "Item",
+        "id": "Charcoal",
+        "name": "Charcoal",
+        "category": "Firemaking",
+        "type": "Misc",
+        "media": "assets/bank/item_charcoal.png",
+        "customDescription": "A rather unassuming, but useful, ingredient.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1
+      },
+      {
+        "itemType": "Item",
+        "id": "Spider_Silk",
+        "name": "Spider Silk",
+        "category": "Crafting",
+        "type": "Misc",
+        "media": "assets/bank/item_spider_silk.png",
+        "customDescription": "Sticky and tough. Can make this into string?",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 10
+      },
+      {
+        "itemType": "Item",
+        "id": "String",
+        "name": "String",
+        "category": "Crafting",
+        "type": "Misc",
+        "media": "assets/bank/item_string.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 50
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Dynamite",
+        "name": "Dynamite",
+        "category": "Mining",
+        "type": "Equipment",
+        "media": "assets/bank/item_dynamite.png",
+        "customDescription": "x5 Mining Node Respawn Interval in exchange for x2 Items from Mining and -100% Mining Interval",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 600,
+        "tier": "none",
+        "validSlots": [
+          "Consumable"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "skillID": "melvorD:Mining",
+            "level": 60,
+            "type": "SkillLevel"
+          }
+        ],
+        "equipmentStats": [],
+        "modifiers": {
+          "miningNodeRespawnInterval": 500,
+          "skillInterval": [
+            {
+              "skillID": "melvorD:Mining",
+              "value": -100
+            }
+          ],
+          "doubleItemsSkill": [
+            {
+              "skillID": "melvorD:Mining",
+              "value": 2
+            }
+          ]
+        },
+        "consumesOn": [
+          {
+            "type": "MiningAction"
+          }
+        ]
       },
       {
         "itemType": "Equipment",
@@ -2240,6 +2374,7 @@
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/offhand_pistol_bronze.png",
+        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -2283,7 +2418,29 @@
             "key": "rangedStrengthBonus",
             "value": 10
           }
-        ]
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "BankItem",
+              "itemID": "ntmyk:Gunpowder",
+              "value": 1,
+              "operator": "<"
+            },
+            "modifiers": {
+              "cantAttack": 1
+            }
+          }
+        ],
+        "consumesItemOn": {
+          "itemID": "ntmyk:Gunpowder",
+          "chance": 0.1,
+          "matchers": [
+            {
+              "type": "PlayerAttack"
+            }
+          ]
+        }
       },
       {
         "itemType": "Weapon",
@@ -2291,6 +2448,7 @@
         "ammoTypeRequired": "Bolts",
         "id": "Iron_Pistol",
         "name": "Iron Pistol",
+        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/offhand_pistol_iron.png",
@@ -2337,7 +2495,29 @@
             "key": "rangedStrengthBonus",
             "value": 15
           }
-        ]
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "BankItem",
+              "itemID": "ntmyk:Gunpowder",
+              "value": 1,
+              "operator": "<"
+            },
+            "modifiers": {
+              "cantAttack": 1
+            }
+          }
+        ],
+        "consumesItemOn": {
+          "itemID": "ntmyk:Gunpowder",
+          "chance": 0.1,
+          "matchers": [
+            {
+              "type": "PlayerAttack"
+            }
+          ]
+        }
       },
       {
         "itemType": "Weapon",
@@ -2345,6 +2525,7 @@
         "ammoTypeRequired": "Bolts",
         "id": "Steel_Pistol",
         "name": "Steel Pistol",
+        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/offhand_pistol_steel.png",
@@ -2391,7 +2572,29 @@
             "key": "rangedStrengthBonus",
             "value": 25
           }
-        ]
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "BankItem",
+              "itemID": "ntmyk:Gunpowder",
+              "value": 1,
+              "operator": "<"
+            },
+            "modifiers": {
+              "cantAttack": 1
+            }
+          }
+        ],
+        "consumesItemOn": {
+          "itemID": "ntmyk:Gunpowder",
+          "chance": 0.1,
+          "matchers": [
+            {
+              "type": "PlayerAttack"
+            }
+          ]
+        }
       },
       {
         "itemType": "Weapon",
@@ -2399,6 +2602,7 @@
         "ammoTypeRequired": "Bolts",
         "id": "Black_Pistol",
         "name": "Black Pistol",
+        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/offhand_pistol_black.png",
@@ -2445,7 +2649,29 @@
             "key": "rangedStrengthBonus",
             "value": 40
           }
-        ]
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "BankItem",
+              "itemID": "ntmyk:Gunpowder",
+              "value": 1,
+              "operator": "<"
+            },
+            "modifiers": {
+              "cantAttack": 1
+            }
+          }
+        ],
+        "consumesItemOn": {
+          "itemID": "ntmyk:Gunpowder",
+          "chance": 0.1,
+          "matchers": [
+            {
+              "type": "PlayerAttack"
+            }
+          ]
+        }
       },
       {
         "itemType": "Weapon",
@@ -2453,6 +2679,7 @@
         "ammoTypeRequired": "Bolts",
         "id": "Mithril_Pistol",
         "name": "Mithril Pistol",
+        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/offhand_pistol_mithril.png",
@@ -2499,7 +2726,29 @@
             "key": "rangedStrengthBonus",
             "value": 30
           }
-        ]
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "BankItem",
+              "itemID": "ntmyk:Gunpowder",
+              "value": 1,
+              "operator": "<"
+            },
+            "modifiers": {
+              "cantAttack": 1
+            }
+          }
+        ],
+        "consumesItemOn": {
+          "itemID": "ntmyk:Gunpowder",
+          "chance": 0.1,
+          "matchers": [
+            {
+              "type": "PlayerAttack"
+            }
+          ]
+        }
       },
       {
         "itemType": "Weapon",
@@ -2507,6 +2756,7 @@
         "ammoTypeRequired": "Bolts",
         "id": "Adamant_Pistol",
         "name": "Adamant Pistol",
+        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/offhand_pistol_adamant.png",
@@ -2553,7 +2803,29 @@
             "key": "rangedStrengthBonus",
             "value": 40
           }
-        ]
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "BankItem",
+              "itemID": "ntmyk:Gunpowder",
+              "value": 1,
+              "operator": "<"
+            },
+            "modifiers": {
+              "cantAttack": 1
+            }
+          }
+        ],
+        "consumesItemOn": {
+          "itemID": "ntmyk:Gunpowder",
+          "chance": 0.1,
+          "matchers": [
+            {
+              "type": "PlayerAttack"
+            }
+          ]
+        }
       },
       {
         "itemType": "Weapon",
@@ -2561,6 +2833,7 @@
         "ammoTypeRequired": "Bolts",
         "id": "Rune_Pistol",
         "name": "Rune Pistol",
+        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/offhand_pistol_rune.png",
@@ -2607,7 +2880,29 @@
             "key": "rangedStrengthBonus",
             "value": 60
           }
-        ]
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "BankItem",
+              "itemID": "ntmyk:Gunpowder",
+              "value": 1,
+              "operator": "<"
+            },
+            "modifiers": {
+              "cantAttack": 1
+            }
+          }
+        ],
+        "consumesItemOn": {
+          "itemID": "ntmyk:Gunpowder",
+          "chance": 0.1,
+          "matchers": [
+            {
+              "type": "PlayerAttack"
+            }
+          ]
+        }
       },
       {
         "itemType": "Weapon",
@@ -2615,6 +2910,7 @@
         "ammoTypeRequired": "Bolts",
         "id": "Silver_Pistol",
         "name": "Silver Pistol",
+        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.<br>+25% Ranged Max Hit against Silver-Vulnerable monsters.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/offhand_pistol_silver.png",
@@ -2665,6 +2961,17 @@
         "conditionalModifiers": [
           {
             "condition": {
+              "type": "BankItem",
+              "itemID": "ntmyk:Gunpowder",
+              "value": 1,
+              "operator": "<"
+            },
+            "modifiers": {
+              "cantAttack": 1
+            }
+          },
+          {
+            "condition": {
               "effectID": "ntmyk:VulnerabilitySilver",
               "character": "Enemy",
               "type": "CombatEffect"
@@ -2673,7 +2980,16 @@
               "rangedMaxHit": 25
             }
           }
-        ]
+        ],
+        "consumesItemOn": {
+          "itemID": "ntmyk:Gunpowder",
+          "chance": 0.1,
+          "matchers": [
+            {
+              "type": "PlayerAttack"
+            }
+          ]
+        }
       },
       {
         "itemType": "Weapon",
@@ -2681,6 +2997,7 @@
         "ammoTypeRequired": "Bolts",
         "id": "Dragon_Pistol",
         "name": "Dragon Pistol",
+        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/offhand_pistol_dragon.png",
@@ -2727,12 +3044,35 @@
             "key": "rangedStrengthBonus",
             "value": 80
           }
-        ]
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "BankItem",
+              "itemID": "ntmyk:Gunpowder",
+              "value": 1,
+              "operator": "<"
+            },
+            "modifiers": {
+              "cantAttack": 1
+            }
+          }
+        ],
+        "consumesItemOn": {
+          "itemID": "ntmyk:Gunpowder",
+          "chance": 0.1,
+          "matchers": [
+            {
+              "type": "PlayerAttack"
+            }
+          ]
+        }
       },
       {
         "itemType": "Equipment",
         "id": "Bronze_Pistol_Offhand",
         "name": "Bronze Pistol (Offhand)",
+        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Offhand Weapon",
         "media": "assets/bank/offhand_pistol_bronze.png",
@@ -2781,6 +3121,7 @@
         "itemType": "Equipment",
         "id": "Iron_Pistol_Offhand",
         "name": "Iron Pistol (Offhand)",
+        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Offhand Weapon",
         "media": "assets/bank/offhand_pistol_iron.png",
@@ -2829,6 +3170,7 @@
         "itemType": "Equipment",
         "id": "Steel_Pistol_Offhand",
         "name": "Steel Pistol (Offhand)",
+        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Offhand Weapon",
         "media": "assets/bank/offhand_pistol_steel.png",
@@ -2877,6 +3219,7 @@
         "itemType": "Equipment",
         "id": "Black_Pistol_Offhand",
         "name": "Black Pistol (Offhand)",
+        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Offhand Weapon",
         "media": "assets/bank/offhand_pistol_black.png",
@@ -2925,6 +3268,7 @@
         "itemType": "Equipment",
         "id": "Mithril_Pistol_Offhand",
         "name": "Mithril Pistol (Offhand)",
+        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Offhand Weapon",
         "media": "assets/bank/offhand_pistol_mithril.png",
@@ -2973,6 +3317,7 @@
         "itemType": "Equipment",
         "id": "Adamant_Pistol_Offhand",
         "name": "Adamant Pistol (Offhand)",
+        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Offhand Weapon",
         "media": "assets/bank/offhand_pistol_adamant.png",
@@ -3021,6 +3366,7 @@
         "itemType": "Equipment",
         "id": "Rune_Pistol_Offhand",
         "name": "Rune Pistol (Offhand)",
+        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Offhand Weapon",
         "media": "assets/bank/offhand_pistol_rune.png",
@@ -3069,6 +3415,7 @@
         "itemType": "Equipment",
         "id": "Silver_Pistol_Offhand",
         "name": "Silver Pistol (Offhand)",
+        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.<br>+10% Maximum Hit against Silver-Vulnerable monsters.",
         "category": "Combat",
         "type": "Offhand Weapon",
         "media": "assets/bank/offhand_pistol_silver.png",
@@ -3120,7 +3467,7 @@
               "type": "CombatEffect"
             },
             "modifiers": {
-              "rangedMaxHit": 25
+              "maxHit": 10
             }
           }
         ]
@@ -3129,6 +3476,7 @@
         "itemType": "Equipment",
         "id": "Dragon_Pistol_Offhand",
         "name": "Dragon Pistol (Offhand)",
+        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.1% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Offhand Weapon",
         "media": "assets/bank/offhand_pistol_dragon.png",
@@ -3176,6 +3524,7 @@
       {
         "id": "Bronze_Rifle",
         "name": "Bronze Rifle",
+        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.2% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/weapon_rifle_bronze.png",
@@ -3241,6 +3590,7 @@
       {
         "id": "Iron_Rifle",
         "name": "Iron Rifle",
+        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.2% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/weapon_rifle_iron.png",
@@ -3305,6 +3655,7 @@
       {
         "id": "Steel_Rifle",
         "name": "Steel Rifle",
+        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.2% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/weapon_rifle_steel.png",
@@ -3369,6 +3720,7 @@
       {
         "id": "Black_Rifle",
         "name": "Black Rifle",
+        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.2% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/weapon_rifle_black.png",
@@ -3433,6 +3785,7 @@
       {
         "id": "Mithril_Rifle",
         "name": "Mithril Rifle",
+        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.2% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/weapon_rifle_mithril.png",
@@ -3497,6 +3850,7 @@
       {
         "id": "Adamant_Rifle",
         "name": "Adamant Rifle",
+        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.2% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/weapon_rifle_adamant.png",
@@ -3561,6 +3915,7 @@
       {
         "id": "Rune_Rifle",
         "name": "Rune Rifle",
+        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.2% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/weapon_rifle_rune.png",
@@ -3625,6 +3980,7 @@
       {
         "id": "Silver_Rifle",
         "name": "Silver Rifle",
+        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.2% chance for a barrel to be consumed per attack.<br>+25% Ranged Max Hit against Silver-Vulnerable monsters.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/weapon_rifle_silver.png",
@@ -3701,6 +4057,7 @@
       {
         "id": "Dragon_Rifle",
         "name": "Dragon Rifle",
+        "customDescription": "Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.2% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/weapon_rifle_dragon.png",
