@@ -1497,6 +1497,42 @@
     ],
     "items": [
       {
+        "itemType": "Item",
+        "id": "Pyrite_Ore",
+        "name": "Pyrite Ore",
+        "category": "Mining",
+        "type": "Ore",
+        "media": "assets/bank/item_ore_pyrite.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 15
+      },
+      {
+        "itemType": "Item",
+        "id": "Saltpetre",
+        "name": "Saltpetre",
+        "category": "Mining",
+        "type": "Ore",
+        "media": "assets/bank/item_saltpetre.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 35
+      },
+      {
+        "itemType": "Item",
+        "id": "Sulphur",
+        "name": "Sulphur",
+        "category": "Mining",
+        "type": "Ore",
+        "media": "assets/bank/item_sulphur.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 45
+      },
+      {
         "itemType": "Equipment",
         "id": "Bronze_Shot",
         "name": "Bronze Shot",
@@ -11870,6 +11906,52 @@
             {
               "id": "FirearmComponents",
               "name": "FirearmComponents"
+            }
+          ]
+        }
+      },
+      {
+        "skillID": "melvorD:Mining",
+        "data": {
+          "rockData": [
+            {
+              "id": "Pyrite",
+              "name": "Pyrite",
+              "media": "assets/skills/mining/rock_pyrite.png",
+              "level": 15,
+              "baseExperience": 14,
+              "productId": "ntmyk:Pyrite",
+              "baseRespawnInterval": 5000,
+              "baseQuantity": 1,
+              "hasPassiveRegen": true,
+              "category": "melvorD:Ore",
+              "giveGems": true
+            },
+            {
+              "id": "Sulphur",
+              "name": "Sulphur Deposit",
+              "media": "assets/skills/mining/deposit_sulphur.png",
+              "level": 50,
+              "baseExperience": 60,
+              "productId": "ntmyk:Sulphur",
+              "baseRespawnInterval": 30000,
+              "baseQuantity": 2,
+              "hasPassiveRegen": true,
+              "category": "melvorD:Ore",
+              "giveGems": true
+            },
+            {
+              "id": "Saltpetre",
+              "name": "Saltpetre Deposit",
+              "media": "assets/skills/mining/deposit_saltpetre.png",
+              "level": 65,
+              "baseExperience": 70,
+              "productId": "ntmyk:Unrefined_Saltpetre",
+              "baseRespawnInterval": 40000,
+              "baseQuantity": 2,
+              "hasPassiveRegen": true,
+              "category": "melvorD:Ore",
+              "giveGems": true
             }
           ]
         }

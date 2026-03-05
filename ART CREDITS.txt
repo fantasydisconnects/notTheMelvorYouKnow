@@ -1,0 +1,11 @@
+ART CREDITS
+
+Flaticon (Premium Subscription—No Attribution Required)
+Arquebus art used with permission via CC-BY-2.0 and edited into a 2D Flat Vector (https://www.flickr.com/photos/alisdair/2855207485/in/photostream)
+
+AI DISCLAIMER
+This project does not and will not utilize generative AI for ANY of its art, code, data, or anything that would otherwise be expected of a real human to make. Any AI used is strictly for the purposes of simplifying the colours of non-vector images used to aid in manually transforming them into simple flat vectors. Non-vector images are then painstakingly hand-traced and coloured using GIMP after such processes are used. Any AI programs or tools used and their purposes in this project are listed under the AI TOOLS section.
+
+AI TOOLS
+ChatGPT—to ASSIST (emphasis on assist) in performing redundant and/or tedious tasks, such as transferring data to a Markdown Table for the Wiki, or creating multiple similar JSON objects that would take two to three times as long to do by hand, and be more prone to errors.
+Vectorizer.ai and Vectormagic.ai—to reduce and simplify the colours of non-vector images to speed up the process of manually colouring and shaping images into 2d flat vectors that visually fit into Melvor.
