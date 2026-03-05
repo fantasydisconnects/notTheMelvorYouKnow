@@ -590,22 +590,22 @@
           "ntmyk:Yew_Pistol_Frame",
           "ntmyk:Magic_Pistol_Frame",
           "ntmyk:Redwood_Pistol_Frame",
-          "ntmyk:Bronze_Rifle_Barrel",
-          "ntmyk:Iron_Rifle_Barrel",
-          "ntmyk:Steel_Rifle_Barrel",
-          "ntmyk:Mithril_Rifle_Barrel",
-          "ntmyk:Adamant_Rifle_Barrel",
-          "ntmyk:Rune_Rifle_Barrel",
-          "ntmyk:Silver_Rifle_Barrel",
-          "ntmyk:Dragon_Rifle_Barrel",
-          "ntmyk:Wooden_Rifle_Stock",
-          "ntmyk:Oak_Rifle_Stock",
-          "ntmyk:Willow_Rifle_Stock",
-          "ntmyk:Maple_Rifle_Stock",
-          "ntmyk:Mahogany_Rifle_Stock",
-          "ntmyk:Yew_Rifle_Stock",
-          "ntmyk:Magic_Rifle_Stock",
-          "ntmyk:Redwood_Rifle_Stock"
+          "ntmyk:Bronze_Arquebus_Barrel",
+          "ntmyk:Iron_Arquebus_Barrel",
+          "ntmyk:Steel_Arquebus_Barrel",
+          "ntmyk:Mithril_Arquebus_Barrel",
+          "ntmyk:Adamant_Arquebus_Barrel",
+          "ntmyk:Rune_Arquebus_Barrel",
+          "ntmyk:Silver_Arquebus_Barrel",
+          "ntmyk:Dragon_Arquebus_Barrel",
+          "ntmyk:Wooden_Arquebus_Stock",
+          "ntmyk:Oak_Arquebus_Stock",
+          "ntmyk:Willow_Arquebus_Stock",
+          "ntmyk:Maple_Arquebus_Stock",
+          "ntmyk:Mahogany_Arquebus_Stock",
+          "ntmyk:Yew_Arquebus_Stock",
+          "ntmyk:Magic_Arquebus_Stock",
+          "ntmyk:Redwood_Arquebus_Stock"
         ]
       },
       {
@@ -621,15 +621,15 @@
           "ntmyk:Rune_Pistol",
           "ntmyk:Silver_Pistol",
           "ntmyk:Dragon_Pistol",
-          "ntmyk:Bronze_Rifle",
-          "ntmyk:Iron_Rifle",
-          "ntmyk:Steel_Rifle",
-          "ntmyk:Black_Rifle",
-          "ntmyk:Mithril_Rifle",
-          "ntmyk:Adamant_Rifle",
-          "ntmyk:Rune_Rifle",
-          "ntmyk:Silver_Rifle",
-          "ntmyk:Dragon_Rifle"
+          "ntmyk:Bronze_Arquebus",
+          "ntmyk:Iron_Arquebus",
+          "ntmyk:Steel_Arquebus",
+          "ntmyk:Black_Arquebus",
+          "ntmyk:Mithril_Arquebus",
+          "ntmyk:Adamant_Arquebus",
+          "ntmyk:Rune_Arquebus",
+          "ntmyk:Silver_Arquebus",
+          "ntmyk:Dragon_Arquebus"
         ]
       },
       {
@@ -2176,11 +2176,11 @@
       },
       {
         "itemType": "Item",
-        "id": "Bronze_Rifle_Barrel",
-        "name": "Bronze Rifle Barrel",
+        "id": "Bronze_Arquebus_Barrel",
+        "name": "Bronze Arquebus Barrel",
         "category": "Smithing",
-        "type": "Rifle",
-        "media": "assets/bank/rifle_barrel_bronze.png",
+        "type": "Arquebus",
+        "media": "assets/bank/arquebus_barrel_bronze.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -2188,11 +2188,11 @@
       },
       {
         "itemType": "Item",
-        "id": "Iron_Rifle_Barrel",
-        "name": "Iron Rifle Barrel",
+        "id": "Iron_Arquebus_Barrel",
+        "name": "Iron Arquebus Barrel",
         "category": "Smithing",
-        "type": "Rifle",
-        "media": "assets/bank/rifle_barrel_iron.png",
+        "type": "Arquebus",
+        "media": "assets/bank/arquebus_barrel_iron.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -2200,11 +2200,11 @@
       },
       {
         "itemType": "Item",
-        "id": "Steel_Rifle_Barrel",
-        "name": "Steel Rifle Barrel",
+        "id": "Steel_Arquebus_Barrel",
+        "name": "Steel Arquebus Barrel",
         "category": "Smithing",
-        "type": "Rifle",
-        "media": "assets/bank/rifle_barrel_steel.png",
+        "type": "Arquebus",
+        "media": "assets/bank/arquebus_barrel_steel.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -2212,11 +2212,11 @@
       },
       {
         "itemType": "Item",
-        "id": "Mithril_Rifle_Barrel",
-        "name": "Mithril Rifle Barrel",
+        "id": "Mithril_Arquebus_Barrel",
+        "name": "Mithril Arquebus Barrel",
         "category": "Smithing",
-        "type": "Rifle",
-        "media": "assets/bank/rifle_barrel_mithril.png",
+        "type": "Arquebus",
+        "media": "assets/bank/arquebus_barrel_mithril.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -2224,11 +2224,11 @@
       },
       {
         "itemType": "Item",
-        "id": "Adamant_Rifle_Barrel",
-        "name": "Adamant Rifle Barrel",
+        "id": "Adamant_Arquebus_Barrel",
+        "name": "Adamant Arquebus Barrel",
         "category": "Smithing",
-        "type": "Rifle",
-        "media": "assets/bank/rifle_barrel_adamant.png",
+        "type": "Arquebus",
+        "media": "assets/bank/arquebus_barrel_adamant.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -2236,11 +2236,11 @@
       },
       {
         "itemType": "Item",
-        "id": "Rune_Rifle_Barrel",
-        "name": "Rune Rifle Barrel",
+        "id": "Rune_Arquebus_Barrel",
+        "name": "Rune Arquebus Barrel",
         "category": "Smithing",
-        "type": "Rifle",
-        "media": "assets/bank/rifle_barrel_rune.png",
+        "type": "Arquebus",
+        "media": "assets/bank/arquebus_barrel_rune.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -2248,11 +2248,11 @@
       },
       {
         "itemType": "Item",
-        "id": "Silver_Rifle_Barrel",
-        "name": "Silver Rifle Barrel",
+        "id": "Silver_Arquebus_Barrel",
+        "name": "Silver Arquebus Barrel",
         "category": "Smithing",
-        "type": "Rifle",
-        "media": "assets/bank/rifle_barrel_silver.png",
+        "type": "Arquebus",
+        "media": "assets/bank/arquebus_barrel_silver.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -2260,11 +2260,11 @@
       },
       {
         "itemType": "Item",
-        "id": "Dragon_Rifle_Barrel",
-        "name": "Dragon Rifle Barrel",
+        "id": "Dragon_Arquebus_Barrel",
+        "name": "Dragon Arquebus Barrel",
         "category": "Smithing",
-        "type": "Rifle",
-        "media": "assets/bank/rifle_barrel_dragon.png",
+        "type": "Arquebus",
+        "media": "assets/bank/arquebus_barrel_dragon.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -2272,11 +2272,11 @@
       },
       {
         "itemType": "Item",
-        "id": "Wooden_Rifle_Stock",
-        "name": "Wooden Rifle Stock",
+        "id": "Wooden_Arquebus_Stock",
+        "name": "Wooden Arquebus Stock",
         "category": "Fletching",
-        "type": "Rifle",
-        "media": "assets/bank/rifle_stock_wooden.png",
+        "type": "Arquebus",
+        "media": "assets/bank/arquebus_stock_wooden.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -2284,11 +2284,11 @@
       },
       {
         "itemType": "Item",
-        "id": "Oak_Rifle_Stock",
-        "name": "Oak Rifle Stock",
+        "id": "Oak_Arquebus_Stock",
+        "name": "Oak Arquebus Stock",
         "category": "Fletching",
-        "type": "Rifle",
-        "media": "assets/bank/rifle_stock_oak.png",
+        "type": "Arquebus",
+        "media": "assets/bank/arquebus_stock_oak.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -2296,11 +2296,11 @@
       },
       {
         "itemType": "Item",
-        "id": "Willow_Rifle_Stock",
-        "name": "Willow Rifle Stock",
+        "id": "Willow_Arquebus_Stock",
+        "name": "Willow Arquebus Stock",
         "category": "Fletching",
-        "type": "Rifle",
-        "media": "assets/bank/rifle_stock_willow.png",
+        "type": "Arquebus",
+        "media": "assets/bank/arquebus_stock_willow.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -2308,11 +2308,11 @@
       },
       {
         "itemType": "Item",
-        "id": "Maple_Rifle_Stock",
-        "name": "Maple Rifle Stock",
+        "id": "Maple_Arquebus_Stock",
+        "name": "Maple Arquebus Stock",
         "category": "Fletching",
-        "type": "Rifle",
-        "media": "assets/bank/rifle_stock_maple.png",
+        "type": "Arquebus",
+        "media": "assets/bank/arquebus_stock_maple.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -2320,11 +2320,11 @@
       },
       {
         "itemType": "Item",
-        "id": "Mahogany_Rifle_Stock",
-        "name": "Mahogany Rifle Stock",
+        "id": "Mahogany_Arquebus_Stock",
+        "name": "Mahogany Arquebus Stock",
         "category": "Fletching",
-        "type": "Rifle",
-        "media": "assets/bank/rifle_stock_mahogany.png",
+        "type": "Arquebus",
+        "media": "assets/bank/arquebus_stock_mahogany.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -2332,11 +2332,11 @@
       },
       {
         "itemType": "Item",
-        "id": "Yew_Rifle_Stock",
-        "name": "Yew Rifle Stock",
+        "id": "Yew_Arquebus_Stock",
+        "name": "Yew Arquebus Stock",
         "category": "Fletching",
-        "type": "Rifle",
-        "media": "assets/bank/rifle_stock_yew.png",
+        "type": "Arquebus",
+        "media": "assets/bank/arquebus_stock_yew.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -2344,11 +2344,11 @@
       },
       {
         "itemType": "Item",
-        "id": "Magic_Rifle_Stock",
-        "name": "Magic Rifle Stock",
+        "id": "Magic_Arquebus_Stock",
+        "name": "Magic Arquebus Stock",
         "category": "Fletching",
-        "type": "Rifle",
-        "media": "assets/bank/rifle_stock_magic.png",
+        "type": "Arquebus",
+        "media": "assets/bank/arquebus_stock_magic.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -2356,11 +2356,11 @@
       },
       {
         "itemType": "Item",
-        "id": "Redwood_Rifle_Stock",
-        "name": "Redwood Rifle Stock",
+        "id": "Redwood_Arquebus_Stock",
+        "name": "Redwood Arquebus Stock",
         "category": "Fletching",
-        "type": "Rifle",
-        "media": "assets/bank/rifle_stock_redwood.png",
+        "type": "Arquebus",
+        "media": "assets/bank/arquebus_stock_redwood.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -3989,12 +3989,12 @@
         }
       },
       {
-        "id": "Bronze_Rifle",
-        "name": "Bronze Rifle",
+        "id": "Bronze_Arquebus",
+        "name": "Bronze Arquebus",
         "customDescription": "+30% Ranged Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
-        "media": "assets/bank/weapon_rifle_bronze.png",
+        "media": "assets/bank/weapon_arquebus_bronze.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -4081,12 +4081,12 @@
         "ammoTypeRequired": "Bolts"
       },
       {
-        "id": "Iron_Rifle",
-        "name": "Iron Rifle",
+        "id": "Iron_Arquebus",
+        "name": "Iron Arquebus",
         "customDescription": "+30% Ranged Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
-        "media": "assets/bank/weapon_rifle_iron.png",
+        "media": "assets/bank/weapon_arquebus_iron.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -4173,12 +4173,12 @@
         "ammoTypeRequired": "Bolts"
       },
       {
-        "id": "Steel_Rifle",
-        "name": "Steel Rifle",
+        "id": "Steel_Arquebus",
+        "name": "Steel Arquebus",
         "customDescription": "+30% Ranged Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
-        "media": "assets/bank/weapon_rifle_steel.png",
+        "media": "assets/bank/weapon_arquebus_steel.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -4265,12 +4265,12 @@
         "ammoTypeRequired": "Bolts"
       },
       {
-        "id": "Black_Rifle",
-        "name": "Black Rifle",
+        "id": "Black_Arquebus",
+        "name": "Black Arquebus",
         "customDescription": "+30% Ranged Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
-        "media": "assets/bank/weapon_rifle_black.png",
+        "media": "assets/bank/weapon_arquebus_black.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -4357,12 +4357,12 @@
         "ammoTypeRequired": "Bolts"
       },
       {
-        "id": "Mithril_Rifle",
-        "name": "Mithril Rifle",
+        "id": "Mithril_Arquebus",
+        "name": "Mithril Arquebus",
         "customDescription": "+30% Ranged Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
-        "media": "assets/bank/weapon_rifle_mithril.png",
+        "media": "assets/bank/weapon_arquebus_mithril.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -4449,12 +4449,12 @@
         "ammoTypeRequired": "Bolts"
       },
       {
-        "id": "Adamant_Rifle",
-        "name": "Adamant Rifle",
+        "id": "Adamant_Arquebus",
+        "name": "Adamant Arquebus",
         "customDescription": "+30% Ranged Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
-        "media": "assets/bank/weapon_rifle_adamant.png",
+        "media": "assets/bank/weapon_arquebus_adamant.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -4541,12 +4541,12 @@
         "ammoTypeRequired": "Bolts"
       },
       {
-        "id": "Rune_Rifle",
-        "name": "Rune Rifle",
+        "id": "Rune_Arquebus",
+        "name": "Rune Arquebus",
         "customDescription": "+30% Ranged Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
-        "media": "assets/bank/weapon_rifle_rune.png",
+        "media": "assets/bank/weapon_arquebus_rune.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -4633,12 +4633,12 @@
         "ammoTypeRequired": "Bolts"
       },
       {
-        "id": "Silver_Rifle",
-        "name": "Silver Rifle",
+        "id": "Silver_Arquebus",
+        "name": "Silver Arquebus",
         "customDescription": "+30% Ranged Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.<br>+25% Ranged Max Hit against Silver-Vulnerable monsters.",
         "category": "Combat",
         "type": "Ranged Weapon",
-        "media": "assets/bank/weapon_rifle_silver.png",
+        "media": "assets/bank/weapon_arquebus_silver.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -4735,12 +4735,12 @@
         "ammoTypeRequired": "Bolts"
       },
       {
-        "id": "Dragon_Rifle",
-        "name": "Dragon Rifle",
+        "id": "Dragon_Arquebus",
+        "name": "Dragon Arquebus",
         "customDescription": "+30% Ranged Accuracy.<br>Requires Shot to fire.<br>Does not fire unless there is at least 1 barrel of Gunpowder and 1 Pyrite Chunk in your bank. 0.3% chance for a barrel to be consumed per attack.",
         "category": "Combat",
         "type": "Ranged Weapon",
-        "media": "assets/bank/weapon_rifle_dragon.png",
+        "media": "assets/bank/weapon_arquebus_dragon.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -12686,9 +12686,9 @@
               "currencyCosts": []
             },
             {
-              "id": "Wooden_Rifle_Stock",
+              "id": "Wooden_Arquebus_Stock",
               "level": 5,
-              "productID": "ntmyk:Wooden_Rifle_Stock",
+              "productID": "ntmyk:Wooden_Arquebus_Stock",
               "baseQuantity": 1,
               "baseExperience": 4,
               "categoryID": "ntmyk:Firearms",
@@ -12702,9 +12702,9 @@
               "subcategoryID": "ntmyk:FirearmComponents"
             },
             {
-              "id": "Oak_Rifle_Stock",
+              "id": "Oak_Arquebus_Stock",
               "level": 18,
-              "productID": "ntmyk:Oak_Rifle_Stock",
+              "productID": "ntmyk:Oak_Arquebus_Stock",
               "baseQuantity": 1,
               "baseExperience": 51,
               "categoryID": "ntmyk:Firearms",
@@ -12718,9 +12718,9 @@
               "subcategoryID": "ntmyk:FirearmComponents"
             },
             {
-              "id": "Willow_Rifle_Stock",
+              "id": "Willow_Arquebus_Stock",
               "level": 31,
-              "productID": "ntmyk:Willow_Rifle_Stock",
+              "productID": "ntmyk:Willow_Arquebus_Stock",
               "baseQuantity": 1,
               "baseExperience": 99,
               "categoryID": "ntmyk:Firearms",
@@ -12734,9 +12734,9 @@
               "subcategoryID": "ntmyk:FirearmComponents"
             },
             {
-              "id": "Maple_Rifle_Stock",
+              "id": "Maple_Arquebus_Stock",
               "level": 45,
-              "productID": "ntmyk:Maple_Rifle_Stock",
+              "productID": "ntmyk:Maple_Arquebus_Stock",
               "baseQuantity": 1,
               "baseExperience": 146,
               "categoryID": "ntmyk:Firearms",
@@ -12750,9 +12750,9 @@
               "subcategoryID": "ntmyk:FirearmComponents"
             },
             {
-              "id": "Mahogany_Rifle_Stock",
+              "id": "Mahogany_Arquebus_Stock",
               "level": 58,
-              "productID": "ntmyk:Mahogany_Rifle_Stock",
+              "productID": "ntmyk:Mahogany_Arquebus_Stock",
               "baseQuantity": 1,
               "baseExperience": 196,
               "categoryID": "ntmyk:Firearms",
@@ -12766,9 +12766,9 @@
               "subcategoryID": "ntmyk:FirearmComponents"
             },
             {
-              "id": "Yew_Rifle_Stock",
+              "id": "Yew_Arquebus_Stock",
               "level": 71,
-              "productID": "ntmyk:Yew_Rifle_Stock",
+              "productID": "ntmyk:Yew_Arquebus_Stock",
               "baseQuantity": 1,
               "baseExperience": 241,
               "categoryID": "ntmyk:Firearms",
@@ -12782,9 +12782,9 @@
               "subcategoryID": "ntmyk:FirearmComponents"
             },
             {
-              "id": "Magic_Rifle_Stock",
+              "id": "Magic_Arquebus_Stock",
               "level": 84,
-              "productID": "ntmyk:Magic_Rifle_Stock",
+              "productID": "ntmyk:Magic_Arquebus_Stock",
               "baseQuantity": 1,
               "baseExperience": 287,
               "categoryID": "ntmyk:Firearms",
@@ -12798,9 +12798,9 @@
               "subcategoryID": "ntmyk:FirearmComponents"
             },
             {
-              "id": "Redwood_Rifle_Stock",
+              "id": "Redwood_Arquebus_Stock",
               "level": 97,
-              "productID": "ntmyk:Redwood_Rifle_Stock",
+              "productID": "ntmyk:Redwood_Arquebus_Stock",
               "baseQuantity": 1,
               "baseExperience": 332,
               "categoryID": "ntmyk:Firearms",
@@ -12814,152 +12814,152 @@
               "subcategoryID": "ntmyk:FirearmComponents"
             },
             {
-              "id": "Bronze_Rifle",
+              "id": "Bronze_Arquebus",
               "level": 5,
-              "productID": "ntmyk:Bronze_Rifle",
+              "productID": "ntmyk:Bronze_Arquebus",
               "baseQuantity": 1,
               "baseExperience": 4,
               "categoryID": "ntmyk:Firearms",
               "itemCosts": [
                 {
-                  "id": "ntmyk:Wooden_Rifle_Stock",
+                  "id": "ntmyk:Wooden_Arquebus_Stock",
                   "quantity": 1
                 },
                 {
-                  "id": "ntmyk:Bronze_Rifle_Barrel",
+                  "id": "ntmyk:Bronze_Arquebus_Barrel",
                   "quantity": 1
                 }
               ],
               "currencyCosts": []
             },
             {
-              "id": "Iron_Rifle",
+              "id": "Iron_Arquebus",
               "level": 18,
-              "productID": "ntmyk:Iron_Rifle",
+              "productID": "ntmyk:Iron_Arquebus",
               "baseQuantity": 1,
               "baseExperience": 51,
               "categoryID": "ntmyk:Firearms",
               "itemCosts": [
                 {
-                  "id": "ntmyk:Oak_Rifle_Stock",
+                  "id": "ntmyk:Oak_Arquebus_Stock",
                   "quantity": 1
                 },
                 {
-                  "id": "ntmyk:Iron_Rifle_Barrel",
+                  "id": "ntmyk:Iron_Arquebus_Barrel",
                   "quantity": 1
                 }
               ],
               "currencyCosts": []
             },
             {
-              "id": "Steel_Rifle",
+              "id": "Steel_Arquebus",
               "level": 31,
-              "productID": "ntmyk:Steel_Rifle",
+              "productID": "ntmyk:Steel_Arquebus",
               "baseQuantity": 1,
               "baseExperience": 99,
               "categoryID": "ntmyk:Firearms",
               "itemCosts": [
                 {
-                  "id": "ntmyk:Willow_Rifle_Stock",
+                  "id": "ntmyk:Willow_Arquebus_Stock",
                   "quantity": 1
                 },
                 {
-                  "id": "ntmyk:Steel_Rifle_Barrel",
+                  "id": "ntmyk:Steel_Arquebus_Barrel",
                   "quantity": 1
                 }
               ],
               "currencyCosts": []
             },
             {
-              "id": "Mithril_Rifle",
+              "id": "Mithril_Arquebus",
               "level": 45,
-              "productID": "ntmyk:Mithril_Rifle",
+              "productID": "ntmyk:Mithril_Arquebus",
               "baseQuantity": 1,
               "baseExperience": 146,
               "categoryID": "ntmyk:Firearms",
               "itemCosts": [
                 {
-                  "id": "ntmyk:Maple_Rifle_Stock",
+                  "id": "ntmyk:Maple_Arquebus_Stock",
                   "quantity": 1
                 },
                 {
-                  "id": "ntmyk:Mithril_Rifle_Barrel",
+                  "id": "ntmyk:Mithril_Arquebus_Barrel",
                   "quantity": 1
                 }
               ],
               "currencyCosts": []
             },
             {
-              "id": "Adamant_Rifle",
+              "id": "Adamant_Arquebus",
               "level": 58,
-              "productID": "ntmyk:Adamant_Rifle",
+              "productID": "ntmyk:Adamant_Arquebus",
               "baseQuantity": 1,
               "baseExperience": 196,
               "categoryID": "ntmyk:Firearms",
               "itemCosts": [
                 {
-                  "id": "ntmyk:Mahogany_Rifle_Stock",
+                  "id": "ntmyk:Mahogany_Arquebus_Stock",
                   "quantity": 1
                 },
                 {
-                  "id": "ntmyk:Adamant_Rifle_Barrel",
+                  "id": "ntmyk:Adamant_Arquebus_Barrel",
                   "quantity": 1
                 }
               ],
               "currencyCosts": []
             },
             {
-              "id": "Rune_Rifle",
+              "id": "Rune_Arquebus",
               "level": 71,
-              "productID": "ntmyk:Rune_Rifle",
+              "productID": "ntmyk:Rune_Arquebus",
               "baseQuantity": 1,
               "baseExperience": 241,
               "categoryID": "ntmyk:Firearms",
               "itemCosts": [
                 {
-                  "id": "ntmyk:Yew_Rifle_Stock",
+                  "id": "ntmyk:Yew_Arquebus_Stock",
                   "quantity": 1
                 },
                 {
-                  "id": "ntmyk:Rune_Rifle_Barrel",
+                  "id": "ntmyk:Rune_Arquebus_Barrel",
                   "quantity": 1
                 }
               ],
               "currencyCosts": []
             },
             {
-              "id": "Silver_Rifle",
+              "id": "Silver_Arquebus",
               "level": 84,
-              "productID": "ntmyk:Silver_Rifle",
+              "productID": "ntmyk:Silver_Arquebus",
               "baseQuantity": 1,
               "baseExperience": 287,
               "categoryID": "ntmyk:Firearms",
               "itemCosts": [
                 {
-                  "id": "ntmyk:Magic_Rifle_Stock",
+                  "id": "ntmyk:Magic_Arquebus_Stock",
                   "quantity": 1
                 },
                 {
-                  "id": "ntmyk:Silver_Rifle_Barrel",
+                  "id": "ntmyk:Silver_Arquebus_Barrel",
                   "quantity": 1
                 }
               ],
               "currencyCosts": []
             },
             {
-              "id": "Dragon_Rifle",
+              "id": "Dragon_Arquebus",
               "level": 97,
-              "productID": "ntmyk:Dragon_Rifle",
+              "productID": "ntmyk:Dragon_Arquebus",
               "baseQuantity": 1,
               "baseExperience": 332,
               "categoryID": "ntmyk:Firearms",
               "itemCosts": [
                 {
-                  "id": "ntmyk:Redwood_Rifle_Stock",
+                  "id": "ntmyk:Redwood_Arquebus_Stock",
                   "quantity": 1
                 },
                 {
-                  "id": "ntmyk:Dragon_Rifle_Barrel",
+                  "id": "ntmyk:Dragon_Arquebus_Barrel",
                   "quantity": 1
                 }
               ],
@@ -13280,9 +13280,9 @@
               "currencyCosts": []
             },
             {
-              "id": "Bronze_Rifle_Barrel",
+              "id": "Bronze_Arquebus_Barrel",
               "level": 17,
-              "productID": "ntmyk:Bronze_Rifle_Barrel",
+              "productID": "ntmyk:Bronze_Arquebus_Barrel",
               "baseQuantity": 1,
               "baseExperience": 34,
               "categoryID": "melvorD:BronzeGear",
@@ -13296,9 +13296,9 @@
               "currencyCosts": []
             },
             {
-              "id": "Iron_Rifle_Barrel",
+              "id": "Iron_Arquebus_Barrel",
               "level": 26,
-              "productID": "ntmyk:Iron_Rifle_Barrel",
+              "productID": "ntmyk:Iron_Arquebus_Barrel",
               "baseQuantity": 1,
               "baseExperience": 68,
               "categoryID": "melvorD:IronGear",
@@ -13312,9 +13312,9 @@
               "currencyCosts": []
             },
             {
-              "id": "Steel_Rifle_Barrel",
+              "id": "Steel_Arquebus_Barrel",
               "level": 41,
-              "productID": "ntmyk:Steel_Rifle_Barrel",
+              "productID": "ntmyk:Steel_Arquebus_Barrel",
               "baseQuantity": 1,
               "baseExperience": 103,
               "categoryID": "melvorD:SteelGear",
@@ -13328,9 +13328,9 @@
               "currencyCosts": []
             },
             {
-              "id": "Mithril_Rifle_Barrel",
+              "id": "Mithril_Arquebus_Barrel",
               "level": 56,
-              "productID": "ntmyk:Mithril_Rifle_Barrel",
+              "productID": "ntmyk:Mithril_Arquebus_Barrel",
               "baseQuantity": 1,
               "baseExperience": 169,
               "categoryID": "melvorD:MithrilGear",
@@ -13344,9 +13344,9 @@
               "currencyCosts": []
             },
             {
-              "id": "Adamant_Rifle_Barrel",
+              "id": "Adamant_Arquebus_Barrel",
               "level": 71,
-              "productID": "ntmyk:Adamant_Rifle_Barrel",
+              "productID": "ntmyk:Adamant_Arquebus_Barrel",
               "baseQuantity": 1,
               "baseExperience": 205,
               "categoryID": "melvorD:AdamantGear",
@@ -13360,9 +13360,9 @@
               "currencyCosts": []
             },
             {
-              "id": "Rune_Rifle_Barrel",
+              "id": "Rune_Arquebus_Barrel",
               "level": 86,
-              "productID": "ntmyk:Rune_Rifle_Barrel",
+              "productID": "ntmyk:Rune_Arquebus_Barrel",
               "baseQuantity": 1,
               "baseExperience": 273,
               "categoryID": "melvorD:RuneGear",
@@ -13376,9 +13376,9 @@
               "currencyCosts": []
             },
             {
-              "id": "Silver_Rifle_Barrel",
+              "id": "Silver_Arquebus_Barrel",
               "level": 95,
-              "productID": "ntmyk:Silver_Rifle_Barrel",
+              "productID": "ntmyk:Silver_Arquebus_Barrel",
               "baseQuantity": 1,
               "baseExperience": 320,
               "categoryID": "ntmyk:SilverGear",
@@ -13392,9 +13392,9 @@
               "currencyCosts": []
             },
             {
-              "id": "Dragon_Rifle_Barrel",
+              "id": "Dragon_Arquebus_Barrel",
               "level": 99,
-              "productID": "ntmyk:Dragon_Rifle_Barrel",
+              "productID": "ntmyk:Dragon_Arquebus_Barrel",
               "baseQuantity": 1,
               "baseExperience": 342,
               "categoryID": "melvorD:DragonGear",
