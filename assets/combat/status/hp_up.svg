@@ -1,0 +1,45 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+	<title>speedup-svg</title>
+	<defs>
+		<image width="560" height="560" id="img1" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDI3OS44NTEgMjc5Ljg1MSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjc5Ljg1MSAyNzkuODUxOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBzdHlsZT0iZmlsbDojRTI1NzRDOyIgZD0iTTI1NS4zNjEsNDEuODM5Yy00MS40NDQtNDEuNDUzLTgyLjUzOC0yMy4zMzktMTE1LjQzMyw2LjIzDQoJCUMxMDcuMDE2LDE4LjUsNjYuMjY0LDAuMDYyLDI0LjQ4Nyw0MS44MzljLTMyLjU3MSwzMi41NTMtMzIuNzI4LDg0Ljg2NiwwLDExNy4yNDRDMTM5LjU3LDI2Mi42MDUsMTM5LjU0MywyNjIuNDIxLDEzOS41NDMsMjYyLjQyMQ0KCQlzMC4xNjYsMC4zNDEsMTE1LjgwOS0xMDMuMzM5QzI4OC4wOTgsMTI2LjcwNCwyODcuOTMyLDc0LjM5MiwyNTUuMzYxLDQxLjgzOXoiLz4NCgk8cGF0aCBzdHlsZT0iZmlsbDojQ0I0RTQ0OyIgZD0iTTEzOS45Miw0OC4wNmwtMC4wNzktMC4wNjF2MjE0LjE2OGMxLjg0Ni0xLjU1OCwxNS40MTktMTMuMzQ1LDExNS41MTEtMTAzLjA5NA0KCQljMzIuNzM3LTMyLjM2OSwzMi41NzktODQuNjgyLDAtMTE3LjIzNUMyMTMuOTA4LDAuMzg2LDE3Mi44MjMsMTguNSwxMzkuOTIsNDguMDZ6Ii8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg=="/>
+	</defs>
+	<style>
+		.s0 { fill: #4ed8df } 
+		.s1 { fill: #11a9c6 } 
+	</style>
+	<use id="hitpoints" href="#img1" transform="matrix(.798,0,0,.798,65,65)"/>
+	<path id="Layer" class="s0" d="m288 144.5l-144-144-144 144 39.6 39.6 104.4-104.5 104.4 104.5z"/>
+	<path id="Layer" class="s0" d="m288 248.5l-144-144v0.1l-144 143.9 39.6 39.6 104.4-104.4 104.4 104.4z"/>
+	<path id="Layer" class="s1" d="m248.4 184.1l39.6-39.6-144-144v79.1z"/>
+	<path id="Layer" class="s1" d="m144 104.5v0.1 79.1l104.4 104.4 39.6-39.6z"/>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+</svg>

@@ -554,6 +554,51 @@
         "usesRunesPerProc": false
       }
     ],
+    "attackSpellbooks": [
+      {
+        "id": "Occult",
+        "name": "Occult Magic",
+        "media": "assets/skills/combat/magic/occult.png",
+        "allowAuroras": false
+      }
+    ],
+    "attackSpells": [
+      {
+        "id": "GraveTouch",
+        "name": "Grave Touch",
+        "media": "assets/combat/magic/grave_touch.png",
+        "level": 30,
+        "runesRequired": [
+          {
+            "id": "melvorD:Death_Rune",
+            "quantity": 1
+          },
+          {
+            "id": "melvorF:Spirit_Rune",
+            "quantity": 1
+          }
+        ],
+        "maxHit": 10,
+        "combatEffects": [
+          {
+            "effectID": "ntmyk:HealImmunity",
+            "appliesWhen": "HitWithAttack",
+            "targetOverride": "Target",
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "categories": [
+          "ntmyk:Spirit",
+          "ntmyk:Death"
+        ],
+        "spellbook": "ntmyk:Occult"
+      }
+    ],
     "bankSortOrder": [
       {
         "insertAt": "After",
@@ -738,6 +783,11 @@
     ],
     "combatEffectGroups": [
       {
+        "id": "HealImmune",
+        "name": "Heal Immunity",
+        "adjective": "Heal Immune"
+      },
+      {
         "id": "Daze",
         "name": "Daze",
         "adjective": "Dazed"
@@ -761,7 +811,7 @@
         ],
         "baseEffectData": {
           "name": "Instakill",
-          "media": "assets/status/instakill.png",
+          "media": "assets/combat/status/instakill.png",
           "behaviours": [
             {
               "type": "DamageCharacter",
@@ -784,6 +834,76 @@
       }
     ],
     "combatEffects": [
+      {
+        "id": "AfflictionGreaterCurse",
+        "templateID": "melvorD:StackingNonCountingModifier",
+        "name": "Affliction",
+        "media": "assets/combat/status/affliction.svg",
+        "target": "Target",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 3
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 3
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 90
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "maxHitpoints": -1
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "HealImmunity",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Heal Immunity",
+        "media": "assets/combat/status/heal_disabled.png",
+        "tooltipSpans": [
+          {
+            "type": "String",
+            "value": "Can't heal or regen"
+          },
+          {
+            "type": "Turns",
+            "turns": "p.turns"
+          }
+        ],
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 1
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "effectImmunity": [
+                {
+                  "effectGroupID": "melvorD:RegenDOT",
+                  "value": 1
+                }
+              ],
+              "lifesteal": -99999999,
+              "hitpointRegeneration": -999999
+            }
+          }
+        ]
+      },
       {
         "id": "Instakill",
         "templateID": "ntmyk:Instakill",
@@ -817,7 +937,7 @@
         "id": "PolymorphCow",
         "templateID": "melvorD:StaticSelfCountingModifier",
         "name": "Polymorphed",
-        "media": "assets/status/polymorphed.png",
+        "media": "assets/combat/status/polymorphed.png",
         "target": "Target",
         "tooltipSpans": [
           {
@@ -875,7 +995,7 @@
         "id": "Shock",
         "templateID": "melvorD:StackingNonCountingModifier",
         "name": "Shocked",
-        "media": "assets/status/shocked.svg",
+        "media": "assets/combat/status/shocked.svg",
         "target": "Target",
         "parameters": [
           {
@@ -907,7 +1027,7 @@
         "id": "WildStrike0",
         "templateID": "melvorD:StaticSelfCountingModifier",
         "name": "Wild Strike",
-        "media": "assets/status/speedup.svg",
+        "media": "assets/combat/status/speedup.svg",
         "target": "Self",
         "tooltipSpans": [
           {
@@ -941,7 +1061,7 @@
         "id": "WideSlash0",
         "templateID": "melvorD:StaticSelfCountingModifier",
         "name": "Wide Slash",
-        "media": "assets/status/evasion_increase.svg",
+        "media": "assets/combat/status/evasion_increase.svg",
         "target": "Self",
         "tooltipSpans": [
           {
@@ -975,7 +1095,7 @@
         "id": "DisruptingStab0",
         "templateID": "melvorD:StaticSelfCountingModifier",
         "name": "Disrupting Stab",
-        "media": "assets/status/null.svg",
+        "media": "assets/combat/status/null.svg",
         "target": "Target",
         "parameters": [
           {
@@ -1004,7 +1124,7 @@
         "id": "Counterattack0",
         "templateID": "melvorD:StaticSelfCountingModifier",
         "name": "Counterattack",
-        "media": "assets/status/evasion_increase.svg",
+        "media": "assets/combat/status/evasion_increase.svg",
         "target": "Self",
         "tooltipSpans": [
           {
@@ -1039,7 +1159,7 @@
       {
         "id": "Vulnerability",
         "name": "Vulnerability",
-        "media": "assets/status/vulnerability.png",
+        "media": "assets/combat/status/vulnerability.png",
         "templateID": "melvorD:StackingNonCountingModifier",
         "target": "Target",
         "parameters": [
@@ -1071,7 +1191,7 @@
       {
         "id": "Daze",
         "name": "Daze",
-        "media": "assets/status/dazed.png",
+        "media": "assets/combat/status/dazed.png",
         "templateID": "melvorD:StaticSelfCountingModifier",
         "target": "Target",
         "tooltipSpans": [
@@ -1110,7 +1230,7 @@
         "id": "CreatureTypeBestial",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Bestial",
-        "media": "assets/status/animal.png",
+        "media": "assets/combat/status/animal.png",
         "target": "Self",
         "parameters": [],
         "statGroups": [
@@ -1123,7 +1243,7 @@
         "id": "CreatureTypeConstructed",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Constructed",
-        "media": "assets/status/constructed.png",
+        "media": "assets/combat/status/constructed.png",
         "target": "Self",
         "parameters": [],
         "statGroups": [
@@ -1136,7 +1256,7 @@
         "id": "CreatureTypeDraconic",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Draconic",
-        "media": "assets/status/draconic.png",
+        "media": "assets/combat/status/draconic.png",
         "target": "Self",
         "parameters": [],
         "statGroups": [
@@ -1149,7 +1269,7 @@
         "id": "CreatureTypeElemental",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Elemental",
-        "media": "assets/status/elemental.png",
+        "media": "assets/combat/status/elemental.png",
         "target": "Self",
         "parameters": [],
         "statGroups": [
@@ -1162,7 +1282,7 @@
         "id": "CreatureTypeFae",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Fae",
-        "media": "assets/status/fae.png",
+        "media": "assets/combat/status/fae.png",
         "target": "Self",
         "parameters": [],
         "statGroups": [
@@ -1175,7 +1295,7 @@
         "id": "CreatureTypeGelatinous",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Gelatinous",
-        "media": "assets/status/gelatinous.png",
+        "media": "assets/combat/status/gelatinous.png",
         "target": "Self",
         "parameters": [],
         "statGroups": [
@@ -1188,7 +1308,7 @@
         "id": "CreatureTypeGiantkin",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Giantkin",
-        "media": "assets/status/giantkin.png",
+        "media": "assets/combat/status/giantkin.png",
         "target": "Self",
         "parameters": [],
         "statGroups": [
@@ -1201,7 +1321,7 @@
         "id": "CreatureTypeHeavenly",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Heavenly",
-        "media": "assets/status/heavenly.png",
+        "media": "assets/combat/status/heavenly.png",
         "target": "Self",
         "parameters": [],
         "statGroups": [
@@ -1214,7 +1334,7 @@
         "id": "CreatureTypeHellish",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Hellish",
-        "media": "assets/status/hellish.png",
+        "media": "assets/combat/status/hellish.png",
         "target": "Self",
         "parameters": [],
         "statGroups": [
@@ -1233,7 +1353,7 @@
         "id": "CreatureTypeHuman",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Human",
-        "media": "assets/status/human.png",
+        "media": "assets/combat/status/human.png",
         "target": "Self",
         "parameters": [],
         "statGroups": [
@@ -1246,7 +1366,7 @@
         "id": "CreatureTypeMonstrous",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Monstrous",
-        "media": "assets/status/monstrous.png",
+        "media": "assets/combat/status/monstrous.png",
         "target": "Self",
         "parameters": [],
         "statGroups": [
@@ -1259,7 +1379,7 @@
         "id": "CreatureTypePlantlike",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Plantlike",
-        "media": "assets/status/plant.png",
+        "media": "assets/combat/status/plant.png",
         "target": "Self",
         "parameters": [],
         "statGroups": [
@@ -1272,7 +1392,7 @@
         "id": "CreatureTypeStrange",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Strange",
-        "media": "assets/status/strange.png",
+        "media": "assets/combat/status/strange.png",
         "target": "Self",
         "parameters": [],
         "statGroups": [
@@ -1285,7 +1405,7 @@
         "id": "CreatureTypeUndead",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Undead",
-        "media": "assets/status/undead.png",
+        "media": "assets/combat/status/undead.png",
         "target": "Self",
         "tooltipSpans": [
           {
@@ -1324,7 +1444,7 @@
         "id": "CreatureSubtypeLycanthrope",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Lycanthrope",
-        "media": "assets/status/lycanthrope.png",
+        "media": "assets/combat/status/lycanthrope.png",
         "tooltipSpans": [
           {
             "type": "String",
@@ -1343,7 +1463,7 @@
         "id": "VulnerabilityCrush",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Crush Vulnerability",
-        "media": "assets/status/vulnerability_crush.png",
+        "media": "assets/combat/status/vulnerability_crush.png",
         "target": "Self",
         "parameters": [],
         "tooltipSpans": [
@@ -1362,7 +1482,7 @@
         "id": "VulnerabilityStab",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Stab Vulnerability",
-        "media": "assets/status/vulnerability_stab.png",
+        "media": "assets/combat/status/vulnerability_stab.png",
         "target": "Self",
         "parameters": [],
         "tooltipSpans": [
@@ -1381,7 +1501,7 @@
         "id": "VulnerabilitySlash",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Slash Vulnerability",
-        "media": "assets/status/vulnerability_slash.png",
+        "media": "assets/combat/status/vulnerability_slash.png",
         "target": "Self",
         "parameters": [],
         "tooltipSpans": [
@@ -1400,7 +1520,7 @@
         "id": "VulnerabilitySilver",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Silver Vulnerability",
-        "media": "assets/status/vulnerability_silver.png",
+        "media": "assets/combat/status/vulnerability_silver.png",
         "tooltipSpans": [
           {
             "type": "String",
@@ -1491,6 +1611,72 @@
         ]
       }
     ],
+    "curseSpells": [
+      {
+        "id": "Affliction",
+        "name": "Affliction",
+        "media": "assets/combat/status/affliction.svg",
+        "level": 90,
+        "runesRequired": [
+          {
+            "id": "melvorD:Death_Rune",
+            "quantity": 5
+          },
+          {
+            "id": "melvorD:Body_Rune",
+            "quantity": 5
+          },
+          {
+            "id": "melvorD:Chaos_Rune",
+            "quantity": 5
+          },
+          {
+            "id": "melvorF:Havoc_Rune",
+            "quantity": 5
+          }
+        ],
+        "effectID": "melvorD:Affliction",
+        "requirements": [
+          {
+            "type": "DungeonCompletion",
+            "dungeonID": "melvorF:Into_the_Mist",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "AfflictionGreater",
+        "name": "Greater Affliction",
+        "media": "assets/combat/magic/affliction_greater.png",
+        "level": 99,
+        "runesRequired": [
+          {
+            "id": "melvorD:Death_Rune",
+            "quantity": 20
+          },
+          {
+            "id": "melvorD:Body_Rune",
+            "quantity": 20
+          },
+          {
+            "id": "melvorD:Chaos_Rune",
+            "quantity": 20
+          },
+          {
+            "id": "melvorF:Havoc_Rune",
+            "quantity": 20
+          }
+        ],
+        "effectID": "ntmyk:AfflictionGreater",
+        "requirements": [
+          {
+            "type": "DungeonCompletion",
+            "dungeonID": "melvorF:Impending_Darkness",
+            "count": 1
+          }
+        ]
+      }
+    ],
     "items": [
       {
         "itemType": "Item",
@@ -1507,7 +1693,7 @@
       },
       {
         "itemType": "Item",
-        "id": "Chunk_Pyrite",
+        "id": "Pyrite_Chunk",
         "name": "Pyrite Chunk",
         "category": "Mining",
         "type": "Ore",
@@ -1517,6 +1703,19 @@
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 30
+      },
+      {
+        "itemType": "Item",
+        "id": "Unrefined_Saltpetre",
+        "name": "Unrefined Saltpetre",
+        "category": "Mining",
+        "type": "Ore",
+        "media": "assets/bank/item_saltpetre.png",
+        "customDescription": "Refine into usable saltpetre using a furnace.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 5
       },
       {
         "itemType": "Item",
@@ -7853,88 +8052,72 @@
         "currencyCosts": []
       }
     ],
+    "monsters": [
+      {
+        "id": "TrainingDummy",
+        "name": "Training Dummy",
+        "media": "assets/combat/monsters/dummy.png",
+        "levels": {
+          "Hitpoints": 1000000,
+          "Attack": 1,
+          "Strength": 1,
+          "Defence": 1,
+          "Ranged": 1,
+          "Magic": 1
+        },
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 20000
+          }
+        ],
+        "ignoreCompletion": false,
+        "attackType": "melee",
+        "specialAttacks": [],
+        "passives": [],
+        "lootChance": 0,
+        "lootTable": [],
+        "canSlayer": true,
+        "isBoss": true,
+        "selectedSpell": "melvorD:WindStrike"
+      }
+    ],
     "randomGems": [
-      {
-        "itemID": "ntmyk:Amber",
-        "weight": 40,
-        "minQuantity": 1,
-        "maxQuantity": 1
-      },
-      {
-        "itemID": "ntmyk:Garnet",
-        "weight": 40,
-        "minQuantity": 1,
-        "maxQuantity": 1
-      },
-      {
-        "itemID": "ntmyk:Malachite",
-        "weight": 40,
-        "minQuantity": 1,
-        "maxQuantity": 1
-      },
-      {
-        "itemID": "ntmyk:Turquoise",
-        "weight": 40,
-        "minQuantity": 1,
-        "maxQuantity": 1
-      },
       {
         "itemID": "ntmyk:Amethyst",
         "weight": 20,
         "minQuantity": 1,
         "maxQuantity": 1
-      },
+      }
+    ],
+    "randomSuperiorGems": [
       {
-        "itemID": "ntmyk:Carnelian",
-        "weight": 20,
+        "itemID": "ntmyk:Beryl",
+        "weight": 10,
         "minQuantity": 1,
         "maxQuantity": 1
       },
       {
-        "itemID": "ntmyk:Lapis",
-        "weight": 20,
+        "itemID": "ntmyk:Dragonstone",
+        "weight": 10,
         "minQuantity": 1,
         "maxQuantity": 1
       },
       {
-        "itemID": "ntmyk:Peridot",
-        "weight": 20,
+        "itemID": "ntmyk:Moonstone",
+        "weight": 10,
         "minQuantity": 1,
         "maxQuantity": 1
       },
       {
-        "itemID": "ntmyk:Spinel",
-        "weight": 20,
+        "itemID": "ntmyk:Black_Diamond",
+        "weight": 5,
         "minQuantity": 1,
         "maxQuantity": 1
       },
       {
         "itemID": "ntmyk:Sunstone",
-        "weight": 20,
-        "minQuantity": 1,
-        "maxQuantity": 1
-      },
-      {
-        "itemID": "ntmyk:Opal",
-        "weight": 7,
-        "minQuantity": 1,
-        "maxQuantity": 1
-      },
-      {
-        "itemID": "ntmyk:Coral",
-        "weight": 7,
-        "minQuantity": 1,
-        "maxQuantity": 1
-      },
-      {
-        "itemID": "ntmyk:Chrysocola",
-        "weight": 4,
-        "minQuantity": 1,
-        "maxQuantity": 1
-      },
-      {
-        "itemID": "ntmyk:Quartz",
-        "weight": 4,
+        "weight": 5,
         "minQuantity": 1,
         "maxQuantity": 1
       }
@@ -13164,7 +13347,7 @@
               "media": "assets/skills/mining/rock_pyrite.png",
               "level": 15,
               "baseExperience": 14,
-              "productId": "ntmyk:Pyrite",
+              "productId": "ntmyk:Pyrite_Ore",
               "baseRespawnInterval": 5000,
               "baseQuantity": 1,
               "hasPassiveRegen": true,
