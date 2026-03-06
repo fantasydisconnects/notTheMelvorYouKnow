@@ -812,7 +812,7 @@
           {
             "name": "debuff",
             "modifiers": {
-              "attackInterval": 5
+              "flatAttackInterval": 100
             }
           }
         ],
@@ -829,7 +829,7 @@
           {
             "name": "debuff",
             "modifiers": {
-              "attackInterval": 10
+              "flatAttackInterval": 200
             }
           }
         ],
@@ -846,7 +846,7 @@
           {
             "name": "debuff",
             "modifiers": {
-              "attackInterval": 15
+              "flatAttackInterval": 300
             }
           }
         ],
@@ -863,7 +863,7 @@
           {
             "name": "debuff",
             "modifiers": {
-              "attackInterval": 20
+              "flatAttackInterval": 400
             }
           }
         ],
@@ -8441,9 +8441,97 @@
           "ntmyk:Auto_Eat_Tier_IV",
           "ntmyk:Auto_Eat_Tier_V"
         ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Extra_Equipment_Set_III",
+        "ids": [
+          "ntmyk:Allow_Nonmagic_Auroras",
+          "ntmyk:Allow_Nonmagic_Curses"
+        ]
       }
     ],
     "shopPurchases": [
+      {
+        "id": "Allow_Nonmagic_Auroras",
+        "media": "assets/combat/magic/surge.svg",
+        "category": "melvorD:General",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "allowAttackAugmentingMagic": 1
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 100000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Magic",
+            "level": 80,
+            "type": "SkillLevel"
+          },
+          {
+            "dungeonID": "melvorF:Infernal_Stronghold",
+            "count": 100,
+            "type": "DungeonCompletion"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Allow Nonmagic Auroras",
+        "customDescription": "Allows you to use Auroras without equipping a Magic Weapon"
+      },
+      {
+        "id": "Allow_Nonmagic_Curses",
+        "media": "assets/combat/magic/decay.svg",
+        "category": "melvorD:General",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "allowNonMagicCurses": 1
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 100000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Magic",
+            "level": 65,
+            "type": "SkillLevel"
+          },
+          {
+            "dungeonID": "melvorD:Volcanic_Cave",
+            "count": 100,
+            "type": "DungeonCompletion"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Allow Nonmagic Curses",
+        "customDescription": "Allows you to use Curses without equipping a Magic Weapon"
+      },
       {
         "id": "Wand_of_Death",
         "media": "assets/bank/wand_death.png",
