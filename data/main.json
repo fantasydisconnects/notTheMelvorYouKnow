@@ -558,7 +558,7 @@
       {
         "id": "Occult",
         "name": "Occult Magic",
-        "media": "assets/skills/combat/magic/occult.png",
+        "media": "assets/combat/magic/occult.png",
         "allowAuroras": false
       }
     ],
@@ -699,46 +699,15 @@
       },
       {
         "insertAt": "Before",
-        "beforeID": "melvorD:Topaz",
-        "ids": [
-          "ntmyk:Amber",
-          "ntmyk:Garnet",
-          "ntmyk:Malachite"
-        ]
-      },
-      {
-        "insertAt": "Before",
         "beforeID": "melvorD:Sapphire",
         "ids": [
-          "ntmyk:Turquoise",
-          "ntmyk:Amethyst",
-          "ntmyk:Carnelian"
+          "ntmyk:Amethyst"
         ]
       },
       {
-        "insertAt": "Before",
-        "beforeID": "melvorD:Ruby",
+        "insertAt": "After",
+        "afterID": "melvorD:Diamond",
         "ids": [
-          "ntmyk:Lapis",
-          "ntmyk:Peridot",
-          "ntmyk:Spinel"
-        ]
-      },
-      {
-        "insertAt": "Before",
-        "beforeID": "melvorD:Emerald",
-        "ids": [
-          "ntmyk:Sunstone",
-          "ntmyk:Opal",
-          "ntmyk:Coral"
-        ]
-      },
-      {
-        "insertAt": "Before",
-        "beforeID": "melvorD:Diamond",
-        "ids": [
-          "ntmyk:Chrysocola",
-          "ntmyk:Quartz",
           "ntmyk:Dragonstone"
         ]
       },
@@ -747,8 +716,8 @@
         "afterID": "melvorF:Jadestone",
         "ids": [
           "ntmyk:Moonstone",
-          "ntmyk:Arkoreefstone",
-          "ntmyk:Black_Diamond"
+          "ntmyk:Black_Diamond",
+          "ntmyk:Sunstone"
         ]
       },
       {
@@ -835,30 +804,240 @@
     ],
     "combatEffects": [
       {
-        "id": "AfflictionGreaterCurse",
-        "templateID": "melvorD:StackingNonCountingModifier",
+        "id": "FearI",
+        "templateID": "melvorD:Curse",
+        "name": "Fear I",
+        "media": "assets/combat/magic/fear_i.png",
+        "statGroups": [
+          {
+            "name": "debuff",
+            "modifiers": {
+              "attackInterval": 5
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "FearII",
+        "templateID": "melvorD:Curse",
+        "name": "Fear II",
+        "media": "assets/combat/magic/fear_ii.png",
+        "statGroups": [
+          {
+            "name": "debuff",
+            "modifiers": {
+              "attackInterval": 10
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "FearIII",
+        "templateID": "melvorD:Curse",
+        "name": "Fear III",
+        "media": "assets/combat/magic/fear_iii.png",
+        "statGroups": [
+          {
+            "name": "debuff",
+            "modifiers": {
+              "attackInterval": 15
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "FearIV",
+        "templateID": "melvorD:Curse",
+        "name": "Fear IV",
+        "media": "assets/combat/magic/fear_iv.png",
+        "statGroups": [
+          {
+            "name": "debuff",
+            "modifiers": {
+              "attackInterval": 20
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "SoulSplitIV",
+        "templateID": "melvorD:Curse",
+        "name": "Soul Split IV",
+        "media": "assets/combat/magic/soul_split_iv.png",
+        "statGroups": [
+          {
+            "name": "debuff",
+            "modifiers": {
+              "magicEvasion": -20
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "AnguishIV",
+        "templateID": "melvorD:Curse",
+        "name": "Anguish IV",
+        "media": "assets/combat/magic/anguish_iv.png",
+        "statGroups": [
+          {
+            "name": "debuff",
+            "modifiers": {
+              "damageTaken": 20
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "WeakeningIV",
+        "templateID": "melvorD:Curse",
+        "name": "Weakening IV",
+        "media": "assets/combat/magic/weakening_iv.png",
+        "statGroups": [
+          {
+            "name": "debuff",
+            "modifiers": {
+              "maxHit": -20
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "BlindingIV",
+        "templateID": "melvorD:Curse",
+        "name": "Blinding IV",
+        "media": "assets/combat/magic/blinding_iv.png",
+        "statGroups": [
+          {
+            "name": "debuff",
+            "modifiers": {
+              "accuracyRating": -20
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "AfflictionCurse",
+        "templateID": "melvorD:Curse",
         "name": "Affliction",
         "media": "assets/combat/status/affliction.svg",
-        "target": "Target",
-        "parameters": [
+        "tooltipSpans": [
           {
-            "name": "initialStacks",
-            "initialValue": 3
-          },
-          {
-            "name": "stacksToAdd",
-            "initialValue": 3
-          },
-          {
-            "name": "maxStacks",
-            "initialValue": 90
+            "type": "String",
+            "value": "-2% to all positive effects and values<br>+2% to all negative effects and values"
           }
         ],
         "statGroups": [
           {
-            "name": "stacks",
+            "name": "debuff",
             "modifiers": {
-              "maxHitpoints": -1
+              "maxHitpoints": -2,
+              "evasion": -2,
+              "accuracyRating": -2,
+              "flatResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": -2
+                }
+              ],
+              "attackInterval": 2,
+              "maxHit": -2,
+              "lifesteal": -2,
+              "hitpointRegeneration": -2,
+              "effectIgnoreChance": [
+                {
+                  "effectGroupID": "melvorD:Buff",
+                  "value": 2
+                },
+                {
+                  "effectGroupID": "melvorD:Debuff",
+                  "value": -2
+                },
+                {
+                  "effectGroupID": "melvorD:DamageOverTime",
+                  "value": -2
+                },
+                {
+                  "effectGroupID": "melvorD:RegenDOT",
+                  "value": 2
+                }
+              ]
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "AfflictionGreaterCurse",
+        "templateID": "melvorD:Curse",
+        "name": "Affliction",
+        "media": "assets/combat/status/affliction.svg",
+        "tooltipSpans": [
+          {
+            "type": "String",
+            "value": "-4% to all positive effects and values<br>+4% to all negative effects and values"
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "debuff",
+            "modifiers": {
+              "maxHitpoints": -4,
+              "evasion": -4,
+              "accuracyRating": -4,
+              "flatResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": -4
+                }
+              ],
+              "attackInterval": 4,
+              "maxHit": -4,
+              "lifesteal": -4,
+              "hitpointRegeneration": -4,
+              "effectIgnoreChance": [
+                {
+                  "effectGroupID": "melvorD:Buff",
+                  "value": 4
+                },
+                {
+                  "effectGroupID": "melvorD:Debuff",
+                  "value": -4
+                },
+                {
+                  "effectGroupID": "melvorD:DamageOverTime",
+                  "value": -4
+                },
+                {
+                  "effectGroupID": "melvorD:RegenDOT",
+                  "value": 4
+                }
+              ]
             }
           }
         ],
@@ -1613,9 +1792,181 @@
     ],
     "curseSpells": [
       {
+        "id": "FearI",
+        "name": "Fear I",
+        "media": "assets/combat/magic/fear_i.png",
+        "level": 35,
+        "runesRequired": [
+          {
+            "id": "melvorD:Mind_Rune",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Chaos_Rune",
+            "quantity": 2
+          },
+          {
+            "id": "melvorF:Havoc_Rune",
+            "quantity": 3
+          }
+        ],
+        "effectID": "ntmyk:FearI"
+      },
+      {
+        "id": "FearII",
+        "name": "Fear II",
+        "media": "assets/combat/magic/fear_ii.png",
+        "level": 55,
+        "runesRequired": [
+          {
+            "id": "melvorD:Mind_Rune",
+            "quantity": 3
+          },
+          {
+            "id": "melvorD:Chaos_Rune",
+            "quantity": 4
+          },
+          {
+            "id": "melvorF:Havoc_Rune",
+            "quantity": 5
+          }
+        ],
+        "effectID": "ntmyk:FearII"
+      },
+      {
+        "id": "FearIII",
+        "name": "Fear III",
+        "media": "assets/combat/magic/fear_iii.png",
+        "level": 75,
+        "runesRequired": [
+          {
+            "id": "melvorD:Mind_Rune",
+            "quantity": 5
+          },
+          {
+            "id": "melvorD:Chaos_Rune",
+            "quantity": 6
+          },
+          {
+            "id": "melvorF:Havoc_Rune",
+            "quantity": 7
+          }
+        ],
+        "effectID": "ntmyk:FearIII"
+      },
+      {
+        "id": "FearIV",
+        "name": "Fear IV",
+        "media": "assets/combat/magic/fear_iv.png",
+        "level": 95,
+        "runesRequired": [
+          {
+            "id": "melvorD:Mind_Rune",
+            "quantity": 7
+          },
+          {
+            "id": "melvorD:Chaos_Rune",
+            "quantity": 8
+          },
+          {
+            "id": "melvorF:Havoc_Rune",
+            "quantity": 9
+          }
+        ],
+        "effectID": "ntmyk:FearIV"
+      },
+      {
+        "id": "BlindingIV",
+        "name": "Blinding IV",
+        "media": "assets/combat/magic/blinding_iv.png",
+        "level": 70,
+        "runesRequired": [
+          {
+            "id": "melvorD:Mind_Rune",
+            "quantity": 6
+          },
+          {
+            "id": "melvorD:Body_Rune",
+            "quantity": 4
+          },
+          {
+            "id": "melvorF:Havoc_Rune",
+            "quantity": 4
+          }
+        ],
+        "effectID": "ntmyk:BlindingIV"
+      },
+      {
+        "id": "SoulSplitIV",
+        "name": "Soul Split IV",
+        "media": "assets/combat/magic/soul_split_iv.png",
+        "level": 75,
+        "runesRequired": [
+          {
+            "id": "melvorD:Mind_Rune",
+            "quantity": 5
+          },
+          {
+            "id": "melvorD:Body_Rune",
+            "quantity": 5
+          },
+          {
+            "id": "melvorD:Chaos_Rune",
+            "quantity": 4
+          },
+          {
+            "id": "melvorF:Havoc_Rune",
+            "quantity": 3
+          }
+        ],
+        "effectID": "ntmyk:SoulSplitIV"
+      },
+      {
+        "id": "WeakeningIV",
+        "name": "Weakening IV",
+        "media": "assets/combat/magic/weakening_iv.png",
+        "level": 80,
+        "runesRequired": [
+          {
+            "id": "melvorD:Mind_Rune",
+            "quantity": 5
+          },
+          {
+            "id": "melvorD:Body_Rune",
+            "quantity": 3
+          },
+          {
+            "id": "melvorF:Havoc_Rune",
+            "quantity": 4
+          }
+        ],
+        "effectID": "ntmyk:WeakeningIV"
+      },
+      {
+        "id": "AnguishIV",
+        "name": "Anguish IV",
+        "media": "assets/combat/magic/anguish_iv.png",
+        "level": 90,
+        "runesRequired": [
+          {
+            "id": "melvorD:Body_Rune",
+            "quantity": 6
+          },
+          {
+            "id": "melvorD:Death_Rune",
+            "quantity": 5
+          },
+          {
+            "id": "melvorF:Havoc_Rune",
+            "quantity": 4
+          }
+        ],
+        "effectID": "ntmyk:AnguishIV"
+      },
+      {
         "id": "Affliction",
         "name": "Affliction",
-        "media": "assets/combat/status/affliction.svg",
+        "media": "assets/combat/magic/affliction.png",
         "level": 90,
         "runesRequired": [
           {
@@ -1635,7 +1986,7 @@
             "quantity": 5
           }
         ],
-        "effectID": "melvorD:Affliction",
+        "effectID": "ntmyk:AfflictionCurse",
         "requirements": [
           {
             "type": "DungeonCompletion",
@@ -1667,7 +2018,7 @@
             "quantity": 20
           }
         ],
-        "effectID": "ntmyk:AfflictionGreater",
+        "effectID": "ntmyk:AfflictionGreaterCurse",
         "requirements": [
           {
             "type": "DungeonCompletion",
@@ -6435,58 +6786,6 @@
       },
       {
         "itemType": "Item",
-        "id": "Amber",
-        "name": "Amber",
-        "category": "Gemstone",
-        "type": "Gem",
-        "media": "assets/bank/gem_amber.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 50,
-        "customDescription": "Standard Gem"
-      },
-      {
-        "itemType": "Item",
-        "id": "Garnet",
-        "name": "Garnet",
-        "category": "Gemstone",
-        "type": "Gem",
-        "media": "assets/bank/gem_garnet.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 75,
-        "customDescription": "Standard Gem"
-      },
-      {
-        "itemType": "Item",
-        "id": "Malachite",
-        "name": "Malachite",
-        "category": "Gemstone",
-        "type": "Gem",
-        "media": "assets/bank/gem_malachite.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 100,
-        "customDescription": "Standard Gem"
-      },
-      {
-        "itemType": "Item",
-        "id": "Turquoise",
-        "name": "Turquoise",
-        "category": "Gemstone",
-        "type": "Gem",
-        "media": "assets/bank/gem_turquoise.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 125,
-        "customDescription": "Standard Gem"
-      },
-      {
-        "itemType": "Item",
         "id": "Amethyst",
         "name": "Amethyst",
         "category": "Gemstone",
@@ -6500,58 +6799,6 @@
       },
       {
         "itemType": "Item",
-        "id": "Carnelian",
-        "name": "Carnelian",
-        "category": "Gemstone",
-        "type": "Gem",
-        "media": "assets/bank/gem_carnelian.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 325,
-        "customDescription": "Standard Gem"
-      },
-      {
-        "itemType": "Item",
-        "id": "Lapis",
-        "name": "Lapis",
-        "category": "Gemstone",
-        "type": "Gem",
-        "media": "assets/bank/gem_lapis.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 400,
-        "customDescription": "Standard Gem"
-      },
-      {
-        "itemType": "Item",
-        "id": "Peridot",
-        "name": "Peridot",
-        "category": "Gemstone",
-        "type": "Gem",
-        "media": "assets/bank/gem_peridot.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 475,
-        "customDescription": "Standard Gem"
-      },
-      {
-        "itemType": "Item",
-        "id": "Spinel",
-        "name": "Spinel",
-        "category": "Gemstone",
-        "type": "Gem",
-        "media": "assets/bank/gem_spinel.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 550,
-        "customDescription": "Standard Gem"
-      },
-      {
-        "itemType": "Item",
         "id": "Sunstone",
         "name": "Sunstone",
         "category": "Gemstone",
@@ -6561,58 +6808,6 @@
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 625,
-        "customDescription": "Standard Gem"
-      },
-      {
-        "itemType": "Item",
-        "id": "Opal",
-        "name": "Opal",
-        "category": "Gemstone",
-        "type": "Gem",
-        "media": "assets/bank/gem_opal.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 1200,
-        "customDescription": "Standard Gem"
-      },
-      {
-        "itemType": "Item",
-        "id": "Coral",
-        "name": "Coral",
-        "category": "Gemstone",
-        "type": "Gem",
-        "media": "assets/bank/gem_coral.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 1500,
-        "customDescription": "Standard Gem"
-      },
-      {
-        "itemType": "Item",
-        "id": "Chrysocola",
-        "name": "Chrysocola",
-        "category": "Gemstone",
-        "type": "Gem",
-        "media": "assets/bank/gem_chrysocola.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 3500,
-        "customDescription": "Standard Gem"
-      },
-      {
-        "itemType": "Item",
-        "id": "Quartz",
-        "name": "Quartz",
-        "category": "Gemstone",
-        "type": "Gem",
-        "media": "assets/bank/gem_quartz.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 4500,
         "customDescription": "Standard Gem"
       },
       {
@@ -6639,19 +6834,6 @@
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 8500,
-        "customDescription": "Standard Gem"
-      },
-      {
-        "itemType": "Item",
-        "id": "Arkoreefstone",
-        "name": "Arkoreefstone",
-        "category": "Gemstone",
-        "type": "Gem",
-        "media": "assets/bank/gem_arkoreefstone.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 9250,
         "customDescription": "Standard Gem"
       },
       {
@@ -8091,12 +8273,6 @@
       }
     ],
     "randomSuperiorGems": [
-      {
-        "itemID": "ntmyk:Beryl",
-        "weight": 10,
-        "minQuantity": 1,
-        "maxQuantity": 1
-      },
       {
         "itemID": "ntmyk:Dragonstone",
         "weight": 10,
@@ -13333,6 +13509,21 @@
             {
               "id": "FirearmComponents",
               "name": "FirearmComponents"
+            }
+          ]
+        }
+      },
+      {
+        "skillID": "melvorD:Magic",
+        "data": {
+          "spellCategories": [
+            {
+              "id": "Spirit",
+              "name": "Spirit"
+            },
+            {
+              "id": "Death",
+              "name": "Death"
             }
           ]
         }
