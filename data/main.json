@@ -698,13 +698,6 @@
         ]
       },
       {
-        "insertAt": "Before",
-        "beforeID": "melvorD:Sapphire",
-        "ids": [
-          "ntmyk:Amethyst"
-        ]
-      },
-      {
         "insertAt": "After",
         "afterID": "melvorD:Diamond",
         "ids": [
@@ -2029,6 +2022,1252 @@
       }
     ],
     "items": [
+      {
+        "id": "Silver_Dagger",
+        "name": "Silver Dagger",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/weapon_dagger_silver.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 480,
+        "tier": "silver",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 50
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2200
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 84
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 21
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 42
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 16
+          }
+        ],
+        "modifiers": {
+          "meleeCritChance": 25
+        },
+        "specialAttacks": [
+          "ntmyk:WildStrike",
+          "ntmyk:Heartseeker",
+          "ntmyk:DeadlyDelivery"
+        ],
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "customDescription": "+25% Melee Max Hit against Silver-Vulnerable monsters",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 25
+            }
+          }
+        ]
+      },
+      {
+        "id": "Silver_Sword",
+        "name": "Silver Sword",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/weapon_sword_silver.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 510,
+        "tier": "silver",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 50
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2300
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 53
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 30
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 20
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 49
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "customDescription": "+25% Melee Max Hit against Silver-Vulnerable monsters",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 25
+            }
+          }
+        ]
+      },
+      {
+        "id": "Silver_Scimitar",
+        "name": "Silver Scimitar",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/weapon_scimitar_silver.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 350,
+        "tier": "silver",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 50
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2400
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 7
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 51
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 7
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 50
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "customDescription": "+25% Melee Max Hit against Silver-Vulnerable monsters",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 25
+            }
+          }
+        ]
+      },
+      {
+        "id": "Silver_Battleaxe",
+        "name": "Silver Battleaxe",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/weapon_battleaxe_silver.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1301,
+        "tier": "silver",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 50
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3100
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": -2
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 27
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 27
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 127
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "customDescription": "+25% Melee Max Hit against Silver-Vulnerable monsters",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 25
+            }
+          }
+        ]
+      },
+      {
+        "id": "Silver_2H_Sword",
+        "name": "Silver 2H Sword",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/weapon_2h_silver.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1090,
+        "tier": "silver",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [
+          "Shield"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 50
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3600
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": -4
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 99
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 99
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 140
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "specialAttacks": [
+          "ntmyk:WideSlash",
+          "ntmyk:Whirlwind",
+          "ntmyk:TrueStrike",
+          "ntmyk:Counterattack",
+          "ntmyk:PommelBash"
+        ],
+        "modifiers": {
+          "flatHiddenSkillLevelBasedOnLevels": [
+            {
+              "skillID": "melvorD:Strength",
+              "value": 50
+            }
+          ]
+        },
+        "customDescription": "+25% Melee Max Hit against Silver-Vulnerable monsters",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 25
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Helmet",
+        "name": "Silver Helmet",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/armour_helmet_silver.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 844,
+        "tier": "silver",
+        "validSlots": [
+          "Helmet"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 50
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": -2
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -6
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 35
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 35
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -1
+          }
+        ],
+        "customDescription": "+5% Reflect Damage against Silver-Vulnerable monsters",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "reflectDamage": 5
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Boots",
+        "name": "Silver Boots",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/armour_boots_silver.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 750,
+        "tier": "silver",
+        "validSlots": [
+          "Boots"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 50
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": -1
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -3
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 13
+          }
+        ],
+        "customDescription": "+5% Reflect Damage against Silver-Vulnerable monsters",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "reflectDamage": 5
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Platelegs",
+        "name": "Silver Platelegs",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/armour_platelegs_silver.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1740,
+        "tier": "silver",
+        "validSlots": [
+          "Platelegs"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 50
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": -7
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -21
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 56
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 43
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -4
+          }
+        ],
+        "customDescription": "+5% Reflect Damage against Silver-Vulnerable monsters",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "reflectDamage": 5
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Platebody",
+        "name": "Silver Platebody",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/armour_platebody_silver.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 2415,
+        "tier": "silver",
+        "validSlots": [
+          "Platebody"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 50
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": -10
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -30
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 90
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 88
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -6
+          }
+        ],
+        "customDescription": "+5% Reflect Damage against Silver-Vulnerable monsters",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "reflectDamage": 5
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Shield",
+        "name": "Silver Shield",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/armour_shield_silver.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 608,
+        "tier": "silver",
+        "validSlots": [
+          "Shield"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 50
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": -2
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -8
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 49
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 51
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -1
+          }
+        ],
+        "customDescription": "+5% Reflect Damage against Silver-Vulnerable monsters",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "reflectDamage": 5
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Helmet_T_S",
+        "name": "(S) Silver Helmet",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/armour_helmet_silver_trimmed_silver.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 926,
+        "tier": "silverTrimmed",
+        "validSlots": [
+          "Helmet"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 50
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": -2
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -6
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 6
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 43
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 39
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -1
+          }
+        ],
+        "customDescription": "+6% Reflect Damage against Silver-Vulnerable monsters",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "reflectDamage": 6
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Boots_T_S",
+        "name": "(S) Silver Boots",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/armour_boots_silver_trimmed_silver.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 804,
+        "tier": "silverTrimmed",
+        "validSlots": [
+          "Boots"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 50
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": -1
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -3
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 6
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 16
+          }
+        ],
+        "customDescription": "+6% Reflect Damage against Silver-Vulnerable monsters",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "reflectDamage": 6
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Platelegs_T_S",
+        "name": "(S) Silver Platelegs",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/armour_platelegs_silver_trimmed_silver.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1489,
+        "tier": "silverTrimmed",
+        "validSlots": [
+          "Platelegs"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 50
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": -7
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -21
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 6
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 62
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 54
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -4
+          }
+        ],
+        "customDescription": "+6% Reflect Damage against Silver-Vulnerable monsters",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "reflectDamage": 6
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Platebody_T_S",
+        "name": "(S) Silver Platebody",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/armour_platebody_silver_trimmed_silver.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1950,
+        "tier": "silverTrimmed",
+        "validSlots": [
+          "Platebody"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 50
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": -10
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -30
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 6
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 104
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 94
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -6
+          }
+        ],
+        "customDescription": "+6% Reflect Damage against Silver-Vulnerable monsters",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "reflectDamage": 6
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Shield_T_S",
+        "name": "(S) Silver Shield",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/armour_shield_silver_trimmed_silver.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 925,
+        "tier": "silverTrimmed",
+        "validSlots": [
+          "Shield"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 50
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": -2
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -8
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 6
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 54
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 52
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -1
+          }
+        ],
+        "customDescription": "+6% Reflect Damage against Silver-Vulnerable monsters",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "reflectDamage": 6
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Helmet_T_G",
+        "name": "(G) Silver Helmet",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/armour_helmet_silver_trimmed_gold.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1000,
+        "tier": "goldTrimmed",
+        "validSlots": [
+          "Helmet"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 50
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": -2
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -6
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 7
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 43
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 39
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -1
+          },
+          {
+            "key": "damageReduction",
+            "value": 5
+          }
+        ],
+        "customDescription": "+5% Reflect Damage against Silver-Vulnerable monsters",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "reflectDamage": 5
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Boots_T_G",
+        "name": "(G) Silver Boots",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/armour_boots_silver_trimmed_gold.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 904,
+        "tier": "goldTrimmed",
+        "validSlots": [
+          "Boots"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 50
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": -1
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -3
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 7
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 17
+          },
+          {
+            "key": "damageReduction",
+            "value": 5
+          }
+        ],
+        "customDescription": "+5% Reflect Damage against Silver-Vulnerable monsters",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "reflectDamage": 5
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Platelegs_T_G",
+        "name": "(G) Silver Platelegs",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/armour_platelegs_silver_trimmed_gold.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1655,
+        "tier": "goldTrimmed",
+        "validSlots": [
+          "Platelegs"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 50
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": -7
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -21
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 7
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 65
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 57
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -4
+          },
+          {
+            "key": "damageReduction",
+            "value": 5
+          }
+        ],
+        "customDescription": "+5% Reflect Damage against Silver-Vulnerable monsters",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "reflectDamage": 5
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Platebody_T_G",
+        "name": "(G) Silver Platebody",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/armour_platebody_silver_trimmed_gold.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 2100,
+        "tier": "goldTrimmed",
+        "validSlots": [
+          "Platebody"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 50
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": -10
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -30
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 7
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 109
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 99
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -6
+          },
+          {
+            "key": "damageReduction",
+            "value": 5
+          }
+        ],
+        "customDescription": "+5% Reflect Damage against Silver-Vulnerable monsters",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "reflectDamage": 5
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Shield_T_G",
+        "name": "(G) Silver Shield",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/armour_shield_silver_trimmed_gold.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1075,
+        "tier": "goldTrimmed",
+        "validSlots": [
+          "Shield"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 50
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": -2
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -8
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 7
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 58
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 56
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -1
+          },
+          {
+            "key": "damageReduction",
+            "value": 5
+          }
+        ],
+        "customDescription": "+5% Reflect Damage against Silver-Vulnerable monsters",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "reflectDamage": 5
+            }
+          }
+        ]
+      },
       {
         "itemType": "Item",
         "id": "Pyrite_Ore",
@@ -5831,68 +7070,6 @@
         ]
       },
       {
-        "itemType": "Weapon",
-        "attackType": "ranged",
-        "id": "Lasercannon",
-        "name": "Lasercannon",
-        "category": "Weapon",
-        "type": "Weapon",
-        "media": "assets/bank/lasercannon.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 10000000,
-        "tier": "none",
-        "validSlots": [
-          "melvorD:Weapon"
-        ],
-        "ammoType": "None",
-        "occupiesSlots": [
-          "Shield"
-        ],
-        "equipRequirements": [],
-        "equipmentStats": [
-          {
-            "key": "attackSpeed",
-            "value": 20000
-          },
-          {
-            "key": "rangedStrengthBonus",
-            "value": 500
-          },
-          {
-            "key": "rangedAttackBonus",
-            "value": 250
-          }
-        ],
-        "combatEffects": [
-          {
-            "appliesWhen": "HitWithFirstAttack",
-            "effectID": "melvorD:Burn"
-          }
-        ],
-        "conditionalModifiers": [
-          {
-            "condition": {
-              "type": "ItemCharge",
-              "itemID": "ntmyk:Lasercannon",
-              "operator": ">",
-              "value": 0
-            },
-            "modifiers": {
-              "flatAttackInterval": -10000,
-              "flatRangedAttackBonus": 500,
-              "flatRangedStrengthBonus": 1000
-            }
-          }
-        ],
-        "consumesChargesOn": [
-          {
-            "type": "PlayerAttack"
-          }
-        ]
-      },
-      {
         "itemType": "Equipment",
         "id": "Bronze_Dirk",
         "name": "Bronze Dirk",
@@ -6655,147 +7832,6 @@
           "ntmyk:DisruptingStab",
           "ntmyk:CripplingStrike"
         ]
-      },
-      {
-        "id": "Silver_Sword",
-        "name": "Silver Sword",
-        "category": "Combat",
-        "type": "Weapon",
-        "media": "assets/bank/sword_silver.png",
-        "customDescription": "Deals extra damage to silver-vulnerable monsters.",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 500,
-        "tier": "silver",
-        "validSlots": [
-          "Weapon"
-        ],
-        "occupiesSlots": [],
-        "equipRequirements": [
-          {
-            "type": "SkillLevel",
-            "skillID": "melvorD:Attack",
-            "level": 50
-          }
-        ],
-        "equipmentStats": [
-          {
-            "key": "attackSpeed",
-            "value": 2300
-          },
-          {
-            "key": "stabAttackBonus",
-            "value": 51
-          },
-          {
-            "key": "slashAttackBonus",
-            "value": 32
-          },
-          {
-            "key": "blockAttackBonus",
-            "value": 20
-          },
-          {
-            "key": "meleeStrengthBonus",
-            "value": 50
-          }
-        ],
-        "itemType": "Weapon",
-        "attackType": "melee",
-        "conditionalModifiers": [
-          {
-            "condition": {
-              "effectID": "ntmyk:VulnerabilitySilver",
-              "character": "Enemy",
-              "type": "CombatEffect"
-            },
-            "modifiers": {
-              "meleeMaxHit": 25
-            }
-          }
-        ]
-      },
-      {
-        "id": "Silver_2H_Sword",
-        "name": "Silver 2H Sword",
-        "category": "Combat",
-        "type": "Weapon",
-        "media": "assets/bank/weapon_2h_sword_silver.png",
-        "customDescription": "Deals extra damage to silver-vulnerable monsters.",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 750,
-        "tier": "silver",
-        "validSlots": [
-          "Weapon"
-        ],
-        "occupiesSlots": [],
-        "equipRequirements": [
-          {
-            "type": "SkillLevel",
-            "skillID": "melvorD:Attack",
-            "level": 50
-          }
-        ],
-        "equipmentStats": [
-          {
-            "key": "attackSpeed",
-            "value": 3600
-          },
-          {
-            "key": "stabAttackBonus",
-            "value": -4
-          },
-          {
-            "key": "slashAttackBonus",
-            "value": 100
-          },
-          {
-            "key": "blockAttackBonus",
-            "value": 100
-          },
-          {
-            "key": "meleeStrengthBonus",
-            "value": 142
-          }
-        ],
-        "itemType": "Weapon",
-        "attackType": "melee",
-        "modifiers": {
-          "flatHiddenSkillLevelBasedOnLevels": [
-            {
-              "skillID": "melvorD:Strength",
-              "value": 50
-            }
-          ]
-        },
-        "conditionalModifiers": [
-          {
-            "condition": {
-              "effectID": "ntmyk:VulnerabilitySilver",
-              "character": "Enemy",
-              "type": "CombatEffect"
-            },
-            "modifiers": {
-              "meleeMaxHit": 25
-            }
-          }
-        ]
-      },
-      {
-        "itemType": "Item",
-        "id": "Amethyst",
-        "name": "Amethyst",
-        "category": "Gemstone",
-        "type": "Gem",
-        "media": "assets/bank/gem_amethyst.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 250,
-        "customDescription": "Standard Gem"
       },
       {
         "itemType": "Item",
@@ -8264,14 +9300,6 @@
         "selectedSpell": "melvorD:WindStrike"
       }
     ],
-    "randomGems": [
-      {
-        "itemID": "ntmyk:Amethyst",
-        "weight": 20,
-        "minQuantity": 1,
-        "maxQuantity": 1
-      }
-    ],
     "randomSuperiorGems": [
       {
         "itemID": "ntmyk:Dragonstone",
@@ -8302,7 +9330,7 @@
       {
         "id": "ChargeableItems",
         "name": "Chargeable Items",
-        "media": "assets/bank/lasercannon.png"
+        "media": "assets/bank/wand_fireball.png"
       }
     ],
     "shopCategoryOrder": [
@@ -8318,7 +9346,6 @@
       {
         "insertAt": "Start",
         "ids": [
-          "ntmyk:Lasercannon",
           "ntmyk:Wand_of_Fireball",
           "ntmyk:Wand_of_Frost",
           "ntmyk:Wand_of_Lightning",
@@ -8680,34 +9707,6 @@
               "currency": "melvorD:GP",
               "type": "Fixed",
               "cost": 500000
-            }
-          ]
-        },
-        "allowQuantityPurchase": true,
-        "unlockRequirements": [],
-        "purchaseRequirements": [],
-        "defaultBuyLimit": 0,
-        "buyLimitOverrides": [],
-        "showBuyLimit": false
-      },
-      {
-        "id": "Lasercannon",
-        "media": "assets/bank/lasercannon.png",
-        "category": "ntmyk:ChargeableItems",
-        "contains": {
-          "items": [],
-          "itemCharges": {
-            "id": "ntmyk:Lasercannon",
-            "quantity": 500
-          }
-        },
-        "cost": {
-          "items": [],
-          "currencies": [
-            {
-              "currency": "melvorD:GP",
-              "type": "Fixed",
-              "cost": 50000000
             }
           ]
         },
@@ -13619,6 +14618,13 @@
       {
         "skillID": "melvorD:Mining",
         "data": {
+          "minibar": {
+            "defaultItems": [
+              "ntmyk:Dynamite"
+            ],
+            "pets": [],
+            "upgrades": []
+          },
           "rockData": [
             {
               "id": "Pyrite",
