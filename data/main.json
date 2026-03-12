@@ -602,6 +602,28 @@
     "bankSortOrder": [
       {
         "insertAt": "After",
+        "afterID": "melvorD:Rune_Shield_T_G",
+        "ids": [
+          "ntmyk:Silver_Gloves",
+          "ntmyk:Silver_Helmet",
+          "ntmyk:Silver_Boots",
+          "ntmyk:Silver_Platelegs",
+          "ntmyk:Silver_Platebody",
+          "ntmyk:Silver_Shield",
+          "ntmyk:Silver_Helmet_T_S",
+          "ntmyk:Silver_Boots_T_S",
+          "ntmyk:Silver_Platelegs_T_S",
+          "ntmyk:Silver_Platebody_T_S",
+          "ntmyk:Silver_Shield_T_S",
+          "ntmyk:Silver_Helmet_T_G",
+          "ntmyk:Silver_Boots_T_G",
+          "ntmyk:Silver_Platelegs_T_G",
+          "ntmyk:Silver_Platebody_T_G",
+          "ntmyk:Silver_Shield_T_G"
+        ]
+      },
+      {
+        "insertAt": "After",
         "afterID": "melvorF:Jadestone_Bolts",
         "ids": [
           "ntmyk:Bronze_Shot",
@@ -2275,7 +2297,7 @@
         "name": "Silver 2H Sword",
         "category": "Combat",
         "type": "Weapon",
-        "media": "assets/bank/weapon_2h_silver.png",
+        "media": "assets/bank/weapon_2h_sword_silver.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -2343,6 +2365,65 @@
             },
             "modifiers": {
               "meleeMaxHit": 25
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Gloves",
+        "name": "Silver Gloves",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/armour_gloves_silver.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 465,
+        "tier": "silver",
+        "validSlots": [
+          "Gloves"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 50
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "stabAttackBonus",
+            "value": 7
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 7
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 7
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 7
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 7
+          }
+        ],
+        "customDescription": "+5% Reflect Damage against Silver-Vulnerable monsters",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "ntmyk:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "reflectDamage": 5
             }
           }
         ]
@@ -8830,6 +8911,213 @@
     ],
     "itemUpgrades": [
       {
+        "upgradedItemID": "ntmyk:Silver_Helmet_T_S",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Silver_Helmet",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Silver_Bar",
+            "quantity": 600
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Silver_Helmet"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 175000
+          }
+        ]
+      },
+      {
+        "upgradedItemID": "ntmyk:Silver_Boots_T_S",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Silver_Boots",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Silver_Bar",
+            "quantity": 600
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Silver_Boots"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 175000
+          }
+        ]
+      },
+      {
+        "upgradedItemID": "ntmyk:Silver_Platelegs_T_S",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Silver_Platelegs",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Silver_Bar",
+            "quantity": 600
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Silver_Platelegs"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 175000
+          }
+        ]
+      },
+      {
+        "upgradedItemID": "ntmyk:Silver_Platebody_T_S",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Silver_Platebody",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Silver_Bar",
+            "quantity": 600
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Silver_Platebody"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 175000
+          }
+        ]
+      },
+      {
+        "upgradedItemID": "ntmyk:Silver_Helmet_T_G",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Silver_Helmet_T_S",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Gold_Bar",
+            "quantity": 1125
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Silver_Helmet_T_S"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 350000
+          }
+        ]
+      },
+      {
+        "upgradedItemID": "ntmyk:Silver_Boots_T_G",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Silver_Boots_T_S",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Gold_Bar",
+            "quantity": 1125
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Silver_Boots_T_S"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 350000
+          }
+        ]
+      },
+      {
+        "upgradedItemID": "ntmyk:Silver_Platelegs_T_G",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Silver_Platelegs_T_S",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Gold_Bar",
+            "quantity": 1125
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Silver_Platelegs_T_S"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 350000
+          }
+        ]
+      },
+      {
+        "upgradedItemID": "ntmyk:Silver_Platebody_T_G",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Silver_Platebody_T_S",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Gold_Bar",
+            "quantity": 1125
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Silver_Platebody_T_S"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 350000
+          }
+        ]
+      },
+      {
+        "upgradedItemID": "ntmyk:Silver_Shield_T_G",
+        "itemCosts": [
+          {
+            "id": "ntmyk:Silver_Shield_T_S",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Gold_Bar",
+            "quantity": 1125
+          }
+        ],
+        "rootItemIDs": [
+          "ntmyk:Silver_Shield_T_S"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": [
+          {
+            "id": "melvorD:GP",
+            "quantity": 350000
+          }
+        ]
+      },
+      {
         "upgradedItemID": "ntmyk:Bronze_Pistol_Offhand",
         "itemCosts": [
           {
@@ -13935,91 +14223,140 @@
         "id": "Anvil",
         "chainName": "Current Anvil",
         "rootUpgradeID": "ntmyk:Anvil_Dragon",
-        "defaultName": "Bronze Anvil",
+        "defaultName": "Anvil of Sadness",
         "defaultDescription": "No bonuses.",
-        "defaultMedia": "assets/shop/anvil_bronze.png"
+        "defaultMedia": "assets/icons/sad.svg"
       },
       {
         "id": "Arcanolinth",
         "chainName": "Current Arcanolinth",
         "rootUpgradeID": "ntmyk:Arcanolinth_Tesseractic",
-        "defaultName": "Arcanolinth",
+        "defaultName": "Arcanolinth of Sadness",
         "defaultDescription": "No bonuses.",
-        "defaultMedia": "assets/shop/arcanolinth_circlic.png"
+        "defaultMedia": "assets/icons/sad.svg"
       },
       {
         "id": "BunsenBurner",
         "chainName": "Current Bunsen Burner",
         "rootUpgradeID": "ntmyk:Bunsen_Burner_Dragon",
-        "defaultName": "Bronze Bunsen Burner",
+        "defaultName": "Bunsen Burner of Sadness",
         "defaultDescription": "No bonuses.",
-        "defaultMedia": "assets/shop/bunsen_burner_bronze.png"
+        "defaultMedia": "assets/icons/sad.svg"
       },
       {
         "id": "EssenceResonator",
         "chainName": "Current Essence Resonator",
         "rootUpgradeID": "ntmyk:Essence_Resonator_Dragon",
-        "defaultName": "Bronze Essence Resonator",
+        "defaultName": "Essence Resonator of Sadness",
         "defaultDescription": "No bonuses.",
-        "defaultMedia": "assets/shop/essence_resonator_bronze.png"
+        "defaultMedia": "assets/icons/sad.svg"
       },
       {
         "id": "Firestarter",
         "chainName": "Current Firestarter",
         "rootUpgradeID": "ntmyk:Firestarter_Dragon",
-        "defaultName": "Bronze Firestarter",
+        "defaultName": "Firestarter of Sadness",
         "defaultDescription": "No bonuses.",
-        "defaultMedia": "assets/shop/firestarter_bronze.png"
+        "defaultMedia": "assets/icons/sad.svg"
       },
       {
         "id": "Hoe",
         "chainName": "Current Hoe",
         "rootUpgradeID": "ntmyk:Hoe_Dragon",
-        "defaultName": "Bronze Hoe",
+        "defaultName": "Hoe of Sadness",
         "defaultDescription": "No bonuses.",
-        "defaultMedia": "assets/shop/hoe_bronze.png"
+        "defaultMedia": "assets/icons/sad.svg"
       },
       {
         "id": "Mark",
         "chainName": "Current Mark",
         "rootUpgradeID": "ntmyk:Mark_Bear",
-        "defaultName": "Mark of Nothing",
-        "defaultDescription": "No bonuses."
+        "defaultName": "Mark of Sadness",
+        "defaultDescription": "No bonuses.",
+        "defaultMedia": "assets/icons/sad.svg"
       },
       {
         "id": "Needle",
         "chainName": "Current Needle",
         "rootUpgradeID": "ntmyk:Needle_Dragon",
-        "defaultName": "Bronze Needle",
+        "defaultName": "Needle of Sadness",
         "defaultDescription": "No bonuses.",
-        "defaultMedia": "assets/shop/needle_bronze.png"
+        "defaultMedia": "assets/icons/sad.svg"
       },
       {
         "id": "ThievingTools",
         "chainName": "Current Thieving Tools",
         "rootUpgradeID": "ntmyk:Thieving_Tools_Dragon",
-        "defaultName": "Bronze Thieving Tools",
+        "defaultName": "Tools of Sadness",
         "defaultDescription": "No bonuses.",
-        "defaultMedia": "assets/shop/thieving_tools_bronze.png"
+        "defaultMedia": "assets/icons/sad.svg"
       },
       {
         "id": "WhittlingTools",
         "chainName": "Current Whittling Tools",
         "rootUpgradeID": "ntmyk:Whittling_Tools_Dragon",
-        "defaultName": "Bronze Whittling Tools",
+        "defaultName": "Tools of Sadness",
         "defaultDescription": "No bonuses.",
-        "defaultMedia": "assets/shop/whittling_tools_bronze.png"
+        "defaultMedia": "assets/icons/sad.svg"
       },
       {
         "id": "Telescope",
         "chainName": "Current Telescope",
         "rootUpgradeID": "ntmyk:Telescope_Dragon",
-        "defaultName": "Bronze Telescope",
+        "defaultName": "Telescope of Sadness",
         "defaultDescription": "No bonuses.",
-        "defaultMedia": "assets/shop/telescope_bronze.png"
+        "defaultMedia": "assets/icons/sad.svg"
+      },
+      {
+        "id": "Trainers",
+        "chainName": "Current Trainers",
+        "rootUpgradeID": "ntmyk:Trainers_Elite",
+        "defaultName": "Trainers of Sadness",
+        "defaultDescription": "No bonuses.",
+        "defaultMedia": "assets/icons/sad.svg"
       }
     ],
     "skillData": [
+      {
+        "skillID": "melvorD:Agility",
+        "data": {
+          "headerUpgradeChains": [
+            "ntmyk:Trainers"
+          ]
+        }
+      },
+      {
+        "skillID": "melvorD:Astrology",
+        "data": {
+          "headerUpgradeChains": [
+            "ntmyk:Telescope"
+          ]
+        }
+      },
+      {
+        "skillID": "melvorD:Crafting",
+        "data": {
+          "headerUpgradeChains": [
+            "ntmyk:Needle"
+          ]
+        }
+      },
+      {
+        "skillID": "melvorD:Farming",
+        "data": {
+          "headerUpgradeChains": [
+            "ntmyk:Hoe"
+          ]
+        }
+      },
+      {
+        "skillID": "melvorD:Firemaking",
+        "data": {
+          "headerUpgradeChains": [
+            "ntmyk:Firestarter"
+          ]
+        }
+      },
       {
         "skillID": "melvorD:Fletching",
         "data": {
@@ -14029,6 +14366,9 @@
               "name": "Firearms",
               "media": "assets/bank/offhand_pistol_dragon.png"
             }
+          ],
+          "headerUpgradeChains": [
+            "ntmyk:WhittlingTools"
           ],
           "recipes": [
             {
@@ -14603,6 +14943,9 @@
       {
         "skillID": "melvorD:Magic",
         "data": {
+          "headerUpgradeChains": [
+            "ntmyk:Arcanolinth"
+          ],
           "spellCategories": [
             {
               "id": "Spirit",
@@ -14669,6 +15012,14 @@
         }
       },
       {
+        "skillID": "melvorD:Runecrafting",
+        "data": {
+          "headerUpgradeChains": [
+            "ntmyk:EssenceResonator"
+          ]
+        }
+      },
+      {
         "skillID": "melvorD:Smithing",
         "data": {
           "categories": [
@@ -14677,6 +15028,9 @@
               "media": "assets/bank/armour_helmet_silver.png",
               "name": "Silver Gear"
             }
+          ],
+          "headerUpgradeChains": [
+            "ntmyk:Anvil"
           ],
           "recipes": [
             {
@@ -15061,6 +15415,14 @@
               "id": "FirearmComponents",
               "name": "Firearm Components"
             }
+          ]
+        }
+      },
+      {
+        "skillID": "melvorD:Thieving",
+        "data": {
+          "headerUpgradeChains": [
+            "ntmyk:ThievingTools"
           ]
         }
       },
