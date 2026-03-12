@@ -2,7 +2,1606 @@
   "$schema": "https://melvoridle.com/assets/schema/gameData.json",
   "namespace": "ntmyk",
   "modifications": {
+    "combatAreaCategories": [
+      {
+        "id": "melvorD:CombatAreas",
+        "areas": {
+          "add": [
+            {
+              "insertAt": "After",
+              "afterID": "melvorD:Farmlands",
+              "ids": [
+                "SUPERAWESOME:Botanical_Gardens",
+                "SUPERAWESOME:Low_Town"
+              ]
+            },
+            {
+              "insertAt": "After",
+              "afterID": "melvorD:ElerineBattlegrounds",
+              "ids": [
+                "SUPERAWESOME:Secluded_Monastery"
+              ]
+            },
+            {
+              "insertAt": "After",
+              "afterID": "melvorD:Icy_Hills",
+              "ids": [
+                "SUPERAWESOME:Barbarian_Village"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Dungeons",
+        "areas": {
+          "add": [
+            {
+              "insertAt": "After",
+              "afterID": "melvorD:Chicken_Coop",
+              "ids": [
+                "SUPERAWESOME:Golbin_Hideout"
+              ]
+            },
+            {
+              "insertAt": "After",
+              "afterID": "melvorD:Hall_of_Wizards",
+              "ids": [
+                "SUPERAWESOME:The_Barbarian_Trials"
+              ]
+            },
+            {
+              "insertAt": "After",
+              "afterID": "melvorF:Dragons_Den",
+              "ids": [
+                "SUPERAWESOME:Elemental_Sanctuary"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "combatAreas": [
+      {
+        "id": "melvorD:Goblin_Village",
+        "monsters": {
+          "add": [
+            {
+              "insertAt": 2,
+              "monsterID": "SUPERAWESOME:Magic_Golbin"
+            },
+            {
+              "insertAt": 3,
+              "monsterID": "SUPERAWESOME:Hobgolbin"
+            },
+            {
+              "insertAt": 4,
+              "monsterID": "SUPERAWESOME:Big_Golbin"
+            },
+            {
+              "insertAt": 5,
+              "monsterID": "SUPERAWESOME:Golbin_Chief"
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Graveyard",
+        "monsters": {
+          "add": [
+            {
+              "insertAt": 4,
+              "monsterID": "SUPERAWESOME:Novice_Necromancer"
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Dragon_Valley",
+        "monsters": {
+          "add": [
+            {
+              "monsterID": "SUPERAWESOME:Baby_Green_Dragon",
+              "insertAt": 0
+            },
+            {
+              "monsterID": "SUPERAWESOME:Baby_Blue_Dragon",
+              "insertAt": 1
+            },
+            {
+              "monsterID": "SUPERAWESOME:Baby_Red_Dragon",
+              "insertAt": 2
+            },
+            {
+              "monsterID": "SUPERAWESOME:Baby_Black_Dragon",
+              "insertAt": 3
+            }
+          ]
+        }
+      }
+    ],
+    "dungeons": [
+      {
+        "id": "melvorD:Chicken_Coop",
+        "allowedDamageTypeIDs": {
+          "remove": [
+            "melvorD:Normal"
+          ]
+        },
+        "dropBones": true
+      },
+      {
+        "id": "melvorD:Undead_Graveyard",
+        "allowedDamageTypeIDs": {
+          "remove": [
+            "melvorD:Normal"
+          ]
+        },
+        "dropBones": true,
+        "monsters": {
+          "remove": [
+            {
+              "removeAt": 0,
+              "monsterID": "melvorD:ZombieHand"
+            },
+            {
+              "removeAt": 4,
+              "monsterID": "melvorD:Zombie"
+            }
+          ],
+          "add": [
+            {
+              "insertAt": 2,
+              "monsterID": "SUPERAWESOME:Novice_Necromancer"
+            },
+            {
+              "insertAt": 6,
+              "monsterID": "SUPERAWESOME:Novice_Necromancer"
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Bandit_Base",
+        "allowedDamageTypeIDs": {
+          "remove": [
+            "melvorD:Normal"
+          ]
+        },
+        "dropBones": true,
+        "difficulty": [
+          2
+        ]
+      },
+      {
+        "id": "melvorD:Hall_of_Wizards",
+        "allowedDamageTypeIDs": {
+          "remove": [
+            "melvorD:Normal"
+          ]
+        },
+        "dropBones": true
+      },
+      {
+        "id": "melvorD:Spider_Forest",
+        "allowedDamageTypeIDs": {
+          "remove": [
+            "melvorD:Normal"
+          ]
+        },
+        "dropBones": true
+      },
+      {
+        "id": "melvorF:Miolite_Caves",
+        "allowedDamageTypeIDs": {
+          "remove": [
+            "melvorD:Normal"
+          ]
+        },
+        "dropBones": true,
+        "difficulty": [
+          2
+        ],
+        "entryRequirements": {
+          "remove": [
+            "SkillLevel"
+          ],
+          "add": [
+            {
+              "skillID": "melvorD:Slayer",
+              "level": 50,
+              "type": "SkillLevel"
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Deep_Sea_Ship",
+        "allowedDamageTypeIDs": {
+          "remove": [
+            "melvorD:Normal"
+          ]
+        },
+        "dropBones": true,
+        "difficulty": [
+          2
+        ]
+      },
+      {
+        "id": "melvorD:Frozen_Cove",
+        "allowedDamageTypeIDs": {
+          "remove": [
+            "melvorD:Normal"
+          ]
+        },
+        "dropBones": true,
+        "difficulty": [
+          2
+        ]
+      },
+      {
+        "id": "melvorF:Dragons_Den",
+        "allowedDamageTypeIDs": {
+          "remove": [
+            "melvorD:Normal"
+          ]
+        },
+        "dropBones": true,
+        "difficulty": [
+          3
+        ]
+      },
+      {
+        "id": "melvorD:Volcanic_Cave",
+        "allowedDamageTypeIDs": {
+          "remove": [
+            "melvorD:Normal"
+          ]
+        },
+        "dropBones": true
+      },
+      {
+        "id": "melvorF:Infernal_Stronghold",
+        "allowedDamageTypeIDs": {
+          "remove": [
+            "melvorD:Normal"
+          ]
+        },
+        "dropBones": true
+      }
+    ],
     "items": [
+      {
+        "id": "melvorF:Stormsnap",
+        "equipmentStats": {
+          "remove": [
+            "attackSpeed"
+          ],
+          "add": [
+            {
+              "key": "attackSpeed",
+              "value": 3600
+            },
+            {
+              "key": "rangedAttackBonus",
+              "value": 80
+            },
+            {
+              "key": "rangedStrengthBonus",
+              "value": 40
+            }
+          ]
+        },
+        "specialAttacks": {
+          "remove": [
+            "melvorF:Stormsnap"
+          ],
+          "add": [
+            "SUPERAWESOME:Stormsnap"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Aeris_God_Helmet",
+        "equipmentStats": {
+          "add": [
+            {
+              "key": "rangedAttackBonus",
+              "value": 8
+            },
+            {
+              "key": "meleeDefenceBonus",
+              "value": 4
+            },
+            {
+              "key": "rangedDefenceBonus",
+              "value": 14
+            },
+            {
+              "key": "magicDefenceBonus",
+              "value": 31
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Aeris_God_Platebody",
+        "equipmentStats": {
+          "add": [
+            {
+              "key": "rangedAttackBonus",
+              "value": 4
+            },
+            {
+              "key": "meleeDefenceBonus",
+              "value": -9
+            },
+            {
+              "key": "rangedDefenceBonus",
+              "value": 8
+            },
+            {
+              "key": "magicDefenceBonus",
+              "value": 17
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Aeris_God_Platelegs",
+        "equipmentStats": {
+          "add": [
+            {
+              "key": "rangedAttackBonus",
+              "value": 3
+            },
+            {
+              "key": "meleeStrengthBonus",
+              "value": -9
+            },
+            {
+              "key": "rangedStrengthBonus",
+              "value": 8
+            },
+            {
+              "key": "rangedDefenceBonus",
+              "value": 10
+            },
+            {
+              "key": "meleeDefenceBonus",
+              "value": 2
+            },
+            {
+              "key": "magicDefenceBonus",
+              "value": 13
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Aeris_God_Gloves",
+        "equipmentStats": {
+          "add": [
+            {
+              "key": "rangedAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "rangedStrengthBonus",
+              "value": 2
+            },
+            {
+              "key": "rangedDefenceBonus",
+              "value": 4
+            },
+            {
+              "key": "meleeDefenceBonus",
+              "value": 2
+            },
+            {
+              "key": "magicDefenceBonus",
+              "value": 6
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Aeris_God_Boots",
+        "equipmentStats": {
+          "add": [
+            {
+              "key": "rangedAttackBonus",
+              "value": 7
+            },
+            {
+              "key": "rangedStrengthBonus",
+              "value": 2
+            },
+            {
+              "key": "rangedDefenceBonus",
+              "value": 7
+            },
+            {
+              "key": "meleeDefenceBonus",
+              "value": 3
+            },
+            {
+              "key": "magicDefenceBonus",
+              "value": 9
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Pirate_Booty",
+        "dropTable": {
+          "add": [
+            {
+              "itemID": "SUPERAWESOME:The_Good_Stuff",
+              "minQuantity": 25,
+              "maxQuantity": 100,
+              "weight": 25
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Blazing_Lantern",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Tool"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Book_of_Eli",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Accessory1",
+            "SUPERAWESOME:Accessory2"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Book_of_Occults",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Accessory1",
+            "SUPERAWESOME:Accessory2"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Fine_Coinpurse",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Accessory1",
+            "SUPERAWESOME:Accessory2"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Book_Of_Scholars",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Accessory1",
+            "SUPERAWESOME:Accessory2"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Chefs_Spoon",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Tool"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Bobs_Rake",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Tool"
+          ]
+        },
+        "occupiesSlots": {
+          "remove": [
+            "Shield"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Ring_Of_Balance",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Poison_Ring",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Ancient_Ring_Of_Mastery",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Ancient_Ring_Of_Skills",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Burning_Ring",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Almighty_Ring",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Frostburn_Ring",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Pirates_Lost_Ring",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Ring_Of_Blade_Echoes",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Ring_Of_Power",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Ring_Of_Barrage",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Ring_Of_Wealth",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Ring_Of_Spirit_Power",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Shaman_Ring",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Deadeye_Ring",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Fighter_Ring",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Warlock_Ring",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Aorpheats_Signet_Ring",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Christmas_Coal",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Friendship_Bracelet",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Burning_Madness_Ring",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Gold_Diamond_Ring",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Gold_Emerald_Ring",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Gold_Ruby_Ring",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Gold_Sapphire_Ring",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Gold_Topaz_Ring",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Guardian_Ring",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Hunters_Ring",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Magical_Ring",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Natures_Blessing_Ring",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Poison_Virulence_Ring",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Relentless_Fury_Ring",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Sandstorm_Ring",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Silver_Diamond_Ring",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Silver_Emerald_Ring",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Silver_Ruby_Ring",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Silver_Sapphire_Ring",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Silver_Topaz_Ring",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Spiked_Shell_Ring",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Tormented_Ring",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Wasteful_Ring",
+        "validSlots": {
+          "add": [
+            "SUPERAWESOME:Ring"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Bird_Nest",
+        "dropTable": {
+          "remove": [
+            "melvorD:Potato_Seed",
+            "melvorD:Onion_Seed",
+            "melvorD:Cabbage_Seed",
+            "melvorD:Tomato_Seed",
+            "melvorD:Sweetcorn_Seed",
+            "melvorD:Strawberry_Seed",
+            "melvorD:Cherry_Seeds",
+            "melvorD:Watermelon_Seed",
+            "melvorD:Snape_Grass_Seed",
+            "melvorD:Carrot_Seed",
+            "melvorD:Oak_Tree_Seed",
+            "melvorD:Willow_Tree_Seed",
+            "melvorD:Maple_Tree_Seed",
+            "melvorD:Yew_Tree_Seed",
+            "melvorD:Magic_Tree_Seed"
+          ],
+          "add": [
+            {
+              "itemID": "melvorD:Oak_Tree_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 1111111
+            },
+            {
+              "itemID": "melvorF:Apple_Tree_Seeds",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 111111
+            },
+            {
+              "itemID": "melvorD:Willow_Tree_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 999999
+            },
+            {
+              "itemID": "SUPERAWESOME:Orange_Tree_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 777777
+            },
+            {
+              "itemID": "SUPERAWESOME:Curry_Tree_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 888888
+            },
+            {
+              "itemID": "melvorD:Maple_Tree_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 777777
+            },
+            {
+              "itemID": "SUPERAWESOME:Pineapple_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 777777
+            },
+            {
+              "itemID": "SUPERAWESOME:Papaya_Tree_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 666666
+            },
+            {
+              "itemID": "melvorD:Yew_Tree_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 333333
+            },
+            {
+              "itemID": "SUPERAWESOME:Palm_Tree_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 222222
+            },
+            {
+              "itemID": "SUPERAWESOME:Dragonfruit_Tree_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 11111
+            },
+            {
+              "itemID": "melvorD:Magic_Tree_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 55555
+            },
+            {
+              "itemID": "SUPERAWESOME:Teak_Tree_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 555555
+            },
+            {
+              "itemID": "SUPERAWESOME:Mahogany_Tree_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 444444
+            },
+            {
+              "itemID": "SUPERAWESOME:Redwood_Tree_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 5555
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Glacia_God_Helmet",
+        "equipmentStats": {
+          "add": [
+            {
+              "key": "meleeDefenceBonus",
+              "value": 24
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Glacia_God_Platelegs",
+        "equipmentStats": {
+          "add": [
+            {
+              "key": "meleeDefenceBonus",
+              "value": 41
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Glacia_God_Platebody",
+        "equipmentStats": {
+          "add": [
+            {
+              "key": "meleeDefenceBonus",
+              "value": 68
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Glacia_God_Gloves",
+        "equipmentStats": {
+          "add": [
+            {
+              "key": "meleeDefenceBonus",
+              "value": 2
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Magic_Chest",
+        "dropTable": {
+          "add": [
+            {
+              "itemID": "SUPERAWESOME:Ancient_Wizard_Gloves",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 5
+            },
+            {
+              "itemID": "SUPERAWESOME:Ancient_Staff",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 3
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Spider_Chest",
+        "dropTable": {
+          "remove": [
+            "melvorD:Leather_Cowl",
+            "melvorD:Leather_Chaps",
+            "melvorD:Leather_Boots",
+            "melvorD:Leather_Vambraces",
+            "melvorD:Ranger_Boots",
+            "melvorD:Rangers_Hat",
+            "melvorD:Amulet_of_Ranged"
+          ],
+          "add": [
+            {
+              "itemID": "SUPERAWESOME:Green_Dhide_Boots",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 30
+            },
+            {
+              "itemID": "SUPERAWESOME:Green_Dhide_Cowl",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 30
+            },
+            {
+              "itemID": "SUPERAWESOME:Blue_Dhide_Boots",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 20
+            },
+            {
+              "itemID": "SUPERAWESOME:Blue_Dhide_Cowl",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 20
+            },
+            {
+              "itemID": "SUPERAWESOME:Red_Dhide_Boots",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 15
+            },
+            {
+              "itemID": "SUPERAWESOME:Red_Dhide_Cowl",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 15
+            },
+            {
+              "itemID": "SUPERAWESOME:Black_Dhide_Boots",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 10
+            },
+            {
+              "itemID": "SUPERAWESOME:Black_Dhide_Cowl",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 10
+            },
+            {
+              "itemID": "melvorD:Elite_Amulet_of_Ranged",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 5
+            },
+            {
+              "itemID": "SUPERAWESOME:Heavy_Hand_Ballista",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 3
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Bandit_Chest",
+        "dropTable": {
+          "remove": [
+            "melvorD:Steel_Arrows"
+          ],
+          "add": [
+            {
+              "itemID": "SUPERAWESOME:Black_Arrows",
+              "minQuantity": 1,
+              "maxQuantity": 100,
+              "weight": 250
+            },
+            {
+              "itemID": "melvorD:Amulet_of_Ranged",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 5
+            },
+            {
+              "itemID": "melvorD:Rangers_Hat",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 3
+            },
+            {
+              "itemID": "melvorD:Ranger_Boots",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 3
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Elder_Chest",
+        "dropTable": {
+          "add": [
+            {
+              "itemID": "SUPERAWESOME:Ancient_Dhide_Cowl",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 70
+            },
+            {
+              "itemID": "SUPERAWESOME:Ancient_Dhide_Boots",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 40
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Treasure_Chest",
+        "dropTable": {
+          "add": [
+            {
+              "itemID": "SUPERAWESOME:Sand",
+              "minQuantity": 1,
+              "maxQuantity": 10,
+              "weight": 90
+            },
+            {
+              "itemID": "SUPERAWESOME:Waterlogged_Page",
+              "minQuantity": 1,
+              "maxQuantity": 10,
+              "weight": 30
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Hard_Leather_Gloves",
+        "equipmentStats": {
+          "add": [
+            {
+              "key": "stabAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "slashAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "blockAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "rangedAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "magicAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "meleeStrengthBonus",
+              "value": 1
+            },
+            {
+              "key": "meleeDefenceBonus",
+              "value": 1
+            },
+            {
+              "key": "rangedDefenceBonus",
+              "value": 1
+            },
+            {
+              "key": "magicDefenceBonus",
+              "value": 1
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Bronze_Gloves",
+        "equipmentStats": {
+          "add": [
+            {
+              "key": "rangedAttackBonus",
+              "value": 2
+            },
+            {
+              "key": "magicAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "rangedDefenceBonus",
+              "value": 2
+            },
+            {
+              "key": "magicDefenceBonus",
+              "value": 1
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Iron_Gloves",
+        "equipmentStats": {
+          "add": [
+            {
+              "key": "rangedAttackBonus",
+              "value": 3
+            },
+            {
+              "key": "magicAttackBonus",
+              "value": 2
+            },
+            {
+              "key": "rangedDefenceBonus",
+              "value": 3
+            },
+            {
+              "key": "magicDefenceBonus",
+              "value": 2
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Steel_Gloves",
+        "equipmentStats": {
+          "add": [
+            {
+              "key": "rangedAttackBonus",
+              "value": 4
+            },
+            {
+              "key": "magicAttackBonus",
+              "value": 2
+            },
+            {
+              "key": "rangedDefenceBonus",
+              "value": 4
+            },
+            {
+              "key": "magicDefenceBonus",
+              "value": 2
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Mithril_Gloves",
+        "equipmentStats": {
+          "add": [
+            {
+              "key": "stabAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "slashAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "blockAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "rangedAttackBonus",
+              "value": 6
+            },
+            {
+              "key": "magicAttackBonus",
+              "value": 3
+            },
+            {
+              "key": "meleeStrengthBonus",
+              "value": 1
+            },
+            {
+              "key": "meleeDefenceBonus",
+              "value": 1
+            },
+            {
+              "key": "rangedDefenceBonus",
+              "value": 6
+            },
+            {
+              "key": "magicDefenceBonus",
+              "value": 3
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Adamant_Gloves",
+        "equipmentStats": {
+          "add": [
+            {
+              "key": "stabAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "slashAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "blockAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "rangedAttackBonus",
+              "value": 7
+            },
+            {
+              "key": "magicAttackBonus",
+              "value": 4
+            },
+            {
+              "key": "meleeStrengthBonus",
+              "value": 1
+            },
+            {
+              "key": "meleeDefenceBonus",
+              "value": 1
+            },
+            {
+              "key": "rangedDefenceBonus",
+              "value": 7
+            },
+            {
+              "key": "magicDefenceBonus",
+              "value": 4
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Rune_Gloves",
+        "equipmentStats": {
+          "add": [
+            {
+              "key": "stabAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "slashAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "blockAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "rangedAttackBonus",
+              "value": 8
+            },
+            {
+              "key": "magicAttackBonus",
+              "value": 4
+            },
+            {
+              "key": "meleeStrengthBonus",
+              "value": 1
+            },
+            {
+              "key": "meleeDefenceBonus",
+              "value": 1
+            },
+            {
+              "key": "rangedDefenceBonus",
+              "value": 8
+            },
+            {
+              "key": "magicDefenceBonus",
+              "value": 4
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Dragon_Gloves",
+        "equipmentStats": {
+          "add": [
+            {
+              "key": "stabAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "slashAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "blockAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "rangedAttackBonus",
+              "value": 9
+            },
+            {
+              "key": "magicAttackBonus",
+              "value": 5
+            },
+            {
+              "key": "meleeStrengthBonus",
+              "value": 1
+            },
+            {
+              "key": "meleeDefenceBonus",
+              "value": 1
+            },
+            {
+              "key": "rangedDefenceBonus",
+              "value": 9
+            },
+            {
+              "key": "magicDefenceBonus",
+              "value": 5
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Desert_Wrappings",
+        "equipmentStats": {
+          "add": [
+            {
+              "key": "stabAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "slashAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "blockAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "rangedAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "magicAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "meleeStrengthBonus",
+              "value": 1
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Ragnar_God_Gloves",
+        "equipmentStats": {
+          "add": [
+            {
+              "key": "stabAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "slashAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "blockAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "rangedAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "magicAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "meleeStrengthBonus",
+              "value": 1
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Relentless_Fury_Gloves",
+        "equipmentStats": {
+          "add": [
+            {
+              "key": "stabAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "slashAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "blockAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "rangedAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "magicAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "meleeStrengthBonus",
+              "value": 1
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Spiked_Shell_Gloves",
+        "equipmentStats": {
+          "add": [
+            {
+              "key": "stabAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "slashAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "blockAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "rangedAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "magicAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "meleeStrengthBonus",
+              "value": 1
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Terran_God_Gloves",
+        "equipmentStats": {
+          "add": [
+            {
+              "key": "stabAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "slashAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "blockAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "rangedAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "magicAttackBonus",
+              "value": 1
+            },
+            {
+              "key": "meleeStrengthBonus",
+              "value": 1
+            }
+          ]
+        }
+      },
       {
         "id": "melvorD:Bronze_2H_Sword",
         "specialAttacks": {
@@ -685,6 +2284,2504 @@
     ],
     "monsters": [
       {
+        "id": "melvorF:NoxiousSerpent",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "SUPERAWESOME:Large_Fang",
+              "minQuantity": 1,
+              "maxQuantity": 3,
+              "weight": 35
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:VenomousSnake",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "SUPERAWESOME:Large_Fang",
+              "minQuantity": 1,
+              "maxQuantity": 3,
+              "weight": 35
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:RagingHornedElite",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "SUPERAWESOME:Large_Fang",
+              "minQuantity": 1,
+              "maxQuantity": 4,
+              "weight": 200
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:SeethingHornedElite",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "SUPERAWESOME:Large_Fang",
+              "minQuantity": 1,
+              "maxQuantity": 4,
+              "weight": 120
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:DarkHornedElite",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "SUPERAWESOME:Large_Fang",
+              "minQuantity": 1,
+              "maxQuantity": 4,
+              "weight": 90
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:FuriousHornedElite",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "SUPERAWESOME:Large_Fang",
+              "minQuantity": 1,
+              "maxQuantity": 4,
+              "weight": 100
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:WickedGreaterDragon",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "SUPERAWESOME:Massive_Fang",
+              "minQuantity": 1,
+              "maxQuantity": 6,
+              "weight": 125
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:HuntingGreaterDragon",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "SUPERAWESOME:Massive_Fang",
+              "minQuantity": 1,
+              "maxQuantity": 6,
+              "weight": 125
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:ChaoticGreaterDragon",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "SUPERAWESOME:Massive_Fang",
+              "minQuantity": 1,
+              "maxQuantity": 6,
+              "weight": 125
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:RancoraSpider",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "SUPERAWESOME:Massive_Fang",
+              "minQuantity": 1,
+              "maxQuantity": 6,
+              "weight": 125
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:FearfulEye",
+        "bones": {
+          "itemID": "SUPERAWESOME:Fearful_Eyeball",
+          "quantity": 1
+        }
+      },
+      {
+        "id": "melvorD:ElerineArcher",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "SUPERAWESOME:Hoof",
+              "minQuantity": 1,
+              "maxQuantity": 4,
+              "weight": 33
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:ElerineWarrior",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "SUPERAWESOME:Hoof",
+              "minQuantity": 1,
+              "maxQuantity": 4,
+              "weight": 33
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:ElerineMage",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "SUPERAWESOME:Hoof",
+              "minQuantity": 1,
+              "maxQuantity": 4,
+              "weight": 33
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Pegasus",
+        "lootChance": 100,
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "SUPERAWESOME:Hoof",
+              "minQuantity": 1,
+              "maxQuantity": 4,
+              "weight": 22
+            },
+            {
+              "itemID": "SUPERAWESOME:Celestial_Feather",
+              "minQuantity": 1,
+              "maxQuantity": 3,
+              "weight": 11
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Phoenix",
+        "bones": {
+          "itemID": "SUPERAWESOME:Phoenix_Feather",
+          "quantity": 1
+        }
+      },
+      {
+        "id": "melvorF:Aleron",
+        "bones": {
+          "itemID": "SUPERAWESOME:Celestial_Feather",
+          "quantity": 6
+        }
+      },
+      {
+        "id": "melvorD:AdamantKnight",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:AdultFarmer",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Aeris",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeCelestial",
+            "SUPERAWESOME:MonsterTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Ahrenia",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeMyth"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:AhreniaStronghold",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeMyth"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:AirGolem",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeConstruct",
+            "SUPERAWESOME:MonsterTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:AirGuard",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeCelestial",
+            "SUPERAWESOME:MonsterTypeBeast"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:AirMonster",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeCelestial"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Aleron",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeCelestial"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Angel",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeCelestial"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Bandit",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:BanditLeader",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:BanditTrainee",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Bane",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:BaneInstrumentOfFear",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Bat",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeBeast"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:BigBat",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeBeast"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:BlackDragon",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeDragonkin"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:BlackKnight",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:BlueDragon",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeDragonkin"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:BountyHunter",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:BrownSpider",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeBeast"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Cerberus",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeBeast",
+            "SUPERAWESOME:MonsterTypeFiend"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:ChaoticGreaterDragon",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeDragonkin"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Chick",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeBeast"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Chicken",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeBeast"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:ConfusedPirate",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Cow",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeBeast"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:CursedLich",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:CursedMaiden",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:DarkHornedElite",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeBeast"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:DarkWizard",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Druid",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:EarthGolem",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeConstruct",
+            "SUPERAWESOME:MonsterTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:EarthGuard",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeMyth"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:EarthMonster",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeMyth"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:ElderDragon",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeDragonkin"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:ElderVampire",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:ElderWizard",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Elementalist",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:ElementalistBoss",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:ElerineArcher",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeMyth"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:ElerineMage",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeMyth"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:ElerineWarrior",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeMyth"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:EvilSpider",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeBeast"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:EyeOfFear",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeFiend"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Eyes",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeAlien"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Fairy",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeMyth"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:FearfulEye",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeAlien"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:FierceDevil",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeFiend"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:FierceDevilBoss",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeFiend"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:FireGolem",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeConstruct",
+            "SUPERAWESOME:MonsterTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:FireGuard",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeFiend"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:FireMonster",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeMonstrosity"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:FireSpirit",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:FirstMate",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:FrozenArcher",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:FrozenMammoth",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeBeast"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:FuriousHornedElite",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeBeast"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Ghost",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:GiantCrab",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeBeast"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:GiantMoth",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeBeast"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Glacia",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeCelestial",
+            "SUPERAWESOME:MonsterTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Golbin",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:GooMonster",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeMonstrosity"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:GreaterSkeletalDragon",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeDragonkin",
+            "SUPERAWESOME:MonsterTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:GreenDragon",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeDragonkin"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:GreenGooMonster",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeMonstrosity"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Griffin",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeMyth"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:HillGiant",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeGiant"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:HolyArcher",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeCelestial"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:HuntingGreaterDragon",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeDragonkin"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Ice",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:IceMonster",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:IceTroll",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeGiant"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Ignis",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeFiend"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Incendius",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:JuniorFarmer",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Kutul",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeAlien"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Leech",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeBeast"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:LegaranWurm",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeMonstrosity"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Lissia",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeMyth"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:LotsofEyes",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeAlien"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:MalcsTheGuardianOfMelvor",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeDragonkin"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:MalcsTheGuardianOfStrongholds",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeDragonkin"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:MalcsTheLeaderOfDragons",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeDragonkin"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:ManyEyedMonster",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeAlien"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:MasterFarmer",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:MasterWizard",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:MioliteMonarch",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypePlant"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:MioliteSprig",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypePlant"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:MioliteTrio",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypePlant"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:MioliteWarden",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypePlant"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Mistral",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypePlant"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:MithrilKnight",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:MoistMonster",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeMonstrosity"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:MossGiant",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeGiant"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:MummaChicken",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeBeast"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Mummy",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeUndead",
+            "SUPERAWESOME:AfflictingTouch"
+          ]
+        },
+        "specialAttacks": {
+          "add": [
+            {
+              "attackID": "SUPERAWESOME:DreadfulGlare"
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Murtia",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeMyth"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:MysteriousFigurePhase1",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:MysteriousFigurePhase1Stronghold",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:MysteriousFigurePhase2",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:MysteriousFigurePhase2Stronghold",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Necromancer",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:NoxiousSerpent",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeBeast"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Ophidia",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeMyth"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Paladin",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Pegasus",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeCelestial"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Phoenix",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Pirate",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:PirateCaptain",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Plant",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypePlant"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:PratTheGuardianOfSecrets",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeDragonkin"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:PratTheGuardianOfSecretsBoss",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeDragonkin"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:PratTheProtectorOfSecrets",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeDragonkin"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Priest",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:ProtectorofIce",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeDragonkin"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:PurpleGooMonster",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeMonstrosity"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Pyra",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:RagingHornedElite",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeBeast"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Ragnar",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeFiend",
+            "SUPERAWESOME:MonsterTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:RancoraSpider",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeMonstrosity"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:RangedGolbin",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:RedDevil",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeFiend"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:RedDragon",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeDragonkin"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:ResurrectedEye",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeAlien"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Rokken",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeAlien"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:RuneKnight",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:SandBeast",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeMonstrosity"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:ScatteredGooMonster",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeMonstrosity"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Seagull",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeBeast"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:SeethingHornedElite",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeBeast"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Shaman",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Skeleton",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Spider",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeBeast"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:SpiderKing",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeBeast"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:SpikedRedClaw",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeMonstrosity"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Statue",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeConstruct"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:SteelKnight",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:StoneSnake",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeMyth"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:StrangeEyedMonster",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeAlien"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:SuperiorEyedMonster",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeAlien"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:SweatyMonster",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeMonstrosity"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Tentacle",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeBeast"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Terran",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeCelestial",
+            "SUPERAWESOME:MonsterTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:TheEye",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeAlien"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:TheKraken",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeMonstrosity"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Thief",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:TurkulArchers",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:TurkulGeneral",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:TurkulGiant",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeGiant"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:TurkulRiders",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:TurkulThrowers",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Umbora",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeAlien"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:UndeadWerewolf",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Valkyrie",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeCelestial"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Vampire",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:VenomousSnake",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeBeast"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:ViciousSerpent",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeBeast"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Voltaire",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeMyth"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:WanderingBard",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeFiend"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:WaterGolem",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeConstruct",
+            "SUPERAWESOME:MonsterTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:WaterGuard",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:WaterMonster",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:WetMonster",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeMonstrosity"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:WickedGreaterDragon",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeDragonkin"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Wizard",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Zombie",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:ZombieHand",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:ZombieLeader",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Adult_Gardener",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Baby_Black_Dragon",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeDragonkin"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Baby_Blue_Dragon",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeDragonkin"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Baby_Green_Dragon",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeDragonkin"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Baby_Red_Dragon",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeDragonkin"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Barbarian",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Barbarian_Berserker",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Barbarian_Bowyer",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Barbarian_Brawler",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Barbarian_Warrior",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Big_Golbin",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Chieftain_Erik",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Draugr",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Drowned_Maiden",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Executioner",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Fire_Maiden",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Giant_Grub",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeBeast"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Golbin_Chief",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Guard",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Guardian_of_the_Elements",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Harpiar",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeMyth"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Hobgolbin",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Jarl_Eriksson",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Junior_Gardener",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Kappa",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeMyth"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Koschei_the_Deathless_Form1",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Koschei_the_Deathless_Form2",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Koschei_the_Deathless_Form3",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Koschei_the_Deathless_Form4",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Lost_Monkey",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeBeast"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Magic_Golbin",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Master_Gardener",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Monk_of_the_Flame",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Monk_of_the_Moss",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Monk_of_the_River",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Monk_of_the_Wind",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Mutant_Flower",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypePlant"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Mysterious_Monk",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:NightmareKingP1",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:NightmareKingP2",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:NightmareKingP3",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Novice_Necromancer",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:OzmarathraxInscriptorOfRunes",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeDragonkin"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Peasant_Man",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Peasant_Woman",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Pickpocket",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Rock_Giant",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Sandy_Devil",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Shadow",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Shadowhound",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Shadowknight",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Shadowthief",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Walking_Keg",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeMonstrosity"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Wasp",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypeBeast"
+          ]
+        }
+      },
+      {
+        "id": "SUPERAWESOME:Weeds",
+        "passives": {
+          "add": [
+            "SUPERAWESOME:MonsterTypePlant"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Aeris",
+        "levels": {
+          "Hitpoints": 1050,
+          "Attack": 550,
+          "Strength": 550,
+          "Defence": 550,
+          "Ranged": 800,
+          "Magic": 550
+        }
+      },
+      {
+        "id": "melvorF:Glacia",
+        "levels": {
+          "Hitpoints": 1150,
+          "Attack": 600,
+          "Strength": 600,
+          "Defence": 500,
+          "Ranged": 300,
+          "Magic": 600
+        }
+      },
+      {
+        "id": "melvorF:Terran",
+        "levels": {
+          "Hitpoints": 1250,
+          "Attack": 525,
+          "Strength": 550,
+          "Defence": 650,
+          "Ranged": 300,
+          "Magic": 300
+        }
+      },
+      {
+        "id": "melvorF:Ragnar",
+        "levels": {
+          "Hitpoints": 1100,
+          "Attack": 700,
+          "Strength": 600,
+          "Defence": 600,
+          "Ranged": 300,
+          "Magic": 400
+        }
+      },
+      {
+        "id": "melvorF:Ahrenia",
+        "levels": {
+          "Hitpoints": 1050,
+          "Attack": 820,
+          "Strength": 820,
+          "Defence": 820,
+          "Ranged": 820,
+          "Magic": 820
+        }
+      },
+      {
+        "id": "melvorD:JuniorFarmer",
+        "lootChance": 100,
+        "lootTable": {
+          "remove": [
+            "melvorD:Potato_Seed",
+            "melvorD:Garum_Seed",
+            "melvorD:Onion_Seed",
+            "melvorD:Cabbage_Seed",
+            "melvorD:Tomato_Seed"
+          ],
+          "add": [
+            {
+              "itemID": "SUPERAWESOME:Jute_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 3,
+              "weight": 999999
+            },
+            {
+              "itemID": "SUPERAWESOME:Barley_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 3,
+              "weight": 888888
+            },
+            {
+              "itemID": "melvorD:Potato_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 3,
+              "weight": 999999
+            },
+            {
+              "itemID": "melvorD:Onion_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 3,
+              "weight": 777777
+            },
+            {
+              "itemID": "melvorD:Cabbage_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 3,
+              "weight": 666666
+            },
+            {
+              "itemID": "melvorD:Tomato_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 3,
+              "weight": 555555
+            },
+            {
+              "itemID": "SUPERAWESOME:Sack",
+              "minQuantity": 1,
+              "maxQuantity": 3,
+              "weight": 444444
+            },
+            {
+              "itemID": "SUPERAWESOME:Basket",
+              "minQuantity": 1,
+              "maxQuantity": 3,
+              "weight": 333333
+            },
+            {
+              "itemID": "melvorD:Oak_Tree_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 3,
+              "weight": 111111
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:AdultFarmer",
+        "lootChance": 100,
+        "lootTable": {
+          "remove": [
+            "melvorD:Onion_Seed",
+            "melvorD:Cabbage_Seed",
+            "melvorD:Onion_Seed",
+            "melvorD:Cabbage_Seed",
+            "melvorD:Tomato_Seed",
+            "melvorD:Sourweed_Seed",
+            "melvorD:Mantalyme_Seed",
+            "melvorD:Sweetcorn_Seed",
+            "melvorD:Strawberry_Seed",
+            "melvorD:Watermelon_Seed",
+            "melvorD:Compost",
+            "melvorD:Snape_Grass_Seed",
+            "melvorD:Oak_Tree_Seed"
+          ],
+          "add": [
+            {
+              "itemID": "SUPERAWESOME:Plumm_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 6,
+              "weight": 999999
+            },
+            {
+              "itemID": "SUPERAWESOME:Firewine_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 6,
+              "weight": 777777
+            },
+            {
+              "itemID": "SUPERAWESOME:Andlovan_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 6,
+              "weight": 555555
+            },
+            {
+              "itemID": "SUPERAWESOME:Orange_Tree_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 6,
+              "weight": 333333
+            },
+            {
+              "itemID": "SUPERAWESOME:Cherry_Tree_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 6,
+              "weight": 111111
+            },
+            {
+              "itemID": "SUPERAWESOME:Curry_Tree_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 6,
+              "weight": 55555
+            },
+            {
+              "itemID": "melvorD:Sweetcorn_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 6,
+              "weight": 999999
+            },
+            {
+              "itemID": "melvorD:Strawberry_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 6,
+              "weight": 777777
+            },
+            {
+              "itemID": "melvorD:Watermelon_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 6,
+              "weight": 555555
+            },
+            {
+              "itemID": "melvorD:Compost",
+              "minQuantity": 1,
+              "maxQuantity": 6,
+              "weight": 555555
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:MasterFarmer",
+        "lootChance": 100,
+        "lootTable": {
+          "remove": [
+            "melvorD:Tomato_Seed",
+            "melvorD:Sweetcorn_Seed",
+            "melvorD:Strawberry_Seed",
+            "melvorD:Lemontyle_Seed",
+            "melvorD:Oxilyme_Seed",
+            "melvorD:Watermelon_Seed",
+            "melvorD:Compost",
+            "melvorD:Snape_Grass_Seed",
+            "melvorD:Oak_Tree_Seed",
+            "melvorD:Willow_Tree_Seed",
+            "melvorD:Maple_Tree_Seed",
+            "melvorD:Yew_Tree_Seed",
+            "melvorD:Magic_Tree_Seed",
+            "melvorD:Bobs_Rake"
+          ],
+          "add": [
+            {
+              "itemID": "SUPERAWESOME:Jute_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 999999
+            },
+            {
+              "itemID": "SUPERAWESOME:Barley_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 777777
+            },
+            {
+              "itemID": "SUPERAWESOME:Plumm_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 555555
+            },
+            {
+              "itemID": "SUPERAWESOME:Firewine_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 333333
+            },
+            {
+              "itemID": "SUPERAWESOME:Andlovan_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 111111
+            },
+            {
+              "itemID": "SUPERAWESOME:Goldengod_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 55555
+            },
+            {
+              "itemID": "SUPERAWESOME:Wildblood_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 22222
+            },
+            {
+              "itemID": "SUPERAWESOME:Orange_Tree_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 666666
+            },
+            {
+              "itemID": "SUPERAWESOME:Cherry_Tree_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 444444
+            },
+            {
+              "itemID": "SUPERAWESOME:Curry_Tree_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 222222
+            },
+            {
+              "itemID": "SUPERAWESOME:Papaya_Tree_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 111111
+            },
+            {
+              "itemID": "SUPERAWESOME:Superfertilizer",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 99999
+            },
+            {
+              "itemID": "SUPERAWESOME:Palm_Tree_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 55555
+            },
+            {
+              "itemID": "SUPERAWESOME:Dragonfruit_Tree_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 22222
+            },
+            {
+              "itemID": "melvorD:Potato_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 999999
+            },
+            {
+              "itemID": "melvorD:Onion_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 888888
+            },
+            {
+              "itemID": "melvorD:Cabbage_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 777777
+            },
+            {
+              "itemID": "melvorD:Tomato_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 666666
+            },
+            {
+              "itemID": "melvorD:Sweetcorn_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 555555
+            },
+            {
+              "itemID": "melvorD:Strawberry_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 444444
+            },
+            {
+              "itemID": "melvorD:Watermelon_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 333333
+            },
+            {
+              "itemID": "melvorD:Snape_Grass_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 111111
+            },
+            {
+              "itemID": "SUPERAWESOME:Bell_Pepper_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 55555
+            },
+            {
+              "itemID": "melvorD:Bobs_Rake",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 23333
+            },
+            {
+              "itemID": "melvorD:Farming_Skillcape",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 1
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:MalcsTheGuardianOfMelvor",
+        "bones": {
+          "itemID": "SUPERAWESOME:Superior_Dragon_Bones",
+          "quantity": 1
+        }
+      },
+      {
+        "id": "melvorD:PratTheProtectorOfSecrets",
+        "bones": {
+          "itemID": "SUPERAWESOME:Superior_Dragon_Bones",
+          "quantity": 1
+        }
+      },
+      {
+        "id": "melvorF:MalcsTheGuardianOfStrongholds",
+        "bones": {
+          "itemID": "SUPERAWESOME:Superior_Dragon_Bones",
+          "quantity": 1
+        }
+      },
+      {
+        "id": "melvorF:MalcsTheLeaderOfDragons",
+        "bones": {
+          "itemID": "SUPERAWESOME:Superior_Dragon_Bones",
+          "quantity": 1
+        }
+      },
+      {
+        "id": "melvorF:PratTheGuardianOfSecrets",
+        "bones": {
+          "itemID": "SUPERAWESOME:Superior_Dragon_Bones",
+          "quantity": 1
+        }
+      },
+      {
+        "id": "melvorF:PratTheGuardianOfSecretsBoss",
+        "bones": {
+          "itemID": "SUPERAWESOME:Superior_Dragon_Bones",
+          "quantity": 1
+        }
+      },
+      {
+        "id": "melvorD:ProtectorofIce",
+        "bones": {
+          "itemID": "SUPERAWESOME:Superior_Dragon_Bones",
+          "quantity": 1
+        }
+      },
+      {
+        "id": "melvorF:Elementalist",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "SUPERAWESOME:Burnt_Page",
+              "minQuantity": 1,
+              "maxQuantity": 20,
+              "weight": 3
+            },
+            {
+              "itemID": "SUPERAWESOME:Waterlogged_Page",
+              "minQuantity": 1,
+              "maxQuantity": 20,
+              "weight": 3
+            },
+            {
+              "itemID": "SUPERAWESOME:Wispy_Page",
+              "minQuantity": 1,
+              "maxQuantity": 20,
+              "weight": 3
+            },
+            {
+              "itemID": "SUPERAWESOME:Muddy_Page",
+              "minQuantity": 1,
+              "maxQuantity": 20,
+              "weight": 3
+            }
+          ]
+        }
+      },
+      {
         "id": "melvorF:Shaman",
         "lootTable": {
           "add": [
@@ -704,6 +4801,65 @@
             "ntmyk:CreatureTypeMonstrous",
             "ntmyk:CreatureTypeUndead",
             "ntmyk:CreatureSubtypeLycanthrope"
+          ]
+        }
+      }
+    ],
+    "skillData": [
+      {
+        "skillID": "melvorD:Fletching",
+        "data": {
+          "recipes": [
+            {
+              "id": "melvorF:Arrow_Shafts",
+              "alternativeCosts": [
+                {
+                  "itemCosts": [
+                    {
+                      "id": "SUPERAWESOME:Evergreen_Logs",
+                      "quantity": 1
+                    }
+                  ],
+                  "quantityMultiplier": 2
+                },
+                {
+                  "itemCosts": [
+                    {
+                      "id": "SUPERAWESOME:Longleaf_Logs",
+                      "quantity": 1
+                    }
+                  ],
+                  "quantityMultiplier": 5
+                },
+                {
+                  "itemCosts": [
+                    {
+                      "id": "SUPERAWESOME:Frostpine_Logs",
+                      "quantity": 1
+                    }
+                  ],
+                  "quantityMultiplier": 7
+                },
+                {
+                  "itemCosts": [
+                    {
+                      "id": "SUPERAWESOME:White_Pine_Logs",
+                      "quantity": 1
+                    }
+                  ],
+                  "quantityMultiplier": 8
+                },
+                {
+                  "itemCosts": [
+                    {
+                      "id": "SUPERAWESOME:Loblolly_Logs",
+                      "quantity": 1
+                    }
+                  ],
+                  "quantityMultiplier": 9
+                }
+              ]
+            }
           ]
         }
       }
