@@ -4,6 +4,40 @@
   "data": {
     "attacks": [
       {
+        "id": "Charge",
+        "defaultChance": 40,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "maxRoll": "Fixed",
+            "maxPercent": 35,
+            "roll": false
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Stun",
+            "chance": 100,
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Charge",
+        "description": "Charge at you, knocking you back and applies stun for ${onHitEffect0turns} turn on a hit. Deals ${attackDamageMaxValue0} damage.",
+        "descriptionGenerator": "Charge at <target>, knocking <target> back and <hitEffect> on a hit. Deals <damage> damage.",
+        "usesRunesPerProc": false
+      },
+      {
         "id": "Elemental_Breath",
         "defaultChance": 25,
         "damage": [
@@ -1951,13 +1985,6 @@
       },
       {
         "insertAt": "After",
-        "afterID": "melvorD:Seaweed",
-        "ids": [
-          "SUPERAWESOME:Sand"
-        ]
-      },
-      {
-        "insertAt": "After",
         "afterID": "melvorD:Magic_Tree_Seed",
         "ids": [
           "SUPERAWESOME:Redwood_Tree_Seed",
@@ -2345,13 +2372,6 @@
       },
       {
         "insertAt": "After",
-        "afterID": "melvorF:Thiefs_Moneysack",
-        "ids": [
-          "SUPERAWESOME:Pocket_Sand"
-        ]
-      },
-      {
-        "insertAt": "After",
         "afterID": "melvorF:Wizards_Sigil",
         "ids": [
           "SUPERAWESOME:Lesser_Sigil",
@@ -2478,7 +2498,6 @@
         "insertAt": "After",
         "afterID": "melvorF:Earth_Imbued_Wand",
         "ids": [
-          "SUPERAWESOME:Dust_Imbued_Wand",
           "SUPERAWESOME:Air_Elementalist_Staff",
           "SUPERAWESOME:Water_Elementalist_Staff",
           "SUPERAWESOME:Earth_Elementalist_Staff",
@@ -4542,6 +4561,96 @@
         "customDescription": "Immune to all Ranged Attacks"
       },
       {
+        "id": "CreatureTypeBestial",
+        "name": "Bestial",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "SUPERAWESOME:CreatureTypeBestial"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeConstructed",
+        "name": "Constructed",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "SUPERAWESOME:CreatureTypeConstructed"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeDraconic",
+        "name": "Draconic",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "SUPERAWESOME:CreatureTypeDraconic"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeElemental",
+        "name": "Elemental",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "SUPERAWESOME:CreatureTypeElemental"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeFae",
+        "name": "Fae",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "SUPERAWESOME:CreatureTypeFae"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeGelatinous",
+        "name": "Gelatinous",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "SUPERAWESOME:CreatureTypeGelatinous"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeGiantkin",
+        "name": "Giantkin",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "SUPERAWESOME:CreatureTypeGiantkin"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeHeavenly",
+        "name": "Heavenly",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "SUPERAWESOME:CreatureTypeHeavenly"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeHellish",
+        "name": "Hellish",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "SUPERAWESOME:CreatureTypeHellish"
+          }
+        ]
+      },
+      {
         "id": "CreatureTypeHumanoid",
         "name": "Humanoid",
         "combatEffects": [
@@ -4558,6 +4667,26 @@
           {
             "appliesWhen": "StartOfFight",
             "effectID": "SUPERAWESOME:CreatureTypeMonstrous"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypePlantlike",
+        "name": "Plantlike",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "SUPERAWESOME:CreatureTypePlantlike"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeStrange",
+        "name": "Strange",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "SUPERAWESOME:CreatureTypeStrange"
           }
         ]
       },
@@ -5023,6 +5152,671 @@
     ],
     "items": [
       {
+        "itemType": "Equipment",
+        "id": "Earring_of_Protection",
+        "name": "Earring of Protection",
+        "category": "Combat",
+        "type": "Accessory",
+        "media": "assets/bank/Earring_of_Protection.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 29000,
+        "tier": "none",
+        "validSlots": [
+          "SUPERAWESOME:Accessory1",
+          "SUPERAWESOME:Accessory2"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [
+          {
+            "key": "damageReduction",
+            "value": 1
+          }
+        ],
+        "modifiers": {},
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "character": "Player",
+              "thisAttackType": "magic",
+              "targetAttackType": "any",
+              "type": "CombatType"
+            },
+            "modifiers": {
+              "flatResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": 4
+                }
+              ]
+            }
+          }
+        ],
+        "customDescription": "+1% Damage Reduction. +5% instead if your attack style is Magic.",
+        "isArtefact": false
+      },
+      {
+        "id": "Mastery_Token_Combat",
+        "name": "Mastery Token (Combat)",
+        "category": "Mastery",
+        "type": "Token",
+        "media": "assets/bank/Mastery_Token_Combat.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1500,
+        "customDescription": "Obtained by completing Combat Achievements. Used to purchase Combat Mastery Upgrades in the Shop.",
+        "itemType": "Item"
+      },
+      {
+        "itemType": "Item",
+        "id": "Chieftain_Eriks_Head",
+        "name": "Chieftain Erik's Head",
+        "category": "Misc",
+        "type": "Misc",
+        "media": "assets/bank/Chieftain_Eriks_Head.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1,
+        "customDescription": "The head of the tyrannical chieftain of Barbarian Village, a sign of true strength to the Barbarians."
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Barbarian_Helm",
+        "name": "Barbarian Helm",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/Barbarian_Helm.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 100,
+        "tier": "addy",
+        "validSlots": [
+          "Helmet"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 40
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "meleeDefenceBonus",
+            "value": 21
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 22
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -1
+          },
+          {
+            "key": "damageReduction",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Barbarian_Archer_Helm",
+        "name": "Barbarian Archer Helm",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/Barbarian_Archer_Helm.png",
+        "customDescription": "<span class=\"text-warning\">When equipped with any Throwing Weapon: +5% Ranged Crit Chance and +10% Ranged Accuracy Rating</span>",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 500,
+        "tier": "rune",
+        "validSlots": [
+          "Helmet"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 45
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": 10
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 5
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -10
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 4
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 8
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 10
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Barbarian_Berserker_Helm",
+        "name": "Barbarian Berserker Helm",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/Barbarian_Berserker_Helm.png",
+        "customDescription": "Passive: While at or below 50% of your Maximum Hit Points, gain: +10% Melee Maximum Hit, -10% Attack Interval, +10% Melee Crit Chance, and -30% Global Evasion.<br><span class=\"text-warning\">When equipped with <strong>Barbarian Berserker Axe</strong>, gain +2% Melee Lifesteal.</span>",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1000,
+        "tier": "rune",
+        "validSlots": [
+          "Helmet"
+        ],
+        "occupiesSlots": [],
+        "conditionalModifiers": [
+          {
+            "modifiers": {
+              "evasion": -30,
+              "meleeMaxHit": 10,
+              "meleeCritChance": 10,
+              "attackInterval": -10
+            },
+            "condition": {
+              "type": "Hitpoints",
+              "character": "Player",
+              "operator": "<=",
+              "value": 50
+            }
+          }
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 45
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "meleeStrengthBonus",
+            "value": 8
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -16
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": -8
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 12
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 14
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -12
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Barbarian_Warrior_Helm",
+        "name": "Barbarian Warrior Helm",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/Barbarian_Warrior_Helm.png",
+        "customDescription": "<span class=\"text-warning\">When equipped with <strong>Barbarian Longblade</strong>, gain +50% Melee Accuracy Rating.</span>",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 500,
+        "tier": "rune",
+        "validSlots": [
+          "Helmet"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 45
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "slashAttackBonus",
+            "value": 8
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 8
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 8
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -16
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": -8
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 28
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 24
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -8
+          },
+          {
+            "key": "damageReduction",
+            "value": 5
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Barbarian_Boots",
+        "name": "Barbarian Boots",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/Barbarian_Boots.png",
+        "customDescription": "Passive: +1% melee crit chance<br><span class=\"text-warning\">When equipped with <strong>Barbarian Armour</strong> and <strong>Barbarian Skirt</strong>: +10% crit chance</span>",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1250,
+        "tier": "rune",
+        "validSlots": [
+          "Boots"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 45
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "meleeStrengthBonus",
+            "value": 8
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 16
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 16
+          },
+          {
+            "key": "damageReduction",
+            "value": 5
+          }
+        ],
+        "modifiers": {
+          "meleeCritChance": 1
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Barbarian_Skirt",
+        "name": "Barbarian Skirt",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/Barbarian_Skirt.png",
+        "customDescription": "Passive: +2% melee crit chance<br><span class=\"text-warning\">When equipped with <strong>Barbarian Armour</strong> and <strong>Barbarian Boots</strong>: +10% crit chance</span>",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 2365,
+        "tier": "rune",
+        "validSlots": [
+          "Platelegs"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 45
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "meleeStrengthBonus",
+            "value": 8
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 25
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 20
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -4
+          },
+          {
+            "key": "damageReduction",
+            "value": 5
+          }
+        ],
+        "modifiers": {
+          "meleeCritChance": 2
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Barbarian_Armour",
+        "name": "Barbarian Armour",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/Barbarian_Armour.png",
+        "customDescription": "Passive: +3% melee crit chance<br><span class=\"text-warning\">When equipped with <strong>Barbarian Skirt</strong> and <strong>Barbarian Boots</strong>: +10% crit chance</span>",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 5680,
+        "tier": "rune",
+        "validSlots": [
+          "Platebody"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 45
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "meleeStrengthBonus",
+            "value": 8
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 49
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 40
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -6
+          },
+          {
+            "key": "damageReduction",
+            "value": 5
+          }
+        ],
+        "modifiers": {
+          "meleeCritChance": 3
+        }
+      },
+      {
+        "itemType": "Weapon",
+        "id": "Barbarian_Longblade",
+        "name": "Barbarian Longblade",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/Barbarian_Longblade.png",
+        "customDescription": "<span class=\"text-warning\">When equipped with <strong>Barbarian Warrior Helm</strong>, gain +50% Melee Accuracy Rating.</span>",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 750,
+        "tier": "rune",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 50
+          }
+        ],
+        "attackType": "melee",
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2750
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 78
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 80
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 12
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 12
+          }
+        ]
+      },
+      {
+        "itemType": "Weapon",
+        "id": "Barbarian_Berserker_Axe",
+        "name": "Barbarian Berserker Axe",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/Barbarian_Berserker_Axe.png",
+        "customDescription": "<br><span class=\"text-warning\">When equipped with <strong>Barbarian Berserker Helm</strong>, gain +2% Melee Lifesteal.</span>",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1000,
+        "tier": "rune",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [
+          "Shield"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Strength",
+            "level": 50
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 50
+          }
+        ],
+        "attackType": "melee",
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3350
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 116
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 79
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": -2
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 79
+          }
+        ],
+        "specialAttacks": [
+          "SUPERAWESOME:Wild_Strikes"
+        ]
+      },
+      {
+        "itemType": "Weapon",
+        "id": "Barbarian_Brawling_Gloves",
+        "name": "Barbarian Brawling Gloves",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/Barbarian_Brawling_Gloves.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 5450,
+        "tier": "dragon",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [
+          "Gloves",
+          "Shield"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Strength",
+            "level": 50
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 50
+          }
+        ],
+        "modifiers": {},
+        "attackType": "melee",
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2650
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 72
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": -5
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 67
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 67
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 20
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 25
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -10
+          }
+        ],
+        "specialAttacks": [
+          "SUPERAWESOME:One_Two_Punch"
+        ]
+      },
+      {
+        "itemType": "Weapon",
+        "id": "Barbarian_Fletching_Knife",
+        "name": "Barbarian Fletching Knife",
+        "category": "Fletching",
+        "type": "Tool",
+        "media": "assets/bank/Barbarian_Fletching_Knife.png",
+        "customDescription": "-0.5s Fletching Interval when fletching Shortbows, Longbows, and Standard Arrows when equipped.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 800,
+        "tier": "rune",
+        "validSlots": [
+          "SUPERAWESOME:Tool",
+          "Weapon"
+        ],
+        "attackType": "melee",
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Fletching",
+            "level": 40
+          }
+        ],
+        "modifiers": {
+          "flatSkillInterval": [
+            {
+              "skillID": "melvorD:Fletching",
+              "value": -500,
+              "categoryID": "melvorF:Arrows"
+            },
+            {
+              "skillID": "melvorD:Fletching",
+              "value": -500,
+              "categoryID": "melvorF:Shortbows"
+            },
+            {
+              "skillID": "melvorD:Fletching",
+              "value": -500,
+              "categoryID": "melvorF:Longbows"
+            }
+          ]
+        },
+        "equipmentStats": []
+      },
+      {
         "itemType": "Item",
         "id": "Sterkite_Ore",
         "name": "Sterkite Ore",
@@ -5051,7 +5845,7 @@
         "name": "Barbar",
         "category": "Herblore",
         "type": "Potion",
-        "media": "assets/items/Potion/Barbar.png",
+        "media": "assets/bank/Barbar.png",
         "customDescription": "10% of your Strength Level added as Hidden Strength levels<br>50% of your Attack Level subtracted as Hidden Attack Levels",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
@@ -5084,7 +5878,7 @@
         "name": "Keg of Barbar",
         "category": "Herblore",
         "type": "Potion",
-        "media": "assets/items/Potion/Keg_of_Barbar.png",
+        "media": "assets/bank/Keg_of_Barbar.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -5118,7 +5912,7 @@
         "category": "Combat",
         "itemType": "Weapon",
         "type": "Weapon",
-        "media": "assets/items/Weapon/Golbin_Staff.png",
+        "media": "assets/bank/Golbin_Staff.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -29264,7 +30058,7 @@
           "SUPERAWESOME:Charge"
         ],
         "passives": [
-          "SUPERAWESOME:CreatureTypeStrange"
+          "SUPERAWESOME:CreatureTypeMonstrous"
         ],
         "lootChance": 100,
         "lootTable": [
@@ -32092,22 +32886,10 @@
             "weight": 345678
           },
           {
-            "itemID": "SUPERAWESOME:Pocket_Sand",
-            "maxQuantity": 1,
-            "minQuantity": 5,
-            "weight": 234567
-          },
-          {
             "itemID": "melvorF:Thiefs_Moneysack",
             "maxQuantity": 25,
             "minQuantity": 5,
             "weight": 123123
-          },
-          {
-            "itemID": "SUPERAWESOME:Blackjack",
-            "maxQuantity": 1,
-            "minQuantity": 1,
-            "weight": 32145
           }
         ],
         "canSlayer": true,
@@ -33756,6 +34538,36 @@
       }
     ],
     "shopPurchases": [
+      {
+        "id": "Helmet_of_Doom",
+        "media": "assets/bank/Helmet_of_Doom.png",
+        "customDescription": "Slay them...must slay them all! ... Shred... And... Crush! The monsters...they are everywhere. Must...slay them all!",
+        "category": "melvorF:Slayer",
+        "contains": {
+          "items": [
+            {
+              "id": "SUPERAWESOME:Helmet_of_Doom",
+              "quantity": 1
+            }
+          ]
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:SlayerCoins",
+              "cost": 5000000,
+              "type": "Fixed"
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [],
+        "purchaseRequirements": [],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false
+      },
       {
         "id": "Attack_Adept",
         "media": "assets/shop/combatMastery/attack_adept.png",
@@ -43002,7 +43814,7 @@
                   "quantity": 200
                 },
                 {
-                  "id": "SUPERAWESOME:Ice",
+                  "id": "melvorD:Water_Rune",
                   "quantity": 1000
                 }
               ]
@@ -43366,7 +44178,7 @@
                   "quantity": 200
                 },
                 {
-                  "id": "SUPERAWESOME:Ice",
+                  "id": "melvorD:Water_Rune",
                   "quantity": 5000
                 },
                 {
@@ -43718,8 +44530,8 @@
                   "quantity": 1
                 },
                 {
-                  "id": "SUPERAWESOME:Blood_Shard",
-                  "quantity": 1
+                  "id": "melvorD:Blood_Rune",
+                  "quantity": 10000
                 }
               ]
             },
@@ -44144,24 +44956,6 @@
                 }
               ],
               "currencyCosts": []
-            },
-            {
-              "id": "Pocket_Sand",
-              "categoryID": "melvorF:Bags",
-              "productID": "SUPERAWESOME:Pocket_Sand",
-              "baseExperience": 150,
-              "baseQuantity": 25,
-              "level": 53,
-              "itemCosts": [
-                {
-                  "id": "melvorF:Basic_Bag",
-                  "quantity": 1
-                },
-                {
-                  "id": "SUPERAWESOME:Sand",
-                  "quantity": 25
-                }
-              ]
             },
             {
               "id": "Sack",
@@ -45179,7 +45973,7 @@
               "productID": "SUPERAWESOME:Wooden_Pistol_Frame",
               "baseQuantity": 1,
               "baseExperience": 3,
-              "categoryID": "SUPERAWESOME:Firearms",
+              "categoryID": "SUPERAWESOME:Standard_Firearms",
               "itemCosts": [
                 {
                   "id": "melvorD:Normal_Logs",
@@ -45195,7 +45989,7 @@
               "productID": "SUPERAWESOME:Oak_Pistol_Frame",
               "baseQuantity": 1,
               "baseExperience": 45,
-              "categoryID": "SUPERAWESOME:Firearms",
+              "categoryID": "SUPERAWESOME:Standard_Firearms",
               "itemCosts": [
                 {
                   "id": "melvorD:Oak_Logs",
@@ -45211,7 +46005,7 @@
               "productID": "SUPERAWESOME:Willow_Pistol_Frame",
               "baseQuantity": 1,
               "baseExperience": 87,
-              "categoryID": "SUPERAWESOME:Firearms",
+              "categoryID": "SUPERAWESOME:Standard_Firearms",
               "itemCosts": [
                 {
                   "id": "melvorD:Willow_Logs",
@@ -45227,7 +46021,7 @@
               "productID": "SUPERAWESOME:Maple_Pistol_Frame",
               "baseQuantity": 1,
               "baseExperience": 129,
-              "categoryID": "SUPERAWESOME:Firearms",
+              "categoryID": "SUPERAWESOME:Standard_Firearms",
               "itemCosts": [
                 {
                   "id": "melvorD:Maple_Logs",
@@ -45243,7 +46037,7 @@
               "productID": "SUPERAWESOME:Mahogany_Pistol_Frame",
               "baseQuantity": 1,
               "baseExperience": 171,
-              "categoryID": "SUPERAWESOME:Firearms",
+              "categoryID": "SUPERAWESOME:Standard_Firearms",
               "itemCosts": [
                 {
                   "id": "melvorD:Mahogany_Logs",
@@ -45259,7 +46053,7 @@
               "productID": "SUPERAWESOME:Yew_Pistol_Frame",
               "baseQuantity": 1,
               "baseExperience": 213,
-              "categoryID": "SUPERAWESOME:Firearms",
+              "categoryID": "SUPERAWESOME:Standard_Firearms",
               "itemCosts": [
                 {
                   "id": "melvorD:Yew_Logs",
@@ -45275,7 +46069,7 @@
               "productID": "SUPERAWESOME:Magic_Pistol_Frame",
               "baseQuantity": 1,
               "baseExperience": 255,
-              "categoryID": "SUPERAWESOME:Firearms",
+              "categoryID": "SUPERAWESOME:Standard_Firearms",
               "itemCosts": [
                 {
                   "id": "melvorD:Magic_Logs",
@@ -45291,7 +46085,7 @@
               "productID": "SUPERAWESOME:Redwood_Pistol_Frame",
               "baseQuantity": 1,
               "baseExperience": 291,
-              "categoryID": "SUPERAWESOME:Firearms",
+              "categoryID": "SUPERAWESOME:Standard_Firearms",
               "itemCosts": [
                 {
                   "id": "melvorD:Redwood_Logs",
@@ -45307,7 +46101,7 @@
               "productID": "SUPERAWESOME:Bronze_Pistol",
               "baseQuantity": 1,
               "baseExperience": 3,
-              "categoryID": "SUPERAWESOME:Firearms",
+              "categoryID": "SUPERAWESOME:Standard_Firearms",
               "itemCosts": [
                 {
                   "id": "SUPERAWESOME:Wooden_Pistol_Frame",
@@ -45326,7 +46120,7 @@
               "productID": "SUPERAWESOME:Iron_Pistol",
               "baseQuantity": 1,
               "baseExperience": 45,
-              "categoryID": "SUPERAWESOME:Firearms",
+              "categoryID": "SUPERAWESOME:Standard_Firearms",
               "itemCosts": [
                 {
                   "id": "SUPERAWESOME:Oak_Pistol_Frame",
@@ -45345,7 +46139,7 @@
               "productID": "SUPERAWESOME:Steel_Pistol",
               "baseQuantity": 1,
               "baseExperience": 87,
-              "categoryID": "SUPERAWESOME:Firearms",
+              "categoryID": "SUPERAWESOME:Standard_Firearms",
               "itemCosts": [
                 {
                   "id": "SUPERAWESOME:Willow_Pistol_Frame",
@@ -45364,7 +46158,7 @@
               "productID": "SUPERAWESOME:Mithril_Pistol",
               "baseQuantity": 1,
               "baseExperience": 129,
-              "categoryID": "SUPERAWESOME:Firearms",
+              "categoryID": "SUPERAWESOME:Standard_Firearms",
               "itemCosts": [
                 {
                   "id": "SUPERAWESOME:Maple_Pistol_Frame",
@@ -45383,7 +46177,7 @@
               "productID": "SUPERAWESOME:Adamant_Pistol",
               "baseQuantity": 1,
               "baseExperience": 171,
-              "categoryID": "SUPERAWESOME:Firearms",
+              "categoryID": "SUPERAWESOME:Standard_Firearms",
               "itemCosts": [
                 {
                   "id": "SUPERAWESOME:Mahogany_Pistol_Frame",
@@ -45402,7 +46196,7 @@
               "productID": "SUPERAWESOME:Rune_Pistol",
               "baseQuantity": 1,
               "baseExperience": 213,
-              "categoryID": "SUPERAWESOME:Firearms",
+              "categoryID": "SUPERAWESOME:Standard_Firearms",
               "itemCosts": [
                 {
                   "id": "SUPERAWESOME:Yew_Pistol_Frame",
@@ -45421,7 +46215,7 @@
               "productID": "SUPERAWESOME:Silver_Pistol",
               "baseQuantity": 1,
               "baseExperience": 255,
-              "categoryID": "SUPERAWESOME:Firearms",
+              "categoryID": "SUPERAWESOME:Standard_Firearms",
               "itemCosts": [
                 {
                   "id": "SUPERAWESOME:Magic_Pistol_Frame",
@@ -45440,7 +46234,7 @@
               "productID": "SUPERAWESOME:Dragon_Pistol",
               "baseQuantity": 1,
               "baseExperience": 291,
-              "categoryID": "SUPERAWESOME:Firearms",
+              "categoryID": "SUPERAWESOME:Standard_Firearms",
               "itemCosts": [
                 {
                   "id": "SUPERAWESOME:Redwood_Pistol_Frame",
@@ -45459,7 +46253,7 @@
               "productID": "SUPERAWESOME:Wooden_Arquebus_Stock",
               "baseQuantity": 1,
               "baseExperience": 4,
-              "categoryID": "SUPERAWESOME:Firearms",
+              "categoryID": "SUPERAWESOME:Standard_Firearms",
               "itemCosts": [
                 {
                   "id": "melvorD:Normal_Logs",
@@ -45475,7 +46269,7 @@
               "productID": "SUPERAWESOME:Oak_Arquebus_Stock",
               "baseQuantity": 1,
               "baseExperience": 51,
-              "categoryID": "SUPERAWESOME:Firearms",
+              "categoryID": "SUPERAWESOME:Standard_Firearms",
               "itemCosts": [
                 {
                   "id": "melvorD:Oak_Logs",
@@ -45491,7 +46285,7 @@
               "productID": "SUPERAWESOME:Willow_Arquebus_Stock",
               "baseQuantity": 1,
               "baseExperience": 99,
-              "categoryID": "SUPERAWESOME:Firearms",
+              "categoryID": "SUPERAWESOME:Standard_Firearms",
               "itemCosts": [
                 {
                   "id": "melvorD:Willow_Logs",
@@ -45507,7 +46301,7 @@
               "productID": "SUPERAWESOME:Maple_Arquebus_Stock",
               "baseQuantity": 1,
               "baseExperience": 146,
-              "categoryID": "SUPERAWESOME:Firearms",
+              "categoryID": "SUPERAWESOME:Standard_Firearms",
               "itemCosts": [
                 {
                   "id": "melvorD:Maple_Logs",
@@ -45523,7 +46317,7 @@
               "productID": "SUPERAWESOME:Mahogany_Arquebus_Stock",
               "baseQuantity": 1,
               "baseExperience": 196,
-              "categoryID": "SUPERAWESOME:Firearms",
+              "categoryID": "SUPERAWESOME:Standard_Firearms",
               "itemCosts": [
                 {
                   "id": "melvorD:Mahogany_Logs",
@@ -45539,7 +46333,7 @@
               "productID": "SUPERAWESOME:Yew_Arquebus_Stock",
               "baseQuantity": 1,
               "baseExperience": 241,
-              "categoryID": "SUPERAWESOME:Firearms",
+              "categoryID": "SUPERAWESOME:Standard_Firearms",
               "itemCosts": [
                 {
                   "id": "melvorD:Yew_Logs",
@@ -45555,7 +46349,7 @@
               "productID": "SUPERAWESOME:Magic_Arquebus_Stock",
               "baseQuantity": 1,
               "baseExperience": 287,
-              "categoryID": "SUPERAWESOME:Firearms",
+              "categoryID": "SUPERAWESOME:Standard_Firearms",
               "itemCosts": [
                 {
                   "id": "melvorD:Magic_Logs",
@@ -45571,7 +46365,7 @@
               "productID": "SUPERAWESOME:Redwood_Arquebus_Stock",
               "baseQuantity": 1,
               "baseExperience": 332,
-              "categoryID": "SUPERAWESOME:Firearms",
+              "categoryID": "SUPERAWESOME:Standard_Firearms",
               "itemCosts": [
                 {
                   "id": "melvorD:Redwood_Logs",
@@ -45587,7 +46381,7 @@
               "productID": "SUPERAWESOME:Bronze_Arquebus",
               "baseQuantity": 1,
               "baseExperience": 4,
-              "categoryID": "SUPERAWESOME:Firearms",
+              "categoryID": "SUPERAWESOME:Standard_Firearms",
               "itemCosts": [
                 {
                   "id": "SUPERAWESOME:Wooden_Arquebus_Stock",
@@ -45606,7 +46400,7 @@
               "productID": "SUPERAWESOME:Iron_Arquebus",
               "baseQuantity": 1,
               "baseExperience": 51,
-              "categoryID": "SUPERAWESOME:Firearms",
+              "categoryID": "SUPERAWESOME:Standard_Firearms",
               "itemCosts": [
                 {
                   "id": "SUPERAWESOME:Oak_Arquebus_Stock",
@@ -45625,7 +46419,7 @@
               "productID": "SUPERAWESOME:Steel_Arquebus",
               "baseQuantity": 1,
               "baseExperience": 99,
-              "categoryID": "SUPERAWESOME:Firearms",
+              "categoryID": "SUPERAWESOME:Standard_Firearms",
               "itemCosts": [
                 {
                   "id": "SUPERAWESOME:Willow_Arquebus_Stock",
@@ -45644,7 +46438,7 @@
               "productID": "SUPERAWESOME:Mithril_Arquebus",
               "baseQuantity": 1,
               "baseExperience": 146,
-              "categoryID": "SUPERAWESOME:Firearms",
+              "categoryID": "SUPERAWESOME:Standard_Firearms",
               "itemCosts": [
                 {
                   "id": "SUPERAWESOME:Maple_Arquebus_Stock",
@@ -45663,7 +46457,7 @@
               "productID": "SUPERAWESOME:Adamant_Arquebus",
               "baseQuantity": 1,
               "baseExperience": 196,
-              "categoryID": "SUPERAWESOME:Firearms",
+              "categoryID": "SUPERAWESOME:Standard_Firearms",
               "itemCosts": [
                 {
                   "id": "SUPERAWESOME:Mahogany_Arquebus_Stock",
@@ -45682,7 +46476,7 @@
               "productID": "SUPERAWESOME:Rune_Arquebus",
               "baseQuantity": 1,
               "baseExperience": 241,
-              "categoryID": "SUPERAWESOME:Firearms",
+              "categoryID": "SUPERAWESOME:Standard_Firearms",
               "itemCosts": [
                 {
                   "id": "SUPERAWESOME:Yew_Arquebus_Stock",
@@ -45701,7 +46495,7 @@
               "productID": "SUPERAWESOME:Silver_Arquebus",
               "baseQuantity": 1,
               "baseExperience": 287,
-              "categoryID": "SUPERAWESOME:Firearms",
+              "categoryID": "SUPERAWESOME:Standard_Firearms",
               "itemCosts": [
                 {
                   "id": "SUPERAWESOME:Magic_Arquebus_Stock",
@@ -45720,7 +46514,7 @@
               "productID": "SUPERAWESOME:Dragon_Arquebus",
               "baseQuantity": 1,
               "baseExperience": 332,
-              "categoryID": "SUPERAWESOME:Firearms",
+              "categoryID": "SUPERAWESOME:Standard_Firearms",
               "itemCosts": [
                 {
                   "id": "SUPERAWESOME:Redwood_Arquebus_Stock",
@@ -46866,7 +47660,7 @@
           ],
           "minibar": {
             "defaultItems": [
-              "SUPERAWESOME:Spade_of_Colossal_Excavation"
+              "SUPERAWESOME:Pick_of_Colossal_Excavation"
             ],
             "pets": [],
             "upgrades": []
