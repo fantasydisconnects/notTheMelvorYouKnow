@@ -4,6 +4,7 @@
     "icon": "assets/ICON.png",
     "load": [
         "data/main.json",
+        "data/activePets.json",
         "data/modifications.json"
     ]
 }

@@ -4,6 +4,46 @@
   "data": {
     "attacks": [
       {
+        "id": "DualHitNormal",
+        "defaultChance": 100,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 100
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [],
+        "cantMiss": false,
+        "attackCount": 2,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Dual Hit",
+        "description": "Make two normal attacks.",
+        "descriptionGenerator": "<Attacker> makes two normal attacks.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "DefilingStrike",
+        "defaultChance": 25,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 100
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [],
+        "cantMiss": true,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Defiling Strike",
+        "description": "Make an Unavoidable normal attack.",
+        "descriptionGenerator": "<Attacker> makes an <avoidable> normal attack.",
+        "usesRunesPerProc": false
+      },
+      {
         "id": "Charge",
         "defaultChance": 40,
         "damage": [
@@ -1557,6 +1597,80 @@
       }
     ],
     "bankSortOrder": [
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Dragon_Shield_T_G",
+        "ids": [
+          "expandedAreas:Guthans_Helm",
+          "expandedAreas:Guthans_Platebody",
+          "expandedAreas:Guthans_Chainskirt",
+          "expandedAreas:Dharoks_Helm",
+          "expandedAreas:Dharoks_Platebody",
+          "expandedAreas:Dharoks_Platelegs",
+          "expandedAreas:Torags_Helm",
+          "expandedAreas:Torags_Platebody",
+          "expandedAreas:Torags_Platelegs",
+          "expandedAreas:Veracs_Helm",
+          "expandedAreas:Veracs_Brassard",
+          "expandedAreas:Veracs_Plateskirt"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Dragon_2H_Sword",
+        "ids": [
+          "expandedAreas:Guthans_Warspear",
+          "expandedAreas:Dharoks_Greataxe",
+          "expandedAreas:Torags_Hammers",
+          "expandedAreas:Veracs_Flail"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Black_Wizard_Boots",
+        "ids": [
+          "expandedAreas:Ahrims_Hood",
+          "expandedAreas:Ahrims_Robetop",
+          "expandedAreas:Ahrims_Robeskirt"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Black_Dhide_Body_U",
+        "ids": [
+          "expandedAreas:Karils_Coif",
+          "expandedAreas:Karils_Leathertop",
+          "expandedAreas:Karils_Leatherskirt"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Natures_Wrath_Staff",
+        "ids": [
+          "expandedAreas:Ahrims_Staff"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Dragon_Crossbow",
+        "ids": [
+          "expandedAreas:Karils_Crossbow",
+          "expandedAreas:Bolt_Rack"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Bandit_Chest",
+        "ids": [
+          "expandedAreas:Ahrims_Sarcophagus",
+          "expandedAreas:Dharoks_Sarcophagus",
+          "expandedAreas:Guthans_Sarcophagus",
+          "expandedAreas:Karils_Sarcophagus",
+          "expandedAreas:Torags_Sarcophagus",
+          "expandedAreas:Veracs_Sarcophagus",
+          "expandedAreas:Charnel_Chest"
+        ]
+      },
       {
         "insertAt": "After",
         "afterID": "melvorD:Attack_Skillcape",
@@ -3155,6 +3269,100 @@
     ],
     "combatEffects": [
       {
+        "id": "Blighted",
+        "templateID": "melvorD:StackingNonCountingModifier",
+        "name": "Blighted",
+        "media": "assets/combat/status/blighted.png",
+        "target": "Target",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 40
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "flatMaxHit": -1
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "Tainted",
+        "templateID": "melvorD:StackingNonCountingModifier",
+        "name": "Tainted",
+        "media": "assets/combat/status/tainted.png",
+        "target": "Target",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 5
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "rangedEvasion": -20
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "Defiled",
+        "templateID": "melvorD:SelfTurnCounting",
+        "name": "Defiled",
+        "media": "assets/combat/status/defiled.png",
+        "tooltipSpans": [
+          {
+            "type": "Turns",
+            "turns": "p.turns"
+          }
+        ],
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 1
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "accuracyRating": 999999
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
         "id": "ResistanceIncrease5",
         "templateID": "melvorD:StaticSelfCountingModifier",
         "name": "+5% Damage Reduction",
@@ -4553,6 +4761,209 @@
     ],
     "combatPassives": [
       {
+        "id": "JustAFleshWound",
+        "name": "Just a Flesh Wound",
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 10,
+            "effectID": "melvorD:Bleed100",
+            "customDescription": "10% Chance to inflict Bleed100 on hit"
+          }
+        ]
+      },
+      {
+        "id": "LilPoisonous",
+        "name": "Li'l Poisonous",
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 10,
+            "effectID": "melvorD:Poison",
+            "customDescription": "10% Chance to inflict Poison on hit"
+          }
+        ]
+      },
+      {
+        "id": "WeakeningBite",
+        "name": "Weakening Bite",
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 10,
+            "effectID": "melvorF:WeakeningI",
+            "customDescription": "10% Chance to inflict Weakening I on hit (-5% Maximum Hit)"
+          }
+        ]
+      },
+      {
+        "id": "WretchedAnger",
+        "name": "Wretched Anger",
+        "customDescription": "+1% Maximum Hit for every 1% of Hit Points missing.",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 90
+            },
+            "modifiers": {
+              "maxHit": 10
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 80
+            },
+            "modifiers": {
+              "maxHit": 10
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 70
+            },
+            "modifiers": {
+              "maxHit": 10
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 60
+            },
+            "modifiers": {
+              "maxHit": 10
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 50
+            },
+            "modifiers": {
+              "maxHit": 10
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 40
+            },
+            "modifiers": {
+              "maxHit": 10
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 30
+            },
+            "modifiers": {
+              "maxHit": 10
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 20
+            },
+            "modifiers": {
+              "maxHit": 10
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 10
+            },
+            "modifiers": {
+              "maxHit": 10
+            }
+          }
+        ]
+      },
+      {
+        "id": "InfestedSiphon",
+        "name": "Infested Siphon",
+        "modifiers": {
+          "meleeLifesteal": 25
+        }
+      },
+      {
+        "id": "BlightedAura",
+        "name": "Blighted Aura",
+        "customDescription": "25% Chance to inflict Blighted (-10 Maximum Hit, up to 40 Stacks) on hit.",
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 25,
+            "effectID": "barrowsInMelvor:Blighted"
+          }
+        ]
+      },
+      {
+        "id": "TaintedSoul",
+        "name": "Tainted Soul",
+        "customDescription": "25% Chance to inflict Tainted (-20% Ranged Evasion, up to 5 Stacks) on hit.",
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 25,
+            "effectID": "barrowsInMelvor:Tainted"
+          }
+        ]
+      },
+      {
+        "id": "CorruptedHeart",
+        "name": "Corrupted Heart",
+        "customDescription": "25% Chance to apply a 20% Slow for 2 turns on hit.",
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 25,
+            "effectID": "melvorD:Slow",
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 2
+              },
+              {
+                "name": "magnitude",
+                "value": 20
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DefiledBody",
+        "name": "Defiled Body",
+        "customDescription": "Attacks roll twice and take the higher result.",
+        "modifiers": {
+          "attackRolls": 1
+        }
+      },
+      {
         "id": "RangedImmunity",
         "name": "Ranged Immunity",
         "modifiers": {
@@ -4985,6 +5396,41 @@
     "dungeons": [
       {
         "difficulty": [
+          2
+        ],
+        "dropBones": true,
+        "entryRequirements": [],
+        "fixedPetClears": false,
+        "id": "The_Barrows",
+        "media": "assets/combat/dungeons/The_Barrows.png",
+        "monsterIDs": [
+          "expandedAreas:Crypt_Worm",
+          "expandedAreas:Crypt_Worm",
+          "expandedAreas:Crypt_Rat",
+          "expandedAreas:Crypt_Rat",
+          "expandedAreas:Crypt_Spider",
+          "expandedAreas:Crypt_Spider",
+          "expandedAreas:Crypt_Skeleton",
+          "expandedAreas:Crypt_Skeleton",
+          "expandedAreas:Brother_Ahrim_the_Blighted",
+          "expandedAreas:Brother_Karil_the_Tainted",
+          "expandedAreas:Brother_Dharok_the_Wretched",
+          "expandedAreas:Brother_Guthan_the_Infested",
+          "expandedAreas:Brother_Torag_the_Corrupted",
+          "expandedAreas:Brother_Verac_the_Defiled"
+        ],
+        "name": "The Barrows",
+        "pauseOnBosses": false,
+        "rewardItemIDs": [
+          "expandedAreas:Charnel_Chest"
+        ],
+        "pet": {
+          "petID": "expandedAreas:Spadey",
+          "weight": 350
+        }
+      },
+      {
+        "difficulty": [
           4
         ],
         "dropBones": true,
@@ -5151,6 +5597,2234 @@
       }
     ],
     "items": [
+      {
+        "itemType": "Equipment",
+        "id": "Ahrims_Hood",
+        "name": "Ahrim's Hood",
+        "category": "Combat",
+        "type": "Magic Armour",
+        "media": "assets/bank/ahrims_hood.png",
+        "customDescription": "When all of <strong>Ahrim the Blighted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict Blighted (the enemy gets -10 Maximum Hit, stacking) on hit.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 13000,
+        "tier": "wizard",
+        "validSlots": [
+          "Helmet",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Magic",
+            "level": 70
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 70
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "magicAttackBonus",
+            "value": 6
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 6
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 16
+          },
+          {
+            "key": "damageReduction",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Ahrims_Robetop",
+        "name": "Ahrim's Robetop",
+        "category": "Combat",
+        "type": "Magic Armour",
+        "media": "assets/bank/ahrims_robetop.png",
+        "customDescription": "When all of <strong>Ahrim the Blighted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict Blighted (the enemy gets -10 Maximum Hit, stacking) on hit.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 50000,
+        "tier": "wizard",
+        "validSlots": [
+          "Platebody"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Magic",
+            "level": 70
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 70
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "magicAttackBonus",
+            "value": 30
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 30
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 63
+          },
+          {
+            "key": "damageReduction",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Ahrims_Robeskirt",
+        "name": "Ahrim's Robeskirt",
+        "category": "Combat",
+        "type": "Magic Armour",
+        "media": "assets/bank/ahrims_robeskirt.png",
+        "customDescription": "When all of <strong>Ahrim the Blighted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict Blighted (the enemy gets -10 Maximum Hit, stacking) on hit.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 47000,
+        "tier": "wizard",
+        "validSlots": [
+          "Platelegs"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Magic",
+            "level": 70
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 70
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "magicAttackBonus",
+            "value": 22
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 22
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 36
+          },
+          {
+            "key": "damageReduction",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "itemType": "Weapon",
+        "attackType": "magic",
+        "id": "Ahrims_Staff",
+        "name": "Ahrim's Staff",
+        "category": "Combat",
+        "type": "Magic Staff",
+        "media": "assets/bank/ahrims_staff.png",
+        "customDescription": "When all of <strong>Ahrim the Blighted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict Blighted (the enemy gets -10 Maximum Hit, stacking) on hit.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 85000,
+        "tier": "wizard",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Magic",
+            "level": 70
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3000
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": 37
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 15
+          },
+          {
+            "key": "magicDamageBonus",
+            "value": 23
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Dharoks_Helm",
+        "name": "Dharok's Helm",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/dharoks_helm.png",
+        "customDescription": "When all of <strong>Dharok the Wretched's Equipment</strong> is worn, the following set bonus becomes active: for every 1 Hit Point below your maximum, gain +1% Maximum Hit.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 103000,
+        "tier": "dragon",
+        "validSlots": [
+          "Helmet"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 70
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": -1
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -3
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 56
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -1
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 53
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 8
+          },
+          {
+            "key": "damageReduction",
+            "value": 6
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Dharoks_Platebody",
+        "name": "Dharok's Platebody",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/dharoks_platebody.png",
+        "customDescription": "When all of <strong>Dharok the Wretched's Equipment</strong> is worn, the following set bonus becomes active: for every 1 Hit Point below your maximum, gain +1% Maximum Hit.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 280000,
+        "tier": "dragon",
+        "validSlots": [
+          "Platebody"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 70
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": -10
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -30
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 145
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -6
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 134
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 8
+          },
+          {
+            "key": "damageReduction",
+            "value": 6
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Dharoks_Platelegs",
+        "name": "Dharok's Platelegs",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/dharoks_platelegs.png",
+        "customDescription": "When all of <strong>Dharok the Wretched's Equipment</strong> is worn, the following set bonus becomes active: for every 1 Hit Point below your maximum, gain +1% Maximum Hit.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 275000,
+        "tier": "dragon",
+        "validSlots": [
+          "Platelegs"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 70
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": -10
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -30
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 101
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -6
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 93
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 8
+          },
+          {
+            "key": "damageReduction",
+            "value": 6
+          }
+        ]
+      },
+      {
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "id": "Dharoks_Greataxe",
+        "name": "Dharok's Greataxe",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/dharoks_greataxe.png",
+        "customDescription": "When all of <strong>Dharok the Wretched's Equipment</strong> is worn, the following set bonus becomes active: for every 1 Hit Point below your maximum, gain +1% Maximum Hit.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 208000,
+        "tier": "dragon",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [
+          "Shield"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 70
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Strength",
+            "level": 70
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "stabAttackBonus",
+            "value": -5
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 150
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 150
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 217
+          },
+          {
+            "key": "attackSpeed",
+            "value": 4200
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Guthans_Helm",
+        "name": "Guthan's Helm",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/guthans_helm.png",
+        "customDescription": "When all of <strong>Guthan the Infested's Equipment</strong> is worn, the following set bonus becomes active: +25% Melee lifesteal.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 103000,
+        "tier": "dragon",
+        "validSlots": [
+          "Helmet"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 70
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": -2
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -6
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 68
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -1
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 64
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 8
+          },
+          {
+            "key": "damageReduction",
+            "value": 6
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Guthans_Platebody",
+        "name": "Guthan's Platebody",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/guthans_platebody.png",
+        "customDescription": "When all of <strong>Guthan the Infested's Equipment</strong> is worn, the following set bonus becomes active: +25% Melee lifesteal.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 280000,
+        "tier": "dragon",
+        "validSlots": [
+          "Platebody"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 70
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": -10
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -30
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 145
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -6
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 134
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 8
+          },
+          {
+            "key": "damageReduction",
+            "value": 6
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Guthans_Chainskirt",
+        "name": "Guthan's Chainskirt",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/guthans_chainskirt.png",
+        "customDescription": "When all of <strong>Guthan the Infested's Equipment</strong> is worn, the following set bonus becomes active: +25% Melee lifesteal.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 275000,
+        "tier": "dragon",
+        "validSlots": [
+          "Platelegs"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 70
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": -11
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -14
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 90
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -4
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 83
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 8
+          },
+          {
+            "key": "damageReduction",
+            "value": 6
+          }
+        ]
+      },
+      {
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "id": "Guthans_Warspear",
+        "name": "Guthan's Warspear",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/guthans_warspear.png",
+        "customDescription": "When all of <strong>Guthan the Infested's Equipment</strong> is worn, the following set bonus becomes active: +25% Melee lifesteal.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 100000,
+        "tier": "dragon",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [
+          "Shield"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 70
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "meleeDefenceBonus",
+            "value": 85
+          },
+          {
+            "key": "damageReduction",
+            "value": 6
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 85
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 85
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 85
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 115
+          },
+          {
+            "key": "attackSpeed",
+            "value": 3000
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Karils_Coif",
+        "name": "Karil's Coif",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/karils_coif.png",
+        "customDescription": "When all of <strong>Karil the Tainted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict Tainted (-20% Ranged Evasion Rating, stacking) on hit.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 13000,
+        "tier": "dragon",
+        "validSlots": [
+          "Helmet"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 70
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 70
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": 11
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -10
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 4
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 36
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 45
+          },
+          {
+            "key": "damageReduction",
+            "value": 5
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Karils_Leathertop",
+        "name": "Karil's Leathertop",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/karils_leathertop.png",
+        "customDescription": "When all of <strong>Karil the Tainted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict Tainted (-20% Ranged Evasion Rating, stacking) on hit.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 50000,
+        "tier": "dragon",
+        "validSlots": [
+          "Platebody"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 70
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 70
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": 42
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -15
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 97
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 76
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 95
+          },
+          {
+            "key": "damageReduction",
+            "value": 5
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Karils_Leatherskirt",
+        "name": "Karil's Leatherskirt",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/karils_leatherskirt.png",
+        "customDescription": "When all of <strong>Karil the Tainted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict Tainted (-20% Ranged Evasion Rating, stacking) on hit.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 47000,
+        "tier": "dragon",
+        "validSlots": [
+          "Platelegs"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 70
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 70
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": 23
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -10
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 43
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 45
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 53
+          },
+          {
+            "key": "damageReduction",
+            "value": 5
+          }
+        ]
+      },
+      {
+        "itemType": "Weapon",
+        "attackType": "ranged",
+        "ammoTypeRequired": "Bolts",
+        "id": "Karils_Crossbow",
+        "name": "Karil's Crossbow",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/karils_crossbow.png",
+        "customDescription": "Can only use <strong>Bolt Racks</strong> as Ammo.<br><hr>When all of <strong>Karil the Tainted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict Tainted Shot (-20% Ranged Evasion Rating).",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 160000,
+        "tier": "dragon",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [
+          "Shield"
+        ],
+        "cantEquipWith": [
+          "melvorF:Ruby_Bolts",
+          "melvorF:Topaz_Bolts",
+          "melvorAoD:Ruby_Bolts_Arcane",
+          "melvorAoD:Ruby_Bolts_Enchanted",
+          "melvorAoD:Topaz_Bolts_Arcane",
+          "melvorAoD:Topaz_Bolts_Enchanted",
+          "melvorF:Diamond_Bolts",
+          "melvorF:Emerald_Bolts",
+          "melvorTotH:Onyx_Bolts",
+          "melvorAoD:Poison_Bolts",
+          "melvorF:Sapphire_Bolts",
+          "melvorTotH:Decay_Bolts",
+          "melvorAoD:Diamond_Bolts_Arcane",
+          "melvorAoD:Diamond_Bolts_Enchanted",
+          "melvorAoD:Emerald_Bolts_Arcane",
+          "melvorAoD:Emerald_Bolts_Enchanted",
+          "melvorF:Jadestone_Bolts",
+          "melvorAoD:Leeching_Bolts",
+          "melvorAoD:Sapphire_Bolts_Arcane",
+          "melvorAoD:Sapphire_Bolts_Enchanted",
+          "melvorTotH:Zephyte_Bolts",
+          "melvorAoD:Jadestone_Bolts_Arcane",
+          "melvorAoD:Jadestone_Bolts_Enchanted"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 70
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": 68
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 88
+          },
+          {
+            "key": "attackSpeed",
+            "value": 2400
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Bolt_Rack",
+        "name": "Bolt Rack",
+        "category": "Combat",
+        "type": "Ammo",
+        "media": "assets/bank/bolt_rack.png",
+        "customDescription": "Can only be used as Ammo for <strong>Karil's Crossbow</strong>.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 50,
+        "tier": "none",
+        "validSlots": [
+          "Quiver"
+        ],
+        "occupiesSlots": [],
+        "cantEquipWith": [
+          "melvorF:Iron_Crossbow",
+          "melvorF:Rune_Crossbow",
+          "melvorF:Steel_Crossbow",
+          "melvorF:Bronze_Crossbow",
+          "melvorF:Dragon_Crossbow",
+          "melvorF:Slayer_Crossbow",
+          "melvorF:Adamant_Crossbow",
+          "melvorF:Ancient_Crossbow",
+          "melvorF:Mithril_Crossbow",
+          "melvorD:Tilted_Crossbow",
+          "melvorAoD:Poison_Crossbow",
+          "melvorAoD:Crystal_Crossbow",
+          "melvorF:Confetti_Crossbow",
+          "melvorAoD:Granite_Crossbow",
+          "melvorTotH:Augite_Crossbow",
+          "melvorTotH:Divine_Crossbow",
+          "melvorTotH:Corundum_Crossbow",
+          "melvorTotH:Meteorite_Crossbow",
+          "melvorAoD:Pure_Crystal_Crossbow",
+          "melvorTotH:Feather_Storm_Crossbow",
+          "melvorTotH:Torrential_Blast_Crossbow"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 70
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedStrengthBonus",
+            "value": 55
+          }
+        ],
+        "ammoType": "Bolts"
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Torags_Helm",
+        "name": "Torag's Helm",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/torags_helm.png",
+        "customDescription": "When all of <strong>Torag the Corrupted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict a 20% Slow on hit that lasts for 2 turns.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 103000,
+        "tier": "dragon",
+        "validSlots": [
+          "Helmet"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 70
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": -2
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -6
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -1
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 62
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 58
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 8
+          },
+          {
+            "key": "damageReduction",
+            "value": 6
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Torags_Platebody",
+        "name": "Torag's Platebody",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/torags_platebody.png",
+        "customDescription": "When all of <strong>Torag the Corrupted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict a 20% Slow on hit that lasts for 2 turns.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 280000,
+        "tier": "dragon",
+        "validSlots": [
+          "Platebody"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 70
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": -2
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -6
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -10
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 132
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 122
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 8
+          },
+          {
+            "key": "damageReduction",
+            "value": 6
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Torags_Platelegs",
+        "name": "Torag's Platelegs",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/torags_platelegs.png",
+        "customDescription": "When all of <strong>Torag the Corrupted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict a 20% Slow on hit that lasts for 2 turns.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 275000,
+        "tier": "dragon",
+        "validSlots": [
+          "Platelegs"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 70
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": -11
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -21
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -5
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 92
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 85
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 8
+          },
+          {
+            "key": "damageReduction",
+            "value": 6
+          }
+        ]
+      },
+      {
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "id": "Torags_Hammers",
+        "name": "Torag's Hammers",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/torags_hammers.png",
+        "customDescription": "When all of <strong>Torag the Corrupted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict a 20% Slow on hit that lasts for 2 turns.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 160000,
+        "tier": "dragon",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [
+          "Shield"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 70
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Strength",
+            "level": 70
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "stabAttackBonus",
+            "value": 80
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": -10
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 80
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 60
+          },
+          {
+            "key": "attackSpeed",
+            "value": 3000
+          }
+        ],
+        "specialAttacks": [
+          "expandedAreas:DualHitNormal"
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Veracs_Helm",
+        "name": "Verac's Helm",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/veracs_helm.png",
+        "customDescription": "+3% Prayer Point Preservation Chance.<br><hr>When all of <strong>Verac the Defiled's Equipment</strong> is worn, the following set bonus becomes active: Your chance to hit an enemy is lucky (Roll twice, take the better result).",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 103000,
+        "tier": "dragon",
+        "validSlots": [
+          "Helmet"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 70
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": -2
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -6
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 56
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 58
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 8
+          },
+          {
+            "key": "damageReduction",
+            "value": 6
+          }
+        ],
+        "modifiers": {
+          "prayerPointPreservationChance": 3
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Veracs_Brassard",
+        "name": "Verac's Brassard",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/veracs_brassard.png",
+        "customDescription": "+5% Prayer Point Preservation Chance.<br><hr>When all of <strong>Verac the Defiled's Equipment</strong> is worn, the following set bonus becomes active: Your chance to hit an enemy is lucky (Roll twice, take the better result).",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 280000,
+        "tier": "dragon",
+        "validSlots": [
+          "Platebody"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 70
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": -2
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -6
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 81
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 95
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 8
+          },
+          {
+            "key": "damageReduction",
+            "value": 6
+          }
+        ],
+        "modifiers": {
+          "prayerPointPreservationChance": 5
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Veracs_Plateskirt",
+        "name": "Verac's Plateskirt",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/veracs_plateskirt.png",
+        "customDescription": "+4% Prayer Point Preservation Chance.<br><hr>When all of <strong>Verac the Defiled's Equipment</strong> is worn, the following set bonus becomes active: Your chance to hit an enemy is lucky (Roll twice, take the better result).",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 275000,
+        "tier": "dragon",
+        "validSlots": [
+          "Platelegs"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 70
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": -11
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -21
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 84
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 85
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 8
+          },
+          {
+            "key": "damageReduction",
+            "value": 6
+          }
+        ],
+        "modifiers": {
+          "prayerPointPreservationChance": 4
+        }
+      },
+      {
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "id": "Veracs_Flail",
+        "name": "Verac's Flail",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/veracs_flail.png",
+        "customDescription": "+6% Prayer Point Preservation Chance.<br><hr>When all of <strong>Verac the Defiled's Equipment</strong> is worn, the following set bonus becomes active: Your chance to hit an enemy is lucky (Roll twice, take the better result).",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 160000,
+        "tier": "dragon",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [
+          "Shield"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 70
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "stabAttackBonus",
+            "value": 95
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 14
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 95
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 105
+          },
+          {
+            "key": "attackSpeed",
+            "value": 3000
+          }
+        ],
+        "specialAttacks": [
+          "expandedAreas:DefilingStrike"
+        ],
+        "modifiers": {
+          "prayerPointPreservationChance": 6
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Amulet_of_the_Damned",
+        "name": "Amulet of the Damned",
+        "category": "Combat",
+        "type": "Amulet",
+        "media": "assets/bank/amulet_of_the_damned.png",
+        "customDescription": "When equipped with one of the Barrows Brothers' Equipment sets, gain one of the following effects:<br><ul><li><strong>Ahrim the Blighted</strong>: +5% Magic Max Hit (tripled against Melee).</li><li><strong>Dharok the Wretched</strong>: +5% Reflect Damage.</li><li><strong>Guthan the Infested</strong>: +100 Maximum Hitpoints but -10% Auto Eat Threshold.</li><li><strong>Karil the Tainted</strong>: -0.2s Attack Interval.</li><li><strong>Torag the Corrupted</strong>: +1% Global Evasion for every 1% missing HP.</li><li><strong>Verac the Defiled</strong>: +7% Prayer Preservation Chance.</li></ul>",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 58000,
+        "tier": "combat",
+        "validSlots": [
+          "Amulet"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [
+          {
+            "key": "stabAttackBonus",
+            "value": 10
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 10
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 10
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 6
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 3
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 3
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 3
+          }
+        ],
+        "modifiers": {
+          "prayerPointPreservationChance": 3
+        }
+      },
+      {
+        "id": "Charnel_Chest",
+        "name": "Charnel Chest",
+        "category": "Openable",
+        "type": "Chest",
+        "media": "assets/bank/charnel_chest.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 150,
+        "itemType": "Openable",
+        "dropTable": [
+          {
+            "itemID": "melvorD:Mind_Rune",
+            "minQuantity": 250,
+            "maxQuantity": 350,
+            "weight": 2400
+          },
+          {
+            "itemID": "melvorD:Chaos_Rune",
+            "minQuantity": 100,
+            "maxQuantity": 150,
+            "weight": 2400
+          },
+          {
+            "itemID": "melvorD:Death_Rune",
+            "minQuantity": 70,
+            "maxQuantity": 80,
+            "weight": 2400
+          },
+          {
+            "itemID": "melvorD:Blood_Rune",
+            "minQuantity": 30,
+            "maxQuantity": 40,
+            "weight": 2400
+          },
+          {
+            "itemID": "expandedAreas:Bolt_Rack",
+            "minQuantity": 35,
+            "maxQuantity": 40,
+            "weight": 2400
+          },
+          {
+            "itemID": "melvorF:Small_Urn",
+            "minQuantity": 10,
+            "maxQuantity": 20,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorF:Medium_Urn",
+            "minQuantity": 10,
+            "maxQuantity": 20,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorD:Silver_Bar",
+            "minQuantity": 400,
+            "maxQuantity": 500,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorD:Gold_Bar",
+            "minQuantity": 300,
+            "maxQuantity": 400,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorD:Diamond",
+            "minQuantity": 200,
+            "maxQuantity": 300,
+            "weight": 500
+          },
+          {
+            "itemID": "expandedAreas:Ahrims_Hood",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          },
+          {
+            "itemID": "expandedAreas:Ahrims_Robetop",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          },
+          {
+            "itemID": "expandedAreas:Ahrims_Robeskirt",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          },
+          {
+            "itemID": "expandedAreas:Ahrims_Staff",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          },
+          {
+            "itemID": "expandedAreas:Dharoks_Helm",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          },
+          {
+            "itemID": "expandedAreas:Dharoks_Platebody",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          },
+          {
+            "itemID": "expandedAreas:Dharoks_Platelegs",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          },
+          {
+            "itemID": "expandedAreas:Dharoks_Greataxe",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          },
+          {
+            "itemID": "expandedAreas:Guthans_Helm",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          },
+          {
+            "itemID": "expandedAreas:Guthans_Platebody",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          },
+          {
+            "itemID": "expandedAreas:Guthans_Chainskirt",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          },
+          {
+            "itemID": "expandedAreas:Guthans_Warspear",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          },
+          {
+            "itemID": "expandedAreas:Karils_Coif",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          },
+          {
+            "itemID": "expandedAreas:Karils_Leathertop",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          },
+          {
+            "itemID": "expandedAreas:Karils_Leatherskirt",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          },
+          {
+            "itemID": "expandedAreas:Karils_Crossbow",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          },
+          {
+            "itemID": "expandedAreas:Torags_Helm",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          },
+          {
+            "itemID": "expandedAreas:Torags_Platebody",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          },
+          {
+            "itemID": "expandedAreas:Torags_Platelegs",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          },
+          {
+            "itemID": "expandedAreas:Torags_Hammers",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          },
+          {
+            "itemID": "expandedAreas:Veracs_Helm",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          },
+          {
+            "itemID": "expandedAreas:Veracs_Brassard",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          },
+          {
+            "itemID": "expandedAreas:Veracs_Plateskirt",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          },
+          {
+            "itemID": "expandedAreas:Veracs_Flail",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          },
+          {
+            "itemID": "expandedAreas:Amulet_of_the_Damned",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "id": "Ahrims_Sarcophagus",
+        "name": "Ahrim's Sarcophagus",
+        "category": "Openable",
+        "type": "Chest",
+        "media": "assets/bank/sarcophagus.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 150,
+        "itemType": "Openable",
+        "dropTable": [
+          {
+            "itemID": "melvorD:Mind_Rune",
+            "minQuantity": 25,
+            "maxQuantity": 35,
+            "weight": 2400
+          },
+          {
+            "itemID": "melvorD:Chaos_Rune",
+            "minQuantity": 10,
+            "maxQuantity": 15,
+            "weight": 2400
+          },
+          {
+            "itemID": "melvorD:Death_Rune",
+            "minQuantity": 7,
+            "maxQuantity": 8,
+            "weight": 2400
+          },
+          {
+            "itemID": "melvorD:Blood_Rune",
+            "minQuantity": 3,
+            "maxQuantity": 4,
+            "weight": 2400
+          },
+          {
+            "itemID": "expandedAreas:Bolt_Rack",
+            "minQuantity": 3,
+            "maxQuantity": 4,
+            "weight": 2400
+          },
+          {
+            "itemID": "melvorF:Small_Urn",
+            "minQuantity": 1,
+            "maxQuantity": 2,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorF:Medium_Urn",
+            "minQuantity": 1,
+            "maxQuantity": 2,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorD:Silver_Bar",
+            "minQuantity": 40,
+            "maxQuantity": 50,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorD:Gold_Bar",
+            "minQuantity": 30,
+            "maxQuantity": 40,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorD:Diamond",
+            "minQuantity": 20,
+            "maxQuantity": 30,
+            "weight": 500
+          },
+          {
+            "itemID": "expandedAreas:Ahrims_Hood",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 5
+          },
+          {
+            "itemID": "expandedAreas:Ahrims_Robetop",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 5
+          },
+          {
+            "itemID": "expandedAreas:Ahrims_Robeskirt",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 5
+          },
+          {
+            "itemID": "expandedAreas:Ahrims_Staff",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "id": "Dharoks_Sarcophagus",
+        "name": "Dharok's Sarcophagus",
+        "category": "Openable",
+        "type": "Chest",
+        "media": "assets/bank/sarcophagus.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 150,
+        "itemType": "Openable",
+        "dropTable": [
+          {
+            "itemID": "melvorD:Mind_Rune",
+            "minQuantity": 25,
+            "maxQuantity": 35,
+            "weight": 2400
+          },
+          {
+            "itemID": "melvorD:Chaos_Rune",
+            "minQuantity": 10,
+            "maxQuantity": 15,
+            "weight": 2400
+          },
+          {
+            "itemID": "melvorD:Death_Rune",
+            "minQuantity": 7,
+            "maxQuantity": 8,
+            "weight": 2400
+          },
+          {
+            "itemID": "melvorD:Blood_Rune",
+            "minQuantity": 3,
+            "maxQuantity": 4,
+            "weight": 2400
+          },
+          {
+            "itemID": "expandedAreas:Bolt_Rack",
+            "minQuantity": 3,
+            "maxQuantity": 4,
+            "weight": 2400
+          },
+          {
+            "itemID": "melvorF:Small_Urn",
+            "minQuantity": 1,
+            "maxQuantity": 2,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorF:Medium_Urn",
+            "minQuantity": 1,
+            "maxQuantity": 2,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorD:Silver_Bar",
+            "minQuantity": 40,
+            "maxQuantity": 50,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorD:Gold_Bar",
+            "minQuantity": 30,
+            "maxQuantity": 40,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorD:Diamond",
+            "minQuantity": 20,
+            "maxQuantity": 30,
+            "weight": 500
+          },
+          {
+            "itemID": "expandedAreas:Dharoks_Helm",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 5
+          },
+          {
+            "itemID": "expandedAreas:Dharoks_Platebody",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 5
+          },
+          {
+            "itemID": "expandedAreas:Dharoks_Platelegs",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 5
+          },
+          {
+            "itemID": "expandedAreas:Dharoks_Greataxe",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "id": "Guthans_Sarcophagus",
+        "name": "Guthan's Sarcophagus",
+        "category": "Openable",
+        "type": "Chest",
+        "media": "assets/bank/sarcophagus.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 150,
+        "itemType": "Openable",
+        "dropTable": [
+          {
+            "itemID": "melvorD:Mind_Rune",
+            "minQuantity": 25,
+            "maxQuantity": 35,
+            "weight": 2400
+          },
+          {
+            "itemID": "melvorD:Chaos_Rune",
+            "minQuantity": 10,
+            "maxQuantity": 15,
+            "weight": 2400
+          },
+          {
+            "itemID": "melvorD:Death_Rune",
+            "minQuantity": 7,
+            "maxQuantity": 8,
+            "weight": 2400
+          },
+          {
+            "itemID": "melvorD:Blood_Rune",
+            "minQuantity": 3,
+            "maxQuantity": 4,
+            "weight": 2400
+          },
+          {
+            "itemID": "expandedAreas:Bolt_Rack",
+            "minQuantity": 3,
+            "maxQuantity": 4,
+            "weight": 2400
+          },
+          {
+            "itemID": "melvorF:Small_Urn",
+            "minQuantity": 1,
+            "maxQuantity": 2,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorF:Medium_Urn",
+            "minQuantity": 1,
+            "maxQuantity": 2,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorD:Silver_Bar",
+            "minQuantity": 40,
+            "maxQuantity": 50,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorD:Gold_Bar",
+            "minQuantity": 30,
+            "maxQuantity": 40,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorD:Diamond",
+            "minQuantity": 20,
+            "maxQuantity": 30,
+            "weight": 500
+          },
+          {
+            "itemID": "expandedAreas:Guthans_Helm",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 5
+          },
+          {
+            "itemID": "expandedAreas:Guthans_Platebody",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 5
+          },
+          {
+            "itemID": "expandedAreas:Guthans_Chainskirt",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 5
+          },
+          {
+            "itemID": "expandedAreas:Guthans_Warspear",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "id": "Karils_Sarcophagus",
+        "name": "Karil's Sarcophagus",
+        "category": "Openable",
+        "type": "Chest",
+        "media": "assets/bank/sarcophagus.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 150,
+        "itemType": "Openable",
+        "dropTable": [
+          {
+            "itemID": "melvorD:Mind_Rune",
+            "minQuantity": 25,
+            "maxQuantity": 35,
+            "weight": 2400
+          },
+          {
+            "itemID": "melvorD:Chaos_Rune",
+            "minQuantity": 10,
+            "maxQuantity": 15,
+            "weight": 2400
+          },
+          {
+            "itemID": "melvorD:Death_Rune",
+            "minQuantity": 7,
+            "maxQuantity": 8,
+            "weight": 2400
+          },
+          {
+            "itemID": "melvorD:Blood_Rune",
+            "minQuantity": 3,
+            "maxQuantity": 4,
+            "weight": 2400
+          },
+          {
+            "itemID": "expandedAreas:Bolt_Rack",
+            "minQuantity": 3,
+            "maxQuantity": 4,
+            "weight": 2400
+          },
+          {
+            "itemID": "melvorF:Small_Urn",
+            "minQuantity": 1,
+            "maxQuantity": 2,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorF:Medium_Urn",
+            "minQuantity": 1,
+            "maxQuantity": 2,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorD:Silver_Bar",
+            "minQuantity": 40,
+            "maxQuantity": 50,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorD:Gold_Bar",
+            "minQuantity": 30,
+            "maxQuantity": 40,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorD:Diamond",
+            "minQuantity": 20,
+            "maxQuantity": 30,
+            "weight": 500
+          },
+          {
+            "itemID": "expandedAreas:Karils_Coif",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          },
+          {
+            "itemID": "expandedAreas:Karils_Leathertop",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          },
+          {
+            "itemID": "expandedAreas:Karils_Leatherskirt",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          },
+          {
+            "itemID": "expandedAreas:Karils_Crossbow",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          }
+        ]
+      },
+      {
+        "id": "Torags_Sarcophagus",
+        "name": "Torag's Sarcophagus",
+        "category": "Openable",
+        "type": "Chest",
+        "media": "assets/bank/sarcophagus.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 150,
+        "itemType": "Openable",
+        "dropTable": [
+          {
+            "itemID": "melvorD:Mind_Rune",
+            "minQuantity": 25,
+            "maxQuantity": 35,
+            "weight": 2400
+          },
+          {
+            "itemID": "melvorD:Chaos_Rune",
+            "minQuantity": 10,
+            "maxQuantity": 15,
+            "weight": 2400
+          },
+          {
+            "itemID": "melvorD:Death_Rune",
+            "minQuantity": 7,
+            "maxQuantity": 8,
+            "weight": 2400
+          },
+          {
+            "itemID": "melvorD:Blood_Rune",
+            "minQuantity": 3,
+            "maxQuantity": 4,
+            "weight": 2400
+          },
+          {
+            "itemID": "expandedAreas:Bolt_Rack",
+            "minQuantity": 3,
+            "maxQuantity": 4,
+            "weight": 2400
+          },
+          {
+            "itemID": "melvorF:Small_Urn",
+            "minQuantity": 1,
+            "maxQuantity": 2,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorF:Medium_Urn",
+            "minQuantity": 1,
+            "maxQuantity": 2,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorD:Silver_Bar",
+            "minQuantity": 40,
+            "maxQuantity": 50,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorD:Gold_Bar",
+            "minQuantity": 30,
+            "maxQuantity": 40,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorD:Diamond",
+            "minQuantity": 20,
+            "maxQuantity": 30,
+            "weight": 500
+          },
+          {
+            "itemID": "expandedAreas:Torags_Helm",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          },
+          {
+            "itemID": "expandedAreas:Torags_Platebody",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          },
+          {
+            "itemID": "expandedAreas:Torags_Platelegs",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          },
+          {
+            "itemID": "expandedAreas:Torags_Hammers",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          }
+        ]
+      },
+      {
+        "id": "Veracs_Sarcophagus",
+        "name": "Verac's Sarcophagus",
+        "category": "Openable",
+        "type": "Chest",
+        "media": "assets/bank/sarcophagus.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 150,
+        "itemType": "Openable",
+        "dropTable": [
+          {
+            "itemID": "melvorD:Mind_Rune",
+            "minQuantity": 25,
+            "maxQuantity": 35,
+            "weight": 2400
+          },
+          {
+            "itemID": "melvorD:Chaos_Rune",
+            "minQuantity": 10,
+            "maxQuantity": 15,
+            "weight": 2400
+          },
+          {
+            "itemID": "melvorD:Death_Rune",
+            "minQuantity": 7,
+            "maxQuantity": 8,
+            "weight": 2400
+          },
+          {
+            "itemID": "melvorD:Blood_Rune",
+            "minQuantity": 3,
+            "maxQuantity": 4,
+            "weight": 2400
+          },
+          {
+            "itemID": "expandedAreas:Bolt_Rack",
+            "minQuantity": 3,
+            "maxQuantity": 4,
+            "weight": 2400
+          },
+          {
+            "itemID": "melvorF:Small_Urn",
+            "minQuantity": 1,
+            "maxQuantity": 2,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorF:Medium_Urn",
+            "minQuantity": 1,
+            "maxQuantity": 2,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorD:Silver_Bar",
+            "minQuantity": 40,
+            "maxQuantity": 50,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorD:Gold_Bar",
+            "minQuantity": 30,
+            "maxQuantity": 40,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorD:Diamond",
+            "minQuantity": 20,
+            "maxQuantity": 30,
+            "weight": 500
+          },
+          {
+            "itemID": "expandedAreas:Veracs_Helm",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          },
+          {
+            "itemID": "expandedAreas:Veracs_Brassard",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          },
+          {
+            "itemID": "expandedAreas:Veracs_Plateskirt",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          },
+          {
+            "itemID": "expandedAreas:Veracs_Flail",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 50
+          }
+        ]
+      },
       {
         "itemType": "Equipment",
         "id": "Earring_of_Protection",
@@ -27805,6 +30479,375 @@
     "itemSynergies": [
       {
         "itemIDs": [
+          "expandedAreas:Ahrims_Hood",
+          "expandedAreas:Ahrims_Robetop",
+          "expandedAreas:Ahrims_Robeskirt",
+          "expandedAreas:Ahrims_Staff"
+        ],
+        "combatEffects": [
+          {
+            "effectID": "expandedAreas:Blighted",
+            "appliesWhen": "HitWithAttack",
+            "chance": 25,
+            "condition": {
+              "character": "Player",
+              "thisAttackType": "magic",
+              "targetAttackType": "any",
+              "type": "CombatType"
+            }
+          }
+        ]
+      },
+      {
+        "itemIDs": [
+          "expandedAreas:Dharoks_Helm",
+          "expandedAreas:Dharoks_Platebody",
+          "expandedAreas:Dharoks_Platelegs",
+          "expandedAreas:Dharoks_Greataxe"
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 90
+            },
+            "modifiers": {
+              "maxHit": 10
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 80
+            },
+            "modifiers": {
+              "maxHit": 10
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 70
+            },
+            "modifiers": {
+              "maxHit": 10
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 60
+            },
+            "modifiers": {
+              "maxHit": 10
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 50
+            },
+            "modifiers": {
+              "maxHit": 10
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 40
+            },
+            "modifiers": {
+              "maxHit": 10
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 30
+            },
+            "modifiers": {
+              "maxHit": 10
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 20
+            },
+            "modifiers": {
+              "maxHit": 10
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 10
+            },
+            "modifiers": {
+              "maxHit": 10
+            }
+          }
+        ]
+      },
+      {
+        "itemIDs": [
+          "expandedAreas:Guthans_Helm",
+          "expandedAreas:Guthans_Platebody",
+          "expandedAreas:Guthans_Chainskirt",
+          "expandedAreas:Guthans_Warspear"
+        ],
+        "playerModifiers": {
+          "meleeLifesteal": 25
+        }
+      },
+      {
+        "itemIDs": [
+          "expandedAreas:Karils_Coif",
+          "expandedAreas:Karils_Leathertop",
+          "expandedAreas:Karils_Leatherskirt",
+          "expandedAreas:Karils_Crossbow"
+        ],
+        "combatEffects": [
+          {
+            "effectID": "expandedAreas:Tainted",
+            "appliesWhen": "HitWithAttack",
+            "chance": 25,
+            "condition": {
+              "character": "Player",
+              "thisAttackType": "ranged",
+              "targetAttackType": "any",
+              "type": "CombatType"
+            }
+          }
+        ]
+      },
+      {
+        "itemIDs": [
+          "expandedAreas:Torags_Helm",
+          "expandedAreas:Torags_Platebody",
+          "expandedAreas:Torags_Platelegs",
+          "expandedAreas:Torags_Hammers"
+        ],
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 25,
+            "effectID": "melvorD:Slow",
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 2
+              },
+              {
+                "name": "magnitude",
+                "value": 20
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "itemIDs": [
+          "expandedAreas:Veracs_Helm",
+          "expandedAreas:Veracs_Brassard",
+          "expandedAreas:Veracs_Plateskirt",
+          "expandedAreas:Veracs_Flail"
+        ],
+        "playerModifiers": {
+          "attackRolls": 1
+        }
+      },
+      {
+        "itemIDs": [
+          "expandedAreas:Ahrims_Hood",
+          "expandedAreas:Ahrims_Robetop",
+          "expandedAreas:Ahrims_Robeskirt",
+          "expandedAreas:Ahrims_Staff",
+          "expandedAreas:Amulet_of_the_Damned"
+        ],
+        "playerModifiers": {
+          "magicMaxHitAgainstMelee": 5
+        }
+      },
+      {
+        "itemIDs": [
+          "expandedAreas:Dharoks_Helm",
+          "expandedAreas:Dharoks_Platebody",
+          "expandedAreas:Dharoks_Platelegs",
+          "expandedAreas:Dharoks_Greataxe",
+          "expandedAreas:Amulet_of_the_Damned"
+        ],
+        "playerModifiers": {
+          "reflectDamage": 5
+        }
+      },
+      {
+        "itemIDs": [
+          "expandedAreas:Guthans_Helm",
+          "expandedAreas:Guthans_Platebody",
+          "expandedAreas:Guthans_Chainskirt",
+          "expandedAreas:Guthans_Warspear",
+          "expandedAreas:Amulet_of_the_Damned"
+        ],
+        "playerModifiers": {
+          "flatMaxHitpoints": 10,
+          "autoEatThreshold": -10
+        }
+      },
+      {
+        "itemIDs": [
+          "expandedAreas:Karils_Coif",
+          "expandedAreas:Karils_Leathertop",
+          "expandedAreas:Karils_Leatherskirt",
+          "expandedAreas:Karils_Crossbow",
+          "expandedAreas:Amulet_of_the_Damned"
+        ],
+        "playerModifiers": {
+          "flatAttackInterval": -0.2
+        }
+      },
+      {
+        "itemIDs": [
+          "expandedAreas:Torags_Helm",
+          "expandedAreas:Torags_Platebody",
+          "expandedAreas:Torags_Platelegs",
+          "expandedAreas:Torags_Hammers",
+          "expandedAreas:Amulet_of_the_Damned"
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 90
+            },
+            "modifiers": {
+              "evasion": 10
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 80
+            },
+            "modifiers": {
+              "evasion": 10
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 70
+            },
+            "modifiers": {
+              "evasion": 10
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 60
+            },
+            "modifiers": {
+              "evasion": 10
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 50
+            },
+            "modifiers": {
+              "evasion": 10
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 40
+            },
+            "modifiers": {
+              "evasion": 10
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 30
+            },
+            "modifiers": {
+              "evasion": 10
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 20
+            },
+            "modifiers": {
+              "evasion": 10
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 10
+            },
+            "modifiers": {
+              "evasion": 10
+            }
+          }
+        ]
+      },
+      {
+        "itemIDs": [
+          "expandedAreas:Veracs_Helm",
+          "expandedAreas:Veracs_Brassard",
+          "expandedAreas:Veracs_Plateskirt",
+          "expandedAreas:Veracs_Flail",
+          "expandedAreas:Amulet_of_the_Damned"
+        ],
+        "playerModifiers": {
+          "prayerPointPreservationChance": 7
+        }
+      },
+      {
+        "itemIDs": [
           "expandedAreas:Barbarian_Archer_Helm",
           "ThrowingWeapon"
         ],
@@ -27905,7 +30948,12 @@
             "id": "expandedAreas:Saltpetre",
             "quantity": 10
           }
-        ]
+        ],
+        "rootItemIDs": [
+          "melvorD:Compost"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": []
       },
       {
         "upgradedItemID": "expandedAreas:Amulet_of_Rage",
@@ -30048,9 +33096,451 @@
     ],
     "monsters": [
       {
+        "id": "Crypt_Worm",
+        "name": "Crypt Worm",
+        "media": "assets/combat/monsters/crypt_worm.png",
+        "levels": {
+          "Hitpoints": 45,
+          "Attack": 80,
+          "Strength": 20,
+          "Defence": 35,
+          "Ranged": 1,
+          "Magic": 1
+        },
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2000
+          }
+        ],
+        "ignoreCompletion": false,
+        "attackType": "melee",
+        "specialAttacks": [],
+        "passives": [
+          "expandedAreas:JustAFleshWound"
+        ],
+        "lootChance": 0,
+        "lootTable": [],
+        "canSlayer": false,
+        "isBoss": false,
+        "selectedSpell": "melvorD:WindStrike"
+      },
+      {
+        "id": "Crypt_Rat",
+        "name": "Crypt Rat",
+        "media": "assets/combat/monsters/crypt_rat.png",
+        "levels": {
+          "Hitpoints": 70,
+          "Attack": 80,
+          "Strength": 50,
+          "Defence": 65,
+          "Ranged": 1,
+          "Magic": 1
+        },
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2400
+          }
+        ],
+        "ignoreCompletion": false,
+        "attackType": "melee",
+        "specialAttacks": [],
+        "passives": [
+          "expandedAreas:WeakeningBite"
+        ],
+        "lootChance": 0,
+        "lootTable": [],
+        "canSlayer": false,
+        "isBoss": false,
+        "selectedSpell": "melvorD:WindStrike"
+      },
+      {
+        "id": "Crypt_Spider",
+        "name": "Crypt Spider",
+        "media": "assets/combat/monsters/crypt_spider.png",
+        "levels": {
+          "Hitpoints": 80,
+          "Attack": 65,
+          "Strength": 67,
+          "Defence": 65,
+          "Ranged": 1,
+          "Magic": 1
+        },
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2200
+          }
+        ],
+        "ignoreCompletion": false,
+        "attackType": "melee",
+        "specialAttacks": [],
+        "passives": [
+          "expandedAreas:LilPoisonous"
+        ],
+        "lootChance": 0,
+        "lootTable": [],
+        "canSlayer": false,
+        "isBoss": false,
+        "selectedSpell": "melvorD:WindStrike"
+      },
+      {
+        "id": "Crypt_Skeleton",
+        "name": "Crypt Skeleton",
+        "media": "assets/combat/monsters/crypt_skeleton.png",
+        "levels": {
+          "Hitpoints": 51,
+          "Attack": 72,
+          "Strength": 72,
+          "Defence": 72,
+          "Ranged": 1,
+          "Magic": 1
+        },
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2200
+          }
+        ],
+        "ignoreCompletion": false,
+        "attackType": "melee",
+        "specialAttacks": [],
+        "passives": [],
+        "lootChance": 0,
+        "lootTable": [],
+        "canSlayer": false,
+        "isBoss": false,
+        "selectedSpell": "melvorD:WindStrike"
+      },
+      {
+        "id": "Brother_Ahrim_the_Blighted",
+        "name": "Brother Ahrim the Blighted",
+        "media": "assets/combat/monsters/ahrim.png",
+        "levels": {
+          "Hitpoints": 100,
+          "Attack": 1,
+          "Strength": 1,
+          "Defence": 100,
+          "Ranged": 1,
+          "Magic": 100
+        },
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3600
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": 73
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 117
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 73
+          },
+          {
+            "key": "damageReduction",
+            "value": 3
+          }
+        ],
+        "ignoreCompletion": false,
+        "attackType": "magic",
+        "specialAttacks": [],
+        "passives": [
+          "expandedAreas:BlightedAura"
+        ],
+        "lootChance": 0,
+        "lootTable": [],
+        "bones": {
+          "itemID": "expandedAreas:Ahrims_Sarcophagus",
+          "quantity": 1
+        },
+        "canSlayer": false,
+        "isBoss": true,
+        "selectedSpell": "melvorD:WindBolt"
+      },
+      {
+        "id": "Brother_Dharok_the_Wretched",
+        "name": "Brother Dharok the Wretched",
+        "media": "assets/combat/monsters/dharok.png",
+        "levels": {
+          "Hitpoints": 100,
+          "Attack": 100,
+          "Strength": 100,
+          "Defence": 100,
+          "Ranged": 1,
+          "Magic": 1
+        },
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 4200
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 217
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 252
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 260
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -11
+          },
+          {
+            "key": "damageReduction",
+            "value": 24
+          }
+        ],
+        "ignoreCompletion": false,
+        "attackType": "melee",
+        "specialAttacks": [],
+        "passives": [
+          "expandedAreas:WretchedAnger"
+        ],
+        "lootChance": 0,
+        "lootTable": [],
+        "bones": {
+          "itemID": "expandedAreas:Dharoks_Sarcophagus",
+          "quantity": 1
+        },
+        "canSlayer": false,
+        "isBoss": true,
+        "selectedSpell": "melvorD:WindBolt"
+      },
+      {
+        "id": "Brother_Guthan_the_Infested",
+        "name": "Brother Guthan the Infested",
+        "media": "assets/combat/monsters/guthan.png",
+        "levels": {
+          "Hitpoints": 100,
+          "Attack": 100,
+          "Strength": 100,
+          "Defence": 100,
+          "Ranged": 1,
+          "Magic": 1
+        },
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3000
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 115
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 259
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 250
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -11
+          },
+          {
+            "key": "damageReduction",
+            "value": 30
+          }
+        ],
+        "ignoreCompletion": false,
+        "attackType": "melee",
+        "specialAttacks": [],
+        "passives": [
+          "expandedAreas:InfestedSiphon"
+        ],
+        "lootChance": 0,
+        "lootTable": [],
+        "bones": {
+          "itemID": "expandedAreas:Guthans_Sarcophagus",
+          "quantity": 1
+        },
+        "canSlayer": false,
+        "isBoss": true,
+        "selectedSpell": "melvorD:WindBolt"
+      },
+      {
+        "id": "Brother_Karil_the_Tainted",
+        "name": "Brother Karil the Tainted",
+        "media": "assets/combat/monsters/karil.png",
+        "levels": {
+          "Hitpoints": 100,
+          "Attack": 1,
+          "Strength": 1,
+          "Defence": 100,
+          "Ranged": 100,
+          "Magic": 1
+        },
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2400
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 143
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 90
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 100
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 106
+          },
+          {
+            "key": "damageReduction",
+            "value": 15
+          }
+        ],
+        "ignoreCompletion": false,
+        "attackType": "ranged",
+        "specialAttacks": [],
+        "passives": [
+          "expandedAreas:TaintedSoul"
+        ],
+        "lootChance": 0,
+        "lootTable": [],
+        "bones": {
+          "itemID": "expandedAreas:Karils_Sarcophagus",
+          "quantity": 1
+        },
+        "canSlayer": false,
+        "isBoss": true,
+        "selectedSpell": "melvorD:WindBolt"
+      },
+      {
+        "id": "Brother_Torag_the_Corrupted",
+        "name": "Brother Torag the Corrupted",
+        "media": "assets/combat/monsters/torag.png",
+        "levels": {
+          "Hitpoints": 100,
+          "Attack": 100,
+          "Strength": 100,
+          "Defence": 100,
+          "Ranged": 1,
+          "Magic": 1
+        },
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3000
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 60
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 235
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 221
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 0
+          },
+          {
+            "key": "damageReduction",
+            "value": 24
+          }
+        ],
+        "ignoreCompletion": false,
+        "attackType": "melee",
+        "specialAttacks": [
+          "expandedAreas:DualHitNormal"
+        ],
+        "passives": [
+          "expandedAreas:CorruptedHeart"
+        ],
+        "lootChance": 0,
+        "lootTable": [],
+        "bones": {
+          "itemID": "expandedAreas:Torags_Sarcophagus",
+          "quantity": 1
+        },
+        "canSlayer": false,
+        "isBoss": true,
+        "selectedSpell": "melvorD:WindBolt"
+      },
+      {
+        "id": "Brother_Verac_the_Defiled",
+        "name": "Brother Verac the Defiled",
+        "media": "assets/combat/monsters/verac.png",
+        "levels": {
+          "Hitpoints": 100,
+          "Attack": 100,
+          "Strength": 100,
+          "Defence": 100,
+          "Ranged": 1,
+          "Magic": 1
+        },
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3000
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 105
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 230
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 225
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 0
+          },
+          {
+            "key": "damageReduction",
+            "value": 24
+          }
+        ],
+        "ignoreCompletion": false,
+        "attackType": "melee",
+        "specialAttacks": [
+          "expandedAreas:DefilingStrike"
+        ],
+        "passives": [
+          "expandedAreas:DefiledBody"
+        ],
+        "lootChance": 0,
+        "lootTable": [],
+        "bones": {
+          "itemID": "expandedAreas:Veracs_Sarcophagus",
+          "quantity": 1
+        },
+        "canSlayer": false,
+        "isBoss": true,
+        "selectedSpell": "melvorD:WindBolt"
+      },
+      {
         "id": "Minotaur",
         "name": "Minotaur",
-        "media": "assets/monsters/Minotaur.png",
+        "media": "assets/combat/monsters/Minotaur.png",
         "levels": {
           "Hitpoints": 100,
           "Attack": 100,
@@ -30105,7 +33595,7 @@
       {
         "id": "Wasp",
         "name": "Wasp",
-        "media": "assets/monsters/Wasp.png",
+        "media": "assets/combat/monsters/Wasp.png",
         "description": "It's even worse up close!",
         "levels": {
           "Hitpoints": 10,
@@ -30177,7 +33667,7 @@
       {
         "id": "Mutant_Flower",
         "name": "Mutant Flower",
-        "media": "assets/monsters/Mutant_Flower.png",
+        "media": "assets/combat/monsters/Mutant_Flower.png",
         "description": "AHHH! It's got eyes! EYES!",
         "levels": {
           "Hitpoints": 5,
@@ -30217,7 +33707,7 @@
       {
         "id": "Weeds",
         "name": "Weeds",
-        "media": "assets/monsters/Weeds.png",
+        "media": "assets/combat/monsters/Weeds.png",
         "description": "A greenthumb's worst nightmare.",
         "levels": {
           "Hitpoints": 25,
@@ -30253,7 +33743,7 @@
       {
         "id": "Junior_Gardener",
         "name": "Junior Gardener",
-        "media": "assets/monsters/Junior_Gardener.png",
+        "media": "assets/combat/monsters/Junior_Gardener.png",
         "levels": {
           "Hitpoints": 15,
           "Attack": 10,
@@ -30353,7 +33843,7 @@
       {
         "id": "Adult_Gardener",
         "name": "Adult Gardener",
-        "media": "assets/monsters/Adult_Gardener.png",
+        "media": "assets/combat/monsters/Adult_Gardener.png",
         "levels": {
           "Hitpoints": 30,
           "Attack": 25,
@@ -30447,7 +33937,7 @@
       {
         "id": "Master_Gardener",
         "name": "Master Gardener",
-        "media": "assets/monsters/Master_Gardener.png",
+        "media": "assets/combat/monsters/Master_Gardener.png",
         "levels": {
           "Hitpoints": 45,
           "Attack": 40,
@@ -30661,7 +34151,7 @@
       {
         "id": "Baby_Green_Dragon",
         "name": "Baby Green Dragon",
-        "media": "assets/monsters/Baby_Green_Dragon.png",
+        "media": "assets/combat/monsters/Baby_Green_Dragon.png",
         "levels": {
           "Hitpoints": 45,
           "Attack": 38,
@@ -30713,7 +34203,7 @@
       {
         "id": "Baby_Blue_Dragon",
         "name": "Baby Blue Dragon",
-        "media": "assets/monsters/Baby_Blue_Dragon.png",
+        "media": "assets/combat/monsters/Baby_Blue_Dragon.png",
         "levels": {
           "Hitpoints": 55,
           "Attack": 48,
@@ -30773,7 +34263,7 @@
       {
         "id": "Baby_Red_Dragon",
         "name": "Baby Red Dragon",
-        "media": "assets/monsters/Baby_Red_Dragon.png",
+        "media": "assets/combat/monsters/Baby_Red_Dragon.png",
         "levels": {
           "Hitpoints": 65,
           "Attack": 58,
@@ -30837,7 +34327,7 @@
       {
         "id": "Baby_Black_Dragon",
         "name": "Baby Black Dragon",
-        "media": "assets/monsters/Baby_Black_Dragon.png",
+        "media": "assets/combat/monsters/Baby_Black_Dragon.png",
         "levels": {
           "Hitpoints": 75,
           "Attack": 68,
@@ -30901,7 +34391,7 @@
       {
         "id": "OzmarathraxInscriptorOfRunes",
         "name": "Ozmarathrax, Inscriptor of Runes",
-        "media": "assets/monsters/Ozmarathrax.png",
+        "media": "assets/combat/monsters/Ozmarathrax.png",
         "description": "“You will pay the price for defiling our sanctuary.”",
         "levels": {
           "Hitpoints": 300,
@@ -30962,7 +34452,7 @@
       {
         "id": "Kappa",
         "name": "Hiro the Kappa",
-        "media": "assets/monsters/Kappa.png",
+        "media": "assets/combat/monsters/Kappa.png",
         "description": "Part turtle, part reptile, all cowabunga.",
         "levels": {
           "Hitpoints": 100,
@@ -31009,7 +34499,7 @@
       {
         "id": "Harpiar",
         "name": "Phylla the Harpiar",
-        "media": "assets/monsters/Harpiar.png",
+        "media": "assets/combat/monsters/Harpiar.png",
         "description": "I've never heard such a sweet song before...",
         "levels": {
           "Hitpoints": 190,
@@ -31054,7 +34544,7 @@
       {
         "id": "Fire_Maiden",
         "name": "Olma, Fire Maiden",
-        "media": "assets/monsters/Fire_Maiden.png",
+        "media": "assets/combat/monsters/Fire_Maiden.png",
         "description": "She carries the wrath of at least two suns.",
         "levels": {
           "Hitpoints": 175,
@@ -31099,7 +34589,7 @@
       {
         "id": "Rock_Giant",
         "name": "Zeke the Rock Giant",
-        "media": "assets/monsters/Rock_Giant.png",
+        "media": "assets/combat/monsters/Rock_Giant.png",
         "description": "In a past life, he wished to become rocks.",
         "levels": {
           "Hitpoints": 250,
@@ -31148,7 +34638,7 @@
       {
         "id": "Barbarian",
         "name": "Barbarian",
-        "media": "assets/monsters/Barbarian.png",
+        "media": "assets/combat/monsters/Barbarian.png",
         "description": "His name is probably Dave.",
         "levels": {
           "Attack": 8,
@@ -31281,7 +34771,7 @@
       {
         "id": "Barbarian_Warrior",
         "name": "Barbarian Warrior",
-        "media": "assets/monsters/Barbarian_Warrior.png",
+        "media": "assets/combat/monsters/Barbarian_Warrior.png",
         "description": "A fierce warrior from a bygone era.",
         "levels": {
           "Attack": 40,
@@ -31410,7 +34900,7 @@
       {
         "id": "Barbarian_Bowyer",
         "name": "Barbarian Bowyer",
-        "media": "assets/monsters/Barbarian_Bowyer.png",
+        "media": "assets/combat/monsters/Barbarian_Bowyer.png",
         "description": "A bear's head for a hat? Scary.",
         "levels": {
           "Attack": 1,
@@ -31555,7 +35045,7 @@
       {
         "id": "Barbarian_Berserker",
         "name": "Barbarian Berserker",
-        "media": "assets/monsters/Barbarian_Berserker.png",
+        "media": "assets/combat/monsters/Barbarian_Berserker.png",
         "description": "I can smell the Barbar from here...",
         "levels": {
           "Attack": 60,
@@ -31658,7 +35148,7 @@
       {
         "id": "Barbarian_Brawler",
         "name": "Barbarian Brawler",
-        "media": "assets/monsters/Barbarian_Brawler.png",
+        "media": "assets/combat/monsters/Barbarian_Brawler.png",
         "description": "She's clearly been in a few fights.",
         "levels": {
           "Attack": 75,
@@ -31789,7 +35279,7 @@
       {
         "id": "Walking_Keg",
         "name": "Walking Keg",
-        "media": "assets/monsters/Walking_Keg.png",
+        "media": "assets/combat/monsters/Walking_Keg.png",
         "description": "Are those feet? Nevermind.",
         "levels": {
           "Attack": 1,
@@ -31846,7 +35336,7 @@
       {
         "id": "Draugr",
         "name": "Draugr",
-        "media": "assets/monsters/Draugr.png",
+        "media": "assets/combat/monsters/Draugr.png",
         "description": "Not your typical zombie, I s'pose.",
         "levels": {
           "Attack": 42,
@@ -31880,7 +35370,7 @@
       {
         "id": "Drowned_Maiden",
         "name": "Drowned Maiden",
-        "media": "assets/monsters/Drowned_Maiden.png",
+        "media": "assets/combat/monsters/Drowned_Maiden.png",
         "description": "“Youuu will drowwwn as I diiid...”",
         "levels": {
           "Attack": 1,
@@ -31917,7 +35407,7 @@
       {
         "id": "Chieftain_Erik",
         "name": "Chieftain Erik",
-        "media": "assets/monsters/Chieftain_Erik.png",
+        "media": "assets/combat/monsters/Chieftain_Erik.png",
         "pet": {
           "id": "expandedAreas:Lil_Erik",
           "quantity": 350
@@ -32024,7 +35514,7 @@
       {
         "id": "Jarl_Eriksson",
         "name": "Jarl Eriksson",
-        "media": "assets/monsters/Jarl_Eriksson.png",
+        "media": "assets/combat/monsters/Jarl_Eriksson.png",
         "levels": {
           "Attack": 60,
           "Defence": 60,
@@ -32072,7 +35562,7 @@
       {
         "id": "Koschei_the_Deathless_Form1",
         "name": "Koschei the Deathless",
-        "media": "assets/monsters/Koschei_the_Deathless.png",
+        "media": "assets/combat/monsters/Koschei_the_Deathless.png",
         "levels": {
           "Attack": 20,
           "Defence": 20,
@@ -32125,7 +35615,7 @@
       {
         "id": "Koschei_the_Deathless_Form2",
         "name": "Koschei the Deathless",
-        "media": "assets/monsters/Koschei_the_Deathless.png",
+        "media": "assets/combat/monsters/Koschei_the_Deathless.png",
         "levels": {
           "Attack": 40,
           "Defence": 40,
@@ -32178,7 +35668,7 @@
       {
         "id": "Koschei_the_Deathless_Form3",
         "name": "Koschei the Deathless",
-        "media": "assets/monsters/Koschei_the_Deathless.png",
+        "media": "assets/combat/monsters/Koschei_the_Deathless.png",
         "levels": {
           "Attack": 60,
           "Defence": 60,
@@ -32231,7 +35721,7 @@
       {
         "id": "Koschei_the_Deathless_Form4",
         "name": "Koschei the Deathless",
-        "media": "assets/monsters/Koschei_the_Deathless.png",
+        "media": "assets/combat/monsters/Koschei_the_Deathless.png",
         "levels": {
           "Attack": 150,
           "Defence": 150,
@@ -32267,7 +35757,7 @@
       {
         "id": "Magic_Golbin",
         "name": "Magic Golbin",
-        "media": "assets/monsters/Magic_Golbin.png",
+        "media": "assets/combat/monsters/Magic_Golbin.png",
         "levels": {
           "Attack": 20,
           "Defence": 20,
@@ -32385,7 +35875,7 @@
       {
         "id": "Hobgolbin",
         "name": "Hobgolbin",
-        "media": "assets/monsters/Hobgolbin.png",
+        "media": "assets/combat/monsters/Hobgolbin.png",
         "levels": {
           "Attack": 24,
           "Defence": 24,
@@ -32512,7 +36002,7 @@
       {
         "id": "Big_Golbin",
         "name": "Big Golbin",
-        "media": "assets/monsters/Big_Golbin.png",
+        "media": "assets/combat/monsters/Big_Golbin.png",
         "levels": {
           "Attack": 36,
           "Defence": 22,
@@ -32641,7 +36131,7 @@
       {
         "id": "Peasant_Man",
         "name": "Peasant Man",
-        "media": "assets/monsters/Peasant_Man.png",
+        "media": "assets/combat/monsters/Peasant_Man.png",
         "description": "Just a regular ol' bloke.",
         "levels": {
           "Attack": 1,
@@ -32742,7 +36232,7 @@
       {
         "id": "Peasant_Woman",
         "name": "Peasant Woman",
-        "media": "assets/monsters/Peasant_Woman.png",
+        "media": "assets/combat/monsters/Peasant_Woman.png",
         "description": "Just a regular ol' gal.",
         "levels": {
           "Attack": 1,
@@ -32843,7 +36333,7 @@
       {
         "id": "Pickpocket",
         "name": "Pickpocket",
-        "media": "assets/monsters/Pickpocket.png",
+        "media": "assets/combat/monsters/Pickpocket.png",
         "description": "Cor blimey, mate! What is he doin' in me pockets?!",
         "levels": {
           "Attack": 14,
@@ -32923,7 +36413,7 @@
       {
         "id": "Guard",
         "name": "Guard",
-        "media": "assets/monsters/Guard.png",
+        "media": "assets/combat/monsters/Guard.png",
         "description": "Why do they always have ugly helmets?",
         "levels": {
           "Attack": 24,
@@ -33044,7 +36534,7 @@
       {
         "id": "Executioner",
         "name": "Executioner",
-        "media": "assets/monsters/Executioner.png",
+        "media": "assets/combat/monsters/Executioner.png",
         "description": "Sure wouldn't want to commit any crimes 'round him!",
         "levels": {
           "Attack": 28,
@@ -33173,7 +36663,7 @@
       {
         "id": "Mysterious_Monk",
         "name": "Mysterious Monk",
-        "media": "assets/monsters/Mysterious_Monk.png",
+        "media": "assets/combat/monsters/Mysterious_Monk.png",
         "description": "Mysterious.",
         "levels": {
           "Attack": 1,
@@ -33286,7 +36776,7 @@
       {
         "id": "Golbin_Chief",
         "name": "Golbin Chief",
-        "media": "assets/monsters/Golbin_Chief.png",
+        "media": "assets/combat/monsters/Golbin_Chief.png",
         "description": "“Reek-reek! Shmig blig. Dorgoo!”",
         "pet": {
           "id": "expandedAreas:Tinychief",
@@ -33403,7 +36893,7 @@
       {
         "id": "Novice_Necromancer",
         "name": "Novice Necromancer",
-        "media": "assets/monsters/Novice_Necromancer.png",
+        "media": "assets/combat/monsters/Novice_Necromancer.png",
         "description": "Probably still lives in his mum's basement.",
         "levels": {
           "Attack": 35,
@@ -33511,7 +37001,7 @@
       {
         "id": "Monk_of_the_Wind",
         "name": "Monk of the Wind",
-        "media": "assets/monsters/Monk_of_the_Wind.png",
+        "media": "assets/combat/monsters/Monk_of_the_Wind.png",
         "description": "“Long may the Winds carry gentle Aeris’ name.”",
         "levels": {
           "Attack": 1,
@@ -33629,7 +37119,7 @@
       {
         "id": "Monk_of_the_River",
         "name": "Monk of the River",
-        "media": "assets/monsters/Monk_of_the_River.png",
+        "media": "assets/combat/monsters/Monk_of_the_River.png",
         "description": "“The Tide ebbs and flows; Glacia’s power grows.”",
         "levels": {
           "Attack": 1,
@@ -33747,7 +37237,7 @@
       {
         "id": "Monk_of_the_Moss",
         "name": "Monk of the Moss",
-        "media": "assets/monsters/Monk_of_the_Moss.png",
+        "media": "assets/combat/monsters/Monk_of_the_Moss.png",
         "description": "“Can’t you feel the embrace of Terran as you walk?”",
         "levels": {
           "Attack": 1,
@@ -33865,7 +37355,7 @@
       {
         "id": "Monk_of_the_Flame",
         "name": "Monk of the Flame",
-        "media": "assets/monsters/Monk_of_the_Flame.png",
+        "media": "assets/combat/monsters/Monk_of_the_Flame.png",
         "description": "“The rage inside you belongs to Ragnar.”",
         "levels": {
           "Attack": 1,
@@ -33983,7 +37473,7 @@
       {
         "id": "Guardian_of_the_Elements",
         "name": "Guardian of the Elements",
-        "media": "assets/monsters/Guardian_of_the_Elements.png",
+        "media": "assets/combat/monsters/Guardian_of_the_Elements.png",
         "description": "“I CONTAIN THAT WHICH BINDS MELVOR.”",
         "pet": {
           "id": "expandedAreas:Swirli",
@@ -34176,6 +37666,17 @@
       }
     ],
     "pets": [
+      {
+        "id": "Spadey",
+        "media": "assets/pets/Spadey.png",
+        "name": "Spadey",
+        "modifiers": {
+          "prayerPointsFromBurying": 5
+        },
+        "scaleChanceWithMasteryPool": false,
+        "activeInRaid": false,
+        "ignoreCompletion": false
+      },
       {
         "id": "Swirli",
         "name": "Swirli",
@@ -45972,7 +49473,7 @@
             },
             {
               "id": "Standard_Thrownaxes",
-              "media": "assets/items_Thrownaxe.png",
+              "media": "assets/bank/Dragon_Thrownaxe.png",
               "name": "Standard Thrownaxes"
             }
           ],
@@ -48674,7 +52175,107 @@
               "expandedAreas:Multi_Tree_II",
               "expandedAreas:Multi_Tree_III"
             ]
-          }
+          },
+          "trees": [
+            {
+              "id": "Evergreen",
+              "name": "Evergreen Pine",
+              "media": "assets/skills/woodcutting/Evergreen.svg",
+              "baseInterval": 4500,
+              "baseExperience": 19,
+              "productId": "expandedAreas:Evergreen_Logs",
+              "level": 20,
+              "randomProducts": [
+                "expandedAreas:Pine_Needles",
+                "expandedAreas:Pine_Resin",
+                "expandedAreas:Pine_Cone"
+              ]
+            },
+            {
+              "id": "Longleaf",
+              "name": "Longleaf Pine",
+              "media": "assets/skills/woodcutting/Longleaf.svg",
+              "baseInterval": 9000,
+              "baseExperience": 50,
+              "productId": "expandedAreas:Longleaf_Logs",
+              "level": 50,
+              "randomProducts": [
+                "expandedAreas:Pine_Needles",
+                "expandedAreas:Pine_Resin",
+                "expandedAreas:Pine_Cone"
+              ]
+            },
+            {
+              "id": "Frostpine",
+              "name": "Frostpine",
+              "media": "assets/skills/woodcutting/Frostpine.svg",
+              "baseInterval": 15000,
+              "baseExperience": 87,
+              "productId": "expandedAreas:Frostpine_Logs",
+              "level": 65,
+              "randomProducts": [
+                "expandedAreas:Pine_Needles",
+                "expandedAreas:Pine_Resin",
+                "expandedAreas:Pine_Cone"
+              ]
+            },
+            {
+              "id": "White_Pine",
+              "name": "White Pine",
+              "media": "assets/skills/woodcutting/White_Pine.svg",
+              "baseInterval": 17500,
+              "baseExperience": 120,
+              "productId": "expandedAreas:White_Pine_Logs",
+              "level": 80,
+              "randomProducts": [
+                "melvorD:Bird_Nest",
+                "expandedAreas:Pine_Needles",
+                "expandedAreas:Pine_Resin",
+                "expandedAreas:Pine_Cone"
+              ]
+            },
+            {
+              "id": "Loblolly",
+              "name": "Loblolly Pine",
+              "media": "assets/skills/woodcutting/Loblolly.svg",
+              "baseInterval": 16000,
+              "baseExperience": 150,
+              "productId": "expandedAreas:Loblolly_Logs",
+              "level": 85,
+              "randomProducts": [
+                "expandedAreas:Pine_Needles",
+                "expandedAreas:Pine_Resin",
+                "expandedAreas:Pine_Cone",
+                "expandedAreas:Turpentine"
+              ]
+            }
+          ],
+          "randomProducts": [
+            {
+              "itemID": "expandedAreas:Turpentine",
+              "chance": 15,
+              "quantity": 1,
+              "minChance": 7.5
+            },
+            {
+              "itemID": "expandedAreas:Pine_Resin",
+              "chance": 10,
+              "quantity": 1,
+              "minChance": 5
+            },
+            {
+              "itemID": "expandedAreas:Pine_Cone",
+              "chance": 25,
+              "quantity": 1,
+              "minChance": 12.5
+            },
+            {
+              "itemID": "expandedAreas:Pine_Needles",
+              "chance": 50,
+              "quantity": 1,
+              "minChance": 25
+            }
+          ]
         }
       }
     ]
