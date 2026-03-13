@@ -38,6 +38,13 @@
           "add": [
             {
               "insertAt": "After",
+              "afterID": "melvorF:Infernal_Stronghold",
+              "ids": [
+                "expandedAreas:Swamp_of_Desolation"
+              ]
+            },
+            {
+              "insertAt": "After",
               "afterID": "melvorD:Undead_Graveyard",
               "ids": [
                 "expandedAreas:The_Dungeon"
@@ -282,6 +289,12 @@
         "id": "melvorF:Potion_Box_II",
         "dropTable": {
           "add": [
+            {
+              "itemID": "expandedAreas:Antivenom_I",
+              "minQuantity": 1,
+              "maxQuantity": 300,
+              "weight": 5
+            },
             {
               "itemID": "expandedAreas:Aeris_Brew_I",
               "minQuantity": 1,

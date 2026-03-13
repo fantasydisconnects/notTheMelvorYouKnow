@@ -4,6 +4,222 @@
   "data": {
     "attacks": [
       {
+                "id": "SwampSludge",
+                "defaultChance": 100,
+                "damage": [
+                    {
+                        "damageType": "Normal",
+                        "amplitude": 100
+                    },
+                    {
+                        "damageType": "Custom",
+                        "roll": false,
+                        "maxRoll": "MagicScaling",
+                        "maxPercent": 3.3,
+                        "character": "Attacker"
+                    }
+                ],
+                "prehitEffects": [],
+                "onhitEffects": [],
+                "cantMiss": false,
+                "attackCount": 1,
+                "attackInterval": 50,
+                "lifesteal": 0,
+                "name": "Swamp Sludge",
+                "description": "Perform an avoidable normal attack. Deals your normal damage + ${attackDamageMaxValue1}% of your Magic level.",
+                "descriptionGenerator": "Make an <avoidable> normal attack, dealing your normal damage + <damage>. Consumes Runes per hit.",
+                "usesRunesPerProc": true
+            },
+            {
+                "id": "Bloodboil",
+                "defaultChance": 10,
+                "damage": [
+                    {
+                        "damageType": "Custom",
+                        "character": "Attacker",
+                        "maxRoll": "PoisonMax35",
+                        "maxPercent": 115,
+                        "minRoll": "PoisonMin35",
+                        "minPercent": 100,
+                        "roll": true
+                    }
+                ],
+                "prehitEffects": [],
+                "onhitEffects": [
+                    {
+                        "effectID": "melvorD:Burn",
+                        "chance": 30
+                    },
+                    {
+                        "effectID": "melvorD:DeadlyPoison",
+                        "condition": {
+                            "effectID": "melvorD:Burn",
+                            "character": "Enemy",
+                            "type": "CombatEffect"
+                        },
+                        "chance": 30
+                    }
+                ],
+                "cantMiss": false,
+                "attackCount": 1,
+                "attackInterval": 50,
+                "lifesteal": 0,
+                "name": "Bloodboil",
+                "description": "Perform an attack that deals ${attackDamageMaxValue0}% (150% if the enemy is poisoned) of your normal damage. On a hit has a ${onHitEffect0chance}% chance to inflict Burn that deals ${onHitEffect0DamageMaxValue0}% of the enemy's max hitpoints as damage over ${onHitEffect0duration}s. If the enemy is Burning, has a ${onHitEffect1chance}% chance to inflict Deadly Poison that deals ${onHitEffect1DamageMaxValue0}% of the enemy's max hit points as damage over ${onHitEffect1duration}s.",
+                "descriptionGenerator": "Perform an attack that deals <damage>. On a hit <hitEffect>."
+            },
+            {
+                "id": "ToxicSiphon",
+                "defaultChance": 20,
+                "damage": [
+                    {
+                        "damageType": "Normal",
+                        "amplitude": 150
+                    }
+                ],
+                "prehitEffects": [],
+                "onhitEffects": [
+                    {
+                        "effectID": "melvorD:DeadlyPoison",
+                        "chance": 5
+                    }
+                ],
+                "cantMiss": false,
+                "attackCount": 1,
+                "attackInterval": 50,
+                "lifesteal": 50,
+                "name": "Toxic Siphon",
+                "description": "Perform an attack that deals up to ${attackDamageMaxValue0}% of your normal damage. On a hit, heals for ${lifesteal}% of damage dealt, and has a ${onHitEffect0chance}% chance to inflict Deadly Poison that deals ${onHitEffect0DamageMaxValue0}% of the enemy's max hitpoints as damage over ${onHitEffect0duration}s.",
+                "descriptionGenerator": "Perform an attack that deals up to <damage>. On a hit <hitEffect>, and <attacker> <attis> healed for <lifesteal> of damage dealt."
+            },
+            {
+                "id": "BarbedTailWhip",
+                "defaultChance": 40,
+                "canNormalAttack": true,
+                "damage": [
+                    {
+                        "damageType": "Custom",
+                        "character": "Attacker",
+                        "roll": false,
+                        "maxRoll": "Fixed",
+                        "maxPercent": 80
+                    }
+                ],
+                "prehitEffects": [],
+                "onhitEffects": [
+                    {
+                        "effectID": "melvorD:Stun",
+                        "chance": 20,
+                        "initialParams": [
+                            {
+                                "name": "turns",
+                                "value": 2
+                            }
+                        ]
+                    }
+                ],
+                "attackTypes": [
+                    "melee"
+                ],
+                "cantMiss": true,
+                "attackCount": 1,
+                "attackInterval": 50,
+                "lifesteal": 0,
+                "name": "Barbed Tail Whip",
+                "description": "The enemy's barbed tail whips at you, dealing ${attackDamageMaxValue0} damage (Unavoidable). On a hit, ${onHitEffect0chance}% chance to inflict Stun for ${onHitEffect0turns} turns. If you are already stunned, perform a regular attack instead.",
+                "descriptionGenerator": "<AttPos> barbed tail whips at <target>, dealing <damage> damage (<Avoidable>) and <hitEffect>. If <target> <taris> already stunned, perform a regular attack instead.",
+                "usesRunesPerProc": false
+            },
+            {
+                "id": "BarbedProjectiles",
+                "defaultChance": 30,
+                "damage": [
+                    {
+                        "damageType": "Custom",
+                        "character": "Attacker",
+                        "roll": false,
+                        "maxRoll": "Fixed",
+                        "maxPercent": 60
+                    }
+                ],
+                "prehitEffects": [],
+                "onhitEffects": [
+                    {
+                        "effectID": "melvorD:DeadlyPoison",
+                        "chance": 10
+                    }
+                ],
+                "cantMiss": true,
+                "attackCount": 3,
+                "attackInterval": 300,
+                "lifesteal": 0,
+                "name": "Barbed Projectiles",
+                "description": "Rapidly fires ${hitCount} unavoidable barbed projectiles dealing ${attackDamageMaxValue0} each. Each hit has a ${onHitEffect0chance}% chance to inflict Deadly Poison that deals ${onHitEffect0DamageMaxValue0}% of your max hitpoints as damage over ${onHitEffect0duration}s.",
+                "descriptionGenerator": "Rapidly fires <count> barbed projectiles dealing <damage> (<Avoidable>). On hit, <hitEffect>."
+            },
+            {
+                "id": "ToxicClouds",
+                "defaultChance": 30,
+                "canNormalAttack": true,
+                "damage": [
+                    {
+                        "damageType": "Custom",
+                        "character": "Attacker",
+                        "roll": false,
+                        "maxRoll": "Fixed",
+                        "maxPercent": 15
+                    }
+                ],
+                "prehitEffects": [],
+                "onhitEffects": [
+                    {
+                        "effectID": "melvorD:DeadlyPoison",
+                        "chance": 100
+                    }
+                ],
+                "cantMiss": false,
+                "attackCount": 4,
+                "attackInterval": 50,
+                "lifesteal": 0,
+                "name": "Toxic Clouds",
+                "description": "Noxious gas erupts from around the enemy, dealing ${attackDamageMaxValue0}x${hitCount} damage over ${duration}s. On a hit inflicts Deadly Poison that deals ${onHitEffect0DamageMaxValue0}% of your max hitpoints as damage over ${onHitEffect0duration}s.",
+                "descriptionGenerator": "Noxious gas erupts within the <attPos> vicinity, dealing <damage>x<count> damage over <duration> and <hitEffect>.",
+                "usesRunesPerProc": false
+            },
+            {
+                "id": "SummonCobralings",
+                "name": "Summon Cobralings",
+                "defaultChance": 30,
+                "damage": [
+                    {
+                        "attackCount": 1,
+                        "damageType": "Normal",
+                        "amplitude": 100
+                    },
+                    {
+                        "damageType": "Custom",
+                        "character": "Attacker",
+                        "roll": true,
+                        "minRoll": "Fixed",
+                        "minPercent": 0,
+                        "maxRoll": "Fixed",
+                        "maxPercent": 15
+                    }
+                ],
+                "prehitEffects": [],
+                "onhitEffects": [
+                    {
+                        "effectID": "melvorD:DeadlyPoison",
+                        "chance": 20
+                    }
+                ],
+                "cantMiss": false,
+                "attackCount": 12,
+                "attackInterval": 50,
+                "lifesteal": 0,
+                "description": "The enemy makes a normal attack, dealing up to ${attackDamageMaxValue0}% of its normal damage (can miss), then summons ${hitCount} cobralings, each dealing between ${attackDamageMinValue1}-${attackDamageMaxValue1}x${hitCount} damage over ${duration}s. On a hit, the cobralings have a ${onHitEffect0chance}% to inflict Deadly Poison that deals ${onHitEffect0DamageMaxValue0}% of your max hitpoints as damage over ${onHitEffect0duration}s."
+            },
+      {
         "id": "PounceTigerForm",
         "defaultChance": 25,
         "damage": [
@@ -1990,6 +2206,80 @@
       }
     ],
     "bankSortOrder": [
+                  {
+                "insertAt": "After",
+                "afterID": "melvorF:Fine_Poison_Powder",
+                "ids": [
+                    "expandedAreas:Serpentine_Scales",
+                    "expandedAreas:Magmatic_Scales",
+                    "expandedAreas:Tanzanite_Scales",
+                    "expandedAreas:Serpentine_Fang",
+                    "expandedAreas:Magmatic_Fang",
+                    "expandedAreas:Tanzanite_Fang",
+                    "expandedAreas:Zulrahs_Head_Serpentine",
+                    "expandedAreas:Zulrahs_Head_Magmatic",
+                    "expandedAreas:Zulrahs_Head_Tanzanite"
+                ]
+            },
+            {
+                "insertAt": "Before",
+                "beforeID": "melvorF:Stormsnap",
+                "ids": [
+                    "expandedAreas:Toxic_Quickbow"
+                ]
+            },
+            {
+                "insertAt": "After",
+                "afterID": "melvorF:Infernal_Claw",
+                "ids": [
+                    "expandedAreas:Magmatic_Fangblade"
+                ]
+            },
+            {
+                "insertAt": "Before",
+                "beforeID": "melvorF:Terran_God_Helmet",
+                "ids": [
+                    "expandedAreas:Magmatic_Helm"
+                ]
+            },
+            {
+                "insertAt": "Before",
+                "beforeID": "melvorF:Aeris_God_Helmet",
+                "ids": [
+                    "expandedAreas:Serpentine_Helm"
+                ]
+            },
+            {
+                "insertAt": "Before",
+                "beforeID": "melvorF:Cloudburst_Staff",
+                "ids": [
+                    "expandedAreas:Wand_of_the_Swamp"
+                ]
+            },
+            {
+                "insertAt": "Before",
+                "beforeID": "melvorF:Glacia_God_Helmet",
+                "ids": [
+                    "expandedAreas:Tanzanite_Helm"
+                ]
+            },
+            {
+                "insertAt": "After",
+                "afterID": "melvorF:Diamond_Luck_Potion_IV",
+                "ids": [
+                    "expandedAreas:Antivenom_I",
+                    "expandedAreas:Antivenom_II",
+                    "expandedAreas:Antivenom_III",
+                    "expandedAreas:Antivenom_IV"
+                ]
+            },
+            {
+                "insertAt": "After",
+                "afterID": "melvorF:Infernal_Core",
+                "ids": [
+                    "expandedAreas:Toxic_Hoard"
+                ]
+            },
       {
         "insertAt": "After",
         "afterID": "melvorF:Magic_Damage_Potion_IV",
@@ -5589,6 +5879,104 @@
     ],
     "combatPassives": [
       {
+                "id": "PhaseHP10",
+                "name": "Phase HP = 182 / 1,820",
+                "customDescription": "Each phase (excluding the final phase) of this boss is limited to 10% of its total maximum hitpoints.",
+                "modifiers": {
+                    "flatMaxHitpoints": -1638
+                }
+            },
+            {
+                "id": "MeleeImmunity",
+                "name": "Melee Immunity",
+                "modifiers": {
+                    "meleeImmunity": 1
+                },
+                "customDescription": "Immune to all Melee Attacks."
+            },
+            {
+                "id": "VenomousHide",
+                "name": "Venomous Hide",
+                "modifiers": {
+                    "effectImmunity": [
+                        {
+                            "effectGroupID": "melvorD:PoisonDOT",
+                            "value": 1
+                        },
+                        {
+                            "effectGroupID": "melvorD:DeadlyPoisonDOT",
+                            "value": 1
+                        }
+                    ]
+                },
+                "combatEffects": [
+                    {
+                        "effectID": "melvorD:DeadlyPoison",
+                        "chance": 20,
+                        "appliesWhen": "HitWithAttack"
+                    }
+                ]
+            },
+            {
+                "id": "MagmaticHide",
+                "name": "Magmatic Hide",
+                "modifiers": {
+                    "effectImmunity": [
+                        {
+                            "effectGroupID": "melvorD:BurnDOT",
+                            "value": 1
+                        },
+                        {
+                            "effectGroupID": "melvorD:Frostburn",
+                            "value": 1
+                        }
+                    ]
+                },
+                "combatEffects": [
+                    {
+                        "effectID": "melvorD:Burn",
+                        "chance": 20,
+                        "appliesWhen": "HitByAttack"
+                    }
+                ]
+            },
+            {
+                "id": "StunImmunity",
+                "name": "Stun Immunity",
+                "modifiers": {
+                    "effectImmunity": [
+                        {
+                            "effectGroupID": "melvorD:StunLike",
+                            "value": 1
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "MagicVulnerability10",
+                "name": "Magic Vulnerability 10%",
+                "modifiers": {
+                    "flatResistanceAgainstMagic": [
+                        {
+                            "damageTypeID": "melvorD:Normal",
+                            "value": -10
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "RangedVulnerability10",
+                "name": "Ranged Vulnerability 10%",
+                "modifiers": {
+                    "flatResistanceAgainstRanged": [
+                        {
+                            "damageTypeID": "melvorD:Normal",
+                            "value": -10
+                        }
+                    ]
+                }
+            },
+      {
         "id": "Assassin",
         "name": "Assassin",
         "combatEffects": [
@@ -6571,6 +6959,44 @@
       }
     ],
     "dungeons": [
+       {
+                "difficulty": [
+                    5
+                ],
+                "dropBones": true,
+                "entryRequirements": [
+                    {
+                        "type": "SkillLevel",
+                        "level": 75,
+                        "skillID": "melvorD:Slayer"
+                    }
+                ],
+                "fixedPetClears": false,
+                "id": "Swamp_of_Desolation",
+                "media": "assets/dungeons/Swamp_of_Desolation.png",
+                "monsterIDs": [
+                    "expandedAreas:Zulrah_Phase_One",
+                    "expandedAreas:Zulrah_Phase_Two",
+                    "expandedAreas:Zulrah_Phase_Three",
+                    "expandedAreas:Zulrah_Phase_Four",
+                    "expandedAreas:Zulrah_Phase_Five",
+                    "expandedAreas:Zulrah_Phase_Six",
+                    "expandedAreas:Zulrah_Phase_Seven",
+                    "expandedAreas:Zulrah_Phase_Eight",
+                    "expandedAreas:Zulrah_Phase_Nine",
+                    "expandedAreas:Zulrah_Phase_Ten",
+                    "expandedAreas:Zulrah_Final_Phase"
+                ],
+                "name": "Swamp of Desolation",
+                "pauseOnBosses": false,
+                "rewardItemIDs": [
+                    "expandedAreas:Toxic_Hoard"
+                ],
+                "pet": {
+                    "petID": "expandedAreas:Zully",
+                    "weight": 200
+                }
+            },
       {
         "id": "The_Dungeon",
         "name": "The Dungeon",
@@ -6855,6 +7281,1047 @@
       }
     ],
     "items": [
+                      {
+                    "itemType": "Item",
+                    "id": "Tanzanite_Scales",
+                    "name": "Tanzanite Scales",
+                    "category": "Scales",
+                    "type": "Misc",
+                    "media": "assets/bank/Tanzanite_Scales.png",
+                    "ignoreCompletion": false,
+                    "obtainFromItemLog": false,
+                    "golbinRaidExclusive": false,
+                    "sellsFor": 200
+                },
+                {
+                    "itemType": "Item",
+                    "id": "Magmatic_Scales",
+                    "name": "Magmatic Scales",
+                    "category": "Scales",
+                    "type": "Misc",
+                    "media": "assets/bank/Magmatic_Scales.png",
+                    "ignoreCompletion": false,
+                    "obtainFromItemLog": false,
+                    "golbinRaidExclusive": false,
+                    "sellsFor": 200
+                },
+                {
+                    "itemType": "Item",
+                    "id": "Serpentine_Scales",
+                    "name": "Serpentine Scales",
+                    "category": "Scales",
+                    "type": "Misc",
+                    "media": "assets/bank/Serpentine_Scales.png",
+                    "ignoreCompletion": false,
+                    "obtainFromItemLog": false,
+                    "golbinRaidExclusive": false,
+                    "sellsFor": 200
+                },
+                {
+                    "id": "Antivenom_I",
+                    "name": "Antivenom I",
+                    "category": "Herblore",
+                    "type": "Potion",
+                    "media": "assets/bank/Antivenom_I.png",
+                    "ignoreCompletion": false,
+                    "obtainFromItemLog": false,
+                    "golbinRaidExclusive": false,
+                    "sellsFor": 2400,
+                    "itemType": "Potion",
+                    "modifiers": {
+                        "deadlyPoisonDOTDamageTaken": -30,
+                        "poisonDOTDamageTaken": -40,
+                        "effectIgnoreChance": [
+                            {
+                                "effectGroupID": "melvorD:DeadlyPoisonDOT",
+                                "value": 30
+                            },
+                            {
+                                "effectGroupID": "melvorD:PoisonDOT",
+                                "value": 40
+                            }
+                        ]
+                    },
+                    "charges": 5,
+                    "tier": 0,
+                    "action": "melvorD:Combat",
+                    "consumesOn": [
+                        {
+                            "type": "EnemyAttack"
+                        }
+                    ]
+                },
+                {
+                    "id": "Antivenom_II",
+                    "name": "Antivenom II",
+                    "category": "Herblore",
+                    "type": "Potion",
+                    "media": "assets/bank/Antivenom_II.png",
+                    "ignoreCompletion": false,
+                    "obtainFromItemLog": false,
+                    "golbinRaidExclusive": false,
+                    "sellsFor": 2500,
+                    "itemType": "Potion",
+                    "modifiers": {
+                        "deadlyPoisonDOTDamageTaken": -50,
+                        "poisonDOTDamageTaken": -60,
+                        "effectIgnoreChance": [
+                            {
+                                "effectGroupID": "melvorD:DeadlyPoisonDOT",
+                                "value": 50
+                            },
+                            {
+                                "effectGroupID": "melvorD:PoisonDOT",
+                                "value": 60
+                            }
+                        ]
+                    },
+                    "charges": 10,
+                    "tier": 0,
+                    "action": "melvorD:Combat",
+                    "consumesOn": [
+                        {
+                            "type": "EnemyAttack"
+                        }
+                    ]
+                },
+                {
+                    "id": "Antivenom_III",
+                    "name": "Antivenom III",
+                    "category": "Herblore",
+                    "type": "Potion",
+                    "media": "assets/bank/Antivenom_III.png",
+                    "ignoreCompletion": false,
+                    "obtainFromItemLog": false,
+                    "golbinRaidExclusive": false,
+                    "sellsFor": 2600,
+                    "itemType": "Potion",
+                    "modifiers": {
+                        "deadlyPoisonDOTDamageTaken": -70,
+                        "poisonDOTDamageTaken": -80,
+                        "effectIgnoreChance": [
+                            {
+                                "effectGroupID": "melvorD:DeadlyPoisonDOT",
+                                "value": 70
+                            },
+                            {
+                                "effectGroupID": "melvorD:PoisonDOT",
+                                "value": 80
+                            }
+                        ]
+                    },
+                    "charges": 15,
+                    "tier": 0,
+                    "action": "melvorD:Combat",
+                    "consumesOn": [
+                        {
+                            "type": "EnemyAttack"
+                        }
+                    ]
+                },
+                {
+                    "id": "Antivenom_IV",
+                    "name": "Antivenom IV",
+                    "category": "Herblore",
+                    "type": "Potion",
+                    "media": "assets/bank/Antivenom_IV.png",
+                    "ignoreCompletion": false,
+                    "obtainFromItemLog": false,
+                    "golbinRaidExclusive": false,
+                    "sellsFor": 2700,
+                    "itemType": "Potion",
+                    "modifiers": {
+                        "deadlyPoisonDOTDamageTaken": -90,
+                        "poisonDOTDamageTaken": -100,
+                        "effectIgnoreChance": [
+                            {
+                                "effectGroupID": "melvorD:DeadlyPoisonDOT",
+                                "value": 90
+                            },
+                            {
+                                "effectGroupID": "melvorD:PoisonDOT",
+                                "value": 100
+                            }
+                        ]
+                    },
+                    "charges": 20,
+                    "tier": 0,
+                    "action": "melvorD:Combat",
+                    "consumesOn": [
+                        {
+                            "type": "EnemyAttack"
+                        }
+                    ]
+                },
+                {
+                    "itemType": "Item",
+                    "id": "Zulrahs_Head_Magmatic",
+                    "name": "Zulrah's Head (Magmatic)",
+                    "category": "Misc",
+                    "type": "Fang",
+                    "media": "assets/bank/Zulrahs_Head_Magma.png",
+                    "ignoreCompletion": false,
+                    "obtainFromItemLog": false,
+                    "golbinRaidExclusive": false,
+                    "sellsFor": 100000
+                },
+                {
+                    "itemType": "Item",
+                    "id": "Zulrahs_Head_Tanzanite",
+                    "name": "Zulrah's Head (Tanzanite)",
+                    "category": "Misc",
+                    "type": "Fang",
+                    "media": "assets/bank/Zulrahs_Head_Tanzanite.png",
+                    "ignoreCompletion": false,
+                    "obtainFromItemLog": false,
+                    "golbinRaidExclusive": false,
+                    "sellsFor": 100000
+                },
+                {
+                    "itemType": "Item",
+                    "id": "Zulrahs_Head_Serpentine",
+                    "name": "Zulrah's Head (Serpentine)",
+                    "category": "Misc",
+                    "type": "Fang",
+                    "media": "assets/bank/Zulrahs_Head_Serpentine.png",
+                    "ignoreCompletion": false,
+                    "obtainFromItemLog": false,
+                    "golbinRaidExclusive": false,
+                    "sellsFor": 100000
+                },
+                {
+                    "itemType": "Item",
+                    "id": "Magmatic_Fang",
+                    "name": "Magmatic Fang",
+                    "category": "Misc",
+                    "type": "Fang",
+                    "media": "assets/bank/Magmatic_Fang.png",
+                    "ignoreCompletion": false,
+                    "obtainFromItemLog": false,
+                    "golbinRaidExclusive": false,
+                    "sellsFor": 50000
+                },
+                {
+                    "itemType": "Item",
+                    "id": "Tanzanite_Fang",
+                    "name": "Tanzanite Fang",
+                    "category": "Misc",
+                    "type": "Fang",
+                    "media": "assets/bank/Tanzanite_Fang.png",
+                    "ignoreCompletion": false,
+                    "obtainFromItemLog": false,
+                    "golbinRaidExclusive": false,
+                    "sellsFor": 50000
+                },
+                {
+                    "itemType": "Item",
+                    "id": "Serpentine_Fang",
+                    "name": "Serpentine Fang",
+                    "category": "Misc",
+                    "type": "Fang",
+                    "media": "assets/bank/Serpentine_Fang.png",
+                    "ignoreCompletion": false,
+                    "obtainFromItemLog": false,
+                    "golbinRaidExclusive": false,
+                    "sellsFor": 50000
+                },
+                {
+                    "itemType": "Equipment",
+                    "id": "Magmatic_Helm",
+                    "name": "Magmatic Helm",
+                    "category": "Combat",
+                    "type": "Armour",
+                    "media": "assets/bank/Magmatic_Helm.png",
+                    "customDescription": "+10% Chance to ignore Burn and +5% Chance to ignore Poison and Deadly Poison. +1% Chance each to inflict Burn or Deadly Poison on hit.<br>While there are at least 2,000 <strong>Magmatic Scales</strong> in your bank, +10% Chance to ignore Burn and +5% Chance to ignore Poison and Deadly Poison. Consumes 1 Magmatic Scale on hit.<br><hr>While equipped with <strong>Magmatic Fangblade</strong>, the enemy takes +5% damage from Burn and Deadly Poison.",
+                    "ignoreCompletion": false,
+                    "obtainFromItemLog": false,
+                    "golbinRaidExclusive": false,
+                    "sellsFor": 250000,
+                    "tier": "ancient",
+                    "validSlots": [
+                        "Helmet"
+                    ],
+                    "occupiesSlots": [],
+                    "equipRequirements": [
+                        {
+                            "type": "SkillLevel",
+                            "skillID": "melvorD:Defence",
+                            "level": 75
+                        },
+                        {
+                            "type": "SkillLevel",
+                            "skillID": "melvorD:Hitpoints",
+                            "level": 75
+                        }
+                    ],
+                    "equipmentStats": [
+                        {
+                            "key": "rangedAttackBonus",
+                            "value": -5
+                        },
+                        {
+                            "key": "magicAttackBonus",
+                            "value": -5
+                        },
+                        {
+                            "key": "meleeStrengthBonus",
+                            "value": 5
+                        },
+                        {
+                            "key": "rangedDefenceBonus",
+                            "value": 75
+                        },
+                        {
+                            "key": "magicDefenceBonus",
+                            "value": 10
+                        },
+                        {
+                            "key": "meleeDefenceBonus",
+                            "value": 50
+                        },
+                        {
+                            "key": "damageReduction",
+                            "value": 5
+                        }
+                    ],
+                    "consumesItemOn": {
+                        "itemID": "expandedAreas:Magmatic_Scales",
+                        "chance": 100,
+                        "matchers": [
+                            {
+                                "type": "PlayerAttack",
+                                "attackTypes": [
+                                    "melee"
+                                ]
+                            }
+                        ]
+                    },
+                    "conditionalModifiers": [
+                        {
+                            "condition": {
+                                "type": "BankItem",
+                                "itemID": "expandedAreas:Magmatic_Scales",
+                                "value": 2000,
+                                "operator": ">="
+                            },
+                            "modifiers": {
+                                "effectIgnoreChance": [
+                                    {
+                                        "effectGroupID": "melvorD:BurnDOT",
+                                        "value": 10
+                                    },
+                                    {
+                                        "effectGroupID": "melvorD:PoisonDOT",
+                                        "value": 5
+                                    },
+                                    {
+                                        "effectGroupID": "melvorD:DeadlyPoisonDOT",
+                                        "value": 5
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "modifiers": {
+                        "effectIgnoreChance": [
+                            {
+                                "effectGroupID": "melvorD:BurnDOT",
+                                "value": 10
+                            },
+                            {
+                                "effectGroupID": "melvorD:PoisonDOT",
+                                "value": 5
+                            },
+                            {
+                                "effectGroupID": "melvorD:DeadlyPoisonDOT",
+                                "value": 5
+                            }
+                        ]
+                    },
+                    "combatEffects": [
+                        {
+                            "chance": 1,
+                            "effectID": "melvorD:Burn",
+                            "appliesWhen": "HitWithAttack",
+                            "condition": {
+                                "character": "Player",
+                                "thisAttackType": "melee",
+                                "targetAttackType": "any",
+                                "type": "CombatType"
+                            }
+                        },
+                        {
+                            "chance": 1,
+                            "effectID": "melvorD:DeadlyPoison",
+                            "appliesWhen": "HitWithAttack",
+                            "condition": {
+                                "character": "Player",
+                                "thisAttackType": "melee",
+                                "targetAttackType": "any",
+                                "type": "CombatType"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "itemType": "Equipment",
+                    "id": "Tanzanite_Helm",
+                    "name": "Tanzanite Helm",
+                    "category": "Combat",
+                    "type": "Armour",
+                    "media": "assets/bank/Tanzanite_Helm.png",
+                    "customDescription": "+10% Chance to ignore Frostburn and +5% Chance to ignore Poison and Deadly Poison. +1% Chance each to inflict Frostburn or Deadly Poison on hit.<br>While there are at least 2,000 <strong>Tanzanite Scales</strong> in your bank, +10% Chance to ignore Frostburn and +5% Chance to ignore Poison and Deadly Poison. Consumes 1 Tanzanite Scale on hit.<br><hr>While equipped with <strong>Wand of the Swamp</strong>, the enemy takes +5% damage from Frostburn and Deadly Poison.",
+                    "ignoreCompletion": false,
+                    "obtainFromItemLog": false,
+                    "golbinRaidExclusive": false,
+                    "sellsFor": 250000,
+                    "tier": "ancient",
+                    "validSlots": [
+                        "Helmet"
+                    ],
+                    "occupiesSlots": [],
+                    "equipRequirements": [
+                        {
+                            "type": "SkillLevel",
+                            "skillID": "melvorD:Defence",
+                            "level": 75
+                        },
+                        {
+                            "type": "SkillLevel",
+                            "skillID": "melvorD:Magic",
+                            "level": 75
+                        }
+                    ],
+                    "equipmentStats": [
+                        {
+                            "key": "rangedAttackBonus",
+                            "value": -10
+                        },
+                        {
+                            "key": "slashAttackBonus",
+                            "value": -5
+                        },
+                        {
+                            "key": "blockAttackBonus",
+                            "value": -5
+                        },
+                        {
+                            "key": "stabAttackBonus",
+                            "value": -5
+                        },
+                        {
+                            "key": "magicAttackBonus",
+                            "value": 5
+                        },
+                        {
+                            "key": "magicDamageBonus",
+                            "value": 10
+                        },
+                        {
+                            "key": "rangedDefenceBonus",
+                            "value": 10
+                        },
+                        {
+                            "key": "meleeDefenceBonus",
+                            "value": 75
+                        },
+                        {
+                            "key": "magicDefenceBonus",
+                            "value": 50
+                        },
+                        {
+                            "key": "damageReduction",
+                            "value": 5
+                        }
+                    ],
+                    "consumesItemOn": {
+                        "itemID": "expandedAreas:Tanzanite_Scales",
+                        "chance": 100,
+                        "matchers": [
+                            {
+                                "type": "PlayerAttack",
+                                "attackTypes": [
+                                    "magic"
+                                ]
+                            }
+                        ]
+                    },
+                    "conditionalModifiers": [
+                        {
+                            "condition": {
+                                "type": "BankItem",
+                                "itemID": "expandedAreas:Tanzanite_Scales",
+                                "value": 2000,
+                                "operator": ">="
+                            },
+                            "modifiers": {
+                                "effectIgnoreChance": [
+                                    {
+                                        "effectGroupID": "melvorD:Frostburn",
+                                        "value": 10
+                                    },
+                                    {
+                                        "effectGroupID": "melvorD:PoisonDOT",
+                                        "value": 5
+                                    },
+                                    {
+                                        "effectGroupID": "melvorD:DeadlyPoisonDOT",
+                                        "value": 5
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "modifiers": {
+                        "effectIgnoreChance": [
+                            {
+                                "effectGroupID": "melvorD:Frostburn",
+                                "value": 10
+                            },
+                            {
+                                "effectGroupID": "melvorD:PoisonDOT",
+                                "value": 5
+                            },
+                            {
+                                "effectGroupID": "melvorD:DeadlyPoisonDOT",
+                                "value": 5
+                            }
+                        ]
+                    },
+                    "combatEffects": [
+                        {
+                            "chance": 1,
+                            "effectID": "melvorD:Frostburn",
+                            "appliesWhen": "HitWithAttack",
+                            "condition": {
+                                "character": "Player",
+                                "thisAttackType": "magic",
+                                "targetAttackType": "any",
+                                "type": "CombatType"
+                            }
+                        },
+                        {
+                            "chance": 1,
+                            "effectID": "melvorD:DeadlyPoison",
+                            "appliesWhen": "HitWithAttack",
+                            "condition": {
+                                "character": "Player",
+                                "thisAttackType": "magic",
+                                "targetAttackType": "any",
+                                "type": "CombatType"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "itemType": "Equipment",
+                    "id": "Serpentine_Helm",
+                    "name": "Serpentine Helm",
+                    "category": "Combat",
+                    "type": "Armour",
+                    "media": "assets/bank/Serpentine_Helm.png",
+                    "customDescription": "+15% Chance to ignore Poison and Deadly Poison. +2% Chance each to inflict Deadly Poison on hit.<br>While there are at least 2,000 <strong>Serpentine Scales</strong> in your bank, +15% Chance to ignore Poison and Deadly Poison. Consumes 1 Serpentine Scale on hit.<br><hr>While equipped with <strong>Toxic Quickbow</strong>, the enemy takes +10% damage from Deadly Poison.",
+                    "ignoreCompletion": false,
+                    "obtainFromItemLog": false,
+                    "golbinRaidExclusive": false,
+                    "sellsFor": 250000,
+                    "tier": "ancient",
+                    "validSlots": [
+                        "Helmet"
+                    ],
+                    "occupiesSlots": [],
+                    "equipRequirements": [
+                        {
+                            "type": "SkillLevel",
+                            "skillID": "melvorD:Defence",
+                            "level": 75
+                        },
+                        {
+                            "type": "SkillLevel",
+                            "skillID": "melvorD:Ranged",
+                            "level": 75
+                        }
+                    ],
+                    "equipmentStats": [
+                        {
+                            "key": "rangedAttackBonus",
+                            "value": 10
+                        },
+                        {
+                            "key": "magicAttackBonus",
+                            "value": -5
+                        },
+                        {
+                            "key": "slashAttackBonus",
+                            "value": -10
+                        },
+                        {
+                            "key": "blockAttackBonus",
+                            "value": -10
+                        },
+                        {
+                            "key": "stabAttackBonus",
+                            "value": -10
+                        },
+                        {
+                            "key": "rangedStrengthBonus",
+                            "value": 10
+                        },
+                        {
+                            "key": "rangedDefenceBonus",
+                            "value": 50
+                        },
+                        {
+                            "key": "meleeDefenceBonus",
+                            "value": 10
+                        },
+                        {
+                            "key": "magicDefenceBonus",
+                            "value": 75
+                        },
+                        {
+                            "key": "damageReduction",
+                            "value": 5
+                        }
+                    ],
+                    "consumesItemOn": {
+                        "itemID": "expandedAreas:Serpentine_Scales",
+                        "chance": 100,
+                        "matchers": [
+                            {
+                                "type": "PlayerAttack",
+                                "attackTypes": [
+                                    "ranged"
+                                ]
+                            }
+                        ]
+                    },
+                    "conditionalModifiers": [
+                        {
+                            "condition": {
+                                "type": "BankItem",
+                                "itemID": "expandedAreas:Serpentine_Scales",
+                                "value": 2000,
+                                "operator": ">="
+                            },
+                            "modifiers": {
+                                "effectIgnoreChance": [
+                                    {
+                                        "effectGroupID": "melvorD:PoisonDOT",
+                                        "value": 15
+                                    },
+                                    {
+                                        "effectGroupID": "melvorD:DeadlyPoisonDOT",
+                                        "value": 15
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "modifiers": {
+                        "effectIgnoreChance": [
+                            {
+                                "effectGroupID": "melvorD:PoisonDOT",
+                                "value": 15
+                            },
+                            {
+                                "effectGroupID": "melvorD:DeadlyPoisonDOT",
+                                "value": 15
+                            }
+                        ]
+                    },
+                    "combatEffects": [
+                        {
+                            "chance": 2,
+                            "effectID": "melvorD:DeadlyPoison",
+                            "appliesWhen": "HitWithAttack",
+                            "condition": {
+                                "character": "Player",
+                                "thisAttackType": "ranged",
+                                "targetAttackType": "any",
+                                "type": "CombatType"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "Toxic_Quickbow",
+                    "name": "Toxic Quickbow",
+                    "category": "Combat",
+                    "type": "Ranged Weapon",
+                    "media": "assets/bank/Toxic_Quickbow.png",
+                    "customDescription": "+2% Chance to inflict Deadly Poison on hit.<br>While there are at least 1,000 <strong>Serpentine Scales</strong> in your bank, this weapon's Ranged Attack and Strength bonuses are doubled. Consumes 1 Serpentine Scale on hit.<br><hr>While equipped with <strong>Serpentine Helm</strong>, the enemy takes +10% damage from Poison and Deadly Poison.<hr>",
+                    "ignoreCompletion": false,
+                    "obtainFromItemLog": false,
+                    "golbinRaidExclusive": false,
+                    "sellsFor": 120000,
+                    "tier": "none",
+                    "validSlots": [
+                        "Weapon"
+                    ],
+                    "occupiesSlots": [
+                        "Shield"
+                    ],
+                    "equipRequirements": [
+                        {
+                            "type": "SkillLevel",
+                            "skillID": "melvorD:Ranged",
+                            "level": 75
+                        }
+                    ],
+                    "equipmentStats": [
+                        {
+                            "key": "attackSpeed",
+                            "value": 2000
+                        },
+                        {
+                            "key": "rangedAttackBonus",
+                            "value": 15
+                        },
+                        {
+                            "key": "rangedStrengthBonus",
+                            "value": 20
+                        }
+                    ],
+                    "specialAttacks": [
+                        "expandedAreas:ToxicSiphon"
+                    ],
+                    "consumesItemOn": {
+                        "itemID": "expandedAreas:Serpentine_Scales",
+                        "chance": 100,
+                        "matchers": [
+                            {
+                                "type": "PlayerAttack",
+                                "attackTypes": [
+                                    "ranged"
+                                ]
+                            }
+                        ]
+                    },
+                    "conditionalModifiers": [
+                        {
+                            "condition": {
+                                "type": "BankItem",
+                                "itemID": "expandedAreas:Serpentine_Scales",
+                                "value": 1000,
+                                "operator": ">="
+                            },
+                            "modifiers": {
+                                "rangedStrengthBonus": 20,
+                                "flatRangedAttackBonus": 15
+                            }
+                        }
+                    ],
+                    "combatEffects": [
+                        {
+                            "appliesWhen": "HitWithAttack",
+                            "chance": 2,
+                            "effectID": "melvorD:DeadlyPoison"
+                        }
+                    ],
+                    "itemType": "Weapon",
+                    "attackType": "ranged",
+                    "ammoTypeRequired": "Arrows"
+                },
+                {
+                    "id": "Wand_of_the_Swamp",
+                    "name": "Wand of the Swamp",
+                    "category": "Combat",
+                    "type": "Magic Wand",
+                    "media": "assets/bank/Wand_of_the_Swamp.png",
+                    "customDescription": "+1% Chance each to inflict Frostburn or Deadly Poison on hit.<br>While there are at least 1,000 <strong>Tanzanite Scales</strong> in your bank, this weapon's Magic Attack and Damage bonuses are doubled. Consumes 1 Tanzanite Scale on hit.<br><hr>While equipped with <strong>Tanzanite Helm</strong>, the enemy takes +5% damage from Frostburn and Deadly Poison.<hr>",
+                    "ignoreCompletion": false,
+                    "obtainFromItemLog": false,
+                    "golbinRaidExclusive": false,
+                    "sellsFor": 200000,
+                    "tier": "dragon",
+                    "validSlots": [
+                        "Weapon"
+                    ],
+                    "occupiesSlots": [],
+                    "equipRequirements": [
+                        {
+                            "type": "SkillLevel",
+                            "skillID": "melvorD:Magic",
+                            "level": 75
+                        }
+                    ],
+                    "equipmentStats": [
+                        {
+                            "key": "attackSpeed",
+                            "value": 2400
+                        },
+                        {
+                            "key": "magicAttackBonus",
+                            "value": 15
+                        },
+                        {
+                            "key": "magicDefenceBonus",
+                            "value": 15
+                        },
+                        {
+                            "key": "magicDamageBonus",
+                            "value": 10
+                        }
+                    ],
+                    "modifiers": {},
+                    "specialAttacks": [
+                        "expandedAreas:SwampSludge"
+                    ],
+                    "conditionalModifiers": [
+                        {
+                            "condition": {
+                                "type": "BankItem",
+                                "itemID": "expandedAreas:Tanzanite_Scales",
+                                "value": 1000,
+                                "operator": ">="
+                            },
+                            "modifiers": {
+                                "flatMagicAttackBonus": 15,
+                                "magicDamageBonus": 10
+                            }
+                        }
+                    ],
+                    "combatEffects": [
+                        {
+                            "appliesWhen": "HitWithAttack",
+                            "chance": 1,
+                            "effectID": "melvorD:DeadlyPoison"
+                        },
+                        {
+                            "appliesWhen": "HitWithAttack",
+                            "chance": 1,
+                            "effectID": "melvorD:Frostburn"
+                        }
+                    ],
+                    "itemType": "Weapon",
+                    "attackType": "magic"
+                },
+                {
+                    "id": "Magmatic_Fangblade",
+                    "name": "Magmatic Fangblade",
+                    "category": "Combat",
+                    "type": "Weapon",
+                    "media": "assets/bank/Magmatic_Fangblade.png",
+                    "customDescription": "+1% Chance each to inflict Burn or Deadly Poison on hit.<br>While there are at least 1,000 <strong>Magmatic Scales</strong> in your bank, this weapon's Melee Attack and Strength bonuses are doubled. Consumes 1 Magmatic Scale on hit.<br><hr>While equipped with <strong>Magmatic Helm</strong>, the enemy takes +5% damage from Burn and Deadly Poison.<hr>",
+                    "ignoreCompletion": false,
+                    "obtainFromItemLog": false,
+                    "golbinRaidExclusive": false,
+                    "sellsFor": 160000,
+                    "tier": "none",
+                    "validSlots": [
+                        "Weapon"
+                    ],
+                    "occupiesSlots": [],
+                    "equipRequirements": [
+                        {
+                            "type": "SkillLevel",
+                            "skillID": "melvorD:Attack",
+                            "level": 75
+                        }
+                    ],
+                    "equipmentStats": [
+                        {
+                            "key": "attackSpeed",
+                            "value": 2200
+                        },
+                        {
+                            "key": "stabAttackBonus",
+                            "value": 30
+                        },
+                        {
+                            "key": "slashAttackBonus",
+                            "value": 15
+                        },
+                        {
+                            "key": "blockAttackBonus",
+                            "value": 30
+                        },
+                        {
+                            "key": "meleeStrengthBonus",
+                            "value": 30
+                        }
+                    ],
+                    "specialAttacks": [
+                        "expandedAreas:Bloodboil"
+                    ],
+                    "combatEffects": [
+                        {
+                            "appliesWhen": "HitWithAttack",
+                            "chance": 1,
+                            "effectID": "melvorD:DeadlyPoison"
+                        },
+                        {
+                            "appliesWhen": "HitWithAttack",
+                            "chance": 1,
+                            "effectID": "melvorD:Burn"
+                        }
+                    ],
+                    "consumesItemOn": {
+                        "itemID": "expandedAreas:Magmatic_Scales",
+                        "chance": 100,
+                        "matchers": [
+                            {
+                                "type": "PlayerAttack",
+                                "attackTypes": [
+                                    "melee"
+                                ]
+                            }
+                        ]
+                    },
+                    "conditionalModifiers": [
+                        {
+                            "condition": {
+                                "type": "BankItem",
+                                "itemID": "expandedAreas:Magmatic_Scales",
+                                "value": 1000,
+                                "operator": ">="
+                            },
+                            "modifiers": {
+                                "flatStabAttackBonus": 30,
+                                "flatSlashAttackBonus": 15,
+                                "flatBlockAttackBonus": 30,
+                                "flatMeleeStrengthBonus": 30
+                            }
+                        }
+                    ],
+                    "itemType": "Weapon",
+                    "attackType": "melee"
+                },
+                {
+                    "id": "Toxic_Hoard",
+                    "name": "Toxic Hoard",
+                    "category": "Openable",
+                    "type": "Chest",
+                    "media": "assets/bank/Toxic_Hoard.png",
+                    "ignoreCompletion": false,
+                    "obtainFromItemLog": false,
+                    "golbinRaidExclusive": false,
+                    "sellsFor": 5000,
+                    "itemType": "Openable",
+                    "dropTable": [
+                        {
+                            "itemID": "melvorD:Bones",
+                            "minQuantity": 1000,
+                            "maxQuantity": 2000,
+                            "weight": 50
+                        },
+                        {
+                            "itemID": "melvorF:Goo",
+                            "minQuantity": 200,
+                            "maxQuantity": 400,
+                            "weight": 45
+                        },
+                        {
+                            "itemID": "melvorF:Poison_Scales",
+                            "minQuantity": 150,
+                            "maxQuantity": 300,
+                            "weight": 40
+                        },
+                        {
+                            "itemID": "melvorF:Fine_Poison_Powder",
+                            "minQuantity": 100,
+                            "maxQuantity": 200,
+                            "weight": 35
+                        },
+                        {
+                            "itemID": "expandedAreas:Serpentine_Scales",
+                            "minQuantity": 250,
+                            "maxQuantity": 500,
+                            "weight": 30
+                        },
+                        {
+                            "itemID": "expandedAreas:Magmatic_Scales",
+                            "minQuantity": 250,
+                            "maxQuantity": 500,
+                            "weight": 30
+                        },
+                        {
+                            "itemID": "expandedAreas:Tanzanite_Scales",
+                            "minQuantity": 250,
+                            "maxQuantity": 500,
+                            "weight": 30
+                        },
+                        {
+                            "itemID": "melvorD:Bird_Nest",
+                            "minQuantity": 5,
+                            "maxQuantity": 10,
+                            "weight": 25
+                        },
+                        {
+                            "itemID": "melvorF:Herb_Sack",
+                            "minQuantity": 5,
+                            "maxQuantity": 10,
+                            "weight": 20
+                        },
+                        {
+                            "itemID": "melvorF:Crate_Of_Basic_Supplies",
+                            "minQuantity": 1,
+                            "maxQuantity": 1,
+                            "weight": 20
+                        },
+                        {
+                            "itemID": "melvorF:Herb_Box_II",
+                            "minQuantity": 1,
+                            "maxQuantity": 1,
+                            "weight": 15
+                        },
+                        {
+                            "itemID": "melvorF:Ore_Box_II",
+                            "minQuantity": 1,
+                            "maxQuantity": 1,
+                            "weight": 15
+                        },
+                        {
+                            "itemID": "melvorF:Food_Box_II",
+                            "minQuantity": 1,
+                            "maxQuantity": 1,
+                            "weight": 10
+                        },
+                        {
+                            "itemID": "melvorF:Chest_Of_Gems",
+                            "minQuantity": 1,
+                            "maxQuantity": 1,
+                            "weight": 10
+                        },
+                        {
+                            "itemID": "expandedAreas:Tanzanite_Fang",
+                            "minQuantity": 1,
+                            "maxQuantity": 1,
+                            "weight": 2
+                        },
+                        {
+                            "itemID": "expandedAreas:Magmatic_Fang",
+                            "minQuantity": 1,
+                            "maxQuantity": 1,
+                            "weight": 2
+                        },
+                        {
+                            "itemID": "expandedAreas:Serpentine_Fang",
+                            "minQuantity": 1,
+                            "maxQuantity": 1,
+                            "weight": 2
+                        },
+                        {
+                            "itemID": "expandedAreas:Zulrahs_Head_Tanzanite",
+                            "minQuantity": 1,
+                            "maxQuantity": 1,
+                            "weight": 1
+                        },
+                        {
+                            "itemID": "expandedAreas:Zulrahs_Head_Magmatic",
+                            "minQuantity": 1,
+                            "maxQuantity": 1,
+                            "weight": 1
+                        },
+                        {
+                            "itemID": "expandedAreas:Zulrahs_Head_Serpentine",
+                            "minQuantity": 1,
+                            "maxQuantity": 1,
+                            "weight": 1
+                        }
+                    ]
+                },
       {
         "id": "Golden_Sceptre",
         "name": "Golden Sceptre",
@@ -32724,6 +34191,35 @@
       }
     ],
     "itemSynergies": [
+       {
+                "itemIDs": [
+                    "expandedAreas:Magmatic_Helm",
+                    "expandedAreas:Magmatic_Fangblade"
+                ],
+                "enemyModifiers": {
+                    "burnDOTDamageTaken": 5,
+                    "deadlyPoisonDOTDamageTaken": 5
+                }
+            },
+            {
+                "itemIDs": [
+                    "expandedAreas:Tanzanite_Helm",
+                    "expandedAreas:Wand_of_the_Swamp"
+                ],
+                "enemyModifiers": {
+                    "frostburnDamage": 5,
+                    "deadlyPoisonDOTDamageTaken": 5
+                }
+            },
+            {
+                "itemIDs": [
+                    "expandedAreas:Serpentine_Helm",
+                    "expandedAreas:Toxic_Quickbow"
+                ],
+                "enemyModifiers": {
+                    "deadlyPoisonDOTDamageTaken": 10
+                }
+            },
       {
         "itemIDs": [
           "expandedAreas:Ahrims_Hood",
@@ -33184,6 +34680,123 @@
       }
     ],
     "itemUpgrades": [
+      {
+                "rootItemIDs": [
+                    "expandedAreas:Magmatic_Fang",
+                    "melvorF:Poisoned_Dagger"
+                ],
+                "upgradedItemID": "expandedAreas:Magmatic_Fangblade",
+                "itemCosts": [
+                    {
+                        "id": "expandedAreas:Magmatic_Fang",
+                        "quantity": 1
+                    },
+                    {
+                        "id": "melvorF:Poisoned_Dagger",
+                        "quantity": 1
+                    },
+                    {
+                        "id": "expandedAreas:Magmatic_Scales",
+                        "quantity": 5000
+                    }
+                ],
+                "isDowngrade": false
+            },
+            {
+                "rootItemIDs": [
+                    "expandedAreas:Tanzanite_Fang",
+                    "melvorF:Earth_Imbued_Wand"
+                ],
+                "upgradedItemID": "expandedAreas:Wand_of_the_Swamp",
+                "itemCosts": [
+                    {
+                        "id": "expandedAreas:Tanzanite_Fang",
+                        "quantity": 1
+                    },
+                    {
+                        "id": "melvorF:Earth_Imbued_Wand",
+                        "quantity": 1
+                    },
+                    {
+                        "id": "expandedAreas:Tanzanite_Scales",
+                        "quantity": 5000
+                    }
+                ],
+                "isDowngrade": false
+            },
+            {
+                "rootItemIDs": [
+                    "expandedAreas:Serpentine_Fang",
+                    "melvorF:Poisoned_Shortbow"
+                ],
+                "upgradedItemID": "expandedAreas:Toxic_Quickbow",
+                "itemCosts": [
+                    {
+                        "id": "expandedAreas:Serpentine_Fang",
+                        "quantity": 1
+                    },
+                    {
+                        "id": "melvorF:Poisoned_Shortbow",
+                        "quantity": 1
+                    },
+                    {
+                        "id": "expandedAreas:Serpentine_Scales",
+                        "quantity": 5000
+                    }
+                ],
+                "isDowngrade": false
+            },
+            {
+                "rootItemIDs": [
+                    "expandedAreas:Zulrahs_Head_Serpentine"
+                ],
+                "upgradedItemID": "expandedAreas:Serpentine_Helm",
+                "itemCosts": [
+                    {
+                        "id": "expandedAreas:Zulrahs_Head_Serpentine",
+                        "quantity": 1
+                    },
+                    {
+                        "id": "expandedAreas:Serpentine_Scales",
+                        "quantity": 10000
+                    }
+                ],
+                "isDowngrade": false
+            },
+            {
+                "rootItemIDs": [
+                    "expandedAreas:Zulrahs_Head_Tanzanite"
+                ],
+                "upgradedItemID": "expandedAreas:Tanzanite_Helm",
+                "itemCosts": [
+                    {
+                        "id": "expandedAreas:Zulrahs_Head_Tanzanite",
+                        "quantity": 1
+                    },
+                    {
+                        "id": "expandedAreas:Tanzanite_Scales",
+                        "quantity": 10000
+                    }
+                ],
+                "isDowngrade": false
+            },
+            {
+                "rootItemIDs": [
+                    "expandedAreas:Zulrahs_Head_Magmatic"
+                ],
+                "upgradedItemID": "expandedAreas:Magmatic_Helm",
+                "itemCosts": [
+                    {
+                        "id": "expandedAreas:Zulrahs_Head_Magmatic",
+                        "quantity": 1
+                    },
+                    {
+                        "id": "expandedAreas:Magmatic_Scales",
+                        "quantity": 10000
+                    }
+                ],
+                "isDowngrade": false
+            },
       {
         "upgradedItemID": "expandedAreas:Crushed_Bird_Nest",
         "itemCosts": [
@@ -35440,6 +37053,754 @@
       }
     ],
     "monsters": [
+                  {
+                "attackType": "ranged",
+                "canSlayer": false,
+                "isBoss": true,
+                "currencyDrops": [],
+                "id": "Zulrah_Phase_One",
+                "levels": {
+                    "Attack": 300,
+                    "Strength": 300,
+                    "Defence": 300,
+                    "Hitpoints": 1820,
+                    "Ranged": 300,
+                    "Magic": 300
+                },
+                "equipmentStats": [
+                    {
+                        "key": "attackSpeed",
+                        "value": 1800
+                    },
+                    {
+                        "key": "magicDefenceBonus",
+                        "value": -100
+                    },
+                    {
+                        "key": "rangedAttackBonus",
+                        "value": 50
+                    },
+                    {
+                        "key": "rangedStrengthBonus",
+                        "value": 20
+                    }
+                ],
+                "lootChance": 0,
+                "lootTable": [],
+                "name": "Zulrah (Phase One)",
+                "media": "assets/combat/monsters/Zulrah_Serpentine.png",
+                "ignoreCompletion": false,
+                "passives": [
+                    "expandedAreas:PhaseHP10",
+                    "expandedAreas:VenomousHide",
+                    "expandedAreas:StunImmunity",
+                    "expandedAreas:MeleeImmunity",
+                    "expandedAreas:MagicVulnerability10"
+                ],
+                "selectedSpell": "melvorD:WindStrike",
+                "specialAttacks": [
+                    "expandedAreas:ToxicClouds"
+                ],
+                "overrideSpecialChances": [
+                    100
+                ],
+                "bones": {
+                    "itemID": "expandedAreas:Serpentine_Scales",
+                    "quantity": 26
+                }
+            },
+            {
+                "attackType": "melee",
+                "canSlayer": false,
+                "isBoss": true,
+                "currencyDrops": [],
+                "id": "Zulrah_Phase_Two",
+                "levels": {
+                    "Attack": 300,
+                    "Strength": 300,
+                    "Defence": 300,
+                    "Hitpoints": 1820,
+                    "Ranged": 300,
+                    "Magic": 300
+                },
+                "equipmentStats": [
+                    {
+                        "key": "attackSpeed",
+                        "value": 1800
+                    },
+                    {
+                        "key": "magicDefenceBonus",
+                        "value": -100
+                    },
+                    {
+                        "key": "meleeDefenceBonus",
+                        "value": 100
+                    },
+                    {
+                        "key": "rangedDefenceBonus",
+                        "value": 100
+                    },
+                    {
+                        "key": "damageReduction",
+                        "value": 10
+                    },
+                    {
+                        "key": "meleeStrengthBonus",
+                        "value": 20
+                    }
+                ],
+                "lootChance": 0,
+                "lootTable": [],
+                "name": "Zulrah (Phase Two)",
+                "media": "assets/combat/monsters/Zulrah_Magma.png",
+                "ignoreCompletion": false,
+                "passives": [
+                    "expandedAreas:PhaseHP10",
+                    "expandedAreas:VenomousHide",
+                    "expandedAreas:MagmaticHide",
+                    "expandedAreas:StunImmunity"
+                ],
+                "combatEffects": [
+                    {
+                        "appliesWhen": "HitWithAttack",
+                        "chance": 80,
+                        "condition": {
+                            "character": "Enemy",
+                            "targetAttackType": "melee",
+                            "thisAttackType": "melee",
+                            "type": "CombatType"
+                        },
+                        "effectID": "melvorD:Stun",
+                        "initialParams": [
+                            {
+                                "name": "turns",
+                                "value": 2
+                            }
+                        ],
+                        "customDescription": "80% Chance to Stun for 2 turns on Hit if target is using Melee."
+                    }
+                ],
+                "selectedSpell": "melvorD:WindStrike",
+                "specialAttacks": [
+                    "expandedAreas:BarbedTailWhip"
+                ],
+                "bones": {
+                    "itemID": "expandedAreas:Magmatic_Scales",
+                    "quantity": 27
+                }
+            },
+            {
+                "attackType": "magic",
+                "canSlayer": false,
+                "isBoss": true,
+                "currencyDrops": [],
+                "id": "Zulrah_Phase_Three",
+                "levels": {
+                    "Attack": 300,
+                    "Strength": 300,
+                    "Defence": 300,
+                    "Hitpoints": 1820,
+                    "Ranged": 300,
+                    "Magic": 300
+                },
+                "equipmentStats": [
+                    {
+                        "key": "attackSpeed",
+                        "value": 1800
+                    },
+                    {
+                        "key": "rangedDefenceBonus",
+                        "value": -100
+                    },
+                    {
+                        "key": "magicAttackBonus",
+                        "value": 50
+                    },
+                    {
+                        "key": "magicDamageBonus",
+                        "value": 20
+                    }
+                ],
+                "lootChance": 0,
+                "lootTable": [],
+                "name": "Zulrah (Phase Three)",
+                "media": "assets/combat/monsters/Zulrah_Tanzanite.png",
+                "ignoreCompletion": false,
+                "passives": [
+                    "expandedAreas:PhaseHP10",
+                    "expandedAreas:VenomousHide",
+                    "expandedAreas:StunImmunity",
+                    "expandedAreas:MeleeImmunity",
+                    "expandedAreas:RangedVulnerability10"
+                ],
+                "selectedSpell": "melvorD:EarthWave",
+                "specialAttacks": [
+                    "expandedAreas:BarbedProjectiles",
+                    "expandedAreas:SwampSludge"
+                ],
+                "overrideSpecialChances": [
+                    50,
+                    50
+                ],
+                "bones": {
+                    "itemID": "expandedAreas:Tanzanite_Scales",
+                    "quantity": 22
+                }
+            },
+            {
+                "attackType": "ranged",
+                "canSlayer": false,
+                "isBoss": true,
+                "currencyDrops": [],
+                "id": "Zulrah_Phase_Four",
+                "levels": {
+                    "Attack": 300,
+                    "Strength": 300,
+                    "Defence": 300,
+                    "Hitpoints": 1820,
+                    "Ranged": 300,
+                    "Magic": 300
+                },
+                "equipmentStats": [
+                    {
+                        "key": "attackSpeed",
+                        "value": 1800
+                    },
+                    {
+                        "key": "magicDefenceBonus",
+                        "value": -100
+                    },
+                    {
+                        "key": "rangedAttackBonus",
+                        "value": 50
+                    },
+                    {
+                        "key": "rangedStrengthBonus",
+                        "value": 20
+                    }
+                ],
+                "lootChance": 0,
+                "lootTable": [],
+                "name": "Zulrah (Phase Four)",
+                "media": "assets/combat/monsters/Zulrah_Serpentine.png",
+                "ignoreCompletion": false,
+                "passives": [
+                    "expandedAreas:PhaseHP10",
+                    "expandedAreas:VenomousHide",
+                    "expandedAreas:StunImmunity",
+                    "expandedAreas:MeleeImmunity",
+                    "expandedAreas:MagicVulnerability10"
+                ],
+                "selectedSpell": "melvorD:WindStrike",
+                "specialAttacks": [
+                    "expandedAreas:ToxicClouds",
+                    "expandedAreas:SummonCobralings",
+                    "expandedAreas:BarbedProjectiles"
+                ],
+                "overrideSpecialChances": [
+                    20,
+                    35,
+                    25
+                ],
+                "bones": {
+                    "itemID": "expandedAreas:Serpentine_Scales",
+                    "quantity": 27
+                }
+            },
+            {
+                "attackType": "melee",
+                "canSlayer": false,
+                "isBoss": true,
+                "currencyDrops": [],
+                "id": "Zulrah_Phase_Five",
+                "levels": {
+                    "Attack": 300,
+                    "Strength": 300,
+                    "Defence": 300,
+                    "Hitpoints": 1820,
+                    "Ranged": 300,
+                    "Magic": 300
+                },
+                "equipmentStats": [
+                    {
+                        "key": "attackSpeed",
+                        "value": 1800
+                    },
+                    {
+                        "key": "magicDefenceBonus",
+                        "value": -100
+                    },
+                    {
+                        "key": "meleeDefenceBonus",
+                        "value": 100
+                    },
+                    {
+                        "key": "rangedDefenceBonus",
+                        "value": 100
+                    },
+                    {
+                        "key": "damageReduction",
+                        "value": 10
+                    },
+                    {
+                        "key": "meleeStrengthBonus",
+                        "value": 20
+                    }
+                ],
+                "lootChance": 0,
+                "lootTable": [],
+                "name": "Zulrah (Phase Five)",
+                "media": "assets/combat/monsters/Zulrah_Magma.png",
+                "ignoreCompletion": false,
+                "passives": [
+                    "expandedAreas:PhaseHP10",
+                    "expandedAreas:VenomousHide",
+                    "expandedAreas:MagmaticHide",
+                    "expandedAreas:StunImmunity"
+                ],
+                "combatEffects": [
+                    {
+                        "appliesWhen": "HitWithAttack",
+                        "chance": 80,
+                        "condition": {
+                            "character": "Enemy",
+                            "targetAttackType": "melee",
+                            "thisAttackType": "melee",
+                            "type": "CombatType"
+                        },
+                        "effectID": "melvorD:Stun",
+                        "initialParams": [
+                            {
+                                "name": "turns",
+                                "value": 2
+                            }
+                        ],
+                        "customDescription": "80% Chance to Stun for 2 turns on Hit if target is using Melee."
+                    }
+                ],
+                "selectedSpell": "melvorD:WindStrike",
+                "specialAttacks": [
+                    "expandedAreas:BarbedTailWhip"
+                ],
+                "bones": {
+                    "itemID": "expandedAreas:Magmatic_Scales",
+                    "quantity": 14
+                }
+            },
+            {
+                "attackType": "magic",
+                "canSlayer": false,
+                "isBoss": true,
+                "currencyDrops": [],
+                "id": "Zulrah_Phase_Six",
+                "levels": {
+                    "Attack": 300,
+                    "Strength": 300,
+                    "Defence": 300,
+                    "Hitpoints": 1820,
+                    "Ranged": 300,
+                    "Magic": 300
+                },
+                "equipmentStats": [
+                    {
+                        "key": "attackSpeed",
+                        "value": 1800
+                    },
+                    {
+                        "key": "rangedDefenceBonus",
+                        "value": -100
+                    },
+                    {
+                        "key": "magicAttackBonus",
+                        "value": 50
+                    },
+                    {
+                        "key": "magicDamageBonus",
+                        "value": 20
+                    }
+                ],
+                "lootChance": 0,
+                "lootTable": [],
+                "name": "Zulrah (Phase Six)",
+                "media": "assets/combat/monsters/Zulrah_Tanzanite.png",
+                "ignoreCompletion": false,
+                "passives": [
+                    "expandedAreas:PhaseHP10",
+                    "expandedAreas:VenomousHide",
+                    "expandedAreas:StunImmunity",
+                    "expandedAreas:MeleeImmunity",
+                    "expandedAreas:RangedVulnerability10"
+                ],
+                "selectedSpell": "melvorD:EarthWave",
+                "specialAttacks": [
+                    "expandedAreas:BarbedProjectiles",
+                    "expandedAreas:SwampSludge"
+                ],
+                "overrideSpecialChances": [
+                    50,
+                    50
+                ],
+                "bones": {
+                    "itemID": "expandedAreas:Tanzanite_Scales",
+                    "quantity": 14
+                }
+            },
+            {
+                "attackType": "ranged",
+                "canSlayer": false,
+                "isBoss": true,
+                "currencyDrops": [],
+                "id": "Zulrah_Phase_Seven",
+                "levels": {
+                    "Attack": 300,
+                    "Strength": 300,
+                    "Defence": 300,
+                    "Hitpoints": 1820,
+                    "Ranged": 300,
+                    "Magic": 300
+                },
+                "equipmentStats": [
+                    {
+                        "key": "attackSpeed",
+                        "value": 1800
+                    },
+                    {
+                        "key": "magicDefenceBonus",
+                        "value": -100
+                    },
+                    {
+                        "key": "rangedAttackBonus",
+                        "value": 50
+                    },
+                    {
+                        "key": "rangedStrengthBonus",
+                        "value": 20
+                    }
+                ],
+                "lootChance": 0,
+                "lootTable": [],
+                "name": "Zulrah (Phase Seven)",
+                "media": "assets/combat/monsters/Zulrah_Serpentine.png",
+                "ignoreCompletion": false,
+                "passives": [
+                    "expandedAreas:PhaseHP10",
+                    "expandedAreas:VenomousHide",
+                    "expandedAreas:StunImmunity",
+                    "expandedAreas:MeleeImmunity",
+                    "expandedAreas:MagicVulnerability10"
+                ],
+                "selectedSpell": "melvorD:WindStrike",
+                "specialAttacks": [
+                    "expandedAreas:ToxicClouds",
+                    "expandedAreas:SummonCobralings"
+                ],
+                "overrideSpecialChances": [
+                    43,
+                    57
+                ],
+                "bones": {
+                    "itemID": "expandedAreas:Serpentine_Scales",
+                    "quantity": 23
+                }
+            },
+            {
+                "attackType": "magic",
+                "canSlayer": false,
+                "isBoss": true,
+                "currencyDrops": [],
+                "id": "Zulrah_Phase_Eight",
+                "levels": {
+                    "Attack": 300,
+                    "Strength": 300,
+                    "Defence": 300,
+                    "Hitpoints": 1820,
+                    "Ranged": 300,
+                    "Magic": 300
+                },
+                "equipmentStats": [
+                    {
+                        "key": "attackSpeed",
+                        "value": 1800
+                    },
+                    {
+                        "key": "rangedDefenceBonus",
+                        "value": -100
+                    },
+                    {
+                        "key": "magicAttackBonus",
+                        "value": 50
+                    },
+                    {
+                        "key": "magicDamageBonus",
+                        "value": 20
+                    }
+                ],
+                "lootChance": 0,
+                "lootTable": [],
+                "name": "Zulrah (Phase Eight)",
+                "media": "assets/combat/monsters/Zulrah_Tanzanite.png",
+                "ignoreCompletion": false,
+                "passives": [
+                    "expandedAreas:PhaseHP10",
+                    "expandedAreas:VenomousHide",
+                    "expandedAreas:StunImmunity",
+                    "expandedAreas:MeleeImmunity",
+                    "expandedAreas:RangedVulnerability10"
+                ],
+                "selectedSpell": "melvorD:EarthWave",
+                "specialAttacks": [
+                    "expandedAreas:BarbedProjectiles",
+                    "expandedAreas:ToxicClouds",
+                    "expandedAreas:SummonCobralings",
+                    "expandedAreas:SwampSludge"
+                ],
+                "overrideSpecialChances": [
+                    35,
+                    15,
+                    15,
+                    35
+                ],
+                "bones": {
+                    "itemID": "expandedAreas:Serpentine_Scales",
+                    "quantity": 14
+                }
+            },
+            {
+                "attackType": "ranged",
+                "canSlayer": false,
+                "isBoss": true,
+                "currencyDrops": [],
+                "id": "Zulrah_Phase_Nine",
+                "levels": {
+                    "Attack": 300,
+                    "Strength": 300,
+                    "Defence": 300,
+                    "Hitpoints": 1820,
+                    "Ranged": 300,
+                    "Magic": 300
+                },
+                "equipmentStats": [
+                    {
+                        "key": "attackSpeed",
+                        "value": 1800
+                    },
+                    {
+                        "key": "magicDefenceBonus",
+                        "value": -100
+                    },
+                    {
+                        "key": "rangedAttackBonus",
+                        "value": 50
+                    },
+                    {
+                        "key": "rangedStrengthBonus",
+                        "value": 20
+                    }
+                ],
+                "lootChance": 0,
+                "lootTable": [],
+                "name": "Zulrah (Phase Nine)",
+                "media": "assets/combat/monsters/Zulrah_Serpentine.png",
+                "ignoreCompletion": false,
+                "passives": [
+                    "expandedAreas:PhaseHP10",
+                    "expandedAreas:VenomousHide",
+                    "expandedAreas:StunImmunity",
+                    "expandedAreas:MeleeImmunity",
+                    "expandedAreas:MagicVulnerability10"
+                ],
+                "selectedSpell": "melvorD:WindStrike",
+                "specialAttacks": [
+                    "expandedAreas:ToxicClouds",
+                    "expandedAreas:BarbedProjectiles"
+                ],
+                "overrideSpecialChances": [
+                    30,
+                    50
+                ],
+                "bones": {
+                    "itemID": "expandedAreas:Serpentine_Scales",
+                    "quantity": 28
+                }
+            },
+            {
+                "attackType": "melee",
+                "canSlayer": false,
+                "isBoss": true,
+                "currencyDrops": [],
+                "id": "Zulrah_Phase_Ten",
+                "levels": {
+                    "Attack": 300,
+                    "Strength": 300,
+                    "Defence": 300,
+                    "Hitpoints": 1820,
+                    "Ranged": 300,
+                    "Magic": 300
+                },
+                "equipmentStats": [
+                    {
+                        "key": "attackSpeed",
+                        "value": 1800
+                    },
+                    {
+                        "key": "magicDefenceBonus",
+                        "value": -100
+                    },
+                    {
+                        "key": "meleeDefenceBonus",
+                        "value": 100
+                    },
+                    {
+                        "key": "rangedDefenceBonus",
+                        "value": 100
+                    },
+                    {
+                        "key": "damageReduction",
+                        "value": 10
+                    },
+                    {
+                        "key": "meleeStrengthBonus",
+                        "value": 20
+                    }
+                ],
+                "lootChance": 0,
+                "lootTable": [],
+                "name": "Zulrah (Phase Ten)",
+                "media": "assets/combat/monsters/Zulrah_Magma.png",
+                "ignoreCompletion": false,
+                "passives": [
+                    "expandedAreas:PhaseHP10",
+                    "expandedAreas:VenomousHide",
+                    "expandedAreas:MagmaticHide",
+                    "expandedAreas:StunImmunity"
+                ],
+                "combatEffects": [
+                    {
+                        "appliesWhen": "HitWithAttack",
+                        "chance": 80,
+                        "condition": {
+                            "character": "Enemy",
+                            "targetAttackType": "melee",
+                            "thisAttackType": "melee",
+                            "type": "CombatType"
+                        },
+                        "effectID": "melvorD:Stun",
+                        "initialParams": [
+                            {
+                                "name": "turns",
+                                "value": 2
+                            }
+                        ],
+                        "customDescription": "80% Chance to Stun for 2 turns on Hit if target is using Melee."
+                    }
+                ],
+                "selectedSpell": "melvorD:WindStrike",
+                "specialAttacks": [
+                    "expandedAreas:BarbedTailWhip"
+                ],
+                "bones": {
+                    "itemID": "expandedAreas:Magmatic_Scales",
+                    "quantity": 19
+                }
+            },
+            {
+                "attackType": "melee",
+                "canSlayer": false,
+                "isBoss": true,
+                "currencyDrops": [],
+                "id": "Zulrah_Final_Phase",
+                "levels": {
+                    "Attack": 300,
+                    "Strength": 300,
+                    "Defence": 300,
+                    "Hitpoints": 1820,
+                    "Ranged": 300,
+                    "Magic": 300
+                },
+                "equipmentStats": [
+                    {
+                        "key": "attackSpeed",
+                        "value": 1800
+                    },
+                    {
+                        "key": "magicDefenceBonus",
+                        "value": 100
+                    },
+                    {
+                        "key": "meleeDefenceBonus",
+                        "value": 100
+                    },
+                    {
+                        "key": "rangedDefenceBonus",
+                        "value": 100
+                    },
+                    {
+                        "key": "damageReduction",
+                        "value": 10
+                    },
+                    {
+                        "key": "meleeStrengthBonus",
+                        "value": 20
+                    },
+                    {
+                        "key": "rangedStrengthBonus",
+                        "value": 20
+                    },
+                    {
+                        "key": "magicDamageBonus",
+                        "value": 20
+                    }
+                ],
+                "lootChance": 0,
+                "lootTable": [],
+                "name": "Zulrah (Final Phase)",
+                "media": "assets/combat/monsters/Zulrah_Final_Phase.png",
+                "ignoreCompletion": false,
+                "passives": [
+                    "expandedAreas:VenomousHide",
+                    "expandedAreas:MagmaticHide",
+                    "expandedAreas:StunImmunity"
+                ],
+                "combatEffects": [
+                    {
+                        "appliesWhen": "HitWithAttack",
+                        "chance": 50,
+                        "condition": {
+                            "character": "Enemy",
+                            "targetAttackType": "melee",
+                            "thisAttackType": "melee",
+                            "type": "CombatType"
+                        },
+                        "effectID": "melvorD:Stun",
+                        "initialParams": [
+                            {
+                                "name": "turns",
+                                "value": 2
+                            }
+                        ],
+                        "customDescription": "50% Chance to Stun for 2 turns on Hit if target is using Melee."
+                    }
+                ],
+                "selectedSpell": "melvorD:WindStrike",
+                "specialAttacks": [
+                    "expandedAreas:BarbedTailWhip",
+                    "expandedAreas:BarbedProjectiles",
+                    "expandedAreas:SwampSludge",
+                    "expandedAreas:ToxicClouds",
+                    "expandedAreas:SummonCobralings"
+                ],
+                "overrideSpecialChances": [
+                    25,
+                    30,
+                    25,
+                    10,
+                    10
+                ],
+                "bones": {
+                    "itemID": "melvorD:Magic_Bones",
+                    "quantity": 1
+                }
+            },
       {
         "id": "Escape_the_Dungeon",
         "name": "Escape the Dungeon",
@@ -41111,6 +43472,20 @@
       }
     ],
     "pets": [
+                  {
+                "id": "Zully",
+                "media": "assets/pets/Zully.png",
+                "name": "Zully",
+                "modifiers": {
+                    "burnDOTDamageTaken": -2,
+                    "poisonDOTDamageTaken": -2,
+                    "deadlyPoisonDOTDamageTaken": -2,
+                    "frostburnDamage": -2
+                },
+                "scaleChanceWithMasteryPool": false,
+                "activeInRaid": false,
+                "ignoreCompletion": false
+            },
       {
         "id": "DonJonLuter",
         "name": "Don Jon Luter",
@@ -53920,6 +56295,37 @@
         "skillID": "melvorD:Herblore",
         "data": {
           "recipes": [
+            {
+                            "id": "Antivenom",
+                            "name": "Antivenom",
+                            "level": 87,
+                            "potionIDs": [
+                                "expandedAreas:Antivenom_I",
+                                "expandedAreas:Antivenom_II",
+                                "expandedAreas:Antivenom_III",
+                                "expandedAreas:Antivenom_IV"
+                            ],
+                            "baseExperience": 170,
+                            "categoryID": "melvorF:CombatPotions",
+                            "itemCosts": [
+                                {
+                                    "id": "melvorF:Barrentoe_Herb",
+                                    "quantity": 1
+                                },
+                                {
+                                    "id": "expandedAreas:Serpentine_Scales",
+                                    "quantity": 3
+                                },
+                                {
+                                    "id": "expandedAreas:Magmatic_Scales",
+                                    "quantity": 3
+                                },
+                                {
+                                    "id": "expandedAreas:Tanzanite_Scales",
+                                    "quantity": 3
+                                }
+                            ]
+                        },
             {
               "id": "Aeris_Brew",
               "name": "Aeris Brew",
