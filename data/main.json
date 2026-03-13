@@ -4,6 +4,544 @@
   "data": {
     "attacks": [
       {
+        "id": "Elemental_Breath",
+        "defaultChance": 25,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "maxRoll": "Fixed",
+            "maxPercent": 20,
+            "roll": false
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Burn",
+            "chance": 5
+          },
+          {
+            "effectID": "melvorD:Freeze",
+            "chance": 5
+          },
+          {
+            "effectID": "melvorD:Sleep",
+            "chance": 5
+          },
+          {
+            "effectID": "melvorD:Frostburn",
+            "chance": 5
+          }
+        ],
+        "cantMiss": true,
+        "attackCount": 10,
+        "attackInterval": 200,
+        "lifesteal": 0,
+        "name": "Elemental Breath",
+        "description": "Breathe unavoidable elemental dragonfire that deals ${attackDamageMaxValue0}x${hitCount} damage over ${duration}s. Inflicts either Burn, Freeze, Sleep, or Stun (10% chance each).",
+        "descriptionGenerator": "Breathe <avoidable> elemental dragonfire that deals <damage>x<count> damage over <duration>. <HitEffect>.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "Shell_Defense",
+        "name": "Shell Defense",
+        "defaultChance": 50,
+        "damage": [],
+        "prehitEffects": [
+          {
+            "effectID": "melvorD:EndOfTurnCurrentHealing",
+            "condition": {
+              "type": "Hitpoints",
+              "character": "Player",
+              "value": 50,
+              "operator": "<="
+            }
+          },
+          {
+            "effectID": "melvorD:Heal0",
+            "condition": {
+              "type": "Hitpoints",
+              "character": "Player",
+              "value": 30,
+              "operator": "<="
+            }
+          }
+        ],
+        "onhitEffects": [],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "description": "",
+        "attackTypes": [
+          "melee"
+        ]
+      },
+      {
+        "id": "Harpiars_Song",
+        "name": "Harpiar's Song",
+        "defaultChance": 40,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 30
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Sleep",
+            "chance": 50
+          }
+        ],
+        "cantMiss": true,
+        "attackCount": 6,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "description": "Attack ${hitCount} times, dealing ${attackDamageMaxValue0}% normal damage each hit (unavoidable if Accuracy Rating is greater than or equal to 20,000). On hit, has a ${onHitEffect0chance}% chance to apply sleep for ${onHitEffect0turns} turn.",
+        "descriptionGenerator": "Attack <count> times, dealing <damage> each hit (<avoidable> if Accuracy Rating is 20,000+). On hit, <hitEffect>.",
+        "attackTypes": [
+          "ranged"
+        ],
+        "minAccuracy": 20000
+      },
+      {
+        "id": "Flame_Lash",
+        "name": "Flame_Lash",
+        "defaultChance": 30,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "roll": false,
+            "maxRoll": "MagicScaling",
+            "maxPercent": 30
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Burn",
+            "chance": 50
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 3,
+        "attackInterval": 100,
+        "lifesteal": 0,
+        "description": "The enemy lashes out with a fiery whip ${hitCount} times, dealing ${attackDamageMaxValue0}% of its Magic level + 1, with a 50% chance to has a ${onHitEffect0chance}% chance to inflict Burn that deals ${onHitEffect0DamageMaxValue0}% of the your current hitpoints as damage over ${onHitEffect0duration}s on hit.",
+        "descriptionGenerator": "<Attacker> lashes out with a fiery whip <count> times, dealing <damage>, with a 50% chance to <hitEffect> on hit.",
+        "attackTypes": [
+          "melee"
+        ]
+      },
+      {
+        "id": "Rollin_Rollin",
+        "name": "Rollin' Rollin'",
+        "defaultChance": 40,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "roll": true,
+            "minRoll": "MinHit",
+            "minPercent": 100,
+            "maxRoll": "MaxHit",
+            "maxPercent": 100
+          },
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "roll": false,
+            "maxRoll": "Fixed",
+            "maxPercent": 10
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Stun"
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 1200,
+        "lifesteal": 0,
+        "description": "The Rock Giant rolls its body around like a massive boulder, dealing ${attackDamageMaxValue0}% of its normal damage plus ${attackDamageMaxValue1} and applies stun for ${onHitEffect0turns} turn on hit. ",
+        "descriptionGenerator": "The <attacker> rolls <attPos> body around like a massive boulder, dealing <damage> and <hitEffect> on hit. ",
+        "attackTypes": [
+          "melee"
+        ]
+      },
+      {
+        "id": "One_Two_Punch",
+        "name": "One-Two Punch",
+        "defaultChance": 100,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "roll": true,
+            "minRoll": "MinHit",
+            "minPercent": 100,
+            "maxRoll": "MaxHit",
+            "maxPercent": 80,
+            "attackCount": 0
+          },
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "roll": true,
+            "minRoll": "MinHit",
+            "minPercent": 100,
+            "maxRoll": "MaxHit",
+            "maxPercent": 120,
+            "attackCount": 1
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Stun",
+            "chance": 5
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 2,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "description": "Attack ${hitCount} times, dealing up to ${attackDamageMaxValue0}% of your normal damage on the first attack and up to ${attackDamageMaxValue1}% of your max hit on the second attack. Has a ${onHitEffect0chance}% chance to strike with a Sucker Punch, stunning the enemy for ${onHitEffect0turns} turn",
+        "descriptionGenerator": "Attack <count> times, dealing <damage>, <hitEffect>",
+        "attackTypes": [
+          "melee"
+        ]
+      },
+      {
+        "id": "Sucker_Punch",
+        "name": "Sucker Punch",
+        "defaultChance": 30,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 130
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Stun",
+            "chance": 25
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "description": "The enemy strikes with a sucker punch, dealing a whopping ${attackDamageMaxValue0}% of their normal damage, which has a ${onHitEffect0chance}% chance to apply stun for ${onHitEffect0turns} turn.",
+        "descriptionGenerator": "<Attacker> sucker punches <target>, dealing a <damage>, that <hitEffect> on hit.",
+        "attackTypes": [
+          "melee"
+        ]
+      },
+      {
+        "id": "Wild_Strikes",
+        "name": "Wild Strikes",
+        "defaultChance": 25,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "roll": true,
+            "minRoll": "MinHit",
+            "minPercent": 100,
+            "maxRoll": "MaxHit",
+            "maxPercent": 50
+          }
+        ],
+        "prehitEffects": [
+          {
+            "effectID": "melvorD:DecreasedEvasionStacking",
+            "targetOverride": "Self"
+          }
+        ],
+        "onhitEffects": [],
+        "cantMiss": false,
+        "attackCount": 4,
+        "attackInterval": 250,
+        "lifesteal": 0,
+        "description": "Make ${hitCount} consecutive attacks, each dealing up to ${attackDamageMaxValue0}% normal damage, but -${preHitEffect0modValue0}% Global Evasion that stacks up to ${preHitEffect0maxStacks} times until the end of the fight",
+        "descriptionGenerator": "Make <count> consecutive attacks, each dealing up to <damage>, but <attacker> <prehitEffect>",
+        "attackTypes": [
+          "melee"
+        ]
+      },
+      {
+        "id": "Anguished_Cry",
+        "name": "Anguished Cry",
+        "defaultChance": 66,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "roll": false,
+            "maxRoll": "MaxHit",
+            "maxPercent": 75
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Fear",
+            "chance": 25
+          },
+          {
+            "effectID": "melvorF:AnguishI",
+            "chance": 75
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "description": "The enemy lets out a gut-wrenching wail, dealing ${attackDamageMaxValue0}% of its max hit. Has a ${onHitEffect0chance}% chance to apply Fear for ${onHitEffect0turns} turn and has a ${onHitEffect1chance}% chance to apply the Anguish I Curse for 3 turns.",
+        "descriptionGenerator": "<Attacker> lets out a gut-wrenching wail, dealing <damage>. <HitEffect>.",
+        "attackTypes": [
+          "magic"
+        ]
+      },
+      {
+        "id": "Drown",
+        "name": "Drown",
+        "defaultChance": 33,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "roll": false,
+            "maxRoll": "CursedFixed100",
+            "maxPercent": 10
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "description": "Attempts to drown the enemy in sorrow, dealing ${attackDamageMaxValue0} + 100% damage if the target is cursed.",
+        "descriptionGenerator": "<Attacker> attempts to drown <target> in sorrow, dealing <damage>.",
+        "attackTypes": [
+          "magic"
+        ]
+      },
+      {
+        "id": "Zombie_Summon",
+        "name": "Zombie Summon",
+        "defaultChance": 40,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "roll": true,
+            "minRoll": "MinHit",
+            "minPercent": 100,
+            "maxRoll": "MaxHit",
+            "maxPercent": 100
+          },
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "roll": false,
+            "maxRoll": "Fixed",
+            "maxPercent": 5.2
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 3100,
+        "lifesteal": 0,
+        "description": "Perform a regular attack. On use, summon a Zombie Hand that attacks for 42 damage.",
+        "usesRunesPerProc": true,
+        "attackTypes": [
+          "magic"
+        ],
+        "extraRuneConsumption": [
+          {
+            "id": "melvorD:Death_Rune",
+            "quantity": 2
+          },
+          {
+            "id": "melvorD:Earth_Rune",
+            "quantity": 3
+          },
+          {
+            "id": "melvorD:Body_Rune",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "id": "Novice_Necromancer_Zombie_Summon",
+        "name": "Zombie Summon",
+        "defaultChance": 100,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "roll": true,
+            "minRoll": "MinHit",
+            "minPercent": 100,
+            "maxRoll": "MaxHit",
+            "maxPercent": 50
+          },
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "roll": false,
+            "maxRoll": "Fixed",
+            "maxPercent": 5.2
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 3100,
+        "lifesteal": 0,
+        "description": "Summon a Zombie Hand to attack once, dealing ${attackDamageMaxValue0} damage (Can miss)..",
+        "descriptionGenerator": "Attack once dealing <damage> damage (<CanMiss>).",
+        "usesRunesPerProc": true,
+        "attackTypes": [
+          "magic"
+        ]
+      },
+      {
+        "id": "Zephyr_Strike",
+        "defaultChance": 100,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "maxRoll": "Fixed",
+            "maxPercent": 11.0,
+            "roll": false
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [],
+        "cantMiss": true,
+        "attackCount": 3,
+        "attackInterval": 300,
+        "lifesteal": 0,
+        "name": "Zephyr Strike",
+        "description": "Attack ${hitCount} times for ${attackDamageMaxValue0} damage each. If your Accuracy Rating is higher than 20K then this attack can't miss.",
+        "descriptionGenerator": "Attack <count> times for <damage> damage each. If your Accuracy Rating is higher than 20K then this attack <canMiss>.",
+        "usesRunesPerProc": false,
+        "minAccuracy": 20000
+      },
+      {
+        "id": "Cold_Snap",
+        "defaultChance": 100,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "maxRoll": "Fixed",
+            "maxPercent": 10.5,
+            "roll": false
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Slow",
+            "initialParams": [
+              {
+                "name": "magnitude",
+                "value": 15
+              },
+              {
+                "name": "turns",
+                "value": 2
+              }
+            ]
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 5,
+        "attackInterval": 200,
+        "lifesteal": 0,
+        "name": "Cold Snap",
+        "description": "Attack ${hitCount} times for ${attackDamageMaxValue0} damage each (Can miss). On a hit, gives the enemy +${onHitEffect0modValue0}% Attack Interval for ${onHitEffect0turns} of the enemy's turns.",
+        "descriptionGenerator": "Attack <count> times for <damage> damage each (<CanMiss>). On a hit, <hitEffect>.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "Avalanche",
+        "defaultChance": 100,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "maxRoll": "Fixed",
+            "maxPercent": 34,
+            "roll": false
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Sleep",
+            "chance": 100,
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 2,
+        "attackInterval": 400,
+        "lifesteal": 0,
+        "name": "Avalanche",
+        "description": "Attack ${hitCount} times dealing ${attackDamageMaxValue0} damage each (Can miss). On a hit, puts the enemy to sleep for ${onHitEffect0turns} of the enemy's turns.",
+        "descriptionGenerator": "Attack <count> times dealing <damage> damage each (<CanMiss>). On a hit, <hitEffect>.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "Fierce_Flames",
+        "defaultChance": 100,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "maxRoll": "Fixed",
+            "maxPercent": 43,
+            "roll": false
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Burn",
+            "chance": 10
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Fierce Flames",
+        "description": "Attack once dealing ${attackDamageMaxValue0} damage (Can miss). On a hit, has a ${onHitEffect0chance}% chance to inflict Burn that deals ${onHitEffect0DamageMaxValue0}% of the enemy's current hitpoints as damage over ${onHitEffect0duration}s.",
+        "descriptionGenerator": "Attack once dealing <damage> damage (<CanMiss>). On a hit, <hitEffect>.",
+        "usesRunesPerProc": false
+      },
+      {
         "id": "Stormsnap",
         "defaultChance": 25,
         "damage": [
