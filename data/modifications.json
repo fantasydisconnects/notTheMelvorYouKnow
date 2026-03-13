@@ -1,6 +1,6 @@
 {
   "$schema": "https://melvoridle.com/assets/schema/gameData.json",
-  "namespace": "SUPERAWESOME",
+  "namespace": "expandedAreas",
   "modifications": {
     "combatAreaCategories": [
       {
@@ -11,22 +11,22 @@
               "insertAt": "After",
               "afterID": "melvorD:Farmlands",
               "ids": [
-                "SUPERAWESOME:Botanical_Gardens",
-                "SUPERAWESOME:Low_Town"
+                "expandedAreas:Botanical_Gardens",
+                "expandedAreas:Low_Town"
               ]
             },
             {
               "insertAt": "After",
               "afterID": "melvorD:ElerineBattlegrounds",
               "ids": [
-                "SUPERAWESOME:Secluded_Monastery"
+                "expandedAreas:Secluded_Monastery"
               ]
             },
             {
               "insertAt": "After",
               "afterID": "melvorD:Icy_Hills",
               "ids": [
-                "SUPERAWESOME:Barbarian_Village"
+                "expandedAreas:Barbarian_Village"
               ]
             }
           ]
@@ -40,21 +40,21 @@
               "insertAt": "After",
               "afterID": "melvorD:Chicken_Coop",
               "ids": [
-                "SUPERAWESOME:Golbin_Hideout"
+                "expandedAreas:Golbin_Hideout"
               ]
             },
             {
               "insertAt": "After",
               "afterID": "melvorD:Hall_of_Wizards",
               "ids": [
-                "SUPERAWESOME:The_Barbarian_Trials"
+                "expandedAreas:The_Barbarian_Trials"
               ]
             },
             {
               "insertAt": "After",
               "afterID": "melvorF:Dragons_Den",
               "ids": [
-                "SUPERAWESOME:Elemental_Sanctuary"
+                "expandedAreas:Elemental_Sanctuary"
               ]
             }
           ]
@@ -68,19 +68,19 @@
           "add": [
             {
               "insertAt": 2,
-              "monsterID": "SUPERAWESOME:Magic_Golbin"
+              "monsterID": "expandedAreas:Magic_Golbin"
             },
             {
               "insertAt": 3,
-              "monsterID": "SUPERAWESOME:Hobgolbin"
+              "monsterID": "expandedAreas:Hobgolbin"
             },
             {
               "insertAt": 4,
-              "monsterID": "SUPERAWESOME:Big_Golbin"
+              "monsterID": "expandedAreas:Big_Golbin"
             },
             {
               "insertAt": 5,
-              "monsterID": "SUPERAWESOME:Golbin_Chief"
+              "monsterID": "expandedAreas:Golbin_Chief"
             }
           ]
         }
@@ -91,7 +91,7 @@
           "add": [
             {
               "insertAt": 4,
-              "monsterID": "SUPERAWESOME:Novice_Necromancer"
+              "monsterID": "expandedAreas:Novice_Necromancer"
             }
           ]
         }
@@ -101,19 +101,19 @@
         "monsters": {
           "add": [
             {
-              "monsterID": "SUPERAWESOME:Baby_Green_Dragon",
+              "monsterID": "expandedAreas:Baby_Green_Dragon",
               "insertAt": 0
             },
             {
-              "monsterID": "SUPERAWESOME:Baby_Blue_Dragon",
+              "monsterID": "expandedAreas:Baby_Blue_Dragon",
               "insertAt": 1
             },
             {
-              "monsterID": "SUPERAWESOME:Baby_Red_Dragon",
+              "monsterID": "expandedAreas:Baby_Red_Dragon",
               "insertAt": 2
             },
             {
-              "monsterID": "SUPERAWESOME:Baby_Black_Dragon",
+              "monsterID": "expandedAreas:Baby_Black_Dragon",
               "insertAt": 3
             }
           ]
@@ -152,11 +152,11 @@
           "add": [
             {
               "insertAt": 2,
-              "monsterID": "SUPERAWESOME:Novice_Necromancer"
+              "monsterID": "expandedAreas:Novice_Necromancer"
             },
             {
               "insertAt": 6,
-              "monsterID": "SUPERAWESOME:Novice_Necromancer"
+              "monsterID": "expandedAreas:Novice_Necromancer"
             }
           ]
         }
@@ -297,7 +297,7 @@
             "melvorF:Stormsnap"
           ],
           "add": [
-            "SUPERAWESOME:Stormsnap"
+            "expandedAreas:Stormsnap"
           ]
         }
       },
@@ -437,7 +437,7 @@
         "dropTable": {
           "add": [
             {
-              "itemID": "SUPERAWESOME:The_Good_Stuff",
+              "itemID": "expandedAreas:The_Good_Stuff",
               "minQuantity": 25,
               "maxQuantity": 100,
               "weight": 25
@@ -449,7 +449,7 @@
         "id": "melvorF:Blazing_Lantern",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Tool"
+            "expandedAreas:Tool"
           ]
         }
       },
@@ -457,8 +457,8 @@
         "id": "melvorD:Book_of_Eli",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Accessory1",
-            "SUPERAWESOME:Accessory2"
+            "expandedAreas:Accessory1",
+            "expandedAreas:Accessory2"
           ]
         }
       },
@@ -466,8 +466,8 @@
         "id": "melvorF:Book_of_Occults",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Accessory1",
-            "SUPERAWESOME:Accessory2"
+            "expandedAreas:Accessory1",
+            "expandedAreas:Accessory2"
           ]
         }
       },
@@ -475,8 +475,8 @@
         "id": "melvorF:Fine_Coinpurse",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Accessory1",
-            "SUPERAWESOME:Accessory2"
+            "expandedAreas:Accessory1",
+            "expandedAreas:Accessory2"
           ]
         }
       },
@@ -484,8 +484,8 @@
         "id": "melvorF:Book_Of_Scholars",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Accessory1",
-            "SUPERAWESOME:Accessory2"
+            "expandedAreas:Accessory1",
+            "expandedAreas:Accessory2"
           ]
         }
       },
@@ -493,7 +493,7 @@
         "id": "melvorF:Chefs_Spoon",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Tool"
+            "expandedAreas:Tool"
           ]
         }
       },
@@ -501,7 +501,7 @@
         "id": "melvorD:Bobs_Rake",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Tool"
+            "expandedAreas:Tool"
           ]
         },
         "occupiesSlots": {
@@ -514,7 +514,7 @@
         "id": "melvorD:Ring_Of_Balance",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -522,7 +522,7 @@
         "id": "melvorD:Poison_Ring",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -530,7 +530,7 @@
         "id": "melvorD:Ancient_Ring_Of_Mastery",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -538,7 +538,7 @@
         "id": "melvorD:Ancient_Ring_Of_Skills",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -546,7 +546,7 @@
         "id": "melvorD:Burning_Ring",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -554,7 +554,7 @@
         "id": "melvorD:Almighty_Ring",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -562,7 +562,7 @@
         "id": "melvorD:Frostburn_Ring",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -570,7 +570,7 @@
         "id": "melvorD:Pirates_Lost_Ring",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -578,7 +578,7 @@
         "id": "melvorF:Ring_Of_Blade_Echoes",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -586,7 +586,7 @@
         "id": "melvorF:Ring_Of_Power",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -594,7 +594,7 @@
         "id": "melvorF:Ring_Of_Barrage",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -602,7 +602,7 @@
         "id": "melvorF:Ring_Of_Wealth",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -610,7 +610,7 @@
         "id": "melvorF:Ring_Of_Spirit_Power",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -618,7 +618,7 @@
         "id": "melvorF:Shaman_Ring",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -626,7 +626,7 @@
         "id": "melvorF:Deadeye_Ring",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -634,7 +634,7 @@
         "id": "melvorF:Fighter_Ring",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -642,7 +642,7 @@
         "id": "melvorF:Warlock_Ring",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -650,7 +650,7 @@
         "id": "melvorD:Aorpheats_Signet_Ring",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -658,7 +658,7 @@
         "id": "melvorD:Christmas_Coal",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -666,7 +666,7 @@
         "id": "melvorD:Friendship_Bracelet",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -674,7 +674,7 @@
         "id": "melvorF:Burning_Madness_Ring",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -682,7 +682,7 @@
         "id": "melvorF:Gold_Diamond_Ring",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -690,7 +690,7 @@
         "id": "melvorF:Gold_Emerald_Ring",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -698,7 +698,7 @@
         "id": "melvorF:Gold_Ruby_Ring",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -706,7 +706,7 @@
         "id": "melvorF:Gold_Sapphire_Ring",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -714,7 +714,7 @@
         "id": "melvorD:Gold_Topaz_Ring",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -722,7 +722,7 @@
         "id": "melvorF:Guardian_Ring",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -730,7 +730,7 @@
         "id": "melvorF:Hunters_Ring",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -738,7 +738,7 @@
         "id": "melvorF:Magical_Ring",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -746,7 +746,7 @@
         "id": "melvorF:Natures_Blessing_Ring",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -754,7 +754,7 @@
         "id": "melvorF:Poison_Virulence_Ring",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -762,7 +762,7 @@
         "id": "melvorF:Relentless_Fury_Ring",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -770,7 +770,7 @@
         "id": "melvorF:Sandstorm_Ring",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -778,7 +778,7 @@
         "id": "melvorF:Silver_Diamond_Ring",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -786,7 +786,7 @@
         "id": "melvorF:Silver_Emerald_Ring",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -794,7 +794,7 @@
         "id": "melvorF:Silver_Ruby_Ring",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -802,7 +802,7 @@
         "id": "melvorF:Silver_Sapphire_Ring",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -810,7 +810,7 @@
         "id": "melvorF:Silver_Topaz_Ring",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -818,7 +818,7 @@
         "id": "melvorF:Spiked_Shell_Ring",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -826,7 +826,7 @@
         "id": "melvorF:Tormented_Ring",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -834,7 +834,7 @@
         "id": "melvorF:Wasteful_Ring",
         "validSlots": {
           "add": [
-            "SUPERAWESOME:Ring2"
+            "expandedAreas:Ring2"
           ]
         }
       },
@@ -878,13 +878,13 @@
               "weight": 999999
             },
             {
-              "itemID": "SUPERAWESOME:Orange_Tree_Seed",
+              "itemID": "expandedAreas:Orange_Tree_Seed",
               "minQuantity": 1,
               "maxQuantity": 1,
               "weight": 777777
             },
             {
-              "itemID": "SUPERAWESOME:Curry_Tree_Seed",
+              "itemID": "expandedAreas:Curry_Tree_Seed",
               "minQuantity": 1,
               "maxQuantity": 1,
               "weight": 888888
@@ -896,13 +896,13 @@
               "weight": 777777
             },
             {
-              "itemID": "SUPERAWESOME:Pineapple_Seed",
+              "itemID": "expandedAreas:Pineapple_Seed",
               "minQuantity": 1,
               "maxQuantity": 1,
               "weight": 777777
             },
             {
-              "itemID": "SUPERAWESOME:Papaya_Tree_Seed",
+              "itemID": "expandedAreas:Papaya_Tree_Seed",
               "minQuantity": 1,
               "maxQuantity": 1,
               "weight": 666666
@@ -914,13 +914,13 @@
               "weight": 333333
             },
             {
-              "itemID": "SUPERAWESOME:Palm_Tree_Seed",
+              "itemID": "expandedAreas:Palm_Tree_Seed",
               "minQuantity": 1,
               "maxQuantity": 1,
               "weight": 222222
             },
             {
-              "itemID": "SUPERAWESOME:Dragonfruit_Tree_Seed",
+              "itemID": "expandedAreas:Dragonfruit_Tree_Seed",
               "minQuantity": 1,
               "maxQuantity": 1,
               "weight": 11111
@@ -932,19 +932,19 @@
               "weight": 55555
             },
             {
-              "itemID": "SUPERAWESOME:Teak_Tree_Seed",
+              "itemID": "expandedAreas:Teak_Tree_Seed",
               "minQuantity": 1,
               "maxQuantity": 1,
               "weight": 555555
             },
             {
-              "itemID": "SUPERAWESOME:Mahogany_Tree_Seed",
+              "itemID": "expandedAreas:Mahogany_Tree_Seed",
               "minQuantity": 1,
               "maxQuantity": 1,
               "weight": 444444
             },
             {
-              "itemID": "SUPERAWESOME:Redwood_Tree_Seed",
+              "itemID": "expandedAreas:Redwood_Tree_Seed",
               "minQuantity": 1,
               "maxQuantity": 1,
               "weight": 5555
@@ -1001,13 +1001,13 @@
         "dropTable": {
           "add": [
             {
-              "itemID": "SUPERAWESOME:Ancient_Wizard_Gloves",
+              "itemID": "expandedAreas:Ancient_Wizard_Gloves",
               "minQuantity": 1,
               "maxQuantity": 1,
               "weight": 5
             },
             {
-              "itemID": "SUPERAWESOME:Ancient_Staff",
+              "itemID": "expandedAreas:Ancient_Staff",
               "minQuantity": 1,
               "maxQuantity": 1,
               "weight": 3
@@ -1029,49 +1029,49 @@
           ],
           "add": [
             {
-              "itemID": "SUPERAWESOME:Green_Dhide_Boots",
+              "itemID": "expandedAreas:Green_Dhide_Boots",
               "minQuantity": 1,
               "maxQuantity": 1,
               "weight": 30
             },
             {
-              "itemID": "SUPERAWESOME:Green_Dhide_Cowl",
+              "itemID": "expandedAreas:Green_Dhide_Cowl",
               "minQuantity": 1,
               "maxQuantity": 1,
               "weight": 30
             },
             {
-              "itemID": "SUPERAWESOME:Blue_Dhide_Boots",
+              "itemID": "expandedAreas:Blue_Dhide_Boots",
               "minQuantity": 1,
               "maxQuantity": 1,
               "weight": 20
             },
             {
-              "itemID": "SUPERAWESOME:Blue_Dhide_Cowl",
+              "itemID": "expandedAreas:Blue_Dhide_Cowl",
               "minQuantity": 1,
               "maxQuantity": 1,
               "weight": 20
             },
             {
-              "itemID": "SUPERAWESOME:Red_Dhide_Boots",
+              "itemID": "expandedAreas:Red_Dhide_Boots",
               "minQuantity": 1,
               "maxQuantity": 1,
               "weight": 15
             },
             {
-              "itemID": "SUPERAWESOME:Red_Dhide_Cowl",
+              "itemID": "expandedAreas:Red_Dhide_Cowl",
               "minQuantity": 1,
               "maxQuantity": 1,
               "weight": 15
             },
             {
-              "itemID": "SUPERAWESOME:Black_Dhide_Boots",
+              "itemID": "expandedAreas:Black_Dhide_Boots",
               "minQuantity": 1,
               "maxQuantity": 1,
               "weight": 10
             },
             {
-              "itemID": "SUPERAWESOME:Black_Dhide_Cowl",
+              "itemID": "expandedAreas:Black_Dhide_Cowl",
               "minQuantity": 1,
               "maxQuantity": 1,
               "weight": 10
@@ -1093,7 +1093,7 @@
           ],
           "add": [
             {
-              "itemID": "SUPERAWESOME:Black_Arrows",
+              "itemID": "expandedAreas:Black_Arrows",
               "minQuantity": 1,
               "maxQuantity": 100,
               "weight": 250
@@ -1124,13 +1124,13 @@
         "dropTable": {
           "add": [
             {
-              "itemID": "SUPERAWESOME:Ancient_Dhide_Cowl",
+              "itemID": "expandedAreas:Ancient_Dhide_Cowl",
               "minQuantity": 1,
               "maxQuantity": 1,
               "weight": 70
             },
             {
-              "itemID": "SUPERAWESOME:Ancient_Dhide_Boots",
+              "itemID": "expandedAreas:Ancient_Dhide_Boots",
               "minQuantity": 1,
               "maxQuantity": 1,
               "weight": 40
@@ -1143,7 +1143,7 @@
         "dropTable": {
           "add": [
             {
-              "itemID": "SUPERAWESOME:Waterlogged_Page",
+              "itemID": "expandedAreas:Waterlogged_Page",
               "minQuantity": 1,
               "maxQuantity": 10,
               "weight": 30
@@ -1594,11 +1594,11 @@
         "id": "melvorD:Bronze_2H_Sword",
         "specialAttacks": {
           "add": [
-            "SUPERAWESOME:WideSlash",
-            "SUPERAWESOME:Whirlwind",
-            "SUPERAWESOME:TrueStrike",
-            "SUPERAWESOME:Counterattack",
-            "SUPERAWESOME:PommelBash"
+            "expandedAreas:WideSlash",
+            "expandedAreas:Whirlwind",
+            "expandedAreas:TrueStrike",
+            "expandedAreas:Counterattack",
+            "expandedAreas:PommelBash"
           ]
         },
         "modifiers": {
@@ -1616,11 +1616,11 @@
         "id": "melvorD:Iron_2H_Sword",
         "specialAttacks": {
           "add": [
-            "SUPERAWESOME:WideSlash",
-            "SUPERAWESOME:Whirlwind",
-            "SUPERAWESOME:TrueStrike",
-            "SUPERAWESOME:Counterattack",
-            "SUPERAWESOME:PommelBash"
+            "expandedAreas:WideSlash",
+            "expandedAreas:Whirlwind",
+            "expandedAreas:TrueStrike",
+            "expandedAreas:Counterattack",
+            "expandedAreas:PommelBash"
           ]
         },
         "modifiers": {
@@ -1638,11 +1638,11 @@
         "id": "melvorD:Steel_2H_Sword",
         "specialAttacks": {
           "add": [
-            "SUPERAWESOME:WideSlash",
-            "SUPERAWESOME:Whirlwind",
-            "SUPERAWESOME:TrueStrike",
-            "SUPERAWESOME:Counterattack",
-            "SUPERAWESOME:PommelBash"
+            "expandedAreas:WideSlash",
+            "expandedAreas:Whirlwind",
+            "expandedAreas:TrueStrike",
+            "expandedAreas:Counterattack",
+            "expandedAreas:PommelBash"
           ]
         },
         "modifiers": {
@@ -1660,11 +1660,11 @@
         "id": "melvorD:Black_2H_Sword",
         "specialAttacks": {
           "add": [
-            "SUPERAWESOME:WideSlash",
-            "SUPERAWESOME:Whirlwind",
-            "SUPERAWESOME:TrueStrike",
-            "SUPERAWESOME:Counterattack",
-            "SUPERAWESOME:PommelBash"
+            "expandedAreas:WideSlash",
+            "expandedAreas:Whirlwind",
+            "expandedAreas:TrueStrike",
+            "expandedAreas:Counterattack",
+            "expandedAreas:PommelBash"
           ]
         },
         "modifiers": {
@@ -1682,11 +1682,11 @@
         "id": "melvorD:Mithril_2H_Sword",
         "specialAttacks": {
           "add": [
-            "SUPERAWESOME:WideSlash",
-            "SUPERAWESOME:Whirlwind",
-            "SUPERAWESOME:TrueStrike",
-            "SUPERAWESOME:Counterattack",
-            "SUPERAWESOME:PommelBash"
+            "expandedAreas:WideSlash",
+            "expandedAreas:Whirlwind",
+            "expandedAreas:TrueStrike",
+            "expandedAreas:Counterattack",
+            "expandedAreas:PommelBash"
           ]
         },
         "modifiers": {
@@ -1704,11 +1704,11 @@
         "id": "melvorD:Adamant_2H_Sword",
         "specialAttacks": {
           "add": [
-            "SUPERAWESOME:WideSlash",
-            "SUPERAWESOME:Whirlwind",
-            "SUPERAWESOME:TrueStrike",
-            "SUPERAWESOME:Counterattack",
-            "SUPERAWESOME:PommelBash"
+            "expandedAreas:WideSlash",
+            "expandedAreas:Whirlwind",
+            "expandedAreas:TrueStrike",
+            "expandedAreas:Counterattack",
+            "expandedAreas:PommelBash"
           ]
         },
         "modifiers": {
@@ -1726,11 +1726,11 @@
         "id": "melvorD:Rune_2H_Sword",
         "specialAttacks": {
           "add": [
-            "SUPERAWESOME:WideSlash",
-            "SUPERAWESOME:Whirlwind",
-            "SUPERAWESOME:TrueStrike",
-            "SUPERAWESOME:Counterattack",
-            "SUPERAWESOME:PommelBash"
+            "expandedAreas:WideSlash",
+            "expandedAreas:Whirlwind",
+            "expandedAreas:TrueStrike",
+            "expandedAreas:Counterattack",
+            "expandedAreas:PommelBash"
           ]
         },
         "modifiers": {
@@ -1748,11 +1748,11 @@
         "id": "melvorD:Dragon_2H_Sword",
         "specialAttacks": {
           "add": [
-            "SUPERAWESOME:WideSlash",
-            "SUPERAWESOME:Whirlwind",
-            "SUPERAWESOME:TrueStrike",
-            "SUPERAWESOME:Counterattack",
-            "SUPERAWESOME:PommelBash"
+            "expandedAreas:WideSlash",
+            "expandedAreas:Whirlwind",
+            "expandedAreas:TrueStrike",
+            "expandedAreas:Counterattack",
+            "expandedAreas:PommelBash"
           ]
         },
         "modifiers": {
@@ -1770,11 +1770,11 @@
         "id": "melvorD:Ice_2h_Sword",
         "specialAttacks": {
           "add": [
-            "SUPERAWESOME:WideSlash",
-            "SUPERAWESOME:Whirlwind",
-            "SUPERAWESOME:TrueStrike",
-            "SUPERAWESOME:Counterattack",
-            "SUPERAWESOME:PommelBash"
+            "expandedAreas:WideSlash",
+            "expandedAreas:Whirlwind",
+            "expandedAreas:TrueStrike",
+            "expandedAreas:Counterattack",
+            "expandedAreas:PommelBash"
           ]
         },
         "modifiers": {
@@ -1792,11 +1792,11 @@
         "id": "melvorF:Ancient_2H_Sword",
         "specialAttacks": {
           "add": [
-            "SUPERAWESOME:WideSlash",
-            "SUPERAWESOME:Whirlwind",
-            "SUPERAWESOME:TrueStrike",
-            "SUPERAWESOME:Counterattack",
-            "SUPERAWESOME:PommelBash"
+            "expandedAreas:WideSlash",
+            "expandedAreas:Whirlwind",
+            "expandedAreas:TrueStrike",
+            "expandedAreas:Counterattack",
+            "expandedAreas:PommelBash"
           ]
         },
         "modifiers": {
@@ -1814,11 +1814,11 @@
         "id": "melvorF:Aeris_Godsword",
         "specialAttacks": {
           "add": [
-            "SUPERAWESOME:WideSlash",
-            "SUPERAWESOME:Whirlwind",
-            "SUPERAWESOME:TrueStrike",
-            "SUPERAWESOME:Counterattack",
-            "SUPERAWESOME:PommelBash"
+            "expandedAreas:WideSlash",
+            "expandedAreas:Whirlwind",
+            "expandedAreas:TrueStrike",
+            "expandedAreas:Counterattack",
+            "expandedAreas:PommelBash"
           ]
         },
         "modifiers": {
@@ -1836,11 +1836,11 @@
         "id": "melvorF:Glacia_Godsword",
         "specialAttacks": {
           "add": [
-            "SUPERAWESOME:WideSlash",
-            "SUPERAWESOME:Whirlwind",
-            "SUPERAWESOME:TrueStrike",
-            "SUPERAWESOME:Counterattack",
-            "SUPERAWESOME:PommelBash"
+            "expandedAreas:WideSlash",
+            "expandedAreas:Whirlwind",
+            "expandedAreas:TrueStrike",
+            "expandedAreas:Counterattack",
+            "expandedAreas:PommelBash"
           ]
         },
         "modifiers": {
@@ -1858,11 +1858,11 @@
         "id": "melvorF:Terran_Godsword",
         "specialAttacks": {
           "add": [
-            "SUPERAWESOME:WideSlash",
-            "SUPERAWESOME:Whirlwind",
-            "SUPERAWESOME:TrueStrike",
-            "SUPERAWESOME:Counterattack",
-            "SUPERAWESOME:PommelBash"
+            "expandedAreas:WideSlash",
+            "expandedAreas:Whirlwind",
+            "expandedAreas:TrueStrike",
+            "expandedAreas:Counterattack",
+            "expandedAreas:PommelBash"
           ]
         },
         "modifiers": {
@@ -1880,11 +1880,11 @@
         "id": "melvorF:Ragnar_Godsword",
         "specialAttacks": {
           "add": [
-            "SUPERAWESOME:WideSlash",
-            "SUPERAWESOME:Whirlwind",
-            "SUPERAWESOME:TrueStrike",
-            "SUPERAWESOME:Counterattack",
-            "SUPERAWESOME:PommelBash"
+            "expandedAreas:WideSlash",
+            "expandedAreas:Whirlwind",
+            "expandedAreas:TrueStrike",
+            "expandedAreas:Counterattack",
+            "expandedAreas:PommelBash"
           ]
         },
         "modifiers": {
@@ -1926,8 +1926,8 @@
         },
         "specialAttacks": {
           "add": [
-            "SUPERAWESOME:DisruptingStab",
-            "SUPERAWESOME:CripplingStrike"
+            "expandedAreas:DisruptingStab",
+            "expandedAreas:CripplingStrike"
           ]
         }
       },
@@ -1952,9 +1952,9 @@
         },
         "specialAttacks": {
           "add": [
-            "SUPERAWESOME:WildStrike",
-            "SUPERAWESOME:Heartseeker",
-            "SUPERAWESOME:DeadlyDelivery"
+            "expandedAreas:WildStrike",
+            "expandedAreas:Heartseeker",
+            "expandedAreas:DeadlyDelivery"
           ]
         }
       },
@@ -1979,9 +1979,9 @@
         },
         "specialAttacks": {
           "add": [
-            "SUPERAWESOME:WildStrike",
-            "SUPERAWESOME:Heartseeker",
-            "SUPERAWESOME:DeadlyDelivery"
+            "expandedAreas:WildStrike",
+            "expandedAreas:Heartseeker",
+            "expandedAreas:DeadlyDelivery"
           ]
         }
       },
@@ -2006,9 +2006,9 @@
         },
         "specialAttacks": {
           "add": [
-            "SUPERAWESOME:WildStrike",
-            "SUPERAWESOME:Heartseeker",
-            "SUPERAWESOME:DeadlyDelivery"
+            "expandedAreas:WildStrike",
+            "expandedAreas:Heartseeker",
+            "expandedAreas:DeadlyDelivery"
           ]
         }
       },
@@ -2033,9 +2033,9 @@
         },
         "specialAttacks": {
           "add": [
-            "SUPERAWESOME:WildStrike",
-            "SUPERAWESOME:Heartseeker",
-            "SUPERAWESOME:DeadlyDelivery"
+            "expandedAreas:WildStrike",
+            "expandedAreas:Heartseeker",
+            "expandedAreas:DeadlyDelivery"
           ]
         }
       },
@@ -2060,9 +2060,9 @@
         },
         "specialAttacks": {
           "add": [
-            "SUPERAWESOME:WildStrike",
-            "SUPERAWESOME:Heartseeker",
-            "SUPERAWESOME:DeadlyDelivery"
+            "expandedAreas:WildStrike",
+            "expandedAreas:Heartseeker",
+            "expandedAreas:DeadlyDelivery"
           ]
         }
       },
@@ -2087,9 +2087,9 @@
         },
         "specialAttacks": {
           "add": [
-            "SUPERAWESOME:WildStrike",
-            "SUPERAWESOME:Heartseeker",
-            "SUPERAWESOME:DeadlyDelivery"
+            "expandedAreas:WildStrike",
+            "expandedAreas:Heartseeker",
+            "expandedAreas:DeadlyDelivery"
           ]
         }
       },
@@ -2114,9 +2114,9 @@
         },
         "specialAttacks": {
           "add": [
-            "SUPERAWESOME:WildStrike",
-            "SUPERAWESOME:Heartseeker",
-            "SUPERAWESOME:DeadlyDelivery"
+            "expandedAreas:WildStrike",
+            "expandedAreas:Heartseeker",
+            "expandedAreas:DeadlyDelivery"
           ]
         }
       },
@@ -2141,9 +2141,9 @@
         },
         "specialAttacks": {
           "add": [
-            "SUPERAWESOME:WildStrike",
-            "SUPERAWESOME:Heartseeker",
-            "SUPERAWESOME:DeadlyDelivery"
+            "expandedAreas:WildStrike",
+            "expandedAreas:Heartseeker",
+            "expandedAreas:DeadlyDelivery"
           ]
         }
       },
@@ -2168,9 +2168,9 @@
         },
         "specialAttacks": {
           "add": [
-            "SUPERAWESOME:WildStrike",
-            "SUPERAWESOME:Heartseeker",
-            "SUPERAWESOME:DeadlyDelivery"
+            "expandedAreas:WildStrike",
+            "expandedAreas:Heartseeker",
+            "expandedAreas:DeadlyDelivery"
           ]
         }
       },
@@ -2208,9 +2208,9 @@
         },
         "specialAttacks": {
           "add": [
-            "SUPERAWESOME:SerpentsBite",
-            "SUPERAWESOME:Heartseeker",
-            "SUPERAWESOME:DeadlyDelivery"
+            "expandedAreas:SerpentsBite",
+            "expandedAreas:Heartseeker",
+            "expandedAreas:DeadlyDelivery"
           ],
           "remove": [
             "melvorF:PoisonedHit"
@@ -2252,9 +2252,9 @@
         },
         "specialAttacks": {
           "add": [
-            "SUPERAWESOME:DeadlyCut",
-            "SUPERAWESOME:Heartseeker",
-            "SUPERAWESOME:DeadlyDelivery"
+            "expandedAreas:DeadlyCut",
+            "expandedAreas:Heartseeker",
+            "expandedAreas:DeadlyDelivery"
           ],
           "remove": [
             "melvorF:DeadlyCut"
@@ -2276,7 +2276,7 @@
         "lootTable": {
           "add": [
             {
-              "itemID": "SUPERAWESOME:Large_Fang",
+              "itemID": "expandedAreas:Large_Fang",
               "minQuantity": 1,
               "maxQuantity": 3,
               "weight": 35
@@ -2289,7 +2289,7 @@
         "lootTable": {
           "add": [
             {
-              "itemID": "SUPERAWESOME:Large_Fang",
+              "itemID": "expandedAreas:Large_Fang",
               "minQuantity": 1,
               "maxQuantity": 3,
               "weight": 35
@@ -2302,7 +2302,7 @@
         "lootTable": {
           "add": [
             {
-              "itemID": "SUPERAWESOME:Large_Fang",
+              "itemID": "expandedAreas:Large_Fang",
               "minQuantity": 1,
               "maxQuantity": 4,
               "weight": 200
@@ -2315,7 +2315,7 @@
         "lootTable": {
           "add": [
             {
-              "itemID": "SUPERAWESOME:Large_Fang",
+              "itemID": "expandedAreas:Large_Fang",
               "minQuantity": 1,
               "maxQuantity": 4,
               "weight": 120
@@ -2328,7 +2328,7 @@
         "lootTable": {
           "add": [
             {
-              "itemID": "SUPERAWESOME:Large_Fang",
+              "itemID": "expandedAreas:Large_Fang",
               "minQuantity": 1,
               "maxQuantity": 4,
               "weight": 90
@@ -2341,7 +2341,7 @@
         "lootTable": {
           "add": [
             {
-              "itemID": "SUPERAWESOME:Large_Fang",
+              "itemID": "expandedAreas:Large_Fang",
               "minQuantity": 1,
               "maxQuantity": 4,
               "weight": 100
@@ -2354,7 +2354,7 @@
         "lootTable": {
           "add": [
             {
-              "itemID": "SUPERAWESOME:Massive_Fang",
+              "itemID": "expandedAreas:Massive_Fang",
               "minQuantity": 1,
               "maxQuantity": 6,
               "weight": 125
@@ -2367,7 +2367,7 @@
         "lootTable": {
           "add": [
             {
-              "itemID": "SUPERAWESOME:Massive_Fang",
+              "itemID": "expandedAreas:Massive_Fang",
               "minQuantity": 1,
               "maxQuantity": 6,
               "weight": 125
@@ -2380,7 +2380,7 @@
         "lootTable": {
           "add": [
             {
-              "itemID": "SUPERAWESOME:Massive_Fang",
+              "itemID": "expandedAreas:Massive_Fang",
               "minQuantity": 1,
               "maxQuantity": 6,
               "weight": 125
@@ -2393,7 +2393,7 @@
         "lootTable": {
           "add": [
             {
-              "itemID": "SUPERAWESOME:Massive_Fang",
+              "itemID": "expandedAreas:Massive_Fang",
               "minQuantity": 1,
               "maxQuantity": 6,
               "weight": 125
@@ -2404,7 +2404,7 @@
       {
         "id": "melvorF:FearfulEye",
         "bones": {
-          "itemID": "SUPERAWESOME:Fearful_Eyeball",
+          "itemID": "expandedAreas:Fearful_Eyeball",
           "quantity": 1
         }
       },
@@ -2413,7 +2413,7 @@
         "lootTable": {
           "add": [
             {
-              "itemID": "SUPERAWESOME:Hoof",
+              "itemID": "expandedAreas:Hoof",
               "minQuantity": 1,
               "maxQuantity": 4,
               "weight": 33
@@ -2426,7 +2426,7 @@
         "lootTable": {
           "add": [
             {
-              "itemID": "SUPERAWESOME:Hoof",
+              "itemID": "expandedAreas:Hoof",
               "minQuantity": 1,
               "maxQuantity": 4,
               "weight": 33
@@ -2439,7 +2439,7 @@
         "lootTable": {
           "add": [
             {
-              "itemID": "SUPERAWESOME:Hoof",
+              "itemID": "expandedAreas:Hoof",
               "minQuantity": 1,
               "maxQuantity": 4,
               "weight": 33
@@ -2453,13 +2453,13 @@
         "lootTable": {
           "add": [
             {
-              "itemID": "SUPERAWESOME:Hoof",
+              "itemID": "expandedAreas:Hoof",
               "minQuantity": 1,
               "maxQuantity": 4,
               "weight": 22
             },
             {
-              "itemID": "SUPERAWESOME:Celestial_Feather",
+              "itemID": "expandedAreas:Celestial_Feather",
               "minQuantity": 1,
               "maxQuantity": 3,
               "weight": 11
@@ -2470,14 +2470,14 @@
       {
         "id": "melvorF:Phoenix",
         "bones": {
-          "itemID": "SUPERAWESOME:Phoenix_Feather",
+          "itemID": "expandedAreas:Phoenix_Feather",
           "quantity": 1
         }
       },
       {
         "id": "melvorF:Aleron",
         "bones": {
-          "itemID": "SUPERAWESOME:Celestial_Feather",
+          "itemID": "expandedAreas:Celestial_Feather",
           "quantity": 6
         }
       },
@@ -2485,7 +2485,7 @@
         "id": "melvorD:AdamantKnight",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -2493,7 +2493,7 @@
         "id": "melvorD:AdultFarmer",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -2501,7 +2501,7 @@
         "id": "melvorF:AhreniaStronghold",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeStrange"
+            "expandedAreas:CreatureTypeStrange"
           ]
         }
       },
@@ -2509,7 +2509,7 @@
         "id": "melvorF:AirGolem",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeConstructed"
+            "expandedAreas:CreatureTypeConstructed"
           ]
         }
       },
@@ -2517,8 +2517,8 @@
         "id": "melvorF:AirGuard",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHeavenly",
-            "SUPERAWESOME:CreatureTypeBestial"
+            "expandedAreas:CreatureTypeHeavenly",
+            "expandedAreas:CreatureTypeBestial"
           ]
         }
       },
@@ -2526,7 +2526,7 @@
         "id": "melvorF:AirMonster",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHeavenly"
+            "expandedAreas:CreatureTypeHeavenly"
           ]
         }
       },
@@ -2534,7 +2534,7 @@
         "id": "melvorF:Aleron",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHeavenly"
+            "expandedAreas:CreatureTypeHeavenly"
           ]
         }
       },
@@ -2542,7 +2542,7 @@
         "id": "melvorF:Angel",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHeavenly"
+            "expandedAreas:CreatureTypeHeavenly"
           ]
         }
       },
@@ -2550,7 +2550,7 @@
         "id": "melvorD:Bandit",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -2558,7 +2558,7 @@
         "id": "melvorD:BanditLeader",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -2566,7 +2566,7 @@
         "id": "melvorD:BanditTrainee",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -2574,7 +2574,7 @@
         "id": "melvorF:Bane",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -2582,7 +2582,7 @@
         "id": "melvorF:BaneInstrumentOfFear",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -2590,7 +2590,7 @@
         "id": "melvorD:Bat",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeBestial"
+            "expandedAreas:CreatureTypeBestial"
           ]
         }
       },
@@ -2598,7 +2598,7 @@
         "id": "melvorD:BigBat",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeBestial"
+            "expandedAreas:CreatureTypeBestial"
           ]
         }
       },
@@ -2606,7 +2606,7 @@
         "id": "melvorD:BlackDragon",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeDraconic"
+            "expandedAreas:CreatureTypeDraconic"
           ]
         }
       },
@@ -2614,7 +2614,7 @@
         "id": "melvorD:BlackKnight",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -2622,7 +2622,7 @@
         "id": "melvorD:BlueDragon",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeDraconic"
+            "expandedAreas:CreatureTypeDraconic"
           ]
         }
       },
@@ -2630,7 +2630,7 @@
         "id": "melvorF:BountyHunter",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -2638,7 +2638,7 @@
         "id": "melvorD:BrownSpider",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeBestial"
+            "expandedAreas:CreatureTypeBestial"
           ]
         }
       },
@@ -2646,8 +2646,8 @@
         "id": "melvorF:Cerberus",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeBestial",
-            "SUPERAWESOME:CreatureTypeHellish"
+            "expandedAreas:CreatureTypeBestial",
+            "expandedAreas:CreatureTypeHellish"
           ]
         }
       },
@@ -2655,7 +2655,7 @@
         "id": "melvorF:ChaoticGreaterDragon",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeDraconic"
+            "expandedAreas:CreatureTypeDraconic"
           ]
         }
       },
@@ -2663,7 +2663,7 @@
         "id": "melvorD:Chick",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeBestial"
+            "expandedAreas:CreatureTypeBestial"
           ]
         }
       },
@@ -2671,7 +2671,7 @@
         "id": "melvorD:Chicken",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeBestial"
+            "expandedAreas:CreatureTypeBestial"
           ]
         }
       },
@@ -2679,7 +2679,7 @@
         "id": "melvorD:ConfusedPirate",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -2687,7 +2687,7 @@
         "id": "melvorD:Cow",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeBestial"
+            "expandedAreas:CreatureTypeBestial"
           ]
         }
       },
@@ -2695,7 +2695,7 @@
         "id": "melvorF:CursedLich",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeUndead"
+            "expandedAreas:CreatureTypeUndead"
           ]
         }
       },
@@ -2703,7 +2703,7 @@
         "id": "melvorF:CursedMaiden",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeUndead"
+            "expandedAreas:CreatureTypeUndead"
           ]
         }
       },
@@ -2711,7 +2711,7 @@
         "id": "melvorF:DarkHornedElite",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeBestial"
+            "expandedAreas:CreatureTypeBestial"
           ]
         }
       },
@@ -2719,7 +2719,7 @@
         "id": "melvorD:DarkWizard",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -2727,7 +2727,7 @@
         "id": "melvorF:Druid",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -2735,7 +2735,7 @@
         "id": "melvorF:EarthGolem",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeConstructed"
+            "expandedAreas:CreatureTypeConstructed"
           ]
         }
       },
@@ -2743,7 +2743,7 @@
         "id": "melvorF:EarthGuard",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeFae"
+            "expandedAreas:CreatureTypeFae"
           ]
         }
       },
@@ -2751,7 +2751,7 @@
         "id": "melvorF:EarthMonster",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeFae"
+            "expandedAreas:CreatureTypeFae"
           ]
         }
       },
@@ -2759,7 +2759,7 @@
         "id": "melvorF:ElderDragon",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeDraconic"
+            "expandedAreas:CreatureTypeDraconic"
           ]
         }
       },
@@ -2767,7 +2767,7 @@
         "id": "melvorF:ElderVampire",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeUndead"
+            "expandedAreas:CreatureTypeUndead"
           ]
         }
       },
@@ -2775,7 +2775,7 @@
         "id": "melvorD:ElderWizard",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -2784,25 +2784,25 @@
         "lootTable": {
           "add": [
             {
-              "itemID": "SUPERAWESOME:Burnt_Page",
+              "itemID": "expandedAreas:Burnt_Page",
               "minQuantity": 1,
               "maxQuantity": 20,
               "weight": 3
             },
             {
-              "itemID": "SUPERAWESOME:Waterlogged_Page",
+              "itemID": "expandedAreas:Waterlogged_Page",
               "minQuantity": 1,
               "maxQuantity": 20,
               "weight": 3
             },
             {
-              "itemID": "SUPERAWESOME:Wispy_Page",
+              "itemID": "expandedAreas:Wispy_Page",
               "minQuantity": 1,
               "maxQuantity": 20,
               "weight": 3
             },
             {
-              "itemID": "SUPERAWESOME:Muddy_Page",
+              "itemID": "expandedAreas:Muddy_Page",
               "minQuantity": 1,
               "maxQuantity": 20,
               "weight": 3
@@ -2811,7 +2811,7 @@
         },
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -2819,7 +2819,7 @@
         "id": "melvorF:ElementalistBoss",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -2827,7 +2827,7 @@
         "id": "melvorD:ElerineArcher",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeFae"
+            "expandedAreas:CreatureTypeFae"
           ]
         }
       },
@@ -2835,7 +2835,7 @@
         "id": "melvorD:ElerineMage",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeFae"
+            "expandedAreas:CreatureTypeFae"
           ]
         }
       },
@@ -2843,7 +2843,7 @@
         "id": "melvorD:ElerineWarrior",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeFae"
+            "expandedAreas:CreatureTypeFae"
           ]
         }
       },
@@ -2851,7 +2851,7 @@
         "id": "melvorD:EvilSpider",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeBestial"
+            "expandedAreas:CreatureTypeBestial"
           ]
         }
       },
@@ -2859,7 +2859,7 @@
         "id": "melvorF:EyeOfFear",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHellish"
+            "expandedAreas:CreatureTypeHellish"
           ]
         }
       },
@@ -2867,7 +2867,7 @@
         "id": "melvorF:Eyes",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeStrange"
+            "expandedAreas:CreatureTypeStrange"
           ]
         }
       },
@@ -2875,7 +2875,7 @@
         "id": "melvorF:Fairy",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeFae"
+            "expandedAreas:CreatureTypeFae"
           ]
         }
       },
@@ -2883,7 +2883,7 @@
         "id": "melvorF:FearfulEye",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeStrange"
+            "expandedAreas:CreatureTypeStrange"
           ]
         }
       },
@@ -2891,7 +2891,7 @@
         "id": "melvorF:FierceDevil",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHellish"
+            "expandedAreas:CreatureTypeHellish"
           ]
         }
       },
@@ -2899,7 +2899,7 @@
         "id": "melvorF:FierceDevilBoss",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHellish"
+            "expandedAreas:CreatureTypeHellish"
           ]
         }
       },
@@ -2907,7 +2907,7 @@
         "id": "melvorF:FireGolem",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeConstructed"
+            "expandedAreas:CreatureTypeConstructed"
           ]
         }
       },
@@ -2915,7 +2915,7 @@
         "id": "melvorF:FireGuard",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHellish"
+            "expandedAreas:CreatureTypeHellish"
           ]
         }
       },
@@ -2923,7 +2923,7 @@
         "id": "melvorF:FireMonster",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeMonstrous"
+            "expandedAreas:CreatureTypeMonstrous"
           ]
         }
       },
@@ -2931,7 +2931,7 @@
         "id": "melvorD:FireSpirit",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeElemental"
+            "expandedAreas:CreatureTypeElemental"
           ]
         }
       },
@@ -2939,7 +2939,7 @@
         "id": "melvorD:FirstMate",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -2947,7 +2947,7 @@
         "id": "melvorD:FrozenArcher",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -2955,7 +2955,7 @@
         "id": "melvorD:FrozenMammoth",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeBestial"
+            "expandedAreas:CreatureTypeBestial"
           ]
         }
       },
@@ -2963,7 +2963,7 @@
         "id": "melvorF:FuriousHornedElite",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeBestial"
+            "expandedAreas:CreatureTypeBestial"
           ]
         }
       },
@@ -2971,7 +2971,7 @@
         "id": "melvorD:Ghost",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeUndead"
+            "expandedAreas:CreatureTypeUndead"
           ]
         }
       },
@@ -2979,7 +2979,7 @@
         "id": "melvorD:GiantCrab",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeBestial"
+            "expandedAreas:CreatureTypeBestial"
           ]
         }
       },
@@ -2987,7 +2987,7 @@
         "id": "melvorF:GiantMoth",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeBestial"
+            "expandedAreas:CreatureTypeBestial"
           ]
         }
       },
@@ -2995,8 +2995,8 @@
         "id": "melvorD:Golbin",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeFae",
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeFae",
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -3004,7 +3004,7 @@
         "id": "melvorF:GooMonster",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeGelatinous"
+            "expandedAreas:CreatureTypeGelatinous"
           ]
         }
       },
@@ -3012,8 +3012,8 @@
         "id": "melvorF:GreaterSkeletalDragon",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeDraconic",
-            "SUPERAWESOME:CreatureTypeUndead"
+            "expandedAreas:CreatureTypeDraconic",
+            "expandedAreas:CreatureTypeUndead"
           ]
         }
       },
@@ -3021,7 +3021,7 @@
         "id": "melvorD:GreenDragon",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeDraconic"
+            "expandedAreas:CreatureTypeDraconic"
           ]
         }
       },
@@ -3029,7 +3029,7 @@
         "id": "melvorF:GreenGooMonster",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeMonstrous"
+            "expandedAreas:CreatureTypeMonstrous"
           ]
         }
       },
@@ -3037,7 +3037,7 @@
         "id": "melvorF:Griffin",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeMonstrous"
+            "expandedAreas:CreatureTypeMonstrous"
           ]
         }
       },
@@ -3045,7 +3045,7 @@
         "id": "melvorD:HillGiant",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeGiantkin"
+            "expandedAreas:CreatureTypeGiantkin"
           ]
         }
       },
@@ -3053,7 +3053,7 @@
         "id": "melvorF:HolyArcher",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHeavenly"
+            "expandedAreas:CreatureTypeHeavenly"
           ]
         }
       },
@@ -3061,7 +3061,7 @@
         "id": "melvorF:HuntingGreaterDragon",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeDraconic"
+            "expandedAreas:CreatureTypeDraconic"
           ]
         }
       },
@@ -3069,7 +3069,7 @@
         "id": "melvorD:Ice",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeElemental"
+            "expandedAreas:CreatureTypeElemental"
           ]
         }
       },
@@ -3077,7 +3077,7 @@
         "id": "melvorD:IceMonster",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeElemental"
+            "expandedAreas:CreatureTypeElemental"
           ]
         }
       },
@@ -3085,7 +3085,7 @@
         "id": "melvorD:IceTroll",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeGiantkin"
+            "expandedAreas:CreatureTypeGiantkin"
           ]
         }
       },
@@ -3093,7 +3093,7 @@
         "id": "melvorF:Ignis",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHellish"
+            "expandedAreas:CreatureTypeHellish"
           ]
         }
       },
@@ -3101,7 +3101,7 @@
         "id": "melvorF:Incendius",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeElemental"
+            "expandedAreas:CreatureTypeElemental"
           ]
         }
       },
@@ -3109,7 +3109,7 @@
         "id": "melvorD:JuniorFarmer",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -3117,7 +3117,7 @@
         "id": "melvorF:Kutul",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeStrange"
+            "expandedAreas:CreatureTypeStrange"
           ]
         }
       },
@@ -3125,7 +3125,7 @@
         "id": "melvorD:Leech",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeBestial"
+            "expandedAreas:CreatureTypeBestial"
           ]
         }
       },
@@ -3133,7 +3133,7 @@
         "id": "melvorF:LegaranWurm",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeMonstrous"
+            "expandedAreas:CreatureTypeMonstrous"
           ]
         }
       },
@@ -3141,7 +3141,7 @@
         "id": "melvorF:Lissia",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeStrange"
+            "expandedAreas:CreatureTypeStrange"
           ]
         }
       },
@@ -3149,7 +3149,7 @@
         "id": "melvorF:LotsofEyes",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeStrange"
+            "expandedAreas:CreatureTypeStrange"
           ]
         }
       },
@@ -3157,7 +3157,7 @@
         "id": "melvorD:MalcsTheGuardianOfMelvor",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeDraconic"
+            "expandedAreas:CreatureTypeDraconic"
           ]
         }
       },
@@ -3165,7 +3165,7 @@
         "id": "melvorF:MalcsTheGuardianOfStrongholds",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeDraconic"
+            "expandedAreas:CreatureTypeDraconic"
           ]
         }
       },
@@ -3173,7 +3173,7 @@
         "id": "melvorF:MalcsTheLeaderOfDragons",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeDraconic"
+            "expandedAreas:CreatureTypeDraconic"
           ]
         }
       },
@@ -3181,7 +3181,7 @@
         "id": "melvorF:ManyEyedMonster",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeStrange"
+            "expandedAreas:CreatureTypeStrange"
           ]
         }
       },
@@ -3189,7 +3189,7 @@
         "id": "melvorD:MasterFarmer",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -3197,7 +3197,7 @@
         "id": "melvorD:MasterWizard",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -3205,7 +3205,7 @@
         "id": "melvorF:MioliteMonarch",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypePlantlike"
+            "expandedAreas:CreatureTypePlantlike"
           ]
         }
       },
@@ -3213,7 +3213,7 @@
         "id": "melvorF:MioliteSprig",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypePlantlike"
+            "expandedAreas:CreatureTypePlantlike"
           ]
         }
       },
@@ -3221,7 +3221,7 @@
         "id": "melvorF:MioliteTrio",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypePlantlike"
+            "expandedAreas:CreatureTypePlantlike"
           ]
         }
       },
@@ -3229,7 +3229,7 @@
         "id": "melvorF:MioliteWarden",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypePlantlike"
+            "expandedAreas:CreatureTypePlantlike"
           ]
         }
       },
@@ -3237,7 +3237,7 @@
         "id": "melvorF:Mistral",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypePlantlike"
+            "expandedAreas:CreatureTypePlantlike"
           ]
         }
       },
@@ -3245,7 +3245,7 @@
         "id": "melvorD:MithrilKnight",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -3253,7 +3253,7 @@
         "id": "melvorD:MoistMonster",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeMonstrous"
+            "expandedAreas:CreatureTypeMonstrous"
           ]
         }
       },
@@ -3261,7 +3261,7 @@
         "id": "melvorD:MossGiant",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeGiantkin"
+            "expandedAreas:CreatureTypeGiantkin"
           ]
         }
       },
@@ -3269,7 +3269,7 @@
         "id": "melvorD:MummaChicken",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeBestial"
+            "expandedAreas:CreatureTypeBestial"
           ]
         }
       },
@@ -3277,7 +3277,7 @@
         "id": "melvorF:Mummy",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeUndead"
+            "expandedAreas:CreatureTypeUndead"
           ]
         }
       },
@@ -3285,7 +3285,7 @@
         "id": "melvorF:Murtia",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeStrange"
+            "expandedAreas:CreatureTypeStrange"
           ]
         }
       },
@@ -3293,7 +3293,7 @@
         "id": "melvorF:MysteriousFigurePhase1",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -3301,7 +3301,7 @@
         "id": "melvorF:MysteriousFigurePhase1Stronghold",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -3309,7 +3309,7 @@
         "id": "melvorF:MysteriousFigurePhase2",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -3317,7 +3317,7 @@
         "id": "melvorF:MysteriousFigurePhase2Stronghold",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -3325,7 +3325,7 @@
         "id": "melvorF:Necromancer",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -3333,7 +3333,7 @@
         "id": "melvorF:NoxiousSerpent",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeBestial"
+            "expandedAreas:CreatureTypeBestial"
           ]
         }
       },
@@ -3341,7 +3341,7 @@
         "id": "melvorF:Ophidia",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeStrange"
+            "expandedAreas:CreatureTypeStrange"
           ]
         }
       },
@@ -3349,7 +3349,7 @@
         "id": "melvorF:Paladin",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -3357,7 +3357,7 @@
         "id": "melvorF:Pegasus",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHeavenly"
+            "expandedAreas:CreatureTypeHeavenly"
           ]
         }
       },
@@ -3365,7 +3365,7 @@
         "id": "melvorF:Phoenix",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeElemental"
+            "expandedAreas:CreatureTypeElemental"
           ]
         }
       },
@@ -3373,7 +3373,7 @@
         "id": "melvorD:Pirate",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -3381,7 +3381,7 @@
         "id": "melvorD:PirateCaptain",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeUndead"
+            "expandedAreas:CreatureTypeUndead"
           ]
         }
       },
@@ -3389,7 +3389,7 @@
         "id": "melvorD:Plant",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypePlantlike"
+            "expandedAreas:CreatureTypePlantlike"
           ]
         }
       },
@@ -3397,7 +3397,7 @@
         "id": "melvorF:PratTheGuardianOfSecrets",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeDraconic"
+            "expandedAreas:CreatureTypeDraconic"
           ]
         }
       },
@@ -3405,7 +3405,7 @@
         "id": "melvorF:PratTheGuardianOfSecretsBoss",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeDraconic"
+            "expandedAreas:CreatureTypeDraconic"
           ]
         }
       },
@@ -3413,7 +3413,7 @@
         "id": "melvorD:PratTheProtectorOfSecrets",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeDraconic"
+            "expandedAreas:CreatureTypeDraconic"
           ]
         }
       },
@@ -3421,7 +3421,7 @@
         "id": "melvorF:Priest",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -3429,7 +3429,7 @@
         "id": "melvorD:ProtectorofIce",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeDraconic"
+            "expandedAreas:CreatureTypeDraconic"
           ]
         }
       },
@@ -3437,7 +3437,7 @@
         "id": "melvorF:PurpleGooMonster",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeGelatinous"
+            "expandedAreas:CreatureTypeGelatinous"
           ]
         }
       },
@@ -3445,7 +3445,7 @@
         "id": "melvorF:Pyra",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeElemental"
+            "expandedAreas:CreatureTypeElemental"
           ]
         }
       },
@@ -3453,7 +3453,7 @@
         "id": "melvorF:RagingHornedElite",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeBestial"
+            "expandedAreas:CreatureTypeBestial"
           ]
         }
       },
@@ -3461,7 +3461,7 @@
         "id": "melvorF:RancoraSpider",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeMonstrous"
+            "expandedAreas:CreatureTypeMonstrous"
           ]
         }
       },
@@ -3469,8 +3469,8 @@
         "id": "melvorD:RangedGolbin",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeFae",
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeFae",
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -3478,7 +3478,7 @@
         "id": "melvorF:RedDevil",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHellish"
+            "expandedAreas:CreatureTypeHellish"
           ]
         }
       },
@@ -3486,7 +3486,7 @@
         "id": "melvorD:RedDragon",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeDraconic"
+            "expandedAreas:CreatureTypeDraconic"
           ]
         }
       },
@@ -3494,7 +3494,7 @@
         "id": "melvorD:ResurrectedEye",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeStrange"
+            "expandedAreas:CreatureTypeStrange"
           ]
         }
       },
@@ -3502,7 +3502,7 @@
         "id": "melvorF:Rokken",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeStrange"
+            "expandedAreas:CreatureTypeStrange"
           ]
         }
       },
@@ -3510,7 +3510,7 @@
         "id": "melvorD:RuneKnight",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -3518,7 +3518,7 @@
         "id": "melvorF:SandBeast",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeMonstrous"
+            "expandedAreas:CreatureTypeMonstrous"
           ]
         }
       },
@@ -3526,7 +3526,7 @@
         "id": "melvorF:ScatteredGooMonster",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeGelatinous"
+            "expandedAreas:CreatureTypeGelatinous"
           ]
         }
       },
@@ -3534,7 +3534,7 @@
         "id": "melvorD:Seagull",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeBestial"
+            "expandedAreas:CreatureTypeBestial"
           ]
         }
       },
@@ -3542,7 +3542,7 @@
         "id": "melvorF:SeethingHornedElite",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeBestial"
+            "expandedAreas:CreatureTypeBestial"
           ]
         }
       },
@@ -3551,7 +3551,7 @@
         "lootTable": {
           "add": [
             {
-              "itemID": "SUPERAWESOME:Staff_Spiritcaller",
+              "itemID": "expandedAreas:Staff_Spiritcaller",
               "minQuantity": 1,
               "maxQuantity": 200,
               "weight": 5
@@ -3560,7 +3560,7 @@
         },
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -3568,7 +3568,7 @@
         "id": "melvorD:Skeleton",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeUndead"
+            "expandedAreas:CreatureTypeUndead"
           ]
         }
       },
@@ -3576,7 +3576,7 @@
         "id": "melvorD:Spider",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeBestial"
+            "expandedAreas:CreatureTypeBestial"
           ]
         }
       },
@@ -3584,7 +3584,7 @@
         "id": "melvorD:SpiderKing",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeBestial"
+            "expandedAreas:CreatureTypeBestial"
           ]
         }
       },
@@ -3592,7 +3592,7 @@
         "id": "melvorF:SpikedRedClaw",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeMonstrous"
+            "expandedAreas:CreatureTypeMonstrous"
           ]
         }
       },
@@ -3600,7 +3600,7 @@
         "id": "melvorF:Statue",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeConstructed"
+            "expandedAreas:CreatureTypeConstructed"
           ]
         }
       },
@@ -3608,7 +3608,7 @@
         "id": "melvorD:SteelKnight",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -3616,7 +3616,7 @@
         "id": "melvorF:StoneSnake",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeStrange"
+            "expandedAreas:CreatureTypeStrange"
           ]
         }
       },
@@ -3624,7 +3624,7 @@
         "id": "melvorF:StrangeEyedMonster",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeStrange"
+            "expandedAreas:CreatureTypeStrange"
           ]
         }
       },
@@ -3632,7 +3632,7 @@
         "id": "melvorF:SuperiorEyedMonster",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeStrange"
+            "expandedAreas:CreatureTypeStrange"
           ]
         }
       },
@@ -3640,7 +3640,7 @@
         "id": "melvorD:SweatyMonster",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeMonstrous"
+            "expandedAreas:CreatureTypeMonstrous"
           ]
         }
       },
@@ -3648,7 +3648,7 @@
         "id": "melvorD:Tentacle",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeBestial"
+            "expandedAreas:CreatureTypeBestial"
           ]
         }
       },
@@ -3656,7 +3656,7 @@
         "id": "melvorD:TheEye",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeStrange"
+            "expandedAreas:CreatureTypeStrange"
           ]
         }
       },
@@ -3664,7 +3664,7 @@
         "id": "melvorD:TheKraken",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeMonstrous"
+            "expandedAreas:CreatureTypeMonstrous"
           ]
         }
       },
@@ -3672,7 +3672,7 @@
         "id": "melvorF:Thief",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -3680,7 +3680,7 @@
         "id": "melvorF:TurkulArchers",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -3688,7 +3688,7 @@
         "id": "melvorF:TurkulGeneral",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -3696,7 +3696,7 @@
         "id": "melvorF:TurkulGiant",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeGiantkin"
+            "expandedAreas:CreatureTypeGiantkin"
           ]
         }
       },
@@ -3704,7 +3704,7 @@
         "id": "melvorF:TurkulRiders",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -3712,7 +3712,7 @@
         "id": "melvorF:TurkulThrowers",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -3720,7 +3720,7 @@
         "id": "melvorF:Umbora",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeStrange"
+            "expandedAreas:CreatureTypeStrange"
           ]
         }
       },
@@ -3728,8 +3728,8 @@
         "id": "melvorF:Valkyrie",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHeavenly",
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHeavenly",
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -3737,8 +3737,8 @@
         "id": "melvorF:Vampire",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid",
-            "SUPERAWESOME:CreatureTypeUndead"
+            "expandedAreas:CreatureTypeHumanoid",
+            "expandedAreas:CreatureTypeUndead"
           ]
         }
       },
@@ -3746,7 +3746,7 @@
         "id": "melvorF:VenomousSnake",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeBestial"
+            "expandedAreas:CreatureTypeBestial"
           ]
         }
       },
@@ -3754,7 +3754,7 @@
         "id": "melvorD:ViciousSerpent",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeBestial"
+            "expandedAreas:CreatureTypeBestial"
           ]
         }
       },
@@ -3762,7 +3762,7 @@
         "id": "melvorF:Voltaire",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeStrange"
+            "expandedAreas:CreatureTypeStrange"
           ]
         }
       },
@@ -3770,7 +3770,7 @@
         "id": "melvorF:WanderingBard",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHellish"
+            "expandedAreas:CreatureTypeHellish"
           ]
         }
       },
@@ -3778,7 +3778,7 @@
         "id": "melvorF:WaterGolem",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeConstructed"
+            "expandedAreas:CreatureTypeConstructed"
           ]
         }
       },
@@ -3786,7 +3786,7 @@
         "id": "melvorF:WaterGuard",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeElemental"
+            "expandedAreas:CreatureTypeElemental"
           ]
         }
       },
@@ -3794,7 +3794,7 @@
         "id": "melvorF:WaterMonster",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeElemental"
+            "expandedAreas:CreatureTypeElemental"
           ]
         }
       },
@@ -3802,7 +3802,7 @@
         "id": "melvorD:WetMonster",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeMonstrous"
+            "expandedAreas:CreatureTypeMonstrous"
           ]
         }
       },
@@ -3810,7 +3810,7 @@
         "id": "melvorF:WickedGreaterDragon",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeDraconic"
+            "expandedAreas:CreatureTypeDraconic"
           ]
         }
       },
@@ -3818,7 +3818,7 @@
         "id": "melvorD:Wizard",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
@@ -3826,8 +3826,8 @@
         "id": "melvorD:Zombie",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid",
-            "SUPERAWESOME:CreatureTypeUndead"
+            "expandedAreas:CreatureTypeHumanoid",
+            "expandedAreas:CreatureTypeUndead"
           ]
         }
       },
@@ -3835,7 +3835,7 @@
         "id": "melvorD:ZombieHand",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeUndead"
+            "expandedAreas:CreatureTypeUndead"
           ]
         }
       },
@@ -3843,375 +3843,375 @@
         "id": "melvorD:ZombieLeader",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid",
-            "SUPERAWESOME:CreatureTypeUndead"
+            "expandedAreas:CreatureTypeHumanoid",
+            "expandedAreas:CreatureTypeUndead"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Adult_Gardener",
+        "id": "expandedAreas:Adult_Gardener",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Baby_Black_Dragon",
+        "id": "expandedAreas:Baby_Black_Dragon",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeDraconic"
+            "expandedAreas:CreatureTypeDraconic"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Baby_Blue_Dragon",
+        "id": "expandedAreas:Baby_Blue_Dragon",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeDraconic"
+            "expandedAreas:CreatureTypeDraconic"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Baby_Green_Dragon",
+        "id": "expandedAreas:Baby_Green_Dragon",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeDraconic"
+            "expandedAreas:CreatureTypeDraconic"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Baby_Red_Dragon",
+        "id": "expandedAreas:Baby_Red_Dragon",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeDraconic"
+            "expandedAreas:CreatureTypeDraconic"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Barbarian",
+        "id": "expandedAreas:Barbarian",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Barbarian_Berserker",
+        "id": "expandedAreas:Barbarian_Berserker",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Barbarian_Bowyer",
+        "id": "expandedAreas:Barbarian_Bowyer",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Barbarian_Brawler",
+        "id": "expandedAreas:Barbarian_Brawler",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Barbarian_Warrior",
+        "id": "expandedAreas:Barbarian_Warrior",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Big_Golbin",
+        "id": "expandedAreas:Big_Golbin",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Chieftain_Erik",
+        "id": "expandedAreas:Chieftain_Erik",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Draugr",
+        "id": "expandedAreas:Draugr",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid",
-            "SUPERAWESOME:CreatureTypeUndead"
+            "expandedAreas:CreatureTypeHumanoid",
+            "expandedAreas:CreatureTypeUndead"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Drowned_Maiden",
+        "id": "expandedAreas:Drowned_Maiden",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid",
-            "SUPERAWESOME:CreatureTypeUndead"
+            "expandedAreas:CreatureTypeHumanoid",
+            "expandedAreas:CreatureTypeUndead"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Executioner",
+        "id": "expandedAreas:Executioner",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Fire_Maiden",
+        "id": "expandedAreas:Fire_Maiden",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeElemental"
+            "expandedAreas:CreatureTypeElemental"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Golbin_Chief",
+        "id": "expandedAreas:Golbin_Chief",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeFae",
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeFae",
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Guard",
+        "id": "expandedAreas:Guard",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Guardian_of_the_Elements",
+        "id": "expandedAreas:Guardian_of_the_Elements",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeElemental"
+            "expandedAreas:CreatureTypeElemental"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Harpiar",
+        "id": "expandedAreas:Harpiar",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeFae"
+            "expandedAreas:CreatureTypeFae"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Hobgolbin",
+        "id": "expandedAreas:Hobgolbin",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeFae",
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeFae",
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Jarl_Eriksson",
+        "id": "expandedAreas:Jarl_Eriksson",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Junior_Gardener",
+        "id": "expandedAreas:Junior_Gardener",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Kappa",
+        "id": "expandedAreas:Kappa",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeFae"
+            "expandedAreas:CreatureTypeFae"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Koschei_the_Deathless_Form1",
+        "id": "expandedAreas:Koschei_the_Deathless_Form1",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Koschei_the_Deathless_Form2",
+        "id": "expandedAreas:Koschei_the_Deathless_Form2",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Koschei_the_Deathless_Form3",
+        "id": "expandedAreas:Koschei_the_Deathless_Form3",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Koschei_the_Deathless_Form4",
+        "id": "expandedAreas:Koschei_the_Deathless_Form4",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Magic_Golbin",
+        "id": "expandedAreas:Magic_Golbin",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeFae",
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeFae",
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Master_Gardener",
+        "id": "expandedAreas:Master_Gardener",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Monk_of_the_Flame",
+        "id": "expandedAreas:Monk_of_the_Flame",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Monk_of_the_Moss",
+        "id": "expandedAreas:Monk_of_the_Moss",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Monk_of_the_River",
+        "id": "expandedAreas:Monk_of_the_River",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Monk_of_the_Wind",
+        "id": "expandedAreas:Monk_of_the_Wind",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Mutant_Flower",
+        "id": "expandedAreas:Mutant_Flower",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeMonstrous",
-            "SUPERAWESOME:CreatureTypePlantlike"
+            "expandedAreas:CreatureTypeMonstrous",
+            "expandedAreas:CreatureTypePlantlike"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Mysterious_Monk",
+        "id": "expandedAreas:Mysterious_Monk",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Novice_Necromancer",
+        "id": "expandedAreas:Novice_Necromancer",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:OzmarathraxInscriptorOfRunes",
+        "id": "expandedAreas:OzmarathraxInscriptorOfRunes",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeDraconic"
+            "expandedAreas:CreatureTypeDraconic"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Peasant_Man",
+        "id": "expandedAreas:Peasant_Man",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Peasant_Woman",
+        "id": "expandedAreas:Peasant_Woman",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Pickpocket",
+        "id": "expandedAreas:Pickpocket",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeHumanoid"
+            "expandedAreas:CreatureTypeHumanoid"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Rock_Giant",
+        "id": "expandedAreas:Rock_Giant",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeElemental",
-            "SUPERAWESOME:CreatureTypeGiantkin"
+            "expandedAreas:CreatureTypeElemental",
+            "expandedAreas:CreatureTypeGiantkin"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Walking_Keg",
+        "id": "expandedAreas:Walking_Keg",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeMonstrous"
+            "expandedAreas:CreatureTypeMonstrous"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Wasp",
+        "id": "expandedAreas:Wasp",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeBestial"
+            "expandedAreas:CreatureTypeBestial"
           ]
         }
       },
       {
-        "id": "SUPERAWESOME:Weeds",
+        "id": "expandedAreas:Weeds",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypePlantlike"
+            "expandedAreas:CreatureTypePlantlike"
           ]
         }
       },
@@ -4227,7 +4227,7 @@
         },
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeElemental"
+            "expandedAreas:CreatureTypeElemental"
           ]
         }
       },
@@ -4243,7 +4243,7 @@
         },
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeElemental"
+            "expandedAreas:CreatureTypeElemental"
           ]
         }
       },
@@ -4259,7 +4259,7 @@
         },
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeElemental"
+            "expandedAreas:CreatureTypeElemental"
           ]
         }
       },
@@ -4275,7 +4275,7 @@
         },
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeElemental"
+            "expandedAreas:CreatureTypeElemental"
           ]
         }
       },
@@ -4291,7 +4291,7 @@
         },
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeStrange"
+            "expandedAreas:CreatureTypeStrange"
           ]
         }
       },
@@ -4308,13 +4308,13 @@
           ],
           "add": [
             {
-              "itemID": "SUPERAWESOME:Jute_Seed",
+              "itemID": "expandedAreas:Jute_Seed",
               "minQuantity": 1,
               "maxQuantity": 3,
               "weight": 999999
             },
             {
-              "itemID": "SUPERAWESOME:Barley_Seed",
+              "itemID": "expandedAreas:Barley_Seed",
               "minQuantity": 1,
               "maxQuantity": 3,
               "weight": 888888
@@ -4344,13 +4344,13 @@
               "weight": 555555
             },
             {
-              "itemID": "SUPERAWESOME:Sack",
+              "itemID": "expandedAreas:Sack",
               "minQuantity": 1,
               "maxQuantity": 3,
               "weight": 444444
             },
             {
-              "itemID": "SUPERAWESOME:Basket",
+              "itemID": "expandedAreas:Basket",
               "minQuantity": 1,
               "maxQuantity": 3,
               "weight": 333333
@@ -4385,37 +4385,37 @@
           ],
           "add": [
             {
-              "itemID": "SUPERAWESOME:Plumm_Seed",
+              "itemID": "expandedAreas:Plumm_Seed",
               "minQuantity": 1,
               "maxQuantity": 6,
               "weight": 999999
             },
             {
-              "itemID": "SUPERAWESOME:Firewine_Seed",
+              "itemID": "expandedAreas:Firewine_Seed",
               "minQuantity": 1,
               "maxQuantity": 6,
               "weight": 777777
             },
             {
-              "itemID": "SUPERAWESOME:Andlovan_Seed",
+              "itemID": "expandedAreas:Andlovan_Seed",
               "minQuantity": 1,
               "maxQuantity": 6,
               "weight": 555555
             },
             {
-              "itemID": "SUPERAWESOME:Orange_Tree_Seed",
+              "itemID": "expandedAreas:Orange_Tree_Seed",
               "minQuantity": 1,
               "maxQuantity": 6,
               "weight": 333333
             },
             {
-              "itemID": "SUPERAWESOME:Cherry_Tree_Seed",
+              "itemID": "expandedAreas:Cherry_Tree_Seed",
               "minQuantity": 1,
               "maxQuantity": 6,
               "weight": 111111
             },
             {
-              "itemID": "SUPERAWESOME:Curry_Tree_Seed",
+              "itemID": "expandedAreas:Curry_Tree_Seed",
               "minQuantity": 1,
               "maxQuantity": 6,
               "weight": 55555
@@ -4469,85 +4469,85 @@
           ],
           "add": [
             {
-              "itemID": "SUPERAWESOME:Jute_Seed",
+              "itemID": "expandedAreas:Jute_Seed",
               "minQuantity": 1,
               "maxQuantity": 9,
               "weight": 999999
             },
             {
-              "itemID": "SUPERAWESOME:Barley_Seed",
+              "itemID": "expandedAreas:Barley_Seed",
               "minQuantity": 1,
               "maxQuantity": 9,
               "weight": 777777
             },
             {
-              "itemID": "SUPERAWESOME:Plumm_Seed",
+              "itemID": "expandedAreas:Plumm_Seed",
               "minQuantity": 1,
               "maxQuantity": 9,
               "weight": 555555
             },
             {
-              "itemID": "SUPERAWESOME:Firewine_Seed",
+              "itemID": "expandedAreas:Firewine_Seed",
               "minQuantity": 1,
               "maxQuantity": 9,
               "weight": 333333
             },
             {
-              "itemID": "SUPERAWESOME:Andlovan_Seed",
+              "itemID": "expandedAreas:Andlovan_Seed",
               "minQuantity": 1,
               "maxQuantity": 9,
               "weight": 111111
             },
             {
-              "itemID": "SUPERAWESOME:Goldengod_Seed",
+              "itemID": "expandedAreas:Goldengod_Seed",
               "minQuantity": 1,
               "maxQuantity": 9,
               "weight": 55555
             },
             {
-              "itemID": "SUPERAWESOME:Wildblood_Seed",
+              "itemID": "expandedAreas:Wildblood_Seed",
               "minQuantity": 1,
               "maxQuantity": 9,
               "weight": 22222
             },
             {
-              "itemID": "SUPERAWESOME:Orange_Tree_Seed",
+              "itemID": "expandedAreas:Orange_Tree_Seed",
               "minQuantity": 1,
               "maxQuantity": 9,
               "weight": 666666
             },
             {
-              "itemID": "SUPERAWESOME:Cherry_Tree_Seed",
+              "itemID": "expandedAreas:Cherry_Tree_Seed",
               "minQuantity": 1,
               "maxQuantity": 9,
               "weight": 444444
             },
             {
-              "itemID": "SUPERAWESOME:Curry_Tree_Seed",
+              "itemID": "expandedAreas:Curry_Tree_Seed",
               "minQuantity": 1,
               "maxQuantity": 9,
               "weight": 222222
             },
             {
-              "itemID": "SUPERAWESOME:Papaya_Tree_Seed",
+              "itemID": "expandedAreas:Papaya_Tree_Seed",
               "minQuantity": 1,
               "maxQuantity": 9,
               "weight": 111111
             },
             {
-              "itemID": "SUPERAWESOME:Superfertilizer",
+              "itemID": "expandedAreas:Superfertilizer",
               "minQuantity": 1,
               "maxQuantity": 1,
               "weight": 99999
             },
             {
-              "itemID": "SUPERAWESOME:Palm_Tree_Seed",
+              "itemID": "expandedAreas:Palm_Tree_Seed",
               "minQuantity": 1,
               "maxQuantity": 9,
               "weight": 55555
             },
             {
-              "itemID": "SUPERAWESOME:Dragonfruit_Tree_Seed",
+              "itemID": "expandedAreas:Dragonfruit_Tree_Seed",
               "minQuantity": 1,
               "maxQuantity": 9,
               "weight": 22222
@@ -4601,7 +4601,7 @@
               "weight": 111111
             },
             {
-              "itemID": "SUPERAWESOME:Bell_Pepper_Seed",
+              "itemID": "expandedAreas:Bell_Pepper_Seed",
               "minQuantity": 1,
               "maxQuantity": 9,
               "weight": 55555
@@ -4625,9 +4625,9 @@
         "id": "melvorF:UndeadWerewolf",
         "passives": {
           "add": [
-            "SUPERAWESOME:CreatureTypeMonstrous",
-            "SUPERAWESOME:CreatureTypeUndead",
-            "SUPERAWESOME:CreatureSubtypeLycanthrope"
+            "expandedAreas:CreatureTypeMonstrous",
+            "expandedAreas:CreatureTypeUndead",
+            "expandedAreas:CreatureSubtypeLycanthrope"
           ]
         }
       }
@@ -4643,7 +4643,7 @@
                 {
                   "itemCosts": [
                     {
-                      "id": "SUPERAWESOME:Evergreen_Logs",
+                      "id": "expandedAreas:Evergreen_Logs",
                       "quantity": 1
                     }
                   ],
@@ -4652,7 +4652,7 @@
                 {
                   "itemCosts": [
                     {
-                      "id": "SUPERAWESOME:Longleaf_Logs",
+                      "id": "expandedAreas:Longleaf_Logs",
                       "quantity": 1
                     }
                   ],
@@ -4661,7 +4661,7 @@
                 {
                   "itemCosts": [
                     {
-                      "id": "SUPERAWESOME:Frostpine_Logs",
+                      "id": "expandedAreas:Frostpine_Logs",
                       "quantity": 1
                     }
                   ],
@@ -4670,7 +4670,7 @@
                 {
                   "itemCosts": [
                     {
-                      "id": "SUPERAWESOME:White_Pine_Logs",
+                      "id": "expandedAreas:White_Pine_Logs",
                       "quantity": 1
                     }
                   ],
@@ -4679,7 +4679,7 @@
                 {
                   "itemCosts": [
                     {
-                      "id": "SUPERAWESOME:Loblolly_Logs",
+                      "id": "expandedAreas:Loblolly_Logs",
                       "quantity": 1
                     }
                   ],

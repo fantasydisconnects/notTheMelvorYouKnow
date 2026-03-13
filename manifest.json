@@ -1,5 +1,5 @@
 {
-    "namespace": "SUPERAWESOME",
+    "namespace": "expandedAreas",
     "setup": "setup.mjs",
     "icon": "assets/ICON.png",
     "load": [
