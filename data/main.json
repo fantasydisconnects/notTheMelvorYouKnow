@@ -2598,6 +2598,93 @@
     ],
     "combatEffects": [
       {
+        "id": "ResistanceIncrease5",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "+5% Damage Reduction",
+        "media": "assets/status/evasion_increase.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "flatResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": 5
+                }
+              ]
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "ResistanceIncrease10",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "+10% Damage Reduction",
+        "media": "assets/status/evasion_increase.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "flatResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": 10
+                }
+              ]
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "ResistanceIncrease15",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "+15% Damage Reduction",
+        "media": "assets/status/evasion_increase.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "flatResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": 15
+                }
+              ]
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
         "id": "IncreasedMaxHitpoints",
         "templateID": "melvorD:StackingNonCountingModifier",
         "name": "Constitution",
@@ -4398,6 +4485,114 @@
     ],
     "items": [
       {
+        "id": "Barbar",
+        "name": "Barbar",
+        "category": "Herblore",
+        "type": "Potion",
+        "media": "assets/items/Potion/Barbar.png",
+        "customDescription": "10% of your Strength Level added as Hidden Strength levels<br>50% of your Attack Level subtracted as Hidden Attack Levels",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 69,
+        "itemType": "Potion",
+        "tier": 0,
+        "action": "melvorD:Combat",
+        "consumesOn": [
+          {
+            "type": "PlayerAttack"
+          }
+        ],
+        "charges": 5,
+        "modifiers": {
+          "flatHiddenSkillLevelBasedOnLevels": [
+            {
+              "skillID": "melvorD:Attack",
+              "value": -50
+            },
+            {
+              "skillID": "melvorD:Strength",
+              "value": 10
+            }
+          ]
+        }
+      },
+      {
+        "id": "Keg_of_Barbar",
+        "name": "Keg of Barbar",
+        "category": "Herblore",
+        "type": "Potion",
+        "media": "assets/items/Potion/Keg_of_Barbar.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 420,
+        "itemType": "Potion",
+        "tier": 0,
+        "action": "melvorD:Combat",
+        "customDescription": "10% of your Strength Level added as Hidden Strength levels<br>50% of your Attack Level subtracted as Hidden Attack Levels",
+        "consumesOn": [
+          {
+            "type": "PlayerAttack"
+          }
+        ],
+        "charges": 25,
+        "modifiers": {
+          "flatHiddenSkillLevelBasedOnLevels": [
+            {
+              "skillID": "melvorD:Attack",
+              "value": -50
+            },
+            {
+              "skillID": "melvorD:Strength",
+              "value": 10
+            }
+          ]
+        }
+      },
+      {
+        "id": "Golbin_Staff",
+        "name": "Golbin Staff",
+        "category": "Combat",
+        "itemType": "Weapon",
+        "type": "Weapon",
+        "media": "assets/items/Weapon/Golbin_Staff.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 100,
+        "tier": "none",
+        "attackType": "magic",
+        "validSlots": [
+          "melvorD:Weapon"
+        ],
+        "occupiesSlots": [
+          "melvorD:Shield"
+        ],
+        "equipRequirements": [],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3000
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": 6
+          },
+          {
+            "key": "magicDamageBonus",
+            "value": 2
+          }
+        ],
+        "combatEffects": [
+          {
+            "effectID": "melvorF:WeakeningI",
+            "appliesWhen": "StartOfFight",
+            "chance": 25
+          }
+        ]
+      },
+      {
         "id": "Monk_Robe_Top",
         "name": "Monk Robe Top",
         "category": "Misc",
@@ -4444,380 +4639,6 @@
           "flatPrayerPointCost": -1,
           "prayerPointPreservationChance": 10
         }
-      },
-      {
-        "id": "Raid_Spoils",
-        "name": "Raid Spoils",
-        "category": "Openable",
-        "type": "Chest",
-        "media": "assets/bank/Raid_Spoils.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 250,
-        "itemType": "Openable",
-        "dropTable": [
-          {
-            "itemID": "melvorD:Beef_Pie",
-            "minQuantity": 25,
-            "maxQuantity": 50,
-            "weight": 70
-          },
-          {
-            "itemID": "SUPERAWESOME:Keg_of_Barbar",
-            "minQuantity": 25,
-            "maxQuantity": 50,
-            "weight": 65
-          },
-          {
-            "itemID": "SUPERAWESOME:Longleaf_Logs",
-            "minQuantity": 125,
-            "maxQuantity": 250,
-            "weight": 60
-          },
-          {
-            "itemID": "SUPERAWESOME:Sterkite_Ore",
-            "minQuantity": 150,
-            "maxQuantity": 300,
-            "weight": 50
-          },
-          {
-            "itemID": "SUPERAWESOME:Sterkite_Bar",
-            "minQuantity": 125,
-            "maxQuantity": 250,
-            "weight": 45
-          },
-          {
-            "itemID": "SUPERAWESOME:Black_Thrownaxe",
-            "minQuantity": 150,
-            "maxQuantity": 300,
-            "weight": 40
-          },
-          {
-            "itemID": "melvorD:Adamantite_Bar",
-            "minQuantity": 125,
-            "maxQuantity": 250,
-            "weight": 35
-          },
-          {
-            "itemID": "SUPERAWESOME:Frostpine_Logs",
-            "minQuantity": 125,
-            "maxQuantity": 250,
-            "weight": 30
-          },
-          {
-            "itemID": "SUPERAWESOME:Adamant_Thrownaxe",
-            "minQuantity": 150,
-            "maxQuantity": 300,
-            "weight": 25
-          },
-          {
-            "itemID": "SUPERAWESOME:Barbar",
-            "minQuantity": 250,
-            "maxQuantity": 500,
-            "weight": 20
-          },
-          {
-            "itemID": "SUPERAWESOME:White_Pine_Logs",
-            "minQuantity": 125,
-            "maxQuantity": 250,
-            "weight": 15
-          },
-          {
-            "itemID": "melvorD:Amulet_of_Strength",
-            "minQuantity": 10,
-            "maxQuantity": 20,
-            "weight": 10
-          },
-          {
-            "itemID": "SUPERAWESOME:Loblolly_Logs",
-            "minQuantity": 125,
-            "maxQuantity": 250,
-            "weight": 10
-          },
-          {
-            "itemID": "SUPERAWESOME:Rune_Thrownaxe",
-            "minQuantity": 150,
-            "maxQuantity": 300,
-            "weight": 10
-          },
-          {
-            "itemID": "SUPERAWESOME:Barbarian_Archer_Helm",
-            "minQuantity": 1,
-            "maxQuantity": 1,
-            "weight": 9
-          },
-          {
-            "itemID": "SUPERAWESOME:Barbarian_Berserker_Helm",
-            "minQuantity": 1,
-            "maxQuantity": 1,
-            "weight": 8
-          },
-          {
-            "itemID": "SUPERAWESOME:Barbarian_Warrior_Helm",
-            "minQuantity": 1,
-            "maxQuantity": 1,
-            "weight": 7
-          },
-          {
-            "itemID": "SUPERAWESOME:Barbarian_Berserker_Axe",
-            "minQuantity": 1,
-            "maxQuantity": 1,
-            "weight": 6
-          },
-          {
-            "itemID": "SUPERAWESOME:Barbarian_Brawling_Gloves",
-            "minQuantity": 1,
-            "maxQuantity": 1,
-            "weight": 5
-          },
-          {
-            "itemID": "SUPERAWESOME:Barbarian_Longblade",
-            "minQuantity": 1,
-            "maxQuantity": 1,
-            "weight": 4
-          },
-          {
-            "itemID": "SUPERAWESOME:Barbarian_Boots",
-            "minQuantity": 1,
-            "maxQuantity": 1,
-            "weight": 3
-          },
-          {
-            "itemID": "SUPERAWESOME:Barbarian_Skirt",
-            "minQuantity": 1,
-            "maxQuantity": 1,
-            "weight": 2
-          },
-          {
-            "itemID": "SUPERAWESOME:Barbarian_Armour",
-            "minQuantity": 1,
-            "maxQuantity": 1,
-            "weight": 1
-          }
-        ]
-      },
-      {
-        "id": "Food_Seed_Box_I",
-        "name": "Food Seed Box I",
-        "category": "Openable",
-        "type": "Chest",
-        "media": "assets/bank/Food_Seed_Box_I.png",
-        "customDescription": "",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 500,
-        "itemType": "Openable",
-        "dropTable": [
-          {
-            "itemID": "melvorD:Potato_Seed",
-            "minQuantity": 1,
-            "maxQuantity": 75,
-            "weight": 47
-          },
-          {
-            "itemID": "SUPERAWESOME:Barley_Seed",
-            "minQuantity": 1,
-            "maxQuantity": 75,
-            "weight": 29
-          },
-          {
-            "itemID": "melvorD:Onion_Seed",
-            "minQuantity": 1,
-            "maxQuantity": 75,
-            "weight": 21
-          },
-          {
-            "itemID": "melvorF:Apple_Tree_Seeds",
-            "minQuantity": 1,
-            "maxQuantity": 75,
-            "weight": 18
-          },
-          {
-            "itemID": "melvorD:Cabbage_Seed",
-            "minQuantity": 1,
-            "maxQuantity": 75,
-            "weight": 16
-          },
-          {
-            "itemID": "melvorD:Tomato_Seed",
-            "minQuantity": 1,
-            "maxQuantity": 75,
-            "weight": 9
-          },
-          {
-            "itemID": "melvorD:Sweetcorn_Seed",
-            "minQuantity": 1,
-            "maxQuantity": 75,
-            "weight": 5
-          },
-          {
-            "itemID": "melvorD:Strawberries",
-            "minQuantity": 1,
-            "maxQuantity": 75,
-            "weight": 3
-          },
-          {
-            "itemID": "melvorD:Cherry_Seeds",
-            "minQuantity": 1,
-            "maxQuantity": 75,
-            "weight": 1
-          },
-          {
-            "itemID": "SUPERAWESOME:Orange_Tree_Seed",
-            "minQuantity": 1,
-            "maxQuantity": 75,
-            "weight": 1
-          }
-        ]
-      },
-      {
-        "id": "Food_Seed_Box_II",
-        "name": "Food Seed Box II",
-        "category": "Openable",
-        "type": "Chest",
-        "media": "assets/bank/Food_Seed_Box_II.png",
-        "customDescription": "",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 500,
-        "itemType": "Openable",
-        "dropTable": [
-          {
-            "itemID": "melvorD:Watermelon_Seed",
-            "minQuantity": 1,
-            "maxQuantity": 75,
-            "weight": 229
-          },
-          {
-            "itemID": "SUPERAWESOME:Curry_Tree_Seed",
-            "minQuantity": 1,
-            "maxQuantity": 75,
-            "weight": 175
-          },
-          {
-            "itemID": "melvorD:Snape_Grass_Seed",
-            "minQuantity": 1,
-            "maxQuantity": 75,
-            "weight": 116
-          },
-          {
-            "itemID": "SUPERAWESOME:Pineapple_Seed",
-            "minQuantity": 1,
-            "maxQuantity": 75,
-            "weight": 101
-          },
-          {
-            "itemID": "melvorD:Watermelon_Seed",
-            "minQuantity": 1,
-            "maxQuantity": 75,
-            "weight": 85
-          },
-          {
-            "itemID": "SUPERAWESOME:Papaya_Tree_Seed",
-            "minQuantity": 1,
-            "maxQuantity": 75,
-            "weight": 3
-          },
-          {
-            "itemID": "SUPERAWESOME:Palm_Tree_Seed",
-            "minQuantity": 1,
-            "maxQuantity": 75,
-            "weight": 2
-          },
-          {
-            "itemID": "SUPERAWESOME:Dragonfruit_Tree_Seed",
-            "minQuantity": 1,
-            "maxQuantity": 75,
-            "weight": 1
-          }
-        ]
-      },
-      {
-        "id": "Tree_Seed_Box_I",
-        "name": "Tree Seed Box I",
-        "category": "Openable",
-        "type": "Chest",
-        "media": "assets/bank/Tree_Seed_Box_I.png",
-        "customDescription": "",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 500,
-        "itemType": "Openable",
-        "dropTable": [
-          {
-            "itemID": "SUPERAWESOME:Evergreen_Pine_Seed",
-            "minQuantity": 1,
-            "maxQuantity": 75,
-            "weight": 100
-          },
-          {
-            "itemID": "melvorD:Willow_Tree_Seed",
-            "minQuantity": 1,
-            "maxQuantity": 75,
-            "weight": 80
-          },
-          {
-            "itemID": "SUPERAWESOME:Longleaf_Pine_Seed",
-            "minQuantity": 1,
-            "maxQuantity": 75,
-            "weight": 35
-          },
-          {
-            "itemID": "melvorD:Maple_Tree_Seed",
-            "minQuantity": 1,
-            "maxQuantity": 75,
-            "weight": 6
-          }
-        ]
-      },
-      {
-        "id": "Tree_Seed_Box_II",
-        "name": "Tree Seed Box II",
-        "category": "Openable",
-        "type": "Chest",
-        "media": "assets/bank/Tree_Seed_Box_II.png",
-        "customDescription": "",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 500,
-        "itemType": "Openable",
-        "dropTable": [
-          {
-            "itemID": "SUPERAWESOME:Loblolly_Pine_Seed",
-            "minQuantity": 1,
-            "maxQuantity": 75,
-            "weight": 87
-          },
-          {
-            "itemID": "melvorD:Yew_Tree_Seed",
-            "minQuantity": 1,
-            "maxQuantity": 75,
-            "weight": 29
-          },
-          {
-            "itemID": "SUPERAWESOME:White_Pine_Seed",
-            "minQuantity": 1,
-            "maxQuantity": 75,
-            "weight": 3
-          },
-          {
-            "itemID": "melvorD:Magic_Tree_Seed",
-            "minQuantity": 1,
-            "maxQuantity": 75,
-            "weight": 2
-          },
-          {
-            "itemID": "SUPERAWESOME:Redwood_Tree_Seed",
-            "minQuantity": 1,
-            "maxQuantity": 75,
-            "weight": 1
-          }
-        ]
       },
       {
         "id": "Pick_of_Colossal_Excavation",
@@ -26249,6 +26070,380 @@
             }
           ]
         }
+      },
+      {
+        "id": "Raid_Spoils",
+        "name": "Raid Spoils",
+        "category": "Openable",
+        "type": "Chest",
+        "media": "assets/bank/Raid_Spoils.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 250,
+        "itemType": "Openable",
+        "dropTable": [
+          {
+            "itemID": "melvorD:Beef_Pie",
+            "minQuantity": 25,
+            "maxQuantity": 50,
+            "weight": 70
+          },
+          {
+            "itemID": "SUPERAWESOME:Keg_of_Barbar",
+            "minQuantity": 25,
+            "maxQuantity": 50,
+            "weight": 65
+          },
+          {
+            "itemID": "SUPERAWESOME:Longleaf_Logs",
+            "minQuantity": 125,
+            "maxQuantity": 250,
+            "weight": 60
+          },
+          {
+            "itemID": "SUPERAWESOME:Sterkite_Ore",
+            "minQuantity": 150,
+            "maxQuantity": 300,
+            "weight": 50
+          },
+          {
+            "itemID": "SUPERAWESOME:Sterkite_Bar",
+            "minQuantity": 125,
+            "maxQuantity": 250,
+            "weight": 45
+          },
+          {
+            "itemID": "SUPERAWESOME:Black_Thrownaxe",
+            "minQuantity": 150,
+            "maxQuantity": 300,
+            "weight": 40
+          },
+          {
+            "itemID": "melvorD:Adamantite_Bar",
+            "minQuantity": 125,
+            "maxQuantity": 250,
+            "weight": 35
+          },
+          {
+            "itemID": "SUPERAWESOME:Frostpine_Logs",
+            "minQuantity": 125,
+            "maxQuantity": 250,
+            "weight": 30
+          },
+          {
+            "itemID": "SUPERAWESOME:Adamant_Thrownaxe",
+            "minQuantity": 150,
+            "maxQuantity": 300,
+            "weight": 25
+          },
+          {
+            "itemID": "SUPERAWESOME:Barbar",
+            "minQuantity": 250,
+            "maxQuantity": 500,
+            "weight": 20
+          },
+          {
+            "itemID": "SUPERAWESOME:White_Pine_Logs",
+            "minQuantity": 125,
+            "maxQuantity": 250,
+            "weight": 15
+          },
+          {
+            "itemID": "melvorD:Amulet_of_Strength",
+            "minQuantity": 10,
+            "maxQuantity": 20,
+            "weight": 10
+          },
+          {
+            "itemID": "SUPERAWESOME:Loblolly_Logs",
+            "minQuantity": 125,
+            "maxQuantity": 250,
+            "weight": 10
+          },
+          {
+            "itemID": "SUPERAWESOME:Rune_Thrownaxe",
+            "minQuantity": 150,
+            "maxQuantity": 300,
+            "weight": 10
+          },
+          {
+            "itemID": "SUPERAWESOME:Barbarian_Archer_Helm",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 9
+          },
+          {
+            "itemID": "SUPERAWESOME:Barbarian_Berserker_Helm",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 8
+          },
+          {
+            "itemID": "SUPERAWESOME:Barbarian_Warrior_Helm",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 7
+          },
+          {
+            "itemID": "SUPERAWESOME:Barbarian_Berserker_Axe",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 6
+          },
+          {
+            "itemID": "SUPERAWESOME:Barbarian_Brawling_Gloves",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 5
+          },
+          {
+            "itemID": "SUPERAWESOME:Barbarian_Longblade",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 4
+          },
+          {
+            "itemID": "SUPERAWESOME:Barbarian_Boots",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 3
+          },
+          {
+            "itemID": "SUPERAWESOME:Barbarian_Skirt",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 2
+          },
+          {
+            "itemID": "SUPERAWESOME:Barbarian_Armour",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 1
+          }
+        ]
+      },
+      {
+        "id": "Food_Seed_Box_I",
+        "name": "Food Seed Box I",
+        "category": "Openable",
+        "type": "Chest",
+        "media": "assets/bank/Food_Seed_Box_I.png",
+        "customDescription": "",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 500,
+        "itemType": "Openable",
+        "dropTable": [
+          {
+            "itemID": "melvorD:Potato_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 75,
+            "weight": 47
+          },
+          {
+            "itemID": "SUPERAWESOME:Barley_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 75,
+            "weight": 29
+          },
+          {
+            "itemID": "melvorD:Onion_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 75,
+            "weight": 21
+          },
+          {
+            "itemID": "melvorF:Apple_Tree_Seeds",
+            "minQuantity": 1,
+            "maxQuantity": 75,
+            "weight": 18
+          },
+          {
+            "itemID": "melvorD:Cabbage_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 75,
+            "weight": 16
+          },
+          {
+            "itemID": "melvorD:Tomato_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 75,
+            "weight": 9
+          },
+          {
+            "itemID": "melvorD:Sweetcorn_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 75,
+            "weight": 5
+          },
+          {
+            "itemID": "melvorD:Strawberries",
+            "minQuantity": 1,
+            "maxQuantity": 75,
+            "weight": 3
+          },
+          {
+            "itemID": "melvorD:Cherry_Seeds",
+            "minQuantity": 1,
+            "maxQuantity": 75,
+            "weight": 1
+          },
+          {
+            "itemID": "SUPERAWESOME:Orange_Tree_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 75,
+            "weight": 1
+          }
+        ]
+      },
+      {
+        "id": "Food_Seed_Box_II",
+        "name": "Food Seed Box II",
+        "category": "Openable",
+        "type": "Chest",
+        "media": "assets/bank/Food_Seed_Box_II.png",
+        "customDescription": "",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 500,
+        "itemType": "Openable",
+        "dropTable": [
+          {
+            "itemID": "melvorD:Watermelon_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 75,
+            "weight": 229
+          },
+          {
+            "itemID": "SUPERAWESOME:Curry_Tree_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 75,
+            "weight": 175
+          },
+          {
+            "itemID": "melvorD:Snape_Grass_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 75,
+            "weight": 116
+          },
+          {
+            "itemID": "SUPERAWESOME:Pineapple_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 75,
+            "weight": 101
+          },
+          {
+            "itemID": "melvorD:Watermelon_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 75,
+            "weight": 85
+          },
+          {
+            "itemID": "SUPERAWESOME:Papaya_Tree_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 75,
+            "weight": 3
+          },
+          {
+            "itemID": "SUPERAWESOME:Palm_Tree_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 75,
+            "weight": 2
+          },
+          {
+            "itemID": "SUPERAWESOME:Dragonfruit_Tree_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 75,
+            "weight": 1
+          }
+        ]
+      },
+      {
+        "id": "Tree_Seed_Box_I",
+        "name": "Tree Seed Box I",
+        "category": "Openable",
+        "type": "Chest",
+        "media": "assets/bank/Tree_Seed_Box_I.png",
+        "customDescription": "",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 500,
+        "itemType": "Openable",
+        "dropTable": [
+          {
+            "itemID": "SUPERAWESOME:Evergreen_Pine_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 75,
+            "weight": 100
+          },
+          {
+            "itemID": "melvorD:Willow_Tree_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 75,
+            "weight": 80
+          },
+          {
+            "itemID": "SUPERAWESOME:Longleaf_Pine_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 75,
+            "weight": 35
+          },
+          {
+            "itemID": "melvorD:Maple_Tree_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 75,
+            "weight": 6
+          }
+        ]
+      },
+      {
+        "id": "Tree_Seed_Box_II",
+        "name": "Tree Seed Box II",
+        "category": "Openable",
+        "type": "Chest",
+        "media": "assets/bank/Tree_Seed_Box_II.png",
+        "customDescription": "",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 500,
+        "itemType": "Openable",
+        "dropTable": [
+          {
+            "itemID": "SUPERAWESOME:Loblolly_Pine_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 75,
+            "weight": 87
+          },
+          {
+            "itemID": "melvorD:Yew_Tree_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 75,
+            "weight": 29
+          },
+          {
+            "itemID": "SUPERAWESOME:White_Pine_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 75,
+            "weight": 3
+          },
+          {
+            "itemID": "melvorD:Magic_Tree_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 75,
+            "weight": 2
+          },
+          {
+            "itemID": "SUPERAWESOME:Redwood_Tree_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 75,
+            "weight": 1
+          }
+        ]
       }
     ],
     "itemSynergies": [
