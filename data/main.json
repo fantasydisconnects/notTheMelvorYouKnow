@@ -5023,6 +5023,30 @@
     ],
     "items": [
       {
+        "itemType": "Item",
+        "id": "Sterkite_Ore",
+        "name": "Sterkite Ore",
+        "category": "Mining",
+        "type": "Ore",
+        "media": "assets/items/Sterkite_Ore.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 9
+      },
+      {
+        "itemType": "Item",
+        "id": "Sterkite_Bar",
+        "name": "Sterkite Bar",
+        "category": "Smithing",
+        "type": "Bar",
+        "media": "assets/items/Sterkite_Bar.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 55
+      },
+      {
         "id": "Barbar",
         "name": "Barbar",
         "category": "Herblore",
