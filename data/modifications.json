@@ -38,6 +38,13 @@
           "add": [
             {
               "insertAt": "After",
+              "afterID": "melvorD:Undead_Graveyard",
+              "ids": [
+                "expandedAreas:The_Dungeon"
+              ]
+            },
+            {
+              "insertAt": "After",
               "afterID": "melvorD:Chicken_Coop",
               "ids": [
                 "expandedAreas:Golbin_Hideout"
@@ -271,6 +278,19 @@
       }
     ],
     "items": [
+      {
+        "id": "melvorF:Potion_Box_II",
+        "dropTable": {
+          "add": [
+            {
+              "itemID": "expandedAreas:Aeris_Brew_I",
+              "minQuantity": 1,
+              "maxQuantity": 300,
+              "weight": 3
+            }
+          ]
+        }
+      },
       {
         "id": "melvorF:Stormsnap",
         "equipmentStats": {
@@ -3710,6 +3730,16 @@
       },
       {
         "id": "melvorF:TurkulThrowers",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "expandedAreas:The_Spike",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 2
+            }
+          ]
+        },
         "passives": {
           "add": [
             "expandedAreas:CreatureTypeHumanoid"

@@ -4,6 +4,399 @@
   "data": {
     "attacks": [
       {
+        "id": "PounceTigerForm",
+        "defaultChance": 25,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 125
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Bleed100",
+            "chance": 100
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Pounce - Tiger Form",
+        "description": "Pounce at you, knocking you down and applies Bleed that deals 15% of your current hitpoints over 10s on a hit. Deals ${attackDamageMaxValue0} damage.",
+        "descriptionGenerator": "Charge at <target>, knocking <target> down and <hitEffect> on a hit. Deals <damage> damage.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "BeakRavenForm",
+        "defaultChance": 25,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 50
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "expandedAreas:Blind"
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 3,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Beak - Raven Form",
+        "description": "Assault your eyes with his beak ${hitCount} times, blinding you (-20% Accuracy Rating) for 5 turns. Deals ${attackDamageMaxValue0} damage.",
+        "descriptionGenerator": "Assault <target>'s eyes, <hitEffect> on a hit. Deals <damage> damage.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "Sleepytime",
+        "name": "Sleepytime",
+        "defaultChance": 25,
+        "prehitEffects": [],
+        "attackCount": 1,
+        "attackInterval": 200,
+        "lifesteal": 0,
+        "description": "Deals no damage, but instead puts you to Sleep for 2 turns. Unavoidable.",
+        "cantMiss": true,
+        "damage": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Sleep",
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 2
+              }
+            ]
+          }
+        ],
+        "canNormalAttack": true
+      },
+      {
+        "id": "ArcaneBarrier",
+        "name": "Arcane Barrier",
+        "defaultChance": 25,
+        "onhitEffects": [],
+        "lifesteal": 0,
+        "description": "The enemy gains +50% Evasion Ratings and +25% Damage Reduction for 3 turns.",
+        "damage": [],
+        "attackCount": 1,
+        "attackInterval": 50,
+        "cantMiss": true,
+        "canNormalAttack": true,
+        "prehitEffects": [
+          {
+            "effectID": "expandedAreas:ArcaneBarrier"
+          }
+        ]
+      },
+      {
+        "id": "MagicalMissiles",
+        "name": "Magical Missiles",
+        "defaultChance": 25,
+        "onhitEffects": [],
+        "lifesteal": 0,
+        "description": "Flings ${hitCount} unavoidable magical missiles towards you, dealing ${attackDamageMaxValue1} + ${attackDamageMinValue0}-${attackDamageMaxValue0} damage each.",
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "minRoll": "Fixed",
+            "maxRoll": "Fixed",
+            "minPercent": 1,
+            "maxPercent": 4,
+            "roll": true
+          },
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "maxRoll": "Fixed",
+            "maxPercent": 1,
+            "roll": false
+          }
+        ],
+        "attackCount": 5,
+        "attackInterval": 50,
+        "cantMiss": true,
+        "canNormalAttack": false,
+        "prehitEffects": []
+      },
+      {
+        "id": "Spook",
+        "name": "Spook",
+        "description": "Deals no damage. Inflicts Fear for 2 turns.",
+        "attackCount": 1,
+        "attackInterval": 50,
+        "canNormalAttack": true,
+        "cantMiss": false,
+        "damage": [],
+        "defaultChance": 50,
+        "lifesteal": 0,
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Fear",
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 2
+              }
+            ]
+          }
+        ],
+        "prehitEffects": []
+      },
+      {
+        "id": "Reanimate",
+        "name": "Reanimate",
+        "defaultChance": 30,
+        "prehitEffects": [
+          {
+            "effectID": "expandedAreas:CircleOfBones0"
+          }
+        ],
+        "onhitEffects": [],
+        "lifesteal": 0,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "cantMiss": true,
+        "canNormalAttack": true,
+        "damage": [],
+        "description": "Reanimates a pile of bones into a protective ward, granting the Necromancer +30% Damage Reduction and +25% Reflect Damage for 3 turns."
+      },
+      {
+        "id": "OopsPulledOnTheWrongWallSconce",
+        "defaultChance": 5,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "maxRoll": "Fixed",
+            "maxPercent": 30,
+            "roll": false
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Burn",
+            "chance": 50
+          }
+        ],
+        "cantMiss": true,
+        "attackCount": 1,
+        "attackInterval": 200,
+        "lifesteal": 0,
+        "name": "Oops, Pulled On the Wrong Wall Sconce",
+        "description": "The treasure hunter accidentally pulls on the wrong wall sconce, which deals ${attackDamageMaxValue0} damage. On a hit, has a ${onHitEffect0chance}% chance to apply Burn. Unvoidable.",
+        "descriptionGenerator": "<Attacker> pulls on the wrong wall sconce, which deals <damage> damage and inflicts <hitEffect>. <Avoidable>.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "GoddamnMummies",
+        "defaultChance": 5,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "maxRoll": "Fixed",
+            "maxPercent": 15,
+            "roll": false
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Affliction",
+            "initialParams": [
+              {
+                "name": "stacksToAdd",
+                "value": 5
+              }
+            ],
+            "chance": 50
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 200,
+        "lifesteal": 0,
+        "name": "Goddam Mummies!",
+        "description": "The treasure hunter searches a sarcophagus, from which emerges a mummy! It deals ${attackDamageMaxValue0} damage on hit. On a hit, has a ${onHitEffect0chance}% chance to apply 5 stacks of Affliction. Avoidable.",
+        "descriptionGenerator": "<Attacker> searches a sarcophagus, from which emerges a mummy that deals <damage> damage and inflicts <hitEffect> on hit. <Avoidable>.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "AhhhItsAMimic",
+        "defaultChance": 5,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "maxRoll": "Fixed",
+            "maxPercent": 22.5,
+            "roll": false
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Poison"
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 100,
+        "lifesteal": 0,
+        "name": "Ahhh, It's a Mimic!",
+        "description": "The treasure hunter points you to a chest, but it turns out, it's actually a Mimic! It deals ${attackDamageMaxValue0} damage on hit. On a hit, has a ${onHitEffect0chance}% chance to inflict Poison. Avoidable.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "HolyToledoItsRainingGold",
+        "defaultChance": 5,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "maxRoll": "Fixed",
+            "maxPercent": 3,
+            "roll": false
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [],
+        "cantMiss": false,
+        "attackCount": 20,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Holy Toledo, It's Raining Gold!",
+        "description": "Piles of gold hidden in the ceiling rain down on your head. It deals ${attackDamageMaxValue0} damage each time it hits you, ${hitCount} times. Avoidable.",
+        "descriptionGenerator": "Piles of gold fall on your head, dealing <damage> each hit, <hitCount> times. <Avoidable>.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "IThoughtItSaidFillMyPurseNotKillWithCurse",
+        "defaultChance": 5,
+        "damage": [],
+        "prehitEffects": [
+          {
+            "tableID": "melvorF:RandomCurse"
+          },
+          {
+            "tableID": "melvorF:ElementalEffect"
+          }
+        ],
+        "onhitEffects": [],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "I Thought it Said \"Fill My Purse\", not \"Kill With Curse\"!",
+        "description": "The treasure hunter reads strange runes the wrong way, causing a random Curse and a random Elemental effect. Unavoidable.",
+        "descriptionGenerator": "Strange runes cause a random Curse and Elemental effect. <Avoidable>.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "PrettySureThisButtonWillRevealTheTreasureRoom",
+        "defaultChance": 5,
+        "damage": [],
+        "prehitEffects": [
+          {
+            "effectID": "melvorD:Stun",
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 3
+              }
+            ]
+          }
+        ],
+        "onhitEffects": [],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Pretty Sure This Button Will Reveal the Treasure Room...",
+        "description": "The treasure hunter presses a button which...causes you to turn to stone for 3 turns. Unavoidable.",
+        "descriptionGenerator": "Piles of gold fall on your head, dealing <damage> each hit, <hitCount> times. <Avoidable>.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "ThereItIsTheTreasureRoom",
+        "defaultChance": 5,
+        "damage": [],
+        "prehitEffects": [
+          {
+            "effectID": "expandedAreas:OntoTheNextRoom"
+          }
+        ],
+        "onhitEffects": [],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "There It Is: The Treasure Room!",
+        "description": "The treasure hunter finds the Treasure Room!",
+        "descriptionGenerator": "The treasure hunter finds the Treasure Room!",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "Burrow",
+        "defaultChance": 25,
+        "damage": [],
+        "prehitEffects": [
+          {
+            "effectID": "expandedAreas:Burrow"
+          }
+        ],
+        "onhitEffects": [],
+        "cantMiss": true,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Burrow",
+        "description": "Burrows into the ground, becoming immune to all attacks but unable to attack for 3 turns.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "Stomp",
+        "defaultChance": 20,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "maxRoll": "Fixed",
+            "maxPercent": 51,
+            "roll": false
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "chance": 33,
+            "effectID": "melvorD:Stun",
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 3,
+        "attackInterval": 1300,
+        "lifesteal": 0,
+        "name": "Stomp",
+        "description": "Stamp the ground ${hitCount} times over ${duration}s, dealing ${attackDamageMaxValue0} damage each, each with a ${onHitEffect0chance}% chance on hit to inflict Stun for ${onHitEffect0turns} turn (Avoidable).",
+        "descriptionGenerator": "Slam the ground <count> times over <duration>, dealing <damage> damage each (<Avoidable>). On hit, <hitEffect>.",
+        "usesRunesPerProc": false
+      },
+      {
         "id": "DualHitNormal",
         "defaultChance": 100,
         "damage": [
@@ -1599,6 +1992,62 @@
     "bankSortOrder": [
       {
         "insertAt": "After",
+        "afterID": "melvorF:Magic_Damage_Potion_IV",
+        "ids": [
+          "expandedAreas:Aeris_Brew_I",
+          "expandedAreas:Aeris_Brew_II",
+          "expandedAreas:Aeris_Brew_III",
+          "expandedAreas:Aeris_Brew_IV"
+        ]
+      },
+      {
+        "insertAt": "Before",
+        "beforeID": "melvorF:Mirror_Shield",
+        "ids": [
+          "expandedAreas:Candle"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Bird_Nest",
+        "ids": [
+          "expandedAreas:Crushed_Bird_Nest"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Goo",
+        "ids": [
+          "expandedAreas:Enormous_Mole_Carcass",
+          "expandedAreas:Mole_Skin",
+          "expandedAreas:Mole_Claw"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Desecrated_Bones",
+        "ids": [
+          "expandedAreas:Holy_Elixir",
+          "expandedAreas:Spectral_Sigil",
+          "expandedAreas:Arcane_Sigil",
+          "expandedAreas:Elysian_Sigil",
+          "expandedAreas:Divine_Sigil"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Dragonfire_Shield",
+        "ids": [
+          "expandedAreas:Spirit_Shield",
+          "expandedAreas:Blessed_Spirit_Shield",
+          "expandedAreas:Spectral_Spirit_Shield",
+          "expandedAreas:Arcane_Spirit_Shield",
+          "expandedAreas:Elysian_Spirit_Shield",
+          "expandedAreas:Divine_Spirit_Shield"
+        ]
+      },
+      {
+        "insertAt": "After",
         "afterID": "melvorD:Dragon_Shield_T_G",
         "ids": [
           "expandedAreas:Guthans_Helm",
@@ -3020,6 +3469,26 @@
         ]
       }
     ],
+    "combatAreaCategories": [
+      {
+        "id": "Bosses",
+        "name": "Bosses",
+        "media": "assets/icons/skull.png",
+        "areas": [
+          "expandedAreas:Mole_Lair",
+          "expandedAreas:Corporeal_Beast_Lair"
+        ]
+      }
+    ],
+    "combatAreaCategoryOrder": [
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Strongholds",
+        "ids": [
+          "expandedAreas:Bosses"
+        ]
+      }
+    ],
     "combatAreas": [
       {
         "id": "Low_Town",
@@ -3269,6 +3738,365 @@
     ],
     "combatEffects": [
       {
+        "id": "OntoTheNextRoom",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Onto the Next Room",
+        "media": "assets/combat/status/evasion_increase.svg",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 69
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "currentHPDamageTakenOnAttack": 696969
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "Blind",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Blind",
+        "media": "assets/combat/status/attack_decrease.svg",
+        "target": "Target",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 5
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "accuracyRating": -20
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "ArcaneBarrier",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Arcane Barrier",
+        "media": "assets/combat/status/evasion_increase.svg",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "evasion": 50,
+              "flatResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": 25
+                }
+              ]
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "Assassin",
+        "templateID": "melvorD:StackingSelfCountingModifier",
+        "name": "Assassin",
+        "media": "assets/combat/status/attack_increase.svg",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 5
+          },
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 5
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "accuracyRating": 30,
+              "critChance": 5
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "CircleOfBones0",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Circle of Bones",
+        "media": "assets/combat/status/evasion_increase.svg",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "flatResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": 30
+                }
+              ],
+              "reflectDamage": 25
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "Burrow",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Burrow",
+        "media": "assets/combat/status/burrow.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "meleeImmunity": 1,
+              "rangedImmunity": 1,
+              "magicImmunity": 1,
+              "cantAttack": 1,
+              "cantSpecialAttack": 1,
+              "flatResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": 69
+                }
+              ],
+              "evasion": 6969
+            }
+          }
+        ]
+      },
+      {
+        "id": "ElysianSpiritShield",
+        "templateID": "melvorD:StackingSelfCountingModifier",
+        "name": "Elysian Spirit Shield",
+        "media": "assets/combat/status/evasion_increase.svg",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 1
+          },
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 1
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "flatResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": 20
+                }
+              ]
+            }
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Elysian_Spirit_Shield"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "DarkEnergySap",
+        "templateID": "melvorD:StackingSelfCountingModifier",
+        "name": "Dark Energy Sap",
+        "media": "assets/combat/status/darkenergysap.png",
+        "target": "Target",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 2
+          },
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "maxHitpoints": -2.5
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "DarkEnergySapPlayer",
+        "templateID": "melvorD:StackingSelfCountingModifier",
+        "name": "Dark Energy Sap",
+        "media": "assets/combat/status/darkenergysap.png",
+        "target": "Target",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 2
+          },
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "maxHitpoints": -2.5
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "CorporealBeastHeal0",
+        "templateID": "melvorD:Regen",
+        "name": "Dark Energy Heal",
+        "parameters": [
+          {
+            "name": "procs",
+            "initialValue": 1
+          },
+          {
+            "name": "interval",
+            "initialValue": 50
+          }
+        ],
+        "damageGroups": [
+          {
+            "name": "totalHealing",
+            "damage": [
+              {
+                "roll": false,
+                "character": "Attacker",
+                "maxRoll": "MaxHP",
+                "maxPercent": 0.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DarkEnergyHealPlayer",
+        "templateID": "melvorD:Regen",
+        "name": "Dark Energy Heal",
+        "parameters": [
+          {
+            "name": "procs",
+            "initialValue": 1
+          },
+          {
+            "name": "interval",
+            "initialValue": 50
+          }
+        ],
+        "damageGroups": [
+          {
+            "name": "totalHealing",
+            "damage": [
+              {
+                "roll": false,
+                "character": "Attacker",
+                "maxRoll": "MaxHP",
+                "maxPercent": 0.5
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "Blighted",
         "templateID": "melvorD:StackingNonCountingModifier",
         "name": "Blighted",
@@ -3366,7 +4194,7 @@
         "id": "ResistanceIncrease5",
         "templateID": "melvorD:StaticSelfCountingModifier",
         "name": "+5% Damage Reduction",
-        "media": "assets/status/evasion_increase.png",
+        "media": "assets/combat/status/evasion_increase.png",
         "target": "Self",
         "parameters": [
           {
@@ -3395,7 +4223,7 @@
         "id": "ResistanceIncrease10",
         "templateID": "melvorD:StaticSelfCountingModifier",
         "name": "+10% Damage Reduction",
-        "media": "assets/status/evasion_increase.png",
+        "media": "assets/combat/status/evasion_increase.png",
         "target": "Self",
         "parameters": [
           {
@@ -3424,7 +4252,7 @@
         "id": "ResistanceIncrease15",
         "templateID": "melvorD:StaticSelfCountingModifier",
         "name": "+15% Damage Reduction",
-        "media": "assets/status/evasion_increase.png",
+        "media": "assets/combat/status/evasion_increase.png",
         "target": "Self",
         "parameters": [
           {
@@ -4761,6 +5589,355 @@
     ],
     "combatPassives": [
       {
+        "id": "Assassin",
+        "name": "Assassin",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "expandedAreas:Assassin"
+          },
+          {
+            "appliesWhen": "HitWithAttack",
+            "effectID": "expandedAreas:Assassin"
+          }
+        ]
+      },
+      {
+        "id": "OneWithTheUnholy",
+        "name": "One With the Unholy",
+        "customDescription": "Immunity to Curses, +30% lifesteal, +5% rebirth chance",
+        "modifiers": {
+          "lifesteal": 30,
+          "effectImmunity": [
+            {
+              "effectGroupID": "melvorD:Curse",
+              "value": 1
+            }
+          ],
+          "rebirthChance": 5
+        }
+      },
+      {
+        "id": "GolbinMagic",
+        "name": "Golbin Magic",
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithFirstAttack",
+            "chance": 50,
+            "tableID": "melvorF:RandomCurse"
+          },
+          {
+            "appliesWhen": "HitByAttack",
+            "chance": 50,
+            "effectID": "melvorD:Heal0"
+          }
+        ]
+      },
+      {
+        "id": "StunningStrikes",
+        "name": "Stunning Strokes",
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 25,
+            "effectID": "melvorD:Stun",
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "TheWickedlyUnholyNecromancerBlessingOfUndeath",
+        "name": "The Wickedly Unholy Necromancer's Blessing of Undeath",
+        "modifiers": {
+          "rebirthChance": 25
+        }
+      },
+      {
+        "id": "YouCantAttackARoom",
+        "name": "You Can't Attack a Room",
+        "playerModifiers": {
+          "cantAttack": 1
+        }
+      },
+      {
+        "id": "TheRoofTheRoofTheRoofIsOnFire",
+        "name": "The Roof! The Roof! The Roof is On Fire!",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "melvorD:Burn",
+            "targetOverride": "Self"
+          },
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "melvorD:Burn",
+            "targetOverride": "Target"
+          },
+          {
+            "appliesWhen": "HitByAttack",
+            "effectID": "melvorD:Burn",
+            "targetOverride": "Self"
+          },
+          {
+            "appliesWhen": "HitWithAttack",
+            "effectID": "melvorD:Burn",
+            "targetOverride": "Target"
+          }
+        ]
+      },
+      {
+        "id": "MonstersMonstersEverywhere",
+        "name": "Monsters, Monsters Everywhere!",
+        "customDescription": "You take 5% of your max HP when you hit with an attack, and deal -5% damage per Effect you are affected by.",
+        "playerModifiers": {
+          "damageBasedOnMaxHitpointsSelf": 5,
+          "damageDealtPerEffect": -5
+        }
+      },
+      {
+        "id": "ThisPlaceIsLikeCursedMan",
+        "name": "This Place Is, Like, Cursed, Man",
+        "customDescription": "Gain a Random Curse at the Start of the Fight and whenever you are hit by an attack.",
+        "combatEffects": [
+          {
+            "tableID": "melvorF:RandomCurse",
+            "appliesWhen": "StartOfFight",
+            "targetOverride": "Target"
+          },
+          {
+            "tableID": "melvorF:RandomCurse",
+            "appliesWhen": "HitByAttack",
+            "targetOverride": "Target"
+          }
+        ]
+      },
+      {
+        "id": "WhoWaxedTheseFloors",
+        "name": "Who Waxed These Floors?!",
+        "playerModifiers": {
+          "attackInterval": 20
+        }
+      },
+      {
+        "id": "Burrow",
+        "name": "Burrow",
+        "customDescription": "When the Giant Mole reaches 50% health, there is a 25% chance per Player hit that she will burrow beneath the ground for 3 turns, making her immune to all attacks but unable to attack. This cannot activate when her HP reaches 5% or less.",
+        "combatEffects": [
+          {
+            "effectID": "expandedAreas:Burrow",
+            "appliesWhen": "HitByAttack",
+            "chance": 25,
+            "condition": {
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "Hitpoints",
+                  "character": "Enemy",
+                  "operator": ">",
+                  "value": 5
+                },
+                {
+                  "type": "Hitpoints",
+                  "character": "Enemy",
+                  "operator": "<=",
+                  "value": 50
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "UnfairBossImmunities",
+        "name": "Unfair Boss Immunities",
+        "customDescription": "Immune to Stun, Stunlikes, Poison, Fear, Drowsy, and Sleep",
+        "modifiers": {
+          "effectImmunity": [
+            {
+              "effectGroupID": "melvorD:Stun",
+              "value": 1
+            },
+            {
+              "effectGroupID": "melvorD:StunLike",
+              "value": 1
+            },
+            {
+              "effectGroupID": "melvorD:PoisonDOT",
+              "value": 1
+            },
+            {
+              "effectGroupID": "melvorD:DeadlyPoisonDOT",
+              "value": 1
+            },
+            {
+              "effectGroupID": "melvorD:Fear",
+              "value": 1
+            },
+            {
+              "effectGroupID": "melvorD:Drowsy",
+              "value": 1
+            },
+            {
+              "effectGroupID": "melvorD:Sleep",
+              "value": 1
+            }
+          ]
+        }
+      },
+      {
+        "id": "DarkEnergyCore",
+        "name": "Dark Energy Core",
+        "customDescription": "A little alien asshole follows you around, applying 1 stack of Dark Energy Sap, reducing your max HP by 2.5% per hit (30% chance, up to 10 stacks) and healing the Beast by 0.5% of its max HP. When the Beast reaches 50% HP, the Core gives it 10% lifesteal and regen equal to 0.5% of the Beast's max HP.",
+        "combatEffects": [
+          {
+            "appliesWhen": "PostAttack",
+            "effectID": "expandedAreas:DarkEnergySap",
+            "chance": 30
+          },
+          {
+            "appliesWhen": "PostAttack",
+            "effectID": "expandedAreas:CorporealBeastHeal0",
+            "chance": 30,
+            "condition": {
+              "effectID": "expandedAreas:DarkEnergySap",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            }
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "Hitpoints",
+              "character": "Enemy",
+              "operator": "<=",
+              "value": 50
+            },
+            "modifiers": {
+              "hPRegenBasedOnMaxHP": 0.5,
+              "lifesteal": 10
+            }
+          }
+        ]
+      },
+      {
+        "id": "StabMeOrElse",
+        "name": "Stab Me or Else",
+        "customDescription": "You have 50% reduced Global Accuracy with Magic, Ranged, or any Melee setup that does not have a stab attack bonus of at least 100.",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "Some",
+              "conditions": [
+                {
+                  "statKey": "stabAttackBonus",
+                  "type": "EquipStatCompare",
+                  "operator": "<"
+                },
+                {
+                  "targetAttackType": "melee",
+                  "thisAttackType": "any",
+                  "character": "Enemy",
+                  "type": "CombatType",
+                  "inverted": true
+                }
+              ]
+            },
+            "modifiers": {
+              "accuracyRating": -50
+            },
+            "isNegative": true
+          }
+        ]
+      },
+      {
+        "id": "BonusXP10",
+        "name": "Bonus XP +10%",
+        "customDescription": "This monster provides 10% bonus combat XP",
+        "playerModifiers": {
+          "skillXP": [
+            {
+              "skillID": "melvorD:Attack",
+              "value": 10
+            },
+            {
+              "skillID": "melvorD:Strength",
+              "value": 10
+            },
+            {
+              "skillID": "melvorD:Defence",
+              "value": 10
+            },
+            {
+              "skillID": "melvorD:Hitpoints",
+              "value": 10
+            },
+            {
+              "skillID": "melvorD:Magic",
+              "value": 10
+            },
+            {
+              "skillID": "melvorD:Prayer",
+              "value": 10
+            },
+            {
+              "skillID": "melvorD:Ranged",
+              "value": 10
+            },
+            {
+              "skillID": "melvorD:Slayer",
+              "value": 10
+            }
+          ]
+        }
+      },
+      {
+        "id": "BonusXP50",
+        "name": "Bonus XP +50%",
+        "customDescription": "This monster provides 50% bonus combat XP",
+        "playerModifiers": {
+          "skillXP": [
+            {
+              "skillID": "melvorD:Attack",
+              "value": 50
+            },
+            {
+              "skillID": "melvorD:Strength",
+              "value": 50
+            },
+            {
+              "skillID": "melvorD:Defence",
+              "value": 50
+            },
+            {
+              "skillID": "melvorD:Hitpoints",
+              "value": 50
+            },
+            {
+              "skillID": "melvorD:Magic",
+              "value": 50
+            },
+            {
+              "skillID": "melvorD:Prayer",
+              "value": 50
+            },
+            {
+              "skillID": "melvorD:Ranged",
+              "value": 50
+            },
+            {
+              "skillID": "melvorD:Slayer",
+              "value": 50
+            }
+          ]
+        }
+      },
+      {
         "id": "JustAFleshWound",
         "name": "Just a Flesh Wound",
         "combatEffects": [
@@ -5395,6 +6572,87 @@
     ],
     "dungeons": [
       {
+        "id": "The_Dungeon",
+        "name": "The Dungeon",
+        "media": "assets/combat/dungeons/The_Dungeon.png",
+        "oneTimeRewardID": "expandedAreas:Skeleton_Key",
+        "monsterIDs": [
+          "melvorD:Golbin",
+          "melvorD:RangedGolbin",
+          "melvorD:Golbin",
+          "melvorD:RangedGolbin",
+          "melvorD:Golbin",
+          "expandedAreas:Golbin_Assassin",
+          "expandedAreas:Golbin_Witch_Doctor",
+          "expandedAreas:Golbin_Berserker",
+          "expandedAreas:Orc",
+          "expandedAreas:Wolf",
+          "expandedAreas:Orc",
+          "expandedAreas:Wolf",
+          "expandedAreas:Orc",
+          "expandedAreas:Wolf",
+          "expandedAreas:Grey_Orc",
+          "expandedAreas:Grey_Orc",
+          "expandedAreas:Grey_Orc",
+          "expandedAreas:Ogre",
+          "expandedAreas:Knight",
+          "expandedAreas:Monk",
+          "expandedAreas:Druid",
+          "expandedAreas:Mage",
+          "melvorD:Zombie",
+          "melvorD:Skeleton",
+          "melvorD:Zombie",
+          "melvorD:Skeleton",
+          "expandedAreas:Shambler",
+          "expandedAreas:Shambler",
+          "expandedAreas:Skeleton_Warrior",
+          "expandedAreas:Skeleton_Warrior",
+          "expandedAreas:Spook",
+          "expandedAreas:Spook",
+          "expandedAreas:The_Necromancer",
+          "expandedAreas:The_Final_Room",
+          "expandedAreas:Escape_the_Dungeon"
+        ],
+        "difficulty": [
+          1
+        ],
+        "entryRequirements": [
+          {
+            "skillID": "melvorD:Mining",
+            "level": 30,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Thieving",
+            "level": 30,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Agility",
+            "level": 30,
+            "type": "SkillLevel"
+          }
+        ],
+        "rewardItemIDs": [
+          "expandedAreas:Treasure_Hoard"
+        ],
+        "dropBones": true,
+        "pet": {
+          "petID": "expandedAreas:DonJonLuter",
+          "weight": 150
+        },
+        "fixedPetClears": false,
+        "pauseOnBosses": false,
+        "floors": [
+          8,
+          10,
+          4,
+          11,
+          1,
+          1
+        ]
+      },
+      {
         "difficulty": [
           2
         ],
@@ -5597,6 +6855,1023 @@
       }
     ],
     "items": [
+      {
+        "id": "Golden_Sceptre",
+        "name": "Golden Sceptre",
+        "category": "Loot",
+        "type": "Weapon",
+        "media": "assets/bank/Golden_Sceptre.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 500000,
+        "tier": "none",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 40
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2600
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 30
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 60
+          }
+        ],
+        "modifiers": {
+          "currencyGain": [
+            {
+              "currencyID": "melvorD:GP",
+              "value": 25
+            }
+          ]
+        },
+        "itemType": "Weapon",
+        "attackType": "melee"
+      },
+      {
+        "id": "Skeleton_Key",
+        "name": "Skeleton_Key",
+        "customDescription": "Wonder what this opens...",
+        "category": "Key",
+        "type": "Key",
+        "media": "assets/bank/Skeleton_Key.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1,
+        "itemType": "Item"
+      },
+      {
+        "id": "Lamp",
+        "name": "Lamp",
+        "category": "Loot",
+        "type": "Loot",
+        "media": "assets/bank/Lamp.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 250000,
+        "itemType": "Item"
+      },
+      {
+        "id": "Crown",
+        "name": "Crown",
+        "category": "Loot",
+        "type": "Loot",
+        "media": "assets/bank/Crown.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1000000,
+        "itemType": "Item"
+      },
+      {
+        "id": "Goblet",
+        "name": "Goblet",
+        "category": "Loot",
+        "type": "Loot",
+        "media": "assets/bank/Goblet.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 100000,
+        "itemType": "Item"
+      },
+      {
+        "itemType": "Item",
+        "id": "Treasure",
+        "name": "Treasure",
+        "category": "Loot",
+        "type": "Loot",
+        "media": "assets/bank/Treasure.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 20000
+      },
+      {
+        "id": "Bag_of_Endless_Gold1",
+        "name": "Bag of Endless Gold",
+        "category": "Openable",
+        "type": "Chest",
+        "media": "assets/bank/Bag_of_Endless_Gold.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1000,
+        "itemType": "Openable",
+        "dropTable": [
+          {
+            "itemID": "expandedAreas:Bag_of_Endless_Gold2",
+            "minQuantity": 2,
+            "maxQuantity": 2,
+            "weight": 1
+          }
+        ]
+      },
+      {
+        "id": "Bag_of_Endless_Gold2",
+        "name": "Bag of Endless Gold",
+        "category": "Openable",
+        "type": "Chest",
+        "media": "assets/bank/Bag_of_Endless_Gold.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1000,
+        "itemType": "Openable",
+        "dropTable": [
+          {
+            "itemID": "expandedAreas:Bag_of_Endless_Gold1",
+            "minQuantity": 2,
+            "maxQuantity": 2,
+            "weight": 1
+          }
+        ]
+      },
+      {
+        "id": "Weapons_Cache",
+        "name": "Weapons Cache",
+        "category": "Openable",
+        "type": "Chest",
+        "media": "assets/bank/Weapons_Cache.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 15000,
+        "itemType": "Openable",
+        "dropTable": [
+          {
+            "itemID": "melvorD:Adamant_2H_Sword",
+            "minQuantity": 50,
+            "maxQuantity": 100,
+            "weight": 100
+          },
+          {
+            "itemID": "melvorD:Adamant_Battleaxe",
+            "minQuantity": 50,
+            "maxQuantity": 100,
+            "weight": 65
+          },
+          {
+            "itemID": "melvorD:Adamant_Dagger",
+            "minQuantity": 50,
+            "maxQuantity": 100,
+            "weight": 55
+          },
+          {
+            "itemID": "melvorD:Adamant_Sword",
+            "minQuantity": 50,
+            "maxQuantity": 100,
+            "weight": 45
+          },
+          {
+            "itemID": "melvorD:Adamant_Scimitar",
+            "minQuantity": 50,
+            "maxQuantity": 100,
+            "weight": 35
+          },
+          {
+            "itemID": "melvorF:Yew_Longbow",
+            "minQuantity": 50,
+            "maxQuantity": 100,
+            "weight": 35
+          },
+          {
+            "itemID": "melvorD:Adamant_Arrows",
+            "minQuantity": 500,
+            "maxQuantity": 1000,
+            "weight": 35
+          },
+          {
+            "itemID": "melvorF:Adamant_Crossbow",
+            "minQuantity": 50,
+            "maxQuantity": 100,
+            "weight": 20
+          },
+          {
+            "itemID": "melvorF:Topaz_Bolts",
+            "minQuantity": 250,
+            "maxQuantity": 500,
+            "weight": 20
+          },
+          {
+            "itemID": "melvorF:Ruby_Bolts",
+            "minQuantity": 250,
+            "maxQuantity": 500,
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "itemType": "Openable",
+        "id": "Treasure_Hoard",
+        "name": "Treasure Hoard",
+        "category": "Loot",
+        "type": "Loot",
+        "media": "assets/bank/Treasure_Hoard.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 100000,
+        "dropTable": [
+          {
+            "minQuantity": 10,
+            "maxQuantity": 50,
+            "itemID": "expandedAreas:Treasure",
+            "weight": 200
+          },
+          {
+            "minQuantity": 1,
+            "maxQuantity": 10,
+            "itemID": "melvorF:Chest_Of_Gems",
+            "weight": 200
+          },
+          {
+            "minQuantity": 1,
+            "maxQuantity": 10,
+            "itemID": "expandedAreas:Weapons_Cache",
+            "weight": 200
+          },
+          {
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "itemID": "expandedAreas:Bag_of_Endless_Gold1",
+            "weight": 10
+          },
+          {
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "itemID": "expandedAreas:Goblet",
+            "weight": 70
+          },
+          {
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "itemID": "expandedAreas:Crown",
+            "weight": 30
+          },
+          {
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "itemID": "expandedAreas:Golden_Sceptre",
+            "weight": 1
+          },
+          {
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "itemID": "expandedAreas:Lamp",
+            "weight": 50
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "The_Spike",
+        "name": "The Spike",
+        "category": "Combat",
+        "type": "Shield",
+        "media": "assets/bank/The_Spike.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 34777,
+        "customDescription": "Passive: +15% chance on hit or when hit by an attack to inflict Bleed that deals 100% of the attacker's maximum HP over 10s.",
+        "tier": "misc",
+        "validSlots": [
+          "Shield",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 60
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Strength",
+            "level": 60
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": 6
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 6
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 6
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -12
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 42
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 35
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -17
+          },
+          {
+            "key": "damageReduction",
+            "value": 4
+          }
+        ],
+        "combatEffects": [
+          {
+            "appliesWhen": "HitByAttack",
+            "chance": 15,
+            "effectID": "melvorD:Bleed100",
+            "targetOverride": "Target"
+          },
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 15,
+            "effectID": "melvorD:Bleed100"
+          }
+        ]
+      },
+      {
+        "id": "Aeris_Brew_I",
+        "name": "Aeris Brew I",
+        "category": "Herblore",
+        "type": "Potion",
+        "media": "assets/bank/aerisbrew1.png",
+        "customDescription": "-5% Auto Eat Threshold, and -10% Max Hit and Accuracy<br>+20% of your Defence level added as Hidden Skill levels, and +15% + 20 Maximum HP",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 2000,
+        "itemType": "Potion",
+        "modifiers": {
+          "accuracyRating": -10,
+          "flatHiddenSkillLevelBasedOnLevels": [
+            {
+              "skillID": "melvorD:Defence",
+              "value": 20
+            }
+          ],
+          "maxHit": -10,
+          "maxHitpoints": 15,
+          "flatMaxHitpoints": 2,
+          "autoEatThreshold": -10
+        },
+        "charges": 5,
+        "tier": 0,
+        "action": "melvorD:Combat",
+        "consumesOn": [
+          {
+            "type": "EnemyAttack"
+          }
+        ]
+      },
+      {
+        "id": "Aeris_Brew_II",
+        "name": "Aeris Brew II",
+        "category": "Herblore",
+        "type": "Potion",
+        "media": "assets/bank/aerisbrew2.png",
+        "customDescription": "-10% Max Hit, Accuracy, and Auto Eat Threshold<br>+20% Evasion and +15% Maximum HP",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 2500,
+        "itemType": "Potion",
+        "modifiers": {
+          "accuracyRating": -10,
+          "maxHit": -10,
+          "evasion": 20,
+          "maxHitpoints": 15,
+          "autoEatThreshold": -10
+        },
+        "charges": 10,
+        "tier": 0,
+        "action": "melvorD:Combat",
+        "consumesOn": [
+          {
+            "type": "EnemyAttack"
+          }
+        ]
+      },
+      {
+        "id": "Aeris_Brew_III",
+        "name": "Aeris Brew III",
+        "category": "Herblore",
+        "type": "Potion",
+        "media": "assets/bank/aerisbrew3.png",
+        "customDescription": "-10% Max Hit, Accuracy, and Auto Eat Threshold<br>+20% Evasion and +15% Maximum HP",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 3000,
+        "itemType": "Potion",
+        "modifiers": {
+          "accuracyRating": -10,
+          "maxHit": -10,
+          "evasion": 20,
+          "maxHitpoints": 15,
+          "autoEatThreshold": -10
+        },
+        "charges": 15,
+        "tier": 0,
+        "action": "melvorD:Combat",
+        "consumesOn": [
+          {
+            "type": "EnemyAttack"
+          }
+        ]
+      },
+      {
+        "id": "Aeris_Brew_IV",
+        "name": "Aeris Brew IV",
+        "category": "Herblore",
+        "type": "Potion",
+        "media": "assets/bank/aerisbrew4.png",
+        "customDescription": "-10% Max Hit, Accuracy, and Auto Eat Threshold<br>+20% Evasion and +15% Maximum HP",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 3500,
+        "itemType": "Potion",
+        "modifiers": {
+          "accuracyRating": -10,
+          "maxHit": -10,
+          "evasion": 20,
+          "maxHitpoints": 15,
+          "autoEatThreshold": -10
+        },
+        "charges": 20,
+        "tier": 0,
+        "action": "melvorD:Combat",
+        "consumesOn": [
+          {
+            "type": "EnemyAttack"
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Candle",
+        "name": "Candle",
+        "category": "Consumable",
+        "type": "Consumable",
+        "media": "assets/bank/candle.png",
+        "customDescription": "Grants access to the Big Ol' Mole Hole. One item is consumed per enemy attack.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 5,
+        "equipmentStats": [],
+        "equipRequirements": [],
+        "tier": "none",
+        "occupiesSlots": [],
+        "validSlots": [
+          "Consumable"
+        ],
+        "consumesOn": [
+          {
+            "type": "EnemyAttack"
+          }
+        ]
+      },
+      {
+        "itemType": "Item",
+        "id": "Crushed_Bird_Nest",
+        "name": "Crushed Bird Nest",
+        "category": "Misc",
+        "type": "Misc",
+        "media": "assets/bank/crushednest.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 175
+      },
+      {
+        "itemType": "Item",
+        "id": "Mole_Skin",
+        "name": "Mole Skin",
+        "category": "Misc",
+        "type": "Misc",
+        "media": "assets/bank/moleskin.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 2500
+      },
+      {
+        "itemType": "Item",
+        "id": "Mole_Claw",
+        "name": "Mole Claw",
+        "category": "Misc",
+        "type": "Misc",
+        "media": "assets/bank/moleclaw.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 3500
+      },
+      {
+        "itemType": "Openable",
+        "id": "Enormous_Mole_Carcass",
+        "name": "Enormous Mole Carcass",
+        "category": "Loot",
+        "type": "Loot",
+        "media": "assets/bank/molecarcass.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 100,
+        "dropTable": [
+          {
+            "itemID": "melvorD:Big_Bones",
+            "minQuantity": 5,
+            "maxQuantity": 25,
+            "weight": 3
+          },
+          {
+            "itemID": "expandedAreas:Mole_Skin",
+            "minQuantity": 2,
+            "maxQuantity": 6,
+            "weight": 2
+          },
+          {
+            "itemID": "expandedAreas:Mole_Claw",
+            "minQuantity": 1,
+            "maxQuantity": 4,
+            "weight": 1
+          }
+        ]
+      },
+      {
+        "itemType": "Item",
+        "id": "Spectral_Sigil",
+        "name": "Spectral Sigil",
+        "category": "Prayer",
+        "type": "Upgrade",
+        "media": "assets/bank/sigilspectral.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 750000
+      },
+      {
+        "itemType": "Item",
+        "id": "Arcane_Sigil",
+        "name": "Arcane Sigil",
+        "category": "Prayer",
+        "type": "Upgrade",
+        "media": "assets/bank/sigilarcane.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 750000
+      },
+      {
+        "itemType": "Item",
+        "id": "Elysian_Sigil",
+        "name": "Elysian Sigil",
+        "category": "Prayer",
+        "type": "Upgrade",
+        "media": "assets/bank/sigilelysian.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 750000
+      },
+      {
+        "itemType": "Item",
+        "id": "Divine_Sigil",
+        "name": "Divine Sigil",
+        "category": "Prayer",
+        "type": "Upgrade",
+        "media": "assets/bank/sigildivine.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 750000
+      },
+      {
+        "itemType": "Item",
+        "id": "Holy_Elixir",
+        "name": "Holy Elixir",
+        "category": "Prayer",
+        "type": "Upgrade",
+        "media": "assets/bank/elixir.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 750000
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Spirit_Shield",
+        "name": "Spirit Shield",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/spirit.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 70000,
+        "tier": "none",
+        "validSlots": [
+          "Shield"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 45
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Prayer",
+            "level": 55
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedDefenceBonus",
+            "value": 45
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 1
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 50
+          },
+          {
+            "key": "damageReduction",
+            "value": 5
+          }
+        ],
+        "modifiers": {
+          "prayerPointCost": 2,
+          "maxHitBasedOnPrayerCost": 0.2,
+          "flatResistanceWithActivePrayer": [
+            {
+              "damageTypeID": "melvorD:Normal",
+              "value": 2
+            }
+          ]
+        },
+        "customDescription": "Passive: +2 Flat Prayer Point Cost, +0.2% Max Hit per Prayer Point Cost of Active Prayers, and +2% Flat Resistance while at least 1 Prayer is Active"
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Blessed_Spirit_Shield",
+        "name": "Blessed Spirit Shield",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/blessed.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1200000,
+        "tier": "none",
+        "validSlots": [
+          "Shield"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 70
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Prayer",
+            "level": 60
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedDefenceBonus",
+            "value": 52
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 2
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 73
+          },
+          {
+            "key": "damageReduction",
+            "value": 7
+          }
+        ],
+        "modifiers": {
+          "prayerPointCost": 3,
+          "maxHitBasedOnPrayerCost": 0.3,
+          "flatResistanceWithActivePrayer": [
+            {
+              "damageTypeID": "melvorD:Normal",
+              "value": 3
+            }
+          ]
+        },
+        "customDescription": "Passive: +3 Flat Prayer Point Cost, +0.3% Max Hit per Prayer Point Cost of Active Prayers, and +3% Flat Resistance while at least 1 Prayer is Active"
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Spectral_Spirit_Shield",
+        "name": "Spectral Spirit Shield",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/spectral.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 2000000,
+        "tier": "none",
+        "validSlots": [
+          "Shield"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 75
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Prayer",
+            "level": 70
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Magic",
+            "level": 65
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedDefenceBonus",
+            "value": 52
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 30
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 73
+          },
+          {
+            "key": "damageReduction",
+            "value": 9
+          }
+        ],
+        "modifiers": {
+          "prayerPointCost": 4,
+          "maxHitBasedOnPrayerCost": 0.4,
+          "damageTakenAddedAsPrayerPoints": 0.4,
+          "flatResistanceWithActivePrayer": [
+            {
+              "damageTypeID": "melvorD:Normal",
+              "value": 4
+            }
+          ]
+        },
+        "customDescription": "Passive: +4 Flat Prayer Point Cost, +0.4% Max Hit per Prayer Point Cost of Active Prayers, +0.4% of Damage Taken added as Prayer Points, and +4% Flat Resistance while at least 1 Prayer is Active<br>+30% Chance per Player Attack to apply 1 stack of Dark Energy Sap (-5% Max HP, max 10 stacks, stacks last 1 turn) to the Enemy. While a stack is Active, +30% Chance per Player Attack to Regen instantly for 0.5% Max HP.",
+        "combatEffects": [
+          {
+            "appliesWhen": "PostAttack",
+            "effectID": "expandedAreas:DarkEnergySapPlayer",
+            "chance": 30
+          },
+          {
+            "appliesWhen": "PostAttack",
+            "effectID": "expandedAreas:DarkEnergyHealPlayer",
+            "chance": 30,
+            "condition": {
+              "effectID": "expandedAreas:DarkEnergySapPlayer",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Arcane_Spirit_Shield",
+        "name": "Arcane Spirit Shield",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/arcane.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 2000000,
+        "tier": "none",
+        "validSlots": [
+          "Shield"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 75
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Prayer",
+            "level": 70
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Magic",
+            "level": 65
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedDefenceBonus",
+            "value": 52
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 2
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 73
+          },
+          {
+            "key": "damageReduction",
+            "value": 9
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": 30
+          },
+          {
+            "key": "magicDamageBonus",
+            "value": 3
+          }
+        ],
+        "modifiers": {
+          "prayerPointCost": 3,
+          "maxHitBasedOnPrayerCost": 0.3,
+          "magicMaxHitWithActivePrayer": 3,
+          "flatResistanceWithActivePrayer": [
+            {
+              "damageTypeID": "melvorD:Normal",
+              "value": 3
+            }
+          ]
+        },
+        "customDescription": "Passive: +3 Flat Prayer Point Cost, +0.3% Max Hit per Prayer Point Cost of Active Prayers, and +3% Magic Max hit and Flat Resistance while at least 1 Prayer is Active"
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Elysian_Spirit_Shield",
+        "name": "Elysian Spirit Shield",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/elysian.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 2000000,
+        "tier": "none",
+        "validSlots": [
+          "Shield"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 75
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Prayer",
+            "level": 75
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedDefenceBonus",
+            "value": 57
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 2
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 75
+          }
+        ],
+        "combatEffects": [
+          {
+            "appliesWhen": "BeingAttacked",
+            "effectID": "expandedAreas:ElysianSpiritShield",
+            "chance": 70
+          }
+        ],
+        "customDescription": "Passive: +5 Prayer Point Cost, +5% Flat Resistance while at least 1 Prayer is Active, and 1/8 chance to convert Enemy Hit into a Miss<br>+70% chance when Being Attacked to gain +25% Flat Resistance for 1 turn",
+        "modifiers": {
+          "prayerPointCost": 5,
+          "flatResistanceWithActivePrayer": [
+            {
+              "damageTypeID": "melvorD:Normal",
+              "value": 5
+            }
+          ],
+          "dodgeChance": 12.5
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Divine_Spirit_Shield",
+        "name": "Divine Spirit Shield",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/divine.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 2000000,
+        "tier": "none",
+        "validSlots": [
+          "Shield"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 75
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Prayer",
+            "level": 75
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedDefenceBonus",
+            "value": 57
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 2
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 75
+          }
+        ],
+        "customDescription": "Passive: +2,500% Prayer Point Cost, +25% Flat Resistance while at least 1 Prayer is Active, and 1/6 chance to convert Enemy Hit into a Miss",
+        "modifiers": {
+          "prayerPointCost": 2500,
+          "flatResistanceWithActivePrayer": [
+            {
+              "damageTypeID": "melvorD:Normal",
+              "value": 25
+            }
+          ],
+          "dodgeChance": 16.67
+        }
+      },
       {
         "itemType": "Equipment",
         "id": "Ahrims_Hood",
@@ -30910,6 +33185,104 @@
     ],
     "itemUpgrades": [
       {
+        "upgradedItemID": "expandedAreas:Crushed_Bird_Nest",
+        "itemCosts": [
+          {
+            "id": "melvorD:Bird_Nest",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "melvorD:Bird_Nest"
+        ],
+        "isDowngrade": true
+      },
+      {
+        "upgradedItemID": "expandedAreas:Blessed_Spirit_Shield",
+        "itemCosts": [
+          {
+            "id": "expandedAreas:Spirit_Shield",
+            "quantity": 1
+          },
+          {
+            "id": "expandedAreas:Holy_Elixir",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "expandedAreas:Spirit_Shield"
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "expandedAreas:Spectral_Spirit_Shield",
+        "itemCosts": [
+          {
+            "id": "expandedAreas:Blessed_Spirit_Shield",
+            "quantity": 1
+          },
+          {
+            "id": "expandedAreas:Spectral_Sigil",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "expandedAreas:Spectral_Sigil"
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "expandedAreas:Arcane_Spirit_Shield",
+        "itemCosts": [
+          {
+            "id": "expandedAreas:Blessed_Spirit_Shield",
+            "quantity": 1
+          },
+          {
+            "id": "expandedAreas:Arcane_Sigil",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "expandedAreas:Arcane_Sigil"
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "expandedAreas:Elysian_Spirit_Shield",
+        "itemCosts": [
+          {
+            "id": "expandedAreas:Blessed_Spirit_Shield",
+            "quantity": 1
+          },
+          {
+            "id": "expandedAreas:Elysian_Sigil",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "expandedAreas:Elysian_Sigil"
+        ],
+        "isDowngrade": false
+      },
+      {
+        "upgradedItemID": "expandedAreas:Divine_Spirit_Shield",
+        "itemCosts": [
+          {
+            "id": "expandedAreas:Blessed_Spirit_Shield",
+            "quantity": 1
+          },
+          {
+            "id": "expandedAreas:Divine_Sigil",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "expandedAreas:Divine_Sigil"
+        ],
+        "isDowngrade": false
+      },
+      {
         "upgradedItemID": "expandedAreas:Superfertilizer",
         "itemCosts": [
           {
@@ -33067,6 +35440,1106 @@
       }
     ],
     "monsters": [
+      {
+        "id": "Escape_the_Dungeon",
+        "name": "Escape the Dungeon",
+        "media": "assets/combat/monsters/Escape_the_Dungeon.png",
+        "levels": {
+          "Hitpoints": 225,
+          "Attack": 1,
+          "Strength": 1,
+          "Defence": 150,
+          "Ranged": 1,
+          "Magic": 1
+        },
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2500
+          },
+          {
+            "key": "damageReduction",
+            "value": 95
+          }
+        ],
+        "ignoreCompletion": false,
+        "attackType": "random",
+        "specialAttacks": [],
+        "passives": [
+          "expandedAreas:TheRoofTheRoofTheRoofIsOnFire",
+          "expandedAreas:MonstersMonstersEverywhere",
+          "expandedAreas:ThisPlaceIsLikeCursedMan",
+          "expandedAreas:WhoWaxedTheseFloors"
+        ],
+        "lootChance": 0,
+        "lootTable": [],
+        "canSlayer": false,
+        "isBoss": true,
+        "selectedSpell": "melvorD:FireBolt"
+      },
+      {
+        "id": "The_Final_Room",
+        "name": "The Final Room",
+        "media": "assets/combat/monsters/The_Final_Room.png",
+        "description": "There's a treasure hunter in here...",
+        "levels": {
+          "Hitpoints": 150,
+          "Attack": 1,
+          "Strength": 1,
+          "Defence": 1,
+          "Ranged": 1,
+          "Magic": 125
+        },
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3000
+          },
+          {
+            "key": "damageReduction",
+            "value": 95
+          }
+        ],
+        "ignoreCompletion": false,
+        "attackType": "magic",
+        "specialAttacks": [
+          "expandedAreas:OopsPulledOnTheWrongWallSconce",
+          "expandedAreas:GoddamnMummies",
+          "expandedAreas:AhhhItsAMimic",
+          "expandedAreas:HolyToledoItsRainingGold",
+          "expandedAreas:IThoughtItSaidFillMyPurseNotKillWithCurse",
+          "expandedAreas:PrettySureThisButtonWillRevealTheTreasureRoom",
+          "expandedAreas:ThereItIsTheTreasureRoom"
+        ],
+        "overrideSpecialChances": [
+          14,
+          14,
+          14,
+          14,
+          14,
+          15,
+          15
+        ],
+        "passives": [
+          "expandedAreas:YouCantAttackARoom"
+        ],
+        "lootChance": 0,
+        "lootTable": [],
+        "canSlayer": false,
+        "isBoss": false,
+        "selectedSpell": "melvorD:FireBolt",
+        "bones": {
+          "itemID": "expandedAreas:Treasure",
+          "quantity": 50
+        }
+      },
+      {
+        "id": "The_Necromancer",
+        "name": "The Necromancer",
+        "media": "assets/combat/monsters/Necromancer.png",
+        "levels": {
+          "Hitpoints": 100,
+          "Attack": 50,
+          "Strength": 30,
+          "Defence": 70,
+          "Ranged": 1,
+          "Magic": 100
+        },
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3000
+          },
+          {
+            "key": "damageReduction",
+            "value": 5
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": 20
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 10
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 10
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 33
+          },
+          {
+            "key": "magicDamageBonus",
+            "value": -24
+          }
+        ],
+        "ignoreCompletion": false,
+        "attackType": "magic",
+        "specialAttacks": [
+          "melvorF:Desecration",
+          "expandedAreas:Spook",
+          "expandedAreas:Reanimate"
+        ],
+        "passives": [
+          "expandedAreas:OneWithTheUnholy"
+        ],
+        "lootChance": 0,
+        "lootTable": [],
+        "canSlayer": false,
+        "isBoss": false,
+        "selectedSpell": "melvorD:FireBolt",
+        "bones": {
+          "itemID": "melvorD:Bones",
+          "quantity": 1
+        }
+      },
+      {
+        "id": "Spook",
+        "name": "Spook",
+        "media": "assets/combat/monsters/Spook.png",
+        "levels": {
+          "Hitpoints": 50,
+          "Attack": 50,
+          "Strength": 50,
+          "Defence": 50,
+          "Ranged": 1,
+          "Magic": 1
+        },
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2600
+          }
+        ],
+        "ignoreCompletion": false,
+        "attackType": "magic",
+        "specialAttacks": [
+          "expandedAreas:Spook"
+        ],
+        "passives": [
+          "expandedAreas:TheWickedlyUnholyNecromancerBlessingOfUndeath"
+        ],
+        "lootChance": 0,
+        "lootTable": [],
+        "canSlayer": false,
+        "isBoss": false,
+        "selectedSpell": "melvorD:WindStrike",
+        "bones": {
+          "itemID": "melvorD:Bones",
+          "quantity": 1
+        }
+      },
+      {
+        "id": "Shambler",
+        "name": "Shambler",
+        "media": "assets/combat/monsters/Shambler.png",
+        "levels": {
+          "Hitpoints": 120,
+          "Attack": 60,
+          "Strength": 65,
+          "Defence": 50,
+          "Ranged": 1,
+          "Magic": 1
+        },
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3200
+          }
+        ],
+        "ignoreCompletion": false,
+        "attackType": "melee",
+        "specialAttacks": [],
+        "passives": [
+          "expandedAreas:TheWickedlyUnholyNecromancerBlessingOfUndeath"
+        ],
+        "lootChance": 0,
+        "lootTable": [],
+        "canSlayer": false,
+        "isBoss": false,
+        "selectedSpell": "melvorD:WindStrike",
+        "bones": {
+          "itemID": "melvorD:Bones",
+          "quantity": 1
+        }
+      },
+      {
+        "id": "Skeleton_Warrior",
+        "name": "Skeleton Warrior",
+        "media": "assets/combat/monsters/Skeleton_Warrior.png",
+        "levels": {
+          "Hitpoints": 80,
+          "Attack": 80,
+          "Strength": 60,
+          "Defence": 50,
+          "Ranged": 1,
+          "Magic": 1
+        },
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2400
+          }
+        ],
+        "ignoreCompletion": false,
+        "attackType": "melee",
+        "specialAttacks": [],
+        "passives": [
+          "expandedAreas:TheWickedlyUnholyNecromancerBlessingOfUndeath"
+        ],
+        "lootChance": 0,
+        "lootTable": [],
+        "canSlayer": false,
+        "isBoss": false,
+        "selectedSpell": "melvorD:WindStrike",
+        "bones": {
+          "itemID": "melvorD:Bones",
+          "quantity": 1
+        }
+      },
+      {
+        "id": "Mage",
+        "name": "Adventurer",
+        "media": "assets/combat/monsters/Mage.png",
+        "levels": {
+          "Hitpoints": 50,
+          "Attack": 50,
+          "Strength": 50,
+          "Defence": 50,
+          "Ranged": 1,
+          "Magic": 90
+        },
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3200
+          }
+        ],
+        "ignoreCompletion": false,
+        "attackType": "magic",
+        "specialAttacks": [
+          "melvorF:ElementalImpactBurn",
+          "expandedAreas:MagicalMissiles",
+          "expandedAreas:Sleepytime",
+          "expandedAreas:ArcaneBarrier"
+        ],
+        "passives": [],
+        "lootChance": 0,
+        "lootTable": [],
+        "canSlayer": false,
+        "isBoss": false,
+        "selectedSpell": "melvorD:FireBlast",
+        "bones": {
+          "itemID": "melvorD:Bones",
+          "quantity": 1
+        }
+      },
+      {
+        "id": "Druid",
+        "name": "Adventurer",
+        "media": "assets/combat/monsters/Druid.png",
+        "levels": {
+          "Hitpoints": 70,
+          "Attack": 50,
+          "Strength": 50,
+          "Defence": 70,
+          "Ranged": 1,
+          "Magic": 70
+        },
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3000
+          }
+        ],
+        "ignoreCompletion": false,
+        "attackType": "magic",
+        "specialAttacks": [
+          "expandedAreas:PounceTigerForm",
+          "expandedAreas:BeakRavenForm"
+        ],
+        "passives": [],
+        "lootChance": 0,
+        "lootTable": [],
+        "canSlayer": false,
+        "isBoss": false,
+        "selectedSpell": "melvorF:NaturesCall",
+        "bones": {
+          "itemID": "melvorD:Bones",
+          "quantity": 1
+        }
+      },
+      {
+        "id": "Monk",
+        "name": "Adventurer",
+        "media": "assets/combat/monsters/Monk.png",
+        "levels": {
+          "Hitpoints": 70,
+          "Attack": 70,
+          "Strength": 70,
+          "Defence": 70,
+          "Ranged": 1,
+          "Magic": 1
+        },
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 1600
+          }
+        ],
+        "ignoreCompletion": false,
+        "attackType": "melee",
+        "specialAttacks": [],
+        "passives": [
+          "expandedAreas:StunningStrikes"
+        ],
+        "lootChance": 0,
+        "lootTable": [],
+        "canSlayer": false,
+        "isBoss": false,
+        "selectedSpell": "melvorD:WindStrike",
+        "bones": {
+          "itemID": "melvorD:Bones",
+          "quantity": 1
+        }
+      },
+      {
+        "id": "Knight",
+        "name": "Adventurer",
+        "media": "assets/combat/monsters/Knight.png",
+        "levels": {
+          "Hitpoints": 70,
+          "Attack": 70,
+          "Strength": 70,
+          "Defence": 70,
+          "Ranged": 1,
+          "Magic": 1
+        },
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2600
+          },
+          {
+            "key": "damageReduction",
+            "value": 4
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 60
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 40
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 90
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 90
+          }
+        ],
+        "ignoreCompletion": false,
+        "attackType": "melee",
+        "specialAttacks": [],
+        "passives": [],
+        "lootChance": 0,
+        "lootTable": [],
+        "canSlayer": false,
+        "isBoss": false,
+        "selectedSpell": "melvorD:WindStrike",
+        "bones": {
+          "itemID": "melvorD:Bones",
+          "quantity": 1
+        }
+      },
+      {
+        "id": "Ogre",
+        "name": "Ogre",
+        "media": "assets/combat/monsters/Ogre.png",
+        "levels": {
+          "Hitpoints": 100,
+          "Attack": 30,
+          "Strength": 100,
+          "Defence": 30,
+          "Ranged": 1,
+          "Magic": 1
+        },
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3000
+          }
+        ],
+        "ignoreCompletion": false,
+        "attackType": "melee",
+        "specialAttacks": [],
+        "passives": [
+          "melvorD:Humungus"
+        ],
+        "lootChance": 0,
+        "lootTable": [],
+        "canSlayer": false,
+        "isBoss": false,
+        "selectedSpell": "melvorD:WindStrike",
+        "bones": {
+          "itemID": "melvorD:Bones",
+          "quantity": 1
+        }
+      },
+      {
+        "id": "Grey_Orc",
+        "name": "Grey Orc",
+        "media": "assets/combat/monsters/Grey_Orc.png",
+        "levels": {
+          "Hitpoints": 70,
+          "Attack": 60,
+          "Strength": 60,
+          "Defence": 60,
+          "Ranged": 1,
+          "Magic": 1
+        },
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2600
+          }
+        ],
+        "ignoreCompletion": false,
+        "attackType": "melee",
+        "specialAttacks": [
+          "expandedAreas:Charge"
+        ],
+        "passives": [
+          "melvorD:Stronk"
+        ],
+        "lootChance": 0,
+        "lootTable": [],
+        "canSlayer": false,
+        "isBoss": false,
+        "selectedSpell": "melvorD:WindStrike",
+        "bones": {
+          "itemID": "melvorD:Bones",
+          "quantity": 1
+        }
+      },
+      {
+        "id": "Wolf",
+        "name": "Wolf",
+        "media": "assets/combat/monsters/Wolf.png",
+        "levels": {
+          "Hitpoints": 50,
+          "Attack": 55,
+          "Strength": 55,
+          "Defence": 30,
+          "Ranged": 1,
+          "Magic": 1
+        },
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2600
+          }
+        ],
+        "ignoreCompletion": false,
+        "attackType": "melee",
+        "specialAttacks": [],
+        "passives": [],
+        "lootChance": 0,
+        "lootTable": [],
+        "canSlayer": false,
+        "isBoss": false,
+        "selectedSpell": "melvorD:WindStrike",
+        "bones": {
+          "itemID": "melvorD:Bones",
+          "quantity": 1
+        }
+      },
+      {
+        "id": "Orc",
+        "name": "Orc",
+        "media": "assets/combat/monsters/Orc.png",
+        "levels": {
+          "Hitpoints": 50,
+          "Attack": 40,
+          "Strength": 50,
+          "Defence": 40,
+          "Ranged": 1,
+          "Magic": 1
+        },
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2400
+          }
+        ],
+        "ignoreCompletion": false,
+        "attackType": "melee",
+        "specialAttacks": [],
+        "passives": [
+          "melvorD:Stronk"
+        ],
+        "lootChance": 0,
+        "lootTable": [],
+        "canSlayer": false,
+        "isBoss": false,
+        "selectedSpell": "melvorD:WindStrike",
+        "bones": {
+          "itemID": "melvorD:Bones",
+          "quantity": 1
+        }
+      },
+      {
+        "id": "Golbin_Witch_Doctor",
+        "name": "Golbin Witch_Doctor",
+        "media": "assets/combat/monsters/Golbin_Witch_Doctor.png",
+        "levels": {
+          "Hitpoints": 25,
+          "Attack": 1,
+          "Strength": 1,
+          "Defence": 20,
+          "Ranged": 1,
+          "Magic": 40
+        },
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2600
+          }
+        ],
+        "ignoreCompletion": false,
+        "attackType": "magic",
+        "specialAttacks": [],
+        "passives": [
+          "expandedAreas:GolbinMagic"
+        ],
+        "lootChance": 0,
+        "lootTable": [],
+        "canSlayer": false,
+        "isBoss": false,
+        "selectedSpell": "melvorD:EarthStrike",
+        "bones": {
+          "itemID": "melvorD:Bones",
+          "quantity": 1
+        }
+      },
+      {
+        "id": "Golbin_Berserker",
+        "name": "Golbin Berserker",
+        "media": "assets/combat/monsters/Golbin_Berserker.png",
+        "levels": {
+          "Hitpoints": 30,
+          "Attack": 20,
+          "Strength": 40,
+          "Defence": 1,
+          "Ranged": 1,
+          "Magic": 1
+        },
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3000
+          }
+        ],
+        "ignoreCompletion": false,
+        "attackType": "melee",
+        "specialAttacks": [
+          "melvorF:DualAttack"
+        ],
+        "passives": [
+          "melvorD:SomethingWillHit"
+        ],
+        "lootChance": 0,
+        "lootTable": [],
+        "canSlayer": false,
+        "isBoss": false,
+        "selectedSpell": "melvorD:WindStrike",
+        "bones": {
+          "itemID": "melvorD:Bones",
+          "quantity": 1
+        }
+      },
+      {
+        "id": "Golbin_Assassin",
+        "name": "Golbin Assassin",
+        "media": "assets/combat/monsters/Golbin_Assassin.png",
+        "levels": {
+          "Hitpoints": 30,
+          "Attack": 40,
+          "Strength": 20,
+          "Defence": 1,
+          "Ranged": 1,
+          "Magic": 1
+        },
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2000
+          }
+        ],
+        "ignoreCompletion": false,
+        "attackType": "melee",
+        "specialAttacks": [],
+        "passives": [
+          "expandedAreas:Assassin"
+        ],
+        "lootChance": 0,
+        "lootTable": [],
+        "canSlayer": false,
+        "isBoss": false,
+        "selectedSpell": "melvorD:WindStrike",
+        "bones": {
+          "itemID": "melvorD:Bones",
+          "quantity": 1
+        }
+      },
+      {
+        "id": "Giant_Mole",
+        "name": "Giant Mole",
+        "media": "assets/combat/monsters/mole.png",
+        "levels": {
+          "Hitpoints": 200,
+          "Attack": 200,
+          "Strength": 200,
+          "Defence": 200,
+          "Ranged": 1,
+          "Magic": 200
+        },
+        "pet": {
+          "id": "expandedAreas:Baby_Mole",
+          "quantity": 3000
+        },
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2400
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 100
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 80
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 60
+          }
+        ],
+        "ignoreCompletion": false,
+        "attackType": "melee",
+        "specialAttacks": [
+          "expandedAreas:Burrow"
+        ],
+        "passives": [
+          "expandedAreas:Burrow",
+          "expandedAreas:BonusXP10"
+        ],
+        "lootChance": 100,
+        "lootTable": [
+          {
+            "itemID": "melvorD:Adamant_Sword",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 763
+          },
+          {
+            "itemID": "melvorD:Mithril_Platebody",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 686
+          },
+          {
+            "itemID": "melvorD:Amulet_of_Strength",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 534
+          },
+          {
+            "itemID": "melvorD:Mithril_Crossbow_Head",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 153
+          },
+          {
+            "itemID": "melvorD:Mithril_Battleaxe",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 76
+          },
+          {
+            "itemID": "melvorD:Rune_Helmet",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 76
+          },
+          {
+            "itemID": "melvorD:Air_Rune",
+            "minQuantity": 105,
+            "maxQuantity": 105,
+            "weight": 1526
+          },
+          {
+            "itemID": "melvorD:Blood_Rune",
+            "minQuantity": 15,
+            "maxQuantity": 15,
+            "weight": 1450
+          },
+          {
+            "itemID": "melvorD:Fire_Rune",
+            "minQuantity": 105,
+            "maxQuantity": 105,
+            "weight": 840
+          },
+          {
+            "itemID": "melvorD:Iron_Arrows",
+            "minQuantity": 690,
+            "maxQuantity": 690,
+            "weight": 763
+          },
+          {
+            "itemID": "melvorF:Spirit_Rune",
+            "minQuantity": 15,
+            "maxQuantity": 15,
+            "weight": 382
+          },
+          {
+            "itemID": "melvorD:Death_Rune",
+            "minQuantity": 50,
+            "maxQuantity": 50,
+            "weight": 229
+          },
+          {
+            "itemID": "melvorD:Yew_Logs",
+            "minQuantity": 100,
+            "maxQuantity": 100,
+            "weight": 763
+          },
+          {
+            "itemID": "melvorD:Shark",
+            "minQuantity": 4,
+            "maxQuantity": 4,
+            "weight": 305
+          },
+          {
+            "itemID": "melvorD:Mithril_Bar",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 229
+          },
+          {
+            "itemID": "melvorD:Oxilyme_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 229
+          },
+          {
+            "itemID": "melvorD:Iron_Ore",
+            "minQuantity": 100,
+            "maxQuantity": 100,
+            "weight": 153
+          }
+        ],
+        "canSlayer": false,
+        "isBoss": true,
+        "selectedSpell": "melvorD:WindStrike",
+        "bones": {
+          "itemID": "expandedAreas:Enormous_Mole_Carcass",
+          "quantity": 1
+        }
+      },
+      {
+        "id": "Corporeal_Beast",
+        "name": "Corporeal Beast",
+        "media": "assets/combat/monsters/corp.png",
+        "levels": {
+          "Hitpoints": 2000,
+          "Attack": 320,
+          "Strength": 320,
+          "Defence": 310,
+          "Ranged": 150,
+          "Magic": 350
+        },
+        "pet": {
+          "id": "expandedAreas:Dark_Core",
+          "quantity": 500
+        },
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2400
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 100
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 200
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 150
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 230
+          },
+          {
+            "key": "damageReduction",
+            "value": 25
+          }
+        ],
+        "ignoreCompletion": false,
+        "attackType": "magic",
+        "specialAttacks": [
+          "expandedAreas:Stomp"
+        ],
+        "passives": [
+          "expandedAreas:UnfairBossImmunities",
+          "expandedAreas:StabMeOrElse",
+          "expandedAreas:BonusXP50",
+          "expandedAreas:DarkEnergyCore"
+        ],
+        "lootChance": 100,
+        "lootTable": [
+          {
+            "itemID": "melvorD:Blue_Wizard_Robes",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 357
+          },
+          {
+            "itemID": "melvorD:Blue_Wizard_Bottoms",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 357
+          },
+          {
+            "itemID": "melvorD:Mystic_Air_Staff",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 238
+          },
+          {
+            "itemID": "melvorF:Mystic_Earth_Staff",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 238
+          },
+          {
+            "itemID": "melvorF:Mystic_Fire_Staff",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 238
+          },
+          {
+            "itemID": "melvorF:Mystic_Water_Staff",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 238
+          },
+          {
+            "itemID": "expandedAreas:Spirit_Shield",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 156
+          },
+          {
+            "itemID": "melvorF:Havoc_Rune",
+            "minQuantity": 250,
+            "maxQuantity": 250,
+            "weight": 625
+          },
+          {
+            "itemID": "melvorF:Diamond_Bolts",
+            "minQuantity": 250,
+            "maxQuantity": 250,
+            "weight": 476
+          },
+          {
+            "itemID": "melvorD:Death_Rune",
+            "minQuantity": 300,
+            "maxQuantity": 300,
+            "weight": 435
+          },
+          {
+            "itemID": "melvorF:Jadestone_Bolts",
+            "minQuantity": 175,
+            "maxQuantity": 175,
+            "weight": 385
+          },
+          {
+            "itemID": "melvorF:Adamant_Javelin",
+            "minQuantity": 2000,
+            "maxQuantity": 2000,
+            "weight": 333
+          },
+          {
+            "itemID": "melvorD:Adamant_Arrows",
+            "minQuantity": 750,
+            "maxQuantity": 750,
+            "weight": 333
+          },
+          {
+            "itemID": "melvorF:Spirit_Rune",
+            "minQuantity": 250,
+            "maxQuantity": 250,
+            "weight": 333
+          },
+          {
+            "itemID": "melvorD:Light_Rune",
+            "minQuantity": 500,
+            "maxQuantity": 500,
+            "weight": 333
+          },
+          {
+            "itemID": "melvorD:Raw_Shark",
+            "minQuantity": 70,
+            "maxQuantity": 70,
+            "weight": 417
+          },
+          {
+            "itemID": "melvorD:Rune_Essence",
+            "minQuantity": 5000,
+            "maxQuantity": 5000,
+            "weight": 417
+          },
+          {
+            "itemID": "melvorD:Adamantite_Bar",
+            "minQuantity": 35,
+            "maxQuantity": 35,
+            "weight": 357
+          },
+          {
+            "itemID": "melvorD:Green_Dragonhide",
+            "minQuantity": 100,
+            "maxQuantity": 100,
+            "weight": 357
+          },
+          {
+            "itemID": "melvorD:Adamantite_Ore",
+            "minQuantity": 125,
+            "maxQuantity": 125,
+            "weight": 333
+          },
+          {
+            "itemID": "melvorD:Runite_Ore",
+            "minQuantity": 20,
+            "maxQuantity": 20,
+            "weight": 233
+          },
+          {
+            "itemID": "melvorD:Teak_Logs",
+            "minQuantity": 200,
+            "maxQuantity": 200,
+            "weight": 233
+          },
+          {
+            "itemID": "melvorD:Mahogany_Logs",
+            "minQuantity": 300,
+            "maxQuantity": 300,
+            "weight": 233
+          },
+          {
+            "itemID": "melvorD:Magic_Logs",
+            "minQuantity": 75,
+            "maxQuantity": 75,
+            "weight": 233
+          },
+          {
+            "itemID": "melvorF:Apple_Pie",
+            "minQuantity": 30,
+            "maxQuantity": 30,
+            "weight": 385
+          },
+          {
+            "itemID": "melvorF:Eyeball",
+            "minQuantity": 120,
+            "maxQuantity": 120,
+            "weight": 333
+          },
+          {
+            "itemID": "melvorF:Large_Horn",
+            "minQuantity": 120,
+            "maxQuantity": 120,
+            "weight": 333
+          },
+          {
+            "itemID": "melvorD:Watermelon_Seed",
+            "minQuantity": 24,
+            "maxQuantity": 24,
+            "weight": 294
+          },
+          {
+            "itemID": "melvorD:Gold_Bar",
+            "minQuantity": 200,
+            "maxQuantity": 500,
+            "weight": 233
+          },
+          {
+            "itemID": "melvorF:Famished_Potion_IV",
+            "minQuantity": 40,
+            "maxQuantity": 40,
+            "weight": 196
+          },
+          {
+            "itemID": "melvorF:Barrentoe_Seed",
+            "minQuantity": 10,
+            "maxQuantity": 10,
+            "weight": 98
+          },
+          {
+            "itemID": "expandedAreas:Holy_Elixir",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 58
+          },
+          {
+            "itemID": "expandedAreas:Spectral_Sigil",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 7
+          },
+          {
+            "itemID": "expandedAreas:Arcane_Sigil",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 7
+          },
+          {
+            "itemID": "expandedAreas:Elysian_Sigil",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 4
+          },
+          {
+            "itemID": "expandedAreas:Divine_Sigil",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 2
+          }
+        ],
+        "canSlayer": false,
+        "isBoss": true,
+        "selectedSpell": "melvorD:FireSurge",
+        "bones": {
+          "itemID": "melvorD:Magic_Bones",
+          "quantity": 25
+        },
+        "currencyDrops": [
+          {
+            "currencyID": "melvorD:GP",
+            "min": 20000,
+            "max": 50000
+          }
+        ]
+      },
       {
         "id": "Crypt_Worm",
         "name": "Crypt Worm",
@@ -37639,6 +41112,46 @@
     ],
     "pets": [
       {
+        "id": "DonJonLuter",
+        "name": "Don Jon Luter",
+        "hint": "Obtained from The Dungeon",
+        "media": "assets/pets/Don_Jon_Luter.png",
+        "scaleChanceWithMasteryPool": false,
+        "ignoreCompletion": false,
+        "activeInRaid": false,
+        "modifiers": {
+          "currencyGain": [
+            {
+              "skillID": "melvorD:Thieving",
+              "currencyID": "melvorD:GP",
+              "value": 5
+            }
+          ]
+        }
+      },
+      {
+        "id": "Dark_Core",
+        "name": "Dark Core",
+        "media": "assets/pets/core.png",
+        "ignoreCompletion": false,
+        "modifiers": {
+          "hPRegenBasedOnMaxHP": 0.1
+        },
+        "activeInRaid": false,
+        "scaleChanceWithMasteryPool": false
+      },
+      {
+        "id": "Baby_Mole",
+        "name": "Baby Mole",
+        "media": "assets/pets/mole.png",
+        "ignoreCompletion": false,
+        "modifiers": {
+          "seedDropConversionChance": 1
+        },
+        "activeInRaid": false,
+        "scaleChanceWithMasteryPool": false
+      },
+      {
         "id": "Spadey",
         "media": "assets/pets/Spadey.png",
         "name": "Spadey",
@@ -37738,6 +41251,72 @@
         "scaleChanceWithMasteryPool": false
       }
     ],
+    "prayers": [
+      {
+        "id": "Negate_Magic",
+        "level": 96,
+        "name": "Negate Magic",
+        "media": "assets/combat/prayer/Negate_Magic.png",
+        "pointsPerPlayer": 0,
+        "pointsPerEnemy": 30,
+        "pointsPerRegen": 0,
+        "modifiers": {
+          "magicProtection": 90
+        },
+        "allowedDamageTypeIDs": [
+          "melvorD:Normal",
+          "melvorF:Pure"
+        ]
+      },
+      {
+        "id": "Negate_Ranged",
+        "level": 97,
+        "name": "Negate Ranged",
+        "media": "assets/combat/prayer/Negate_Ranged.png",
+        "pointsPerPlayer": 0,
+        "pointsPerEnemy": 30,
+        "pointsPerRegen": 0,
+        "modifiers": {
+          "rangedProtection": 90
+        },
+        "allowedDamageTypeIDs": [
+          "melvorD:Normal",
+          "melvorF:Pure"
+        ]
+      },
+      {
+        "id": "Negate_Melee",
+        "level": 98,
+        "name": "Negate Melee",
+        "media": "assets/combat/prayer/Negate_Melee.png",
+        "pointsPerPlayer": 0,
+        "pointsPerEnemy": 30,
+        "pointsPerRegen": 0,
+        "modifiers": {
+          "meleeProtection": 90
+        },
+        "allowedDamageTypeIDs": [
+          "melvorD:Normal",
+          "melvorF:Pure"
+        ]
+      },
+      {
+        "id": "Divine_Intervention",
+        "level": 99,
+        "name": "Divine Intervention",
+        "media": "assets/skills/prayer/Divine_Intervention.png",
+        "pointsPerPlayer": 0,
+        "pointsPerEnemy": 20,
+        "pointsPerRegen": 0,
+        "modifiers": {
+          "rebirthChance": 25
+        },
+        "allowedDamageTypeIDs": [
+          "melvorD:Normal",
+          "melvorF:Pure"
+        ]
+      }
+    ],
     "randomSuperiorGems": [
       {
         "itemID": "expandedAreas:Dragonstone",
@@ -37768,7 +41347,7 @@
       {
         "id": "CombatMastery",
         "name": "Combat Mastery",
-        "media": "assets/shop/combat_header.svg"
+        "media": "assets/shop/combatMastery/combat_header.svg"
       },
       {
         "id": "ChargeableItems",
@@ -37793,6 +41372,23 @@
       }
     ],
     "shopDisplayOrder": [
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Multi_Tree",
+        "ids": [
+          "logslogslogs:WoodcuttersCamp",
+          "logslogslogs:LoggingCamp",
+          "logslogslogs:ForestryCamp"
+        ]
+      },
+      {
+        "insertAt": "Before",
+        "beforeID": "melvorF:Leather",
+        "ids": [
+          "expandedAreas:Candle",
+          "expandedAreas:Bird_Nest"
+        ]
+      },
       {
         "beforeID": "melvorF:Auto_Slayer",
         "insertAt": "Before",
@@ -38000,14 +41596,6 @@
       },
       {
         "insertAt": "After",
-        "afterID": "melvorD:Multi_Tree",
-        "ids": [
-          "expandedAreas:Multi_Tree_II",
-          "expandedAreas:Multi_Tree_III"
-        ]
-      },
-      {
-        "insertAt": "After",
         "afterID": "melvorD:Auto_Eat_Tier_III",
         "ids": [
           "expandedAreas:Auto_Eat_Tier_IV",
@@ -38024,6 +41612,190 @@
       }
     ],
     "shopPurchases": [
+      {
+        "id": "WoodcuttersCamp",
+        "media": "assets/shop/skillUpgradesWoodcuttersCamp.png",
+        "category": "melvorD:General",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "treeCutLimit": 1
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 100000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Township",
+            "level": 60,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Woodcutters' Camp",
+        "customDescription": "Unlock the ability to make use of your Woodcutters' Camps to cut 3 different trees in Woodcutting. Logs, Skill XP and Mastery XP granted based on highest interval."
+      },
+      {
+        "id": "LoggingCamp",
+        "media": "assets/shop/skillUpgradesLoggingCamp.png",
+        "category": "melvorD:General",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "treeCutLimit": 1
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 500000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "count": 1,
+            "purchaseID": "logslogslogs:WoodcuttersCamp",
+            "type": "ShopPurchase"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "type": "SkillLevel",
+            "level": 80,
+            "skillID": "melvorD:Township"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Logging Camp",
+        "customDescription": "Unlock the ability to make use of your Logging Camps to cut 4 different trees in Woodcutting. Logs, Skill XP and Mastery XP granted based on highest interval."
+      },
+      {
+        "id": "ForestryCamp",
+        "media": "assets/shop/skillUpgradesForestryCamp.png",
+        "category": "melvorD:General",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "treeCutLimit": 1
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 1000000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "count": 1,
+            "purchaseID": "logslogslogs:LoggingCamp",
+            "type": "ShopPurchase"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "type": "SkillLevel",
+            "level": 99,
+            "skillID": "melvorD:Township"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Forestry Camp",
+        "customDescription": "Unlock the ability to make use of your Forestry Camps to cut 5 different trees in Woodcutting. Logs, Skill XP and Mastery XP granted based on highest interval."
+      },
+      {
+        "id": "Bird_Nest",
+        "media": "assets/bank/birdnest.png",
+        "category": "melvorD:Materials",
+        "contains": {
+          "items": [
+            {
+              "id": "melvorD:Bird_Nest",
+              "quantity": 2
+            }
+          ]
+        },
+        "cost": {
+          "items": [
+            {
+              "id": "expandedAreas:Mole_Skin",
+              "quantity": 1
+            },
+            {
+              "id": "expandedAreas:Mole_Claw",
+              "quantity": 1
+            }
+          ],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 0
+            }
+          ]
+        },
+        "allowQuantityPurchase": true,
+        "unlockRequirements": [],
+        "purchaseRequirements": [],
+        "defaultBuyLimit": 0,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false
+      },
+      {
+        "id": "Candle",
+        "media": "assets/bank/candle.png",
+        "category": "melvorD:Materials",
+        "contains": {
+          "items": [
+            {
+              "id": "expandedAreas:Candle",
+              "quantity": 1
+            }
+          ]
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 1000
+            }
+          ]
+        },
+        "allowQuantityPurchase": true,
+        "unlockRequirements": [],
+        "purchaseRequirements": [],
+        "defaultBuyLimit": 0,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false
+      },
       {
         "id": "Helmet_of_Doom",
         "media": "assets/bank/Helmet_of_Doom.png",
@@ -41052,43 +44824,14 @@
         "customDescription": "+3% Perfect Cook Chance for Fermenting Tank only for a total of +10% Perfect Cook Chance from your Fermenting Tank."
       },
       {
-        "id": "Combat_Mastery_Tokens",
-        "media": "assets/bank/Mastery_Token_Combat.png",
-        "category": "melvorF:Slayer",
-        "contains": {
-          "items": [
-            {
-              "id": "expandedAreas:Mastery_Token_Combat",
-              "quantity": 1
-            }
-          ]
-        },
-        "cost": {
-          "items": [],
-          "currencies": [
-            {
-              "currency": "melvorD:SlayerCoins",
-              "cost": 1000,
-              "type": "Fixed"
-            }
-          ]
-        },
-        "allowQuantityPurchase": true,
-        "unlockRequirements": [],
-        "purchaseRequirements": [],
-        "defaultBuyLimit": 0,
-        "buyLimitOverrides": [],
-        "showBuyLimit": false,
-        "customName": "Combat Mastery Tokens"
-      },
-      {
         "id": "Allow_Nonmagic_Auroras",
         "media": "assets/combat/magic/surge.svg",
         "category": "melvorD:General",
         "contains": {
           "items": [],
           "modifiers": {
-            "allowAttackAugmentingMagic": 1
+            "allowAttackAugmentingMagic": 1,
+            "allowNonMagicCurses": 0
           }
         },
         "cost": {
@@ -41110,7 +44853,7 @@
             "type": "SkillLevel"
           },
           {
-            "dungeonID": "melvorF:Infernal_Stronghold",
+            "dungeonID": "expandedAreas:Elemental_Sanctuary",
             "count": 100,
             "type": "DungeonCompletion"
           }
@@ -41119,7 +44862,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Allow Nonmagic Auroras",
-        "customDescription": "Allows you to use Auroras without equipping a Magic Weapon"
+        "customDescription": "Allows you to use Auroras without equipping a Magic Weapon (cannot be used with Allow Nonmagic Curses Shop Purchase)"
       },
       {
         "id": "Allow_Nonmagic_Curses",
@@ -41128,7 +44871,8 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "allowNonMagicCurses": 1
+            "allowNonMagicCurses": 1,
+            "allowAttackAugmentingMagic": 0
           }
         },
         "cost": {
@@ -41150,7 +44894,7 @@
             "type": "SkillLevel"
           },
           {
-            "dungeonID": "melvorD:Volcanic_Cave",
+            "dungeonID": "expandedAreas:Elemental_Sanctuary",
             "count": 100,
             "type": "DungeonCompletion"
           }
@@ -41159,7 +44903,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Allow Nonmagic Curses",
-        "customDescription": "Allows you to use Curses without equipping a Magic Weapon"
+        "customDescription": "Allows you to use Curses without equipping a Magic Weapon (cannot be used with Allow Nonmagic Auroras Shop Purchase"
       },
       {
         "id": "Wand_of_Death",
@@ -41501,7 +45245,7 @@
       },
       {
         "id": "Anvil_Steel",
-        "media": "assets/shop/anvil_steel.png",
+        "media": "assets/shop/skillUpgrades/anvil_steel.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -41553,7 +45297,7 @@
       },
       {
         "id": "Anvil_Black",
-        "media": "assets/shop/anvil_black.png",
+        "media": "assets/shop/skillUpgrades/anvil_black.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -41605,7 +45349,7 @@
       },
       {
         "id": "Anvil_Mithril",
-        "media": "assets/shop/anvil_mithril.png",
+        "media": "assets/shop/skillUpgrades/anvil_mithril.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -41657,7 +45401,7 @@
       },
       {
         "id": "Anvil_Adamant",
-        "media": "assets/shop/anvil_adamant.png",
+        "media": "assets/shop/skillUpgrades/anvil_adamant.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -41709,7 +45453,7 @@
       },
       {
         "id": "Anvil_Rune",
-        "media": "assets/shop/anvil_rune.png",
+        "media": "assets/shop/skillUpgrades/anvil_rune.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -41761,7 +45505,7 @@
       },
       {
         "id": "Anvil_Dragon",
-        "media": "assets/shop/anvil_dragon.png",
+        "media": "assets/shop/skillUpgrades/anvil_dragon.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -41813,7 +45557,7 @@
       },
       {
         "id": "Arcanolinth_Tauric",
-        "media": "assets/shop/arcanolinth_tauric.png",
+        "media": "assets/shop/skillUpgrades/arcanolinth_tauric.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -41854,7 +45598,7 @@
       },
       {
         "id": "Arcanolinth_Spheric",
-        "media": "assets/shop/arcanolinth_spheric.png",
+        "media": "assets/shop/skillUpgrades/arcanolinth_spheric.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -41901,7 +45645,7 @@
       },
       {
         "id": "Arcanolinth_Tetrahedric",
-        "media": "assets/shop/arcanolinth_tetrahedric.png",
+        "media": "assets/shop/skillUpgrades/arcanolinth_tetrahedric.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -41948,7 +45692,7 @@
       },
       {
         "id": "Arcanolinth_Cubic",
-        "media": "assets/shop/arcanolinth_cubic.png",
+        "media": "assets/shop/skillUpgrades/arcanolinth_cubic.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -41995,7 +45739,7 @@
       },
       {
         "id": "Arcanolinth_Octahedric",
-        "media": "assets/shop/arcanolinth_octahedric.png",
+        "media": "assets/shop/skillUpgrades/arcanolinth_octahedric.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -42042,7 +45786,7 @@
       },
       {
         "id": "Arcanolinth_Dodecahedric",
-        "media": "assets/shop/arcanolinth_dodecahedric.png",
+        "media": "assets/shop/skillUpgrades/arcanolinth_dodecahedric.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -42089,7 +45833,7 @@
       },
       {
         "id": "Arcanolinth_Icosahedric",
-        "media": "assets/shop/arcanolinth_icosahedric.png",
+        "media": "assets/shop/skillUpgrades/arcanolinth_icosahedric.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -42136,7 +45880,7 @@
       },
       {
         "id": "Arcanolinth_Tesseractic",
-        "media": "assets/shop/arcanolinth_tesseractic.png",
+        "media": "assets/shop/skillUpgrades/arcanolinth_tesseractic.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -42183,7 +45927,7 @@
       },
       {
         "id": "Bunsen_Burner_Iron",
-        "media": "assets/shop/bunsen_burner_iron.png",
+        "media": "assets/shop/skillUpgrades/bunsen_burner_iron.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -42224,7 +45968,7 @@
       },
       {
         "id": "Bunsen_Burner_Steel",
-        "media": "assets/shop/bunsen_burner_steel.png",
+        "media": "assets/shop/skillUpgrades/bunsen_burner_steel.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -42271,7 +46015,7 @@
       },
       {
         "id": "Bunsen_Burner_Black",
-        "media": "assets/shop/bunsen_burner_black.png",
+        "media": "assets/shop/skillUpgrades/bunsen_burner_black.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -42318,7 +46062,7 @@
       },
       {
         "id": "Bunsen_Burner_Mithril",
-        "media": "assets/shop/bunsen_burner_mithril.png",
+        "media": "assets/shop/skillUpgrades/bunsen_burner_mithril.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -42365,7 +46109,7 @@
       },
       {
         "id": "Bunsen_Burner_Adamant",
-        "media": "assets/shop/bunsen_burner_adamant.png",
+        "media": "assets/shop/skillUpgrades/bunsen_burner_adamant.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -42412,7 +46156,7 @@
       },
       {
         "id": "Bunsen_Burner_Rune",
-        "media": "assets/shop/bunsen_burner_rune.png",
+        "media": "assets/shop/skillUpgrades/bunsen_burner_rune.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -42459,7 +46203,7 @@
       },
       {
         "id": "Bunsen_Burner_Dragon",
-        "media": "assets/shop/bunsen_burner_dragon.png",
+        "media": "assets/shop/skillUpgrades/bunsen_burner_dragon.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -42506,7 +46250,7 @@
       },
       {
         "id": "Essence_Resonator_Iron",
-        "media": "assets/shop/essence_resonator_iron.png",
+        "media": "assets/shop/skillUpgrades/essence_resonator_iron.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -42541,7 +46285,7 @@
       },
       {
         "id": "Essence_Resonator_Steel",
-        "media": "assets/shop/essence_resonator_steel.png",
+        "media": "assets/shop/skillUpgrades/essence_resonator_steel.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -42588,7 +46332,7 @@
       },
       {
         "id": "Essence_Resonator_Black",
-        "media": "assets/shop/essence_resonator_black.png",
+        "media": "assets/shop/skillUpgrades/essence_resonator_black.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -42635,7 +46379,7 @@
       },
       {
         "id": "Essence_Resonator_Mithril",
-        "media": "assets/shop/essence_resonator_mithril.png",
+        "media": "assets/shop/skillUpgrades/essence_resonator_mithril.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -42682,7 +46426,7 @@
       },
       {
         "id": "Essence_Resonator_Adamant",
-        "media": "assets/shop/essence_resonator_adamant.png",
+        "media": "assets/shop/skillUpgrades/essence_resonator_adamant.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -42729,7 +46473,7 @@
       },
       {
         "id": "Essence_Resonator_Rune",
-        "media": "assets/shop/essence_resonator_rune.png",
+        "media": "assets/shop/skillUpgrades/essence_resonator_rune.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -42776,7 +46520,7 @@
       },
       {
         "id": "Essence_Resonator_Dragon",
-        "media": "assets/shop/essence_resonator_dragon.png",
+        "media": "assets/shop/skillUpgrades/essence_resonator_dragon.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -42823,7 +46567,7 @@
       },
       {
         "id": "Firestarter_Iron",
-        "media": "assets/shop/firestarter_iron.png",
+        "media": "assets/shop/skillUpgrades/firestarter_iron.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -42857,7 +46601,7 @@
       },
       {
         "id": "Firestarter_Steel",
-        "media": "assets/shop/firestarter_steel.png",
+        "media": "assets/shop/skillUpgrades/firestarter_steel.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -42903,7 +46647,7 @@
       },
       {
         "id": "Firestarter_Black",
-        "media": "assets/shop/firestarter_black.png",
+        "media": "assets/shop/skillUpgrades/firestarter_black.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -42949,7 +46693,7 @@
       },
       {
         "id": "Firestarter_Mithril",
-        "media": "assets/shop/firestarter_mithril.png",
+        "media": "assets/shop/skillUpgrades/firestarter_mithril.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -42995,7 +46739,7 @@
       },
       {
         "id": "Firestarter_Adamant",
-        "media": "assets/shop/firestarter_adamant.png",
+        "media": "assets/shop/skillUpgrades/firestarter_adamant.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -43041,7 +46785,7 @@
       },
       {
         "id": "Firestarter_Rune",
-        "media": "assets/shop/firestarter_rune.png",
+        "media": "assets/shop/skillUpgrades/firestarter_rune.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -43087,7 +46831,7 @@
       },
       {
         "id": "Firestarter_Dragon",
-        "media": "assets/shop/firestarter_dragon.png",
+        "media": "assets/shop/skillUpgrades/firestarter_dragon.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -43133,7 +46877,7 @@
       },
       {
         "id": "Hoe_Iron",
-        "media": "assets/shop/hoe_iron.png",
+        "media": "assets/shop/skillUpgrades/hoe_iron.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -43167,7 +46911,7 @@
       },
       {
         "id": "Hoe_Steel",
-        "media": "assets/shop/hoe_steel.png",
+        "media": "assets/shop/skillUpgrades/hoe_steel.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -43213,7 +46957,7 @@
       },
       {
         "id": "Hoe_Black",
-        "media": "assets/shop/hoe_black.png",
+        "media": "assets/shop/skillUpgrades/hoe_black.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -43259,7 +47003,7 @@
       },
       {
         "id": "Hoe_Mithril",
-        "media": "assets/shop/hoe_mithril.png",
+        "media": "assets/shop/skillUpgrades/hoe_mithril.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -43305,7 +47049,7 @@
       },
       {
         "id": "Hoe_Adamant",
-        "media": "assets/shop/hoe_adamant.png",
+        "media": "assets/shop/skillUpgrades/hoe_adamant.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -43351,7 +47095,7 @@
       },
       {
         "id": "Hoe_Rune",
-        "media": "assets/shop/hoe_rune.png",
+        "media": "assets/shop/skillUpgrades/hoe_rune.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -43397,7 +47141,7 @@
       },
       {
         "id": "Hoe_Dragon",
-        "media": "assets/shop/hoe_dragon.png",
+        "media": "assets/shop/skillUpgrades/hoe_dragon.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -43443,7 +47187,7 @@
       },
       {
         "id": "Mark_Stag",
-        "media": "assets/shop/mark_stag.png",
+        "media": "assets/shop/skillUpgrades/mark_stag.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -43489,7 +47233,7 @@
       },
       {
         "id": "Mark_Beetle",
-        "media": "assets/shop/mark_beetle.png",
+        "media": "assets/shop/skillUpgrades/mark_beetle.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -43541,7 +47285,7 @@
       },
       {
         "id": "Mark_Swan",
-        "media": "assets/shop/mark_swan.png",
+        "media": "assets/shop/skillUpgrades/mark_swan.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -43593,7 +47337,7 @@
       },
       {
         "id": "Mark_Tiger",
-        "media": "assets/shop/mark_tiger.png",
+        "media": "assets/shop/skillUpgrades/mark_tiger.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -43645,7 +47389,7 @@
       },
       {
         "id": "Mark_Bear",
-        "media": "assets/shop/mark_bear.png",
+        "media": "assets/shop/skillUpgrades/mark_bear.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -43697,7 +47441,7 @@
       },
       {
         "id": "Mark_Bison",
-        "media": "assets/shop/mark_bison.png",
+        "media": "assets/shop/skillUpgrades/mark_bison.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -43749,7 +47493,7 @@
       },
       {
         "id": "Telescope_Iron",
-        "media": "assets/shop/telescope_iron.png",
+        "media": "assets/shop/skillUpgrades/telescope_iron.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -43789,7 +47533,7 @@
       },
       {
         "id": "Telescope_Steel",
-        "media": "assets/shop/telescope_steel.png",
+        "media": "assets/shop/skillUpgrades/telescope_steel.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -43835,7 +47579,7 @@
       },
       {
         "id": "Telescope_Black",
-        "media": "assets/shop/telescope_black.png",
+        "media": "assets/shop/skillUpgrades/telescope_black.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -43881,7 +47625,7 @@
       },
       {
         "id": "Telescope_Mithril",
-        "media": "assets/shop/telescope_mithril.png",
+        "media": "assets/shop/skillUpgrades/telescope_mithril.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -43927,7 +47671,7 @@
       },
       {
         "id": "Telescope_Adamant",
-        "media": "assets/shop/telescope_adamant.png",
+        "media": "assets/shop/skillUpgrades/telescope_adamant.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -43973,7 +47717,7 @@
       },
       {
         "id": "Telescope_Rune",
-        "media": "assets/shop/telescope_rune.png",
+        "media": "assets/shop/skillUpgrades/telescope_rune.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -44019,7 +47763,7 @@
       },
       {
         "id": "Telescope_Dragon",
-        "media": "assets/shop/telescope_dragon.png",
+        "media": "assets/shop/skillUpgrades/telescope_dragon.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -44071,7 +47815,7 @@
       },
       {
         "id": "Needle_Iron",
-        "media": "assets/shop/needle_iron.png",
+        "media": "assets/shop/skillUpgrades/needle_iron.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -44111,7 +47855,7 @@
       },
       {
         "id": "Needle_Steel",
-        "media": "assets/shop/needle_steel.png",
+        "media": "assets/shop/skillUpgrades/needle_steel.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -44163,7 +47907,7 @@
       },
       {
         "id": "Needle_Black",
-        "media": "assets/shop/needle_black.png",
+        "media": "assets/shop/skillUpgrades/needle_black.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -44215,7 +47959,7 @@
       },
       {
         "id": "Needle_Mithril",
-        "media": "assets/shop/needle_mithril.png",
+        "media": "assets/shop/skillUpgrades/needle_mithril.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -44267,7 +48011,7 @@
       },
       {
         "id": "Needle_Adamant",
-        "media": "assets/shop/needle_adamant.png",
+        "media": "assets/shop/skillUpgrades/needle_adamant.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -44319,7 +48063,7 @@
       },
       {
         "id": "Needle_Rune",
-        "media": "assets/shop/needle_rune.png",
+        "media": "assets/shop/skillUpgrades/needle_rune.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -44371,7 +48115,7 @@
       },
       {
         "id": "Needle_Dragon",
-        "media": "assets/shop/needle_dragon.png",
+        "media": "assets/shop/skillUpgrades/needle_dragon.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -44423,7 +48167,7 @@
       },
       {
         "id": "Thieving_Tools_Iron",
-        "media": "assets/shop/thieving_tools_iron.png",
+        "media": "assets/shop/skillUpgrades/thieving_tools_iron.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -44457,7 +48201,7 @@
       },
       {
         "id": "Thieving_Tools_Steel",
-        "media": "assets/shop/thieving_tools_steel.png",
+        "media": "assets/shop/skillUpgrades/thieving_tools_steel.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -44503,7 +48247,7 @@
       },
       {
         "id": "Thieving_Tools_Black",
-        "media": "assets/shop/thieving_tools_black.png",
+        "media": "assets/shop/skillUpgrades/thieving_tools_black.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -44549,7 +48293,7 @@
       },
       {
         "id": "Thieving_Tools_Mithril",
-        "media": "assets/shop/thieving_tools_mithril.png",
+        "media": "assets/shop/skillUpgrades/thieving_tools_mithril.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -44595,7 +48339,7 @@
       },
       {
         "id": "Thieving_Tools_Adamant",
-        "media": "assets/shop/thieving_tools_adamant.png",
+        "media": "assets/shop/skillUpgrades/thieving_tools_adamant.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -44641,7 +48385,7 @@
       },
       {
         "id": "Thieving_Tools_Rune",
-        "media": "assets/shop/thieving_tools_rune.png",
+        "media": "assets/shop/skillUpgrades/thieving_tools_rune.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -44687,7 +48431,7 @@
       },
       {
         "id": "Thieving_Tools_Dragon",
-        "media": "assets/shop/thieving_tools_dragon.png",
+        "media": "assets/shop/skillUpgrades/thieving_tools_dragon.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -44733,7 +48477,7 @@
       },
       {
         "id": "Trainers_Leather",
-        "media": "assets/shop/trainers_leather.png",
+        "media": "assets/shop/skillUpgrades/trainers_leather.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -44773,7 +48517,7 @@
       },
       {
         "id": "Trainers_Hardleather",
-        "media": "assets/shop/trainers_hardleather.png",
+        "media": "assets/shop/skillUpgrades/trainers_hardleather.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -44819,7 +48563,7 @@
       },
       {
         "id": "Trainers_Green",
-        "media": "assets/shop/trainers_green.png",
+        "media": "assets/shop/skillUpgrades/trainers_green.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -44865,7 +48609,7 @@
       },
       {
         "id": "Trainers_Blue",
-        "media": "assets/shop/trainers_blue.png",
+        "media": "assets/shop/skillUpgrades/trainers_blue.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -44911,7 +48655,7 @@
       },
       {
         "id": "Trainers_Red",
-        "media": "assets/shop/trainers_red.png",
+        "media": "assets/shop/skillUpgrades/trainers_red.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -44957,7 +48701,7 @@
       },
       {
         "id": "Trainers_Black",
-        "media": "assets/shop/trainers_black.png",
+        "media": "assets/shop/skillUpgrades/trainers_black.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -45003,7 +48747,7 @@
       },
       {
         "id": "Trainers_Elite",
-        "media": "assets/shop/trainers_elite.png",
+        "media": "assets/shop/skillUpgrades/trainers_elite.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -45049,7 +48793,7 @@
       },
       {
         "id": "Whittling_Tools_Iron",
-        "media": "assets/shop/whittling_tools_iron.png",
+        "media": "assets/shop/skillUpgrades/whittling_tools_iron.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -45095,7 +48839,7 @@
       },
       {
         "id": "Whittling_Tools_Steel",
-        "media": "assets/shop/whittling_tools_steel.png",
+        "media": "assets/shop/skillUpgrades/whittling_tools_steel.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -45141,7 +48885,7 @@
       },
       {
         "id": "Whittling_Tools_Black",
-        "media": "assets/shop/whittling_tools_black.png",
+        "media": "assets/shop/skillUpgrades/whittling_tools_black.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -45193,7 +48937,7 @@
       },
       {
         "id": "Whittling_Tools_Mithril",
-        "media": "assets/shop/whittling_tools_mithril.png",
+        "media": "assets/shop/skillUpgrades/whittling_tools_mithril.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -45239,7 +48983,7 @@
       },
       {
         "id": "Whittling_Tools_Adamant",
-        "media": "assets/shop/whittling_tools_adamant.png",
+        "media": "assets/shop/skillUpgrades/whittling_tools_adamant.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -45291,7 +49035,7 @@
       },
       {
         "id": "Whittling_Tools_Rune",
-        "media": "assets/shop/whittling_tools_rune.png",
+        "media": "assets/shop/skillUpgrades/whittling_tools_rune.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -45337,7 +49081,7 @@
       },
       {
         "id": "Whittling_Tools_Dragon",
-        "media": "assets/shop/whittling_tools_dragon.png",
+        "media": "assets/shop/skillUpgrades/whittling_tools_dragon.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -45388,78 +49132,8 @@
         "customDescription": "+1 flat base primary Fletching product for a total of +4 applied from your Whittling Tools.<br>+1% Fletching preservation chance for a total of +7% applied from your Whittling Tools."
       },
       {
-        "id": "Multi_Tree_II",
-        "media": "assets/shop/multitree_ii.png",
-        "category": "melvorD:General",
-        "contains": {
-          "items": [],
-          "modifiers": {
-            "treeCutLimit": 1
-          }
-        },
-        "cost": {
-          "items": [],
-          "currencies": [
-            {
-              "currency": "melvorD:GP",
-              "type": "Fixed",
-              "cost": 25000000
-            }
-          ]
-        },
-        "allowQuantityPurchase": false,
-        "unlockRequirements": [
-          {
-            "type": "ShopPurchase",
-            "purchaseID": "melvorD:Multi_Tree",
-            "count": 1
-          }
-        ],
-        "purchaseRequirements": [],
-        "defaultBuyLimit": 1,
-        "buyLimitOverrides": [],
-        "showBuyLimit": false,
-        "customName": "Multi-Tree II",
-        "customDescription": "Unlock the ability to cut 3 different trees in Woodcutting. Logs, Skill XP and Mastery XP granted based on highest interval."
-      },
-      {
-        "id": "Multi_Tree_III",
-        "media": "assets/shop/multitree_iii.png",
-        "category": "melvorD:General",
-        "contains": {
-          "items": [],
-          "modifiers": {
-            "treeCutLimit": 1
-          }
-        },
-        "cost": {
-          "items": [],
-          "currencies": [
-            {
-              "currency": "melvorD:GP",
-              "type": "Fixed",
-              "cost": 150000000
-            }
-          ]
-        },
-        "allowQuantityPurchase": false,
-        "unlockRequirements": [
-          {
-            "type": "ShopPurchase",
-            "purchaseID": "expandedAreas:Multi_Tree_II",
-            "count": 1
-          }
-        ],
-        "purchaseRequirements": [],
-        "defaultBuyLimit": 1,
-        "buyLimitOverrides": [],
-        "showBuyLimit": false,
-        "customName": "Multi-Tree III",
-        "customDescription": "Unlock the ability to cut 4 different trees in Woodcutting. Logs, Skill XP and Mastery XP granted based on highest interval."
-      },
-      {
         "id": "Auto_Eat_Tier_IV",
-        "media": "assets/shop/autoeat_iv.png",
+        "media": "assets/shop/general/autoeat_iv.png",
         "category": "melvorD:General",
         "contains": {
           "items": [],
@@ -45496,7 +49170,7 @@
       },
       {
         "id": "Auto_Eat_Tier_V",
-        "media": "assets/shop/autoeat_v.png",
+        "media": "assets/shop/general/autoeat_v.png",
         "category": "melvorD:General",
         "contains": {
           "items": [],
@@ -45533,6 +49207,13 @@
       }
     ],
     "shopUpgradeChains": [
+      {
+        "id": "Camp",
+        "chainName": "Current Camp",
+        "rootUpgradeID": "logslogslogs:ForestryCamp",
+        "defaultName": "Camp",
+        "defaultDescription": "No bonuses."
+      },
       {
         "id": "Attack_Mastery",
         "chainName": "Current Attack Mastery Level",
@@ -50240,6 +53921,30 @@
         "data": {
           "recipes": [
             {
+              "id": "Aeris_Brew",
+              "name": "Aeris Brew",
+              "level": 81,
+              "potionIDs": [
+                "expandedAreas:Aeris_Brew_I",
+                "expandedAreas:Aeris_Brew_II",
+                "expandedAreas:Aeris_Brew_III",
+                "expandedAreas:Aeris_Brew_IV"
+              ],
+              "baseExperience": 150,
+              "categoryID": "melvorF:CombatPotions",
+              "itemCosts": [
+                {
+                  "id": "melvorF:Barrentoe_Herb",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Crushed_Bird_Nest",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
               "id": "Burn_Relief_Potion",
               "name": "Burn Relief Potion",
               "level": 22,
@@ -52133,19 +55838,130 @@
                 ]
               }
             ]
-          }
+          },
+          "tasks": [
+            {
+              "id": "Giant_Mole",
+              "category": "Normal",
+              "goals": {
+                "monsters": [
+                  {
+                    "id": "expandedAreas:Giant_Mole",
+                    "quantity": 500
+                  }
+                ]
+              },
+              "rewards": {
+                "items": [
+                  {
+                    "id": "expandedAreas:Mole_Skin",
+                    "quantity": 2500
+                  },
+                  {
+                    "id": "expandedAreas:Mole_Claw",
+                    "quantity": 2500
+                  }
+                ],
+                "skillXP": [],
+                "townshipResources": [],
+                "currencies": [
+                  {
+                    "id": "melvorD:GP",
+                    "quantity": 25000
+                  },
+                  {
+                    "id": "melvorD:SlayerCoins",
+                    "quantity": 10000
+                  }
+                ]
+              }
+            },
+            {
+              "id": "Aeris_Brews",
+              "category": "VeryHard",
+              "goals": {
+                "items": [
+                  {
+                    "id": "expandedAreas:Aeris_Brew_IV",
+                    "quantity": 1000
+                  }
+                ]
+              },
+              "rewards": {
+                "items": [
+                  {
+                    "id": "expandedAreas:Crushed_Bird_Nest",
+                    "quantity": 2000
+                  }
+                ],
+                "skillXP": [
+                  {
+                    "id": "melvorD:Herblore",
+                    "quantity": 50000
+                  }
+                ],
+                "townshipResources": [],
+                "currencies": [
+                  {
+                    "id": "melvorD:GP",
+                    "quantity": 5000000
+                  }
+                ]
+              }
+            },
+            {
+              "id": "Corporeal_Beast",
+              "category": "Hard",
+              "goals": {
+                "monsters": [
+                  {
+                    "id": "expandedAreas:Corporeal_Beast",
+                    "quantity": 500
+                  }
+                ]
+              },
+              "rewards": {
+                "items": [
+                  {
+                    "id": "expandedAreas:Holy_Elixir",
+                    "quantity": 1
+                  },
+                  {
+                    "id": "expandedAreas:Blessed_Spirit_Shield",
+                    "quantity": 1
+                  }
+                ],
+                "skillXP": [],
+                "townshipResources": [],
+                "currencies": [
+                  {
+                    "id": "melvorD:GP",
+                    "quantity": 500000
+                  },
+                  {
+                    "id": "melvorD:SlayerCoins",
+                    "quantity": 100000
+                  }
+                ]
+              }
+            }
+          ]
         }
       },
       {
         "skillID": "melvorD:Woodcutting",
         "data": {
+          "headerUpgradeChains": [
+            "expandedAreas:Camp"
+          ],
           "minibar": {
             "defaultItems": [],
             "pets": [],
             "upgrades": [
               "melvorD:Multi_Tree",
-              "expandedAreas:Multi_Tree_II",
-              "expandedAreas:Multi_Tree_III"
+              "expandedAreas:WoodcuttersCamp",
+              "expandedAreas:LoggingCamp",
+              "expandedAreas:ForestryCamp"
             ]
           },
           "trees": [
@@ -52248,6 +56064,45 @@
               "minChance": 25
             }
           ]
+        }
+      }
+    ],
+    "slayerAreas": [
+      {
+        "id": "Corporeal_Beast_Lair",
+        "name": "Corporeal Beast's Lair",
+        "media": "assets/combat/combatAreas/corp.png",
+        "difficulty": [
+          5
+        ],
+        "monsterIDs": [
+          "expandedAreas:Corporeal_Beast"
+        ],
+        "entryRequirements": [],
+        "pet": {
+          "petID": "expandedAreas:Dark_Core",
+          "weight": 5000
+        }
+      },
+      {
+        "id": "Mole_Lair",
+        "name": "Big Ol' Mole Hole",
+        "media": "assets/combat/status/burrow.png",
+        "difficulty": [
+          3
+        ],
+        "monsterIDs": [
+          "expandedAreas:Giant_Mole"
+        ],
+        "entryRequirements": [
+          {
+            "type": "SlayerItem",
+            "itemID": "expandedAreas:Candle"
+          }
+        ],
+        "pet": {
+          "petID": "expandedAreas:Baby_Mole",
+          "weight": 3000
         }
       }
     ]
