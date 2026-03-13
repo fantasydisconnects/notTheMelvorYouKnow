@@ -2910,7 +2910,7 @@
       {
         "id": "Low_Town",
         "name": "Low Town",
-        "media": "assets/combatAreas/Low_Town.png",
+        "media": "assets/combat/combatAreas/Low_Town.png",
         "difficulty": [
           0
         ],
@@ -2927,7 +2927,7 @@
       {
         "id": "Botanical_Gardens",
         "name": "Botanical Gardens",
-        "media": "assets/combatAreas/Botanical_Gardens.svg",
+        "media": "assets/combat/combatAreas/Botanical_Gardens.svg",
         "difficulty": [
           0
         ],
@@ -2944,7 +2944,7 @@
       {
         "id": "Barbarian_Village",
         "name": "Barbarian Village",
-        "media": "assets/combatAreas/Barbarian_Village.png",
+        "media": "assets/combat/combatAreas/Barbarian_Village.png",
         "difficulty": [
           0,
           1
@@ -2962,7 +2962,7 @@
       {
         "id": "Secluded_Monastery",
         "name": "Secluded Monastery",
-        "media": "assets/combatAreas/Secluded_Monastery.png",
+        "media": "assets/combat/combatAreas/Secluded_Monastery.png",
         "monsterIDs": [
           "SUPERAWESOME:Monk_of_the_Wind",
           "SUPERAWESOME:Monk_of_the_River",
@@ -5000,7 +5000,7 @@
         },
         "fixedPetClears": false,
         "id": "Elemental_Sanctuary",
-        "media": "assets/dungeons/ElementalSanctuary.png",
+        "media": "assets/combat/dungeons/ElementalSanctuary.png",
         "monsterIDs": [
           "SUPERAWESOME:Monk_of_the_Wind",
           "SUPERAWESOME:Monk_of_the_River",
@@ -5031,7 +5031,7 @@
         },
         "fixedPetClears": false,
         "id": "Golbin_Hideout",
-        "media": "assets/dungeons/GolbinHideout.png",
+        "media": "assets/combat/dungeons/GolbinHideout.png",
         "monsterIDs": [
           "melvorD:Golbin",
           "melvorD:Golbin",
@@ -5053,7 +5053,7 @@
       {
         "id": "The_Barbarian_Trials",
         "name": "The Barbarian Trials",
-        "media": "assets/dungeons/BarbarianTrials.svg",
+        "media": "assets/combat/dungeons/BarbarianTrials.svg",
         "monsterIDs": [
           "SUPERAWESOME:Barbarian_Warrior",
           "SUPERAWESOME:Barbarian_Bowyer",
@@ -5108,7 +5108,7 @@
       {
         "id": "Ring2",
         "allowQuantity": false,
-        "emptyMedia": "assets/icons/ring.png",
+        "emptyMedia": "assets/icons/Ring.png",
         "emptyName": "Ring 2",
         "providesEquipStats": true,
         "gridPosition": {
@@ -5119,7 +5119,7 @@
       {
         "id": "Accessory1",
         "allowQuantity": false,
-        "emptyMedia": "assets/icons/accessory.png",
+        "emptyMedia": "assets/icons/Accessory.png",
         "emptyName": "Accessory Left",
         "providesEquipStats": true,
         "gridPosition": {
@@ -5130,7 +5130,7 @@
       {
         "id": "Tool",
         "allowQuantity": false,
-        "emptyMedia": "assets/icons/tool.png",
+        "emptyMedia": "assets/icons/Tool.png",
         "emptyName": "Tool",
         "providesEquipStats": false,
         "gridPosition": {
@@ -5141,7 +5141,7 @@
       {
         "id": "Accessory2",
         "allowQuantity": false,
-        "emptyMedia": "assets/icons/accessory.png",
+        "emptyMedia": "assets/icons/Accessory.png",
         "emptyName": "Accessory Right",
         "providesEquipStats": true,
         "gridPosition": {
@@ -5822,7 +5822,7 @@
         "name": "Sterkite Ore",
         "category": "Mining",
         "type": "Ore",
-        "media": "assets/items/Sterkite_Ore.png",
+        "media": "assets/bank/Sterkite_Ore.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -5834,7 +5834,7 @@
         "name": "Sterkite Bar",
         "category": "Smithing",
         "type": "Bar",
-        "media": "assets/items/Sterkite_Bar.png",
+        "media": "assets/bank/Sterkite_Bar.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -20497,7 +20497,7 @@
         "name": "Food Sack",
         "category": "Openable",
         "type": "Chest",
-        "media": "assets/items_Sack.png",
+        "media": "assets/bank/Food_Sack.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -22026,7 +22026,7 @@
         "name": "Dynamite",
         "category": "Mining",
         "type": "Equipment",
-        "media": "assets/bank/item_dynamite.png",
+        "media": "assets/bank/consumable_dynamite.png",
         "customDescription": "x5 Mining Node Respawn Interval in exchange for x2 Items from Mining and -100% Mining Interval",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
