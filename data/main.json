@@ -4917,7 +4917,7 @@
           {
             "appliesWhen": "HitWithAttack",
             "chance": 25,
-            "effectID": "barrowsInMelvor:Blighted"
+            "effectID": "expandedAreas:Blighted"
           }
         ]
       },
@@ -4929,7 +4929,7 @@
           {
             "appliesWhen": "HitWithAttack",
             "chance": 25,
-            "effectID": "barrowsInMelvor:Tainted"
+            "effectID": "expandedAreas:Tainted"
           }
         ]
       },
@@ -6421,27 +6421,10 @@
         "cantEquipWith": [
           "melvorF:Ruby_Bolts",
           "melvorF:Topaz_Bolts",
-          "melvorAoD:Ruby_Bolts_Arcane",
-          "melvorAoD:Ruby_Bolts_Enchanted",
-          "melvorAoD:Topaz_Bolts_Arcane",
-          "melvorAoD:Topaz_Bolts_Enchanted",
           "melvorF:Diamond_Bolts",
           "melvorF:Emerald_Bolts",
-          "melvorTotH:Onyx_Bolts",
-          "melvorAoD:Poison_Bolts",
           "melvorF:Sapphire_Bolts",
-          "melvorTotH:Decay_Bolts",
-          "melvorAoD:Diamond_Bolts_Arcane",
-          "melvorAoD:Diamond_Bolts_Enchanted",
-          "melvorAoD:Emerald_Bolts_Arcane",
-          "melvorAoD:Emerald_Bolts_Enchanted",
-          "melvorF:Jadestone_Bolts",
-          "melvorAoD:Leeching_Bolts",
-          "melvorAoD:Sapphire_Bolts_Arcane",
-          "melvorAoD:Sapphire_Bolts_Enchanted",
-          "melvorTotH:Zephyte_Bolts",
-          "melvorAoD:Jadestone_Bolts_Arcane",
-          "melvorAoD:Jadestone_Bolts_Enchanted"
+          "melvorF:Jadestone_Bolts"
         ],
         "equipRequirements": [
           {
@@ -6492,18 +6475,7 @@
           "melvorF:Adamant_Crossbow",
           "melvorF:Ancient_Crossbow",
           "melvorF:Mithril_Crossbow",
-          "melvorD:Tilted_Crossbow",
-          "melvorAoD:Poison_Crossbow",
-          "melvorAoD:Crystal_Crossbow",
-          "melvorF:Confetti_Crossbow",
-          "melvorAoD:Granite_Crossbow",
-          "melvorTotH:Augite_Crossbow",
-          "melvorTotH:Divine_Crossbow",
-          "melvorTotH:Corundum_Crossbow",
-          "melvorTotH:Meteorite_Crossbow",
-          "melvorAoD:Pure_Crystal_Crossbow",
-          "melvorTotH:Feather_Storm_Crossbow",
-          "melvorTotH:Torrential_Blast_Crossbow"
+          "melvorF:Confetti_Crossbow"
         ],
         "equipRequirements": [
           {
