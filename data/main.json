@@ -2349,6 +2349,87 @@
         ]
       }
     ],
+    "combatAreas": [
+      {
+        "id": "Low_Town",
+        "name": "Low Town",
+        "media": "assets/combatAreas/Low_Town.png",
+        "difficulty": [
+          0
+        ],
+        "monsterIDs": [
+          "SUPERAWESOME:Peasant_Man",
+          "SUPERAWESOME:Peasant_Woman",
+          "SUPERAWESOME:Pickpocket",
+          "SUPERAWESOME:Guard",
+          "SUPERAWESOME:Executioner",
+          "SUPERAWESOME:Mysterious_Monk"
+        ],
+        "entryRequirements": []
+      },
+      {
+        "id": "Botanical_Gardens",
+        "name": "Botanical Gardens",
+        "media": "assets/combatAreas/Botanical_Gardens.svg",
+        "difficulty": [
+          0
+        ],
+        "monsterIDs": [
+          "SUPERAWESOME:Mutant_Flower",
+          "SUPERAWESOME:Junior_Gardener",
+          "SUPERAWESOME:Wasp",
+          "SUPERAWESOME:Weeds",
+          "SUPERAWESOME:Adult_Gardener",
+          "SUPERAWESOME:Master_Gardener"
+        ],
+        "entryRequirements": []
+      },
+      {
+        "id": "Barbarian_Village",
+        "name": "Barbarian Village",
+        "media": "assets/combatAreas/Barbarian_Village.png",
+        "difficulty": [
+          0,
+          1
+        ],
+        "monsterIDs": [
+          "SUPERAWESOME:Barbarian",
+          "SUPERAWESOME:Barbarian_Warrior",
+          "SUPERAWESOME:Barbarian_Bowyer",
+          "SUPERAWESOME:Barbarian_Berserker",
+          "SUPERAWESOME:Barbarian_Brawler",
+          "SUPERAWESOME:Chieftain_Erik"
+        ],
+        "entryRequirements": []
+      },
+      {
+        "id": "Secluded_Monastery",
+        "name": "Secluded Monastery",
+        "media": "assets/combatAreas/Secluded_Monastery.png",
+        "monsterIDs": [
+          "SUPERAWESOME:Monk_of_the_Wind",
+          "SUPERAWESOME:Monk_of_the_River",
+          "SUPERAWESOME:Monk_of_the_Moss",
+          "SUPERAWESOME:Monk_of_the_Flame",
+          "SUPERAWESOME:Guardian_of_the_Elements"
+        ],
+        "difficulty": [
+          2,
+          3
+        ],
+        "entryRequirements": [
+          {
+            "type": "ItemFound",
+            "itemID": "SUPERAWESOME:Mysterious_Tome"
+          },
+          {
+            "type": "DungeonCompletion",
+            "dungeonID": "melvorD:Hall_of_Wizards",
+            "count": 1
+          }
+        ]
+      }
+    ],
     "combatEffectGroups": [
       {
         "id": "Daze",
@@ -2457,7 +2538,7 @@
             }
           ],
           "effectGroups": [
-            "expandedAreas:Paralyze"
+            "SUPERAWESOME:Paralyze"
           ],
           "exclusiveGroups": [
             "melvorD:StunImmune"
@@ -2550,7 +2631,7 @@
       },
       {
         "id": "Paralyze",
-        "templateID": "expandedAreas:Paralyze",
+        "templateID": "SUPERAWESOME:Paralyze",
         "parameters": [
           {
             "name": "turns",
@@ -2592,7 +2673,7 @@
       },
       {
         "id": "Lesser_Sigil_of_Perception",
-        "templateID": "expandedAreas:SadCombo",
+        "templateID": "SUPERAWESOME:SadCombo",
         "name": "Sigil of Perception (Lesser)",
         "media": "assets/bank/Lesser_Sigil_of_Perception.png",
         "statGroups": [
@@ -2616,7 +2697,7 @@
               {
                 "type": "EquipmentChanged",
                 "isNotEquipped": [
-                  "expandedAreas:Lesser_Sigil_of_Perception"
+                  "SUPERAWESOME:Lesser_Sigil_of_Perception"
                 ]
               }
             ]
@@ -2628,7 +2709,7 @@
       },
       {
         "id": "Greater_Sigil_of_Perception",
-        "templateID": "expandedAreas:SadCombo",
+        "templateID": "SUPERAWESOME:SadCombo",
         "name": "Sigil of Perception (Greater)",
         "media": "assets/bank/Greater_Sigil_of_Perception.png",
         "statGroups": [
@@ -2652,7 +2733,7 @@
               {
                 "type": "EquipmentChanged",
                 "isNotEquipped": [
-                  "expandedAreas:Greater_Sigil_of_Perception"
+                  "SUPERAWESOME:Greater_Sigil_of_Perception"
                 ]
               }
             ]
@@ -2664,7 +2745,7 @@
       },
       {
         "id": "Superior_Sigil_of_Perception",
-        "templateID": "expandedAreas:SadCombo",
+        "templateID": "SUPERAWESOME:SadCombo",
         "name": "Sigil of Perception (Superior)",
         "media": "assets/bank/Superior_Sigil_of_Perception.png",
         "statGroups": [
@@ -2688,7 +2769,7 @@
               {
                 "type": "EquipmentChanged",
                 "isNotEquipped": [
-                  "expandedAreas:Superior_Sigil_of_Perception"
+                  "SUPERAWESOME:Superior_Sigil_of_Perception"
                 ]
               }
             ]
@@ -2724,7 +2805,7 @@
               {
                 "type": "EquipmentChanged",
                 "isNotEquipped": [
-                  "expandedAreas:Lesser_Sigil_of_Battle"
+                  "SUPERAWESOME:Lesser_Sigil_of_Battle"
                 ]
               }
             ]
@@ -2760,7 +2841,7 @@
               {
                 "type": "EquipmentChanged",
                 "isNotEquipped": [
-                  "expandedAreas:Greater_Sigil_of_Battle"
+                  "SUPERAWESOME:Greater_Sigil_of_Battle"
                 ]
               }
             ]
@@ -2796,7 +2877,7 @@
               {
                 "type": "EquipmentChanged",
                 "isNotEquipped": [
-                  "expandedAreas:Superior_Sigil_of_Battle"
+                  "SUPERAWESOME:Superior_Sigil_of_Battle"
                 ]
               }
             ]
@@ -2832,7 +2913,7 @@
               {
                 "type": "EquipmentChanged",
                 "isNotEquipped": [
-                  "expandedAreas:Lesser_Sigil_of_Ferocity"
+                  "SUPERAWESOME:Lesser_Sigil_of_Ferocity"
                 ]
               }
             ]
@@ -2868,7 +2949,7 @@
               {
                 "type": "EquipmentChanged",
                 "isNotEquipped": [
-                  "expandedAreas:Greater_Sigil_of_Ferocity"
+                  "SUPERAWESOME:Greater_Sigil_of_Ferocity"
                 ]
               }
             ]
@@ -2904,7 +2985,7 @@
               {
                 "type": "EquipmentChanged",
                 "isNotEquipped": [
-                  "expandedAreas:Superior_Sigil_of_Ferocity"
+                  "SUPERAWESOME:Superior_Sigil_of_Ferocity"
                 ]
               }
             ]
@@ -4147,6 +4228,128 @@
         ]
       }
     ],
+    "dungeons": [
+      {
+        "difficulty": [
+          4
+        ],
+        "dropBones": true,
+        "entryRequirements": [
+          {
+            "type": "ItemFound",
+            "itemID": "SUPERAWESOME:Fragmented_Elemental_Rune"
+          }
+        ],
+        "pet": {
+          "petID": "SUPERAWESOME:Ellie",
+          "weight": 200
+        },
+        "fixedPetClears": false,
+        "id": "Elemental_Sanctuary",
+        "media": "assets/dungeons/ElementalSanctuary.png",
+        "monsterIDs": [
+          "SUPERAWESOME:Monk_of_the_Wind",
+          "SUPERAWESOME:Monk_of_the_River",
+          "SUPERAWESOME:Monk_of_the_Moss",
+          "SUPERAWESOME:Monk_of_the_Flame",
+          "SUPERAWESOME:Harpiar",
+          "SUPERAWESOME:Kappa",
+          "SUPERAWESOME:Rock_Giant",
+          "SUPERAWESOME:Fire_Maiden",
+          "SUPERAWESOME:OzmarathraxInscriptorOfRunes"
+        ],
+        "name": "Elemental Sanctuary",
+        "pauseOnBosses": false,
+        "rewardItemIDs": [
+          "SUPERAWESOME:Pureform_Rune",
+          "SUPERAWESOME:Elemental_Cape"
+        ]
+      },
+      {
+        "difficulty": [
+          0
+        ],
+        "dropBones": true,
+        "entryRequirements": [],
+        "pet": {
+          "petID": "SUPERAWESOME:Yeemik",
+          "weight": 350
+        },
+        "fixedPetClears": false,
+        "id": "Golbin_Hideout",
+        "media": "assets/dungeons/GolbinHideout.png",
+        "monsterIDs": [
+          "melvorD:Golbin",
+          "melvorD:Golbin",
+          "melvorD:RangedGolbin",
+          "melvorD:RangedGolbin",
+          "SUPERAWESOME:Magic_Golbin",
+          "SUPERAWESOME:Magic_Golbin",
+          "SUPERAWESOME:Hobgolbin",
+          "SUPERAWESOME:Hobgolbin",
+          "SUPERAWESOME:Big_Golbin",
+          "SUPERAWESOME:Golbin_Chief"
+        ],
+        "name": "Golbin Hideout",
+        "pauseOnBosses": false,
+        "rewardItemIDs": [
+          "SUPERAWESOME:Damaged_Supply_Crate"
+        ]
+      },
+      {
+        "id": "The_Barbarian_Trials",
+        "name": "The Barbarian Trials",
+        "media": "assets/dungeons/BarbarianTrials.svg",
+        "monsterIDs": [
+          "SUPERAWESOME:Barbarian_Warrior",
+          "SUPERAWESOME:Barbarian_Bowyer",
+          "SUPERAWESOME:Barbarian_Berserker",
+          "SUPERAWESOME:Barbarian_Brawler",
+          "SUPERAWESOME:Walking_Keg",
+          "SUPERAWESOME:Jarl_Eriksson",
+          "SUPERAWESOME:Draugr",
+          "SUPERAWESOME:Draugr",
+          "SUPERAWESOME:Drowned_Maiden",
+          "SUPERAWESOME:Koschei_the_Deathless_Form1",
+          "SUPERAWESOME:Koschei_the_Deathless_Form2",
+          "SUPERAWESOME:Koschei_the_Deathless_Form3",
+          "SUPERAWESOME:Koschei_the_Deathless_Form4"
+        ],
+        "difficulty": [
+          2
+        ],
+        "entryRequirements": [
+          {
+            "type": "SkillLevel",
+            "level": 60,
+            "skillID": "melvorD:Strength"
+          },
+          {
+            "type": "MonsterKilled",
+            "monsterID": "SUPERAWESOME:Chieftain_Erik",
+            "count": 1
+          }
+        ],
+        "rewardItemIDs": [
+          "SUPERAWESOME:Raid_Spoils"
+        ],
+        "dropBones": true,
+        "pet": {
+          "petID": "SUPERAWESOME:Fenri",
+          "weight": 150
+        },
+        "fixedPetClears": false,
+        "pauseOnBosses": false,
+        "floors": [
+          6,
+          3,
+          4
+        ],
+        "allowedDamageTypeIDs": [
+          "melvorD:Normal"
+        ]
+      }
+    ],
     "equipmentSlots": [
       {
         "id": "Ring2",
@@ -4194,6 +4397,206 @@
       }
     ],
     "items": [
+      {
+        "id": "Monk_Robe_Top",
+        "name": "Monk Robe Top",
+        "category": "Misc",
+        "type": "Armour",
+        "media": "assets/bank/Monk_Robe_Top.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 100,
+        "tier": "robe",
+        "validSlots": [
+          "Platebody",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "itemType": "Equipment",
+        "modifiers": {
+          "flatPrayerPointCost": -1,
+          "prayerPointPreservationChance": 10
+        }
+      },
+      {
+        "id": "Monk_Robe_Bottoms",
+        "name": "Monk Robe Bottoms",
+        "category": "Misc",
+        "type": "Armour",
+        "media": "assets/bank/Monk_Robe_Bottom.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 80,
+        "tier": "robe",
+        "validSlots": [
+          "Platelegs",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "itemType": "Equipment",
+        "modifiers": {
+          "flatPrayerPointCost": -1,
+          "prayerPointPreservationChance": 10
+        }
+      },
+      {
+        "id": "Raid_Spoils",
+        "name": "Raid Spoils",
+        "category": "Openable",
+        "type": "Chest",
+        "media": "assets/bank/Raid_Spoils.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 250,
+        "itemType": "Openable",
+        "dropTable": [
+          {
+            "itemID": "melvorD:Beef_Pie",
+            "minQuantity": 25,
+            "maxQuantity": 50,
+            "weight": 70
+          },
+          {
+            "itemID": "SUPERAWESOME:Keg_of_Barbar",
+            "minQuantity": 25,
+            "maxQuantity": 50,
+            "weight": 65
+          },
+          {
+            "itemID": "SUPERAWESOME:Longleaf_Logs",
+            "minQuantity": 125,
+            "maxQuantity": 250,
+            "weight": 60
+          },
+          {
+            "itemID": "SUPERAWESOME:Sterkite_Ore",
+            "minQuantity": 150,
+            "maxQuantity": 300,
+            "weight": 50
+          },
+          {
+            "itemID": "SUPERAWESOME:Sterkite_Bar",
+            "minQuantity": 125,
+            "maxQuantity": 250,
+            "weight": 45
+          },
+          {
+            "itemID": "SUPERAWESOME:Black_Thrownaxe",
+            "minQuantity": 150,
+            "maxQuantity": 300,
+            "weight": 40
+          },
+          {
+            "itemID": "melvorD:Adamantite_Bar",
+            "minQuantity": 125,
+            "maxQuantity": 250,
+            "weight": 35
+          },
+          {
+            "itemID": "SUPERAWESOME:Frostpine_Logs",
+            "minQuantity": 125,
+            "maxQuantity": 250,
+            "weight": 30
+          },
+          {
+            "itemID": "SUPERAWESOME:Adamant_Thrownaxe",
+            "minQuantity": 150,
+            "maxQuantity": 300,
+            "weight": 25
+          },
+          {
+            "itemID": "SUPERAWESOME:Barbar",
+            "minQuantity": 250,
+            "maxQuantity": 500,
+            "weight": 20
+          },
+          {
+            "itemID": "SUPERAWESOME:White_Pine_Logs",
+            "minQuantity": 125,
+            "maxQuantity": 250,
+            "weight": 15
+          },
+          {
+            "itemID": "melvorD:Amulet_of_Strength",
+            "minQuantity": 10,
+            "maxQuantity": 20,
+            "weight": 10
+          },
+          {
+            "itemID": "SUPERAWESOME:Loblolly_Logs",
+            "minQuantity": 125,
+            "maxQuantity": 250,
+            "weight": 10
+          },
+          {
+            "itemID": "SUPERAWESOME:Rune_Thrownaxe",
+            "minQuantity": 150,
+            "maxQuantity": 300,
+            "weight": 10
+          },
+          {
+            "itemID": "SUPERAWESOME:Barbarian_Archer_Helm",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 9
+          },
+          {
+            "itemID": "SUPERAWESOME:Barbarian_Berserker_Helm",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 8
+          },
+          {
+            "itemID": "SUPERAWESOME:Barbarian_Warrior_Helm",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 7
+          },
+          {
+            "itemID": "SUPERAWESOME:Barbarian_Berserker_Axe",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 6
+          },
+          {
+            "itemID": "SUPERAWESOME:Barbarian_Brawling_Gloves",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 5
+          },
+          {
+            "itemID": "SUPERAWESOME:Barbarian_Longblade",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 4
+          },
+          {
+            "itemID": "SUPERAWESOME:Barbarian_Boots",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 3
+          },
+          {
+            "itemID": "SUPERAWESOME:Barbarian_Skirt",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 2
+          },
+          {
+            "itemID": "SUPERAWESOME:Barbarian_Armour",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 1
+          }
+        ]
+      },
       {
         "id": "Food_Seed_Box_I",
         "name": "Food Seed Box I",
