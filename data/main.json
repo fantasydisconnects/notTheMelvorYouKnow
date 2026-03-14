@@ -58838,6 +58838,193 @@
       {
         "skillID": "melvorD:Township",
         "data": {
+          "buildings": [
+            {
+              "id": "Small_Observatory",
+              "name": "Small Observatory",
+              "media": "assets/skills/township/Small_Observatory.png",
+              "tier": 2,
+              "cost": [
+                {
+                  "biomeID": "melvorF:Grasslands",
+                  "cost": [
+                    {
+                      "id": "melvorF:GP",
+                      "quantity": 10000
+                    },
+                    {
+                      "id": "melvorF:Stone",
+                      "quantity": 4500
+                    }
+                  ]
+                },
+                {
+                  "biomeID": "melvorF:Mountains",
+                  "cost": [
+                    {
+                      "id": "melvorF:GP",
+                      "quantity": 5000
+                    },
+                    {
+                      "id": "melvorF:Stone",
+                      "quantity": 4500
+                    }
+                  ]
+                },
+                {
+                  "biomeID": "melvorF:Snowlands",
+                  "cost": [
+                    {
+                      "id": "melvorF:GP",
+                      "quantity": 10000
+                    },
+                    {
+                      "id": "melvorF:Stone",
+                      "quantity": 4500
+                    },
+                    {
+                      "id": "melvorF:Coal",
+                      "quantity": 150
+                    },
+                    {
+                      "id": "melvorF:Clothing",
+                      "quantity": 150
+                    },
+                    {
+                      "id": "melvorF:Food",
+                      "quantity": 150
+                    }
+                  ]
+                }
+              ],
+              "provides": [
+                {
+                  "biomeID": "melvorF:Grasslands",
+                  "population": 0,
+                  "happiness": 0,
+                  "education": 0.25,
+                  "storage": 0,
+                  "resources": []
+                },
+                {
+                  "biomeID": "melvorF:Mountains",
+                  "population": 0,
+                  "happiness": 0,
+                  "education": 0.5,
+                  "storage": 0,
+                  "resources": []
+                },
+                {
+                  "biomeID": "melvorF:Snowlands",
+                  "population": 0,
+                  "happiness": 0,
+                  "education": 0.25,
+                  "storage": 0,
+                  "resources": []
+                }
+              ],
+              "biomes": [
+                "melvorF:Grasslands",
+                "melvorF:Mountains",
+                "melvorF:Snowlands"
+              ],
+              "maxUpgrades": 25,
+              "modifiers": {}
+            },
+            {
+              "id": "Large_Observatory",
+              "name": "Large Observatory",
+              "media": "assets/skills/township/Large_Observatory.png",
+              "tier": 3,
+              "cost": [
+                {
+                  "biomeID": "melvorF:Grasslands",
+                  "cost": [
+                    {
+                      "id": "melvorF:GP",
+                      "quantity": 20000
+                    },
+                    {
+                      "id": "melvorF:Stone",
+                      "quantity": 90000
+                    }
+                  ]
+                },
+                {
+                  "biomeID": "melvorF:Mountains",
+                  "cost": [
+                    {
+                      "id": "melvorF:GP",
+                      "quantity": 10000
+                    },
+                    {
+                      "id": "melvorF:Stone",
+                      "quantity": 9000
+                    }
+                  ]
+                },
+                {
+                  "biomeID": "melvorF:Snowlands",
+                  "cost": [
+                    {
+                      "id": "melvorF:GP",
+                      "quantity": 20000
+                    },
+                    {
+                      "id": "melvorF:Stone",
+                      "quantity": 9000
+                    },
+                    {
+                      "id": "melvorF:Coal",
+                      "quantity": 300
+                    },
+                    {
+                      "id": "melvorF:Clothing",
+                      "quantity": 300
+                    },
+                    {
+                      "id": "melvorF:Food",
+                      "quantity": 300
+                    }
+                  ]
+                }
+              ],
+              "provides": [
+                {
+                  "biomeID": "melvorF:Grasslands",
+                  "population": 0,
+                  "happiness": 0,
+                  "education": 0.5,
+                  "storage": 0,
+                  "resources": []
+                },
+                {
+                  "biomeID": "melvorF:Mountains",
+                  "population": 0,
+                  "happiness": 0,
+                  "education": 1,
+                  "storage": 0,
+                  "resources": []
+                },
+                {
+                  "biomeID": "melvorF:Snowlands",
+                  "population": 0,
+                  "happiness": 0,
+                  "education": 0.5,
+                  "storage": 0,
+                  "resources": []
+                }
+              ],
+              "biomes": [
+                "melvorF:Grasslands",
+                "melvorF:Mountains",
+                "melvorF:Snowlands"
+              ],
+              "maxUpgrades": 25,
+              "upgradesFrom": "expandedAreas:Small_Observatory",
+              "modifiers": {}
+            }
+          ],
           "itemConversions": {
             "toTownship": [],
             "fromTownship": [

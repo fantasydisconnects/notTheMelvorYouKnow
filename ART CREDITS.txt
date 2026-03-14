@@ -1,7 +1,9 @@
 ART CREDITS
 
 Flaticon (Premium Subscription—No Attribution Required)
-Arquebus art used with permission via CC-BY-2.0 and edited into a 2D Flat Vector (https://www.flickr.com/photos/alisdair/2855207485/in/photostream)
+Arquebus art used with permission via CC-BY 2.0 and edited into a 2D Flat Vector using GIMP (https://www.flickr.com/photos/alisdair/2855207485/in/photostream)
+Small Observatory art used with permission via CC-BY and edited into a 2D Flat Vector using Vectorizer.ai and GIMP (https://commons.wikimedia.org/wiki/File:Korea-Gyeongju-Cheomseongdae-02.jpg)
+Large Observatory art used with permission via CC-BY-SA 3.0  and edited into a 2D Flat Vector using Vectorizer.ai and GIMP (upload.wikimedia.org/wikipedia/commons/8/81/La_Specola_-_Padua.jpg)
 
 AI DISCLAIMER
 This project does not and will not utilize generative AI for ANY of its art, code, data, or anything that would otherwise be expected of a real human to make. Any AI used is strictly for the purposes of simplifying the colours of non-vector images used to aid in manually transforming them into simple flat vectors. Non-vector images are then painstakingly hand-traced and coloured using GIMP after such processes are used. Any AI programs or tools used and their purposes in this project are listed under the AI TOOLS section.
