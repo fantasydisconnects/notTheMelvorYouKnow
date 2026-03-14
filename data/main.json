@@ -43968,8 +43968,84 @@
     "shopPurchases": [
       {
         "id": "WoodcuttersCamp",
-        "media": "assets/shop/skillUpgrades/WoodcuttersCamp.png",
-        "category": "melvorD:General",
+        "media": "assets/shop/township/WoodcuttersCamp.png",
+        "category": "melvorF:Township",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "treeCutLimit": 1
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 10000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Township",
+            "level": 40,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Woodcutters' Camp",
+        "customDescription": "Unlock the ability to make use of your Woodcutters' Camps to increase your tree cut limit by 1 in Woodcutting. Logs, Skill XP and Mastery XP granted based on highest interval."
+      },
+      {
+        "id": "LoggingCamp",
+        "media": "assets/shop/township/LoggingCamp.png",
+        "category": "melvorF:Township",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "treeCutLimit": 1
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 50000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "count": 1,
+            "purchaseID": "expandedAreas:WoodcuttersCamp",
+            "type": "ShopPurchase"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "type": "SkillLevel",
+            "level": 60,
+            "skillID": "melvorD:Township"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Logging Camp",
+        "customDescription": "Unlock the ability to make use of your Logging Camps to increase your tree cut limit by 1 in Woodcutting. Logs, Skill XP and Mastery XP granted based on highest interval."
+      },
+      {
+        "id": "ForestryCamp",
+        "media": "assets/shop/township/ForestryCamp.png",
+        "category": "melvorF:Township",
         "contains": {
           "items": [],
           "modifiers": {
@@ -43987,45 +44063,10 @@
           ]
         },
         "allowQuantityPurchase": false,
-        "unlockRequirements": [],
-        "purchaseRequirements": [
-          {
-            "skillID": "melvorD:Township",
-            "level": 60,
-            "type": "SkillLevel"
-          }
-        ],
-        "defaultBuyLimit": 1,
-        "buyLimitOverrides": [],
-        "showBuyLimit": false,
-        "customName": "Woodcutters' Camp",
-        "customDescription": "Unlock the ability to make use of your Woodcutters' Camps to cut 3 different trees in Woodcutting. Logs, Skill XP and Mastery XP granted based on highest interval."
-      },
-      {
-        "id": "LoggingCamp",
-        "media": "assets/shop/skillUpgrades/LoggingCamp.png",
-        "category": "melvorD:General",
-        "contains": {
-          "items": [],
-          "modifiers": {
-            "treeCutLimit": 1
-          }
-        },
-        "cost": {
-          "items": [],
-          "currencies": [
-            {
-              "currency": "melvorD:GP",
-              "type": "Fixed",
-              "cost": 500000000
-            }
-          ]
-        },
-        "allowQuantityPurchase": false,
         "unlockRequirements": [
           {
             "count": 1,
-            "purchaseID": "expandedAreas:WoodcuttersCamp",
+            "purchaseID": "expandedAreas:LoggingCamp",
             "type": "ShopPurchase"
           }
         ],
@@ -44039,17 +44080,24 @@
         "defaultBuyLimit": 1,
         "buyLimitOverrides": [],
         "showBuyLimit": false,
-        "customName": "Logging Camp",
-        "customDescription": "Unlock the ability to make use of your Logging Camps to cut 4 different trees in Woodcutting. Logs, Skill XP and Mastery XP granted based on highest interval."
+        "customName": "Forestry Camp",
+        "customDescription": "Unlock the ability to make use of your Forestry Camps to increase your tree cut limit by 1 in Woodcutting. Logs, Skill XP and Mastery XP granted based on highest interval."
       },
       {
-        "id": "ForestryCamp",
-        "media": "assets/shop/skillUpgrades/ForestryCamp.png",
-        "category": "melvorD:General",
+        "id": "MinersPit",
+        "media": "assets/shop/township/Miners_Pit.svg",
+        "category": "melvorF:Township",
         "contains": {
           "items": [],
           "modifiers": {
-            "treeCutLimit": 1
+            "flatMiningNodeHP": 10,
+            "noMiningNodeDamageChance": 5,
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Mining",
+                "value": -2.5
+              }
+            ]
           }
         },
         "cost": {
@@ -44058,7 +44106,49 @@
             {
               "currency": "melvorD:GP",
               "type": "Fixed",
-              "cost": 1000000000
+              "cost": 10000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Township",
+            "level": 40,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Miners' Pit",
+        "customDescription": "Unlock the ability to make use of your Miners' Pits to gain +10 Flat Mining Node HP, +5% Chance to deal no damage to Mining Nodes, and -2.5% Mining Interval. Current Total: +10 HP, +5% Chance, -2.5% Interval."
+      },
+      {
+        "id": "MinersField",
+        "media": "assets/shop/township/Miners_Field.svg",
+        "category": "melvorF:Township",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "flatMiningNodeHP": 10,
+            "noMiningNodeDamageChance": 5,
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Mining",
+                "value": -2.5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 50000000
             }
           ]
         },
@@ -44066,22 +44156,208 @@
         "unlockRequirements": [
           {
             "count": 1,
-            "purchaseID": "expandedAreas:LoggingCamp",
+            "purchaseID": "expandedAreas:MinersPit",
             "type": "ShopPurchase"
           }
         ],
         "purchaseRequirements": [
           {
             "type": "SkillLevel",
-            "level": 99,
+            "level": 60,
             "skillID": "melvorD:Township"
           }
         ],
         "defaultBuyLimit": 1,
         "buyLimitOverrides": [],
         "showBuyLimit": false,
-        "customName": "Forestry Camp",
-        "customDescription": "Unlock the ability to make use of your Forestry Camps to cut 5 different trees in Woodcutting. Logs, Skill XP and Mastery XP granted based on highest interval."
+        "customName": "Miners' Field",
+        "customDescription": "Unlock the ability to make use of your Miners' Fields to gain +10 Flat Mining Node HP, +5% Chance to deal no damage to Mining Nodes, and -2.5% Mining Interval. Current Total: +20 HP, +10% Chance, -5% Interval."
+      },
+      {
+        "id": "MinersQuarry",
+        "media": "assets/shop/township/Miners_Quarry.svg",
+        "category": "melvorF:Township",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "flatMiningNodeHP": 10,
+            "noMiningNodeDamageChance": 5,
+            "skillInterval": [
+              {
+                "skillID": "melvorD:Mining",
+                "value": -2.5
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 100000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "count": 1,
+            "purchaseID": "expandedAreas:MinersField",
+            "type": "ShopPurchase"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "type": "SkillLevel",
+            "level": 80,
+            "skillID": "melvorD:Township"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Miners' Quarry",
+        "customDescription": "Unlock the ability to make use of your Miners' Quarries to gain +10 Flat Mining Node HP, +5% Chance to deal no damage to Mining Nodes, and -2.5% Mining Interval. Current Total: +30 HP, +15% Chance, -7.5% Interval."
+      },
+      {
+        "id": "BlacksmithsSmithy",
+        "media": "assets/shop/township/Blacksmiths_Smithy.svg",
+        "category": "melvorF:Township",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "flatSmithingCoalCost": -1,
+            "additionalPrimaryProductChance": [
+              {
+                "skillID": "melvorD:Smithing",
+                "categoryID": "melvorD:Bars",
+                "value": 15
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 10000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Township",
+            "level": 40,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Blacksmiths' Smithy",
+        "customDescription": "Pay your townsfolk to make use of your Blacksmiths' Smithies to gain -1 Flat Smithing Coal Cost and +15% chance to gain +1 additional bar when Smithing. Current Total: -1 Coal Cost and +15% chance."
+      },
+      {
+        "id": "BlacksmithsWorkshop",
+        "media": "assets/shop/township/Blacksmiths_Workshop.svg",
+        "category": "melvorF:Township",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "flatSmithingCoalCost": -1,
+            "additionalPrimaryProductChance": [
+              {
+                "skillID": "melvorD:Smithing",
+                "categoryID": "melvorD:Bars",
+                "value": 15
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 50000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "count": 1,
+            "purchaseID": "expandedAreas:BlacksmithsSmithy",
+            "type": "ShopPurchase"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "type": "SkillLevel",
+            "level": 60,
+            "skillID": "melvorD:Township"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Blacksmiths' Workshop",
+        "customDescription": "Pay your townsfolk to make use of your Blacksmiths' Smithies to gain -1 Flat Smithing Coal Cost and +15% chance to gain +1 additional bar when Smithing. Current Total: -2 Coal Cost and +30% chance."
+      },
+      {
+        "id": "BlacksmithsForge",
+        "media": "assets/shop/township/Blacksmiths_Forge.svg",
+        "category": "melvorF:Township",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "flatSmithingCoalCost": -1,
+            "additionalPrimaryProductChance": [
+              {
+                "skillID": "melvorD:Smithing",
+                "categoryID": "melvorD:Bars",
+                "value": 15
+              }
+            ]
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 100000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "count": 1,
+            "purchaseID": "expandedAreas:BlacksmithsWorkshop",
+            "type": "ShopPurchase"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "type": "SkillLevel",
+            "level": 80,
+            "skillID": "melvorD:Township"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Blacksmiths' Forge",
+        "customDescription": "Pay your townsfolk to make use of your Blacksmiths' Smithies to gain -1 Flat Smithing Coal Cost and +15% chance to gain +1 additional bar when Smithing. Current Total: -3 Coal Cost and +45% Chance."
       },
       {
         "id": "Bird_Nest",
@@ -47839,7 +48115,7 @@
       },
       {
         "id": "Anvil_Iron",
-        "media": "assets/shop/anvil_iron.png",
+        "media": "assets/shop/skillUpgrades/anvil_iron.png",
         "category": "melvorD:SkillUpgrades",
         "contains": {
           "items": [],
@@ -51846,6 +52122,20 @@
         "chainName": "Current Camp",
         "rootUpgradeID": "expandedAreas:ForestryCamp",
         "defaultName": "Camp",
+        "defaultDescription": "No bonuses."
+      },
+      {
+        "id": "Mines",
+        "chainName": "Current Mines",
+        "rootUpgradeID": "expandedAreas:MinersQuarry",
+        "defaultName": "Mines",
+        "defaultDescription": "No bonuses."
+      },
+      {
+        "id": "Mines",
+        "chainName": "Current Blacksmith",
+        "rootUpgradeID": "expandedAreas:BlacksmithsForge",
+        "defaultName": "Blacksmith",
         "defaultDescription": "No bonuses."
       },
       {
@@ -56941,6 +57231,24 @@
       {
         "skillID": "melvorD:Mining",
         "data": {
+          "minibar": {
+            "defaultItems": [
+              "melvorF:Miners_Hat",
+              "melvorF:Miners_Body",
+              "melvorF:Miners_Leggings",
+              "melvorF:Miners_Boots",
+              "expandedAreas:Dynamite",
+              "melvorF:Mining_Scroll_Of_XP",
+              "melvorF:Scroll_Of_Essence",
+              "melvorF:Gem_Finder_Scroll"
+            ],
+            "pets": [],
+            "upgrades": [
+              "expandedAreas:MinersPit",
+              "expandedAreas:MinersField",
+              "expandedAreas:MinersQuarry"
+            ]
+          },
           "rockData": [
             {
               "id": "Sterkite_Ore",
@@ -57007,14 +57315,7 @@
               "category": "melvorD:Ore",
               "giveGems": true
             }
-          ],
-          "minibar": {
-            "defaultItems": [
-              "expandedAreas:Dynamite"
-            ],
-            "pets": [],
-            "upgrades": []
-          }
+          ]
         }
       },
       {
@@ -57516,10 +57817,18 @@
           ],
           "minibar": {
             "defaultItems": [
-              "expandedAreas:Pick_of_Colossal_Excavation"
+              "expandedAreas:Pick_of_Colossal_Excavation",
+              "melvorF:Blacksmiths_Hat",
+              "melvorF:Blacksmiths_Body",
+              "melvorF:Blacksmiths_Leggings",
+              "melvorF:Blacksmiths_Boots"
             ],
             "pets": [],
-            "upgrades": []
+            "upgrades": [
+              "expandedAreas:BlacksmithsSmithy",
+              "expandedAreas:BlacksmithsWorkshop",
+              "expandedAreas:BlacksmithsForge"
+            ]
           },
           "recipes": [
             {
