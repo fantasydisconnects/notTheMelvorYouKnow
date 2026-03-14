@@ -2230,6 +2230,22 @@
     "bankSortOrder": [
       {
         "insertAt": "After",
+        "afterID": "melvorF:Food_Box_II",
+        "ids": [
+          "expandedAreas:Food_Seed_Box_I",
+          "expandedAreas:Food_Seed_Box_II"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Wood_Box_II",
+        "ids": [
+          "expandedAreas:Tree_Seed_Box_I",
+          "expandedAreas:Tree_Seed_Box_II"
+        ]
+      },
+      {
+        "insertAt": "After",
         "afterID": "melvorF:Fine_Poison_Powder",
         "ids": [
           "expandedAreas:Serpentine_Scales",
