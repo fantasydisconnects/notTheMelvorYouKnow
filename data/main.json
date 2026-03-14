@@ -52297,7 +52297,21 @@
         "data": {
           "headerUpgradeChains": [
             "expandedAreas:Trainers"
-          ]
+          ],
+          "minibar": {
+            "defaultItems": [
+              "melvorF:Performance_Enhancing_Hat",
+              "melvorF:Performance_Enhancing_Body",
+              "melvorF:Performance_Enhancing_Leggings",
+              "melvorF:Performance_Enhancing_Boots",
+              "melvorF:Skillers_Hat",
+              "melvorF:Skillers_Body",
+              "melvorF:Skillers_Leggings",
+              "melvorF:Skillers_Boots"
+            ],
+            "pets": [],
+            "upgrades": []
+          }
         }
       },
       {
@@ -52305,7 +52319,21 @@
         "data": {
           "headerUpgradeChains": [
             "expandedAreas:Telescope"
-          ]
+          ],
+          "minibar": {
+            "defaultItems": [
+              "melvorF:Star_Gazing_Hat",
+              "melvorF:Star_Gazing_Body",
+              "melvorF:Star_Gazing_Leggings",
+              "melvorF:Star_Gazing_Boots",
+              "melvorF:Skillers_Hat",
+              "melvorF:Skillers_Body",
+              "melvorF:Skillers_Leggings",
+              "melvorF:Skillers_Boots"
+            ],
+            "pets": [],
+            "upgrades": []
+          }
         }
       },
       {
@@ -52342,6 +52370,11 @@
               "upgradeRequired": true
             }
           ],
+          "minibar": {
+            "defaultItems": [],
+            "pets": [],
+            "upgrades": []
+          },
           "subcategories": [
             {
               "id": "Alcohol",
@@ -53619,6 +53652,23 @@
           "headerUpgradeChains": [
             "expandedAreas:Needle"
           ],
+          "minibar": {
+            "defaultItems": [
+              "melvorF:Crafters_Hat",
+              "melvorF:Crafters_Body",
+              "melvorF:Crafters_Leggings",
+              "melvorF:Crafters_Boots",
+              "melvorF:Skillers_Hat",
+              "melvorF:Skillers_Body",
+              "melvorF:Skillers_Leggings",
+              "melvorF:Skillers_Boots",
+              "melvorF:Crafting_Scroll_Of_XP",
+              "melvorF:Gem_Preserver_Scroll",
+              "melvorF:Leather_Crafter_Scroll"
+            ],
+            "pets": [],
+            "upgrades": []
+          },
           "recipes": [
             {
               "id": "Topaz_Dust",
@@ -56057,6 +56107,20 @@
           "headerUpgradeChains": [
             "expandedAreas:WhittlingTools"
           ],
+          "minibar": {
+            "defaultItems": [
+              "melvorF:Fletchers_Hat",
+              "melvorF:Fletchers_Body",
+              "melvorF:Fletchers_Leggings",
+              "melvorF:Fletchers_Boots",
+              "melvorF:Skillers_Hat",
+              "melvorF:Skillers_Body",
+              "melvorF:Skillers_Leggings",
+              "melvorF:Skillers_Boots"
+            ],
+            "pets": [],
+            "upgrades": []
+          },
           "recipes": [
             {
               "id": "Wooden_Pistol_Frame",
@@ -56843,6 +56907,20 @@
       {
         "skillID": "melvorD:Herblore",
         "data": {
+          "minibar": {
+            "defaultItems": [
+              "melvorF:Potion_Makers_Hat",
+              "melvorF:Potion_Makers_Body",
+              "melvorF:Potion_Makers_Leggings",
+              "melvorF:Potion_Makers_Boots",
+              "melvorF:Alchemists_Bag",
+              "melvorF:Alchemists_Bag_II",
+              "melvorF:Herblore_Scroll_Of_XP",
+              "melvorF:Herblore_Preservation_Scroll"
+            ],
+            "pets": [],
+            "upgrades": []
+          },
           "recipes": [
             {
               "id": "Antivenom",
@@ -57331,6 +57409,20 @@
           "headerUpgradeChains": [
             "expandedAreas:EssenceResonator"
           ],
+          "minibar": {
+            "defaultItems": [
+              "melvorF:Runecrafters_Hat",
+              "melvorF:Runecrafters_Body",
+              "melvorF:Runecrafters_Leggings",
+              "melvorF:Runecrafters_Boots",
+              "melvorF:Skillers_Hat",
+              "melvorF:Skillers_Body",
+              "melvorF:Skillers_Leggings",
+              "melvorF:Skillers_Boots"
+            ],
+            "pets": [],
+            "upgrades": []
+          },
           "recipes": [
             {
               "id": "Air_Acolyte_Wizard_Gloves",
@@ -58929,7 +59021,14 @@
             "expandedAreas:Camp"
           ],
           "minibar": {
-            "defaultItems": [],
+            "defaultItems": [
+              "melvorF:Woodcutters_Hat",
+              "melvorF:Woodcutters_Body",
+              "melvorF:Woodcutters_Leggings",
+              "melvorF:Woodcutters_Boots",
+              "melvorF:Woodcutting_Scroll_Of_XP",
+              "melvorF:Flaming_Axe_Scroll"
+            ],
             "pets": [],
             "upgrades": [
               "melvorD:Multi_Tree",
