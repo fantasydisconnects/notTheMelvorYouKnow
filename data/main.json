@@ -47768,11 +47768,11 @@
             "type": "DungeonCompletion"
           }
         ],
-        "defaultBuyLimit": 1,
+        "defaultBuyLimit": 0,
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Allow Nonmagic Auroras",
-        "customDescription": "Allows you to use Auroras without equipping a Magic Weapon (cannot be used with Allow Nonmagic Curses Shop Purchase)"
+        "customDescription": "Allows you to use Auroras without equipping a Magic Weapon (also deactivates the Allow Nonmagic Curses Shop Purchase)"
       },
       {
         "id": "Allow_Nonmagic_Curses",
@@ -47800,7 +47800,7 @@
         "purchaseRequirements": [
           {
             "skillID": "melvorD:Magic",
-            "level": 65,
+            "level": 80,
             "type": "SkillLevel"
           },
           {
@@ -47813,7 +47813,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Allow Nonmagic Curses",
-        "customDescription": "Allows you to use Curses without equipping a Magic Weapon (cannot be used with Allow Nonmagic Auroras Shop Purchase"
+        "customDescription": "Allows you to use Curses without equipping a Magic Weapon (also deactivates the Allow Nonmagic Auroras Shop Purchase)"
       },
       {
         "id": "Wand_of_Death",
@@ -47837,7 +47837,7 @@
             {
               "currency": "melvorD:GP",
               "type": "Fixed",
-              "cost": 5000000
+              "cost": 20000000
             }
           ]
         },
@@ -47856,29 +47856,29 @@
           "items": [],
           "itemCharges": {
             "id": "expandedAreas:Wand_of_Polymorph",
-            "quantity": 25
+            "quantity": 10
           }
         },
         "cost": {
           "items": [
             {
               "id": "melvorD:Leather",
-              "quantity": 25
+              "quantity": 10
             },
             {
               "id": "melvorD:Raw_Beef",
-              "quantity": 25
+              "quantity": 10
             },
             {
               "id": "melvorD:Bones",
-              "quantity": 25
+              "quantity": 10
             }
           ],
           "currencies": [
             {
               "currency": "melvorD:GP",
               "type": "Fixed",
-              "cost": 500000
+              "cost": 10000000
             }
           ]
         },
@@ -47897,7 +47897,7 @@
           "items": [],
           "itemCharges": {
             "id": "expandedAreas:Wand_of_Lightning",
-            "quantity": 100
+            "quantity": 10
           }
         },
         "cost": {
@@ -47925,7 +47925,7 @@
           "items": [],
           "itemCharges": {
             "id": "expandedAreas:Wand_of_Frost",
-            "quantity": 100
+            "quantity": 10
           }
         },
         "cost": {
@@ -47953,7 +47953,7 @@
           "items": [],
           "itemCharges": {
             "id": "expandedAreas:Wand_of_Fireball",
-            "quantity": 100
+            "quantity": 10
           }
         },
         "cost": {
