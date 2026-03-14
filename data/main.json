@@ -56784,6 +56784,158 @@
               "currencyCosts": []
             },
             {
+              "id": "Bronze_Spear",
+              "level": 3,
+              "productID": "expandedAreas:Bronze_Spear",
+              "baseQuantity": 1,
+              "baseExperience": 7,
+              "categoryID": "melvorF:Javelins",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Normal_Logs",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorD:Bronze_Javelin_Heads",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Iron_Spear",
+              "level": 17,
+              "productID": "expandedAreas:Iron_Spear",
+              "baseQuantity": 1,
+              "baseExperience": 13,
+              "categoryID": "melvorF:Javelins",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Oak_Logs",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorD:Iron_Javelin_Heads",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Steel_Spear",
+              "level": 32,
+              "productID": "expandedAreas:Steel_Spear",
+              "baseQuantity": 5,
+              "baseExperience": 25,
+              "categoryID": "melvorF:Javelins",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Willow_Logs",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorD:Steel_Javelin_Heads",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Mithril_Spear",
+              "level": 47,
+              "productID": "expandedAreas:Mithril_Spear",
+              "baseQuantity": 1,
+              "baseExperience": 38,
+              "categoryID": "melvorF:Javelins",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Maple_Logs",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorD:Mithril_Javelin_Heads",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Adamant_Spear",
+              "level": 62,
+              "productID": "expandedAreas:Adamant_Spear",
+              "baseQuantity": 1,
+              "baseExperience": 48,
+              "categoryID": "melvorF:Javelins",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Mahogany_Logs",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorD:Adamant_Javelin_Heads",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Rune_Spear",
+              "level": 77,
+              "productID": "expandedAreas:Rune_Spear",
+              "baseQuantity": 1,
+              "baseExperience": 63,
+              "categoryID": "melvorF:Javelins",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Yew_Logs",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorD:Rune_Javelin_Heads",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Rune_Spear",
+              "level": 85,
+              "productID": "expandedAreas:Rune_Spear",
+              "baseQuantity": 1,
+              "baseExperience": 71,
+              "categoryID": "melvorF:Javelins",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Magic_Logs",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Silver_Javelin_Heads",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Dragon_Spear",
+              "level": 92,
+              "productID": "expandedAreas:Dragon_Spear",
+              "baseQuantity": 1,
+              "baseExperience": 80,
+              "categoryID": "melvorF:Javelins",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Redwood_Logs",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorD:Dragon_Javelin_Heads",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
               "id": "Bronze_Thrownaxe",
               "level": 2,
               "productID": "expandedAreas:Bronze_Thrownaxe",
@@ -58578,150 +58730,7 @@
                 }
               ]
             },
-            {
-              "id": "Bronze_Spear",
-              "productID": "expandedAreas:Bronze_Spear",
-              "categoryID": "melvorD:BronzeGear",
-              "baseExperience": 20,
-              "baseQuantity": 1,
-              "level": 9,
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Evergreen_Logs",
-                  "quantity": 1
-                },
-                {
-                  "id": "melvorD:Bronze_Bar",
-                  "quantity": 1
-                }
-              ]
-            },
-            {
-              "id": "Iron_Spear",
-              "productID": "expandedAreas:Iron_Spear",
-              "categoryID": "melvorD:IronGear",
-              "baseExperience": 40,
-              "baseQuantity": 1,
-              "level": 24,
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Evergreen_Logs",
-                  "quantity": 1
-                },
-                {
-                  "id": "melvorD:Iron_Bar",
-                  "quantity": 1
-                }
-              ]
-            },
-            {
-              "id": "Steel_Spear",
-              "productID": "expandedAreas:Steel_Spear",
-              "categoryID": "melvorD:SteelGear",
-              "baseExperience": 60,
-              "baseQuantity": 1,
-              "level": 39,
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Evergreen_Logs",
-                  "quantity": 1
-                },
-                {
-                  "id": "melvorD:Steel_Bar",
-                  "quantity": 1
-                }
-              ]
-            },
-            {
-              "id": "Black_Spear",
-              "productID": "expandedAreas:Black_Spear",
-              "categoryID": "expandedAreas:BlackGear",
-              "baseExperience": 80,
-              "baseQuantity": 1,
-              "level": 46,
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Evergreen_Logs",
-                  "quantity": 1
-                },
-                {
-                  "id": "expandedAreas:Sterkite_Bar",
-                  "quantity": 1
-                }
-              ]
-            },
-            {
-              "id": "Mithril_Spear",
-              "productID": "expandedAreas:Mithril_Spear",
-              "categoryID": "melvorD:MithrilGear",
-              "baseExperience": 100,
-              "baseQuantity": 1,
-              "level": 54,
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Longleaf_Logs",
-                  "quantity": 1
-                },
-                {
-                  "id": "melvorD:Mithril_Bar",
-                  "quantity": 1
-                }
-              ]
-            },
-            {
-              "id": "Adamant_Spear",
-              "productID": "expandedAreas:Adamant_Spear",
-              "categoryID": "melvorD:AdamantGear",
-              "baseExperience": 120,
-              "baseQuantity": 1,
-              "level": 69,
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Frostpine_Logs",
-                  "quantity": 1
-                },
-                {
-                  "id": "melvorD:Adamantite_Bar",
-                  "quantity": 1
-                }
-              ]
-            },
-            {
-              "id": "Rune_Spear",
-              "productID": "expandedAreas:Rune_Spear",
-              "categoryID": "melvorD:RuneGear",
-              "baseExperience": 150,
-              "baseQuantity": 1,
-              "level": 84,
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:White_Pine_Logs",
-                  "quantity": 1
-                },
-                {
-                  "id": "melvorD:Runite_Bar",
-                  "quantity": 1
-                }
-              ]
-            },
-            {
-              "id": "Dragon_Spear",
-              "productID": "expandedAreas:Dragon_Spear",
-              "categoryID": "melvorD:DragonGear",
-              "baseExperience": 200,
-              "baseQuantity": 1,
-              "level": 98,
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Loblolly_Logs",
-                  "quantity": 1
-                },
-                {
-                  "id": "melvorD:Dragonite_Bar",
-                  "quantity": 1
-                }
-              ]
-            },
+            
             {
               "id": "Bronze_Thrownaxe_Head",
               "productID": "expandedAreas:Bronze_Thrownaxe_Head",
