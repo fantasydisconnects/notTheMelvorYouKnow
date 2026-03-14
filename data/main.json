@@ -56722,67 +56722,7 @@
               ],
               "currencyCosts": []
             },
-            {
-              "id": "Black_Arrows",
-              "level": 38,
-              "productID": "expandedAreas:Black_Arrows",
-              "baseQuantity": 15,
-              "baseExperience": 90,
-              "categoryID": "melvorF:Arrows",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Black_Arrowtips",
-                  "quantity": 15
-                },
-                {
-                  "id": "melvorD:Headless_Arrows",
-                  "quantity": 15
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Black_Javelin",
-              "level": 40,
-              "productID": "expandedAreas:Black_Javelin",
-              "baseQuantity": 5,
-              "baseExperience": 96,
-              "categoryID": "melvorF:Javelins",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Longleaf_Logs",
-                  "quantity": 3
-                },
-                {
-                  "id": "expandedAreas:Black_Javelin_Heads",
-                  "quantity": 5
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Black_Crossbow",
-              "level": 43,
-              "productID": "expandedAreas:Black_Crossbow",
-              "baseQuantity": 1,
-              "baseExperience": 105,
-              "categoryID": "melvorF:Crossbows",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Longleaf_Logs",
-                  "quantity": 3
-                },
-                {
-                  "id": "expandedAreas:Black_Crossbow_Head",
-                  "quantity": 1
-                },
-                {
-                  "id": "melvorD:Bowstring",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
+            
             {
               "id": "Bronze_Spear",
               "level": 3,
@@ -56992,25 +56932,7 @@
               ],
               "currencyCosts": []
             },
-            {
-              "id": "Black_Thrownaxe",
-              "level": 38,
-              "productID": "expandedAreas:Black_Thrownaxe",
-              "baseQuantity": 3,
-              "baseExperience": 89,
-              "categoryID": "expandedAreas:Standard_Thrownaxes",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Evergreen_Logs",
-                  "quantity": 2
-                },
-                {
-                  "id": "expandedAreas:Black_Thrownaxe_Head",
-                  "quantity": 3
-                }
-              ],
-              "currencyCosts": []
-            },
+           
             {
               "id": "Mithril_Thrownaxe",
               "level": 45,
@@ -58085,11 +58007,7 @@
         "skillID": "melvorD:Smithing",
         "data": {
           "categories": [
-            {
-              "id": "BlackGear",
-              "name": "Black Gear",
-              "media": "assets/bank/Black_Helmet.png"
-            },
+
             {
               "id": "SilverGear",
               "media": "assets/bank/armour_helmet_silver.png",
@@ -58116,120 +58034,54 @@
           },
           "recipes": [
             {
-              "id": "Bronze_Shot",
-              "level": 5,
-              "productID": "expandedAreas:Bronze_Shot",
-              "baseQuantity": 7,
-              "baseExperience": 8,
+              "id": "Bronze_Arquebus_Barrel",
+              "level": 17,
+              "productID": "expandedAreas:Bronze_Arquebus_Barrel",
+              "baseQuantity": 1,
+              "baseExperience": 40,
+              "categoryID": "melvorD:BronzeGear",
+              "subcategoryID": "expandedAreas:FirearmComponents",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Bronze_Bar",
+                  "quantity": 4
+                },
+                {
+                  "id": "expandedAreas:Pyrite_Chunk",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Bronze_Cannonball",
+              "level": 6,
+              "productID": "expandedAreas:Bronze_Cannonball",
+              "baseQuantity": 5,
+              "baseExperience": 50,
               "categoryID": "melvorD:BronzeGear",
               "itemCosts": [
                 {
                   "id": "melvorD:Bronze_Bar",
-                  "quantity": 1
+                  "quantity": 5
                 }
               ],
               "currencyCosts": []
             },
             {
-              "id": "Iron_Shot",
-              "level": 16,
-              "productID": "expandedAreas:Iron_Shot",
-              "baseQuantity": 7,
-              "baseExperience": 24,
-              "categoryID": "melvorD:IronGear",
+              "id": "Bronze_Handcannon",
+              "level": 20,
+              "productID": "expandedAreas:Bronze_Handcannon",
+              "baseQuantity": 1,
+              "baseExperience": 100,
+              "categoryID": "melvorD:BronzeGear",
               "itemCosts": [
                 {
-                  "id": "melvorD:Iron_Bar",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Steel_Shot",
-              "level": 28,
-              "productID": "expandedAreas:Steel_Shot",
-              "baseQuantity": 7,
-              "baseExperience": 42,
-              "categoryID": "melvorD:SteelGear",
-              "itemCosts": [
+                  "id": "melvorD:Bronze_Bar",
+                  "quantity": 10
+                },
                 {
-                  "id": "melvorD:Steel_Bar",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Mithril_Shot",
-              "level": 41,
-              "productID": "expandedAreas:Mithril_Shot",
-              "baseQuantity": 7,
-              "baseExperience": 62,
-              "categoryID": "melvorD:MithrilGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Mithril_Bar",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Adamant_Shot",
-              "level": 54,
-              "productID": "expandedAreas:Adamant_Shot",
-              "baseQuantity": 7,
-              "baseExperience": 81,
-              "categoryID": "melvorD:AdamantGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Adamantite_Bar",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Rune_Shot",
-              "level": 70,
-              "productID": "expandedAreas:Rune_Shot",
-              "baseQuantity": 7,
-              "baseExperience": 105,
-              "categoryID": "melvorD:RuneGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Runite_Bar",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Silver_Shot",
-              "level": 80,
-              "productID": "expandedAreas:Silver_Shot",
-              "baseQuantity": 7,
-              "baseExperience": 120,
-              "categoryID": "expandedAreas:SilverGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Silver_Bar",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Dragon_Shot",
-              "level": 90,
-              "productID": "expandedAreas:Dragon_Shot",
-              "baseQuantity": 7,
-              "baseExperience": 135,
-              "categoryID": "melvorD:DragonGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Dragonite_Bar",
+                  "id": "expandedAreas:Pyrite_Chunk",
                   "quantity": 1
                 }
               ],
@@ -58240,141 +58092,32 @@
               "level": 13,
               "productID": "expandedAreas:Bronze_Pistol_Barrel",
               "baseQuantity": 1,
-              "baseExperience": 27,
+              "baseExperience": 20,
               "categoryID": "melvorD:BronzeGear",
               "subcategoryID": "expandedAreas:FirearmComponents",
               "itemCosts": [
                 {
                   "id": "melvorD:Bronze_Bar",
                   "quantity": 2
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Iron_Pistol_Barrel",
-              "level": 22,
-              "productID": "expandedAreas:Iron_Pistol_Barrel",
-              "baseQuantity": 1,
-              "baseExperience": 54,
-              "categoryID": "melvorD:IronGear",
-              "subcategoryID": "expandedAreas:FirearmComponents",
-              "itemCosts": [
+                },
                 {
-                  "id": "melvorD:Iron_Bar",
-                  "quantity": 2
+                  "id": "expandedAreas:Pyrite_Chunk",
+                  "quantity": 1
                 }
               ],
               "currencyCosts": []
             },
             {
-              "id": "Steel_Pistol_Barrel",
-              "level": 37,
-              "productID": "expandedAreas:Steel_Pistol_Barrel",
-              "baseQuantity": 1,
-              "baseExperience": 81,
-              "categoryID": "melvorD:SteelGear",
-              "subcategoryID": "expandedAreas:FirearmComponents",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Steel_Bar",
-                  "quantity": 2
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Mithril_Pistol_Barrel",
-              "level": 52,
-              "productID": "expandedAreas:Mithril_Pistol_Barrel",
-              "baseQuantity": 1,
-              "baseExperience": 135,
-              "categoryID": "melvorD:MithrilGear",
-              "subcategoryID": "expandedAreas:FirearmComponents",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Mithril_Bar",
-                  "quantity": 2
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Adamant_Pistol_Barrel",
-              "level": 67,
-              "productID": "expandedAreas:Adamant_Pistol_Barrel",
-              "baseQuantity": 1,
-              "baseExperience": 162,
-              "categoryID": "melvorD:AdamantGear",
-              "subcategoryID": "expandedAreas:FirearmComponents",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Adamantite_Bar",
-                  "quantity": 2
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Rune_Pistol_Barrel",
-              "level": 82,
-              "productID": "expandedAreas:Rune_Pistol_Barrel",
-              "baseQuantity": 1,
-              "baseExperience": 203,
-              "categoryID": "melvorD:RuneGear",
-              "subcategoryID": "expandedAreas:FirearmComponents",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Runite_Bar",
-                  "quantity": 2
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Silver_Pistol_Barrel",
-              "level": 91,
-              "productID": "expandedAreas:Silver_Pistol_Barrel",
-              "baseQuantity": 1,
-              "baseExperience": 240,
-              "categoryID": "expandedAreas:SilverGear",
-              "subcategoryID": "expandedAreas:FirearmComponents",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Silver_Bar",
-                  "quantity": 2
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Dragon_Pistol_Barrel",
-              "level": 99,
-              "productID": "expandedAreas:Dragon_Pistol_Barrel",
-              "baseQuantity": 1,
-              "baseExperience": 270,
-              "categoryID": "melvorD:DragonGear",
-              "subcategoryID": "expandedAreas:FirearmComponents",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Dragonite_Bar",
-                  "quantity": 2
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Bronze_Arquebus_Barrel",
-              "level": 17,
-              "productID": "expandedAreas:Bronze_Arquebus_Barrel",
-              "baseQuantity": 1,
-              "baseExperience": 34,
+              "id": "Bronze_Shot",
+              "level": 5,
+              "productID": "expandedAreas:Bronze_Shot",
+              "baseQuantity": 7,
+              "baseExperience": 8,
               "categoryID": "melvorD:BronzeGear",
-              "subcategoryID": "expandedAreas:FirearmComponents",
               "itemCosts": [
                 {
                   "id": "melvorD:Bronze_Bar",
-                  "quantity": 4
+                  "quantity": 1
                 }
               ],
               "currencyCosts": []
@@ -58396,6 +58139,71 @@
               "currencyCosts": []
             },
             {
+              "id": "Iron_Cannonball",
+              "level": 6,
+              "productID": "expandedAreas:Iron_Cannonball",
+              "baseQuantity": 5,
+              "baseExperience": 50,
+              "categoryID": "melvorD:IronGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Iron_Bar",
+                  "quantity": 5
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Iron_Handcannon",
+              "level": 20,
+              "productID": "expandedAreas:Iron_Handcannon",
+              "baseQuantity": 1,
+              "baseExperience": 100,
+              "categoryID": "melvorD:IronGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Iron_Bar",
+                  "quantity": 10
+                },
+                {
+                  "id": "expandedAreas:Pyrite_Chunk",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Iron_Pistol_Barrel",
+              "level": 22,
+              "productID": "expandedAreas:Iron_Pistol_Barrel",
+              "baseQuantity": 1,
+              "baseExperience": 54,
+              "categoryID": "melvorD:IronGear",
+              "subcategoryID": "expandedAreas:FirearmComponents",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Iron_Bar",
+                  "quantity": 2
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Iron_Shot",
+              "level": 16,
+              "productID": "expandedAreas:Iron_Shot",
+              "baseQuantity": 7,
+              "baseExperience": 24,
+              "categoryID": "melvorD:IronGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Iron_Bar",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
               "id": "Steel_Arquebus_Barrel",
               "level": 41,
               "productID": "expandedAreas:Steel_Arquebus_Barrel",
@@ -58407,6 +58215,71 @@
                 {
                   "id": "melvorD:Steel_Bar",
                   "quantity": 4
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Steel_Cannonball",
+              "level": 6,
+              "productID": "expandedAreas:Steel_Cannonball",
+              "baseQuantity": 5,
+              "baseExperience": 50,
+              "categoryID": "melvorD:SteelGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Steel_Bar",
+                  "quantity": 5
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Steel_Handcannon",
+              "level": 20,
+              "productID": "expandedAreas:Steel_Handcannon",
+              "baseQuantity": 1,
+              "baseExperience": 100,
+              "categoryID": "melvorD:SteelGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Steel_Bar",
+                  "quantity": 10
+                },
+                {
+                  "id": "expandedAreas:Pyrite_Chunk",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Steel_Pistol_Barrel",
+              "level": 37,
+              "productID": "expandedAreas:Steel_Pistol_Barrel",
+              "baseQuantity": 1,
+              "baseExperience": 81,
+              "categoryID": "melvorD:SteelGear",
+              "subcategoryID": "expandedAreas:FirearmComponents",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Steel_Bar",
+                  "quantity": 2
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Steel_Shot",
+              "level": 28,
+              "productID": "expandedAreas:Steel_Shot",
+              "baseQuantity": 7,
+              "baseExperience": 42,
+              "categoryID": "melvorD:SteelGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Steel_Bar",
+                  "quantity": 1
                 }
               ],
               "currencyCosts": []
@@ -58428,6 +58301,71 @@
               "currencyCosts": []
             },
             {
+              "id": "Mithril_Cannonball",
+              "level": 6,
+              "productID": "expandedAreas:Mithril_Cannonball",
+              "baseQuantity": 5,
+              "baseExperience": 50,
+              "categoryID": "melvorD:MithrilGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Mithril_Bar",
+                  "quantity": 5
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Mithril_Handcannon",
+              "level": 20,
+              "productID": "expandedAreas:Mithril_Handcannon",
+              "baseQuantity": 1,
+              "baseExperience": 100,
+              "categoryID": "melvorD:MithrilGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Mithril_Bar",
+                  "quantity": 10
+                },
+                {
+                  "id": "expandedAreas:Pyrite_Chunk",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Mithril_Pistol_Barrel",
+              "level": 52,
+              "productID": "expandedAreas:Mithril_Pistol_Barrel",
+              "baseQuantity": 1,
+              "baseExperience": 135,
+              "categoryID": "melvorD:MithrilGear",
+              "subcategoryID": "expandedAreas:FirearmComponents",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Mithril_Bar",
+                  "quantity": 2
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Mithril_Shot",
+              "level": 41,
+              "productID": "expandedAreas:Mithril_Shot",
+              "baseQuantity": 7,
+              "baseExperience": 62,
+              "categoryID": "melvorD:MithrilGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Mithril_Bar",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
               "id": "Adamant_Arquebus_Barrel",
               "level": 71,
               "productID": "expandedAreas:Adamant_Arquebus_Barrel",
@@ -58439,6 +58377,71 @@
                 {
                   "id": "melvorD:Adamantite_Bar",
                   "quantity": 4
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Adamant_Cannonball",
+              "level": 6,
+              "productID": "expandedAreas:Adamant_Cannonball",
+              "baseQuantity": 5,
+              "baseExperience": 50,
+              "categoryID": "melvorD:AdamantGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Adamant_Bar",
+                  "quantity": 5
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Adamant_Handcannon",
+              "level": 20,
+              "productID": "expandedAreas:Adamant_Handcannon",
+              "baseQuantity": 1,
+              "baseExperience": 100,
+              "categoryID": "melvorD:AdamantGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Adamant_Bar",
+                  "quantity": 10
+                },
+                {
+                  "id": "expandedAreas:Pyrite_Chunk",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Adamant_Pistol_Barrel",
+              "level": 67,
+              "productID": "expandedAreas:Adamant_Pistol_Barrel",
+              "baseQuantity": 1,
+              "baseExperience": 162,
+              "categoryID": "melvorD:AdamantGear",
+              "subcategoryID": "expandedAreas:FirearmComponents",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Adamantite_Bar",
+                  "quantity": 2
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Adamant_Shot",
+              "level": 54,
+              "productID": "expandedAreas:Adamant_Shot",
+              "baseQuantity": 7,
+              "baseExperience": 81,
+              "categoryID": "melvorD:AdamantGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Adamantite_Bar",
+                  "quantity": 1
                 }
               ],
               "currencyCosts": []
@@ -58460,6 +58463,71 @@
               "currencyCosts": []
             },
             {
+              "id": "Rune_Cannonball",
+              "level": 6,
+              "productID": "expandedAreas:Rune_Cannonball",
+              "baseQuantity": 5,
+              "baseExperience": 50,
+              "categoryID": "melvorD:RuneGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Rune_Bar",
+                  "quantity": 5
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Rune_Handcannon",
+              "level": 20,
+              "productID": "expandedAreas:Rune_Handcannon",
+              "baseQuantity": 1,
+              "baseExperience": 100,
+              "categoryID": "melvorD:RuneGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Rune_Bar",
+                  "quantity": 10
+                },
+                {
+                  "id": "expandedAreas:Pyrite_Chunk",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Rune_Pistol_Barrel",
+              "level": 82,
+              "productID": "expandedAreas:Rune_Pistol_Barrel",
+              "baseQuantity": 1,
+              "baseExperience": 203,
+              "categoryID": "melvorD:RuneGear",
+              "subcategoryID": "expandedAreas:FirearmComponents",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Runite_Bar",
+                  "quantity": 2
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Rune_Shot",
+              "level": 70,
+              "productID": "expandedAreas:Rune_Shot",
+              "baseQuantity": 7,
+              "baseExperience": 105,
+              "categoryID": "melvorD:RuneGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Runite_Bar",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
               "id": "Silver_Arquebus_Barrel",
               "level": 95,
               "productID": "expandedAreas:Silver_Arquebus_Barrel",
@@ -58476,6 +58544,71 @@
               "currencyCosts": []
             },
             {
+              "id": "Silver_Cannonball",
+              "level": 6,
+              "productID": "expandedAreas:Silver_Cannonball",
+              "baseQuantity": 5,
+              "baseExperience": 50,
+              "categoryID": "melvorD:SilverGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Silver_Bar",
+                  "quantity": 5
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Handcannon",
+              "level": 20,
+              "productID": "expandedAreas:Silver_Handcannon",
+              "baseQuantity": 1,
+              "baseExperience": 100,
+              "categoryID": "melvorD:SilverGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Silver_Bar",
+                  "quantity": 10
+                },
+                {
+                  "id": "expandedAreas:Pyrite_Chunk",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Pistol_Barrel",
+              "level": 91,
+              "productID": "expandedAreas:Silver_Pistol_Barrel",
+              "baseQuantity": 1,
+              "baseExperience": 240,
+              "categoryID": "expandedAreas:SilverGear",
+              "subcategoryID": "expandedAreas:FirearmComponents",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Silver_Bar",
+                  "quantity": 2
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Shot",
+              "level": 80,
+              "productID": "expandedAreas:Silver_Shot",
+              "baseQuantity": 7,
+              "baseExperience": 120,
+              "categoryID": "expandedAreas:SilverGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Silver_Bar",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
               "id": "Dragon_Arquebus_Barrel",
               "level": 99,
               "productID": "expandedAreas:Dragon_Arquebus_Barrel",
@@ -58487,6 +58620,71 @@
                 {
                   "id": "melvorD:Dragonite_Bar",
                   "quantity": 4
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Dragon_Cannonball",
+              "level": 6,
+              "productID": "expandedAreas:Dragon_Cannonball",
+              "baseQuantity": 5,
+              "baseExperience": 50,
+              "categoryID": "melvorD:DragonGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Dragon_Bar",
+                  "quantity": 5
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Dragon_Handcannon",
+              "level": 20,
+              "productID": "expandedAreas:Dragon_Handcannon",
+              "baseQuantity": 1,
+              "baseExperience": 100,
+              "categoryID": "melvorD:DragonGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Dragon_Bar",
+                  "quantity": 10
+                },
+                {
+                  "id": "expandedAreas:Pyrite_Chunk",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Dragon_Pistol_Barrel",
+              "level": 97,
+              "productID": "expandedAreas:Dragon_Pistol_Barrel",
+              "baseQuantity": 1,
+              "baseExperience": 270,
+              "categoryID": "melvorD:DragonGear",
+              "subcategoryID": "expandedAreas:FirearmComponents",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Dragonite_Bar",
+                  "quantity": 2
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Dragon_Shot",
+              "level": 90,
+              "productID": "expandedAreas:Dragon_Shot",
+              "baseQuantity": 7,
+              "baseExperience": 135,
+              "categoryID": "melvorD:DragonGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Dragonite_Bar",
+                  "quantity": 1
                 }
               ],
               "currencyCosts": []
@@ -58520,217 +58718,7 @@
               ],
               "currencyCosts": []
             },
-            {
-              "id": "Black_Dagger",
-              "level": 33,
-              "productID": "melvorD:Black_Dagger",
-              "baseQuantity": 1,
-              "baseExperience": 40,
-              "categoryID": "expandedAreas:BlackGear",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Sterkite_Bar",
-                  "quantity": 1
-                }
-              ]
-            },
-            {
-              "id": "Black_Throwing_Knife",
-              "level": 34,
-              "productID": "expandedAreas:Black_Throwing_Knife",
-              "baseQuantity": 4,
-              "baseExperience": 40,
-              "categoryID": "expandedAreas:BlackGear",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Sterkite_Bar",
-                  "quantity": 1
-                }
-              ]
-            },
-            {
-              "id": "Black_Sword",
-              "level": 35,
-              "productID": "melvorD:Black_Sword",
-              "baseQuantity": 1,
-              "baseExperience": 40,
-              "categoryID": "expandedAreas:BlackGear",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Sterkite_Bar",
-                  "quantity": 1
-                }
-              ]
-            },
-            {
-              "id": "Black_Arrowtips",
-              "level": 36,
-              "productID": "expandedAreas:Black_Arrowtips",
-              "baseQuantity": 15,
-              "baseExperience": 40,
-              "categoryID": "expandedAreas:BlackGear",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Sterkite_Bar",
-                  "quantity": 1
-                }
-              ]
-            },
-            {
-              "id": "Black_Gloves",
-              "level": 37,
-              "productID": "expandedAreas:Black_Gloves",
-              "baseQuantity": 1,
-              "baseExperience": 80,
-              "categoryID": "expandedAreas:BlackGear",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Sterkite_Bar",
-                  "quantity": 2
-                }
-              ]
-            },
-            {
-              "id": "Black_Scimitar",
-              "level": 38,
-              "productID": "melvorD:Black_Scimitar",
-              "baseQuantity": 1,
-              "baseExperience": 80,
-              "categoryID": "expandedAreas:BlackGear",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Sterkite_Bar",
-                  "quantity": 2
-                }
-              ]
-            },
-            {
-              "id": "Black_Helmet",
-              "level": 39,
-              "productID": "melvorD:Black_Helmet",
-              "baseQuantity": 1,
-              "baseExperience": 80,
-              "categoryID": "expandedAreas:BlackGear",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Sterkite_Bar",
-                  "quantity": 2
-                }
-              ]
-            },
-            {
-              "id": "Black_Battleaxe",
-              "level": 40,
-              "productID": "melvorD:Black_Battleaxe",
-              "baseQuantity": 1,
-              "baseExperience": 120,
-              "categoryID": "expandedAreas:BlackGear",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Sterkite_Bar",
-                  "quantity": 3
-                }
-              ]
-            },
-            {
-              "id": "Black_Javelin_Heads",
-              "level": 41,
-              "productID": "expandedAreas:Black_Javelin_Heads",
-              "baseQuantity": 5,
-              "baseExperience": 80,
-              "categoryID": "expandedAreas:BlackGear",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Sterkite_Bar",
-                  "quantity": 2
-                }
-              ]
-            },
-            {
-              "id": "Black_Boots",
-              "level": 42,
-              "productID": "melvorD:Black_Boots",
-              "baseQuantity": 1,
-              "baseExperience": 80,
-              "categoryID": "expandedAreas:BlackGear",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Sterkite_Bar",
-                  "quantity": 2
-                }
-              ]
-            },
-            {
-              "id": "Black_Shield",
-              "level": 43,
-              "productID": "melvorD:Black_Shield",
-              "baseQuantity": 1,
-              "baseExperience": 120,
-              "categoryID": "expandedAreas:BlackGear",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Sterkite_Bar",
-                  "quantity": 3
-                }
-              ]
-            },
-            {
-              "id": "Black_2H_Sword",
-              "level": 44,
-              "productID": "melvorD:Black_2H_Sword",
-              "baseQuantity": 1,
-              "baseExperience": 120,
-              "categoryID": "expandedAreas:BlackGear",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Sterkite_Bar",
-                  "quantity": 3
-                }
-              ]
-            },
-            {
-              "id": "Black_Crossbow_Head",
-              "level": 45,
-              "productID": "expandedAreas:Black_Crossbow_Head",
-              "baseQuantity": 1,
-              "baseExperience": 120,
-              "categoryID": "expandedAreas:BlackGear",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Sterkite_Bar",
-                  "quantity": 3
-                }
-              ]
-            },
-            {
-              "id": "Black_Platelegs",
-              "level": 46,
-              "productID": "melvorD:Black_Platelegs",
-              "baseQuantity": 1,
-              "baseExperience": 120,
-              "categoryID": "expandedAreas:BlackGear",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Sterkite_Bar",
-                  "quantity": 3
-                }
-              ]
-            },
-            {
-              "id": "Black_Platebody",
-              "level": 47,
-              "productID": "melvorD:Black_Platebody",
-              "baseQuantity": 1,
-              "baseExperience": 200,
-              "categoryID": "expandedAreas:BlackGear",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Sterkite_Bar",
-                  "quantity": 5
-                }
-              ]
-            },
-            
+           
             {
               "id": "Bronze_Thrownaxe_Head",
               "productID": "expandedAreas:Bronze_Thrownaxe_Head",
@@ -58773,20 +58761,7 @@
                 }
               ]
             },
-            {
-              "id": "Black_Thrownaxe_Head",
-              "productID": "expandedAreas:Black_Thrownaxe_Head",
-              "categoryID": "expandedAreas:BlackGear",
-              "baseExperience": 40,
-              "baseQuantity": 3,
-              "level": 36,
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Sterkite_Bar",
-                  "quantity": 1
-                }
-              ]
-            },
+
             {
               "id": "Mithril_Thrownaxe_Head",
               "productID": "expandedAreas:Mithril_Thrownaxe_Head",
