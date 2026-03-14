@@ -1,233 +1,30 @@
-# EQUIPMENT
-# Slayer Equipment
-## Armour
-| Name                            | Bonuses | Modifiers                                                                                                                                                                                                                       | Equip Req. | Synergies | Upgradeable |
-| ------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------- | ----------- |
-| Slayer Summoner Mask (Basic)    | 1 DR    | Max Hit: -10%, +10% Chance to Preserve Summoning Charges, -10% Summoning Attack Interval, +10% Summoning Max Hit, +2.5% Slayer XP, +2.5% Slayer Area Effect Negation, +1% Damage Dealt to Slayer Tasks, +1% Slayer Coins Gained | None       | None      | Yes         |
-| Slayer Summoner Gown (Basic)    | 1 DR    | Max Hit: -10%, +10% Chance to Preserve Summoning Charges, -10% Summoning Attack Interval, +10% Summoning Max Hit, +2.5% Slayer XP, +2.5% Slayer Area Effect Negation, +1% Damage Dealt to Slayer Tasks, +1% Slayer Coins Gained | None       | None      | Yes         |
-| Slayer Summoner Kilt (Basic)    | 1 DR    | Max Hit: -10%, +10% Chance to Preserve Summoning Charges, -10% Summoning Attack Interval, +10% Summoning Max Hit, +2.5% Slayer XP, +2.5% Slayer Area Effect Negation, +1% Damage Dealt to Slayer Tasks, +1% Slayer Coins Gained | None       | None      | Yes         |
-| Slayer Summoner Sandals (Basic) | 1 DR    | Max Hit: -10%, +10% Chance to Preserve Summoning Charges, -10% Summoning Attack Interval, +10% Summoning Max Hit, +2.5% Slayer XP, +2.5% Slayer Area Effect Negation, +1% Damage Dealt to Slayer Tasks, +1% Slayer Coins Gained | None       | None      | Yes         |
-
-# GEMS
-# Standard Gems
-| Gem           | Chance (Mining) | Acquisition | Uses | Price |
-| ------------- | --------------- | ----------- | ---- | ----- |
-| Amber         | 10.42%          | TBD         | TBD  | 50    |
-| Garnet        | 10.42%          | TBD         | TBD  | 75    |
-| Malachite     | 10.42%          | TBD         | TBD  | 100   |
-| Turquoise     | 10.42%          | TBD         | TBD  | 125   |
-| Amethyst      | 5.21%           | TBD         | TBD  | 250   |
-| Carnelian     | 5.21%           | TBD         | TBD  | 325   |
-| Lapis         | 5.21%           | TBD         | TBD  | 400   |
-| Peridot       | 5.21%           | TBD         | TBD  | 475   |
-| Spinel        | 5.21%           | TBD         | TBD  | 550   |
-| Sunstone      | 5.21%           | TBD         | TBD  | 625   |
-| Opal          | 1.82%           | TBD         | TBD  | 1200  |
-| Coral         | 1.82%           | TBD         | TBD  | 1500  |
-| Chrysocola    | 1.04%           | TBD         | TBD  | 3500  |
-| Quartz        | 1.04%           | TBD         | TBD  | 4500  |
-| Dragonstone   | 0.52%           | TBD         | TBD  | 7000  |
-| Moonstone     | 0.26%           | TBD         | TBD  | 8500  |
-| Arkoreefstone | 0.26%           | TBD         | TBD  | 9250  |
-| Black Diamond | 0.26%           | TBD         | TBD  | 10000 |
-
-# SHOP PURCHASES
-# General Upgrades
-## Miscellaneous
-| Upgrade        | Description                                                 | Cost (GP)   | Requirements |
-| -------------- | ----------------------------------------------------------- | ----------- | ------------ |
-| Multi-Tree II  | Unlock the ability to cut 3 different trees in Woodcutting. | 25,000,000  | None         |
-| Multi-Tree III | Unlock the ability to cut 4 different trees in Woodcutting. | 150,000,000 | None         |
-
-## Auto Eat
-| Tier | Minimum Threshold | Efficiency | Max Healing | Cost (GP)   |
-| ---- | ----------------- | ---------- | ----------- | ----------- |
-| IV   | 45%               | 110%       | 90%         | 100,000,000 |
-| V    | 47.5%             | 115%       | 95%         | 500,000,000 |
-
-# Skill Upgrades
-## Anvils — Smithing
-| Name          | Level (Smithing) | Cost (GP)  | Smithing Interval (This) | Smithing Interval (Total) | Smithing Double Items Chance (This) | Smithing Double Items Chance (Total) |
-| ------------- | ---------------- | ---------- | ------------------------ | ------------------------- | ----------------------------------- | ------------------------------------ |
-| Iron Anvil    | 1                | 1,250      | -1%                      | -1%                       | +1%                                 | +1%                                  |
-| Steel Anvil   | 10               | 10,000     | -1%                      | -2%                       | +1%                                 | +2%                                  |
-| Black Anvil   | 20               | 50,000     | -1%                      | -3%                       | +1%                                 | +3%                                  |
-| Mithril Anvil | 35               | 250,000    | -1%                      | -4%                       | +1%                                 | +4%                                  |
-| Adamant Anvil | 50               | 1,000,000  | -1%                      | -5%                       | +1%                                 | +5%                                  |
-| Rune Anvil    | 60               | 5,000,000  | -1%                      | -6%                       | +1%                                 | +6%                                  |
-| Dragon Anvil  | 80               | 25,000,000 | -1%                      | -7%                       | +1%                                 | +7%                                  |
-
-## Arcanolinths — Magic
-| Name                     | Level (Magic) | Cost (GP)   | Alt. Magic Double Items Chance (This) | Alt. Magic Double Items Chance (Total) | Alt. Magic Preserve Runes Chance (This) | Alt. Magic Preserve Runes Chance (Total) |
-| ------------------------ | ------------- | ----------- | ------------------------------------- | -------------------------------------- | --------------------------------------- | ---------------------------------------- |
-| Tauric Arcanolinth       | 11            | 12          | +1%                                   | +1%                                    | +5%                                     | +5%                                      |
-| Spheric Arcanolinth      | 22            | 123         | +1%                                   | +2%                                    | +5%                                     | +10%                                     |
-| Tetrahedric Arcanolinth  | 33            | 1,234       | +1%                                   | +3%                                    | +5%                                     | +15%                                     |
-| Cubic Arcanolinth        | 44            | 12,345      | +1%                                   | +4%                                    | +5%                                     | +20%                                     |
-| Octahedric Arcanolinth   | 55            | 123,456     | +1%                                   | +5%                                    | +5%                                     | +25%                                     |
-| Dodecahedric Arcanolinth | 66            | 1,234,567   | +1%                                   | +6%                                    | +5%                                     | +30%                                     |
-| Icosahedric Arcanolinth  | 77            | 12,345,678  | +1%                                   | +7%                                    | +5%                                     | +35%                                     |
-| Tesseractic Arcanolinth  | 88            | 123,456,789 | +1%                                   | +8%                                    | +5%                                     | +40%                                     |
-
-
-## Bunsen Burners — Herblore
-| Name                  | Level (Herblore) | Cost (GP) | Herblore Interval (This) | Herblore Interval (Total) | Potion Charges (This) | Potion Charges (Total) |
-| --------------------- | ---------------- | --------- | ------------------------ | ------------------------- | --------------------- | ---------------------- |
-| Iron Bunsen Burner    | 10               | 60,220    | -1%                      | -1%                       | +10%                  | +10%                   |
-| Steel Bunsen Burner   | 20               | 1,204,400 | -1%                      | -2%                       | +10%                  | +20%                   |
-| Black Bunsen Burner   | 35               | 2,107,700 | -1%                      | -3%                       | +10%                  | +30%                   |
-| Mithril Bunsen Burner | 55               | 3,312,100 | -1%                      | -4%                       | +10%                  | +40%                   |
-| Adamant Bunsen Burner | 65               | 3,914,300 | -1%                      | -5%                       | +10%                  | +50%                   |
-| Rune Bunsen Burner    | 75               | 4,516,500 | -1%                      | -6%                       | +10%                  | +60%                   |
-| Dragon Bunsen Burner  | 90               | 5,419,800 | -1%                      | -7%                       | +10%                  | +70%                   |
-
-## Essence Resonators — Runecrafting
-| Name                      | Level (Runecrafting) | Cost (GP) | Global Rune Preservation (This) | Global Rune Preservation (Total) | Runecrafting Preservation Chance (This) | Runecrafting Preservation Chance (Total) |
-| ------------------------- | -------------------- | --------- | ------------------------------- | -------------------------------- | --------------------------------------- | ---------------------------------------- |
-| Iron Essence Resonator    | —                    | 2,002     | +1%                             | +1%                              | +5%                                     | +5%                                      |
-| Steel Essence Resonator   | 25                   | 35,453    | +1%                             | +2%                              | +5%                                     | +10%                                     |
-| Black Essence Resonator   | 30                   | 80,008    | +1%                             | +3%                              | +5%                                     | +15%                                     |
-| Mithril Essence Resonator | 45                   | 155,551   | +1%                             | +4%                              | +5%                                     | +20%                                     |
-| Adamant Essence Resonator | 55                   | 300,003   | +1%                             | +5%                              | +5%                                     | +25%                                     |
-| Rune Essence Resonator    | 70                   | 600,006   | +1%                             | +6%                              | +5%                                     | +30%                                     |
-| Dragon Essence Resonator  | 85                   | 1,200,002 | +1%                             | +7%                              | +5%                                     | +35%                                     |
-
-## Firestarters — Firemaking
-| Name                | Level (Firemaking) | Cost (GP)  | Firemaking Interval (This) | Firemaking Interval (Total) |
-| ------------------- | ------------------ | ---------- | -------------------------- | --------------------------- |
-| Iron Firestarter    | —                  | 30,000     | −5%                        | −5%                         |
-| Steel Firestarter   | 25                 | 75,000     | −5%                        | −10%                        |
-| Black Firestarter   | 30                 | 150,000    | −5%                        | −15%                        |
-| Mithril Firestarter | 45                 | 400,000    | −5%                        | −20%                        |
-| Adamant Firestarter | 55                 | 1,000,000  | −5%                        | −25%                        |
-| Rune Firestarter    | 70                 | 3,000,000  | −5%                        | −30%                        |
-| Dragon Firestarter  | 85                 | 10,000,000 | −5%                        | −35%                        |
-
-## Hoes — Farming
-| Name        | Level (Farming) | Cost (GP) | Flat Crop Yield (This) | Flat Crop Yield (Total) |
-| ----------- | --------------- | --------- | ---------------------- | ----------------------- |
-| Iron Hoe    | —               | 10,365    | +10%                   | +10%                    |
-| Steel Hoe   | 25              | 45,000    | +10%                   | +20%                    |
-| Black Hoe   | 30              | 120,000   | +10%                   | +30%                    |
-| Mithril Hoe | 45              | 450,000   | +10%                   | +40%                    |
-| Adamant Hoe | 55              | 1,200,000 | +10%                   | +50%                    |
-| Rune Hoe    | 70              | 3,200,000 | +10%                   | +60%                    |
-| Dragon Hoe  | 85              | 8,473,000 | +10%                   | +70%                    |
-
-## Marks — Summoning
-| Name               | Level (Summoning) | Cost (GP)  | Summoning Tablet Cost (This) | Summoning Tablet Cost (Total) | Summoning Interval (This) | Summoning Interval (Total) |
-| ------------------ | ----------------- | ---------- | ---------------------------- | ----------------------------- | ------------------------- | -------------------------- |
-| Mark of the Stag   | 40                | 1,000,000  | −5%                          | −5%                           | −5%                       | −5%                        |
-| Mark of the Beetle | 50                | 5,000,000  | −5%                          | −10%                          | −5%                       | −10%                       |
-| Mark of the Swan   | 60                | 10,000,000 | −5%                          | −15%                          | −5%                       | −15%                       |
-| Mark of the Tiger  | 70                | 20,000,000 | −5%                          | −20%                          | −5%                       | −20%                       |
-| Mark of the Bear   | 80                | 35,000,000 | −5%                          | −25%                          | −5%                       | −25%                       |
-| Mark of the Bison  | 90                | 50,000,000 | −5%                          | −30%                          | −5%                       | −30%                       |
-
-## Needles — Crafting
-| Name           | Level (Crafting) | Cost (GP) | Crafting Preservation Chance (This) | Crafting Preservation Chance (Total) | Chance to Gain 30% of Crafted Item's Base Value as GP (This) | Chance to Gain 30% of Crafted Item's Base Value as GP  (Total) |
-| -------------- | ---------------- | --------- | ----------------------------------- | ------------------------------------ | ------------------------------------------------------------ | -------------------------------------------------------------- |
-| Iron Needle    | —                | 10,000    | +2%                                 | +2%                                  | +2%                                                          | +2%                                                            |
-| Steel Needle   | 40               | 50,000    | +2%                                 | +4%                                  | +2%                                                          | +4%                                                            |
-| Black Needle   | 50               | 120,000   | +2%                                 | +6%                                  | +2%                                                          | +6%                                                            |
-| Mithril Needle | 60               | 250,000   | +2%                                 | +8%                                  | +2%                                                          | +8%                                                            |
-| Adamant Needle | 70               | 500,000   | +2%                                 | +10%                                 | +2%                                                          | +10%                                                           |
-| Rune Needle    | 85               | 1,500,000 | +2%                                 | +12%                                 | +2%                                                          | +12%                                                           |
-| Dragon Needle  | 95               | 3,500,000 | +2%                                 | +14%                                 | +2%                                                          | +14%                                                           |
-
-## Telescopes — Astrology
-| Name                         | Level (Astrology) | Cost (GP) | Stardust and Golden Stardust Chance (This) | Stardust and Golden Stardust Chance (Total) | Meteorite Location Chance (This) | Meteorite Location Chance (Total) |
-| ---------------------------- | ----------------- | --------- | ------------------------------------------ | ------------------------------------------- | -------------------------------- | --------------------------------- |
-| Iron Topaz Telescope         | —                 | 100,000   | +2%                                        | +2%                                         | +1%                              | +1%                               |
-| Steel Garnet Telescope       | 20                | 250,000   | +2%                                        | +4%                                         | +1%                              | +2%                               |
-| Black Turquoise Telescope    | 30                | 500,000   | +2%                                        | +6%                                         | +1%                              | +3%                               |
-| Mithril Amber Telescope      | 45                | 1,000,000 | +2%                                        | +8%                                         | +1%                              | +4%                               |
-| Adamant Amethyst Telescope   | 55                | 2,000,000 | +2%                                        | +10%                                        | +1%                              | +5%                               |
-| Rune Beryl Telescope         | 70                | 3,500,000 | +2%                                        | +12%                                        | +1%                              | +6%                               |
-| Dragon Dragonstone Telescope | 80                | 5,000,000 | +2%                                        | +14%                                        | +1%                              | +7%                               |
-
-## Thieving Tools — Thieving
-| Name                   | Level (Thieving) | Cost  (GP)  | Thieving Interval (This) | Thieving Interval (Total) |
-| ---------------------- | ---------------- | ----------- | ------------------------ | ------------------------- |
-| Iron Thieving Tools    | —                | 2,500,000   | −5%                      | −5%                       |
-| Steel Thieving Tools   | 15               | 8,000,000   | −5%                      | −10%                      |
-| Black Thieving Tools   | 30               | 20,000,000  | −5%                      | −15%                      |
-| Mithril Thieving Tools | 50               | 40,000,000  | −5%                      | −20%                      |
-| Adamant Thieving Tools | 65               | 70,000,000  | −5%                      | −25%                      |
-| Rune Thieving Tools    | 80               | 110,000,000 | −5%                      | −30%                      |
-| Dragon Thieving Tools  | 95               | 150,000,000 | −5%                      | −35%                      |
-
-## Trainers — Agility
-| Name                  | Level (Agility) |   Cost (GP) | Agility Interval (This) | Agility Interval (Total) |
-| --------------------- | --------------: | ----------: | ----------------------: | -----------------------: |
-| Leather Trainers      |              20 |     750,000 |                     -5% |                      -5% |
-| Hardleather Trainers  |              35 |   2,500,000 |                     -5% |                     -10% |
-| Green D-hide Trainers |              50 |   7,500,000 |                     -5% |                     -15% |
-| Blue D-hide Trainers  |              65 |  20,000,000 |                     -5% |                     -20% |
-| Red D-hide Trainers   |              75 |  40,000,000 |                     -5% |                     -25% |
-| Black D-hide Trainers |              85 |  70,000,000 |                     -5% |                     -30% |
-| Elite Trainers        |              95 | 100,000,000 |                     -5% |                     -35% |
-
-
-## Whittling Tools — Fletching
-| Name                    | Level (Fletching) | Cost (GP) | Flat Output (This) | Flat Output (Total) | Preservation Chance (This) | Preservation Chance (Total) |
-| ----------------------- | ----------------- | --------- | ------------------ | ------------------- | -------------------------- | --------------------------- |
-| Iron Fletching Tools    | 30                | 500,000   | +1                 | +1                  | +1%                        | +1%                         |
-| Steel Fletching Tools   | 40                | 1,000,000 | —                  | +1                  | +1%                        | +2%                         |
-| Black Fletching Tools   | 50                | 1,500,000 | +1                 | +2                  | +1%                        | +3%                         |
-| Mithril Fletching Tools | 60                | 2,500,000 | —                  | +2                  | +1%                        | +4%                         |
-| Adamant Fletching Tools | 70                | 3,500,000 | +1                 | +3                  | +1%                        | +5%                         |
-| Rune Fletching Tools    | 85                | 5,000,000 | —                  | +3                  | +1%                        | +6%                         |
-| Dragon Fletching Tools  | 95                | 7,000,000 | +1                 | +4                  | +1%                        | +7%                         |
-
-# Slayer
-## Summoner Slayer Armour
-| Name                            | Cost (SC) | Unlock Requirement | Purchase Requirement             |
-| ------------------------------- | --------- | ------------------ | -------------------------------- |
-| Slayer Summoner Mask (Basic)    | 10,000    | None               | 15 Normal Slayer Tasks Completed |
-| Slayer Summoner Gown (Basic)    | 10,000    | None               | 15 Normal Slayer Tasks Completed |
-| Slayer Summoner Kilt (Basic)    | 10,000    | None               | 15 Normal Slayer Tasks Completed |
-| Slayer Summoner Sandals (Basic) | 10,000    | None               | 15 Normal Slayer Tasks Completed |
-# Weapons
-## Magic Weapons
-### Staves
-| Name               | Bonuses | Modifiers                                                                                                                                                           | Equip Req.   | Synergies                                                                          | Upgradeable |
-| ------------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ---------------------------------------------------------------------------------- | ----------- |
-| Spiritcaller Staff | None    | Your attacks deal no damage, -10% Summoning Attack Interval, +100% Summoning Max Hit. +10% chance on Summon Attack to apply a random Elemental Effect to the Enemy. | 40 Summoning | Book of Occults: +10% chance on Summon Attack to apply a random Curse to the Enemy | No          |
-
-## Melee Weapons
-| Name         | Two Handed | Attack Speed | Stab Atk | Slash Atk | Block Atk | Melee Str | Ranged Str | Magic Str | Melee Def | Ranged Def | Magic Def | Resistance | Modifiers                                                                                                    | Effects | Special Attacks                   | Equip Req |
-| ------------ | ---------- | ------------ | -------- | --------- | --------- | --------- | ---------- | --------- | --------- | ---------- | --------- | ---------- | ------------------------------------------------------------------------------------------------------------ | ------- | --------------------------------- | --------- |
-| Bronze Dirk  | No         | —            | 6        | 4         | 2         | 2         | 0          | 0         | 6         | 0          | 0         | —          | (MELEE, Normal) -0.01s Attack Interval, -5% Normal DR, +3 Stab/Slash/Block                                   | —       | Disrupting Stab, Crippling Strike | —         |
-| Iron Dirk    | No         | —            | 10       | 8         | 6         | 4         | 0          | 0         | 10        | 0          | 0         | —          | (MELEE, Normal) -0.02s Attack Interval, -5% Normal DR, +3 Stab/Slash/Block                                   | —       | Disrupting Stab, Crippling Strike | —         |
-| Steel Dirk   | No         | —            | 14       | 12        | 10        | 6         | 0          | 0         | 14        | 0          | 0         | —          | (MELEE, Normal) -0.03s Attack Interval, -5% Normal DR, +3 Stab/Slash/Block                                   | —       | Disrupting Stab, Crippling Strike | 5 Attack  |
-| Black Dirk   | No         | —            | 18       | 16        | 14        | 8         | 0          | 0         | 18        | 0          | 0         | —          | (MELEE, Normal) -0.04s Attack Interval, -5% Normal DR, +3 Stab/Slash/Block                                   | —       | Disrupting Stab, Crippling Strike | 10 Attack |
-| Mithril Dirk | No         | —            | 20       | 18        | 16        | 10        | 0          | 0         | 20        | 0          | 0         | —          | (MELEE, Normal) -0.05s Attack Interval, -5% Normal DR, +3 Stab/Slash/Block                                   | —       | Disrupting Stab, Crippling Strike | 20 Attack |
-| Adamant Dirk | No         | —            | 26       | 24        | 22        | 12        | 0          | 0         | 26        | 0          | 0         | —          | (MELEE, Normal) -0.06s Attack Interval, -5% Normal DR, +3 Stab/Slash/Block                                   | —       | Disrupting Stab, Crippling Strike | 30 Attack |
-| Rune Dirk    | No         | —            | 36       | 34        | 32        | 14        | 0          | 0         | 36        | 0          | 0         | —          | (MELEE, Normal) -0.07s Attack Interval, -5% Normal DR, +3 Stab/Slash/Block                                   | —       | Disrupting Stab, Crippling Strike | 40 Attack |
-| Silver Dirk  | No         | —            | 42       | 40        | 38        | 16        | 0          | 0         | 42        | 0          | 0         | —          | (MELEE, Normal) -0.08s Attack Interval, -5% Normal DR, +3 Stab/Slash/Block; +5% Reflect vs Silver-Vulnerable | —       | Disrupting Stab, Crippling Strike | 50 Attack |
-| Dragon Dirk  | No         | —            | 50       | 48        | 46        | 18        | 0          | 0         | 50        | 0          | 0         | —          | (MELEE, Normal) -0.09s Attack Interval, -5% Normal DR, +3 Stab/Slash/Block                                   | —       | Disrupting Stab, Crippling Strike | 60 Attack |
-
-# SPECIAL ATTACKS
-# Weapon Special Attacks
-## 2H Swords
-| Name          | Description                                                                                                                    | Default Chance | Damage                                          | Pre-Hit Effects                  | On-Hit Effects        | Can't Miss? | Can Normal Attack? | Attack Count | Attack Interval | Lifesteal |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------ | -------------- | ----------------------------------------------- | -------------------------------- | --------------------- | ----------- | ------------------ | ------------ | --------------- | --------- |
-| Wide Slash    | Gain +30% Evasion for 1 turn. Then, attack in an arc (2 attacks) for 120% each.                                                | 10%            | 120% Normal                                     | +30% Evasion (Self, 1 turn)      | --                    | No          | No                 | 2            | 50ms            | 0%        |
-| Whirlwind     | Attack 8 times for 35% each.                                                                                                   | 10%            | 35% Normal                                      | --                               | --                    | No          | No                 | 8            | 100ms           | 0%        |
-| True Strike   | Guaranteed hit for 100% + 25-50% of the Enemy's Damage Resistance.                                                             | 10%            | 100% Normal + 25-50% Damage Resistance (Target) | --                               | --                    | Yes         | Yes                | 1            | 150ms           | 0%        |
-| Counterattack | Block all incoming attacks for 1 turn. Then, after 3.6s, perform a counterattack for 100%, and inflict a 20% Slow for 2 turns. | 10%            | 100% Normal                                     | Block All Attacks (Self, 1 turn) | Slow 20% (2 turns)    | No          | Yes                | 2            | 3600ms          | 0%        |
-| Pommel Bash   | Attack for 140%, inflicting Daze on the Enemy for 2 turns on hit.                                                              | 10%            | 140% Normal                                     | --                               | Daze (Enemy, 2 turns) | No          | Yes                | 1            | 200ms           | 0%        |
-
-## Daggers
-| Name            | Description                                                                                                  | Default Chance | Damage                                     | Pre-Hit Effects | On-Hit Effects                                  | Can't Miss? | Can Normal Attack? | Attack Count | Attack Interval | Lifesteal |
-| --------------- | ------------------------------------------------------------------------------------------------------------ | -------------- | ------------------------------------------ | --------------- | ----------------------------------------------- | ----------- | ------------------ | ------------ | --------------- | --------- |
-| Wild Strike     | Attack twice for 60%. On hit, inflict a 100% Bleed on the Enemy, then gain -10% Attack Interval for 2 turns. | 10%            | 60% Normal                                 | --              | Bleed 100, -10% Attack Interval (Self, 2 turns) | No          | Yes                | 1            | 50ms            | 0%        |
-| Heartseeker     | Attack for 80% + 7.5-10.5% of Enemy's current HP.                                                            | 10%            | 80% Normal + 7.5-10.5% Current HP (Target) | --              | --                                              | No          | Yes                | 1            | 100ms           | 0%        |
-| Deadly Delivery | Attack for 110%. Inflict 2 stacks of Vulnerability on hit.                                                   | 10%            | 70% Normal                                 | --              | Vulnerability x5                                | No          | Yes                | 1            | 150ms           | 0%        |  |  |  |  |  |  |  |  |
-
-## Dirks
-| Name             | Description                                                       | Default Chance | Damage     | Pre-Hit Effects | On-Hit Effects                                | Can't Miss? | Can Normal Attack? | Attack Count | Attack Interval | Lifesteal |
-| ---------------- | ----------------------------------------------------------------- | -------------- | ---------- | --------------- | --------------------------------------------- | ----------- | ------------------ | ------------ | --------------- | --------- |
-| Crippling Strike | Attack for 70%. Inflict a 30% Slow for 1 turn and a 100% Bleed.   | 10%            | 70% Normal | --              | Slow 30% (1 turn), Bleed 100                  | No          | Yes                | 1            | 200ms           | 0%        |
-| Disrupting Stab  | Attack for 45%. Removes Enemy buffs. Enemy is Nulled for 2 turns. | 10%            | 45% Normal | --              | Remove Buffs (Enemy), Nulled (Enemy, 2 turns) | No          | Yes                | 1            | 250ms           | 0%        |
+# Table of Monsters
+| Name                 | Attack Type | Stats (Atk / Str / Def / Rng / Mag / HP) | Attack Speed (s) | Attacks                                                                                                                                                                                                                                                        | Passives / Effects                                                                                                               | Resistance(s) | Bones                  | Location            |
+| -------------------- | ----------- | ---------------------------------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ------------- | ---------------------- | ------------------- |
+| Adventurer (Mage)    | magic       | 50 / 50 / 50 / 1 / 90 / 50               | 3.2              | Elemental Impact Burn<br>Magical Missiles<br>Sleepytime<br>Arcane Barrier                                                                                                                                                                                      | —                                                                                                                                | —             | 1x Bones               | The Dungeon         |
+| Adventurer (Druid)   | magic       | 50 / 50 / 70 / 1 / 70 / 70               | 3.0              | Pounce Tiger Form<br>Beak Raven Form                                                                                                                                                                                                                           | —                                                                                                                                | —             | 1x Bones               | The Dungeon         |
+| Adventurer (Monk)    | melee       | 70 / 70 / 70 / 1 / 1 / 70                | 1.6              | —                                                                                                                                                                                                                                                              | Stunning Strikes                                                                                                                 | —             | 1x Bones               | The Dungeon         |
+| Adventurer (Knight)  | melee       | 70 / 70 / 70 / 1 / 1 / 70                | 2.6              | —                                                                                                                                                                                                                                                              | —                                                                                                                                | 4%            | 1x Bones               | The Dungeon         |
+| Escape the Dungeon   | random      | 1 / 1 / 150 / 1 / 1 / 225                | 2.5              | —                                                                                                                                                                                                                                                              | The Roof The Roof The Roof Is On Fire<br>Monsters Monsters Everywhere<br>This Place Is Like Cursed Man<br>Who Waxed These Floors | 95%           | —                      | The Dungeon         |
+| Golbin Assassin      | melee       | 40 / 20 / 1 / 1 / 1 / 30                 | 2.0              | —                                                                                                                                                                                                                                                              | Assassin                                                                                                                         | —             | 1x Bones               | The Dungeon         |
+| Golbin Berserker     | melee       | 20 / 40 / 1 / 1 / 1 / 30                 | 3.0              | Dual Attack                                                                                                                                                                                                                                                    | Something Will Hit                                                                                                               | —             | 1x Bones               | The Dungeon         |
+| Golbin Witch Doctor  | magic       | 1 / 1 / 20 / 1 / 40 / 25                 | 2.6              | —                                                                                                                                                                                                                                                              | Golbin Magic                                                                                                                     | —             | 1x Bones               | The Dungeon         |
+| Grey Orc             | melee       | 60 / 60 / 60 / 1 / 1 / 70                | 2.6              | Charge                                                                                                                                                                                                                                                         | Stronk                                                                                                                           | —             | 1x Bones               | The Dungeon         |
+| Ogre                 | melee       | 30 / 100 / 30 / 1 / 1 / 100              | 3.0              | —                                                                                                                                                                                                                                                              | Humungus                                                                                                                         | —             | 1x Bones               | The Dungeon         |
+| Orc                  | melee       | 40 / 50 / 40 / 1 / 1 / 50                | 2.4              | —                                                                                                                                                                                                                                                              | Stronk                                                                                                                           | —             | 1x Bones               | The Dungeon         |
+| Shambler             | melee       | 60 / 65 / 50 / 1 / 1 / 120               | 3.2              | —                                                                                                                                                                                                                                                              | The Wickedly Unholy Necromancer Blessing Of Undeath                                                                              | —             | 1x Bones               | The Dungeon         |
+| Skeleton Warrior     | melee       | 80 / 60 / 50 / 1 / 1 / 80                | 2.4              | —                                                                                                                                                                                                                                                              | The Wickedly Unholy Necromancer Blessing Of Undeath                                                                              | —             | 1x Bones               | The Dungeon         |
+| Spook                | magic       | 50 / 50 / 50 / 1 / 1 / 50                | 2.6              | Spook                                                                                                                                                                                                                                                          | The Wickedly Unholy Necromancer Blessing Of Undeath                                                                              | —             | 1x Bones               | The Dungeon         |
+| The Final Room       | magic       | 1 / 1 / 1 / 150 / 1 / 125                | 3.0              | Oops Pulled On The Wrong Wall Sconce<br>Goddamn Mummies<br>Ahhh It's A Mimic<br>Holy Toledo It's Raining Gold<br>I Thought It Said Fill My Purse Not Kill With Curse<br>Pretty Sure This Button Will Reveal The Treasure Room<br>There It Is The Treasure Room | You Can't Attack A Room                                                                                                          | 95%           | 50x Treasure           | The Dungeon         |
+| The Necromancer      | magic       | 50 / 30 / 70 / 1 / 100 / 100             | 3.0              | Desecration<br>Spook<br>Reanimate                                                                                                                                                                                                                              | One With The Unholy                                                                                                              | 5%            | 1x Bones               | The Dungeon         |
+| Zulrah (Phase One)   | Ranged      | 300 / 300 / 300 / 300 / 300 / 1820       | 1.8              | Toxic Clouds                                                                                                                                                                                                                                                   | PhaseHP10<br>Venomous Hide<br>Stun Immunity<br>Melee Immunity<br>Magic Vulnerability 10%                                         | —             | 26 × Serpentine Scales | Swamp of Desolation |
+| Zulrah (Phase Two)   | Melee       | 300 / 300 / 300 / 300 / 300 / 1820       | 1.8              | Barbed Tail Whip<br>80% Chance to Stun (2 turns, melee only)                                                                                                                                                                                                   | PhaseHP10<br>Venomous Hide<br>Magmatic Hide<br>Stun Immunity                                                                     | —             | 27 × Magmatic Scales   | Swamp of Desolation |
+| Zulrah (Phase Three) | Magic       | 300 / 300 / 300 / 300 / 300 / 1820       | 1.8              | Barbed Projectiles<br>Swamp Sludge                                                                                                                                                                                                                             | PhaseHP10<br>Venomous Hide<br>Stun Immunity<br>Melee Immunity<br>Ranged Vulnerability 10%                                        | —             | 22 × Tanzanite Scales  | Swamp of Desolation |
+| Zulrah (Phase Four)  | Ranged      | 300 / 300 / 300 / 300 / 300 / 1820       | 1.8              | Toxic Clouds<br>Summon Cobralings<br>Barbed Projectiles                                                                                                                                                                                                        | PhaseHP10<br>Venomous Hide<br>Stun Immunity<br>Melee Immunity<br>Magic Vulnerability 10%                                         | —             | 27 × Serpentine Scales | Swamp of Desolation |
+| Zulrah (Phase Five)  | Melee       | 300 / 300 / 300 / 300 / 300 / 1820       | 1.8              | Barbed Tail Whip<br>80% Chance to Stun (2 turns, melee only)                                                                                                                                                                                                   | PhaseHP10<br>Venomous Hide<br>Magmatic Hide<br>Stun Immunity                                                                     | —             | 14 × Magmatic Scales   | Swamp of Desolation |
+| Zulrah (Phase Six)   | Magic       | 300 / 300 / 300 / 300 / 300 / 1820       | 1.8              | Barbed Projectiles<br>Swamp Sludge                                                                                                                                                                                                                             | PhaseHP10<br>Venomous Hide<br>Stun Immunity<br>Melee Immunity<br>Ranged Vulnerability 10%                                        | —             | 14 × Tanzanite Scales  | Swamp of Desolation |
+| Zulrah (Phase Seven) | Ranged      | 300 / 300 / 300 / 300 / 300 / 1820       | 1.8              | Toxic Clouds<br>Summon Cobralings                                                                                                                                                                                                                              | PhaseHP10<br>Venomous Hide<br>Stun Immunity<br>Melee Immunity<br>Magic Vulnerability 10%                                         | —             | 23 × Serpentine Scales | Swamp of Desolation |
+| Zulrah (Phase Eight) | Magic       | 300 / 300 / 300 / 300 / 300 / 1820       | 1.8              | Barbed Projectiles<br>Toxic Clouds<br>Summon Cobralings<br>Swamp Sludge                                                                                                                                                                                        | PhaseHP10<br>Venomous Hide<br>Stun Immunity<br>Melee Immunity<br>Ranged Vulnerability 10%                                        | —             | 14 × Serpentine Scales | Swamp of Desolation |
+| Zulrah (Phase Nine)  | Ranged      | 300 / 300 / 300 / 300 / 300 / 1820       | 1.8              | Toxic Clouds<br>Barbed Projectiles                                                                                                                                                                                                                             | PhaseHP10<br>Venomous Hide<br>Stun Immunity<br>Melee Immunity<br>Magic Vulnerability 10%                                         | —             | 28 × Serpentine Scales | Swamp of Desolation |
+| Zulrah (Phase Ten)   | Melee       | 300 / 300 / 300 / 300 / 300 / 1820       | 1.8              | Barbed Tail Whip<br>80% Chance to Stun (2 turns, melee only)                                                                                                                                                                                                   | PhaseHP10<br>Venomous Hide<br>Magmatic Hide<br>Stun Immunity                                                                     | —             | 19 × Magmatic Scales   | Swamp of Desolation |
+| Zulrah (Final Phase) | Melee       | 300 / 300 / 300 / 300 / 300 / 1820       | 1.8              | Barbed Tail Whip<br>Barbed Projectiles<br>Swamp Sludge<br>Toxic Clouds<br>Summon Cobralings<br>50% Chance to Stun (2 turns, melee only)                                                                                                                        | Venomous Hide<br>Magmatic Hide<br>Stun Immunity                                                                                  | —             | 1 × Magic Bones        | Swamp of Desolation |

@@ -38,13 +38,6 @@
           "add": [
             {
               "insertAt": "After",
-              "afterID": "melvorF:Infernal_Stronghold",
-              "ids": [
-                "expandedAreas:Swamp_of_Desolation"
-              ]
-            },
-            {
-              "insertAt": "After",
               "afterID": "melvorD:Undead_Graveyard",
               "ids": [
                 "expandedAreas:The_Dungeon"
@@ -285,6 +278,22 @@
       }
     ],
     "items": [
+      {
+        "id": "melvorF:Potion_Box_II",
+        "dropTable": {
+          "remove": [
+            "melvorD:Cabbage"
+          ],
+          "add": [
+            {
+              "itemID": "expandedAreas:Bag_of_Endless_Gold1",
+              "minQuantity": 2,
+              "maxQuantity": 2,
+              "weight": 1
+            }
+          ]
+        }
+      },
       {
         "id": "melvorF:Potion_Box_II",
         "dropTable": {
