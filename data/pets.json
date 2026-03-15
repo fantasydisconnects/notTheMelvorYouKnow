@@ -1,0 +1,161 @@
+{
+  "$schema": "https://melvoridle.com/assets/schema/gameData.json",
+  "namespace": "expandedAreas",
+  "data": {
+    "pets": [
+      {
+        "id": "Zully",
+        "media": "assets/pets/Zully.png",
+        "name": "Zully",
+        "modifiers": {
+          "burnDOTDamageTaken": -2,
+          "poisonDOTDamageTaken": -2,
+          "deadlyPoisonDOTDamageTaken": -2,
+          "frostburnDamage": -2
+        },
+        "scaleChanceWithMasteryPool": false,
+        "activeInRaid": false,
+        "ignoreCompletion": false
+      },
+      {
+        "id": "DonJonLuter",
+        "name": "Don Jon Luter",
+        "hint": "Obtained from The Dungeon",
+        "media": "assets/pets/Don_Jon_Luter.png",
+        "scaleChanceWithMasteryPool": false,
+        "ignoreCompletion": false,
+        "activeInRaid": false,
+        "modifiers": {
+          "currencyGain": [
+            {
+              "skillID": "melvorD:Thieving",
+              "currencyID": "melvorD:GP",
+              "value": 5
+            }
+          ]
+        }
+      },
+      {
+        "id": "Dark_Core",
+        "name": "Dark Core",
+        "media": "assets/pets/core.png",
+        "ignoreCompletion": false,
+        "modifiers": {
+          "hPRegenBasedOnMaxHP": 0.1
+        },
+        "activeInRaid": false,
+        "scaleChanceWithMasteryPool": false
+      },
+      {
+        "id": "Baby_Mole",
+        "name": "Baby Mole",
+        "media": "assets/pets/mole.png",
+        "ignoreCompletion": false,
+        "modifiers": {
+          "seedDropConversionChance": 1
+        },
+        "activeInRaid": false,
+        "scaleChanceWithMasteryPool": false
+      },
+      {
+        "id": "Spadey",
+        "media": "assets/pets/Spadey.png",
+        "name": "Spadey",
+        "modifiers": {
+          "prayerPointsFromBurying": 5
+        },
+        "scaleChanceWithMasteryPool": false,
+        "activeInRaid": false,
+        "ignoreCompletion": false
+      },
+      {
+        "id": "Swirli",
+        "name": "Swirli",
+        "media": "assets/pets/Swirli.svg",
+        "hint": "Obtained from Guardian of the Elements",
+        "ignoreCompletion": false,
+        "modifiers": {
+          "runePreservationChance": 0.5
+        },
+        "activeInRaid": false,
+        "scaleChanceWithMasteryPool": false
+      },
+      {
+        "id": "Tinychief",
+        "name": "Tinychief",
+        "media": "assets/pets/Tinychief.svg",
+        "hint": "Obtained from Golbin Chieftain",
+        "ignoreCompletion": false,
+        "modifiers": {
+          "combatLootDoublingChance": 0.1
+        },
+        "activeInRaid": false,
+        "scaleChanceWithMasteryPool": false
+      },
+      {
+        "id": "Yeemik",
+        "name": "Yeemik",
+        "media": "assets/pets/Yeemik.svg",
+        "hint": "Obtained from Golbin Hideout",
+        "ignoreCompletion": false,
+        "modifiers": {
+          "dodgeChance": 1
+        },
+        "activeInRaid": false,
+        "scaleChanceWithMasteryPool": false
+      },
+      {
+        "id": "Lil_Erik",
+        "name": "Lil Erik",
+        "media": "assets/pets/Lil_Erik.svg",
+        "hint": "Obtained from Chieftain Erik",
+        "ignoreCompletion": false,
+        "modifiers": {
+          "globalItemDoublingChance": 0.5
+        },
+        "activeInRaid": false,
+        "scaleChanceWithMasteryPool": false
+      },
+      {
+        "id": "Ellie",
+        "name": "Ellie",
+        "media": "assets/pets/Ellie.svg",
+        "hint": "Obtained from Elemental Sanctuary",
+        "ignoreCompletion": false,
+        "modifiers": {
+          "flatMagicMinHit": [
+            {
+              "subcategoryID": "melvorD:Elemental",
+              "value": 0.25
+            }
+          ],
+          "flatMagicMaxHit": [
+            {
+              "subcategoryID": "melvorD:Elemental",
+              "value": 0.25
+            }
+          ]
+        },
+        "activeInRaid": false,
+        "scaleChanceWithMasteryPool": false
+      },
+      {
+        "id": "Fenri",
+        "name": "Fenri",
+        "media": "assets/pets/Fenri.svg",
+        "hint": "Obtained from The Barbarian Trials",
+        "ignoreCompletion": false,
+        "modifiers": {
+          "flatHiddenSkillLevel": [
+            {
+              "skillID": "melvorD:Strength",
+              "value": 1
+            }
+          ]
+        },
+        "activeInRaid": false,
+        "scaleChanceWithMasteryPool": false
+      }
+    ]
+  }
+}

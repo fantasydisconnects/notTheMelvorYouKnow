@@ -1,0 +1,423 @@
+{
+  "$schema": "https://melvoridle.com/assets/schema/gameData.json",
+  "namespace": "expandedAreas",
+  "data": {
+    "combatAreaCategories": [
+      {
+        "id": "Bosses",
+        "name": "Bosses",
+        "media": "assets/icons/skull.png",
+        "areas": [
+          "expandedAreas:Mole_Lair",
+          "expandedAreas:Swamp_of_Desolation",
+          "expandedAreas:Corporeal_Beast_Lair"
+        ]
+      }
+    ],
+    "combatAreaCategoryOrder": [
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Strongholds",
+        "ids": [
+          "expandedAreas:Bosses"
+        ]
+      }
+    ],
+    "combatAreas": [
+      {
+        "id": "Low_Town",
+        "name": "Low Town",
+        "media": "assets/combat/combatAreas/Low_Town.png",
+        "difficulty": [
+          0
+        ],
+        "monsterIDs": [
+          "expandedAreas:Peasant_Man",
+          "expandedAreas:Peasant_Woman",
+          "expandedAreas:Pickpocket",
+          "expandedAreas:Guard",
+          "expandedAreas:Executioner",
+          "expandedAreas:Mysterious_Monk"
+        ],
+        "entryRequirements": []
+      },
+      {
+        "id": "Botanical_Gardens",
+        "name": "Botanical Gardens",
+        "media": "assets/combat/combatAreas/Botanical_Gardens.svg",
+        "difficulty": [
+          0
+        ],
+        "monsterIDs": [
+          "expandedAreas:Mutant_Flower",
+          "expandedAreas:Junior_Gardener",
+          "expandedAreas:Wasp",
+          "expandedAreas:Weeds",
+          "expandedAreas:Adult_Gardener",
+          "expandedAreas:Master_Gardener"
+        ],
+        "entryRequirements": []
+      },
+      {
+        "id": "Barbarian_Village",
+        "name": "Barbarian Village",
+        "media": "assets/combat/combatAreas/Barbarian_Village.png",
+        "difficulty": [
+          0,
+          1
+        ],
+        "monsterIDs": [
+          "expandedAreas:Barbarian",
+          "expandedAreas:Barbarian_Warrior",
+          "expandedAreas:Barbarian_Bowyer",
+          "expandedAreas:Barbarian_Berserker",
+          "expandedAreas:Barbarian_Brawler",
+          "expandedAreas:Chieftain_Erik"
+        ],
+        "entryRequirements": []
+      },
+      {
+        "id": "Secluded_Monastery",
+        "name": "Secluded Monastery",
+        "media": "assets/combat/combatAreas/Secluded_Monastery.png",
+        "monsterIDs": [
+          "expandedAreas:Monk_of_the_Wind",
+          "expandedAreas:Monk_of_the_River",
+          "expandedAreas:Monk_of_the_Moss",
+          "expandedAreas:Monk_of_the_Flame",
+          "expandedAreas:Guardian_of_the_Elements"
+        ],
+        "difficulty": [
+          2,
+          3
+        ],
+        "entryRequirements": [
+          {
+            "type": "ItemFound",
+            "itemID": "expandedAreas:Mysterious_Tome"
+          },
+          {
+            "type": "DungeonCompletion",
+            "dungeonID": "melvorD:Hall_of_Wizards",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "dungeons": [
+      {
+        "difficulty": [
+          5
+        ],
+        "dropBones": true,
+        "entryRequirements": [
+          {
+            "type": "SkillLevel",
+            "level": 75,
+            "skillID": "melvorD:Slayer"
+          }
+        ],
+        "fixedPetClears": false,
+        "id": "Swamp_of_Desolation",
+        "media": "assets/combat/dungeons/Swamp_of_Desolation.png",
+        "monsterIDs": [
+          "expandedAreas:Zulrah_Phase_One",
+          "expandedAreas:Zulrah_Phase_Two",
+          "expandedAreas:Zulrah_Phase_Three",
+          "expandedAreas:Zulrah_Phase_Four",
+          "expandedAreas:Zulrah_Phase_Five",
+          "expandedAreas:Zulrah_Phase_Six",
+          "expandedAreas:Zulrah_Phase_Seven",
+          "expandedAreas:Zulrah_Phase_Eight",
+          "expandedAreas:Zulrah_Phase_Nine",
+          "expandedAreas:Zulrah_Phase_Ten",
+          "expandedAreas:Zulrah_Final_Phase"
+        ],
+        "name": "Swamp of Desolation",
+        "pauseOnBosses": false,
+        "rewardItemIDs": [
+          "expandedAreas:Toxic_Hoard"
+        ],
+        "pet": {
+          "petID": "expandedAreas:Zully",
+          "weight": 200
+        }
+      },
+      {
+        "id": "The_Dungeon",
+        "name": "The Dungeon",
+        "media": "assets/combat/dungeons/The_Dungeon.png",
+        "oneTimeRewardID": "expandedAreas:Skeleton_Key",
+        "monsterIDs": [
+          "melvorD:Golbin",
+          "melvorD:RangedGolbin",
+          "melvorD:Golbin",
+          "melvorD:RangedGolbin",
+          "melvorD:Golbin",
+          "expandedAreas:Golbin_Assassin",
+          "expandedAreas:Golbin_Witch_Doctor",
+          "expandedAreas:Golbin_Berserker",
+          "expandedAreas:Orc",
+          "expandedAreas:Wolf",
+          "expandedAreas:Orc",
+          "expandedAreas:Wolf",
+          "expandedAreas:Orc",
+          "expandedAreas:Wolf",
+          "expandedAreas:Grey_Orc",
+          "expandedAreas:Grey_Orc",
+          "expandedAreas:Grey_Orc",
+          "expandedAreas:Ogre",
+          "expandedAreas:Knight",
+          "expandedAreas:Monk",
+          "expandedAreas:Druid",
+          "expandedAreas:Mage",
+          "melvorD:Zombie",
+          "melvorD:Skeleton",
+          "melvorD:Zombie",
+          "melvorD:Skeleton",
+          "expandedAreas:Shambler",
+          "expandedAreas:Shambler",
+          "expandedAreas:Skeleton_Warrior",
+          "expandedAreas:Skeleton_Warrior",
+          "expandedAreas:Spook",
+          "expandedAreas:Spook",
+          "expandedAreas:The_Necromancer",
+          "expandedAreas:The_Final_Room",
+          "expandedAreas:Escape_the_Dungeon"
+        ],
+        "difficulty": [
+          1
+        ],
+        "entryRequirements": [
+          {
+            "skillID": "melvorD:Mining",
+            "level": 30,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Thieving",
+            "level": 30,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Agility",
+            "level": 30,
+            "type": "SkillLevel"
+          }
+        ],
+        "rewardItemIDs": [
+          "expandedAreas:Treasure_Hoard"
+        ],
+        "dropBones": true,
+        "pet": {
+          "petID": "expandedAreas:DonJonLuter",
+          "weight": 150
+        },
+        "fixedPetClears": false,
+        "pauseOnBosses": false,
+        "floors": [
+          8,
+          10,
+          4,
+          11,
+          1,
+          1
+        ]
+      },
+      {
+        "difficulty": [
+          2
+        ],
+        "dropBones": true,
+        "entryRequirements": [],
+        "fixedPetClears": false,
+        "id": "The_Barrows",
+        "media": "assets/combat/dungeons/The_Barrows.png",
+        "monsterIDs": [
+          "expandedAreas:Crypt_Worm",
+          "expandedAreas:Crypt_Worm",
+          "expandedAreas:Crypt_Rat",
+          "expandedAreas:Crypt_Rat",
+          "expandedAreas:Crypt_Spider",
+          "expandedAreas:Crypt_Spider",
+          "expandedAreas:Crypt_Skeleton",
+          "expandedAreas:Crypt_Skeleton",
+          "expandedAreas:Brother_Ahrim_the_Blighted",
+          "expandedAreas:Brother_Karil_the_Tainted",
+          "expandedAreas:Brother_Dharok_the_Wretched",
+          "expandedAreas:Brother_Guthan_the_Infested",
+          "expandedAreas:Brother_Torag_the_Corrupted",
+          "expandedAreas:Brother_Verac_the_Defiled"
+        ],
+        "name": "The Barrows",
+        "pauseOnBosses": false,
+        "rewardItemIDs": [
+          "expandedAreas:Charnel_Chest"
+        ],
+        "pet": {
+          "petID": "expandedAreas:Spadey",
+          "weight": 350
+        }
+      },
+      {
+        "difficulty": [
+          4
+        ],
+        "dropBones": true,
+        "entryRequirements": [
+          {
+            "type": "ItemFound",
+            "itemID": "expandedAreas:Fragmented_Elemental_Rune"
+          }
+        ],
+        "pet": {
+          "petID": "expandedAreas:Ellie",
+          "weight": 200
+        },
+        "fixedPetClears": false,
+        "id": "Elemental_Sanctuary",
+        "media": "assets/combat/dungeons/ElementalSanctuary.png",
+        "monsterIDs": [
+          "expandedAreas:Monk_of_the_Wind",
+          "expandedAreas:Monk_of_the_River",
+          "expandedAreas:Monk_of_the_Moss",
+          "expandedAreas:Monk_of_the_Flame",
+          "expandedAreas:Harpiar",
+          "expandedAreas:Kappa",
+          "expandedAreas:Rock_Giant",
+          "expandedAreas:Fire_Maiden",
+          "expandedAreas:OzmarathraxInscriptorOfRunes"
+        ],
+        "name": "Elemental Sanctuary",
+        "pauseOnBosses": false,
+        "rewardItemIDs": [
+          "expandedAreas:Pureform_Rune",
+          "expandedAreas:Elemental_Cape"
+        ]
+      },
+      {
+        "difficulty": [
+          0
+        ],
+        "dropBones": true,
+        "entryRequirements": [],
+        "pet": {
+          "petID": "expandedAreas:Yeemik",
+          "weight": 350
+        },
+        "fixedPetClears": false,
+        "id": "Golbin_Hideout",
+        "media": "assets/combat/dungeons/GolbinHideout.png",
+        "monsterIDs": [
+          "melvorD:Golbin",
+          "melvorD:Golbin",
+          "melvorD:RangedGolbin",
+          "melvorD:RangedGolbin",
+          "expandedAreas:Magic_Golbin",
+          "expandedAreas:Magic_Golbin",
+          "expandedAreas:Hobgolbin",
+          "expandedAreas:Hobgolbin",
+          "expandedAreas:Big_Golbin",
+          "expandedAreas:Golbin_Chief"
+        ],
+        "name": "Golbin Hideout",
+        "pauseOnBosses": false,
+        "rewardItemIDs": [
+          "expandedAreas:Damaged_Supply_Crate"
+        ]
+      },
+      {
+        "id": "The_Barbarian_Trials",
+        "name": "The Barbarian Trials",
+        "media": "assets/combat/dungeons/BarbarianTrials.svg",
+        "monsterIDs": [
+          "expandedAreas:Barbarian_Warrior",
+          "expandedAreas:Barbarian_Bowyer",
+          "expandedAreas:Barbarian_Berserker",
+          "expandedAreas:Barbarian_Brawler",
+          "expandedAreas:Walking_Keg",
+          "expandedAreas:Jarl_Eriksson",
+          "expandedAreas:Draugr",
+          "expandedAreas:Draugr",
+          "expandedAreas:Drowned_Maiden",
+          "expandedAreas:Koschei_the_Deathless_Form1",
+          "expandedAreas:Koschei_the_Deathless_Form2",
+          "expandedAreas:Koschei_the_Deathless_Form3",
+          "expandedAreas:Koschei_the_Deathless_Form4"
+        ],
+        "difficulty": [
+          2
+        ],
+        "entryRequirements": [
+          {
+            "type": "SkillLevel",
+            "level": 60,
+            "skillID": "melvorD:Strength"
+          },
+          {
+            "type": "MonsterKilled",
+            "monsterID": "expandedAreas:Chieftain_Erik",
+            "count": 1
+          }
+        ],
+        "rewardItemIDs": [
+          "expandedAreas:Raid_Spoils"
+        ],
+        "dropBones": true,
+        "pet": {
+          "petID": "expandedAreas:Fenri",
+          "weight": 150
+        },
+        "fixedPetClears": false,
+        "pauseOnBosses": false,
+        "floors": [
+          6,
+          3,
+          4
+        ],
+        "allowedDamageTypeIDs": [
+          "melvorD:Normal"
+        ]
+      }
+    ],
+    "slayerAreas": [
+      {
+        "id": "Corporeal_Beast_Lair",
+        "name": "Corporeal Beast's Lair",
+        "media": "assets/combat/combatAreas/corp.png",
+        "difficulty": [
+          5
+        ],
+        "monsterIDs": [
+          "expandedAreas:Corporeal_Beast"
+        ],
+        "entryRequirements": [],
+        "pet": {
+          "petID": "expandedAreas:Dark_Core",
+          "weight": 5000
+        }
+      },
+      {
+        "id": "Mole_Lair",
+        "name": "Big Ol' Mole Hole",
+        "media": "assets/combat/status/burrow.png",
+        "difficulty": [
+          3
+        ],
+        "monsterIDs": [
+          "expandedAreas:Giant_Mole"
+        ],
+        "entryRequirements": [
+          {
+            "type": "SlayerItem",
+            "itemID": "expandedAreas:Candle"
+          }
+        ],
+        "pet": {
+          "petID": "expandedAreas:Baby_Mole",
+          "weight": 3000
+        }
+      }
+    ]
+  }
+}

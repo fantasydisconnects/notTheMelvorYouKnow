@@ -1,0 +1,5406 @@
+{
+  "$schema": "https://melvoridle.com/assets/schema/gameData.json",
+  "namespace": "expandedAreas",
+  "data": {
+    "attacks": [
+      {
+        "id": "SwampSludge",
+        "defaultChance": 100,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 100
+          },
+          {
+            "damageType": "Custom",
+            "roll": false,
+            "maxRoll": "MagicScaling",
+            "maxPercent": 3.3,
+            "character": "Attacker"
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Swamp Sludge",
+        "description": "Perform an avoidable normal attack. Deals your normal damage + ${attackDamageMaxValue1}% of your Magic level.",
+        "descriptionGenerator": "Make an <avoidable> normal attack, dealing your normal damage + <damage>. Consumes Runes per hit.",
+        "usesRunesPerProc": true
+      },
+      {
+        "id": "Bloodboil",
+        "defaultChance": 10,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "maxRoll": "PoisonMax35",
+            "maxPercent": 115,
+            "minRoll": "PoisonMin35",
+            "minPercent": 100,
+            "roll": true
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Burn",
+            "chance": 30
+          },
+          {
+            "effectID": "melvorD:DeadlyPoison",
+            "condition": {
+              "effectID": "melvorD:Burn",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "chance": 30
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Bloodboil",
+        "description": "Perform an attack that deals ${attackDamageMaxValue0}% (150% if the enemy is poisoned) of your normal damage. On a hit has a ${onHitEffect0chance}% chance to inflict Burn that deals ${onHitEffect0DamageMaxValue0}% of the enemy's max hitpoints as damage over ${onHitEffect0duration}s. If the enemy is Burning, has a ${onHitEffect1chance}% chance to inflict Deadly Poison that deals ${onHitEffect1DamageMaxValue0}% of the enemy's max hit points as damage over ${onHitEffect1duration}s.",
+        "descriptionGenerator": "Perform an attack that deals <damage>. On a hit <hitEffect>."
+      },
+      {
+        "id": "ToxicSiphon",
+        "defaultChance": 20,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 150
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:DeadlyPoison",
+            "chance": 5
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 50,
+        "name": "Toxic Siphon",
+        "description": "Perform an attack that deals up to ${attackDamageMaxValue0}% of your normal damage. On a hit, heals for ${lifesteal}% of damage dealt, and has a ${onHitEffect0chance}% chance to inflict Deadly Poison that deals ${onHitEffect0DamageMaxValue0}% of the enemy's max hitpoints as damage over ${onHitEffect0duration}s.",
+        "descriptionGenerator": "Perform an attack that deals up to <damage>. On a hit <hitEffect>, and <attacker> <attis> healed for <lifesteal> of damage dealt."
+      },
+      {
+        "id": "BarbedTailWhip",
+        "defaultChance": 40,
+        "canNormalAttack": true,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "roll": false,
+            "maxRoll": "Fixed",
+            "maxPercent": 80
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Stun",
+            "chance": 20,
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 2
+              }
+            ]
+          }
+        ],
+        "attackTypes": [
+          "melee"
+        ],
+        "cantMiss": true,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Barbed Tail Whip",
+        "description": "The enemy's barbed tail whips at you, dealing ${attackDamageMaxValue0} damage (Unavoidable). On a hit, ${onHitEffect0chance}% chance to inflict Stun for ${onHitEffect0turns} turns. If you are already stunned, perform a regular attack instead.",
+        "descriptionGenerator": "<AttPos> barbed tail whips at <target>, dealing <damage> damage (<Avoidable>) and <hitEffect>. If <target> <taris> already stunned, perform a regular attack instead.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "BarbedProjectiles",
+        "defaultChance": 30,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "roll": false,
+            "maxRoll": "Fixed",
+            "maxPercent": 60
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:DeadlyPoison",
+            "chance": 10
+          }
+        ],
+        "cantMiss": true,
+        "attackCount": 3,
+        "attackInterval": 300,
+        "lifesteal": 0,
+        "name": "Barbed Projectiles",
+        "description": "Rapidly fires ${hitCount} unavoidable barbed projectiles dealing ${attackDamageMaxValue0} each. Each hit has a ${onHitEffect0chance}% chance to inflict Deadly Poison that deals ${onHitEffect0DamageMaxValue0}% of your max hitpoints as damage over ${onHitEffect0duration}s.",
+        "descriptionGenerator": "Rapidly fires <count> barbed projectiles dealing <damage> (<Avoidable>). On hit, <hitEffect>."
+      },
+      {
+        "id": "ToxicClouds",
+        "defaultChance": 30,
+        "canNormalAttack": true,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "roll": false,
+            "maxRoll": "Fixed",
+            "maxPercent": 15
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:DeadlyPoison",
+            "chance": 100
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 4,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Toxic Clouds",
+        "description": "Noxious gas erupts from around the enemy, dealing ${attackDamageMaxValue0}x${hitCount} damage over ${duration}s. On a hit inflicts Deadly Poison that deals ${onHitEffect0DamageMaxValue0}% of your max hitpoints as damage over ${onHitEffect0duration}s.",
+        "descriptionGenerator": "Noxious gas erupts within the <attPos> vicinity, dealing <damage>x<count> damage over <duration> and <hitEffect>.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "SummonCobralings",
+        "name": "Summon Cobralings",
+        "defaultChance": 30,
+        "damage": [
+          {
+            "attackCount": 1,
+            "damageType": "Normal",
+            "amplitude": 100
+          },
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "roll": true,
+            "minRoll": "Fixed",
+            "minPercent": 0,
+            "maxRoll": "Fixed",
+            "maxPercent": 15
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:DeadlyPoison",
+            "chance": 20
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 12,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "description": "The enemy makes a normal attack, dealing up to ${attackDamageMaxValue0}% of its normal damage (can miss), then summons ${hitCount} cobralings, each dealing between ${attackDamageMinValue1}-${attackDamageMaxValue1}x${hitCount} damage over ${duration}s. On a hit, the cobralings have a ${onHitEffect0chance}% to inflict Deadly Poison that deals ${onHitEffect0DamageMaxValue0}% of your max hitpoints as damage over ${onHitEffect0duration}s."
+      },
+      {
+        "id": "PounceTigerForm",
+        "defaultChance": 25,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 125
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Bleed100",
+            "chance": 100
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Pounce - Tiger Form",
+        "description": "Pounce at you, knocking you down and applies Bleed that deals 15% of your current hitpoints over 10s on a hit. Deals ${attackDamageMaxValue0} damage.",
+        "descriptionGenerator": "Charge at <target>, knocking <target> down and <hitEffect> on a hit. Deals <damage> damage.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "BeakRavenForm",
+        "defaultChance": 25,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 50
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "expandedAreas:Blind"
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 3,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Beak - Raven Form",
+        "description": "Assault your eyes with his beak ${hitCount} times, blinding you (-20% Accuracy Rating) for 5 turns. Deals ${attackDamageMaxValue0} damage.",
+        "descriptionGenerator": "Assault <target>'s eyes, <hitEffect> on a hit. Deals <damage> damage.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "Sleepytime",
+        "name": "Sleepytime",
+        "defaultChance": 25,
+        "prehitEffects": [],
+        "attackCount": 1,
+        "attackInterval": 200,
+        "lifesteal": 0,
+        "description": "Deals no damage, but instead puts you to Sleep for 2 turns. Unavoidable.",
+        "cantMiss": true,
+        "damage": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Sleep",
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 2
+              }
+            ]
+          }
+        ],
+        "canNormalAttack": true
+      },
+      {
+        "id": "ArcaneBarrier",
+        "name": "Arcane Barrier",
+        "defaultChance": 25,
+        "onhitEffects": [],
+        "lifesteal": 0,
+        "description": "The enemy gains +50% Evasion Ratings and +25% Damage Reduction for 3 turns.",
+        "damage": [],
+        "attackCount": 1,
+        "attackInterval": 50,
+        "cantMiss": true,
+        "canNormalAttack": true,
+        "prehitEffects": [
+          {
+            "effectID": "expandedAreas:ArcaneBarrier"
+          }
+        ]
+      },
+      {
+        "id": "MagicalMissiles",
+        "name": "Magical Missiles",
+        "defaultChance": 25,
+        "onhitEffects": [],
+        "lifesteal": 0,
+        "description": "Flings ${hitCount} unavoidable magical missiles towards you, dealing ${attackDamageMaxValue1} + ${attackDamageMinValue0}-${attackDamageMaxValue0} damage each.",
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "minRoll": "Fixed",
+            "maxRoll": "Fixed",
+            "minPercent": 1,
+            "maxPercent": 4,
+            "roll": true
+          },
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "maxRoll": "Fixed",
+            "maxPercent": 1,
+            "roll": false
+          }
+        ],
+        "attackCount": 5,
+        "attackInterval": 50,
+        "cantMiss": true,
+        "canNormalAttack": false,
+        "prehitEffects": []
+      },
+      {
+        "id": "Spook",
+        "name": "Spook",
+        "description": "Deals no damage. Inflicts Fear for 2 turns.",
+        "attackCount": 1,
+        "attackInterval": 50,
+        "canNormalAttack": true,
+        "cantMiss": false,
+        "damage": [],
+        "defaultChance": 50,
+        "lifesteal": 0,
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Fear",
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 2
+              }
+            ]
+          }
+        ],
+        "prehitEffects": []
+      },
+      {
+        "id": "Reanimate",
+        "name": "Reanimate",
+        "defaultChance": 30,
+        "prehitEffects": [
+          {
+            "effectID": "expandedAreas:CircleOfBones0"
+          }
+        ],
+        "onhitEffects": [],
+        "lifesteal": 0,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "cantMiss": true,
+        "canNormalAttack": true,
+        "damage": [],
+        "description": "Reanimates a pile of bones into a protective ward, granting the Necromancer +30% Damage Reduction and +25% Reflect Damage for 3 turns."
+      },
+      {
+        "id": "OopsPulledOnTheWrongWallSconce",
+        "defaultChance": 5,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "maxRoll": "Fixed",
+            "maxPercent": 30,
+            "roll": false
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Burn",
+            "chance": 50
+          }
+        ],
+        "cantMiss": true,
+        "attackCount": 1,
+        "attackInterval": 200,
+        "lifesteal": 0,
+        "name": "Oops, Pulled On the Wrong Wall Sconce",
+        "description": "The treasure hunter accidentally pulls on the wrong wall sconce, which deals ${attackDamageMaxValue0} damage. On a hit, has a ${onHitEffect0chance}% chance to apply Burn. Unvoidable.",
+        "descriptionGenerator": "<Attacker> pulls on the wrong wall sconce, which deals <damage> damage and inflicts <hitEffect>. <Avoidable>.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "GoddamnMummies",
+        "defaultChance": 5,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "maxRoll": "Fixed",
+            "maxPercent": 15,
+            "roll": false
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Affliction",
+            "initialParams": [
+              {
+                "name": "stacksToAdd",
+                "value": 5
+              }
+            ],
+            "chance": 50
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 200,
+        "lifesteal": 0,
+        "name": "Goddam Mummies!",
+        "description": "The treasure hunter searches a sarcophagus, from which emerges a mummy! It deals ${attackDamageMaxValue0} damage on hit. On a hit, has a ${onHitEffect0chance}% chance to apply 5 stacks of Affliction. Avoidable.",
+        "descriptionGenerator": "<Attacker> searches a sarcophagus, from which emerges a mummy that deals <damage> damage and inflicts <hitEffect> on hit. <Avoidable>.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "AhhhItsAMimic",
+        "defaultChance": 5,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "maxRoll": "Fixed",
+            "maxPercent": 22.5,
+            "roll": false
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Poison"
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 100,
+        "lifesteal": 0,
+        "name": "Ahhh, It's a Mimic!",
+        "description": "The treasure hunter points you to a chest, but it turns out, it's actually a Mimic! It deals ${attackDamageMaxValue0} damage on hit. On a hit, has a ${onHitEffect0chance}% chance to inflict Poison. Avoidable.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "HolyToledoItsRainingGold",
+        "defaultChance": 5,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "maxRoll": "Fixed",
+            "maxPercent": 3,
+            "roll": false
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [],
+        "cantMiss": false,
+        "attackCount": 20,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Holy Toledo, It's Raining Gold!",
+        "description": "Piles of gold hidden in the ceiling rain down on your head. It deals ${attackDamageMaxValue0} damage each time it hits you, ${hitCount} times. Avoidable.",
+        "descriptionGenerator": "Piles of gold fall on your head, dealing <damage> each hit, <hitCount> times. <Avoidable>.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "IThoughtItSaidFillMyPurseNotKillWithCurse",
+        "defaultChance": 5,
+        "damage": [],
+        "prehitEffects": [
+          {
+            "tableID": "melvorF:RandomCurse"
+          },
+          {
+            "tableID": "melvorF:ElementalEffect"
+          }
+        ],
+        "onhitEffects": [],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "I Thought it Said \"Fill My Purse\", not \"Kill With Curse\"!",
+        "description": "The treasure hunter reads strange runes the wrong way, causing a random Curse and a random Elemental effect. Unavoidable.",
+        "descriptionGenerator": "Strange runes cause a random Curse and Elemental effect. <Avoidable>.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "PrettySureThisButtonWillRevealTheTreasureRoom",
+        "defaultChance": 5,
+        "damage": [],
+        "prehitEffects": [
+          {
+            "effectID": "melvorD:Stun",
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 3
+              }
+            ]
+          }
+        ],
+        "onhitEffects": [],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Pretty Sure This Button Will Reveal the Treasure Room...",
+        "description": "The treasure hunter presses a button which...causes you to turn to stone for 3 turns. Unavoidable.",
+        "descriptionGenerator": "Piles of gold fall on your head, dealing <damage> each hit, <hitCount> times. <Avoidable>.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "ThereItIsTheTreasureRoom",
+        "defaultChance": 5,
+        "damage": [],
+        "prehitEffects": [
+          {
+            "effectID": "expandedAreas:OntoTheNextRoom"
+          }
+        ],
+        "onhitEffects": [],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "There It Is: The Treasure Room!",
+        "description": "The treasure hunter finds the Treasure Room!",
+        "descriptionGenerator": "The treasure hunter finds the Treasure Room!",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "Burrow",
+        "defaultChance": 25,
+        "damage": [],
+        "prehitEffects": [
+          {
+            "effectID": "expandedAreas:Burrow"
+          }
+        ],
+        "onhitEffects": [],
+        "cantMiss": true,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Burrow",
+        "description": "Burrows into the ground, becoming immune to all attacks but unable to attack for 3 turns.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "Stomp",
+        "defaultChance": 20,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "maxRoll": "Fixed",
+            "maxPercent": 51,
+            "roll": false
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "chance": 33,
+            "effectID": "melvorD:Stun",
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 3,
+        "attackInterval": 1300,
+        "lifesteal": 0,
+        "name": "Stomp",
+        "description": "Stamp the ground ${hitCount} times over ${duration}s, dealing ${attackDamageMaxValue0} damage each, each with a ${onHitEffect0chance}% chance on hit to inflict Stun for ${onHitEffect0turns} turn (Avoidable).",
+        "descriptionGenerator": "Slam the ground <count> times over <duration>, dealing <damage> damage each (<Avoidable>). On hit, <hitEffect>.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "DualHitNormal",
+        "defaultChance": 100,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 100
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [],
+        "cantMiss": false,
+        "attackCount": 2,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Dual Hit",
+        "description": "Make two normal attacks.",
+        "descriptionGenerator": "<Attacker> makes two normal attacks.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "DefilingStrike",
+        "defaultChance": 25,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 100
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [],
+        "cantMiss": true,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Defiling Strike",
+        "description": "Make an Unavoidable normal attack.",
+        "descriptionGenerator": "<Attacker> makes an <avoidable> normal attack.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "Charge",
+        "defaultChance": 40,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "maxRoll": "Fixed",
+            "maxPercent": 35,
+            "roll": false
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Stun",
+            "chance": 100,
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Charge",
+        "description": "Charge at you, knocking you back and applies stun for ${onHitEffect0turns} turn on a hit. Deals ${attackDamageMaxValue0} damage.",
+        "descriptionGenerator": "Charge at <target>, knocking <target> back and <hitEffect> on a hit. Deals <damage> damage.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "Elemental_Breath",
+        "defaultChance": 25,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "maxRoll": "Fixed",
+            "maxPercent": 20,
+            "roll": false
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Burn",
+            "chance": 5
+          },
+          {
+            "effectID": "melvorD:Freeze",
+            "chance": 5
+          },
+          {
+            "effectID": "melvorD:Sleep",
+            "chance": 5
+          },
+          {
+            "effectID": "melvorD:Frostburn",
+            "chance": 5
+          }
+        ],
+        "cantMiss": true,
+        "attackCount": 10,
+        "attackInterval": 200,
+        "lifesteal": 0,
+        "name": "Elemental Breath",
+        "description": "Breathe unavoidable elemental dragonfire that deals ${attackDamageMaxValue0}x${hitCount} damage over ${duration}s. Inflicts either Burn, Freeze, Sleep, or Stun (10% chance each).",
+        "descriptionGenerator": "Breathe <avoidable> elemental dragonfire that deals <damage>x<count> damage over <duration>. <HitEffect>.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "Shell_Defense",
+        "name": "Shell Defense",
+        "defaultChance": 50,
+        "damage": [],
+        "prehitEffects": [
+          {
+            "effectID": "melvorD:EndOfTurnCurrentHealing",
+            "condition": {
+              "type": "Hitpoints",
+              "character": "Player",
+              "value": 50,
+              "operator": "<="
+            }
+          },
+          {
+            "effectID": "melvorD:Heal0",
+            "condition": {
+              "type": "Hitpoints",
+              "character": "Player",
+              "value": 30,
+              "operator": "<="
+            }
+          }
+        ],
+        "onhitEffects": [],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "description": "",
+        "attackTypes": [
+          "melee"
+        ]
+      },
+      {
+        "id": "Harpiars_Song",
+        "name": "Harpiar's Song",
+        "defaultChance": 40,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 30
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Sleep",
+            "chance": 50
+          }
+        ],
+        "cantMiss": true,
+        "attackCount": 6,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "description": "Attack ${hitCount} times, dealing ${attackDamageMaxValue0}% normal damage each hit (unavoidable if Accuracy Rating is greater than or equal to 20,000). On hit, has a ${onHitEffect0chance}% chance to apply sleep for ${onHitEffect0turns} turn.",
+        "descriptionGenerator": "Attack <count> times, dealing <damage> each hit (<avoidable> if Accuracy Rating is 20,000+). On hit, <hitEffect>.",
+        "attackTypes": [
+          "ranged"
+        ],
+        "minAccuracy": 20000
+      },
+      {
+        "id": "Flame_Lash",
+        "name": "Flame_Lash",
+        "defaultChance": 30,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "roll": false,
+            "maxRoll": "MagicScaling",
+            "maxPercent": 30
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Burn",
+            "chance": 50
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 3,
+        "attackInterval": 100,
+        "lifesteal": 0,
+        "description": "The enemy lashes out with a fiery whip ${hitCount} times, dealing ${attackDamageMaxValue0}% of its Magic level + 1, with a 50% chance to has a ${onHitEffect0chance}% chance to inflict Burn that deals ${onHitEffect0DamageMaxValue0}% of the your current hitpoints as damage over ${onHitEffect0duration}s on hit.",
+        "descriptionGenerator": "<Attacker> lashes out with a fiery whip <count> times, dealing <damage>, with a 50% chance to <hitEffect> on hit.",
+        "attackTypes": [
+          "melee"
+        ]
+      },
+      {
+        "id": "Rollin_Rollin",
+        "name": "Rollin' Rollin'",
+        "defaultChance": 40,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "roll": true,
+            "minRoll": "MinHit",
+            "minPercent": 100,
+            "maxRoll": "MaxHit",
+            "maxPercent": 100
+          },
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "roll": false,
+            "maxRoll": "Fixed",
+            "maxPercent": 10
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Stun"
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 1200,
+        "lifesteal": 0,
+        "description": "The Rock Giant rolls its body around like a massive boulder, dealing ${attackDamageMaxValue0}% of its normal damage plus ${attackDamageMaxValue1} and applies stun for ${onHitEffect0turns} turn on hit. ",
+        "descriptionGenerator": "The <attacker> rolls <attPos> body around like a massive boulder, dealing <damage> and <hitEffect> on hit. ",
+        "attackTypes": [
+          "melee"
+        ]
+      },
+      {
+        "id": "One_Two_Punch",
+        "name": "One-Two Punch",
+        "defaultChance": 100,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "roll": true,
+            "minRoll": "MinHit",
+            "minPercent": 100,
+            "maxRoll": "MaxHit",
+            "maxPercent": 80,
+            "attackCount": 0
+          },
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "roll": true,
+            "minRoll": "MinHit",
+            "minPercent": 100,
+            "maxRoll": "MaxHit",
+            "maxPercent": 120,
+            "attackCount": 1
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Stun",
+            "chance": 5
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 2,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "description": "Attack ${hitCount} times, dealing up to ${attackDamageMaxValue0}% of your normal damage on the first attack and up to ${attackDamageMaxValue1}% of your max hit on the second attack. Has a ${onHitEffect0chance}% chance to strike with a Sucker Punch, stunning the enemy for ${onHitEffect0turns} turn",
+        "descriptionGenerator": "Attack <count> times, dealing <damage>, <hitEffect>",
+        "attackTypes": [
+          "melee"
+        ]
+      },
+      {
+        "id": "Sucker_Punch",
+        "name": "Sucker Punch",
+        "defaultChance": 30,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 130
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Stun",
+            "chance": 25
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "description": "The enemy strikes with a sucker punch, dealing a whopping ${attackDamageMaxValue0}% of their normal damage, which has a ${onHitEffect0chance}% chance to apply stun for ${onHitEffect0turns} turn.",
+        "descriptionGenerator": "<Attacker> sucker punches <target>, dealing a <damage>, that <hitEffect> on hit.",
+        "attackTypes": [
+          "melee"
+        ]
+      },
+      {
+        "id": "Wild_Strikes",
+        "name": "Wild Strikes",
+        "defaultChance": 25,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "roll": true,
+            "minRoll": "MinHit",
+            "minPercent": 100,
+            "maxRoll": "MaxHit",
+            "maxPercent": 50
+          }
+        ],
+        "prehitEffects": [
+          {
+            "effectID": "melvorD:DecreasedEvasionStacking",
+            "targetOverride": "Self"
+          }
+        ],
+        "onhitEffects": [],
+        "cantMiss": false,
+        "attackCount": 4,
+        "attackInterval": 250,
+        "lifesteal": 0,
+        "description": "Make ${hitCount} consecutive attacks, each dealing up to ${attackDamageMaxValue0}% normal damage, but -${preHitEffect0modValue0}% Global Evasion that stacks up to ${preHitEffect0maxStacks} times until the end of the fight",
+        "descriptionGenerator": "Make <count> consecutive attacks, each dealing up to <damage>, but <attacker> <prehitEffect>",
+        "attackTypes": [
+          "melee"
+        ]
+      },
+      {
+        "id": "Anguished_Cry",
+        "name": "Anguished Cry",
+        "defaultChance": 66,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "roll": false,
+            "maxRoll": "MaxHit",
+            "maxPercent": 75
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Fear",
+            "chance": 25
+          },
+          {
+            "effectID": "melvorF:AnguishI",
+            "chance": 75
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "description": "The enemy lets out a gut-wrenching wail, dealing ${attackDamageMaxValue0}% of its max hit. Has a ${onHitEffect0chance}% chance to apply Fear for ${onHitEffect0turns} turn and has a ${onHitEffect1chance}% chance to apply the Anguish I Curse for 3 turns.",
+        "descriptionGenerator": "<Attacker> lets out a gut-wrenching wail, dealing <damage>. <HitEffect>.",
+        "attackTypes": [
+          "magic"
+        ]
+      },
+      {
+        "id": "Drown",
+        "name": "Drown",
+        "defaultChance": 33,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "roll": false,
+            "maxRoll": "CursedFixed100",
+            "maxPercent": 10
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "description": "Attempts to drown the enemy in sorrow, dealing ${attackDamageMaxValue0} + 100% damage if the target is cursed.",
+        "descriptionGenerator": "<Attacker> attempts to drown <target> in sorrow, dealing <damage>.",
+        "attackTypes": [
+          "magic"
+        ]
+      },
+      {
+        "id": "Zombie_Summon",
+        "name": "Zombie Summon",
+        "defaultChance": 40,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "roll": true,
+            "minRoll": "MinHit",
+            "minPercent": 100,
+            "maxRoll": "MaxHit",
+            "maxPercent": 100
+          },
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "roll": false,
+            "maxRoll": "Fixed",
+            "maxPercent": 5.2
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 3100,
+        "lifesteal": 0,
+        "description": "Perform a regular attack. On use, summon a Zombie Hand that attacks for 42 damage.",
+        "usesRunesPerProc": true,
+        "attackTypes": [
+          "magic"
+        ],
+        "extraRuneConsumption": [
+          {
+            "id": "melvorD:Death_Rune",
+            "quantity": 2
+          },
+          {
+            "id": "melvorD:Earth_Rune",
+            "quantity": 3
+          },
+          {
+            "id": "melvorD:Body_Rune",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "id": "Novice_Necromancer_Zombie_Summon",
+        "name": "Zombie Summon",
+        "defaultChance": 100,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "roll": true,
+            "minRoll": "MinHit",
+            "minPercent": 100,
+            "maxRoll": "MaxHit",
+            "maxPercent": 50
+          },
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "roll": false,
+            "maxRoll": "Fixed",
+            "maxPercent": 5.2
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 3100,
+        "lifesteal": 0,
+        "description": "Summon a Zombie Hand to attack once, dealing ${attackDamageMaxValue0} damage (Can miss)..",
+        "descriptionGenerator": "Attack once dealing <damage> damage (<CanMiss>).",
+        "usesRunesPerProc": true,
+        "attackTypes": [
+          "magic"
+        ]
+      },
+      {
+        "id": "Zephyr_Strike",
+        "defaultChance": 100,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "maxRoll": "Fixed",
+            "maxPercent": 11.0,
+            "roll": false
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [],
+        "cantMiss": true,
+        "attackCount": 3,
+        "attackInterval": 300,
+        "lifesteal": 0,
+        "name": "Zephyr Strike",
+        "description": "Attack ${hitCount} times for ${attackDamageMaxValue0} damage each. If your Accuracy Rating is higher than 20K then this attack can't miss.",
+        "descriptionGenerator": "Attack <count> times for <damage> damage each. If your Accuracy Rating is higher than 20K then this attack <canMiss>.",
+        "usesRunesPerProc": false,
+        "minAccuracy": 20000
+      },
+      {
+        "id": "Cold_Snap",
+        "defaultChance": 100,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "maxRoll": "Fixed",
+            "maxPercent": 10.5,
+            "roll": false
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Slow",
+            "initialParams": [
+              {
+                "name": "magnitude",
+                "value": 15
+              },
+              {
+                "name": "turns",
+                "value": 2
+              }
+            ]
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 5,
+        "attackInterval": 200,
+        "lifesteal": 0,
+        "name": "Cold Snap",
+        "description": "Attack ${hitCount} times for ${attackDamageMaxValue0} damage each (Can miss). On a hit, gives the enemy +${onHitEffect0modValue0}% Attack Interval for ${onHitEffect0turns} of the enemy's turns.",
+        "descriptionGenerator": "Attack <count> times for <damage> damage each (<CanMiss>). On a hit, <hitEffect>.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "Avalanche",
+        "defaultChance": 100,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "maxRoll": "Fixed",
+            "maxPercent": 34,
+            "roll": false
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Sleep",
+            "chance": 100,
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 2,
+        "attackInterval": 400,
+        "lifesteal": 0,
+        "name": "Avalanche",
+        "description": "Attack ${hitCount} times dealing ${attackDamageMaxValue0} damage each (Can miss). On a hit, puts the enemy to sleep for ${onHitEffect0turns} of the enemy's turns.",
+        "descriptionGenerator": "Attack <count> times dealing <damage> damage each (<CanMiss>). On a hit, <hitEffect>.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "Fierce_Flames",
+        "defaultChance": 100,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "maxRoll": "Fixed",
+            "maxPercent": 43,
+            "roll": false
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Burn",
+            "chance": 10
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Fierce Flames",
+        "description": "Attack once dealing ${attackDamageMaxValue0} damage (Can miss). On a hit, has a ${onHitEffect0chance}% chance to inflict Burn that deals ${onHitEffect0DamageMaxValue0}% of the enemy's current hitpoints as damage over ${onHitEffect0duration}s.",
+        "descriptionGenerator": "Attack once dealing <damage> damage (<CanMiss>). On a hit, <hitEffect>.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "Stormsnap",
+        "defaultChance": 25,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "roll": true,
+            "minRoll": "MagicScaling",
+            "maxRoll": "MagicScaling",
+            "minPercent": 20,
+            "maxPercent": 40,
+            "character": "Target"
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [],
+        "cantMiss": true,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Stormsnap",
+        "description": "Perform an unavoidable attack that deals damage equal to 200%-400% of the Enemy's Magic level + 1.",
+        "descriptionGenerator": "Perform an <avoidable> attack that deals <damage>.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "DualAttack",
+        "defaultChance": 100,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 100
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [],
+        "cantMiss": false,
+        "attackCount": 2,
+        "attackInterval": 200,
+        "lifesteal": 0,
+        "name": "Dual Attack",
+        "description": "Always perform ${hitCount} consecutive attacks that deal ${attackDamageMaxValue0}% normal damage.",
+        "descriptionGenerator": "Always perform <count> consecutive attacks that deal <damage>.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "CrushingTripleSlash",
+        "defaultChance": 30,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 100,
+            "attackCount": 0
+          },
+          {
+            "damageType": "Normal",
+            "amplitude": 150,
+            "attackCount": 1
+          },
+          {
+            "damageType": "Normal",
+            "amplitude": 300,
+            "attackCount": 1
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [],
+        "cantMiss": false,
+        "attackCount": 3,
+        "attackInterval": 300,
+        "lifesteal": 0,
+        "name": "Crushing Triple Slash",
+        "description": "Perform 3 attacks that deal ${attackDamageMaxValue0}% of your normal damage on the 1st attack, ${attackDamageMaxValue1}% of your normal damage on the 2nd, and ${attackDamageMaxValue2}% of your normal damage on the 3rd.",
+        "descriptionGenerator": "Perform 3 attacks that deal <damage>."
+      },
+      {
+        "id": "DeadlyCut",
+        "defaultChance": 10,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 100
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorF:BleedDeadlyCut"
+          }
+        ],
+        "cantMiss": false,
+        "minAccuracy": 30000,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Deadly Cut",
+        "description": "Perform a regular attack. On a hit, inflicts Bleed that deals ${onHitEffect0DamageMaxValue0} and ${onHitEffect0DamageMaxValue1}% of the enemy's max hitpoints as damage over ${onHitEffect0duration}s. If your Accuracy Rating is higher than 30k then this attack can't miss.",
+        "descriptionGenerator": "Perform a regular attack. On a hit, <hitEffect>. If your Accuracy Rating is higher than 30k then this attack <canMiss>.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "SerpentsBite",
+        "defaultChance": 10,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "maxRoll": "PoisonMax35",
+            "maxPercent": 90,
+            "minRoll": "PoisonMin35",
+            "minPercent": 90,
+            "roll": true
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Poison"
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Serpent's Bite",
+        "description": "Perform an attack that deals ${attackDamageMaxValue0}% (125% if the enemy is poisoned) of your normal damage. On a hit has a ${onHitEffect0chance}% chance to inflict Poison that deals ${onHitEffect0DamageMaxValue0}% of the enemy's max hitpoints as damage over ${onHitEffect0duration}s.",
+        "descriptionGenerator": "Perform an attack that deals <damage>. On a hit <hitEffect>."
+      },
+      {
+        "id": "WandDeath",
+        "attackTypes": [
+          "magic"
+        ],
+        "defaultChance": 25,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Target",
+            "maxPercent": 25,
+            "maxRoll": "MaxHP",
+            "roll": false
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "expandedAreas:Instakill"
+          }
+        ],
+        "cantMiss": true,
+        "attackCount": 1,
+        "attackInterval": 1000,
+        "lifesteal": 0,
+        "name": "Death",
+        "description": "(Unavoidable.) The target is instantly killed. If immune to Instakill, the target instead takes damage equal to ${attackDamageMaxValue0}% of their Max HP.",
+        "descriptionGenerator": "<Avoidable>. Kills the target instantly. If immune to Instakill, takes <damage> instead.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "WandFrost",
+        "defaultChance": 15,
+        "attackTypes": [
+          "magic"
+        ],
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Target",
+            "minPercent": 5,
+            "minRoll": "MagicScaling",
+            "maxPercent": 10,
+            "maxRoll": "MagicScaling",
+            "roll": true
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Freeze",
+            "chance": 10,
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "effectID": "melvorD:Slow",
+            "initialParams": [
+              {
+                "name": "magnitude",
+                "value": 15
+              },
+              {
+                "name": "turns",
+                "value": 5
+              }
+            ]
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 300,
+        "lifesteal": 0,
+        "name": "Feelin' Frosty?",
+        "description": "A ray of biting cold pierces the target, dealing damage equal to 1 + ${attackDamageMinValue0}%-${attackDamageMaxValue0}% of their Magic level. On hit, Slows the target for ${onHitEffect1modValue0}%, and has a ${onHitEffect0chance}% to Freeze the target for ${onHitEffect0turns} of its turns.",
+        "descriptionGenerator": "Make an attack that deals <damage>. On hit, <hitEffect>.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "PolymorphWandOops",
+        "defaultChance": 0.001,
+        "attackTypes": [
+          "magic"
+        ],
+        "damage": [],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "expandedAreas:PolymorphCow",
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 300,
+        "lifesteal": 0,
+        "name": "Polymorph: Oops! (0.001% Chance)",
+        "description": "Oops! Turns YOU into a harmless cow for 1 turn.",
+        "descriptionGenerator": "Oops! Turns YOU into a harmless cow for 1 turn.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "PolymorphWand",
+        "defaultChance": 15,
+        "attackTypes": [
+          "magic"
+        ],
+        "damage": [],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "expandedAreas:PolymorphCow"
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 300,
+        "lifesteal": 0,
+        "name": "Polymorph: Cow",
+        "description": "Turns the target into a harmless cow for 3 turns.",
+        "descriptionGenerator": "Turns the target into a harmless cow for 3 turns.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "LightningWand",
+        "defaultChance": 15,
+        "attackTypes": [
+          "magic"
+        ],
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "minRoll": "Fixed",
+            "minPercent": 6,
+            "maxRoll": "Fixed",
+            "maxPercent": 48,
+            "roll": true,
+            "attackCount": 1
+          },
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "minRoll": "Fixed",
+            "minPercent": 6,
+            "maxRoll": "Fixed",
+            "maxPercent": 24,
+            "roll": true,
+            "attackCount": 2
+          },
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "minRoll": "Fixed",
+            "minPercent": 6,
+            "maxRoll": "Fixed",
+            "maxPercent": 12,
+            "roll": true,
+            "attackCount": 3
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "expandedAreas:Shock"
+          },
+          {
+            "effectID": "melvorD:Stun",
+            "chance": 10,
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 2
+              }
+            ]
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 3,
+        "attackInterval": 300,
+        "lifesteal": 0,
+        "name": "Lightning Arc",
+        "description": "An arc of lightning zaps the target ${hitCount} times over ${duration}s, dealing ${attackDamageMinValue0}-${attackDamageMaxValue0} damage on the first hit, ${attackDamageMinValue1}-${attackDamageMaxValue1} damage on the second hit, and ${attackDamageMinValue2}-${attackDamageMaxValue2} damage on the third hit. Each hit applies 1 stack of Shock (-5% Accuracy, up to 10 stacks) and has a ${onHitEffect1chance}% chance to apply Stun for ${onHitEffect1turns} turns.",
+        "descriptionGenerator": "An arc of lightning zaps the <target> dealing <damage> damage <count> times over <duration>. On a hit, <hitEffect>. <Avoidable>.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "FireballWand",
+        "defaultChance": 15,
+        "attackTypes": [
+          "magic"
+        ],
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "minRoll": "Fixed",
+            "minPercent": 6,
+            "maxRoll": "Fixed",
+            "maxPercent": 60,
+            "roll": true
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Burn"
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 300,
+        "lifesteal": 0,
+        "name": "FIREBALL!",
+        "description": "Launch an avoidable fireball that deals ${attackDamageMinValue0}-${attackDamageMaxValue0} damage. On a hit, inflicts Burn that deals ${onHitEffect0DamageMaxValue0}% of the target's current hitpoints as damage over ${onHitEffect0duration}s.",
+        "descriptionGenerator": "Launch an <avoidable> fireball that deals <damage> damage. On a hit, <hitEffect>.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "WildStrike",
+        "defaultChance": 10,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 60
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "expandedAreas:WildStrike0"
+          },
+          {
+            "effectID": "melvorD:Bleed100"
+          }
+        ],
+        "cantMiss": false,
+        "canNormalAttack": true,
+        "attackCount": 2,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Wild Strike",
+        "description": "Attack twice for 60%. On hit, inflict a 100% Bleed on the Enemy, then gain -10% Attack Interval for 2 turns.",
+        "descriptionGenerator": "Attack",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "Heartseeker",
+        "defaultChance": 10,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 80
+          },
+          {
+            "damageType": "Custom",
+            "character": "Target",
+            "maxRoll": "CurrentHP",
+            "minRoll": "CurrentHP",
+            "minPercent": 7.5,
+            "maxPercent": 10.5,
+            "roll": true
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 100,
+        "lifesteal": 0,
+        "name": "Heartseeker",
+        "description": "Attack for 80% + 7.5-10.5% of Enemy's current HP.",
+        "descriptionGenerator": "Attack",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "DeadlyDelivery",
+        "defaultChance": 10,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 110
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "expandedAreas:Vulnerability"
+          },
+          {
+            "effectID": "expandedAreas:Vulnerability"
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 150,
+        "lifesteal": 0,
+        "name": "Deadly Delivery",
+        "description": "Attack for 110%. Inflict 2 stacks of Vulnerability on hit.",
+        "descriptionGenerator": "Attack",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "CripplingStrike",
+        "defaultChance": 10,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 70
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Slow",
+            "initialParams": [
+              {
+                "name": "magnitude",
+                "value": 30
+              },
+              {
+                "name": "turns",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "effectID": "melvorD:Bleed100"
+          }
+        ],
+        "cantMiss": false,
+        "canNormalAttack": true,
+        "attackCount": 1,
+        "attackInterval": 200,
+        "lifesteal": 0,
+        "name": "Crippling Strike",
+        "description": "Attack for 70%. Inflict a 30% Slow for 1 turn and a 100% Bleed.",
+        "descriptionGenerator": "Attack",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "DisruptingStab",
+        "defaultChance": 10,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 45
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "expandedAreas:DisruptingStab0"
+          }
+        ],
+        "cantMiss": false,
+        "canNormalAttack": true,
+        "attackCount": 1,
+        "attackInterval": 250,
+        "lifesteal": 0,
+        "name": "Disrupting Stab",
+        "description": "Attack for 45%. Removes Enemy buffs. Enemy can't receive buffs for 2 turns.",
+        "descriptionGenerator": "Attack",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "WideSlash",
+        "defaultChance": 10,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 120,
+            "attackCount": 2
+          }
+        ],
+        "prehitEffects": [
+          {
+            "effectID": "expandedAreas:WideSlash0"
+          }
+        ],
+        "onhitEffects": [],
+        "cantMiss": false,
+        "canNormalAttack": false,
+        "attackCount": 2,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Wide Slash",
+        "description": "Gain +30% Evasion for 1 turn. Then, attack in an arc (2 attacks) for 120% each.",
+        "descriptionGenerator": "Attack",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "Whirlwind",
+        "defaultChance": 10,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 35
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [],
+        "cantMiss": false,
+        "attackCount": 8,
+        "attackInterval": 100,
+        "lifesteal": 0,
+        "canNormalAttack": false,
+        "name": "Whirlwind",
+        "description": "Attack 8 times for 35% each.",
+        "descriptionGenerator": "Attack",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "TrueStrike",
+        "defaultChance": 10,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 100
+          },
+          {
+            "damageType": "Custom",
+            "character": "Target",
+            "maxRoll": "MaxHitDR",
+            "minRoll": "MaxHitDR",
+            "maxPercent": 50,
+            "minPercent": 25,
+            "roll": true
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [],
+        "cantMiss": true,
+        "attackCount": 1,
+        "attackInterval": 150,
+        "lifesteal": 0,
+        "name": "True Strike",
+        "description": "Guaranteed hit for 100% + 25-50% of the Enemy's Damage Resistance.",
+        "descriptionGenerator": "Attack",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "Counterattack",
+        "defaultChance": 10,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 100,
+            "attackCount": 2
+          }
+        ],
+        "prehitEffects": [
+          {
+            "effectID": "expandedAreas:Counterattack0"
+          }
+        ],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Slow",
+            "initialParams": [
+              {
+                "name": "magnitude",
+                "value": 20
+              },
+              {
+                "name": "turns",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "cantMiss": false,
+        "canNormalAttack": true,
+        "attackCount": 2,
+        "attackInterval": 3600,
+        "lifesteal": 0,
+        "name": "Counterattack",
+        "description": "Block all incoming attacks for 1 turn. Then, after 3.6s, perform a counterattack for 100%, and inflict a 20% Slow for 2 turns.",
+        "descriptionGenerator": "Attack",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "PommelBash",
+        "defaultChance": 10,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 140
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "expandedAreas:Daze",
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 2
+              }
+            ]
+          }
+        ],
+        "cantMiss": false,
+        "canNormalAttack": true,
+        "attackCount": 1,
+        "attackInterval": 200,
+        "lifesteal": 0,
+        "name": "Pommel Bash",
+        "description": "Attack for 140%, inflicting Daze on the Enemy for 2 turns on hit.",
+        "descriptionGenerator": "Attack",
+        "usesRunesPerProc": false
+      }
+    ],
+    "attackSpellbooks": [
+      {
+        "id": "Occult",
+        "name": "Occult Magic",
+        "media": "assets/combat/magic/occult.png",
+        "allowAuroras": false
+      }
+    ],
+    "attackSpells": [
+      {
+        "id": "Wind_Storm",
+        "name": "Wind Storm",
+        "media": "assets/combat/magic/Wind_Storm.png",
+        "level": 74,
+        "runesRequired": [
+          {
+            "id": "melvorD:Air_Rune",
+            "quantity": 20
+          },
+          {
+            "id": "expandedAreas:Rage_Rune",
+            "quantity": 1
+          }
+        ],
+        "maxHit": 25,
+        "categories": [
+          "melvorD:Air",
+          "melvorD:Elemental"
+        ],
+        "spellbook": "melvorD:Standard",
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 5,
+            "effectID": "melvorD:Frostburn"
+          }
+        ]
+      },
+      {
+        "id": "Water_Storm",
+        "name": "Water Storm",
+        "media": "assets/combat/magic/Water_Storm.png",
+        "level": 78,
+        "runesRequired": [
+          {
+            "id": "melvorD:Air_Rune",
+            "quantity": 12
+          },
+          {
+            "id": "expandedAreas:Rage_Rune",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Water_Rune",
+            "quantity": 12
+          }
+        ],
+        "runesRequiredAlt": [
+          {
+            "id": "melvorD:Mist_Rune",
+            "quantity": 12
+          },
+          {
+            "id": "expandedAreas:Rage_Rune",
+            "quantity": 1
+          }
+        ],
+        "maxHit": 26.5,
+        "categories": [
+          "melvorD:Water",
+          "melvorD:Elemental"
+        ],
+        "spellbook": "melvorD:Standard",
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 5,
+            "effectID": "melvorD:Freeze"
+          }
+        ]
+      },
+      {
+        "id": "Earth_Storm",
+        "name": "Earth Storm",
+        "media": "assets/combat/magic/Earth_Storm.png",
+        "level": 81,
+        "runesRequired": [
+          {
+            "id": "melvorD:Air_Rune",
+            "quantity": 12
+          },
+          {
+            "id": "expandedAreas:Rage_Rune",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Earth_Rune",
+            "quantity": 12
+          }
+        ],
+        "runesRequiredAlt": [
+          {
+            "id": "melvorD:Dust_Rune",
+            "quantity": 12
+          },
+          {
+            "id": "expandedAreas:Rage_Rune",
+            "quantity": 1
+          }
+        ],
+        "maxHit": 28,
+        "categories": [
+          "melvorD:Earth",
+          "melvorD:Elemental"
+        ],
+        "spellbook": "melvorD:Standard",
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 5,
+            "effectID": "melvorD:Bleed100"
+          }
+        ]
+      },
+      {
+        "id": "Fire_Storm",
+        "name": "Fire Storm",
+        "media": "assets/combat/magic/Fire_Storm.png",
+        "level": 85,
+        "runesRequired": [
+          {
+            "id": "melvorD:Air_Rune",
+            "quantity": 12
+          },
+          {
+            "id": "expandedAreas:Rage_Rune",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Fire_Rune",
+            "quantity": 12
+          }
+        ],
+        "runesRequiredAlt": [
+          {
+            "id": "melvorD:Smoke_Rune",
+            "quantity": 12
+          },
+          {
+            "id": "expandedAreas:Rage_Rune",
+            "quantity": 1
+          }
+        ],
+        "maxHit": 29.5,
+        "categories": [
+          "melvorD:Fire",
+          "melvorD:Elemental"
+        ],
+        "spellbook": "melvorD:Standard",
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 5,
+            "effectID": "melvorD:Burn"
+          }
+        ]
+      },
+      {
+        "id": "Zephyr_Strike",
+        "name": "Zephyr Strike",
+        "media": "assets/combat/magic/Zephyr_Strike.png",
+        "level": 54,
+        "maxHit": 7,
+        "runesRequired": [
+          {
+            "id": "melvorD:Air_Rune",
+            "quantity": 15
+          },
+          {
+            "id": "melvorD:Ancient_Rune",
+            "quantity": 3
+          }
+        ],
+        "requirements": [
+          {
+            "type": "DungeonCompletion",
+            "dungeonID": "melvorD:Hall_of_Wizards",
+            "count": 100
+          }
+        ],
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "effectID": "melvorD:Frostburn"
+          }
+        ],
+        "spellbook": "melvorF:Ancient",
+        "categories": [
+          "melvorD:Air",
+          "melvorD:Elemental"
+        ]
+      },
+      {
+        "id": "Cold_Snap",
+        "name": "Cold Snap",
+        "media": "assets/combat/magic/Cold_Snap.png",
+        "level": 58,
+        "maxHit": 8,
+        "runesRequired": [
+          {
+            "id": "melvorD:Water_Rune",
+            "quantity": 15
+          },
+          {
+            "id": "melvorD:Ancient_Rune",
+            "quantity": 3
+          }
+        ],
+        "requirements": [
+          {
+            "type": "DungeonCompletion",
+            "dungeonID": "melvorD:Hall_of_Wizards",
+            "count": 100
+          }
+        ],
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "effectID": "melvorD:Slow",
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 2
+              },
+              {
+                "name": "magnitude",
+                "value": 20
+              }
+            ]
+          }
+        ],
+        "spellbook": "melvorF:Ancient",
+        "categories": [
+          "melvorD:Water",
+          "melvorD:Elemental"
+        ]
+      },
+      {
+        "id": "Avalanche",
+        "name": "Avalanche",
+        "media": "assets/combat/magic/Avalanche.png",
+        "level": 62,
+        "maxHit": 9,
+        "runesRequired": [
+          {
+            "id": "melvorD:Earth_Rune",
+            "quantity": 15
+          },
+          {
+            "id": "melvorD:Ancient_Rune",
+            "quantity": 2
+          }
+        ],
+        "requirements": [
+          {
+            "type": "DungeonCompletion",
+            "dungeonID": "melvorD:Hall_of_Wizards",
+            "count": 100
+          }
+        ],
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "effectID": "melvorD:Bleed100"
+          }
+        ],
+        "spellbook": "melvorF:Ancient",
+        "categories": [
+          "melvorD:Earth",
+          "melvorD:Elemental"
+        ]
+      },
+      {
+        "id": "Fierce_Flames",
+        "name": "Fierce Flames",
+        "media": "assets/combat/magic/fierce_flames.png",
+        "level": 66,
+        "maxHit": 10,
+        "runesRequired": [
+          {
+            "id": "melvorD:Fire_Rune",
+            "quantity": 15
+          },
+          {
+            "id": "melvorD:Ancient_Rune",
+            "quantity": 3
+          }
+        ],
+        "requirements": [
+          {
+            "type": "DungeonCompletion",
+            "dungeonID": "melvorD:Hall_of_Wizards",
+            "count": 100
+          }
+        ],
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "effectID": "melvorD:Burn"
+          }
+        ],
+        "spellbook": "melvorF:Ancient",
+        "categories": [
+          "melvorD:Fire",
+          "melvorD:Elemental"
+        ]
+      },
+      {
+        "id": "GraveTouch",
+        "name": "Grave Touch",
+        "media": "assets/combat/magic/grave_touch.png",
+        "level": 30,
+        "runesRequired": [
+          {
+            "id": "melvorD:Death_Rune",
+            "quantity": 1
+          },
+          {
+            "id": "melvorF:Spirit_Rune",
+            "quantity": 1
+          }
+        ],
+        "maxHit": 10,
+        "combatEffects": [
+          {
+            "chance": 50,
+            "effectID": "expandedAreas:HealImmunity",
+            "appliesWhen": "HitWithAttack",
+            "targetOverride": "Target",
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 2
+              }
+            ]
+          }
+        ],
+        "categories": [
+          "expandedAreas:Spirit",
+          "expandedAreas:Death"
+        ],
+        "spellbook": "expandedAreas:Occult"
+      }
+    ],
+    "combatEffectGroups": [
+      {
+        "id": "Daze",
+        "name": "Daze",
+        "adjective": "Dazed"
+      },
+      {
+        "id": "HealImmune",
+        "name": "Heal Immunity",
+        "adjective": "Heal Immune"
+      },
+      {
+        "id": "Instakill",
+        "name": "Instakill",
+        "adjective": "Cursed by Death Itself"
+      },
+      {
+        "id": "Paralyze",
+        "name": "Paralyze",
+        "adjective": "Paralyzed"
+      },
+      {
+        "id": "Vulnerability",
+        "name": "Vulnerability",
+        "adjective": "Vulnerable"
+      }
+    ],
+    "combatEffectTemplates": [
+      {
+        "id": "Instakill",
+        "baseTemplates": [
+          "melvorD:DOT"
+        ],
+        "baseEffectData": {
+          "name": "Instakill",
+          "media": "assets/combat/status/instakill.png",
+          "behaviours": [
+            {
+              "type": "DamageCharacter",
+              "value": "p.damagePerProc",
+              "triggersOn": [
+                {
+                  "type": "TimerFired",
+                  "timerName": "proc"
+                }
+              ]
+            }
+          ],
+          "effectGroups": [
+            "expandedAreas:Instakill"
+          ],
+          "exclusiveGroups": [
+            "expandedAreas:Instakill"
+          ]
+        }
+      },
+      {
+        "id": "Paralyze",
+        "description": "Endpoint Template. Defines behaviours for an effect that: Interrupts a character's turn when applied; prevents them from attacking, evading, or regenerating barrier; and causes them to take 100% more damage. Also grants immunity to stun-likes for 3 turns.",
+        "baseTemplates": [
+          "melvorD:StunLike"
+        ],
+        "baseEffectData": {
+          "name": "Paralyzed",
+          "media": "assets/combat/status/paralyzed.png",
+          "tooltipSpans": [
+            {
+              "type": "String",
+              "value": "Cannot attack or evade"
+            },
+            {
+              "type": "String",
+              "value": "Increased damage taken",
+              "templateData": {
+                "value": 100
+              },
+              "className": "text-danger"
+            },
+            {
+              "type": "Turns",
+              "turns": "p.turns"
+            }
+          ],
+          "behaviours": [
+            {
+              "type": "ProcessApplicator",
+              "applicator": {
+                "effectID": "melvorD:StunImmunity"
+              },
+              "triggersOn": [
+                {
+                  "type": "EffectApplied"
+                }
+              ]
+            }
+          ],
+          "statGroups": [
+            {
+              "name": "debuff",
+              "modifiers": {
+                "cantAttack": 1,
+                "cantEvade": 1,
+                "cantRegenBarrier": 1,
+                "damageTaken": 100
+              }
+            }
+          ],
+          "effectGroups": [
+            "expandedAreas:Paralyze"
+          ],
+          "exclusiveGroups": [
+            "melvorD:StunImmune"
+          ]
+        }
+      },
+      {
+        "id": "SadCombo",
+        "description": "An effect that applies stacks of modifiers. Stacks are increased by 1 each time the character misses with an attack. The effect is removed if the character hits with an attack, or combat ends.",
+        "baseEffectData": {
+          "turnText": "statGroup.stacks",
+          "tooltipSpans": [
+            {
+              "type": "Stats",
+              "statGroupName": "stacks"
+            },
+            {
+              "type": "StacksWithMax",
+              "stacks": "statGroup.stacks",
+              "maxStacks": "p.maxStacks"
+            }
+          ],
+          "descriptionTemplateData": {
+            "initialParameters": {
+              "maxStacks": "maxStacks"
+            },
+            "statGroups": {
+              "": "stacks"
+            }
+          },
+          "target": "Self",
+          "behaviours": [
+            {
+              "type": "ModifyStats",
+              "statGroupName": "stacks",
+              "newValue": "min(statGroup.stacks + 1, p.maxStacks)",
+              "triggersOn": [
+                {
+                  "type": "MissedWithAttack"
+                }
+              ]
+            },
+            {
+              "type": "RemoveEffect",
+              "triggersOn": [
+                {
+                  "type": "HitWithAttack"
+                },
+                {
+                  "type": "EndOfFight"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "combatEffects": [
+      {
+        "id": "OntoTheNextRoom",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Onto the Next Room",
+        "media": "assets/combat/status/evasion_increase.svg",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 69
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "currentHPDamageTakenOnAttack": 696969
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "Blind",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Blind",
+        "media": "assets/combat/status/attack_decrease.svg",
+        "target": "Target",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 5
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "accuracyRating": -20
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "ArcaneBarrier",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Arcane Barrier",
+        "media": "assets/combat/status/evasion_increase.svg",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "evasion": 50,
+              "flatResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": 25
+                }
+              ]
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "Assassin",
+        "templateID": "melvorD:StackingSelfCountingModifier",
+        "name": "Assassin",
+        "media": "assets/combat/status/attack_increase.svg",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 5
+          },
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 5
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "accuracyRating": 30,
+              "critChance": 5
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "CircleOfBones0",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Circle of Bones",
+        "media": "assets/combat/status/evasion_increase.svg",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "flatResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": 30
+                }
+              ],
+              "reflectDamage": 25
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "Burrow",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Burrow",
+        "media": "assets/combat/status/burrow.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "meleeImmunity": 1,
+              "rangedImmunity": 1,
+              "magicImmunity": 1,
+              "cantAttack": 1,
+              "cantSpecialAttack": 1,
+              "flatResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": 69
+                }
+              ],
+              "evasion": 6969
+            }
+          }
+        ]
+      },
+      {
+        "id": "ElysianSpiritShield",
+        "templateID": "melvorD:StackingSelfCountingModifier",
+        "name": "Elysian Spirit Shield",
+        "media": "assets/combat/status/evasion_increase.svg",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 1
+          },
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 1
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "flatResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": 20
+                }
+              ]
+            }
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Elysian_Spirit_Shield"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "DarkEnergySap",
+        "templateID": "melvorD:StackingSelfCountingModifier",
+        "name": "Dark Energy Sap",
+        "media": "assets/combat/status/darkenergysap.png",
+        "target": "Target",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 2
+          },
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "maxHitpoints": -2.5
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "DarkEnergySapPlayer",
+        "templateID": "melvorD:StackingSelfCountingModifier",
+        "name": "Dark Energy Sap",
+        "media": "assets/combat/status/darkenergysap.png",
+        "target": "Target",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 2
+          },
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "maxHitpoints": -2.5
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "CorporealBeastHeal0",
+        "templateID": "melvorD:Regen",
+        "name": "Dark Energy Heal",
+        "parameters": [
+          {
+            "name": "procs",
+            "initialValue": 1
+          },
+          {
+            "name": "interval",
+            "initialValue": 50
+          }
+        ],
+        "damageGroups": [
+          {
+            "name": "totalHealing",
+            "damage": [
+              {
+                "roll": false,
+                "character": "Attacker",
+                "maxRoll": "MaxHP",
+                "maxPercent": 0.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DarkEnergyHealPlayer",
+        "templateID": "melvorD:Regen",
+        "name": "Dark Energy Heal",
+        "parameters": [
+          {
+            "name": "procs",
+            "initialValue": 1
+          },
+          {
+            "name": "interval",
+            "initialValue": 50
+          }
+        ],
+        "damageGroups": [
+          {
+            "name": "totalHealing",
+            "damage": [
+              {
+                "roll": false,
+                "character": "Attacker",
+                "maxRoll": "MaxHP",
+                "maxPercent": 0.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Blighted",
+        "templateID": "melvorD:StackingNonCountingModifier",
+        "name": "Blighted",
+        "media": "assets/combat/status/blighted.png",
+        "target": "Target",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 40
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "flatMaxHit": -1
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "Tainted",
+        "templateID": "melvorD:StackingNonCountingModifier",
+        "name": "Tainted",
+        "media": "assets/combat/status/tainted.png",
+        "target": "Target",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 5
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "rangedEvasion": -20
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "Defiled",
+        "templateID": "melvorD:SelfTurnCounting",
+        "name": "Defiled",
+        "media": "assets/combat/status/defiled.png",
+        "tooltipSpans": [
+          {
+            "type": "Turns",
+            "turns": "p.turns"
+          }
+        ],
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 1
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "accuracyRating": 999999
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "ResistanceIncrease5",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "+5% Damage Reduction",
+        "media": "assets/combat/status/evasion_increase.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "flatResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": 5
+                }
+              ]
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "ResistanceIncrease10",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "+10% Damage Reduction",
+        "media": "assets/combat/status/evasion_increase.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "flatResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": 10
+                }
+              ]
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "ResistanceIncrease15",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "+15% Damage Reduction",
+        "media": "assets/combat/status/evasion_increase.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "flatResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": 15
+                }
+              ]
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "IncreasedMaxHitpoints",
+        "templateID": "melvorD:StackingNonCountingModifier",
+        "name": "Constitution",
+        "media": "assets/combat/status/hp_up.svg",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 50
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "maxHitpoints": 1
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "Paralyze",
+        "templateID": "expandedAreas:Paralyze",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 1
+          }
+        ]
+      },
+      {
+        "id": "DecreasedStrengthStacking",
+        "templateID": "melvorD:StackingNonCountingModifier",
+        "name": "Strength Decreased",
+        "media": "assets/combat/status/strength_decrease.png",
+        "target": "Target",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 5
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "meleeMaxHit": -10
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "Lesser_Sigil_of_Perception",
+        "templateID": "expandedAreas:SadCombo",
+        "name": "Sigil of Perception (Lesser)",
+        "media": "assets/bank/Lesser_Sigil_of_Perception.png",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "accuracyRating": 10
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "maxStacks",
+            "initialValue": 5
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Lesser_Sigil_of_Perception"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "Greater_Sigil_of_Perception",
+        "templateID": "expandedAreas:SadCombo",
+        "name": "Sigil of Perception (Greater)",
+        "media": "assets/bank/Greater_Sigil_of_Perception.png",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "accuracyRating": 15
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "maxStacks",
+            "initialValue": 5
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Greater_Sigil_of_Perception"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "Superior_Sigil_of_Perception",
+        "templateID": "expandedAreas:SadCombo",
+        "name": "Sigil of Perception (Superior)",
+        "media": "assets/bank/Superior_Sigil_of_Perception.png",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "accuracyRating": 20
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "maxStacks",
+            "initialValue": 5
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Superior_Sigil_of_Perception"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "Lesser_Sigil_of_Battle",
+        "templateID": "melvorD:NonCountingIncremental",
+        "name": "Sigil of Battle (Lesser)",
+        "media": "assets/bank/Lesser_Sigil_of_Battle.png",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "maxHit": 2
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "maxStacks",
+            "initialValue": 5
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Lesser_Sigil_of_Battle"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "Greater_Sigil_of_Battle",
+        "templateID": "melvorD:NonCountingIncremental",
+        "name": "Sigil of Battle (Greater)",
+        "media": "assets/bank/Greater_Sigil_of_Battle.png",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "maxHit": 3
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "maxStacks",
+            "initialValue": 5
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Greater_Sigil_of_Battle"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "Superior_Sigil_of_Battle",
+        "templateID": "melvorD:NonCountingIncremental",
+        "name": "Sigil of Battle (Superior)",
+        "media": "assets/bank/Superior_Sigil_of_Battle.png",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "maxHit": 4
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "maxStacks",
+            "initialValue": 5
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Superior_Sigil_of_Battle"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "Lesser_Sigil_of_Ferocity",
+        "templateID": "melvorD:NonCountingIncremental",
+        "name": "Sigil of Ferocity (Lesser)",
+        "media": "assets/bank/Lesser_Sigil_of_Ferocity.png",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "critMultiplier": 2
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "maxStacks",
+            "initialValue": 25
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Lesser_Sigil_of_Ferocity"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "Greater_Sigil_of_Ferocity",
+        "templateID": "melvorD:NonCountingIncremental",
+        "name": "Sigil of Ferocity (Greater)",
+        "media": "assets/bank/Greater_Sigil_of_Ferocity.png",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "critMultiplier": 4
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "maxStacks",
+            "initialValue": 25
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Greater_Sigil_of_Ferocity"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "Superior_Sigil_of_Ferocity",
+        "templateID": "melvorD:NonCountingIncremental",
+        "name": "Sigil of Ferocity (Superior)",
+        "media": "assets/bank/Superior_Sigil_of_Ferocity.png",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "critMultiplier": 6
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "maxStacks",
+            "initialValue": 25
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Superior_Sigil_of_Ferocity"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "FearI",
+        "templateID": "melvorD:Curse",
+        "name": "Fear I",
+        "media": "assets/combat/magic/fear_i.png",
+        "statGroups": [
+          {
+            "name": "debuff",
+            "modifiers": {
+              "flatAttackInterval": 100
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "FearII",
+        "templateID": "melvorD:Curse",
+        "name": "Fear II",
+        "media": "assets/combat/magic/fear_ii.png",
+        "statGroups": [
+          {
+            "name": "debuff",
+            "modifiers": {
+              "flatAttackInterval": 200
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "FearIII",
+        "templateID": "melvorD:Curse",
+        "name": "Fear III",
+        "media": "assets/combat/magic/fear_iii.png",
+        "statGroups": [
+          {
+            "name": "debuff",
+            "modifiers": {
+              "flatAttackInterval": 300
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "FearIV",
+        "templateID": "melvorD:Curse",
+        "name": "Fear IV",
+        "media": "assets/combat/magic/fear_iv.png",
+        "statGroups": [
+          {
+            "name": "debuff",
+            "modifiers": {
+              "flatAttackInterval": 400
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "SoulSplitIV",
+        "templateID": "melvorD:Curse",
+        "name": "Soul Split IV",
+        "media": "assets/combat/magic/soul_split_iv.png",
+        "statGroups": [
+          {
+            "name": "debuff",
+            "modifiers": {
+              "magicEvasion": -20
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "AnguishIV",
+        "templateID": "melvorD:Curse",
+        "name": "Anguish IV",
+        "media": "assets/combat/magic/anguish_iv.png",
+        "statGroups": [
+          {
+            "name": "debuff",
+            "modifiers": {
+              "damageTaken": 20
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "WeakeningIV",
+        "templateID": "melvorD:Curse",
+        "name": "Weakening IV",
+        "media": "assets/combat/magic/weakening_iv.png",
+        "statGroups": [
+          {
+            "name": "debuff",
+            "modifiers": {
+              "maxHit": -20
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "BlindingIV",
+        "templateID": "melvorD:Curse",
+        "name": "Blinding IV",
+        "media": "assets/combat/magic/blinding_iv.png",
+        "statGroups": [
+          {
+            "name": "debuff",
+            "modifiers": {
+              "accuracyRating": -20
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "AfflictionCurse",
+        "templateID": "melvorD:Curse",
+        "name": "Affliction",
+        "media": "assets/combat/status/affliction.svg",
+        "tooltipSpans": [
+          {
+            "type": "String",
+            "value": "-2% to all positive effects and values<br>+2% to all negative effects and values"
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "debuff",
+            "modifiers": {
+              "maxHitpoints": -2,
+              "evasion": -2,
+              "accuracyRating": -2,
+              "flatResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": -2
+                }
+              ],
+              "attackInterval": 2,
+              "maxHit": -2,
+              "lifesteal": -2,
+              "hitpointRegeneration": -2,
+              "effectIgnoreChance": [
+                {
+                  "effectGroupID": "melvorD:Buff",
+                  "value": 2
+                },
+                {
+                  "effectGroupID": "melvorD:Debuff",
+                  "value": -2
+                },
+                {
+                  "effectGroupID": "melvorD:DamageOverTime",
+                  "value": -2
+                },
+                {
+                  "effectGroupID": "melvorD:RegenDOT",
+                  "value": 2
+                }
+              ]
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "AfflictionGreaterCurse",
+        "templateID": "melvorD:Curse",
+        "name": "Affliction",
+        "media": "assets/combat/status/affliction.svg",
+        "tooltipSpans": [
+          {
+            "type": "String",
+            "value": "-4% to all positive effects and values<br>+4% to all negative effects and values"
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "debuff",
+            "modifiers": {
+              "maxHitpoints": -4,
+              "evasion": -4,
+              "accuracyRating": -4,
+              "flatResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": -4
+                }
+              ],
+              "attackInterval": 4,
+              "maxHit": -4,
+              "lifesteal": -4,
+              "hitpointRegeneration": -4,
+              "effectIgnoreChance": [
+                {
+                  "effectGroupID": "melvorD:Buff",
+                  "value": 4
+                },
+                {
+                  "effectGroupID": "melvorD:Debuff",
+                  "value": -4
+                },
+                {
+                  "effectGroupID": "melvorD:DamageOverTime",
+                  "value": -4
+                },
+                {
+                  "effectGroupID": "melvorD:RegenDOT",
+                  "value": 4
+                }
+              ]
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "HealImmunity",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Heal Immunity",
+        "media": "assets/combat/status/heal_disabled.png",
+        "tooltipSpans": [
+          {
+            "type": "String",
+            "value": "Can't heal or regen"
+          },
+          {
+            "type": "Turns",
+            "turns": "p.turns"
+          }
+        ],
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 1
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "effectImmunity": [
+                {
+                  "effectGroupID": "melvorD:RegenDOT",
+                  "value": 1
+                }
+              ],
+              "lifesteal": -99999999,
+              "hitpointRegeneration": -999999
+            }
+          }
+        ]
+      },
+      {
+        "id": "Instakill",
+        "templateID": "expandedAreas:Instakill",
+        "parameters": [
+          {
+            "name": "procs",
+            "initialValue": 1
+          },
+          {
+            "name": "interval",
+            "initialValue": 50
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "InterruptTurn",
+            "triggersOn": [
+              {
+                "type": "EffectApplied"
+              }
+            ]
+          }
+        ],
+        "damageGroups": [
+          {
+            "name": "total",
+            "damage": [
+              {
+                "character": "Target",
+                "roll": false,
+                "maxRoll": "MaxHP",
+                "maxPercent": 666
+              }
+            ],
+            "applyDamageModifiers": false,
+            "applyResistance": false
+          }
+        ]
+      },
+      {
+        "id": "PolymorphCow",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Polymorphed",
+        "media": "assets/combat/status/polymorphed.png",
+        "target": "Target",
+        "tooltipSpans": [
+          {
+            "type": "String",
+            "value": "As harmless as a cow."
+          },
+          {
+            "type": "Turns",
+            "turns": "p.turns"
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 2
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "effectImmunity": [
+                {
+                  "effectGroupID": "melvorD:FearImmune",
+                  "value": 1
+                },
+                {
+                  "effectGroupID": "melvorD:StunImmune",
+                  "value": 1
+                },
+                {
+                  "effectGroupID": "melvorD:SleepImmune",
+                  "value": 1
+                }
+              ],
+              "cantSpecialAttack": 1,
+              "damageDealt": -99,
+              "accuracyRating": -99,
+              "evasion": -99,
+              "maxHitpoints": -99,
+              "resistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": -99
+                }
+              ]
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "Shock",
+        "templateID": "melvorD:StackingNonCountingModifier",
+        "name": "Shocked",
+        "media": "assets/combat/status/shocked.svg",
+        "target": "Target",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "accuracyRating": -5
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "WildStrike0",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Wild Strike",
+        "media": "assets/combat/status/speedup.svg",
+        "target": "Self",
+        "tooltipSpans": [
+          {
+            "type": "Stats",
+            "statGroupName": "stacks"
+          },
+          {
+            "type": "Turns",
+            "turns": "p.turns"
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 2
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "attackInterval": -10
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "WideSlash0",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Wide Slash",
+        "media": "assets/combat/status/evasion_increase.svg",
+        "target": "Self",
+        "tooltipSpans": [
+          {
+            "type": "Stats",
+            "statGroupName": "stacks"
+          },
+          {
+            "type": "Turns",
+            "turns": "p.turns"
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 1
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "evasion": 30
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "DisruptingStab0",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Disrupting Stab",
+        "media": "assets/combat/status/null.svg",
+        "target": "Target",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 1
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "effectImmunity": [
+                {
+                  "effectGroupID": "melvorD:Buff",
+                  "value": 1
+                }
+              ]
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "Counterattack0",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Counterattack",
+        "media": "assets/combat/status/evasion_increase.svg",
+        "target": "Self",
+        "tooltipSpans": [
+          {
+            "type": "Stats",
+            "statGroupName": "stacks"
+          },
+          {
+            "type": "Turns",
+            "turns": "p.turns"
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 1
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "meleeImmunity": 1,
+              "rangedImmunity": 1,
+              "magicImmunity": 1
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "Vulnerability",
+        "name": "Vulnerability",
+        "media": "assets/combat/status/vulnerability.png",
+        "templateID": "melvorD:StackingNonCountingModifier",
+        "target": "Target",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 25
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "damageTaken": 1
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "Daze",
+        "name": "Daze",
+        "media": "assets/combat/status/dazed.png",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "target": "Target",
+        "tooltipSpans": [
+          {
+            "type": "Stats",
+            "statGroupName": "stacks"
+          },
+          {
+            "type": "Turns",
+            "turns": "p.turns"
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "cantEvade": 1,
+              "cantSpecialAttack": 1,
+              "cantRegenBarrier": 1,
+              "attackInterval": 10
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 1
+          }
+        ],
+        "effectGroups": [
+          "expandedAreas:Daze",
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "CreatureTypeBestial",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Bestial",
+        "media": "assets/combat/status/animal.png",
+        "target": "Self",
+        "parameters": [],
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeConstructed",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Constructed",
+        "media": "assets/combat/status/constructed.png",
+        "target": "Self",
+        "parameters": [],
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeDraconic",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Draconic",
+        "media": "assets/combat/status/draconic.png",
+        "target": "Self",
+        "parameters": [],
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeElemental",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Elemental",
+        "media": "assets/combat/status/elemental.png",
+        "target": "Self",
+        "parameters": [],
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeFae",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Fae",
+        "media": "assets/combat/status/fae.png",
+        "target": "Self",
+        "parameters": [],
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeGelatinous",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Gelatinous",
+        "media": "assets/combat/status/gelatinous.png",
+        "target": "Self",
+        "parameters": [],
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeGiantkin",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Giantkin",
+        "media": "assets/combat/status/giantkin.png",
+        "target": "Self",
+        "parameters": [],
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeHeavenly",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Heavenly",
+        "media": "assets/combat/status/heavenly.png",
+        "target": "Self",
+        "parameters": [],
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeHellish",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Hellish",
+        "media": "assets/combat/status/hellish.png",
+        "target": "Self",
+        "parameters": [],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "combatEffects": [
+              {
+                "appliesWhen": "StartOfFight",
+                "effectID": "expandedAreas:VulnerabilitySilver"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeHumanoid",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Humanoid",
+        "media": "assets/combat/status/human.png",
+        "target": "Self",
+        "parameters": [],
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeMonstrous",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Monstrous",
+        "media": "assets/combat/status/monstrous.png",
+        "target": "Self",
+        "parameters": [],
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypePlantlike",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Plantlike",
+        "media": "assets/combat/status/plant.png",
+        "target": "Self",
+        "parameters": [],
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeStrange",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Strange",
+        "media": "assets/combat/status/strange.png",
+        "target": "Self",
+        "parameters": [],
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeUndead",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Undead",
+        "media": "assets/combat/status/undead.png",
+        "target": "Self",
+        "tooltipSpans": [
+          {
+            "type": "String",
+            "value": "Immune to Curses, Fear, Poison, and Sleep. Vulnerable to Silver."
+          }
+        ],
+        "parameters": [],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "effectImmunity": [
+                {
+                  "effectGroupID": "melvorD:PoisonDOT",
+                  "value": 1
+                },
+                {
+                  "effectGroupID": "melvorD:Sleep",
+                  "value": 1
+                },
+                {
+                  "effectGroupID": "melvorD:Fear",
+                  "value": 1
+                },
+                {
+                  "effectGroupID": "melvorD:Curse",
+                  "value": 1
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "CreatureSubtypeLycanthrope",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Lycanthrope",
+        "media": "assets/combat/status/lycanthrope.png",
+        "tooltipSpans": [
+          {
+            "type": "String",
+            "value": "+50% resistance against Melee and Ranged attacks from non-silver weapons and ammunition."
+          }
+        ],
+        "target": "Self",
+        "parameters": [],
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
+      },
+      {
+        "id": "VulnerabilityCrush",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Crush Vulnerability",
+        "media": "assets/combat/status/vulnerability_crush.png",
+        "target": "Self",
+        "parameters": [],
+        "tooltipSpans": [
+          {
+            "type": "String",
+            "value": "Takes extra damage from crushing weapons, such as hammers."
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
+      },
+      {
+        "id": "VulnerabilityStab",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Stab Vulnerability",
+        "media": "assets/combat/status/vulnerability_stab.png",
+        "target": "Self",
+        "parameters": [],
+        "tooltipSpans": [
+          {
+            "type": "String",
+            "value": "Takes extra damage from stabbing weapons, such as daggers."
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
+      },
+      {
+        "id": "VulnerabilitySlash",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Slash Vulnerability",
+        "media": "assets/combat/status/vulnerability_slash.png",
+        "target": "Self",
+        "parameters": [],
+        "tooltipSpans": [
+          {
+            "type": "String",
+            "value": "Takes extra damage from slashing weapons, such as scimitars."
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
+      },
+      {
+        "id": "VulnerabilitySilver",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Silver Vulnerability",
+        "media": "assets/combat/status/vulnerability_silver.png",
+        "tooltipSpans": [
+          {
+            "type": "String",
+            "value": "Takes extra damage from silver weapons and ammunition."
+          }
+        ],
+        "target": "Self",
+        "parameters": [],
+        "statGroups": [
+          {
+            "name": "stacks"
+          }
+        ]
+      }
+    ],
+    "combatPassives": [
+      {
+        "id": "PhaseHP10",
+        "name": "Phase HP = 182 / 1,820",
+        "customDescription": "Each phase (excluding the final phase) of this boss is limited to 10% of its total maximum hitpoints.",
+        "modifiers": {
+          "flatMaxHitpoints": -1638
+        }
+      },
+      {
+        "id": "MeleeImmunity",
+        "name": "Melee Immunity",
+        "modifiers": {
+          "meleeImmunity": 1
+        },
+        "customDescription": "Immune to all Melee Attacks."
+      },
+      {
+        "id": "VenomousHide",
+        "name": "Venomous Hide",
+        "modifiers": {
+          "effectImmunity": [
+            {
+              "effectGroupID": "melvorD:PoisonDOT",
+              "value": 1
+            },
+            {
+              "effectGroupID": "melvorD:DeadlyPoisonDOT",
+              "value": 1
+            }
+          ]
+        },
+        "combatEffects": [
+          {
+            "effectID": "melvorD:DeadlyPoison",
+            "chance": 20,
+            "appliesWhen": "HitWithAttack"
+          }
+        ]
+      },
+      {
+        "id": "MagmaticHide",
+        "name": "Magmatic Hide",
+        "modifiers": {
+          "effectImmunity": [
+            {
+              "effectGroupID": "melvorD:BurnDOT",
+              "value": 1
+            },
+            {
+              "effectGroupID": "melvorD:Frostburn",
+              "value": 1
+            }
+          ]
+        },
+        "combatEffects": [
+          {
+            "effectID": "melvorD:Burn",
+            "chance": 20,
+            "appliesWhen": "HitByAttack"
+          }
+        ]
+      },
+      {
+        "id": "StunImmunity",
+        "name": "Stun Immunity",
+        "modifiers": {
+          "effectImmunity": [
+            {
+              "effectGroupID": "melvorD:StunLike",
+              "value": 1
+            }
+          ]
+        }
+      },
+      {
+        "id": "MagicVulnerability10",
+        "name": "Magic Vulnerability 10%",
+        "modifiers": {
+          "flatResistanceAgainstMagic": [
+            {
+              "damageTypeID": "melvorD:Normal",
+              "value": -10
+            }
+          ]
+        }
+      },
+      {
+        "id": "RangedVulnerability10",
+        "name": "Ranged Vulnerability 10%",
+        "modifiers": {
+          "flatResistanceAgainstRanged": [
+            {
+              "damageTypeID": "melvorD:Normal",
+              "value": -10
+            }
+          ]
+        }
+      },
+      {
+        "id": "Assassin",
+        "name": "Assassin",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "expandedAreas:Assassin"
+          },
+          {
+            "appliesWhen": "HitWithAttack",
+            "effectID": "expandedAreas:Assassin"
+          }
+        ]
+      },
+      {
+        "id": "OneWithTheUnholy",
+        "name": "One With the Unholy",
+        "customDescription": "Immunity to Curses, +30% lifesteal, +5% rebirth chance",
+        "modifiers": {
+          "lifesteal": 30,
+          "effectImmunity": [
+            {
+              "effectGroupID": "melvorD:Curse",
+              "value": 1
+            }
+          ],
+          "rebirthChance": 5
+        }
+      },
+      {
+        "id": "GolbinMagic",
+        "name": "Golbin Magic",
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithFirstAttack",
+            "chance": 50,
+            "tableID": "melvorF:RandomCurse"
+          },
+          {
+            "appliesWhen": "HitByAttack",
+            "chance": 50,
+            "effectID": "melvorD:Heal0"
+          }
+        ]
+      },
+      {
+        "id": "StunningStrikes",
+        "name": "Stunning Strokes",
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 25,
+            "effectID": "melvorD:Stun",
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "TheWickedlyUnholyNecromancerBlessingOfUndeath",
+        "name": "The Wickedly Unholy Necromancer's Blessing of Undeath",
+        "modifiers": {
+          "rebirthChance": 25
+        }
+      },
+      {
+        "id": "YouCantAttackARoom",
+        "name": "You Can't Attack a Room",
+        "playerModifiers": {
+          "cantAttack": 1
+        }
+      },
+      {
+        "id": "TheRoofTheRoofTheRoofIsOnFire",
+        "name": "The Roof! The Roof! The Roof is On Fire!",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "melvorD:Burn",
+            "targetOverride": "Self"
+          },
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "melvorD:Burn",
+            "targetOverride": "Target"
+          },
+          {
+            "appliesWhen": "HitByAttack",
+            "effectID": "melvorD:Burn",
+            "targetOverride": "Self"
+          },
+          {
+            "appliesWhen": "HitWithAttack",
+            "effectID": "melvorD:Burn",
+            "targetOverride": "Target"
+          }
+        ]
+      },
+      {
+        "id": "MonstersMonstersEverywhere",
+        "name": "Monsters, Monsters Everywhere!",
+        "customDescription": "You take 5% of your max HP when you hit with an attack, and deal -5% damage per Effect you are affected by.",
+        "playerModifiers": {
+          "damageBasedOnMaxHitpointsSelf": 5,
+          "damageDealtPerEffect": -5
+        }
+      },
+      {
+        "id": "ThisPlaceIsLikeCursedMan",
+        "name": "This Place Is, Like, Cursed, Man",
+        "customDescription": "Gain a Random Curse at the Start of the Fight and whenever you are hit by an attack.",
+        "combatEffects": [
+          {
+            "tableID": "melvorF:RandomCurse",
+            "appliesWhen": "StartOfFight",
+            "targetOverride": "Target"
+          },
+          {
+            "tableID": "melvorF:RandomCurse",
+            "appliesWhen": "HitByAttack",
+            "targetOverride": "Target"
+          }
+        ]
+      },
+      {
+        "id": "WhoWaxedTheseFloors",
+        "name": "Who Waxed These Floors?!",
+        "playerModifiers": {
+          "attackInterval": 20
+        }
+      },
+      {
+        "id": "Burrow",
+        "name": "Burrow",
+        "customDescription": "When the Giant Mole reaches 50% health, there is a 25% chance per Player hit that she will burrow beneath the ground for 3 turns, making her immune to all attacks but unable to attack. This cannot activate when her HP reaches 5% or less.",
+        "combatEffects": [
+          {
+            "effectID": "expandedAreas:Burrow",
+            "appliesWhen": "HitByAttack",
+            "chance": 25,
+            "condition": {
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "Hitpoints",
+                  "character": "Enemy",
+                  "operator": ">",
+                  "value": 5
+                },
+                {
+                  "type": "Hitpoints",
+                  "character": "Enemy",
+                  "operator": "<=",
+                  "value": 50
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "UnfairBossImmunities",
+        "name": "Unfair Boss Immunities",
+        "customDescription": "Immune to Stun, Stunlikes, Poison, Fear, Drowsy, and Sleep",
+        "modifiers": {
+          "effectImmunity": [
+            {
+              "effectGroupID": "melvorD:Stun",
+              "value": 1
+            },
+            {
+              "effectGroupID": "melvorD:StunLike",
+              "value": 1
+            },
+            {
+              "effectGroupID": "melvorD:PoisonDOT",
+              "value": 1
+            },
+            {
+              "effectGroupID": "melvorD:DeadlyPoisonDOT",
+              "value": 1
+            },
+            {
+              "effectGroupID": "melvorD:Fear",
+              "value": 1
+            },
+            {
+              "effectGroupID": "melvorD:Drowsy",
+              "value": 1
+            },
+            {
+              "effectGroupID": "melvorD:Sleep",
+              "value": 1
+            }
+          ]
+        }
+      },
+      {
+        "id": "DarkEnergyCore",
+        "name": "Dark Energy Core",
+        "customDescription": "A little alien asshole follows you around, applying 1 stack of Dark Energy Sap, reducing your max HP by 2.5% per hit (30% chance, up to 10 stacks) and healing the Beast by 0.5% of its max HP. When the Beast reaches 50% HP, the Core gives it 10% lifesteal and regen equal to 0.5% of the Beast's max HP.",
+        "combatEffects": [
+          {
+            "appliesWhen": "PostAttack",
+            "effectID": "expandedAreas:DarkEnergySap",
+            "chance": 30
+          },
+          {
+            "appliesWhen": "PostAttack",
+            "effectID": "expandedAreas:CorporealBeastHeal0",
+            "chance": 30,
+            "condition": {
+              "effectID": "expandedAreas:DarkEnergySap",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            }
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "Hitpoints",
+              "character": "Enemy",
+              "operator": "<=",
+              "value": 50
+            },
+            "modifiers": {
+              "hPRegenBasedOnMaxHP": 0.5,
+              "lifesteal": 10
+            }
+          }
+        ]
+      },
+      {
+        "id": "StabMeOrElse",
+        "name": "Stab Me or Else",
+        "customDescription": "You have 50% reduced Global Accuracy with Magic, Ranged, or any Melee setup that does not have a stab attack bonus of at least 100.",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "Some",
+              "conditions": [
+                {
+                  "statKey": "stabAttackBonus",
+                  "type": "EquipStatCompare",
+                  "operator": "<"
+                },
+                {
+                  "targetAttackType": "melee",
+                  "thisAttackType": "any",
+                  "character": "Enemy",
+                  "type": "CombatType",
+                  "inverted": true
+                }
+              ]
+            },
+            "modifiers": {
+              "accuracyRating": -50
+            },
+            "isNegative": true
+          }
+        ]
+      },
+      {
+        "id": "BonusXP10",
+        "name": "Bonus XP +10%",
+        "customDescription": "This monster provides 10% bonus combat XP",
+        "playerModifiers": {
+          "skillXP": [
+            {
+              "skillID": "melvorD:Attack",
+              "value": 10
+            },
+            {
+              "skillID": "melvorD:Strength",
+              "value": 10
+            },
+            {
+              "skillID": "melvorD:Defence",
+              "value": 10
+            },
+            {
+              "skillID": "melvorD:Hitpoints",
+              "value": 10
+            },
+            {
+              "skillID": "melvorD:Magic",
+              "value": 10
+            },
+            {
+              "skillID": "melvorD:Prayer",
+              "value": 10
+            },
+            {
+              "skillID": "melvorD:Ranged",
+              "value": 10
+            },
+            {
+              "skillID": "melvorD:Slayer",
+              "value": 10
+            }
+          ]
+        }
+      },
+      {
+        "id": "BonusXP50",
+        "name": "Bonus XP +50%",
+        "customDescription": "This monster provides 50% bonus combat XP",
+        "playerModifiers": {
+          "skillXP": [
+            {
+              "skillID": "melvorD:Attack",
+              "value": 50
+            },
+            {
+              "skillID": "melvorD:Strength",
+              "value": 50
+            },
+            {
+              "skillID": "melvorD:Defence",
+              "value": 50
+            },
+            {
+              "skillID": "melvorD:Hitpoints",
+              "value": 50
+            },
+            {
+              "skillID": "melvorD:Magic",
+              "value": 50
+            },
+            {
+              "skillID": "melvorD:Prayer",
+              "value": 50
+            },
+            {
+              "skillID": "melvorD:Ranged",
+              "value": 50
+            },
+            {
+              "skillID": "melvorD:Slayer",
+              "value": 50
+            }
+          ]
+        }
+      },
+      {
+        "id": "JustAFleshWound",
+        "name": "Just a Flesh Wound",
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 10,
+            "effectID": "melvorD:Bleed100",
+            "customDescription": "10% Chance to inflict Bleed100 on hit"
+          }
+        ]
+      },
+      {
+        "id": "LilPoisonous",
+        "name": "Li'l Poisonous",
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 10,
+            "effectID": "melvorD:Poison",
+            "customDescription": "10% Chance to inflict Poison on hit"
+          }
+        ]
+      },
+      {
+        "id": "WeakeningBite",
+        "name": "Weakening Bite",
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 10,
+            "effectID": "melvorF:WeakeningI",
+            "customDescription": "10% Chance to inflict Weakening I on hit (-5% Maximum Hit)"
+          }
+        ]
+      },
+      {
+        "id": "WretchedAnger",
+        "name": "Wretched Anger",
+        "customDescription": "+1% Maximum Hit for every 1% of Hit Points missing.",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 90
+            },
+            "modifiers": {
+              "maxHit": 10
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 80
+            },
+            "modifiers": {
+              "maxHit": 10
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 70
+            },
+            "modifiers": {
+              "maxHit": 10
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 60
+            },
+            "modifiers": {
+              "maxHit": 10
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 50
+            },
+            "modifiers": {
+              "maxHit": 10
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 40
+            },
+            "modifiers": {
+              "maxHit": 10
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 30
+            },
+            "modifiers": {
+              "maxHit": 10
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 20
+            },
+            "modifiers": {
+              "maxHit": 10
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 10
+            },
+            "modifiers": {
+              "maxHit": 10
+            }
+          }
+        ]
+      },
+      {
+        "id": "InfestedSiphon",
+        "name": "Infested Siphon",
+        "modifiers": {
+          "meleeLifesteal": 25
+        }
+      },
+      {
+        "id": "BlightedAura",
+        "name": "Blighted Aura",
+        "customDescription": "25% Chance to inflict Blighted (-10 Maximum Hit, up to 40 Stacks) on hit.",
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 25,
+            "effectID": "expandedAreas:Blighted"
+          }
+        ]
+      },
+      {
+        "id": "TaintedSoul",
+        "name": "Tainted Soul",
+        "customDescription": "25% Chance to inflict Tainted (-20% Ranged Evasion, up to 5 Stacks) on hit.",
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 25,
+            "effectID": "expandedAreas:Tainted"
+          }
+        ]
+      },
+      {
+        "id": "CorruptedHeart",
+        "name": "Corrupted Heart",
+        "customDescription": "25% Chance to apply a 20% Slow for 2 turns on hit.",
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 25,
+            "effectID": "melvorD:Slow",
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 2
+              },
+              {
+                "name": "magnitude",
+                "value": 20
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DefiledBody",
+        "name": "Defiled Body",
+        "customDescription": "Attacks roll twice and take the higher result.",
+        "modifiers": {
+          "attackRolls": 1
+        }
+      },
+      {
+        "id": "RangedImmunity",
+        "name": "Ranged Immunity",
+        "modifiers": {
+          "rangedImmunity": 1
+        },
+        "customDescription": "Immune to all Ranged Attacks"
+      },
+      {
+        "id": "CreatureTypeBestial",
+        "name": "Bestial",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "expandedAreas:CreatureTypeBestial"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeConstructed",
+        "name": "Constructed",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "expandedAreas:CreatureTypeConstructed"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeDraconic",
+        "name": "Draconic",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "expandedAreas:CreatureTypeDraconic"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeElemental",
+        "name": "Elemental",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "expandedAreas:CreatureTypeElemental"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeFae",
+        "name": "Fae",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "expandedAreas:CreatureTypeFae"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeGelatinous",
+        "name": "Gelatinous",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "expandedAreas:CreatureTypeGelatinous"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeGiantkin",
+        "name": "Giantkin",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "expandedAreas:CreatureTypeGiantkin"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeHeavenly",
+        "name": "Heavenly",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "expandedAreas:CreatureTypeHeavenly"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeHellish",
+        "name": "Hellish",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "expandedAreas:CreatureTypeHellish"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeHumanoid",
+        "name": "Humanoid",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "expandedAreas:CreatureTypeHumanoid"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeMonstrous",
+        "name": "Monstrous",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "expandedAreas:CreatureTypeMonstrous"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypePlantlike",
+        "name": "Plantlike",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "expandedAreas:CreatureTypePlantlike"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeStrange",
+        "name": "Strange",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "expandedAreas:CreatureTypeStrange"
+          }
+        ]
+      },
+      {
+        "id": "CreatureTypeUndead",
+        "name": "Undead",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "expandedAreas:CreatureTypeUndead"
+          },
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "expandedAreas:VulnerabilitySilver"
+          }
+        ]
+      },
+      {
+        "id": "CreatureSubtypeLycanthrope",
+        "name": "Lycanthrope",
+        "customDescription": "+50% resistance against Melee and Ranged attacks from non-silver weapons and ammunition.",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "expandedAreas:CreatureSubtypeLycanthrope"
+          },
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "expandedAreas:VulnerabilitySilver"
+          }
+        ],
+        "modifiers": {
+          "flatResistanceAgainstMelee": [
+            {
+              "damageTypeID": "melvorD:Normal",
+              "value": 50
+            }
+          ],
+          "flatResistanceAgainstRanged": [
+            {
+              "damageTypeID": "melvorD:Normal",
+              "value": 50
+            }
+          ]
+        }
+      },
+      {
+        "id": "VulnerabilitySilver",
+        "name": "Silver Vulnerability",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "expandedAreas:VulnerabilitySilver"
+          }
+        ]
+      }
+    ],
+    "curseSpells": [
+      {
+        "id": "FearI",
+        "name": "Fear I",
+        "media": "assets/combat/magic/fear_i.png",
+        "level": 35,
+        "runesRequired": [
+          {
+            "id": "melvorD:Mind_Rune",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Chaos_Rune",
+            "quantity": 2
+          },
+          {
+            "id": "melvorF:Havoc_Rune",
+            "quantity": 3
+          }
+        ],
+        "effectID": "expandedAreas:FearI"
+      },
+      {
+        "id": "FearII",
+        "name": "Fear II",
+        "media": "assets/combat/magic/fear_ii.png",
+        "level": 55,
+        "runesRequired": [
+          {
+            "id": "melvorD:Mind_Rune",
+            "quantity": 3
+          },
+          {
+            "id": "melvorD:Chaos_Rune",
+            "quantity": 4
+          },
+          {
+            "id": "melvorF:Havoc_Rune",
+            "quantity": 5
+          }
+        ],
+        "effectID": "expandedAreas:FearII"
+      },
+      {
+        "id": "FearIII",
+        "name": "Fear III",
+        "media": "assets/combat/magic/fear_iii.png",
+        "level": 75,
+        "runesRequired": [
+          {
+            "id": "melvorD:Mind_Rune",
+            "quantity": 5
+          },
+          {
+            "id": "melvorD:Chaos_Rune",
+            "quantity": 6
+          },
+          {
+            "id": "melvorF:Havoc_Rune",
+            "quantity": 7
+          }
+        ],
+        "effectID": "expandedAreas:FearIII"
+      },
+      {
+        "id": "FearIV",
+        "name": "Fear IV",
+        "media": "assets/combat/magic/fear_iv.png",
+        "level": 95,
+        "runesRequired": [
+          {
+            "id": "melvorD:Mind_Rune",
+            "quantity": 7
+          },
+          {
+            "id": "melvorD:Chaos_Rune",
+            "quantity": 8
+          },
+          {
+            "id": "melvorF:Havoc_Rune",
+            "quantity": 9
+          }
+        ],
+        "effectID": "expandedAreas:FearIV"
+      },
+      {
+        "id": "BlindingIV",
+        "name": "Blinding IV",
+        "media": "assets/combat/magic/blinding_iv.png",
+        "level": 70,
+        "runesRequired": [
+          {
+            "id": "melvorD:Mind_Rune",
+            "quantity": 6
+          },
+          {
+            "id": "melvorD:Body_Rune",
+            "quantity": 4
+          },
+          {
+            "id": "melvorF:Havoc_Rune",
+            "quantity": 4
+          }
+        ],
+        "effectID": "expandedAreas:BlindingIV"
+      },
+      {
+        "id": "SoulSplitIV",
+        "name": "Soul Split IV",
+        "media": "assets/combat/magic/soul_split_iv.png",
+        "level": 75,
+        "runesRequired": [
+          {
+            "id": "melvorD:Mind_Rune",
+            "quantity": 5
+          },
+          {
+            "id": "melvorD:Body_Rune",
+            "quantity": 5
+          },
+          {
+            "id": "melvorD:Chaos_Rune",
+            "quantity": 4
+          },
+          {
+            "id": "melvorF:Havoc_Rune",
+            "quantity": 3
+          }
+        ],
+        "effectID": "expandedAreas:SoulSplitIV"
+      },
+      {
+        "id": "WeakeningIV",
+        "name": "Weakening IV",
+        "media": "assets/combat/magic/weakening_iv.png",
+        "level": 80,
+        "runesRequired": [
+          {
+            "id": "melvorD:Mind_Rune",
+            "quantity": 5
+          },
+          {
+            "id": "melvorD:Body_Rune",
+            "quantity": 3
+          },
+          {
+            "id": "melvorF:Havoc_Rune",
+            "quantity": 4
+          }
+        ],
+        "effectID": "expandedAreas:WeakeningIV"
+      },
+      {
+        "id": "AnguishIV",
+        "name": "Anguish IV",
+        "media": "assets/combat/magic/anguish_iv.png",
+        "level": 90,
+        "runesRequired": [
+          {
+            "id": "melvorD:Body_Rune",
+            "quantity": 6
+          },
+          {
+            "id": "melvorD:Death_Rune",
+            "quantity": 5
+          },
+          {
+            "id": "melvorF:Havoc_Rune",
+            "quantity": 4
+          }
+        ],
+        "effectID": "expandedAreas:AnguishIV"
+      },
+      {
+        "id": "Affliction",
+        "name": "Affliction",
+        "media": "assets/combat/magic/affliction.png",
+        "level": 90,
+        "runesRequired": [
+          {
+            "id": "melvorD:Death_Rune",
+            "quantity": 5
+          },
+          {
+            "id": "melvorD:Body_Rune",
+            "quantity": 5
+          },
+          {
+            "id": "melvorD:Chaos_Rune",
+            "quantity": 5
+          },
+          {
+            "id": "melvorF:Havoc_Rune",
+            "quantity": 5
+          }
+        ],
+        "effectID": "expandedAreas:AfflictionCurse",
+        "requirements": [
+          {
+            "type": "DungeonCompletion",
+            "dungeonID": "melvorF:Into_the_Mist",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "AfflictionGreater",
+        "name": "Greater Affliction",
+        "media": "assets/combat/magic/affliction_greater.png",
+        "level": 99,
+        "runesRequired": [
+          {
+            "id": "melvorD:Death_Rune",
+            "quantity": 20
+          },
+          {
+            "id": "melvorD:Body_Rune",
+            "quantity": 20
+          },
+          {
+            "id": "melvorD:Chaos_Rune",
+            "quantity": 20
+          },
+          {
+            "id": "melvorF:Havoc_Rune",
+            "quantity": 20
+          }
+        ],
+        "effectID": "expandedAreas:AfflictionGreaterCurse",
+        "requirements": [
+          {
+            "type": "DungeonCompletion",
+            "dungeonID": "melvorF:Impending_Darkness",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "prayers": [
+      {
+        "id": "Negate_Magic",
+        "level": 96,
+        "name": "Negate Magic",
+        "media": "assets/combat/prayer/Negate_Magic.png",
+        "pointsPerPlayer": 0,
+        "pointsPerEnemy": 30,
+        "pointsPerRegen": 0,
+        "modifiers": {
+          "magicProtection": 90
+        },
+        "allowedDamageTypeIDs": [
+          "melvorD:Normal",
+          "melvorF:Pure"
+        ]
+      },
+      {
+        "id": "Negate_Ranged",
+        "level": 97,
+        "name": "Negate Ranged",
+        "media": "assets/combat/prayer/Negate_Ranged.png",
+        "pointsPerPlayer": 0,
+        "pointsPerEnemy": 30,
+        "pointsPerRegen": 0,
+        "modifiers": {
+          "rangedProtection": 90
+        },
+        "allowedDamageTypeIDs": [
+          "melvorD:Normal",
+          "melvorF:Pure"
+        ]
+      },
+      {
+        "id": "Negate_Melee",
+        "level": 98,
+        "name": "Negate Melee",
+        "media": "assets/combat/prayer/Negate_Melee.png",
+        "pointsPerPlayer": 0,
+        "pointsPerEnemy": 30,
+        "pointsPerRegen": 0,
+        "modifiers": {
+          "meleeProtection": 90
+        },
+        "allowedDamageTypeIDs": [
+          "melvorD:Normal",
+          "melvorF:Pure"
+        ]
+      },
+      {
+        "id": "Divine_Intervention",
+        "level": 99,
+        "name": "Divine Intervention",
+        "media": "assets/skills/prayer/Divine_Intervention.png",
+        "pointsPerPlayer": 0,
+        "pointsPerEnemy": 20,
+        "pointsPerRegen": 0,
+        "modifiers": {
+          "rebirthChance": 25
+        },
+        "allowedDamageTypeIDs": [
+          "melvorD:Normal",
+          "melvorF:Pure"
+        ]
+      }
+    ]
+  }
+}
