@@ -43707,7 +43707,8 @@
         "beforeID": "melvorF:Leather",
         "ids": [
           "expandedAreas:Candle",
-          "expandedAreas:Bird_Nest"
+          "expandedAreas:Bird_Nest",
+          "expandedAreas:Gunpowder"
         ]
       },
       {
@@ -43933,6 +43934,48 @@
       }
     ],
     "shopPurchases": [
+      {
+        "id": "Gunpowder",
+        "media": "assets/bank/item_gunpowder.png",
+        "category": "melvorD:Materials",
+        "contains": {
+          "items": [
+            {
+              "id": "expandedAreas:Gunpowder",
+              "quantity": 1
+            }
+          ]
+        },
+        "cost": {
+          "items": [
+            {
+              "id": "expandedAreas:Saltpetre",
+              "quantity": 50
+            },
+            {
+              "id": "expandedAreas:Sulphur",
+              "quantity": 50
+            },
+            {
+              "id": "expandedAreas:Charcoal",
+              "quantity": 100
+            }
+          ],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 50000
+            }
+          ]
+        },
+        "allowQuantityPurchase": true,
+        "unlockRequirements": [],
+        "purchaseRequirements": [],
+        "defaultBuyLimit": 0,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false
+      },
       {
         "id": "WoodcuttersCamp",
         "media": "assets/shop/township/WoodcuttersCamp.png",
@@ -56034,6 +56077,16 @@
               ]
             }
           ],
+          "primaryProducts": [
+            {
+              "itemID": "expandedAreas:Charcoal",
+              "chance": 1,
+              "quantity": 1
+            }
+          ],
+          "defaultPrimaryProducts": [
+            "expandedAreas:Charcoal"
+          ],
           "secondaryProducts": [
             {
               "itemID": "expandedAreas:Pine_Resin",
@@ -57930,6 +57983,21 @@
               "itemCosts": [
                 {
                   "id": "expandedAreas:Pyrite_Ore",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Refined_Saltpetre",
+              "level": 45,
+              "productID": "expandedAreas:Saltpetre",
+              "baseQuantity": 1,
+              "baseExperience": 30,
+              "categoryID": "melvorD:Bars",
+              "itemCosts": [
+                {
+                  "id": "expandedAreas:Unrefined_Saltpetre",
                   "quantity": 1
                 }
               ],
