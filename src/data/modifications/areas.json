@@ -1,0 +1,281 @@
+{
+  "$schema": "https://melvoridle.com/assets/schema/gameData.json",
+  "namespace": "expandedAreas",
+  "modifications": {
+    "combatAreaCategories": [
+      {
+        "id": "melvorD:CombatAreas",
+        "areas": {
+          "add": [
+            {
+              "insertAt": "After",
+              "afterID": "melvorD:Farmlands",
+              "ids": [
+                "expandedAreas:Botanical_Gardens",
+                "expandedAreas:Low_Town"
+              ]
+            },
+            {
+              "insertAt": "After",
+              "afterID": "melvorD:ElerineBattlegrounds",
+              "ids": [
+                "expandedAreas:Secluded_Monastery"
+              ]
+            },
+            {
+              "insertAt": "After",
+              "afterID": "melvorD:Icy_Hills",
+              "ids": [
+                "expandedAreas:Barbarian_Village"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Dungeons",
+        "areas": {
+          "add": [
+            {
+              "insertAt": "After",
+              "afterID": "melvorD:Undead_Graveyard",
+              "ids": [
+                "expandedAreas:The_Dungeon"
+              ]
+            },
+            {
+              "insertAt": "After",
+              "afterID": "melvorD:Chicken_Coop",
+              "ids": [
+                "expandedAreas:Golbin_Hideout"
+              ]
+            },
+            {
+              "insertAt": "After",
+              "afterID": "melvorD:Hall_of_Wizards",
+              "ids": [
+                "expandedAreas:The_Barbarian_Trials"
+              ]
+            },
+            {
+              "insertAt": "After",
+              "afterID": "melvorF:Dragons_Den",
+              "ids": [
+                "expandedAreas:Elemental_Sanctuary"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "combatAreas": [
+      {
+        "id": "melvorD:Goblin_Village",
+        "monsters": {
+          "add": [
+            {
+              "insertAt": 2,
+              "monsterID": "expandedAreas:Magic_Golbin"
+            },
+            {
+              "insertAt": 3,
+              "monsterID": "expandedAreas:Hobgolbin"
+            },
+            {
+              "insertAt": 4,
+              "monsterID": "expandedAreas:Big_Golbin"
+            },
+            {
+              "insertAt": 5,
+              "monsterID": "expandedAreas:Golbin_Chief"
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Graveyard",
+        "monsters": {
+          "add": [
+            {
+              "insertAt": 4,
+              "monsterID": "expandedAreas:Novice_Necromancer"
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Dragon_Valley",
+        "monsters": {
+          "add": [
+            {
+              "monsterID": "expandedAreas:Baby_Green_Dragon",
+              "insertAt": 0
+            },
+            {
+              "monsterID": "expandedAreas:Baby_Blue_Dragon",
+              "insertAt": 1
+            },
+            {
+              "monsterID": "expandedAreas:Baby_Red_Dragon",
+              "insertAt": 2
+            },
+            {
+              "monsterID": "expandedAreas:Baby_Black_Dragon",
+              "insertAt": 3
+            }
+          ]
+        }
+      }
+    ],
+    "dungeons": [
+      {
+        "id": "melvorD:Chicken_Coop",
+        "allowedDamageTypeIDs": {
+          "remove": [
+            "melvorD:Normal"
+          ]
+        },
+        "dropBones": true
+      },
+      {
+        "id": "melvorD:Undead_Graveyard",
+        "allowedDamageTypeIDs": {
+          "remove": [
+            "melvorD:Normal"
+          ]
+        },
+        "dropBones": true,
+        "monsters": {
+          "remove": [
+            {
+              "removeAt": 0,
+              "monsterID": "melvorD:ZombieHand"
+            },
+            {
+              "removeAt": 4,
+              "monsterID": "melvorD:Zombie"
+            }
+          ],
+          "add": [
+            {
+              "insertAt": 2,
+              "monsterID": "expandedAreas:Novice_Necromancer"
+            },
+            {
+              "insertAt": 6,
+              "monsterID": "expandedAreas:Novice_Necromancer"
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Bandit_Base",
+        "allowedDamageTypeIDs": {
+          "remove": [
+            "melvorD:Normal"
+          ]
+        },
+        "dropBones": true,
+        "difficulty": [
+          2
+        ]
+      },
+      {
+        "id": "melvorD:Hall_of_Wizards",
+        "allowedDamageTypeIDs": {
+          "remove": [
+            "melvorD:Normal"
+          ]
+        },
+        "dropBones": true
+      },
+      {
+        "id": "melvorD:Spider_Forest",
+        "allowedDamageTypeIDs": {
+          "remove": [
+            "melvorD:Normal"
+          ]
+        },
+        "dropBones": true
+      },
+      {
+        "id": "melvorF:Miolite_Caves",
+        "allowedDamageTypeIDs": {
+          "remove": [
+            "melvorD:Normal"
+          ]
+        },
+        "dropBones": true,
+        "difficulty": [
+          2
+        ],
+        "entryRequirements": {
+          "remove": [
+            "SkillLevel"
+          ],
+          "add": [
+            {
+              "skillID": "melvorD:Slayer",
+              "level": 50,
+              "type": "SkillLevel"
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Deep_Sea_Ship",
+        "allowedDamageTypeIDs": {
+          "remove": [
+            "melvorD:Normal"
+          ]
+        },
+        "dropBones": true,
+        "difficulty": [
+          2
+        ]
+      },
+      {
+        "id": "melvorD:Frozen_Cove",
+        "allowedDamageTypeIDs": {
+          "remove": [
+            "melvorD:Normal"
+          ]
+        },
+        "dropBones": true,
+        "difficulty": [
+          2
+        ]
+      },
+      {
+        "id": "melvorF:Dragons_Den",
+        "allowedDamageTypeIDs": {
+          "remove": [
+            "melvorD:Normal"
+          ]
+        },
+        "dropBones": true,
+        "difficulty": [
+          3
+        ]
+      },
+      {
+        "id": "melvorD:Volcanic_Cave",
+        "allowedDamageTypeIDs": {
+          "remove": [
+            "melvorD:Normal"
+          ]
+        },
+        "dropBones": true
+      },
+      {
+        "id": "melvorF:Infernal_Stronghold",
+        "allowedDamageTypeIDs": {
+          "remove": [
+            "melvorD:Normal"
+          ]
+        },
+        "dropBones": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,2378 @@
+{
+  "$schema": "https://melvoridle.com/assets/schema/gameData.json",
+  "namespace": "expandedAreas",
+  "modifications": {
+    "monsters": [
+      {
+        "id": "melvorF:NoxiousSerpent",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "expandedAreas:Large_Fang",
+              "minQuantity": 1,
+              "maxQuantity": 3,
+              "weight": 35
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:VenomousSnake",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "expandedAreas:Large_Fang",
+              "minQuantity": 1,
+              "maxQuantity": 3,
+              "weight": 35
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:RagingHornedElite",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "expandedAreas:Large_Fang",
+              "minQuantity": 1,
+              "maxQuantity": 4,
+              "weight": 200
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:SeethingHornedElite",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "expandedAreas:Large_Fang",
+              "minQuantity": 1,
+              "maxQuantity": 4,
+              "weight": 120
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:DarkHornedElite",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "expandedAreas:Large_Fang",
+              "minQuantity": 1,
+              "maxQuantity": 4,
+              "weight": 90
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:FuriousHornedElite",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "expandedAreas:Large_Fang",
+              "minQuantity": 1,
+              "maxQuantity": 4,
+              "weight": 100
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:WickedGreaterDragon",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "expandedAreas:Massive_Fang",
+              "minQuantity": 1,
+              "maxQuantity": 6,
+              "weight": 125
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:HuntingGreaterDragon",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "expandedAreas:Massive_Fang",
+              "minQuantity": 1,
+              "maxQuantity": 6,
+              "weight": 125
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:ChaoticGreaterDragon",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "expandedAreas:Massive_Fang",
+              "minQuantity": 1,
+              "maxQuantity": 6,
+              "weight": 125
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:RancoraSpider",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "expandedAreas:Massive_Fang",
+              "minQuantity": 1,
+              "maxQuantity": 6,
+              "weight": 125
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:FearfulEye",
+        "bones": {
+          "itemID": "expandedAreas:Fearful_Eyeball",
+          "quantity": 1
+        }
+      },
+      {
+        "id": "melvorD:ElerineArcher",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "expandedAreas:Hoof",
+              "minQuantity": 1,
+              "maxQuantity": 4,
+              "weight": 33
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:ElerineWarrior",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "expandedAreas:Hoof",
+              "minQuantity": 1,
+              "maxQuantity": 4,
+              "weight": 33
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:ElerineMage",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "expandedAreas:Hoof",
+              "minQuantity": 1,
+              "maxQuantity": 4,
+              "weight": 33
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Pegasus",
+        "lootChance": 100,
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "expandedAreas:Hoof",
+              "minQuantity": 1,
+              "maxQuantity": 4,
+              "weight": 22
+            },
+            {
+              "itemID": "expandedAreas:Celestial_Feather",
+              "minQuantity": 1,
+              "maxQuantity": 3,
+              "weight": 11
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Phoenix",
+        "bones": {
+          "itemID": "expandedAreas:Phoenix_Feather",
+          "quantity": 1
+        }
+      },
+      {
+        "id": "melvorF:Aleron",
+        "bones": {
+          "itemID": "expandedAreas:Celestial_Feather",
+          "quantity": 6
+        }
+      },
+      {
+        "id": "melvorD:AdamantKnight",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:AdultFarmer",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:AhreniaStronghold",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeStrange"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:AirGolem",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeConstructed"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:AirGuard",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHeavenly",
+            "expandedAreas:CreatureTypeBestial"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:AirMonster",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHeavenly"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Aleron",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHeavenly"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Angel",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHeavenly"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Bandit",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:BanditLeader",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:BanditTrainee",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Bane",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:BaneInstrumentOfFear",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Bat",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeBestial"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:BigBat",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeBestial"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:BlackDragon",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeDraconic"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:BlackKnight",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:BlueDragon",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeDraconic"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:BountyHunter",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:BrownSpider",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeBestial"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Cerberus",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeBestial",
+            "expandedAreas:CreatureTypeHellish"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:ChaoticGreaterDragon",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeDraconic"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Chick",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeBestial"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Chicken",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeBestial"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:ConfusedPirate",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Cow",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeBestial"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:CursedLich",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:CursedMaiden",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:DarkHornedElite",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeBestial"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:DarkWizard",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Druid",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:EarthGolem",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeConstructed"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:EarthGuard",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeFae"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:EarthMonster",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeFae"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:ElderDragon",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeDraconic"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:ElderVampire",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:ElderWizard",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Elementalist",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "expandedAreas:Burnt_Page",
+              "minQuantity": 1,
+              "maxQuantity": 20,
+              "weight": 3
+            },
+            {
+              "itemID": "expandedAreas:Waterlogged_Page",
+              "minQuantity": 1,
+              "maxQuantity": 20,
+              "weight": 3
+            },
+            {
+              "itemID": "expandedAreas:Wispy_Page",
+              "minQuantity": 1,
+              "maxQuantity": 20,
+              "weight": 3
+            },
+            {
+              "itemID": "expandedAreas:Muddy_Page",
+              "minQuantity": 1,
+              "maxQuantity": 20,
+              "weight": 3
+            }
+          ]
+        },
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:ElementalistBoss",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:ElerineArcher",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeFae"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:ElerineMage",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeFae"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:ElerineWarrior",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeFae"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:EvilSpider",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeBestial"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:EyeOfFear",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHellish"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Eyes",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeStrange"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Fairy",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeFae"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:FearfulEye",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeStrange"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:FierceDevil",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHellish"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:FierceDevilBoss",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHellish"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:FireGolem",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeConstructed"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:FireGuard",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHellish"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:FireMonster",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeMonstrous"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:FireSpirit",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:FirstMate",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:FrozenArcher",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:FrozenMammoth",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeBestial"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:FuriousHornedElite",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeBestial"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Ghost",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:GiantCrab",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeBestial"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:GiantMoth",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeBestial"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Golbin",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeFae",
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:GooMonster",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeGelatinous"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:GreaterSkeletalDragon",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeDraconic",
+            "expandedAreas:CreatureTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:GreenDragon",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeDraconic"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:GreenGooMonster",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeMonstrous"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Griffin",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeMonstrous"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:HillGiant",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeGiantkin"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:HolyArcher",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHeavenly"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:HuntingGreaterDragon",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeDraconic"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Ice",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:IceMonster",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:IceTroll",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeGiantkin"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Ignis",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHellish"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Incendius",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:JuniorFarmer",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Kutul",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeStrange"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Leech",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeBestial"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:LegaranWurm",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeMonstrous"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Lissia",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeStrange"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:LotsofEyes",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeStrange"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:MalcsTheGuardianOfMelvor",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeDraconic"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:MalcsTheGuardianOfStrongholds",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeDraconic"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:MalcsTheLeaderOfDragons",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeDraconic"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:ManyEyedMonster",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeStrange"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:MasterFarmer",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:MasterWizard",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:MioliteMonarch",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypePlantlike"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:MioliteSprig",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypePlantlike"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:MioliteTrio",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypePlantlike"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:MioliteWarden",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypePlantlike"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Mistral",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypePlantlike"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:MithrilKnight",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:MoistMonster",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeMonstrous"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:MossGiant",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeGiantkin"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:MummaChicken",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeBestial"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Mummy",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Murtia",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeStrange"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:MysteriousFigurePhase1",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:MysteriousFigurePhase1Stronghold",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:MysteriousFigurePhase2",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:MysteriousFigurePhase2Stronghold",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Necromancer",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:NoxiousSerpent",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeBestial"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Ophidia",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeStrange"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Paladin",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Pegasus",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHeavenly"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Phoenix",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Pirate",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:PirateCaptain",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Plant",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypePlantlike"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:PratTheGuardianOfSecrets",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeDraconic"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:PratTheGuardianOfSecretsBoss",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeDraconic"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:PratTheProtectorOfSecrets",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeDraconic"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Priest",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:ProtectorofIce",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeDraconic"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:PurpleGooMonster",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeGelatinous"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Pyra",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:RagingHornedElite",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeBestial"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:RancoraSpider",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeMonstrous"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:RangedGolbin",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeFae",
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:RedDevil",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHellish"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:RedDragon",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeDraconic"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:ResurrectedEye",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeStrange"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Rokken",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeStrange"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:RuneKnight",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:SandBeast",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeMonstrous"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:ScatteredGooMonster",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeGelatinous"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Seagull",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeBestial"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:SeethingHornedElite",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeBestial"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Shaman",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "expandedAreas:Staff_Spiritcaller",
+              "minQuantity": 1,
+              "maxQuantity": 200,
+              "weight": 5
+            }
+          ]
+        },
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Skeleton",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Spider",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeBestial"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:SpiderKing",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeBestial"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:SpikedRedClaw",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeMonstrous"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Statue",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeConstructed"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:SteelKnight",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:StoneSnake",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeStrange"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:StrangeEyedMonster",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeStrange"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:SuperiorEyedMonster",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeStrange"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:SweatyMonster",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeMonstrous"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Tentacle",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeBestial"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:TheEye",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeStrange"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:TheKraken",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeMonstrous"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Thief",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:TurkulArchers",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:TurkulGeneral",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:TurkulGiant",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeGiantkin"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:TurkulRiders",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:TurkulThrowers",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "expandedAreas:The_Spike",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 2
+            }
+          ]
+        },
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Umbora",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeStrange"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Valkyrie",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHeavenly",
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Vampire",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid",
+            "expandedAreas:CreatureTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:VenomousSnake",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeBestial"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:ViciousSerpent",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeBestial"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Voltaire",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeStrange"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:WanderingBard",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHellish"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:WaterGolem",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeConstructed"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:WaterGuard",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:WaterMonster",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:WetMonster",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeMonstrous"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:WickedGreaterDragon",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeDraconic"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Wizard",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:Zombie",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid",
+            "expandedAreas:CreatureTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:ZombieHand",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:ZombieLeader",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid",
+            "expandedAreas:CreatureTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Adult_Gardener",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Baby_Black_Dragon",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeDraconic"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Baby_Blue_Dragon",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeDraconic"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Baby_Green_Dragon",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeDraconic"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Baby_Red_Dragon",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeDraconic"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Barbarian",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Barbarian_Berserker",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Barbarian_Bowyer",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Barbarian_Brawler",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Barbarian_Warrior",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Big_Golbin",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Chieftain_Erik",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Draugr",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid",
+            "expandedAreas:CreatureTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Drowned_Maiden",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid",
+            "expandedAreas:CreatureTypeUndead"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Executioner",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Fire_Maiden",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Golbin_Chief",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeFae",
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Guard",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Guardian_of_the_Elements",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Harpiar",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeFae"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Hobgolbin",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeFae",
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Jarl_Eriksson",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Junior_Gardener",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Kappa",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeFae"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Koschei_the_Deathless_Form1",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Koschei_the_Deathless_Form2",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Koschei_the_Deathless_Form3",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Koschei_the_Deathless_Form4",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Magic_Golbin",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeFae",
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Master_Gardener",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Monk_of_the_Flame",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Monk_of_the_Moss",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Monk_of_the_River",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Monk_of_the_Wind",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Mutant_Flower",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeMonstrous",
+            "expandedAreas:CreatureTypePlantlike"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Mysterious_Monk",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Novice_Necromancer",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:OzmarathraxInscriptorOfRunes",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeDraconic"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Peasant_Man",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Peasant_Woman",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Pickpocket",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeHumanoid"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Rock_Giant",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeElemental",
+            "expandedAreas:CreatureTypeGiantkin"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Walking_Keg",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeMonstrous"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Wasp",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeBestial"
+          ]
+        }
+      },
+      {
+        "id": "expandedAreas:Weeds",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypePlantlike"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Aeris",
+        "levels": {
+          "Hitpoints": 1050,
+          "Attack": 550,
+          "Strength": 550,
+          "Defence": 550,
+          "Ranged": 800,
+          "Magic": 550
+        },
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Glacia",
+        "levels": {
+          "Hitpoints": 1150,
+          "Attack": 600,
+          "Strength": 600,
+          "Defence": 500,
+          "Ranged": 300,
+          "Magic": 600
+        },
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Terran",
+        "levels": {
+          "Hitpoints": 1250,
+          "Attack": 525,
+          "Strength": 550,
+          "Defence": 650,
+          "Ranged": 300,
+          "Magic": 300
+        },
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Ragnar",
+        "levels": {
+          "Hitpoints": 1100,
+          "Attack": 700,
+          "Strength": 600,
+          "Defence": 600,
+          "Ranged": 300,
+          "Magic": 400
+        },
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeElemental"
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Ahrenia",
+        "levels": {
+          "Hitpoints": 1050,
+          "Attack": 820,
+          "Strength": 820,
+          "Defence": 820,
+          "Ranged": 820,
+          "Magic": 820
+        },
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeStrange"
+          ]
+        }
+      },
+      {
+        "id": "melvorD:JuniorFarmer",
+        "lootChance": 100,
+        "lootTable": {
+          "remove": [
+            "melvorD:Potato_Seed",
+            "melvorD:Garum_Seed",
+            "melvorD:Onion_Seed",
+            "melvorD:Cabbage_Seed",
+            "melvorD:Tomato_Seed"
+          ],
+          "add": [
+            {
+              "itemID": "expandedAreas:Jute_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 3,
+              "weight": 999999
+            },
+            {
+              "itemID": "expandedAreas:Barley_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 3,
+              "weight": 888888
+            },
+            {
+              "itemID": "melvorD:Potato_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 3,
+              "weight": 999999
+            },
+            {
+              "itemID": "melvorD:Onion_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 3,
+              "weight": 777777
+            },
+            {
+              "itemID": "melvorD:Cabbage_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 3,
+              "weight": 666666
+            },
+            {
+              "itemID": "melvorD:Tomato_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 3,
+              "weight": 555555
+            },
+            {
+              "itemID": "expandedAreas:Sack",
+              "minQuantity": 1,
+              "maxQuantity": 3,
+              "weight": 444444
+            },
+            {
+              "itemID": "expandedAreas:Basket",
+              "minQuantity": 1,
+              "maxQuantity": 3,
+              "weight": 333333
+            },
+            {
+              "itemID": "melvorD:Oak_Tree_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 3,
+              "weight": 111111
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:AdultFarmer",
+        "lootChance": 100,
+        "lootTable": {
+          "remove": [
+            "melvorD:Onion_Seed",
+            "melvorD:Cabbage_Seed",
+            "melvorD:Onion_Seed",
+            "melvorD:Cabbage_Seed",
+            "melvorD:Tomato_Seed",
+            "melvorD:Sourweed_Seed",
+            "melvorD:Mantalyme_Seed",
+            "melvorD:Sweetcorn_Seed",
+            "melvorD:Strawberry_Seed",
+            "melvorD:Watermelon_Seed",
+            "melvorD:Compost",
+            "melvorD:Snape_Grass_Seed",
+            "melvorD:Oak_Tree_Seed"
+          ],
+          "add": [
+            {
+              "itemID": "expandedAreas:Plumm_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 6,
+              "weight": 999999
+            },
+            {
+              "itemID": "expandedAreas:Firewine_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 6,
+              "weight": 777777
+            },
+            {
+              "itemID": "expandedAreas:Andlovan_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 6,
+              "weight": 555555
+            },
+            {
+              "itemID": "expandedAreas:Orange_Tree_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 6,
+              "weight": 333333
+            },
+            {
+              "itemID": "expandedAreas:Cherry_Tree_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 6,
+              "weight": 111111
+            },
+            {
+              "itemID": "expandedAreas:Curry_Tree_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 6,
+              "weight": 55555
+            },
+            {
+              "itemID": "melvorD:Sweetcorn_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 6,
+              "weight": 999999
+            },
+            {
+              "itemID": "melvorD:Strawberry_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 6,
+              "weight": 777777
+            },
+            {
+              "itemID": "melvorD:Watermelon_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 6,
+              "weight": 555555
+            },
+            {
+              "itemID": "melvorD:Compost",
+              "minQuantity": 1,
+              "maxQuantity": 6,
+              "weight": 555555
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorD:MasterFarmer",
+        "lootChance": 100,
+        "lootTable": {
+          "remove": [
+            "melvorD:Tomato_Seed",
+            "melvorD:Sweetcorn_Seed",
+            "melvorD:Strawberry_Seed",
+            "melvorD:Lemontyle_Seed",
+            "melvorD:Oxilyme_Seed",
+            "melvorD:Watermelon_Seed",
+            "melvorD:Compost",
+            "melvorD:Snape_Grass_Seed",
+            "melvorD:Oak_Tree_Seed",
+            "melvorD:Willow_Tree_Seed",
+            "melvorD:Maple_Tree_Seed",
+            "melvorD:Yew_Tree_Seed",
+            "melvorD:Magic_Tree_Seed",
+            "melvorD:Bobs_Rake"
+          ],
+          "add": [
+            {
+              "itemID": "expandedAreas:Jute_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 999999
+            },
+            {
+              "itemID": "expandedAreas:Barley_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 777777
+            },
+            {
+              "itemID": "expandedAreas:Plumm_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 555555
+            },
+            {
+              "itemID": "expandedAreas:Firewine_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 333333
+            },
+            {
+              "itemID": "expandedAreas:Andlovan_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 111111
+            },
+            {
+              "itemID": "expandedAreas:Goldengod_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 55555
+            },
+            {
+              "itemID": "expandedAreas:Wildblood_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 22222
+            },
+            {
+              "itemID": "expandedAreas:Orange_Tree_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 666666
+            },
+            {
+              "itemID": "expandedAreas:Cherry_Tree_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 444444
+            },
+            {
+              "itemID": "expandedAreas:Curry_Tree_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 222222
+            },
+            {
+              "itemID": "expandedAreas:Papaya_Tree_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 111111
+            },
+            {
+              "itemID": "expandedAreas:Superfertilizer",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 99999
+            },
+            {
+              "itemID": "expandedAreas:Palm_Tree_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 55555
+            },
+            {
+              "itemID": "expandedAreas:Dragonfruit_Tree_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 22222
+            },
+            {
+              "itemID": "melvorD:Potato_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 999999
+            },
+            {
+              "itemID": "melvorD:Onion_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 888888
+            },
+            {
+              "itemID": "melvorD:Cabbage_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 777777
+            },
+            {
+              "itemID": "melvorD:Tomato_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 666666
+            },
+            {
+              "itemID": "melvorD:Sweetcorn_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 555555
+            },
+            {
+              "itemID": "melvorD:Strawberry_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 444444
+            },
+            {
+              "itemID": "melvorD:Watermelon_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 333333
+            },
+            {
+              "itemID": "melvorD:Snape_Grass_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 111111
+            },
+            {
+              "itemID": "expandedAreas:Bell_Pepper_Seed",
+              "minQuantity": 1,
+              "maxQuantity": 9,
+              "weight": 55555
+            },
+            {
+              "itemID": "melvorD:Bobs_Rake",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 23333
+            },
+            {
+              "itemID": "melvorD:Farming_Skillcape",
+              "minQuantity": 1,
+              "maxQuantity": 1,
+              "weight": 1
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:UndeadWerewolf",
+        "passives": {
+          "add": [
+            "expandedAreas:CreatureTypeMonstrous",
+            "expandedAreas:CreatureTypeUndead",
+            "expandedAreas:CreatureSubtypeLycanthrope"
+          ]
+        }
+      }
+    ]
+  }
+}

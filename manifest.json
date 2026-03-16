@@ -1,10 +1,10 @@
 {
     "namespace": "expandedAreas",
-    "setup": "setup.mjs",
+    "setup": "src/setup.mjs",
     "icon": "assets/ICON.png",
     "load": [
-        "data/main.json",
-        "data/activePets.json",
-        "data/modifications.json"
+        "src/data/new/main.json",
+        "src/data/new/activePets.json",
+        "src/data/new/modifications.json"
     ]
 }
