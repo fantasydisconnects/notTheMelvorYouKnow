@@ -7382,7 +7382,7 @@
       }
     ],
     "items": [
-            {
+      {
         "itemType": "Item",
         "id": "YumYum_Bits",
         "name": "Yum-Yum Bits",
@@ -53442,7 +53442,13 @@
         },
         "allowQuantityPurchase": false,
         "unlockRequirements": [],
-        "purchaseRequirements": [],
+        "purchaseRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 60
+          }
+        ],
         "defaultBuyLimit": 1,
         "buyLimitOverrides": [],
         "showBuyLimit": false,
@@ -53483,7 +53489,13 @@
             "type": "ShopPurchase"
           }
         ],
-        "purchaseRequirements": [],
+        "purchaseRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 70
+          }
+        ],
         "defaultBuyLimit": 1,
         "buyLimitOverrides": [],
         "showBuyLimit": false,
@@ -53530,6 +53542,11 @@
           }
         ],
         "purchaseRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 80
+          },
           {
             "type": "DungeonCompletion",
             "dungeonID": "melvorF:Into_the_Mist",
@@ -53587,6 +53604,11 @@
             "type": "DungeonCompletion",
             "dungeonID": "melvorF:Impending_Darkness",
             "count": 1
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 90
           }
         ],
         "defaultBuyLimit": 1,
@@ -53718,7 +53740,13 @@
         },
         "allowQuantityPurchase": false,
         "unlockRequirements": [],
-        "purchaseRequirements": [],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Strength",
+            "level": 60,
+            "type": "SkillLevel"
+          }
+        ],
         "defaultBuyLimit": 1,
         "buyLimitOverrides": [],
         "showBuyLimit": false,
@@ -53753,12 +53781,12 @@
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 5000000,
+              "cost": 7000000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 50000000,
+              "cost": 70000000,
               "type": "Fixed"
             }
           ]
@@ -53771,7 +53799,13 @@
             "type": "ShopPurchase"
           }
         ],
-        "purchaseRequirements": [],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Strength",
+            "level": 70,
+            "type": "SkillLevel"
+          }
+        ],
         "defaultBuyLimit": 1,
         "buyLimitOverrides": [],
         "showBuyLimit": false,
@@ -53794,12 +53828,12 @@
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 10000000,
+              "cost": 14000000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 100000000,
+              "cost": 140000000,
               "type": "Fixed"
             }
           ]
@@ -53817,6 +53851,11 @@
             "type": "DungeonCompletion",
             "dungeonID": "melvorF:Into_the_Mist",
             "count": 1
+          },
+          {
+            "skillID": "melvorD:Strength",
+            "level": 80,
+            "type": "SkillLevel"
           }
         ],
         "defaultBuyLimit": 1,
@@ -53842,12 +53881,12 @@
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 20000000,
+              "cost": 28000000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 200000000,
+              "cost": 280000000,
               "type": "Fixed"
             }
           ]
@@ -53865,6 +53904,11 @@
             "type": "DungeonCompletion",
             "dungeonID": "melvorF:Impending_Darkness",
             "count": 1
+          },
+          {
+            "skillID": "melvorD:Strength",
+            "level": 90,
+            "type": "SkillLevel"
           }
         ],
         "defaultBuyLimit": 1,
@@ -53888,12 +53932,12 @@
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 250000,
+              "cost": 10000000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 2500000,
+              "cost": 100000000,
               "type": "Fixed"
             }
           ]
@@ -61011,7 +61055,7 @@
             {
               "currency": "melvorD:GP",
               "type": "Fixed",
-              "cost": 100000000
+              "cost": 1000000000
             }
           ]
         },
@@ -61048,7 +61092,7 @@
             {
               "currency": "melvorD:GP",
               "type": "Fixed",
-              "cost": 500000000
+              "cost": 5000000000
             }
           ]
         },

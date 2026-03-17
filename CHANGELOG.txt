@@ -1,0 +1,9 @@
+- Raise Requirements, and SC and GP cost of Combat Mastery Upgrades
+ - Adept: Level 60 Required | Expert: Level 70 Required | Master: Level 80 Required | Grandmaster: Level 90 Required
+ - Strength Expert: 5M SC 50M GP -> 7.5M SC 75M GP
+ - Strength Master: 10M SC 100M GP -> 14M SC 140M GP
+ - Strength Grandmaster: 20M SC 200M GP -> 28M SC 280M GP
+
+ - Raise GP cost of Auto Eat IV and IV
+  - IV: 100,000,000 GP -> 1,000,000,000 GP
+  - V: 500,000,000 GP -> 5,000,000,000 GP
