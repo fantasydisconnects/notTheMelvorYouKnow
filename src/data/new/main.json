@@ -3851,8 +3851,8 @@
     ],
     "combatAreaCategories": [
       {
-        "id": "Bosses",
-        "name": "Bosses",
+        "id": "Challenges",
+        "name": "Challenges",
         "media": "assets/icons/skull.png",
         "areas": [
           "expandedAreas:Mole_Lair",
@@ -3866,7 +3866,7 @@
         "insertAt": "After",
         "afterID": "melvorF:Strongholds",
         "ids": [
-          "expandedAreas:Bosses"
+          "expandedAreas:Challenges"
         ]
       }
     ],
