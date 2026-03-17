@@ -1301,7 +1301,7 @@
       },
       {
         "id": "DeadlyCut",
-        "defaultChance": 10,
+        "defaultChance": 5,
         "damage": [
           {
             "damageType": "Normal",
@@ -1326,7 +1326,7 @@
       },
       {
         "id": "SerpentsBite",
-        "defaultChance": 10,
+        "defaultChance": 5,
         "damage": [
           {
             "damageType": "Custom",
@@ -1581,7 +1581,7 @@
       },
       {
         "id": "WildStrike",
-        "defaultChance": 10,
+        "defaultChance": 5,
         "damage": [
           {
             "damageType": "Normal",
@@ -1609,7 +1609,7 @@
       },
       {
         "id": "Heartseeker",
-        "defaultChance": 10,
+        "defaultChance": 5,
         "damage": [
           {
             "damageType": "Normal",
@@ -1638,7 +1638,7 @@
       },
       {
         "id": "DeadlyDelivery",
-        "defaultChance": 10,
+        "defaultChance": 5,
         "damage": [
           {
             "damageType": "Normal",
@@ -1665,7 +1665,7 @@
       },
       {
         "id": "CripplingStrike",
-        "defaultChance": 10,
+        "defaultChance": 5,
         "damage": [
           {
             "damageType": "Normal",
@@ -1703,7 +1703,7 @@
       },
       {
         "id": "DisruptingStab",
-        "defaultChance": 10,
+        "defaultChance": 5,
         "damage": [
           {
             "damageType": "Normal",
@@ -1728,7 +1728,7 @@
       },
       {
         "id": "WideSlash",
-        "defaultChance": 10,
+        "defaultChance": 5,
         "damage": [
           {
             "damageType": "Normal",
@@ -1754,7 +1754,7 @@
       },
       {
         "id": "Whirlwind",
-        "defaultChance": 10,
+        "defaultChance": 5,
         "damage": [
           {
             "damageType": "Normal",
@@ -1775,7 +1775,7 @@
       },
       {
         "id": "TrueStrike",
-        "defaultChance": 10,
+        "defaultChance": 5,
         "damage": [
           {
             "damageType": "Normal",
@@ -1804,7 +1804,7 @@
       },
       {
         "id": "Counterattack",
-        "defaultChance": 10,
+        "defaultChance": 5,
         "damage": [
           {
             "damageType": "Normal",
@@ -1844,7 +1844,7 @@
       },
       {
         "id": "PommelBash",
-        "defaultChance": 10,
+        "defaultChance": 5,
         "damage": [
           {
             "damageType": "Normal",
@@ -19028,7 +19028,7 @@
         "id": "Karils_Crossbow",
         "name": "Karil's Crossbow",
         "category": "Combat",
-        "type": "Weapon",
+        "type": "Ranged Weapon",
         "media": "assets/bank/karils_crossbow.png",
         "customDescription": "Can only use <strong>Bolt Racks</strong> as Ammo.<br><hr>When all of <strong>Karil the Tainted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict Tainted Shot (-20% Ranged Evasion Rating).",
         "ignoreCompletion": false,
@@ -21157,7 +21157,7 @@
         "name": "Golbin Staff",
         "category": "Combat",
         "itemType": "Weapon",
-        "type": "Weapon",
+        "type": "Magic Weapon",
         "media": "assets/bank/Golbin_Staff.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,

@@ -54,7 +54,7 @@
 | Monk of the Wind            | 🧙🏻‍♂️           | ⚔️1💪🏻1🛡️90❤️110🏹1🧙🏻‍♂️130         | 3.0s             | ElementalImpactFrostburn                                                                                                                                                                                                                                       | —                                                                                                                                | —             | 3x Eye of Air            | Secluded Monastery   |
 | Mutant Flower               | ⚔️           | ⚔️1💪🏻1🛡️20❤️5🏹1🧙🏻‍♂️1             | 3.0s             | —                                                                                                                                                                                                                                                              | —                                                                                                                                | —             | 1x Sunflower Seed        | —                    |
 | Mysterious Monk             | 🧙🏻‍♂️           | ⚔️1💪🏻1🛡️45❤️43🏹1🧙🏻‍♂️50           | 3.0s             | —                                                                                                                                                                                                                                                              | —                                                                                                                                | —             | 1x Bones                 | Low Town             |
-| Novice Necromancer          | 🧙‍♂️           | ⚔️35💪🏻35🛡️52❤️48🏹1🧙‍♂️50         | 3.2s             | Novice_Necromancer_Zombie_Summon                                                                                                                                                                                                                               | —                                                                                                                                | —             | 1x Bones                 | Graveyard            |
+| Novice Necromancer          | 🧙‍♂️           | ⚔️35💪🏻35🛡️52❤️48🏹1🧙‍♂️50         | 3.2s             | Zombie Summon                                                                                                                                                                                                                                                  | —                                                                                                                                | —             | 1x Bones                 | Graveyard            |
 | Ogre                        | ⚔️           | ⚔️30💪100🛡️30❤️100🏹1🧙‍♂️1        | 3.0              | —                                                                                                                                                                                                                                                              | Humungus                                                                                                                         | —             | 1x Bones                 | The Dungeon          |
 | Orc                         | ⚔️           | ⚔️40💪50🛡️40❤️50🏹1🧙‍♂️1          | 2.4              | —                                                                                                                                                                                                                                                              | Stronk                                                                                                                           | —             | 1x Bones                 | The Dungeon          |
 | Peasant Man                 | ⚔️           | ⚔️1💪🏻1🛡️1❤️7🏹1🧙🏻‍♂️1              | 2.4s             | —                                                                                                                                                                                                                                                              | —                                                                                                                                | —             | 1x Bones                 | Low Town             |
@@ -80,178 +80,17 @@
 | Zulrah (Phase Three)        | 🧙‍♂️           | ⚔️300💪300🛡️300❤️1820🏹300🧙‍♂️300 | 1.8              | Barbed Projectiles<br>Swamp Sludge                                                                                                                                                                                                                             | PhaseHP10<br>Venomous Hide<br>Stun Immunity<br>Melee Immunity<br>Ranged Vulnerability 10%                                        | —             | 22x Tanzanite Scales     | Swamp of Desolation  |
 | Zulrah (Phase Two)          | ⚔️           | ⚔️300💪300🛡️300❤️1820🏹300🧙‍♂️300 | 1.8              | Barbed Tail Whip<br>80% Chance to Stun (2 turns, melee only)                                                                                                                                                                                                   | PhaseHP10<br>Venomous Hide<br>Magmatic Hide<br>Stun Immunity                                                                     | —             | 27x Magmatic Scales      | Swamp of Desolation  |
 
-| SUPER AWESOME EXPANSION version 0.9.1 (Released: 14th March 2026)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Combat Skills:** [Attack](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Attack) • [Corruption](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Corruption) • [Defence](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Defence) • [Hitpoints](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Hitpoints) • [Magic](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Magic) • [Prayer](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Prayer) • [Ranged](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Ranged) • [Slayer](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Slayer) • [Strength](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Strength)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| **Non-Combat Skills:** [Alternative Magic](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Alternative-Magic) • [Agility](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Agility) • [Archaeology](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Archaeology) • [Astrology](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Astrology) • [Cartography](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Cartography) • [Cooking](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Cooking) • [Crafting](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Crafting) • [Farming](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Farming) • [Fletching](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Fletching) • [Firemaking](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Firemaking) • [Harvesting](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Harvesting) • [Herblore](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Herblore) • [Mining](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Mining) • [Summoning](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Summoning) • [Thieving](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Thieving) • [Township](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Township) • [Woodcutting](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Woodcutting) |
-| **Other:** [Atlas of Discovery](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Atlas-of-Discovery) • [Bank](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Bank) • [Beginners Guide](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Beginners-Guide) • [Combat](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Combat) • [Easter Eggs](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Easter-Eggs) • [Full Version](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Full-Version) • [Golbin Raid](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Golbin-Raid) • [Guides](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Guides) • [Mastery](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Mastery) • [Money Making](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Money-Making) • [Pets](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Pets) • [Shop](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Shop) • [Throne of the Herald](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Throne-of-the-Herald) • [Into the Abyss](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Into-the-Abyss)                                                                                                                                                                                                                                                       |
-| **Reference Tables:** [Combat Areas](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Combat-Areas) • [Dungeons](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Dungeons) • [Equipment](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Equipment) • [Experience Table](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Experience-Table) • [Items](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Items) • [Monsters](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Monsters) • [Slayer Areas](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Slayer-Areas) • [Strongholds](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Strongholds) • [The Abyss](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/The-Abyss) • [Upgrading Items](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Upgrading-Items)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-
-| Level | XP for Level  | Total XP       | Level | XP for Level | Total XP | Level | XP for Level | Total XP | Level | XP for Level | Total XP |
-| ----- | ------------- | -------------- | ----- | ------------ | -------- | ----- | ------------ | -------- | ----- | ------------ | -------- |
-| 1     | 0             | 0              |
-| 2     | 83            | 83             |
-| 3     | 91            | 174            |
-| 4     | 101           | 275            |
-| 5     | 112           | 387            |
-| 6     | 124           | 511            |
-| 7     | 137           | 648            |
-| 8     | 151           | 799            |
-| 9     | 167           | 966            |
-| 10    | 185           | 1,151          |
-| 11    | 204           | 1,355          |
-| 12    | 225           | 1,580          |
-| 13    | 249           | 1,829          |
-| 14    | 274           | 2,103          |
-| 15    | 303           | 2,406          |
-| 16    | 334           | 2,740          |
-| 17    | 369           | 3,109          |
-| 18    | 408           | 3,517          |
-| 19    | 450           | 3,967          |
-| 20    | 496           | 4,463          |
-| 21    | 548           | 5,011          |
-| 22    | 605           | 5,616          |
-| 23    | 667           | 6,283          |
-| 24    | 737           | 7,020          |
-| 25    | 813           | 7,833          |
-| 26    | 897           | 8,730          |
-| 27    | 990           | 9,720          |
-| 28    | 1,093         | 10,813         |
-| 29    | 1,207         | 12,020         |
-| 30    | 1,332         | 13,352         |
-| 31    | 1,470         | 14,822         |
-| 32    | 1,622         | 16,444         |
-| 33    | 1,791         | 18,235         |
-| 34    | 1,977         | 20,212         |
-| 35    | 2,182         | 22,394         |
-| 36    | 2,408         | 24,802         |
-| 37    | 2,658         | 27,460         |
-| 38    | 2,934         | 30,394         |
-| 39    | 3,239         | 33,633         |
-| 40    | 3,576         | 37,209         |
-| 41    | 3,947         | 41,156         |
-| 42    | 4,357         | 45,513         |
-| 43    | 4,810         | 50,323         |
-| 44    | 5,310         | 55,633         |
-| 45    | 5,862         | 61,495         |
-| 46    | 6,471         | 67,966         |
-| 47    | 7,144         | 75,110         |
-| 48    | 7,886         | 82,996         |
-| 49    | 8,706         | 91,702         |
-| 50    | 9,612         | 101,314        |
-| 51    | 10,611        | 111,925        |
-| 52    | 11,715        | 123,640        |
-| 53    | 12,933        | 136,573        |
-| 54    | 14,278        | 150,851        |
-| 55    | 15,763        | 166,614        |
-| 56    | 17,403        | 184,017        |
-| 57    | 19,214        | 203,231        |
-| 58    | 21,212        | 224,443        |
-| 59    | 23,419        | 247,862        |
-| 60    | 25,856        | 273,718        |
-| 61    | 28,546        | 302,264        |
-| 62    | 31,516        | 333,780        |
-| 63    | 34,795        | 368,575        |
-| 64    | 38,415        | 406,990        |
-| 65    | 42,413        | 449,403        |
-| 66    | 46,826        | 496,229        |
-| 67    | 51,699        | 547,928        |
-| 68    | 57,078        | 605,006        |
-| 69    | 63,018        | 668,024        |
-| 70    | 69,576        | 737,600        |
-| 71    | 76,817        | 814,417        |
-| 72    | 84,811        | 899,228        |
-| 73    | 93,638        | 992,866        |
-| 74    | 103,383       | 1,096,249      |
-| 75    | 114,142       | 1,210,391      |
-| 76    | 126,022       | 1,336,413      |
-| 77    | 139,138       | 1,475,551      |
-| 78    | 153,619       | 1,629,170      |
-| 79    | 169,607       | 1,798,777      |
-| 80    | 187,260       | 1,986,037      |
-| 81    | 206,750       | 2,192,787      |
-| 82    | 228,268       | 2,420,055      |
-| 83    | 252,027       | 2,673,082      |
-| 84    | 278,259       | 2,951,341      |
-| 85    | 307,221       | 3,258,562      |
-| 86    | 339,197       | 3,597,759      |
-| 87    | 374,502       | 3,972,261      |
-| 88    | 413,482       | 4,385,743      |
-| 89    | 456,519       | 4,842,262      |
-| 90    | 504,036       | 5,346,298      |
-| 91    | 556,499       | 5,902,797      |
-| 92    | 614,422       | 6,517,219      |
-| 93    | 678,375       | 7,195,594      |
-| 94    | 748,985       | 7,944,579      |
-| 95    | 826,944       | 8,771,523      |
-| 96    | 913,018       | 9,684,541      |
-| 97    | 1,008,052     | 10,692,593     |
-| 98    | 1,112,977     | 11,805,570     |
-| 99    | 1,228,824     | 13,034,394     |
-| 100   | 1,356,729     | 14,391,123     |
-| 101   | 1,498,182     | 15,889,305     |
-| 102   | 1,654,085     | 17,543,390     |
-| 103   | 1,825,270     | 19,368,660     |
-| 104   | 2,012,724     | 21,381,384     |
-| 105   | 2,217,528     | 23,598,912     |
-| 106   | 2,440,945     | 26,039,857     |
-| 107   | 2,684,360     | 28,724,217     |
-| 108   | 2,949,259     | 31,673,476     |
-| 109   | 3,237,334     | 34,910,810     |
-| 110   | 3,550,476     | 38,461,286     |
-| 111   | 3,890,781     | 42,352,067     |
-| 112   | 4,260,603     | 46,612,670     |
-| 113   | 4,662,587     | 51,275,257     |
-| 114   | 5,099,606     | 56,374,863     |
-| 115   | 5,574,853     | 61,949,716     |
-| 116   | 6,091,819     | 68,041,535     |
-| 117   | 6,653,315     | 74,694,850     |
-| 118   | 7,262,501     | 81,957,351     |
-| 119   | 7,922,878     | 89,880,229     |
-| 120   | 8,638,293     | 98,518,522     |
-| 121   | 9,412,110     | 107,930,632    |
-| 122   | 10,248,136    | 118,178,768    |
-| 123   | 11,150,708    | 129,329,476    |
-| 124   | 12,124,711    | 141,454,187    |
-| 125   | 13,175,632    | 154,629,819    |
-| 126   | 14,308,598    | 168,938,417    |
-| 127   | 15,529,391    | 184,467,808    |
-| 128   | 16,844,496    | 201,312,304    |
-| 129   | 18,261,129    | 219,573,433    |
-| 130   | 19,787,360    | 239,360,793    |
-| 131   | 21,432,048    | 260,792,841    |
-| 132   | 23,205,919    | 283,998,760    |
-| 133   | 25,120,587    | 309,119,347    |
-| 134   | 27,188,603    | 336,307,950    |
-| 135   | 29,423,556    | 365,731,506    |
-| 136   | 31,839,153    | 397,570,659    |
-| 137   | 34,450,364    | 432,021,023    |
-| 138   | 37,273,560    | 469,294,583    |
-| 139   | 40,327,097    | 509,621,680    |
-| 140   | 43,632,418    | 553,254,098    |
-| 141   | 47,212,385    | 600,466,483    |
-| 142   | 51,091,321    | 651,557,804    |
-| 143   | 55,295,836    | 706,853,640    |
-| 144   | 59,854,473    | 766,708,113    |
-| 145   | 64,788,900    | 831,496,013    |
-| 146   | 70,121,841    | 901,617,854    |
-| 147   | 75,888,174    | 977,506,028    |
-| 148   | 82,125,998    | 1,059,632,026  |
-| 149   | 88,878,729    | 1,148,510,755  |
-| 150   | 96,194,185    | 1,244,704,940  |
-- [Accessories](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Accessories)
-- [Ammunition](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Ammunition)
-- [Boots](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Boots)
-- [Capes](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Capes)
-- [Consumables](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Consumables)
-- [Enhancements](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Enhancements)
-- [Familiars](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Familiars)
-- [Gems](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Gems)
-- [Gloves](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Gloves)
-- [Helmets](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Helmets)
-- [Offhands](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Offhands)
-- [Passives](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Passives)
-- [Platebodies](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Platebodies)
-- [Platelegs](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Platelegs)
-- [Rings](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Rings)
-- [Tools](https://github.com/fantasydisconnects/notTheMelvorYouKnow/wiki/Tools)
+| Level  | Unlocks                                                                                                                                                    |
+| ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Number | Weapon                                                                                                                                                     |
+| Number | Weapon                                                                                                                                                     |
+| Number | Weapon                                                                                                                                                     |
+| 40     | Golden Sceptre                                                                                                                                             |
+| 50     | Wield Silver Weapons<br>Barbarian Berserker Axe (also requires 50 Strength)<br>Barbarian Brawling Gloves(also requires 50 Strength)<br>Barbarian Longblade |
+| Number | Weapon                                                                                                                                                     |
+| Number | Weapon                                                                                                                                                     |
+| Number | Weapon                                                                                                                                                     |
+| 70     | Dharok's Greataxe<br>Guthan's Warspear<br>Torag's Hammers<br>Verac's Flail                                                                                 |
+| 75     | Magmatic Fangblade                                                                                                                                         |
+| Number | Weapon                                                                                                                                                     |
+| Number | Weapon                                                                                                                                                     |
