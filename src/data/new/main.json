@@ -59101,7 +59101,7 @@
             "skillCostReduction": [
               {
                 "skillID": "melvorD:Summoning",
-                "value": -5
+                "value": 5
               }
             ],
             "skillInterval": [
@@ -59135,7 +59135,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Mark of the Stag",
-        "customDescription": "-5% Summoning cost reduction for a total of -5% applied from your Marks.<br>-5% Summoning interval for a total of -5% from your Marks."
+        "customDescription": "-5% Summoning production cost for a total of -5% applied from your Marks.<br>-5% Summoning interval for a total of -5% from your Marks."
       },
       {
         "id": "Mark_Beetle",
@@ -59147,7 +59147,7 @@
             "skillCostReduction": [
               {
                 "skillID": "melvorD:Summoning",
-                "value": -5
+                "value": 5
               }
             ],
             "skillInterval": [
@@ -59187,7 +59187,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Mark of the Beetle",
-        "customDescription": "-5% Summoning cost reduction for a total of -10% applied from your Marks.<br>-5% Summoning interval for a total of -10% from your Marks."
+        "customDescription": "-5% Summoning cost production for a total of -10% applied from your Marks.<br>-5% Summoning interval for a total of -10% from your Marks."
       },
       {
         "id": "Mark_Swan",
@@ -59199,7 +59199,7 @@
             "skillCostReduction": [
               {
                 "skillID": "melvorD:Summoning",
-                "value": -5
+                "value": 5
               }
             ],
             "skillInterval": [
@@ -59239,7 +59239,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Mark of the Swan",
-        "customDescription": "-5% Summoning cost reduction for a total of -15% applied from your Marks.<br>-5% Summoning interval for a total of -15% from your Marks."
+        "customDescription": "-5% Summoning production cost for a total of -15% applied from your Marks.<br>-5% Summoning interval for a total of -15% from your Marks."
       },
       {
         "id": "Mark_Tiger",
@@ -59251,7 +59251,7 @@
             "skillCostReduction": [
               {
                 "skillID": "melvorD:Summoning",
-                "value": -5
+                "value": 5
               }
             ],
             "skillInterval": [
@@ -59291,7 +59291,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Mark of the Tiger",
-        "customDescription": "-5% Summoning cost reduction for a total of -20% applied from your Marks.<br>-5% Summoning interval for a total of -20% from your Marks."
+        "customDescription": "-5% Summoning production cost for a total of -20% applied from your Marks.<br>-5% Summoning interval for a total of -20% from your Marks."
       },
       {
         "id": "Mark_Bear",
@@ -59303,7 +59303,7 @@
             "skillCostReduction": [
               {
                 "skillID": "melvorD:Summoning",
-                "value": -5
+                "value": 5
               }
             ],
             "skillInterval": [
@@ -59343,7 +59343,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Mark of the Bear",
-        "customDescription": "-5% Summoning cost reduction for a total of -25% applied from your Marks.<br>-5% Summoning interval for a total of -25% from your Marks."
+        "customDescription": "-5% Summoning production cost for a total of -25% applied from your Marks.<br>-5% Summoning interval for a total of -25% from your Marks."
       },
       {
         "id": "Mark_Bison",
@@ -59355,7 +59355,7 @@
             "skillCostReduction": [
               {
                 "skillID": "melvorD:Summoning",
-                "value": -5
+                "value": 5
               }
             ],
             "skillInterval": [
@@ -59395,7 +59395,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Mark of the Bison",
-        "customDescription": "-5% Summoning cost reduction for a total of -30% applied from your Marks.<br>-5% Summoning interval for a total of -30% from your Marks."
+        "customDescription": "-5% Summoning production cost for a total of -30% applied from your Marks.<br>-5% Summoning interval for a total of -30% from your Marks."
       },
       {
         "id": "Telescope_Iron",
