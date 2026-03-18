@@ -10,6 +10,7 @@
 | Baby Blue Dragon            | ⚔️           | ⚔️48💪🏻48🛡️48❤️55🏹40🧙🏻‍♂️40        | 3.0s             | —                                                                                                                                                                                                                                                              | —                                                                                                                                | —             | 1x Baby Dragon Bones     | —                    |
 | Baby Green Dragon           | ⚔️           | ⚔️38💪🏻38🛡️38❤️45🏹30🧙🏻‍♂️30        | 3.0s             | —                                                                                                                                                                                                                                                              | —                                                                                                                                | —             | 1x Baby Dragon Bones     | —                    |
 | Baby Red Dragon             | ⚔️           | ⚔️58💪🏻58🛡️58❤️65🏹50🧙🏻‍♂️50        | 3.0s             | —                                                                                                                                                                                                                                                              | —                                                                                                                                | —             | 1x Baby Dragon Bones     | —                    |
+| Bane, Eternal Husk          | 🧙🏻‍♂️           | ⚔️1💪🏻1🛡️1❤️1🏹1🧙🏻‍♂️1              | 0.1s             | Attacks                                                                                                                                                                                                                                                        | Effects                                                                                                                          | Resistance(s) | Bones                    | Location             |
 | Barbarian                   | ⚔️           | ⚔️8💪🏻10🛡️4❤️14🏹1🧙🏻‍♂️1            | 3.6s             | —                                                                                                                                                                                                                                                              | —                                                                                                                                | —             | 1x Bones                 | Barbarian Village    |
 | Barbarian Berserker         | ⚔️           | ⚔️60💪🏻99🛡️10❤️88🏹1🧙🏻‍♂️1          | 3.1s             | Wild Strikes                                                                                                                                                                                                                                                   | —                                                                                                                                | —             | 1x Bones                 | Barbarian Village    |
 | Barbarian Bowyer            | 🏹           | ⚔️1💪🏻1🛡️36❤️54🏹65🧙🏻‍♂️1           | 3.0s             | —                                                                                                                                                                                                                                                              | —                                                                                                                                | —             | 1x Bones                 | Barbarian Village    |
@@ -78,7 +79,7 @@
 | Zulrah (Phase Six)          | 🧙‍♂️           | ⚔️300💪300🛡️300❤️1820🏹300🧙‍♂️300 | 1.8              | Barbed Projectiles<br>Swamp Sludge                                                                                                                                                                                                                             | PhaseHP10<br>Venomous Hide<br>Stun Immunity<br>Melee Immunity<br>Ranged Vulnerability 10%                                        | —             | 14x Tanzanite Scales     | Swamp of Desolation  |
 | Zulrah (Phase Ten)          | ⚔️           | ⚔️300💪300🛡️300❤️1820🏹300🧙‍♂️300 | 1.8              | Barbed Tail Whip<br>80% Chance to Stun (2 turns, melee only)                                                                                                                                                                                                   | PhaseHP10<br>Venomous Hide<br>Magmatic Hide<br>Stun Immunity                                                                     | —             | 19x Magmatic Scales      | Swamp of Desolation  |
 | Zulrah (Phase Three)        | 🧙‍♂️           | ⚔️300💪300🛡️300❤️1820🏹300🧙‍♂️300 | 1.8              | Barbed Projectiles<br>Swamp Sludge                                                                                                                                                                                                                             | PhaseHP10<br>Venomous Hide<br>Stun Immunity<br>Melee Immunity<br>Ranged Vulnerability 10%                                        | —             | 22x Tanzanite Scales     | Swamp of Desolation  |
-| Zulrah (Phase Two)          | ⚔️           | ⚔️300💪300🛡️300❤️1820🏹300🧙‍♂️300 | 1.8              | Barbed Tail Whip<br>80% Chance to Stun (2 turns, melee only)                                                                                                                                                                                                   | PhaseHP10<br>Venomous Hide<br>Magmatic Hide<br>Stun Immunity                                                                     | —             | 27x Magmatic Scales      | Swamp of Desolation  |
+| Zulrah (Phase Two)          | ⚔️           | ⚔️300💪300🛡️300❤️1820🏹300🧙‍♂️300 | 1.8              | Barbed Tail Whip<br>80% Chance to Stun (2 turns, melee only)                                                                                                                                                                                                   | PhaseHP10<br>Venomous Hide<br>Magmatic Hide<br>Stun Immunity                                                                     | —             | 27x Magmatic Scales      | Swamp of Desolation  |             | Barbed Tail Whip<br>80% Chance to Stun (2 turns, melee only)                                                                                                                                                                                                   | PhaseHP10<br>Venomous Hide<br>Magmatic Hide<br>Stun Immunity                                                                     | —             | 27x Magmatic Scales      | Swamp of Desolation  |
 
 | Upgrade               | Description                                                                                                                            | Cost                         | Requirements                              |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------- |
@@ -122,3 +123,115 @@
 | Slayer Expert         |                                                                                                                                        |                              | 70 Slayer                                 |
 | Slayer Master         |                                                                                                                                        |                              | 80 Slayer, Complete Into the Mist         |
 | Slayer Grandmaster    |                                                                                                                                        |                              | 90 Slayer, Complete Impending Darkness    |
+
+| **Stronghold of the Damned**                                                                                                           |
+| -------------------------------------------------------------------------------------------------------------------------------------- |
+| (picture_link)                                                                                                                         |
+| **Area ID:** expandedAreas:Stronghold_of_the_Damned                                                                                    |
+| **Difficulty:** Mythical                                                                                                               |
+| **Requirements:** Level 99 Slayer<br>Complete Impending Darkness 5 times                                                               |
+| **Rewards:** 5,000,000 GP<br>1 Cursed Enhancement Scroll<br>1 Cursed Enhancement Scroll (Augmented)<br>1 Cursed Enhancement (Superior) |
+| **Monsters:**                                                                                                                          |
+| **Pet:**                                                                                                                               |
+| **Pet Drop Chance:** 1 in 200 (0.50%) - Superior Tier Only                                                                             |
+
+| Name | Combat Lvl | HP  | Max Hit | Style | Count |
+| ---- | ---------- | --- | ------- | ----- | ----- |
+| Name | Combat Lvl | HP  | Max Hit | Style | Count |
+| Name | Combat Lvl | HP  | Max Hit | Style | Count |
+| Name | Combat Lvl | HP  | Max Hit | Style | Count |
+| Name | Combat Lvl | HP  | Max Hit | Style | Count |
+| Name | Combat Lvl | HP  | Max Hit | Style | Count |
+| Name | Combat Lvl | HP  | Max Hit | Style | Count |
+| Name | Combat Lvl | HP  | Max Hit | Style | Count |
+| Name | Combat Lvl | HP  | Max Hit | Style | Count |
+| Name | Combat Lvl | HP  | Max Hit | Style | Count |
+| Name | Combat Lvl | HP  | Max Hit | Style | Count |
+| Name | Combat Lvl | HP  | Max Hit | Style | Count |
+| Name | Combat Lvl | HP  | Max Hit | Style | Count |
+| Name | Combat Lvl | HP  | Max Hit | Style | Count |
+| Name | Combat Lvl | HP  | Max Hit | Style | Count |
+| Name | Combat Lvl | HP  | Max Hit | Style | Count |
+| Name | Combat Lvl | HP  | Max Hit | Style | Count |
+| Name | Combat Lvl | HP  | Max Hit | Style | Count |
+| Name | Combat Lvl | HP  | Max Hit | Style | Count |
+| Name | Combat Lvl | HP  | Max Hit | Style | Count |
+| Name | Combat Lvl | HP  | Max Hit | Style | Count |
+| Name | Combat Lvl | HP  | Max Hit | Style | Count |
+
+## Boss Monster Passives
+* Stronghold Boss Buff
+  * Buff
+
+## Stronghold Tier Passives
+* Standard Tier
+  * Buff
+  * Buff
+  * Buff
+* Augmented Tier
+  * Buff
+  * Buff
+  * Buff
+* Superior Tier
+  * Buff
+  * Buff
+  * Buff
+
+# Loot
+In addition to the below loot, each monster in a Stronghold drops its normal loot. For Boss monsters, this is the dungeon chest you would obtain when completing the respective dungeon. 
+
+## Standard Tier
+| Item                 | Qty | Chance |
+| -------------------- | --- | ------ |
+| Cursed Enhancement 1 | 1   | 57.14% |
+| Cursed Enhancement 2 | 1   | 28.57% |
+| Cursed Enhancement 3 | 1   | 14.29% |
+
+## Augmented Tier
+| Item                             | Qty | Chance |
+| -------------------------------- | --- | ------ |
+| Cursed Enhancement 1 (Augmented) | 1   | 66.67% |
+| Cursed Enhancement 2 (Augmented) | 1   | 25.00% |
+| Cursed Enhancement 3 (Augmented) | 1   | 08.33% |
+
+## Superior Tier
+| Item                          | Qty | Chance |
+| ----------------------------- | --- | ------ |
+| Cursed Enhancement (Superior) | 1   | 1.00%  |
+
+| Monster                                 |
+| --------------------------------------- |
+| [Monster](monsterPictureLink)           |
+| **Monster ID:** expandedAreas:MonsterID |
+| **Zones:**<br><br>[Area](areaLink)      |
+| **Monster Type(s):** Type               |
+| **Slayer Tier:** slayerTier             |
+
+# Combat
+| Combat Stats                                    |
+| ----------------------------------------------- |
+| Damage Type: ⚔️ Normal Damage                    |
+| Combat Level (extracted from `levels`):         |
+| ❤️ 1                                             |
+| ⚔️1💪🏻1🛡️1🏹1🧙🏻‍♂️1                                      |
+| Speed: attackSpeed/100 (displayed as e.g. 1.0s) |
+| Damage Reduction: damageReduction               |
+| Attacks: specialAttacks                         |
+| Passives: passives                              |
+
+
+# Drops
+## Bones
+| Item             | Qty   |
+| ---------------- | ----- |
+| [Item](itemLink) | bones |
+
+## Loot Table
+| Item             | Qty  | Chance                                                                   |
+| ---------------- | ---- | ------------------------------------------------------------------------ |
+| [Item](itemLink) | item | dropChance (calculated using item `weight` / total `lootTable` `weight`) |
+
+# Tasks
+| Task                         | Requirements     | Rewards     |
+| ---------------------------- | ---------------- | ----------- |
+| [Difficulty](difficultyLink) | taskRequirements | taskRewards |
