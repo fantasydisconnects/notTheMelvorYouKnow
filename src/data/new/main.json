@@ -3978,6 +3978,55 @@
         "adjective": "Vulnerable"
       }
     ],
+    "combatEffectTables": [
+      {
+        "id": "RandomEyeRay",
+        "table": [
+          {
+            "effectID": "melvorD:Fear",
+            "weight": 1
+          },
+          {
+            "effectID": "melvorD:Burn",
+            "weight": 1
+          },
+          {
+            "effectID": "melvorD:Sleep",
+            "weight": 1,
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "effectID": "expandedAreas:Paralyze",
+            "weight": 1,
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "effectID": "melvorD:Slow",
+            "initialParams": [
+              {
+                "name": "magnitude",
+                "value": 50
+              },
+              {
+                "name": "turns",
+                "value": 2
+              }
+            ],
+            "weight": 1
+          }
+        ]
+      }
+    ],
     "combatEffectTemplates": [
       {
         "id": "Instakill",
@@ -55068,9 +55117,9 @@
         "allowQuantityPurchase": true,
         "unlockRequirements": [],
         "purchaseRequirements": [],
-        "defaultBuyLimit": 0,
+        "defaultBuyLimit": 100,
         "buyLimitOverrides": [],
-        "showBuyLimit": false,
+        "showBuyLimit": true,
         "customName": "Magic Training",
         "customDescription": "Gain a +1 Flat Bonus to: Magic Attack, Magic Max Hit, and Magic Defence"
       },
@@ -56805,7 +56854,7 @@
             "type": "DungeonCompletion"
           }
         ],
-        "defaultBuyLimit": 1,
+        "defaultBuyLimit": 0,
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Allow Nonmagic Curses",
@@ -60391,7 +60440,7 @@
             "skillInterval": [
               {
                 "skillID": "melvorD:Agility",
-                "value": 5
+                "value": -5
               }
             ]
           }
@@ -60431,7 +60480,7 @@
             "skillInterval": [
               {
                 "skillID": "melvorD:Agility",
-                "value": 5
+                "value": -5
               }
             ]
           }
@@ -60477,7 +60526,7 @@
             "skillInterval": [
               {
                 "skillID": "melvorD:Agility",
-                "value": 5
+                "value": -5
               }
             ]
           }
@@ -60523,7 +60572,7 @@
             "skillInterval": [
               {
                 "skillID": "melvorD:Agility",
-                "value": 5
+                "value": -5
               }
             ]
           }
@@ -60569,7 +60618,7 @@
             "skillInterval": [
               {
                 "skillID": "melvorD:Agility",
-                "value": 5
+                "value": -5
               }
             ]
           }
@@ -60615,7 +60664,7 @@
             "skillInterval": [
               {
                 "skillID": "melvorD:Agility",
-                "value": 5
+                "value": -5
               }
             ]
           }
@@ -60661,7 +60710,7 @@
             "skillInterval": [
               {
                 "skillID": "melvorD:Agility",
-                "value": 5
+                "value": -5
               }
             ]
           }

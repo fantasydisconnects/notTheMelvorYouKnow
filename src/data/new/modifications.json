@@ -40,7 +40,8 @@
               "insertAt": "After",
               "afterID": "melvorD:Undead_Graveyard",
               "ids": [
-                "expandedAreas:The_Dungeon"
+                "expandedAreas:The_Dungeon",
+                "expandedAreas:The_Barrows"
               ]
             },
             {
