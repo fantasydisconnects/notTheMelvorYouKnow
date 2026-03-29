@@ -40,8 +40,7 @@
               "insertAt": "After",
               "afterID": "melvorD:Undead_Graveyard",
               "ids": [
-                "expandedAreas:The_Dungeon",
-                "expandedAreas:The_Barrows"
+                "expandedAreas:The_Dungeon"
               ]
             },
             {
@@ -55,6 +54,7 @@
               "insertAt": "After",
               "afterID": "melvorD:Hall_of_Wizards",
               "ids": [
+                "expandedAreas:The_Barrows",
                 "expandedAreas:The_Barbarian_Trials"
               ]
             },

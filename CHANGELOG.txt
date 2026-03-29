@@ -2,3 +2,7 @@
   - a Hard difficulty Dungeon with several new t70 armour sets and weapons straight from RuneScape
   - adjusted and themed to fit into Melvor Idle
   - art is jank
+
+- Add Shield of Eyes item
+  - Add Random Eye Rays
+  - Add Anti-Magic Field

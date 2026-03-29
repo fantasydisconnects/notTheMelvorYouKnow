@@ -4,6 +4,39 @@
   "data": {
     "attacks": [
       {
+        "id": "AntiMagicField",
+        "defaultChance": 5,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "roll": false,
+            "maxRoll": "MagicScaling",
+            "maxPercent": 25,
+            "character": "Target"
+          }
+        ],
+        "prehitEffects": [
+          {
+            "effectID": "expandedAreas:AntiMagicFieldSelf"
+          }
+        ],
+        "onhitEffects": [
+          {
+            "effectID": "expandedAreas:AntiMagicFieldEnemy",
+            "bypassBarrier": true
+          }
+        ],
+        "cantMiss": true,
+        "canNormalAttack": true,
+        "attackCount": 2,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Anti-Magic Field",
+        "description": "Creates an anti-magic field that stops the target from using Magic, but also gives it and the attacker immunity to Magic for ${preHitEffect0turns} turns. Then, the field automatically deals ${attackDamageMaxValue0}% of the target's Magic level + 1. If the field is already active, the attacker performs a regular attack instead.",
+        "descriptionGenerator": "<Avoidable> Creates an anti-magic field, preventing <target> from using Magic, but also immunity to Magic. Deals <damage>.",
+        "usesRunesPerProc": false
+      },
+      {
         "id": "SwampSludge",
         "defaultChance": 100,
         "damage": [
@@ -1370,7 +1403,7 @@
         "prehitEffects": [],
         "onhitEffects": [
           {
-            "effectID": "expandedAreas:Instakill"
+            "effectID": "expandedAreas:DeathMagic"
           }
         ],
         "cantMiss": true,
@@ -1378,8 +1411,8 @@
         "attackInterval": 1000,
         "lifesteal": 0,
         "name": "Death",
-        "description": "(Unavoidable.) The target is instantly killed. If immune to Instakill, the target instead takes damage equal to ${attackDamageMaxValue0}% of their Max HP.",
-        "descriptionGenerator": "<Avoidable>. Kills the target instantly. If immune to Instakill, takes <damage> instead.",
+        "description": "(Unavoidable.) The target is instantly killed. If immune to Death Magic, the target instead takes damage equal to ${attackDamageMaxValue0}% of their Max HP.",
+        "descriptionGenerator": "<Avoidable>. Kills the target instantly. If immune to Death Magic, takes <damage> instead.",
         "usesRunesPerProc": false
       },
       {
@@ -3963,9 +3996,14 @@
         "adjective": "Heal Immune"
       },
       {
-        "id": "Instakill",
-        "name": "Instakill",
+        "id": "DeathMagic",
+        "name": "Death Magic",
         "adjective": "Cursed by Death Itself"
+      },
+      {
+        "id": "Gaze",
+        "name": "Gazes",
+        "adjective": "Gazed at"
       },
       {
         "id": "Paralyze",
@@ -3980,48 +4018,46 @@
     ],
     "combatEffectTables": [
       {
-        "id": "RandomEyeRay",
+        "id": "RandomGaze",
         "table": [
           {
-            "effectID": "melvorD:Fear",
+            "effectID": "expandedAreas:GazeCharm",
             "weight": 1
           },
           {
-            "effectID": "melvorD:Burn",
+            "effectID": "expandedAreas:GazeParalyze",
             "weight": 1
           },
           {
-            "effectID": "melvorD:Sleep",
-            "weight": 1,
-            "initialParams": [
-              {
-                "name": "turns",
-                "value": 3
-              }
-            ]
+            "effectID": "expandedAreas:GazeFear",
+            "weight": 1
           },
           {
-            "effectID": "expandedAreas:Paralyze",
-            "weight": 1,
-            "initialParams": [
-              {
-                "name": "turns",
-                "value": 2
-              }
-            ]
+            "effectID": "expandedAreas:GazeDrain",
+            "weight": 1
           },
           {
-            "effectID": "melvorD:Slow",
-            "initialParams": [
-              {
-                "name": "magnitude",
-                "value": 50
-              },
-              {
-                "name": "turns",
-                "value": 2
-              }
-            ],
+            "effectID": "expandedAreas:GazeWither",
+            "weight": 1
+          },
+          {
+            "effectID": "expandedAreas:GazeTelekinesis",
+            "weight": 1
+          },
+          {
+            "effectID": "expandedAreas:GazeSleep",
+            "weight": 1
+          },
+          {
+            "effectID": "expandedAreas:GazeFailure",
+            "weight": 1
+          },
+          {
+            "effectID": "expandedAreas:GazeNullify",
+            "weight": 1
+          },
+          {
+            "effectID": "expandedAreas:GazeDeath",
             "weight": 1
           }
         ]
@@ -4029,12 +4065,12 @@
     ],
     "combatEffectTemplates": [
       {
-        "id": "Instakill",
+        "id": "DeathMagic",
         "baseTemplates": [
           "melvorD:DOT"
         ],
         "baseEffectData": {
-          "name": "Instakill",
+          "name": "Death Magic",
           "media": "assets/combat/status/instakill.png",
           "behaviours": [
             {
@@ -4049,10 +4085,10 @@
             }
           ],
           "effectGroups": [
-            "expandedAreas:Instakill"
+            "expandedAreas:DeathMagic"
           ],
           "exclusiveGroups": [
-            "expandedAreas:Instakill"
+            "expandedAreas:DeathMagic"
           ]
         }
       },
@@ -4167,6 +4203,360 @@
       }
     ],
     "combatEffects": [
+      {
+        "id": "GazeCharm",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Gaze: Charm",
+        "media": "assets/combat/status/strength_decrease.png",
+        "target": "Target",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "damageDealt": -20
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 2
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff",
+          "expandedAreas:Gaze"
+        ]
+      },
+      {
+        "id": "GazeParalyze",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Gaze: Paralyze",
+        "media": "assets/combat/status/paralyzed.png",
+        "target": "Target",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "combatEffects": [
+              {
+                "effectID": "expandedAreas:Paralyze",
+                "appliesWhen": "PostAttack"
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 2
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff",
+          "expandedAreas:Gaze"
+        ]
+      },
+      {
+        "id": "GazeFear",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Gaze: Fear",
+        "media": "assets/empty.png",
+        "target": "Target",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "combatEffects": [
+              {
+                "effectID": "melvorD:Fear",
+                "appliesWhen": "PostAttack",
+                "initialParams": [
+                  {
+                    "name": "turns",
+                    "value": 2
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "parameters": [],
+        "effectGroups": [
+          "melvorD:Debuff",
+          "expandedAreas:Gaze"
+        ]
+      },
+      {
+        "id": "GazeDrain",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Gaze: Drain",
+        "media": "assets/nothing.png",
+        "target": "Target",
+        "tooltipSpans": [
+          {
+            "type": "Stats",
+            "statGroupName": "stacks"
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "cantSpecialAttack": 1
+            },
+            "combatEffects": [
+              {
+                "effectID": "melvorD:Slow",
+                "appliesWhen": "PostAttack",
+                "initialParams": [
+                  {
+                    "name": "magnitude",
+                    "value": 10
+                  },
+                  {
+                    "name": "turns",
+                    "value": 2
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 2
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff",
+          "expandedAreas:Gaze"
+        ]
+      },
+      {
+        "id": "GazeWither",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Gaze: Wither",
+        "media": "assets/combat/status/wither.png",
+        "target": "Target",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "maxHitpoints": -20
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 2
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff",
+          "expandedAreas:Gaze"
+        ]
+      },
+      {
+        "id": "GazeTelekinesis",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Gaze: Telekinesis",
+        "media": "assets/combat/status/evasion_decrease.svg",
+        "target": "Target",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "flatResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": -5
+                }
+              ],
+              "evasion": -10
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 2
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff",
+          "expandedAreas:Gaze"
+        ]
+      },
+      {
+        "id": "GazeSleep",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Gaze: Sleep",
+        "media": "assets/nothing.png",
+        "target": "Target",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "combatEffects": [
+              {
+                "appliesWhen": "PostAttack",
+                "effectID": "melvorD:Sleep",
+                "initialParams": [
+                  {
+                    "name": "turns",
+                    "value": 2
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 2
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff",
+          "expandedAreas:Gaze"
+        ]
+      },
+      {
+        "id": "GazeFailure",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Gaze: Failure",
+        "media": "assets/combat/status/attack_decrease.svg",
+        "target": "Target",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "accuracyRating": -50
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 2
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff",
+          "expandedAreas:Gaze"
+        ]
+      },
+      {
+        "id": "GazeNullify",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Gaze: Nullify",
+        "media": "assets/combat/status/null.svg",
+        "target": "Target",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "effectImmunity": [
+                {
+                  "effectGroupID": "melvorD:Buff",
+                  "value": 1
+                }
+              ]
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 2
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff",
+          "expandedAreas:Gaze"
+        ]
+      },
+      {
+        "id": "GazeDeath",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Gaze: Death",
+        "media": "assets/combat/status/instakill.png",
+        "target": "Target",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "combatEffects": [
+              {
+                "appliesWhen": "PostAttack",
+                "effectID": "expandedAreas:DeathMagic",
+                "chance": 50
+              }
+            ]
+          }
+        ],
+        "parameters": [],
+        "effectGroups": [
+          "expandedAreas:DeathMagic",
+          "expandedAreas:Gaze"
+        ]
+      },
+      {
+        "id": "AntiMagicFieldSelf",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Anti-Magic Field",
+        "media": "assets/combat/status/antimagic.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "magicEvasion": 999999,
+              "magicProtection": 100,
+              "magicImmunity": 1
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff",
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "AntiMagicFieldEnemy",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Anti-Magic Field",
+        "media": "assets/combat/status/antimagic.png",
+        "target": "Target",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "magicAccuracyRating": -999999,
+              "magicMaxHit": -999999,
+              "magicEvasion": 999999,
+              "magicProtection": 100,
+              "magicImmunity": 1
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff",
+          "melvorD:Buff"
+        ]
+      },
       {
         "id": "OntoTheNextRoom",
         "templateID": "melvorD:StaticSelfCountingModifier",
@@ -5383,11 +5773,14 @@
               "hitpointRegeneration": -999999
             }
           }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
         ]
       },
       {
-        "id": "Instakill",
-        "templateID": "expandedAreas:Instakill",
+        "id": "DeathMagic",
+        "templateID": "expandedAreas:DeathMagic",
         "parameters": [
           {
             "name": "procs",
@@ -5422,6 +5815,10 @@
             "applyDamageModifiers": false,
             "applyResistance": false
           }
+        ],
+        "effectGroups": [
+          "expandedAreas:DeathMagic",
+          "melvorD:DamageOverTime"
         ]
       },
       {
@@ -7431,6 +7828,199 @@
       }
     ],
     "items": [
+      {
+        "itemType": "Equipment",
+        "id": "Shield_of_Eyes",
+        "name": "Shield of Eyes",
+        "category": "Misc",
+        "type": "Armour",
+        "media": "assets/bank/Shield_of_Eyes.png",
+        "customDescription": "Passive: +65% Chance to ignore Gaze attacks; +50% Evasion and Reflect Damage against Ranged; +35% Evasion and Deflect Damage against Magic; +20% Evasion and Reflect Damage against Melee<br>+20% Chance on Being Hit to make a random Gaze attack at the Target",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 10000000,
+        "tier": "none",
+        "validSlots": [
+          "Shield"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 120
+          },
+          {
+            "type": "DungeonCompletion",
+            "dungeonID": "melvorF:Impending_Darkness",
+            "count": 1
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "stabAttackBonus",
+            "value": -30
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": -30
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": -30
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": -10
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -4
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 40
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 450
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 400
+          },
+          {
+            "key": "damageReduction",
+            "value": 10
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "character": "Enemy",
+              "thisAttackType": "ranged",
+              "targetAttackType": "any",
+              "type": "CombatType"
+            },
+            "modifiers": {
+              "evasion": 50,
+              "reflectDamage": 50
+            }
+          },
+          {
+            "condition": {
+              "character": "Enemy",
+              "thisAttackType": "magic",
+              "targetAttackType": "any",
+              "type": "CombatType"
+            },
+            "modifiers": {
+              "evasion": 35,
+              "reflectDamage": 35
+            }
+          },
+          {
+            "condition": {
+              "character": "Enemy",
+              "thisAttackType": "melee",
+              "targetAttackType": "any",
+              "type": "CombatType"
+            },
+            "modifiers": {
+              "evasion": 20,
+              "reflectDamage": 20,
+              "effectIgnoreChance": [
+                {
+                  "effectGroupID": "expandedAreas:Gaze",
+                  "value": 65
+                }
+              ]
+            }
+          }
+        ],
+        "combatEffects": [
+          {
+            "appliesWhen": "HitByAttack",
+            "tableID": "expandedAreas:RandomGaze",
+            "targetOverride": "Target",
+            "chance": 20
+          }
+        ],
+        "specialAttacks": [
+          "expandedAreas:AntiMagicField"
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Reflection_Shield",
+        "name": "Reflection Shield",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/Reflection_Shield.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1000000,
+        "customDescription": "Passive: +10% Reflect Damage, +35% Chance to ignore Gaze attacks",
+        "tier": "slayer",
+        "validSlots": [
+          "Shield",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 100
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Slayer",
+            "level": 100
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": -3
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -8
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 3
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 120
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 167
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 194
+          },
+          {
+            "key": "resistance",
+            "value": 11
+          }
+        ],
+        "modifiers": {
+          "reflectDamage": 10,
+          "effectIgnoreChance": [
+            {
+              "effectGroupID": "expandedAreas:Gaze",
+              "value": 35
+            }
+          ]
+        }
+      },
       {
         "itemType": "Item",
         "id": "YumYum_Bits",

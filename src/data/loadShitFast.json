@@ -1,0 +1,17 @@
+{
+  "$schema": "https://melvoridle.com/assets/schema/gameData.json",
+  "namespace": "expandedAreas",
+  "data": {
+    "attacks": [],
+    "combatEffects": [
+      
+    ],
+    "combatEffectGroups": [],
+    "combatEffectTables": [
+      
+    ],
+    "items": [
+      
+    ]
+  }
+}
