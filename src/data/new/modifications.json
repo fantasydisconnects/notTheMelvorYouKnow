@@ -54,7 +54,6 @@
               "insertAt": "After",
               "afterID": "melvorD:Hall_of_Wizards",
               "ids": [
-                "expandedAreas:The_Barrows",
                 "expandedAreas:The_Barbarian_Trials"
               ]
             },
@@ -62,6 +61,7 @@
               "insertAt": "After",
               "afterID": "melvorF:Dragons_Den",
               "ids": [
+                "expandedAreas:The_Barrows",
                 "expandedAreas:Elemental_Sanctuary"
               ]
             }

@@ -2622,7 +2622,7 @@
       {
         "id": "Fierce_Flames",
         "name": "Fierce Flames",
-        "media": "assets/combat/magic/fierce_flames.png",
+        "media": "assets/combat/magic/Fierce_Flames.png",
         "level": 66,
         "maxHit": 10,
         "runesRequired": [
@@ -2942,7 +2942,17 @@
           "expandedAreas:Torags_Platelegs",
           "expandedAreas:Veracs_Helm",
           "expandedAreas:Veracs_Brassard",
-          "expandedAreas:Veracs_Plateskirt"
+          "expandedAreas:Veracs_Plateskirt",
+          "expandedAreas:Linzas_Helm",
+          "expandedAreas:Linzas_Cuirass",
+          "expandedAreas:Linzas_Greaves"
+        ]
+      },
+      {
+        "insertAt": "Before",
+        "beforeID": "melvorF:Earth_Layered_Shield",
+        "ids": [
+          "expandedAreas:Linzas_Shield"
         ]
       },
       {
@@ -2952,7 +2962,8 @@
           "expandedAreas:Guthans_Warspear",
           "expandedAreas:Dharoks_Greataxe",
           "expandedAreas:Torags_Hammers",
-          "expandedAreas:Veracs_Flail"
+          "expandedAreas:Veracs_Flail",
+          "expandedAreas:Linzas_Longsword"
         ]
       },
       {
@@ -2985,6 +2996,7 @@
         "afterID": "melvorF:Dragon_Crossbow",
         "ids": [
           "expandedAreas:Karils_Crossbow",
+          "expandedAreas:Karils_Crossbow2",
           "expandedAreas:Bolt_Rack"
         ]
       },
@@ -2998,6 +3010,7 @@
           "expandedAreas:Karils_Sarcophagus",
           "expandedAreas:Torags_Sarcophagus",
           "expandedAreas:Veracs_Sarcophagus",
+          "expandedAreas:Linzas_Sarcophagus",
           "expandedAreas:Charnel_Chest"
         ]
       },
@@ -45416,7 +45429,7 @@
         "itemIDs": [
           "expandedAreas:Linzas_Helm",
           "expandedAreas:Linzas_Cuirass",
-          "expandedAreas:Linzas_Graves",
+          "expandedAreas:Linzas_Greaves",
           "expandedAreas:Linzas_Shield",
           "expandedAreas:Linzas_Longsword"
         ],

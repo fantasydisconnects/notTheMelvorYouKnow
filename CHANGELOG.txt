@@ -40,11 +40,14 @@ v0.9.2.1
 # Fixes
 - Fix staff images not displaying correct
 
-v0.9.2
+v0.9.2.2
 # New Content
 - Added Linza the Disgraced to The Barrows
   - Added Linza's equipment to Linza's Sarcophagus and Charnel Chest
     - Linza's Longsword, Linza's Shield, Linza's Helm, Linza's Cuirass, Linza's Greaves
+
+# Fixes
+- Change boss monster image size from 512x512 -> 500x500 to properly fit monster box without overflowing
 
 # Changes
 ART
@@ -52,7 +55,7 @@ ART
 - Barrows Brothers and equipment changed to match RS3 and look more visually appealing and distinct in-game
 
 AREAS
-- The Barrows difficulty changed from Hard -> Elite to reflect its monsters' maximum hits despite their combat levels not being within the Elite bracket
+- The Barrows difficulty changed from Hard -> Elite to reflect its monsters' maximum hits despite their combat levels not being within the Elite bracket. Moved to after Dragons' Den.
 
 ITEMS
 - Ahrim's Staff attack interval and equipment stats increased by 1.2
