@@ -3,15 +3,122 @@
   "namespace": "expandedAreas",
   "data": {
     "attacks": [],
+    "attackSpells": [],
+    "combatAreas": [
+      {
+        ""
+      }
+    ],
+    "slayerAreas": [
+      {
+        ""
+      }
+    ],
+    "dungeons": [
+      {
+        "hideIfLocked": true,
+        "showUnlockRequirements": false
+      }
+    ],
     "combatEffects": [
-      
+      {
+        "id": "Flying",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Flying",
+        "media": "assets/combat/status/flying.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 1
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "evasionAgainstMelee": 50,
+              "effectIgnoreChance": [
+                {
+                  "effectGroupID": "melvorD:StunLike",
+                  "value": 25
+                },
+                {
+                  "effectGroupID": "melvorD:Slow",
+                  "value": 25
+                }
+              ]
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      }
     ],
     "combatEffectGroups": [],
-    "combatEffectTables": [
-      
-    ],
+    "combatEffectTables": [],
+    "combatPassives": [],
     "items": [
       
+    ],
+    "itemSynergies": [],
+    "monsters": [
+      {
+        "id": "TheTyrantMother",
+        "name": "The Tyrant Mother",
+        "media": "assets/combat/monsters/eyestalker.png",
+        "levels": {
+          "Hitpoints": 20000,
+          "Attack": 2000,
+          "Strength": 2000,
+          "Defence": 2000,
+          "Ranged": 2000,
+          "Magic": 2000
+        },
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3200
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": 100
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 150
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 200
+          }
+        ],
+        "ignoreCompletion": false,
+        "attackType": "magic",
+        "specialAttacks": [
+          "melvorTotH:UnisonOfFireAndEarth",
+          "melvorTotH:UnisonOfAirAndWater",
+          "melvorTotH:DejaVu",
+          "melvorTotH:SealedFate"
+        ],
+        "passives": [
+          "expandedAreas:BastionOfTyranny",
+          "expandedAreas:StrangeBiology",
+          "expandedAreas:NullifyingEye",
+          "expandedAreas:Flight"
+        ],
+        "lootChance": 0,
+        "lootTable": [],
+        "canSlayer": false,
+        "isBoss": true,
+        "selectedSpell": "melvorD:FireSurge",
+        "bones": {
+          "itemID": "melvorD:Bones",
+          "quantity": 1
+        },
+        "currencyDrops": []
+      }
     ]
   }
 }

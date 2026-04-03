@@ -15,14 +15,10 @@
             "character": "Target"
           }
         ],
-        "prehitEffects": [
-          {
-            "effectID": "expandedAreas:AntiMagicFieldSelf"
-          }
-        ],
+        "prehitEffects": [],
         "onhitEffects": [
           {
-            "effectID": "expandedAreas:AntiMagicFieldEnemy",
+            "effectID": "expandedAreas:AntiMagicField",
             "bypassBarrier": true
           }
         ],
@@ -32,8 +28,8 @@
         "attackInterval": 50,
         "lifesteal": 0,
         "name": "Anti-Magic Field",
-        "description": "Creates an anti-magic field that stops the target from using Magic, but also gives it and the attacker immunity to Magic for ${preHitEffect0turns} turns. Then, the field automatically deals ${attackDamageMaxValue0}% of the target's Magic level + 1. If the field is already active, the attacker performs a regular attack instead.",
-        "descriptionGenerator": "<Avoidable> Creates an anti-magic field, preventing <target> from using Magic, but also immunity to Magic. Deals <damage>.",
+        "description": "Creates an anti-magic field that stops the target from using, evading, or hitting with Magic (including Buffs) for ${preHitEffect0turns} turns. Then, the field automatically deals ${attackDamageMaxValue0}% of the target's Magic level + 1. If the field is already active, the attacker performs a regular attack instead.",
+        "descriptionGenerator": "<Avoidable> Creates an anti-magic field, preventing <target> from using Magic (including Buffs). Deals <damage>.",
         "usesRunesPerProc": false
       },
       {
@@ -646,23 +642,28 @@
         "usesRunesPerProc": false
       },
       {
-        "id": "DualHitNormal",
-        "defaultChance": 100,
+        "id": "CorruptingStrike",
+        "defaultChance": 15,
         "damage": [
           {
-            "damageType": "Normal",
-            "amplitude": 100
+            "damageType": "Custom",
+            "character": "Target",
+            "minRoll": "DefenceLevel",
+            "minPercent": 1,
+            "maxRoll": "DefenceLevel",
+            "maxPercent": 50,
+            "roll": true
           }
         ],
         "prehitEffects": [],
         "onhitEffects": [],
         "cantMiss": false,
-        "attackCount": 2,
-        "attackInterval": 50,
+        "attackCount": 1,
+        "attackInterval": 500,
         "lifesteal": 0,
-        "name": "Dual Hit",
-        "description": "Make two normal attacks.",
-        "descriptionGenerator": "<Attacker> makes two normal attacks.",
+        "name": "Corrupting Strike",
+        "description": "Make a slow but massive strike with your twinhammer, dealing between ${attackDamageMinValue0}% and ${attackDamageMaxValue0}% of the Enemy's Defence Level on hit.",
+        "descriptionGenerator": "An <avoidable> attack that deals <damage> damage.",
         "usesRunesPerProc": false
       },
       {
@@ -1917,6 +1918,425 @@
     ],
     "attackSpells": [
       {
+        "id": "ElementalStrike",
+        "name": "Elemental Strike",
+        "media": "assets/combat/magic/elemental_strike.png",
+        "level": 88,
+        "runesRequired": [
+          {
+            "id": "expandedAreas:World_Rune",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Air_Rune",
+            "quantity": 15
+          },
+          {
+            "id": "melvorD:Water_Rune",
+            "quantity": 15
+          },
+          {
+            "id": "melvorD:Earth_Rune",
+            "quantity": 15
+          },
+          {
+            "id": "melvorD:Fire_Rune",
+            "quantity": 15
+          }
+        ],
+        "maxHit": 31.0,
+        "categories": [
+          "melvorD:Air",
+          "melvorD:Water",
+          "melvorD:Earth",
+          "melvorD:Fire",
+          "melvorD:Elemental",
+          "melvorD:Strike"
+        ],
+        "spellbook": "melvorD:Standard",
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 1,
+            "effectID": "melvorD:Burn"
+          },
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 1,
+            "effectID": "melvorD:Frostburn"
+          },
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 1,
+            "effectID": "melvorD:Freeze"
+          },
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 1,
+            "effectID": "melvorD:Slow",
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 3
+              },
+              {
+                "name": "magnitude",
+                "value": 25
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ElementalBolt",
+        "name": "Elemental Bolt",
+        "media": "assets/combat/magic/elemental_bolt.png",
+        "level": 92,
+        "runesRequired": [
+          {
+            "id": "expandedAreas:World_Rune",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Air_Rune",
+            "quantity": 20
+          },
+          {
+            "id": "melvorD:Water_Rune",
+            "quantity": 20
+          },
+          {
+            "id": "melvorD:Earth_Rune",
+            "quantity": 20
+          },
+          {
+            "id": "melvorD:Fire_Rune",
+            "quantity": 20
+          }
+        ],
+        "maxHit": 32.5,
+        "categories": [
+          "melvorD:Air",
+          "melvorD:Water",
+          "melvorD:Earth",
+          "melvorD:Fire",
+          "melvorD:Elemental",
+          "melvorD:Bolt"
+        ],
+        "spellbook": "melvorD:Standard",
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 2,
+            "effectID": "melvorD:Burn"
+          },
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 2,
+            "effectID": "melvorD:Frostburn"
+          },
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 2,
+            "effectID": "melvorD:Freeze"
+          },
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 2,
+            "effectID": "melvorD:Slow",
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 3
+              },
+              {
+                "name": "magnitude",
+                "value": 25
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ElementalBlast",
+        "name": "Elemental Blast",
+        "media": "assets/combat/magic/elemental_blast.png",
+        "level": 95,
+        "runesRequired": [
+          {
+            "id": "expandedAreas:World_Rune",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Air_Rune",
+            "quantity": 25
+          },
+          {
+            "id": "melvorD:Water_Rune",
+            "quantity": 25
+          },
+          {
+            "id": "melvorD:Earth_Rune",
+            "quantity": 25
+          },
+          {
+            "id": "melvorD:Fire_Rune",
+            "quantity": 25
+          }
+        ],
+        "maxHit": 34.0,
+        "categories": [
+          "melvorD:Air",
+          "melvorD:Water",
+          "melvorD:Earth",
+          "melvorD:Fire",
+          "melvorD:Elemental",
+          "melvorD:Blast"
+        ],
+        "spellbook": "melvorD:Standard",
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 3,
+            "effectID": "melvorD:Burn"
+          },
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 3,
+            "effectID": "melvorD:Frostburn"
+          },
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 3,
+            "effectID": "melvorD:Freeze"
+          },
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 3,
+            "effectID": "melvorD:Slow",
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 3
+              },
+              {
+                "name": "magnitude",
+                "value": 25
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ElementalWave",
+        "name": "Elemental Wave",
+        "media": "assets/combat/magic/elemental_wave.png",
+        "level": 99,
+        "runesRequired": [
+          {
+            "id": "expandedAreas:World_Rune",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Air_Rune",
+            "quantity": 30
+          },
+          {
+            "id": "melvorD:Water_Rune",
+            "quantity": 30
+          },
+          {
+            "id": "melvorD:Earth_Rune",
+            "quantity": 30
+          },
+          {
+            "id": "melvorD:Fire_Rune",
+            "quantity": 30
+          }
+        ],
+        "maxHit": 35.5,
+        "categories": [
+          "melvorD:Air",
+          "melvorD:Water",
+          "melvorD:Earth",
+          "melvorD:Fire",
+          "melvorD:Elemental",
+          "melvorD:Wave"
+        ],
+        "spellbook": "melvorD:Standard",
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 4,
+            "effectID": "melvorD:Burn"
+          },
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 4,
+            "effectID": "melvorD:Frostburn"
+          },
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 4,
+            "effectID": "melvorD:Freeze"
+          },
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 4,
+            "effectID": "melvorD:Slow",
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 3
+              },
+              {
+                "name": "magnitude",
+                "value": 25
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ElementalSurge",
+        "name": "Elemental Surge",
+        "media": "assets/combat/magic/elemental_surge.png",
+        "level": 102,
+        "runesRequired": [
+          {
+            "id": "expandedAreas:World_Rune",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Air_Rune",
+            "quantity": 35
+          },
+          {
+            "id": "melvorD:Water_Rune",
+            "quantity": 35
+          },
+          {
+            "id": "melvorD:Earth_Rune",
+            "quantity": 35
+          },
+          {
+            "id": "melvorD:Fire_Rune",
+            "quantity": 35
+          }
+        ],
+        "maxHit": 37.0,
+        "categories": [
+          "melvorD:Air",
+          "melvorD:Water",
+          "melvorD:Earth",
+          "melvorD:Fire",
+          "melvorD:Elemental",
+          "melvorD:Surge"
+        ],
+        "spellbook": "melvorD:Standard",
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 5,
+            "effectID": "melvorD:Burn"
+          },
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 5,
+            "effectID": "melvorD:Frostburn"
+          },
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 5,
+            "effectID": "melvorD:Freeze"
+          },
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 5,
+            "effectID": "melvorD:Slow",
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 3
+              },
+              {
+                "name": "magnitude",
+                "value": 25
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ElementalStorm",
+        "name": "Elemental Storm",
+        "media": "assets/combat/magic/elemental_storm.png",
+        "level": 106,
+        "runesRequired": [
+          {
+            "id": "expandedAreas:World_Rune",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Air_Rune",
+            "quantity": 40
+          },
+          {
+            "id": "melvorD:Water_Rune",
+            "quantity": 40
+          },
+          {
+            "id": "melvorD:Earth_Rune",
+            "quantity": 40
+          },
+          {
+            "id": "melvorD:Fire_Rune",
+            "quantity": 40
+          }
+        ],
+        "maxHit": 38.5,
+        "categories": [
+          "melvorD:Air",
+          "melvorD:Water",
+          "melvorD:Earth",
+          "melvorD:Fire",
+          "melvorD:Elemental"
+        ],
+        "spellbook": "melvorD:Standard",
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 6,
+            "effectID": "melvorD:Burn"
+          },
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 6,
+            "effectID": "melvorD:Frostburn"
+          },
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 6,
+            "effectID": "melvorD:Freeze"
+          },
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 6,
+            "effectID": "melvorD:Slow",
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 3
+              },
+              {
+                "name": "magnitude",
+                "value": 25
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "Wind_Storm",
         "name": "Wind Storm",
         "media": "assets/combat/magic/Wind_Storm.png",
@@ -2027,7 +2447,17 @@
           {
             "appliesWhen": "HitWithAttack",
             "chance": 5,
-            "effectID": "melvorD:Bleed100"
+            "effectID": "melvorD:Slow",
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 3
+              },
+              {
+                "name": "magnitude",
+                "value": 25
+              }
+            ]
           }
         ]
       },
@@ -2262,6 +2692,30 @@
       }
     ],
     "bankSortOrder": [
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Mystic_Fire_Staff",
+        "ids": [
+          "expandedAreas:Mystic_Mist_Staff",
+          "expandedAreas:Mystic_Dust_Staff",
+          "expandedAreas:Mystic_Mud_Staff",
+          "expandedAreas:Mystic_Smoke_Staff",
+          "expandedAreas:Mystic_Steam_Staff",
+          "expandedAreas:Mystic_Lava_Staff"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Fire_Battlestaff",
+        "ids": [
+          "expandedAreas:Mist_Battlestaff",
+          "expandedAreas:Dust_Battlestaff",
+          "expandedAreas:Mud_Battlestaff",
+          "expandedAreas:Smoke_Battlestaff",
+          "expandedAreas:Steam_Battlestaff",
+          "expandedAreas:Lava_Battlestaff"
+        ]
+      },
       {
         "insertAt": "Before",
         "beforeID": "melvorF:Summoning_Shard_Red",
@@ -3467,7 +3921,8 @@
         "insertAt": "After",
         "afterID": "melvorD:Ancient_Rune",
         "ids": [
-          "expandedAreas:Rage_Rune"
+          "expandedAreas:Rage_Rune",
+          "expandedAreas:World_Rune"
         ]
       },
       {
@@ -4268,18 +4723,17 @@
             "combatEffects": [
               {
                 "effectID": "melvorD:Fear",
-                "appliesWhen": "PostAttack",
-                "initialParams": [
-                  {
-                    "name": "turns",
-                    "value": 2
-                  }
-                ]
+                "appliesWhen": "PostAttack"
               }
             ]
           }
         ],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 1
+          }
+        ],
         "effectGroups": [
           "melvorD:Debuff",
           "expandedAreas:Gaze"
@@ -4495,41 +4949,19 @@
             ]
           }
         ],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 1
+          }
+        ],
         "effectGroups": [
           "expandedAreas:DeathMagic",
           "expandedAreas:Gaze"
         ]
       },
       {
-        "id": "AntiMagicFieldSelf",
-        "templateID": "melvorD:StaticSelfCountingModifier",
-        "name": "Anti-Magic Field",
-        "media": "assets/combat/status/antimagic.png",
-        "target": "Self",
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 3
-          }
-        ],
-        "statGroups": [
-          {
-            "name": "stacks",
-            "modifiers": {
-              "magicEvasion": 999999,
-              "magicProtection": 100,
-              "magicImmunity": 1
-            }
-          }
-        ],
-        "effectGroups": [
-          "melvorD:Debuff",
-          "melvorD:Buff"
-        ]
-      },
-      {
-        "id": "AntiMagicFieldEnemy",
+        "id": "AntiMagicField",
         "templateID": "melvorD:StaticSelfCountingModifier",
         "name": "Anti-Magic Field",
         "media": "assets/combat/status/antimagic.png",
@@ -4544,17 +4976,21 @@
           {
             "name": "stacks",
             "modifiers": {
+              "magicAttackInterval": 999999,
               "magicAccuracyRating": -999999,
               "magicMaxHit": -999999,
-              "magicEvasion": 999999,
-              "magicProtection": 100,
-              "magicImmunity": 1
+              "magicEvasion": -999999,
+              "effectImmunity": [
+                {
+                  "effectGroupID": "melvorD:Buff",
+                  "value": 1
+                }
+              ]
             }
           }
         ],
         "effectGroups": [
-          "melvorD:Debuff",
-          "melvorD:Buff"
+          "melvorD:Debuff"
         ]
       },
       {
@@ -4965,14 +5401,14 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 5
+            "initialValue": 10
           }
         ],
         "statGroups": [
           {
             "name": "stacks",
             "modifiers": {
-              "rangedEvasion": -20
+              "rangedEvasion": -10
             }
           }
         ],
@@ -6426,6 +6862,116 @@
     ],
     "combatPassives": [
       {
+        "id": "DisgracedLegacy",
+        "name": "Disgraced Legacy",
+        "customDescription": "+0-500 Reflect Damage (Reflect Damage cannot activate more than once every 2.0s. Reflect Damage cannot kill the Target).",
+        "modifiers": {
+          "rolledReflectDamage": 30
+        }
+      },
+      {
+        "id": "BastionOfTyranny",
+        "name": "Bastion of Tyranny",
+        "modifiers": {
+          "flatResistanceAgainstMelee": [
+            {
+              "damageTypeID": "melvorD:Normal",
+              "value": 50
+            }
+          ],
+          "flatResistanceAgainstRanged": [
+            {
+              "damageTypeID": "melvorD:Normal",
+              "value": 50
+            }
+          ],
+          "flatResistanceAgainstMagic": [
+            {
+              "damageTypeID": "melvorD:Normal",
+              "value": 75
+            }
+          ],
+          "effectIgnoreChance": [
+            {
+              "effectGroupID": "melvorD:Curse",
+              "value": 75
+            },
+            {
+              "effectGroupID": "melvorD:Debuff",
+              "value": 75
+            }
+          ],
+          "damageTaken": [
+            {
+              "effectGroupID": "melvorD:Frostburn",
+              "value": -75
+            },
+            {
+              "effectGroupID": "melvorD:BurnDOT",
+              "value": -75
+            }
+          ]
+        }
+      },
+      {
+        "id": "StrangeBiology",
+        "name": "Strange Biology",
+        "customDescription": "Immune to Stunlikes, Crystallization, Sleep, Slow, and Critical Hits.",
+        "modifiers": {
+          "effectImmunity": [
+            {
+              "effectGroupID": "melvorD:StunLike",
+              "value": 1
+            },
+            {
+              "effectGroupID": "melvorD:Crystallize",
+              "value": 1
+            },
+            {
+              "effectGroupID": "melvorD:CrystalSanction",
+              "value": 1
+            },
+            {
+              "effectGroupID": "melvorD:Sleep",
+              "value": 1
+            },
+            {
+              "effectGroupID": "melvorD:Slow",
+              "value": 1
+            },
+            {
+              "effectGroupID": "expandedAreas:Paralyze",
+              "value": 1
+            }
+          ]
+        },
+        "playerModifiers": {
+          "critChance": -999999,
+          "critMultiplier": -999999
+        }
+      },
+      {
+        "id": "NullifyingEye",
+        "name": "Nullifying Eye",
+        "customDescription": "At the start of the fight, has a 50% chance to create an Anti-Magic Field, disabling your Magic attacks, negating your Magic Evasion, and removing and preventing any Buffs on you for 3 turns.",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "chance": 50,
+            "effectID": "expandedAreas:AntiMagicField"
+          }
+        ]
+      },
+      {
+        "id": "Banisher",
+        "name": "Banisher",
+        "customDescription": "The Enemy banishes your Familiars, preventing them from attacking or dealing damage.",
+        "playerModifiers": {
+          "summoningMaxHit": -999999,
+          "summoningAttackInterval": 999999
+        }
+      },
+      {
         "id": "PhaseHP10",
         "name": "Phase HP = 182 / 1,820",
         "customDescription": "Each phase (excluding the final phase) of this boss is limited to 10% of its total maximum hitpoints.",
@@ -7036,7 +7582,7 @@
       {
         "id": "TaintedSoul",
         "name": "Tainted Soul",
-        "customDescription": "25% Chance to inflict Tainted (-20% Ranged Evasion, up to 5 Stacks) on hit.",
+        "customDescription": "25% Chance to inflict Tainted (-10% Ranged Evasion, up to 10 Stacks) on hit.",
         "combatEffects": [
           {
             "appliesWhen": "HitWithAttack",
@@ -7648,7 +8194,8 @@
           "expandedAreas:Brother_Dharok_the_Wretched",
           "expandedAreas:Brother_Guthan_the_Infested",
           "expandedAreas:Brother_Torag_the_Corrupted",
-          "expandedAreas:Brother_Verac_the_Defiled"
+          "expandedAreas:Brother_Verac_the_Defiled",
+          "expandedAreas:Sister_Linza_the_Disgraced"
         ],
         "name": "The Barrows",
         "pauseOnBosses": false,
@@ -7829,6 +8376,999 @@
     ],
     "items": [
       {
+        "id": "Linzas_Longsword",
+        "name": "Linza's Longsword",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/linzas_longsword.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 350000,
+        "tier": "ancient",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 80
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3000
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 107
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 124
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 107
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 120
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 107
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "melee"
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Linzas_Helm",
+        "name": "Linza's Helm",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/linzas_helm.png",
+        "customDescription": "When all of <strong>Linza the Disgraced's Equipment</strong> is worn, the following set bonus becomes active: Passive: +0-500 Reflect Damage (Reflect dmg cannot activate more than once every 2 seconds. Reflect dmg cannot kill an enemy nor provide XP).",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 150000,
+        "tier": "dragon",
+        "validSlots": [
+          "Helmet"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 80
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": -2
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -6
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -1
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 89
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 75
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 10
+          },
+          {
+            "key": "damageReduction",
+            "value": 7
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Linzas_Cuirass",
+        "name": "Linza's Cuirass",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/linzas_cuirass.png",
+        "customDescription": "When all of <strong>Linza the Disgraced's Equipment</strong> is worn, the following set bonus becomes active: Passive: +0-500 Reflect Damage (Reflect dmg cannot activate more than once every 2 seconds. Reflect dmg cannot kill an enemy nor provide XP).",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 400000,
+        "tier": "dragon",
+        "validSlots": [
+          "Platebody"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 80
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": -2
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -6
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -10
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 160
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 150
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 10
+          },
+          {
+            "key": "damageReduction",
+            "value": 7
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Linzas_Greaves",
+        "name": "Linza's Greaves",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/linzas_greaves.png",
+        "customDescription": "When all of <strong>Linza the Disgraced's Equipment</strong> is worn, the following set bonus becomes active: Passive: +0-500 Reflect Damage (Reflect dmg cannot activate more than once every 2 seconds. Reflect dmg cannot kill an enemy nor provide XP).",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 340000,
+        "tier": "dragon",
+        "validSlots": [
+          "Platelegs"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 80
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": -11
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -21
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -5
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 122
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 115
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 11
+          },
+          {
+            "key": "damageReduction",
+            "value": 7
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Linzas_Shield",
+        "name": "Linza's Shield",
+        "category": "Combat",
+        "type": "Armour",
+        "media": "assets/bank/linzas_shield.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 300000,
+        "tier": "dragon",
+        "validSlots": [
+          "Shield"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 80
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": -9
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -9
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 8
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 122
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 108
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -8
+          },
+          {
+            "key": "damageReduction",
+            "value": 8
+          }
+        ],
+        "modifiers": {
+          "rolledReflectDamage": 5
+        }
+      },
+      {
+        "id": "Mist_Battlestaff",
+        "name": "Mist Battlestaff",
+        "category": "Combat",
+        "type": "Magic Staff",
+        "media": "assets/bank/weapon_battlestaff_mist.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1200,
+        "customDescription": "Reduces the Air and Water Rune cost of Magic Spells by 2 when equipped as a Weapon.",
+        "tier": "staff",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [
+          "Shield"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Magic",
+            "level": 30
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3000
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": 15
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 3
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 15
+          },
+          {
+            "key": "magicDamageBonus",
+            "value": 10
+          }
+        ],
+        "providedRunes": [
+          {
+            "id": "melvorD:Air_Rune",
+            "quantity": 2
+          },
+          {
+            "id": "melvorD:Water_Rune",
+            "quantity": 2
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "magic"
+      },
+      {
+        "id": "Dust_Battlestaff",
+        "name": "Dust Battlestaff",
+        "category": "Combat",
+        "type": "Magic Staff",
+        "media": "assets/bank/weapon_battlestaff_dust.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1300,
+        "customDescription": "Reduces the Air and Earth Rune cost of Magic Spells by 2 when equipped as a Weapon.",
+        "tier": "staff",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [
+          "Shield"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Magic",
+            "level": 30
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3000
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": 15
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 3
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 15
+          },
+          {
+            "key": "magicDamageBonus",
+            "value": 10
+          }
+        ],
+        "providedRunes": [
+          {
+            "id": "melvorD:Air_Rune",
+            "quantity": 2
+          },
+          {
+            "id": "melvorD:Earth_Rune",
+            "quantity": 2
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "magic"
+      },
+      {
+        "id": "Mud_Battlestaff",
+        "name": "Mud Battlestaff",
+        "category": "Combat",
+        "type": "Magic Staff",
+        "media": "assets/bank/weapon_battlestaff_mud.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1400,
+        "customDescription": "Reduces the Water and Earth Rune cost of Magic Spells by 2 when equipped as a Weapon.",
+        "tier": "staff",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [
+          "Shield"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Magic",
+            "level": 30
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3000
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": 15
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 3
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 15
+          },
+          {
+            "key": "magicDamageBonus",
+            "value": 10
+          }
+        ],
+        "providedRunes": [
+          {
+            "id": "melvorD:Earth_Rune",
+            "quantity": 2
+          },
+          {
+            "id": "melvorD:Water_Rune",
+            "quantity": 2
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "magic"
+      },
+      {
+        "id": "Smoke_Battlestaff",
+        "name": "Smoke Battlestaff",
+        "category": "Combat",
+        "type": "Magic Staff",
+        "media": "assets/bank/weapon_battlestaff_smoke.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1500,
+        "customDescription": "Reduces the Air and Fire Rune cost of Magic Spells by 2 when equipped as a Weapon.",
+        "tier": "staff",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [
+          "Shield"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Magic",
+            "level": 30
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3000
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": 15
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 3
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 15
+          },
+          {
+            "key": "magicDamageBonus",
+            "value": 10
+          }
+        ],
+        "providedRunes": [
+          {
+            "id": "melvorD:Air_Rune",
+            "quantity": 2
+          },
+          {
+            "id": "melvorD:Fire_Rune",
+            "quantity": 2
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "magic"
+      },
+      {
+        "id": "Steam_Battlestaff",
+        "name": "Steam Battlestaff",
+        "category": "Combat",
+        "type": "Magic Staff",
+        "media": "assets/bank/weapon_battlestaff_steam.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1600,
+        "customDescription": "Reduces the Water and Fire Rune cost of Magic Spells by 2 when equipped as a Weapon.",
+        "tier": "staff",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [
+          "Shield"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Magic",
+            "level": 30
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3000
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": 15
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 3
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 15
+          },
+          {
+            "key": "magicDamageBonus",
+            "value": 10
+          }
+        ],
+        "providedRunes": [
+          {
+            "id": "melvorD:Fire_Rune",
+            "quantity": 2
+          },
+          {
+            "id": "melvorD:Water_Rune",
+            "quantity": 2
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "magic"
+      },
+      {
+        "id": "Lava_Battlestaff",
+        "name": "Lava Battlestaff",
+        "category": "Combat",
+        "type": "Magic Staff",
+        "media": "assets/bank/weapon_battlestaff_lava.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1700,
+        "customDescription": "Reduces the Earth and Fire Rune cost of Magic Spells by 2 when equipped as a Weapon.",
+        "tier": "staff",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [
+          "Shield"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Magic",
+            "level": 30
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3000
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": 15
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 3
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 15
+          },
+          {
+            "key": "magicDamageBonus",
+            "value": 10
+          }
+        ],
+        "providedRunes": [
+          {
+            "id": "melvorD:Fire_Rune",
+            "quantity": 2
+          },
+          {
+            "id": "melvorD:Earth_Rune",
+            "quantity": 2
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "magic"
+      },
+      {
+        "id": "Mystic_Mist_Staff",
+        "name": "Mystic Mist Staff",
+        "category": "Combat",
+        "type": "Magic Staff",
+        "media": "assets/bank/weapon_mystic_staff_mist.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 13000,
+        "customDescription": "Reduces the Air and Water Rune cost of Magic Spells by 3 when equipped as a Weapon.",
+        "tier": "staff",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [
+          "Shield"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Magic",
+            "level": 40
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3000
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": 23
+          },
+          {
+            "key": "magicDamageBonus",
+            "value": 20
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 3
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 23
+          }
+        ],
+        "providedRunes": [
+          {
+            "id": "melvorD:Air_Rune",
+            "quantity": 3
+          },
+          {
+            "id": "melvorD:Water_Rune",
+            "quantity": 3
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "magic"
+      },
+      {
+        "id": "Mystic_Dust_Staff",
+        "name": "Mystic Dust Staff",
+        "category": "Combat",
+        "type": "Magic Staff",
+        "media": "assets/bank/weapon_mystic_staff_dust.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 14000,
+        "customDescription": "Reduces the Air and Earth Rune cost of Magic Spells by 3 when equipped as a Weapon.",
+        "tier": "staff",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [
+          "Shield"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Magic",
+            "level": 40
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3000
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": 23
+          },
+          {
+            "key": "magicDamageBonus",
+            "value": 20
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 3
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 23
+          }
+        ],
+        "providedRunes": [
+          {
+            "id": "melvorD:Air_Rune",
+            "quantity": 3
+          },
+          {
+            "id": "melvorD:Earth_Rune",
+            "quantity": 3
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "magic"
+      },
+      {
+        "id": "Mystic_Mud_Staff",
+        "name": "Mystic Mud Staff",
+        "category": "Combat",
+        "type": "Magic Staff",
+        "media": "assets/bank/weapon_mystic_staff_mud.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 15000,
+        "customDescription": "Reduces the Water and Earth Rune cost of Magic Spells by 3 when equipped as a Weapon.",
+        "tier": "staff",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [
+          "Shield"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Magic",
+            "level": 40
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3000
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": 23
+          },
+          {
+            "key": "magicDamageBonus",
+            "value": 20
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 3
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 23
+          }
+        ],
+        "providedRunes": [
+          {
+            "id": "melvorD:Water_Rune",
+            "quantity": 3
+          },
+          {
+            "id": "melvorD:Earth_Rune",
+            "quantity": 3
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "magic"
+      },
+      {
+        "id": "Mystic_Smoke_Staff",
+        "name": "Mystic Smoke Staff",
+        "category": "Combat",
+        "type": "Magic Staff",
+        "media": "assets/bank/weapon_mystic_staff_smoke.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 16000,
+        "customDescription": "Reduces the Fire and Air Rune cost of Magic Spells by 3 when equipped as a Weapon.",
+        "tier": "staff",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [
+          "Shield"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Magic",
+            "level": 40
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3000
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": 23
+          },
+          {
+            "key": "magicDamageBonus",
+            "value": 20
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 3
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 23
+          }
+        ],
+        "providedRunes": [
+          {
+            "id": "melvorD:Fire_Rune",
+            "quantity": 3
+          },
+          {
+            "id": "melvorD:Air_Rune",
+            "quantity": 3
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "magic"
+      },
+      {
+        "id": "Mystic_Steam_Staff",
+        "name": "Mystic Steam Staff",
+        "category": "Combat",
+        "type": "Magic Staff",
+        "media": "assets/bank/weapon_mystic_staff_steam.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 17000,
+        "customDescription": "Reduces the Fire and Water Rune cost of Magic Spells by 3 when equipped as a Weapon.",
+        "tier": "staff",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [
+          "Shield"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Magic",
+            "level": 40
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3000
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": 23
+          },
+          {
+            "key": "magicDamageBonus",
+            "value": 20
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 3
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 23
+          }
+        ],
+        "providedRunes": [
+          {
+            "id": "melvorD:Fire_Rune",
+            "quantity": 3
+          },
+          {
+            "id": "melvorD:Water_Rune",
+            "quantity": 3
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "magic"
+      },
+      {
+        "id": "Mystic_Lava_Staff",
+        "name": "Mystic Lava Staff",
+        "category": "Combat",
+        "type": "Magic Staff",
+        "media": "assets/bank/weapon_mystic_staff_lava.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 18000,
+        "customDescription": "Reduces the Fire and Earth Rune cost of Magic Spells by 3 when equipped as a Weapon.",
+        "tier": "staff",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [
+          "Shield"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Magic",
+            "level": 40
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3000
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": 23
+          },
+          {
+            "key": "magicDamageBonus",
+            "value": 20
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 3
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 23
+          }
+        ],
+        "providedRunes": [
+          {
+            "id": "melvorD:Fire_Rune",
+            "quantity": 3
+          },
+          {
+            "id": "melvorD:Earth_Rune",
+            "quantity": 3
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "magic"
+      },
+      {
         "itemType": "Equipment",
         "id": "Shield_of_Eyes",
         "name": "Shield of Eyes",
@@ -7860,31 +9400,39 @@
         "equipmentStats": [
           {
             "key": "stabAttackBonus",
-            "value": -30
-          },
-          {
-            "key": "slashAttackBonus",
-            "value": -30
+            "value": 50
           },
           {
             "key": "blockAttackBonus",
-            "value": -30
+            "value": 50
           },
           {
             "key": "rangedAttackBonus",
-            "value": -10
+            "value": 20
           },
           {
             "key": "magicAttackBonus",
-            "value": -4
+            "value": 30
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 20
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 8
+          },
+          {
+            "key": "magicDamageBonus",
+            "value": 12
           },
           {
             "key": "meleeDefenceBonus",
-            "value": 40
+            "value": 320
           },
           {
             "key": "rangedDefenceBonus",
-            "value": 450
+            "value": 280
           },
           {
             "key": "magicDefenceBonus",
@@ -7983,32 +9531,48 @@
         ],
         "equipmentStats": [
           {
+            "key": "stabAttackBonus",
+            "value": 20
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 20
+          },
+          {
             "key": "rangedAttackBonus",
-            "value": -3
+            "value": 8
           },
           {
             "key": "magicAttackBonus",
-            "value": -8
+            "value": 12
           },
           {
             "key": "meleeStrengthBonus",
-            "value": 3
+            "value": 10
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 4
+          },
+          {
+            "key": "magicDamageBonus",
+            "value": 6
           },
           {
             "key": "meleeDefenceBonus",
-            "value": 120
+            "value": 160
           },
           {
             "key": "rangedDefenceBonus",
-            "value": 167
+            "value": 140
           },
           {
             "key": "magicDefenceBonus",
-            "value": 194
+            "value": 200
           },
           {
-            "key": "resistance",
-            "value": 11
+            "key": "damageReduction",
+            "value": 8
           }
         ],
         "modifiers": {
@@ -19033,19 +20597,19 @@
         "equipmentStats": [
           {
             "key": "attackSpeed",
-            "value": 3000
+            "value": 3600
           },
           {
             "key": "magicAttackBonus",
-            "value": 37
+            "value": 44
           },
           {
             "key": "magicDefenceBonus",
-            "value": 15
+            "value": 18
           },
           {
             "key": "magicDamageBonus",
-            "value": 23
+            "value": 28
           }
         ]
       },
@@ -19499,7 +21063,7 @@
         "category": "Combat",
         "type": "Armour",
         "media": "assets/bank/karils_coif.png",
-        "customDescription": "When all of <strong>Karil the Tainted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict Tainted (-20% Ranged Evasion Rating, stacking) on hit.",
+        "customDescription": "When all of <strong>Karil the Tainted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict Tainted (-10% Ranged Evasion Rating, stacking) on hit.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -19555,7 +21119,7 @@
         "category": "Combat",
         "type": "Armour",
         "media": "assets/bank/karils_leathertop.png",
-        "customDescription": "When all of <strong>Karil the Tainted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict Tainted (-20% Ranged Evasion Rating, stacking) on hit.",
+        "customDescription": "When all of <strong>Karil the Tainted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict Tainted (-10% Ranged Evasion Rating, stacking) on hit.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -19611,7 +21175,7 @@
         "category": "Combat",
         "type": "Armour",
         "media": "assets/bank/karils_leatherskirt.png",
-        "customDescription": "When all of <strong>Karil the Tainted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict Tainted (-20% Ranged Evasion Rating, stacking) on hit.",
+        "customDescription": "When all of <strong>Karil the Tainted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict Tainted (-10% Ranged Evasion Rating, stacking) on hit.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -19663,13 +21227,13 @@
       {
         "itemType": "Weapon",
         "attackType": "ranged",
-        "ammoTypeRequired": "Bolts",
+        "ammoTypeRequired": "Javelins",
         "id": "Karils_Crossbow",
-        "name": "Karil's Crossbow",
+        "name": "Karil's Hand Crossbow (Main Hand)",
         "category": "Combat",
         "type": "Ranged Weapon",
-        "media": "assets/bank/karils_crossbow.png",
-        "customDescription": "Can only use <strong>Bolt Racks</strong> as Ammo.<br><hr>When all of <strong>Karil the Tainted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict Tainted Shot (-20% Ranged Evasion Rating).",
+        "media": "assets/bank/karils_hand_crossbow.png",
+        "customDescription": "Can only use <strong>Bolt Racks</strong> as Ammo.<br><hr>When all of <strong>Karil the Tainted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict Tainted Shot (-10% Ranged Evasion Rating) on hit.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -19678,17 +21242,7 @@
         "validSlots": [
           "Weapon"
         ],
-        "occupiesSlots": [
-          "Shield"
-        ],
-        "cantEquipWith": [
-          "melvorF:Ruby_Bolts",
-          "melvorF:Topaz_Bolts",
-          "melvorF:Diamond_Bolts",
-          "melvorF:Emerald_Bolts",
-          "melvorF:Sapphire_Bolts",
-          "melvorF:Jadestone_Bolts"
-        ],
+        "occupiesSlots": [],
         "equipRequirements": [
           {
             "type": "SkillLevel",
@@ -19699,15 +21253,56 @@
         "equipmentStats": [
           {
             "key": "rangedAttackBonus",
-            "value": 68
+            "value": 17
           },
           {
             "key": "rangedStrengthBonus",
-            "value": 88
+            "value": 22
           },
           {
             "key": "attackSpeed",
-            "value": 2400
+            "value": 1200
+          }
+        ]
+      },
+      {
+        "itemType": "Weapon",
+        "attackType": "ranged",
+        "ammoTypeRequired": "Javelins",
+        "id": "Karils_Crossbow2",
+        "name": "Karil's Hand Crossbow (Offhand)",
+        "category": "Combat",
+        "type": "Ranged Weapon",
+        "media": "assets/bank/karils_hand_crossbow_offhand.png",
+        "customDescription": "Can only use <strong>Bolt Racks</strong> as Ammo.<br><hr>When all of <strong>Karil the Tainted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict Tainted Shot (-10% Ranged Evasion Rating) on hit.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 160000,
+        "tier": "dragon",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 70
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedAttackBonus",
+            "value": 17
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 22
+          },
+          {
+            "key": "attackSpeed",
+            "value": 1200
           }
         ]
       },
@@ -19718,7 +21313,7 @@
         "category": "Combat",
         "type": "Ammo",
         "media": "assets/bank/bolt_rack.png",
-        "customDescription": "Can only be used as Ammo for <strong>Karil's Crossbow</strong>.",
+        "customDescription": "+15% Ammo Preservation",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -19728,18 +21323,6 @@
           "Quiver"
         ],
         "occupiesSlots": [],
-        "cantEquipWith": [
-          "melvorF:Iron_Crossbow",
-          "melvorF:Rune_Crossbow",
-          "melvorF:Steel_Crossbow",
-          "melvorF:Bronze_Crossbow",
-          "melvorF:Dragon_Crossbow",
-          "melvorF:Slayer_Crossbow",
-          "melvorF:Adamant_Crossbow",
-          "melvorF:Ancient_Crossbow",
-          "melvorF:Mithril_Crossbow",
-          "melvorF:Confetti_Crossbow"
-        ],
         "equipRequirements": [
           {
             "type": "SkillLevel",
@@ -19753,7 +21336,10 @@
             "value": 55
           }
         ],
-        "ammoType": "Bolts"
+        "ammoType": "Javelins",
+        "modifiers": {
+          "ammoPreservationChance": 15
+        }
       },
       {
         "itemType": "Equipment",
@@ -19924,10 +21510,10 @@
         "itemType": "Weapon",
         "attackType": "melee",
         "id": "Torags_Hammers",
-        "name": "Torag's Hammers",
+        "name": "Torag's Twinhammer",
         "category": "Combat",
         "type": "Weapon",
-        "media": "assets/bank/torags_hammers.png",
+        "media": "assets/bank/torags_twinhammer.png",
         "customDescription": "When all of <strong>Torag the Corrupted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict a 20% Slow on hit that lasts for 2 turns.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
@@ -19955,27 +21541,31 @@
         "equipmentStats": [
           {
             "key": "stabAttackBonus",
-            "value": 80
-          },
-          {
-            "key": "slashAttackBonus",
             "value": -10
           },
           {
+            "key": "slashAttackBonus",
+            "value": 150
+          },
+          {
             "key": "blockAttackBonus",
-            "value": 80
+            "value": 150
           },
           {
             "key": "meleeStrengthBonus",
-            "value": 60
+            "value": 150
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 50
           },
           {
             "key": "attackSpeed",
-            "value": 3000
+            "value": 3800
           }
         ],
         "specialAttacks": [
-          "expandedAreas:DualHitNormal"
+          "expandedAreas:CorruptingStrike"
         ]
       },
       {
@@ -20465,10 +22055,144 @@
             "weight": 50
           },
           {
+            "itemID": "expandedAreas:Linzas_Helm",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 25
+          },
+          {
+            "itemID": "expandedAreas:Linzas_Cuirass",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 25
+          },
+          {
+            "itemID": "expandedAreas:Linzas_Greaves",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 25
+          },
+          {
+            "itemID": "expandedAreas:Linzas_Shield",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 25
+          },
+          {
+            "itemID": "expandedAreas:Linzas_Longsword",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 25
+          },
+          {
             "itemID": "expandedAreas:Amulet_of_the_Damned",
             "minQuantity": 1,
             "maxQuantity": 1,
             "weight": 25
+          }
+        ]
+      },
+      {
+        "id": "Linzas_Sarcophagus",
+        "name": "Linza's Sarcophagus",
+        "category": "Openable",
+        "type": "Chest",
+        "media": "assets/bank/sarcophagus.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 150,
+        "itemType": "Openable",
+        "dropTable": [
+          {
+            "itemID": "melvorD:Mind_Rune",
+            "minQuantity": 25,
+            "maxQuantity": 35,
+            "weight": 2400
+          },
+          {
+            "itemID": "melvorD:Chaos_Rune",
+            "minQuantity": 10,
+            "maxQuantity": 15,
+            "weight": 2400
+          },
+          {
+            "itemID": "melvorD:Death_Rune",
+            "minQuantity": 7,
+            "maxQuantity": 8,
+            "weight": 2400
+          },
+          {
+            "itemID": "melvorD:Blood_Rune",
+            "minQuantity": 3,
+            "maxQuantity": 4,
+            "weight": 2400
+          },
+          {
+            "itemID": "expandedAreas:Bolt_Rack",
+            "minQuantity": 3,
+            "maxQuantity": 4,
+            "weight": 2400
+          },
+          {
+            "itemID": "melvorF:Small_Urn",
+            "minQuantity": 1,
+            "maxQuantity": 2,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorF:Medium_Urn",
+            "minQuantity": 1,
+            "maxQuantity": 2,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorD:Silver_Bar",
+            "minQuantity": 40,
+            "maxQuantity": 50,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorD:Gold_Bar",
+            "minQuantity": 30,
+            "maxQuantity": 40,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorD:Diamond",
+            "minQuantity": 20,
+            "maxQuantity": 30,
+            "weight": 500
+          },
+          {
+            "itemID": "expandedAreas:Linzas_Helm",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 5
+          },
+          {
+            "itemID": "expandedAreas:Linzas_Cuirass",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 5
+          },
+          {
+            "itemID": "expandedAreas:Linzas_Greaves",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 5
+          },
+          {
+            "itemID": "expandedAreas:Linzas_Shield",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 5
+          },
+          {
+            "itemID": "expandedAreas:Linzas_Longsword",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 5
           }
         ]
       },
@@ -29330,6 +31054,18 @@
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 60
+      },
+      {
+        "itemType": "Rune",
+        "id": "World_Rune",
+        "name": "World Rune",
+        "category": "Runecrafting",
+        "type": "Rune",
+        "media": "assets/bank/world_rune.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 7
       },
       {
         "itemType": "Rune",
@@ -43678,6 +45414,18 @@
     "itemSynergies": [
       {
         "itemIDs": [
+          "expandedAreas:Linzas_Helm",
+          "expandedAreas:Linzas_Cuirass",
+          "expandedAreas:Linzas_Graves",
+          "expandedAreas:Linzas_Shield",
+          "expandedAreas:Linzas_Longsword"
+        ],
+        "playerModifiers": {
+          "rolledReflectDamage": 50
+        }
+      },
+      {
+        "itemIDs": [
           "expandedAreas:Magmatic_Helm",
           "expandedAreas:Magmatic_Fangblade"
         ],
@@ -43936,8 +45684,7 @@
           "expandedAreas:Amulet_of_the_Damned"
         ],
         "playerModifiers": {
-          "flatMaxHitpoints": 10,
-          "autoEatThreshold": -10
+          "lifesteal": 25
         }
       },
       {
@@ -43946,6 +45693,7 @@
           "expandedAreas:Karils_Leathertop",
           "expandedAreas:Karils_Leatherskirt",
           "expandedAreas:Karils_Crossbow",
+          "expandedAreas:Karils_Crossbow2",
           "expandedAreas:Amulet_of_the_Damned"
         ],
         "playerModifiers": {
@@ -44071,7 +45819,7 @@
           "expandedAreas:Amulet_of_the_Damned"
         ],
         "playerModifiers": {
-          "prayerPointPreservationChance": 7
+          "damageTakenAddedAsPrayerPoints": 25
         }
       },
       {
@@ -46539,6 +48287,80 @@
     ],
     "monsters": [
       {
+        "id": "Sister_Linza_the_Disgraced",
+        "name": "Sister Linza the Disgraced",
+        "media": "assets/combat/monsters/linza.png",
+        "levels": {
+          "Hitpoints": 150,
+          "Attack": 120,
+          "Strength": 120,
+          "Defence": 140,
+          "Ranged": 1,
+          "Magic": 1
+        },
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3000
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 107
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 124
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 102
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": -24
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -42
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -24
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 479
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 462
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 159
+          },
+          {
+            "key": "damageReduction",
+            "value": 29
+          }
+        ],
+        "ignoreCompletion": false,
+        "attackType": "melee",
+        "specialAttacks": [],
+        "passives": [
+          "expandedAreas:DisgracedLegacy"
+        ],
+        "lootChance": 0,
+        "lootTable": [],
+        "bones": {
+          "itemID": "expandedAreas:Linzas_Sarcophagus",
+          "quantity": 1
+        },
+        "canSlayer": false,
+        "isBoss": true,
+        "selectedSpell": "melvorD:WindBolt"
+      },
+      {
         "id": "Adult_Gardener",
         "name": "Adult Gardener",
         "media": "assets/combat/monsters/Adult_Gardener.png",
@@ -48015,11 +49837,11 @@
         "equipmentStats": [
           {
             "key": "attackSpeed",
-            "value": 3000
+            "value": 3800
           },
           {
             "key": "meleeStrengthBonus",
-            "value": 60
+            "value": 150
           },
           {
             "key": "meleeDefenceBonus",
@@ -48041,7 +49863,7 @@
         "ignoreCompletion": false,
         "attackType": "melee",
         "specialAttacks": [
-          "expandedAreas:DualHitNormal"
+          "expandedAreas:CorruptingStrike"
         ],
         "passives": [
           "expandedAreas:CorruptedHeart"
@@ -48221,7 +50043,7 @@
       },
       {
         "id": "Corporeal_Beast",
-        "name": "Corporeal Beast",
+        "name": "Abhorrent Beast",
         "media": "assets/combat/monsters/corp.png",
         "levels": {
           "Hitpoints": 2000,
@@ -53081,7 +54903,7 @@
         "pointsPerEnemy": 30,
         "pointsPerRegen": 0,
         "modifiers": {
-          "magicProtection": 90
+          "magicProtection": 85
         },
         "allowedDamageTypeIDs": [
           "melvorD:Normal",
@@ -53097,7 +54919,7 @@
         "pointsPerEnemy": 30,
         "pointsPerRegen": 0,
         "modifiers": {
-          "rangedProtection": 90
+          "rangedProtection": 85
         },
         "allowedDamageTypeIDs": [
           "melvorD:Normal",
@@ -53113,7 +54935,7 @@
         "pointsPerEnemy": 30,
         "pointsPerRegen": 0,
         "modifiers": {
-          "meleeProtection": 90
+          "meleeProtection": 85
         },
         "allowedDamageTypeIDs": [
           "melvorD:Normal",
@@ -53124,12 +54946,12 @@
         "id": "Divine_Intervention",
         "level": 99,
         "name": "Divine Intervention",
-        "media": "assets/skills/prayer/Divine_Intervention.png",
+        "media": "assets/combat/prayer/Divine_Intervention.png",
         "pointsPerPlayer": 0,
         "pointsPerEnemy": 20,
         "pointsPerRegen": 0,
         "modifiers": {
-          "rebirthChance": 25
+          "rebirthChance": 20
         },
         "allowedDamageTypeIDs": [
           "melvorD:Normal",
@@ -67318,11 +69140,353 @@
               "currencyCosts": []
             },
             {
+              "id": "Mist_Battlestaff",
+              "level": 40,
+              "productID": "expandedAreas:Mist_Battlestaff",
+              "baseQuantity": 1,
+              "baseExperience": 45,
+              "categoryID": "melvorF:StavesWands",
+              "itemCosts": [
+                {
+                  "id": "melvorF:Staff_of_Air",
+                  "quantity": 5
+                },
+                {
+                  "id": "melvorF:Staff_of_Water",
+                  "quantity": 5
+                },
+                {
+                  "id": "melvorD:Maple_Logs",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorD:Mist_Rune",
+                  "quantity": 100
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Dust_Battlestaff",
+              "level": 45,
+              "productID": "expandedAreas:Dust_Battlestaff",
+              "baseQuantity": 1,
+              "baseExperience": 50,
+              "categoryID": "melvorF:StavesWands",
+              "itemCosts": [
+                {
+                  "id": "melvorF:Staff_of_Air",
+                  "quantity": 5
+                },
+                {
+                  "id": "melvorF:Staff_of_Earth",
+                  "quantity": 5
+                },
+                {
+                  "id": "melvorD:Maple_Logs",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorD:Dust_Rune",
+                  "quantity": 100
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Mud_Battlestaff",
+              "level": 49,
+              "productID": "expandedAreas:Mud_Battlestaff",
+              "baseQuantity": 1,
+              "baseExperience": 54,
+              "categoryID": "melvorF:StavesWands",
+              "itemCosts": [
+                {
+                  "id": "melvorF:Staff_of_Water",
+                  "quantity": 5
+                },
+                {
+                  "id": "melvorF:Staff_of_Earth",
+                  "quantity": 5
+                },
+                {
+                  "id": "melvorD:Maple_Logs",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorF:Mud_Rune",
+                  "quantity": 100
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Smoke_Battlestaff",
+              "level": 54,
+              "productID": "expandedAreas:Smoke_Battlestaff",
+              "baseQuantity": 1,
+              "baseExperience": 59,
+              "categoryID": "melvorF:StavesWands",
+              "itemCosts": [
+                {
+                  "id": "melvorF:Staff_of_Fire",
+                  "quantity": 5
+                },
+                {
+                  "id": "melvorF:Staff_of_Air",
+                  "quantity": 5
+                },
+                {
+                  "id": "melvorD:Maple_Logs",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorD:Smoke_Rune",
+                  "quantity": 100
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Steam_Battlestaff",
+              "level": 58,
+              "productID": "expandedAreas:Steam_Battlestaff",
+              "baseQuantity": 1,
+              "baseExperience": 63,
+              "categoryID": "melvorF:StavesWands",
+              "itemCosts": [
+                {
+                  "id": "melvorF:Staff_of_Fire",
+                  "quantity": 5
+                },
+                {
+                  "id": "melvorF:Staff_of_Water",
+                  "quantity": 5
+                },
+                {
+                  "id": "melvorD:Maple_Logs",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorF:Steam_Rune",
+                  "quantity": 100
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Lava_Battlestaff",
+              "level": 63,
+              "productID": "expandedAreas:Lava_Battlestaff",
+              "baseQuantity": 1,
+              "baseExperience": 68,
+              "categoryID": "melvorF:StavesWands",
+              "itemCosts": [
+                {
+                  "id": "melvorF:Staff_of_Fire",
+                  "quantity": 5
+                },
+                {
+                  "id": "melvorF:Staff_of_Earth",
+                  "quantity": 5
+                },
+                {
+                  "id": "melvorD:Maple_Logs",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorF:Lava_Rune",
+                  "quantity": 100
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Mystic_Mist_Staff",
+              "level": 80,
+              "productID": "expandedAreas:Mystic_Mist_Staff",
+              "baseQuantity": 1,
+              "baseExperience": 85,
+              "categoryID": "melvorF:StavesWands",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Air_Battlestaff",
+                  "quantity": 5
+                },
+                {
+                  "id": "melvorD:Water_Battlestaff",
+                  "quantity": 5
+                },
+                {
+                  "id": "melvorD:Magic_Logs",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorD:Mist_Rune",
+                  "quantity": 100
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Mystic_Dust_Staff",
+              "level": 85,
+              "productID": "expandedAreas:Mystic_Dust_Staff",
+              "baseQuantity": 1,
+              "baseExperience": 90,
+              "categoryID": "melvorF:StavesWands",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Air_Battlestaff",
+                  "quantity": 5
+                },
+                {
+                  "id": "melvorD:Earth_Battlestaff",
+                  "quantity": 5
+                },
+                {
+                  "id": "melvorD:Magic_Logs",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorD:Dust_Rune",
+                  "quantity": 100
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Mystic_Mud_Staff",
+              "level": 89,
+              "productID": "expandedAreas:Mystic_Mud_Staff",
+              "baseQuantity": 1,
+              "baseExperience": 94,
+              "categoryID": "melvorF:StavesWands",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Water_Battlestaff",
+                  "quantity": 5
+                },
+                {
+                  "id": "melvorD:Earth_Battlestaff",
+                  "quantity": 5
+                },
+                {
+                  "id": "melvorD:Magic_Logs",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorF:Mud_Rune",
+                  "quantity": 100
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Mystic_Smoke_Staff",
+              "level": 94,
+              "productID": "expandedAreas:Mystic_Smoke_Staff",
+              "baseQuantity": 1,
+              "baseExperience": 99,
+              "categoryID": "melvorF:StavesWands",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Fire_Battlestaff",
+                  "quantity": 5
+                },
+                {
+                  "id": "melvorD:Air_Battlestaff",
+                  "quantity": 5
+                },
+                {
+                  "id": "melvorD:Magic_Logs",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorD:Smoke_Rune",
+                  "quantity": 100
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Mystic_Steam_Staff",
+              "level": 98,
+              "productID": "expandedAreas:Mystic_Steam_Staff",
+              "baseQuantity": 1,
+              "baseExperience": 103,
+              "categoryID": "melvorF:StavesWands",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Fire_Battlestaff",
+                  "quantity": 5
+                },
+                {
+                  "id": "melvorD:Water_Battlestaff",
+                  "quantity": 5
+                },
+                {
+                  "id": "melvorD:Magic_Logs",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorF:Steam_Rune",
+                  "quantity": 100
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Mystic_Lava_Staff",
+              "level": 103,
+              "productID": "expandedAreas:Mystic_Lava_Staff",
+              "baseQuantity": 1,
+              "baseExperience": 108,
+              "categoryID": "melvorF:StavesWands",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Fire_Battlestaff",
+                  "quantity": 5
+                },
+                {
+                  "id": "melvorD:Earth_Battlestaff",
+                  "quantity": 5
+                },
+                {
+                  "id": "melvorD:Magic_Logs",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorF:Lava_Rune",
+                  "quantity": 100
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
               "id": "Rage_Rune",
               "level": 90,
               "productID": "expandedAreas:Rage_Rune",
               "baseQuantity": 1,
-              "baseExperience": 26,
+              "baseExperience": 28,
+              "categoryID": "melvorF:StandardRunes",
+              "subcategories": [
+                "melvorF:Runes"
+              ],
+              "itemCosts": [
+                {
+                  "id": "melvorD:Rune_Essence",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "World_Rune",
+              "level": 95,
+              "productID": "expandedAreas:World_Rune",
+              "baseQuantity": 1,
+              "baseExperience": 30,
               "categoryID": "melvorF:StandardRunes",
               "subcategories": [
                 "melvorF:Runes"
@@ -68948,7 +71112,7 @@
     "slayerAreas": [
       {
         "id": "Corporeal_Beast_Lair",
-        "name": "Corporeal Beast's Lair",
+        "name": "Lair of Abhorrence",
         "media": "assets/combat/combatAreas/corp.png",
         "difficulty": [
           5

@@ -280,6 +280,20 @@
     ],
     "items": [
       {
+        "id": "melvorF:Mirror_Shield",
+        "modifiers": {
+          "add": {
+            "effectIgnoreChance": [
+              {
+                "effectGroupID": "expandedAreas:Gaze",
+                "value": 25
+              }
+            ],
+            "reflectDamage": 5
+          }
+        }
+      },
+      {
         "id": "melvorF:Potion_Box_II",
         "dropTable": {
           "remove": [
