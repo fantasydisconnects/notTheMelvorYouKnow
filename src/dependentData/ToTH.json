@@ -1,0 +1,502 @@
+{
+  "$schema": "https://melvoridle.com/assets/schema/gameData.json",
+  "namespace": "expandedAreas",
+  "dependentData": [
+    {
+      "namespace": "melvorTotH",
+      "modifications": {
+        "monsters": [
+          {
+            "id": "melvorTotH:Alraune",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypePlantlike"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Arctair",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeBestial",
+                "expandedAreas:MonsterTypeHeavenly"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Banshee",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypePlantlike"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:BasherSpider",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeBestial"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Beholder",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeStrange"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:BurningSnake",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeBestial",
+                "expandedAreas:MonsterTypeElemental"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Cockatrice",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeMonstrous"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Conda",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeBestial"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:CursedSkeletonWarrior",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeUndead"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:CursedSpirit",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeUndead"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:DarkKnight",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeHumanoid"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:EnforcerSpider",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeBestial"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Fiozor",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeUndead"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:FrostGolem",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeConstructed",
+                "expandedAreas:MonsterTypeElemental"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:GoliathWerewolf",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeMonstrous",
+                "expandedAreas:MonsterSubtypeLycanthrope"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:GretYun",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeDraconic"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:GuardianoftheHerald",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeBestial",
+                "expandedAreas:MonsterTypeHeavenly"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:GuardianSpider",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeBestial"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Harkair",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeBestial",
+                "expandedAreas:MonsterTypeHeavenly"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:HungryPlant",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypePlantlike"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:IceHydra",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeDraconic",
+                "expandedAreas:MonsterTypeElemental"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:InfernalGolem",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeConstructed",
+                "expandedAreas:MonsterTypeElemental"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Kongamato",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeBestial",
+                "expandedAreas:MonsterTypeMonstrous"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:LadyDarkheart",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeHumanoid"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:LargeIceTroll",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeGiantkin"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Leviathan",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeMonstrous"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:LightningGolem",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeConstructed",
+                "expandedAreas:MonsterTypeElemental"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:LightningMonkey",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeBestial",
+                "expandedAreas:MonsterTypeElemental"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:LightningSpirit",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeElemental",
+                "expandedAreas:MonsterTypeHeavenly"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:MagicFireDemon",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeHellish"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Manticore",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeMonstrous"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:MonsterCroc",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeBestial"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Morellia",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeFae",
+                "expandedAreas:MonsterTypePlantlike"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Phantom",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeUndead"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:PlagueDoctor",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeHumanoid"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:PoisonToad",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeBestial"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:PolarBear",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeBestial"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:RaZu",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeDraconic",
+                "expandedAreas:MonsterTypeElemental"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:ScouterSpider",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeBestial"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:ShadowBeast",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeMonstrous",
+                "expandedAreas:MonsterSubtypeLycanthrope"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Siren",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeFae"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:SpectralIceWolf",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeBestial",
+                "expandedAreas:MonsterTypeUndead"
+                
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Spectre",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeUndead"
+                
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:SpiderQueen",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeBestial",
+                "expandedAreas:MonsterTypeMonstrous"
+                
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:TheHeraldPhase1",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeHumanoid"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:TheHeraldPhase2",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeHumanoid"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:TheHeraldPhase3",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeHumanoid"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Torvair",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeBestial",
+                "expandedAreas:MonsterTypeHeavenly"
+                
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:TrapperSpider",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeBestial"
+                
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:TreeGiant",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypePlantlike"
+                
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:TreeSpirit",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypePlantlike",
+                "expandedAreas:MonsterTypeUndead"
+                
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Trogark",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeGiantkin"
+                
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:TwinSeaDragonSerpent",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeBestial",
+                "expandedAreas:MonsterTypeDraconic"
+                
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:VorloranDevastator",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeUndead"
+                
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:VorloranProtector",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeUndead"
+                
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:VorloranWatcher",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeUndead"
+                
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:WickedSpider",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeBestial"
+                
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

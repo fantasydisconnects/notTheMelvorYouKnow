@@ -1,0 +1,15 @@
+Monster Types
+MonsterTypeBestial
+MonsterTypeConstructed
+MonsterTypeDraconic
+MonsterTypeElemental
+MonsterTypeFae
+MonsterTypeGelatinous
+MonsterTypeGiantkin
+MonsterTypeHeavenly
+MonsterTypeHellish
+MonsterTypeHumanoid
+MonsterTypeMonstrous
+MonsterTypePlantlike
+MonsterTypeStrange
+MonsterTypeUndead

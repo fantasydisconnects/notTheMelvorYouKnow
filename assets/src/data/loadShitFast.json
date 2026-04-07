@@ -1,0 +1,108 @@
+{
+  "$schema": "https://melvoridle.com/assets/schema/gameData.json",
+  "namespace": "expandedAreas",
+  "data": {
+    "attacks": [],
+    "attackSpells": [],
+    "combatAreas": [
+      {
+        ""
+      }
+    ],
+    "slayerAreas": [],
+    "dungeons": [
+      {
+        "hideIfLocked": true,
+        "showUnlockRequirements": false
+      }
+    ],
+    "combatEffects": [
+      
+      {
+        "id": "DeathGaze",
+        "name": "Death Gaze",
+        "media": "assets/combat/status/instakill.png",
+        "templateID": "expandedAreas:DeathMagic",
+        "parameters": [
+          {
+            "name": "procs",
+            "initialValue": 1
+          },
+          {
+            "name": "interval",
+            "initialValue": 50
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "InterruptTurn",
+            "triggersOn": [
+              {
+                "type": "EffectApplied"
+              }
+            ]
+          }
+        ],
+        "damageGroups": [
+          {
+            "name": "total",
+            "damage": [
+              {
+                "character": "Target",
+                "roll": false,
+                "maxRoll": "MaxHP",
+                "maxPercent": 170
+              }
+            ],
+            "applyDamageModifiers": false,
+            "applyResistance": true
+          }
+        ],
+        "effectGroups": [
+          "expandedAreas:Gaze",
+          "expandedAreas:DeathMagic",
+          "melvorD:DamageOverTime"
+        ]
+      },
+      {
+        "id": "AntiMagicField",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Anti-Magic Field",
+        "media": "assets/combat/status/antimagic.png",
+        "target": "Target",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 5
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "magicAttackInterval": 999999,
+              "magicAccuracyRating": -999999,
+              "magicMaxHit": -999999,
+              "magicEvasion": -999999,
+              "effectImmunity": [
+                {
+                  "effectGroupID": "melvorD:Buff",
+                  "value": 1
+                }
+              ]
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+    ],
+    "combatEffectGroups": [],
+    "combatEffectTables": [],
+    "combatPassives": [],
+    "items": [],
+    "itemSynergies": [],
+    "monsters": [],
+  }
+}

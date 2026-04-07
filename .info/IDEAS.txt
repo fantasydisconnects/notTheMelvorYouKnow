@@ -1,0 +1,299 @@
+Guns
+________
+Require
+---------
+Gunpowder (bank item)
+Pyrite (bank item)
+Wood
+Metal
+
+Gunpowder
+_________
+Requires
+---------
+charcoal
+saltpetre
+sulphur
+
+Uses
+----------
+dynamite
+guns
+
+Saltpetre
+_________
+obtained from
+--------------
+mixing bat guano/dung with ash at a farming plot
+mining unrefined saltpeter (accessible after completing Volcanic Cave) and using herblore to combine with ash
+
+uses
+------------
+gunpowder
+enhanced compost
+
+Sulphur
+__________
+obtained from
+--------------
+volcanic cave
+infernal stronghold
+smelting pyrite
+
+uses
+---------
+gunpowder
+fungicide
+anti-sickness properties (potions?)
+
+dynamite
+____________
+obtained from
+---------
+gunpowder
+string
+
+uses
+--------
+mining
+
+string
+_________
+obtained from
+-------------
+spider silk
+
+pyrite
+_________
+obtained from
+----------
+mining
+
+uses
+------------
+making sulphur
+guns
+firemaking
+
+
+
+The Mazes of Menace
+lvl 1
+brown mold
+cave spider
+centipede
+coyote
+dust vortex
+fox
+gecko
+giant rat
+gnome zombie
+gnome
+golbin
+green mold
+halfling
+iguana
+kobold
+kobold zombie
+large kobold
+lemure
+manes
+quivering blob
+red mold
+Yellow Mold
+Violet fungus
+
+lvl 2
+dwarf zombie
+elf zombie
+fog cloud
+gas spore
+gray ooze
+homunculus
+kobold shaman
+lizard
+orc zombie
+rabid rat
+rock mole
+rock piercer
+shrieker
+spotted jelly
+white lichen
+yellow light
+
+lvl 20
+elder fire elemental
+elder tentacled one
+flind lord
+giant cockatrice
+gray dragon
+green dragon
+master lich
+master of thieves
+orange dragon
+red dragon
+silver dragon
+white dragon
+yellow dragon
+
+lvl 21
+elder treant
+glabrezu
+greater mummy priest
+hell bovine
+shoosuva
+werebear
+
+lvl 22
+gazer
+giant python
+ogre mage	
+storm giant
+
+lvl 23
+elder air elemental
+skeleton king
+
+lvl 24
+minotaur
+mucilaginous cube
+nalfeshnee
+ogre king
+owlbear patriarch
+reaper
+
+lvl 25
+dracolich
+gorgon
+jabberwock
+phoenix
+
+lvl 26
+mastodon
+
+lvl 27
+marilith
+owlbear matriarch
+
+lvl 28
+ice devil
+minion of huhetotl
+purple worm
+
+lvl 29
+king wraith
+
+lvl 10
+fire vortex
+forest centaur
+giant eel
+green slime
+human mummy
+large dire wolf
+orc captain
+shade
+tiger
+umbral hulk
+yeti
+
+lvl 11
+black naga
+black pudding
+carnivorous ape
+electric eel
+fire elemental
+ghast
+golbin king
+hill giant
+lich
+otyugh
+sasquatch
+skeleton warrior
+stalker
+titanothere
+vampire
+warhorse
+zruty
+
+lvl 12
+elf king
+gargantuan beetle
+gnoll king
+hell hound
+oliphant
+owlbear
+troll
+
+lvl 13
+gnoll supreme warden
+human king
+leucrotta
+lieutenant
+mountain centaur
+ogre overlord
+tentacled one
+warram
+xorn
+
+lvl 14
+ettin mummy
+flind
+gemstone golem
+harpy
+orc king
+
+lvl 15
+air elemental
+couatl
+demilich
+elder water elemental
+fire giant
+giant mummy
+hydra
+rock troll
+salamander
+skeleton lord
+vampire lord
+vrock
+
+lvl 16
+captain
+elder earth elemental
+ettin
+frost giant
+grizzly bear
+guard
+hezrou
+kraken
+neo-otyugh
+vampire mage
+water troll
+
+lvl 17
+priest
+boa constrictor
+erinyes
+horned devil
+master assassin
+phase spider
+pyrohydra
+scorpius
+spectre
+winged gargoyle
+
+lvl 18
+chimera
+golden naga
+greater mummy
+guardian naga
+iron golem
+owlbear shaman
+roc
+roper
+war troll
+
+lvl 19
+thoul
+
+lvl 100
+demogorgon

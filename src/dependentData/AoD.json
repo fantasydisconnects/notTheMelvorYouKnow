@@ -1,0 +1,384 @@
+{
+  "$schema": "https://melvoridle.com/assets/schema/gameData.json",
+  "namespace": "expandedAreas",
+  "dependentData": [
+    {
+      "namespace": "melvorAoD",
+      "modifications": {
+        "monsters": [
+          {
+            "id": "melvorAoD:AngryTeak",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypePlantlike"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:BlindArcher",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeHumanoid"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:BlindGhost",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeUndead"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:BlindMage",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeHumanoid"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:BlindWarrior",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeHumanoid"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:CrystalBarrager",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeConstructed",
+                "expandedAreas:MonsterTypeStrange"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:CrystalBehemoth",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeConstructed",
+                "expandedAreas:MonsterTypeStrange"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:CrystalManipulator",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeConstructed",
+                "expandedAreas:MonsterTypeStrange"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:CrystalProwler",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeConstructed",
+                "expandedAreas:MonsterTypeStrange"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:CrystalShatterer",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeConstructed",
+                "expandedAreas:MonsterTypeStrange"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:CrystalSmasher",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeConstructed",
+                "expandedAreas:MonsterTypeStrange"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:CultImp",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeHellish"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:CultMember",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeHumanoid"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:CultMonster",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeMonstrous"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:CursedPirateCaptain",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeUndead"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:EarthGolem",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeConstructed",
+                "expandedAreas:MonsterTypeElemental"
+                
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:EvilOak",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypePlantlike"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:FakeDoor",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeMonstrous"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:FuriousMahogany",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypePlantlike"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:GhostMercenary",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeUndead"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:GhostSailor",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeUndead"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:GraniteGolem",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeConstructed"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:GreenSlime",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeGelatinous"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:GrumpyWillow",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypePlantlike"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:IllusiveRoots",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypePlantlike"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:LavaGolem",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeConstructed",
+                "expandedAreas:MonsterTypeElemental"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:Lich",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeUndead"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:MagicGolem",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeConstructed"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:MagicMirror",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeConstructed"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:MermaidArcher",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeFae"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:Merman",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeFae"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:MermanGuard",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeFae"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:Nagaia",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeBestial",
+                "expandedAreas:MonsterTypeFae"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:PoisonBloater",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeStrange"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:PoisonLeecher",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeStrange"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:PoisonRoamer",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeStrange"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:PoisonSlime",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeStrange"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:PossessedBarrel",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeConstructed"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:PuppetMaster",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeConstructed"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:RagingMaple",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypePlantlike"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:RangedGolem",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeConstructed"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:ShipwreckBeast",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeMonstrous"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:SlimeShooter",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeGelatinous"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:SoulTakerWitch",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeHumanoid"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:VampiricBat",
+            "passives": {
+              "add": [
+                "expandedAreas:MonsterTypeBestial",
+                "expandedAreas:MonsterTypeUndead"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

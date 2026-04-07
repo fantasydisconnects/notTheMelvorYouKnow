@@ -4,6 +4,40 @@
   "data": {
     "attacks": [
       {
+        "id": "TyrannicalGazeRays",
+        "defaultChance": 25,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 100,
+            "attackCount": 0
+          },
+          {
+            "damageType": "Normal",
+            "amplitude": 125,
+            "attackCount": 1
+          },
+          {
+            "damageType": "Normal",
+            "amplitude": 150,
+            "attackCount": 2
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "tableID": "expandedAreas:RandomGaze"
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 3,
+        "attackInterval": 500,
+        "lifesteal": 0,
+        "name": "Tyrannical Gaze Rays",
+        "description": "The Enemy shoots ${hitCount} gaze rays at you, dealing ${attackDamageMaxValue0}% of its normal damage with the 1st ray, ${attackDamageMaxValue1}% with the 2nd, and ${attackDamageMaxValue2}% with the 3rd ray. Each ray inflicts a random Debuff or Damage Over Time effect on hit.",
+        "descriptionGenerator": "The enemy attacks <hitCount> times and deals <damage> damage. On hit, <hitEffect>."
+      },
+      {
         "id": "AntiMagicField",
         "defaultChance": 5,
         "damage": [
@@ -615,7 +649,7 @@
             "damageType": "Custom",
             "character": "Attacker",
             "maxRoll": "Fixed",
-            "maxPercent": 51,
+            "maxPercent": 71,
             "roll": false
           }
         ],
@@ -627,7 +661,7 @@
             "initialParams": [
               {
                 "name": "turns",
-                "value": 1
+                "value": 3
               }
             ]
           }
@@ -640,6 +674,49 @@
         "description": "Stamp the ground ${hitCount} times over ${duration}s, dealing ${attackDamageMaxValue0} damage each, each with a ${onHitEffect0chance}% chance on hit to inflict Stun for ${onHitEffect0turns} turn (Avoidable).",
         "descriptionGenerator": "Slam the ground <count> times over <duration>, dealing <damage> damage each (<Avoidable>). On hit, <hitEffect>.",
         "usesRunesPerProc": false
+      },
+      {
+        "id": "TheTongue",
+        "defaultChance": 15,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "maxRoll": "PoisonMax35",
+            "maxPercent": 165,
+            "minRoll": "PoisonMin35",
+            "minPercent": 165,
+            "roll": true
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Poison",
+            "chance": 100
+          },
+          {
+            "effectID": "melvorD:DeadlyPoison",
+            "chance": 50
+          },
+          {
+            "effectID": "expandedAreas:Paralyze",
+            "chance": 25,
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 2
+              }
+            ]
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 500,
+        "lifesteal": 10,
+        "name": "The Tongue",
+        "description": "The Beast wraps its tongue around you, dealing ${attackDamageMaxValue0}% (150% if you are Poisoned) of its normal damage, and healing for ${lifesteal}%. On hit, has a ${onHitEffect0chance}% chance to inflict Poison, a ${onHitEffect1chance}% chance to inflict Deadly Poison, and a ${onHitEffect2chance}% chance to inflict Paralyze for 2 turns.",
+        "descriptionGenerator": "Perform an attack that deals <damage>. On a hit <hitEffect>."
       },
       {
         "id": "CorruptingStrike",
@@ -1387,36 +1464,6 @@
         "descriptionGenerator": "Perform an attack that deals <damage>. On a hit <hitEffect>."
       },
       {
-        "id": "WandDeath",
-        "attackTypes": [
-          "magic"
-        ],
-        "defaultChance": 25,
-        "damage": [
-          {
-            "damageType": "Custom",
-            "character": "Target",
-            "maxPercent": 25,
-            "maxRoll": "MaxHP",
-            "roll": false
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "expandedAreas:DeathMagic"
-          }
-        ],
-        "cantMiss": true,
-        "attackCount": 1,
-        "attackInterval": 1000,
-        "lifesteal": 0,
-        "name": "Death",
-        "description": "(Unavoidable.) The target is instantly killed. If immune to Death Magic, the target instead takes damage equal to ${attackDamageMaxValue0}% of their Max HP.",
-        "descriptionGenerator": "<Avoidable>. Kills the target instantly. If immune to Death Magic, takes <damage> instead.",
-        "usesRunesPerProc": false
-      },
-      {
         "id": "WandFrost",
         "defaultChance": 15,
         "attackTypes": [
@@ -1466,56 +1513,6 @@
         "name": "Feelin' Frosty?",
         "description": "A ray of biting cold pierces the target, dealing damage equal to 1 + ${attackDamageMinValue0}%-${attackDamageMaxValue0}% of their Magic level. On hit, Slows the target for ${onHitEffect1modValue0}%, and has a ${onHitEffect0chance}% to Freeze the target for ${onHitEffect0turns} of its turns.",
         "descriptionGenerator": "Make an attack that deals <damage>. On hit, <hitEffect>.",
-        "usesRunesPerProc": false
-      },
-      {
-        "id": "PolymorphWandOops",
-        "defaultChance": 0.001,
-        "attackTypes": [
-          "magic"
-        ],
-        "damage": [],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "expandedAreas:PolymorphCow",
-            "initialParams": [
-              {
-                "name": "turns",
-                "value": 1
-              }
-            ]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 300,
-        "lifesteal": 0,
-        "name": "Polymorph: Oops! (0.001% Chance)",
-        "description": "Oops! Turns YOU into a harmless cow for 1 turn.",
-        "descriptionGenerator": "Oops! Turns YOU into a harmless cow for 1 turn.",
-        "usesRunesPerProc": false
-      },
-      {
-        "id": "PolymorphWand",
-        "defaultChance": 15,
-        "attackTypes": [
-          "magic"
-        ],
-        "damage": [],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "expandedAreas:PolymorphCow"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 300,
-        "lifesteal": 0,
-        "name": "Polymorph: Cow",
-        "description": "Turns the target into a harmless cow for 3 turns.",
-        "descriptionGenerator": "Turns the target into a harmless cow for 3 turns.",
         "usesRunesPerProc": false
       },
       {
@@ -2694,6 +2691,218 @@
     "bankSortOrder": [
       {
         "insertAt": "After",
+        "afterID": "melvorD:Treasure_Chest",
+        "ids": [
+          "expandedAreas:Mysterious_Chest"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Fighter_Amulet",
+        "ids": [
+          "expandedAreas:Earring_of_Protection"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Fire_Imbued_Wand",
+        "ids": [
+          "expandedAreas:Wand_of_Fireball",
+          "expandedAreas:Wand_of_Frost",
+          "expandedAreas:Wand_of_Lightning"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Amulet_Of_Incantation",
+        "ids": [
+          "expandedAreas:Amulet_of_the_Damned"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Rusty_Key",
+        "ids": [
+          "expandedAreas:Skeleton_Key"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Mining_Scroll_Of_XP",
+        "ids": [
+          "expandedAreas:Dynamite"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Magic_Chest",
+        "ids": [
+          "expandedAreas:Raid_Spoils"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Weird_Gloop",
+        "ids": [
+          "expandedAreas:Insecticide"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Fine_Coinpurse",
+        "ids": [
+          "expandedAreas:Golden_Sceptre"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Air_Acolyte_Wizard_Boots",
+        "ids": [
+          "expandedAreas:Air_Acolyte_Wizard_Gloves"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Air_Adept_Wizard_Boots",
+        "ids": [
+          "expandedAreas:Air_Adept_Wizard_Gloves"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Air_Expert_Wizard_Hat",
+        "ids": [
+          "expandedAreas:Air_Expert_Wizard_Gloves"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Water_Acolyte_Wizard_Boots",
+        "ids": [
+          "expandedAreas:Water_Acolyte_Wizard_Gloves"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Water_Adept_Wizard_Boots",
+        "ids": [
+          "expandedAreas:Water_Adept_Wizard_Gloves"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Water_Expert_Wizard_Boots",
+        "ids": [
+          "expandedAreas:Water_Expert_Wizard_Gloves"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Earth_Acolyte_Wizard_Boots",
+        "ids": [
+          "expandedAreas:Earth_Acolyte_Wizard_Gloves"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Earth_Adept_Wizard_Boots",
+        "ids": [
+          "expandedAreas:Earth_Adept_Wizard_Gloves"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Earth_Expert_Wizard_Boots",
+        "ids": [
+          "expandedAreas:Earth_Expert_Wizard_Gloves"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Fire_Acolyte_Wizard_Boots",
+        "ids": [
+          "expandedAreas:Fire_Acolyte_Wizard_Gloves"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Fire_Adept_Wizard_Boots",
+        "ids": [
+          "expandedAreas:Fire_Adept_Wizard_Gloves"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Fire_Expert_Wizard_Boots",
+        "ids": [
+          "expandedAreas:Fire_Expert_Wizard_Gloves"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Elite_Amulet_of_Accuracy",
+        "ids": [
+          "expandedAreas:Masterful_Amulet_of_Accuracy"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Elite_Amulet_of_Defence",
+        "ids": [
+          "expandedAreas:Masterful_Amulet_of_Defence"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Elite_Amulet_of_Strength",
+        "ids": [
+          "expandedAreas:Masterful_Amulet_of_Strength"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Elite_Amulet_of_Magic",
+        "ids": [
+          "expandedAreas:Masterful_Amulet_of_Magic"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Elite_Amulet_of_Ranged",
+        "ids": [
+          "expandedAreas:Masterful_Amulet_of_Ranged"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Elite_Amulet_of_Glory",
+        "ids": [
+          "expandedAreas:Masterful_Amulet_of_Glory"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Amulet_of_Fury",
+        "ids": [
+          "expandedAreas:Amulet_of_Rage"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Amulet_of_Torture",
+        "ids": [
+          "expandedAreas:Amulet_of_Anguish"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Fury_of_the_Elemental_Zodiac",
+        "ids": [
+          "expandedAreas:M_E_L_V_O_R"
+        ]
+      },
+      {
+        "insertAt": "After",
         "afterID": "melvorF:Mystic_Fire_Staff",
         "ids": [
           "expandedAreas:Mystic_Mist_Staff",
@@ -2899,9 +3108,20 @@
         "insertAt": "After",
         "afterID": "melvorF:Goo",
         "ids": [
+          "expandedAreas:Chieftain_Eriks_Head",
           "expandedAreas:Enormous_Mole_Carcass",
           "expandedAreas:Mole_Skin",
-          "expandedAreas:Mole_Claw"
+          "expandedAreas:Mole_Claw",
+          "expandedAreas:Fang",
+          "expandedAreas:Hoof",
+          "expandedAreas:Large_Fang",
+          "expandedAreas:Massive_Fang",
+          "expandedAreas:Fearful_Eyeball",
+          "expandedAreas:Celestial_Feather",
+          "expandedAreas:Phoenix_Feather",
+          "expandedAreas:Pureform_Rune",
+          "expandedAreas:Spider_Silk",
+          "expandedAreas:String"
         ]
       },
       {
@@ -3123,10 +3343,91 @@
         "insertAt": "After",
         "afterID": "melvorD:Rune_Battleaxe",
         "ids": [
-          "expandedAreas:Rune_Spear",
+          "expandedAreas:Rune_Spear"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Rune_2H_Sword",
+        "ids": [
+          "expandedAreas:Silver_Dagger",
+          "expandedAreas:Silver_Sword",
+          "expandedAreas:Silver_Scimitar",
+          "expandedAreas:Silver_Battleaxe",
+          "expandedAreas:Silver_Spear",
+          "expandedAreas:Silver_2H_Sword",
           "expandedAreas:Barbarian_Berserker_Axe",
           "expandedAreas:Barbarian_Longblade",
           "expandedAreas:Barbarian_Brawling_Gloves"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Rune_Arrowtips",
+        "ids": [
+          "expandedAreas:Silver_Arrowtips"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Rune_Arrows",
+        "ids": [
+          "expandedAreas:Silver_Arrows"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Rune_Crossbow_Head",
+        "ids": [
+          "expandedAreas:Silver_Crossbow_Head"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Rune_Crossbow",
+        "ids": [
+          "expandedAreas:Silver_Crossbow"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Dragon_Crossbow",
+        "ids": [
+          "expandedAreas:Silver_Crossbow"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Rune_Javelin_Heads",
+        "ids": [
+          "expandedAreas:Silver_Javelin_Heads"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Rune_Javelin",
+        "ids": [
+          "expandedAreas:Silver_Javelin"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Jadestone_Bolts",
+        "ids": [
+          "expandedAreas:Silver_Headless_Bolts",
+          "expandedAreas:Silver_Topaz_Bolts",
+          "expandedAreas:Silver_Sapphire_Bolts",
+          "expandedAreas:Silver_Ruby_Bolts",
+          "expandedAreas:Silver_Emerald_Bolts",
+          "expandedAreas:Silver_Diamond_Bolts",
+          "expandedAreas:Silver_Jadestone_Bolts"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Rune_Throwing_Knife",
+        "ids": [
+          "expandedAreas:Silver_Throwing_Knife"
         ]
       },
       {
@@ -3191,18 +3492,11 @@
           "expandedAreas:Bronze_Thrownaxe_Head",
           "expandedAreas:Iron_Thrownaxe_Head",
           "expandedAreas:Steel_Thrownaxe_Head",
-          "expandedAreas:Black_Thrownaxe_Head",
           "expandedAreas:Mithril_Thrownaxe_Head",
           "expandedAreas:Adamant_Thrownaxe_Head",
           "expandedAreas:Rune_Thrownaxe_Head",
+          "expandedAreas:Silver_Thrownaxe_Head",
           "expandedAreas:Dragon_Thrownaxe_Head"
-        ]
-      },
-      {
-        "insertAt": "After",
-        "afterID": "melvorD:Steel_Javelin_Heads",
-        "ids": [
-          "expandedAreas:Black_Javelin_Heads"
         ]
       },
       {
@@ -3216,21 +3510,25 @@
           "expandedAreas:Mithril_Thrownaxe",
           "expandedAreas:Adamant_Thrownaxe",
           "expandedAreas:Rune_Thrownaxe",
+          "expandedAreas:Silver_Thrownaxe",
           "expandedAreas:Dragon_Thrownaxe"
         ]
       },
       {
         "insertAt": "After",
-        "afterID": "melvorD:Steel_Arrowtips",
+        "afterID": "melvorD:Bronze_Bar",
         "ids": [
-          "expandedAreas:Black_Arrowtips"
+          "expandedAreas:Pyrite_Chunk",
+          "expandedAreas:Saltpetre"
         ]
       },
       {
         "insertAt": "After",
-        "afterID": "melvorD:Steel_Crossbow_Head",
+        "afterID": "melvorD:Iron_Ore",
         "ids": [
-          "expandedAreas:Black_Crossbow_Head"
+          "expandedAreas:Pyrite_Ore",
+          "expandedAreas:Unrefined_Saltpetre",
+          "expandedAreas:Sulphur"
         ]
       },
       {
@@ -3815,6 +4113,85 @@
       },
       {
         "insertAt": "After",
+        "afterID": "melvorF:Miners_Helmet",
+        "ids": [
+          "expandedAreas:Pick_of_Colossal_Excavation"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Skull_Cape",
+        "ids": [
+          "expandedAreas:Helmet_of_Doom"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Bronze_Arrows",
+        "ids": [
+          "expandedAreas:Gunpowder",
+          "expandedAreas:Bronze_Cannonball",
+          "expandedAreas:Bronze_Shot"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Iron_Arrows",
+        "ids": [
+          "expandedAreas:Iron_Cannonball",
+          "expandedAreas:Iron_Shot"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Steel_Arrows",
+        "ids": [
+          "expandedAreas:Steel_Cannonball",
+          "expandedAreas:Steel_Shot"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Mithril_Arrows",
+        "ids": [
+          "expandedAreas:Mithril_Cannonball",
+          "expandedAreas:Mithril_Shot"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Adamant_Arrows",
+        "ids": [
+          "expandedAreas:Adamant_Cannonball",
+          "expandedAreas:Adamant_Shot"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Rune_Arrows",
+        "ids": [
+          "expandedAreas:Rune_Cannonball",
+          "expandedAreas:Rune_Shot"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "expandedAreas:Silver_Arrows",
+        "ids": [
+          "expandedAreas:Silver_Cannonball",
+          "expandedAreas:Silver_Shot"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Dragon_Arrows",
+        "ids": [
+          "expandedAreas:Dragon_Cannonball",
+          "expandedAreas:Dragon_Shot"
+        ]
+      },
+      {
+        "insertAt": "After",
         "afterID": "melvorF:Wizards_Sigil",
         "ids": [
           "expandedAreas:Lesser_Sigil",
@@ -3866,6 +4243,7 @@
           "expandedAreas:Superior_Sigil_of_Perception",
           "expandedAreas:Superior_Sigil_of_Swiftness",
           "expandedAreas:Superior_Sigil_of_Water",
+          "expandedAreas:Legendary_Sigil",
           "expandedAreas:Legendary_Sigil_of_Generosity",
           "expandedAreas:Legendary_Sigil_of_the_Phoenix"
         ]
@@ -3879,6 +4257,7 @@
           "expandedAreas:Emerald_Dust",
           "expandedAreas:Ruby_Dust",
           "expandedAreas:Diamond_Dust",
+          "expandedAreas:Jadestone_Dust",
           "expandedAreas:Enchanted_Topaz_Dust",
           "expandedAreas:Enchanted_Sapphire_Dust",
           "expandedAreas:Enchanted_Ruby_Dust",
@@ -4172,8 +4551,29 @@
         ]
       },
       {
-        "insertAt": "Before",
-        "beforeID": "melvorF:Crate_Of_Basic_Supplies",
+        "insertAt": "After",
+        "afterID": "melvorF:Chest_Of_Gems",
+        "ids": [
+          "expandedAreas:Treasure_Hoard",
+          "expandedAreas:Weapons_Cache",
+          "expandedAreas:Lamp",
+          "expandedAreas:Crown",
+          "expandedAreas:Goblet",
+          "expandedAreas:Treasure",
+          "expandedAreas:Bag_of_Endless_Gold1",
+          "expandedAreas:Bag_of_Endless_Gold2"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Ash",
+        "ids": [
+          "expandedAreas:Charcoal"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Egg_Chest",
         "ids": [
           "expandedAreas:Damaged_Supply_Crate"
         ]
@@ -4263,6 +4663,14 @@
         "insertAt": "After",
         "afterID": "melvorF:Shockwave",
         "ids": [
+          "expandedAreas:Bronze_Handcannon",
+          "expandedAreas:Iron_Handcannon",
+          "expandedAreas:Steel_Handcannon",
+          "expandedAreas:Mithril_Handcannon",
+          "expandedAreas:Adamant_Handcannon",
+          "expandedAreas:Rune_Handcannon",
+          "expandedAreas:Silver_Handcannon",
+          "expandedAreas:Dragon_Handcannon",
           "expandedAreas:Bronze_Pistol",
           "expandedAreas:Iron_Pistol",
           "expandedAreas:Steel_Pistol",
@@ -4464,11 +4872,6 @@
         "adjective": "Heal Immune"
       },
       {
-        "id": "DeathMagic",
-        "name": "Death Magic",
-        "adjective": "Cursed by Death Itself"
-      },
-      {
         "id": "Gaze",
         "name": "Gazes",
         "adjective": "Gazed at"
@@ -4489,77 +4892,45 @@
         "id": "RandomGaze",
         "table": [
           {
-            "effectID": "expandedAreas:GazeCharm",
-            "weight": 1
+            "effectID": "expandedAreas:CharmingGaze",
+            "weight": 3
           },
           {
-            "effectID": "expandedAreas:GazeParalyze",
-            "weight": 1
+            "effectID": "expandedAreas:ParalyzingGaze",
+            "weight": 3
           },
           {
-            "effectID": "expandedAreas:GazeFear",
-            "weight": 1
+            "effectID": "expandedAreas:FrighteningGaze",
+            "weight": 3
           },
           {
-            "effectID": "expandedAreas:GazeDrain",
-            "weight": 1
+            "effectID": "expandedAreas:DrainingGaze",
+            "weight": 3
           },
           {
-            "effectID": "expandedAreas:GazeWither",
-            "weight": 1
+            "effectID": "expandedAreas:WitheringGaze",
+            "weight": 3
           },
           {
-            "effectID": "expandedAreas:GazeTelekinesis",
-            "weight": 1
+            "effectID": "expandedAreas:TelekineticGaze",
+            "weight": 3
           },
           {
-            "effectID": "expandedAreas:GazeSleep",
-            "weight": 1
+            "effectID": "expandedAreas:SleepGaze",
+            "weight": 3
           },
           {
-            "effectID": "expandedAreas:GazeFailure",
-            "weight": 1
+            "effectID": "expandedAreas:FailureGaze",
+            "weight": 3
           },
           {
-            "effectID": "expandedAreas:GazeNullify",
-            "weight": 1
-          },
-          {
-            "effectID": "expandedAreas:GazeDeath",
-            "weight": 1
+            "effectID": "expandedAreas:NullificationGaze",
+            "weight": 3
           }
         ]
       }
     ],
     "combatEffectTemplates": [
-      {
-        "id": "DeathMagic",
-        "baseTemplates": [
-          "melvorD:DOT"
-        ],
-        "baseEffectData": {
-          "name": "Death Magic",
-          "media": "assets/combat/status/instakill.png",
-          "behaviours": [
-            {
-              "type": "DamageCharacter",
-              "value": "p.damagePerProc",
-              "triggersOn": [
-                {
-                  "type": "TimerFired",
-                  "timerName": "proc"
-                }
-              ]
-            }
-          ],
-          "effectGroups": [
-            "expandedAreas:DeathMagic"
-          ],
-          "exclusiveGroups": [
-            "expandedAreas:DeathMagic"
-          ]
-        }
-      },
       {
         "id": "Paralyze",
         "description": "Endpoint Template. Defines behaviours for an effect that: Interrupts a character's turn when applied; prevents them from attacking, evading, or regenerating barrier; and causes them to take 100% more damage. Also grants immunity to stun-likes for 3 turns.",
@@ -4672,91 +5043,136 @@
     ],
     "combatEffects": [
       {
-        "id": "GazeCharm",
-        "templateID": "melvorD:StaticSelfCountingModifier",
-        "name": "Gaze: Charm",
-        "media": "assets/combat/status/strength_decrease.png",
-        "target": "Target",
+        "id": "FlyingPermanent",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Flying",
+        "media": "assets/combat/status/flying.png",
+        "target": "Self",
+        "parameters": [],
         "statGroups": [
           {
             "name": "stacks",
             "modifiers": {
-              "damageDealt": -20
+              "evasionAgainstMelee": 50,
+              "effectIgnoreChance": [
+                {
+                  "effectGroupID": "melvorD:StunLike",
+                  "value": 25
+                },
+                {
+                  "effectGroupID": "melvorD:Slow",
+                  "value": 25
+                }
+              ]
             }
           }
         ],
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 2
-          }
-        ],
         "effectGroups": [
-          "melvorD:Debuff",
-          "expandedAreas:Gaze"
+          "melvorD:Buff"
         ]
       },
       {
-        "id": "GazeParalyze",
+        "id": "FlyingTemporary",
         "templateID": "melvorD:StaticSelfCountingModifier",
-        "name": "Gaze: Paralyze",
-        "media": "assets/combat/status/paralyzed.png",
-        "target": "Target",
-        "statGroups": [
-          {
-            "name": "stacks",
-            "combatEffects": [
-              {
-                "effectID": "expandedAreas:Paralyze",
-                "appliesWhen": "PostAttack"
-              }
-            ]
-          }
-        ],
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 2
-          }
-        ],
-        "effectGroups": [
-          "melvorD:Debuff",
-          "expandedAreas:Gaze"
-        ]
-      },
-      {
-        "id": "GazeFear",
-        "templateID": "melvorD:StaticSelfCountingModifier",
-        "name": "Gaze: Fear",
-        "media": "assets/empty.png",
-        "target": "Target",
-        "statGroups": [
-          {
-            "name": "stacks",
-            "combatEffects": [
-              {
-                "effectID": "melvorD:Fear",
-                "appliesWhen": "PostAttack"
-              }
-            ]
-          }
-        ],
+        "name": "Flying",
+        "media": "assets/combat/status/flying.png",
+        "target": "Self",
         "parameters": [
           {
             "name": "turns",
             "initialValue": 1
           }
         ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "evasionAgainstMelee": 50,
+              "effectIgnoreChance": [
+                {
+                  "effectGroupID": "melvorD:StunLike",
+                  "value": 25
+                },
+                {
+                  "effectGroupID": "melvorD:Slow",
+                  "value": 25
+                }
+              ]
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "CharmingGaze",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Charming Gaze",
+        "media": "assets/combat/status/strength_decrease.png",
+        "target": "Target",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "damageDealt": -30
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
         "effectGroups": [
           "melvorD:Debuff",
           "expandedAreas:Gaze"
         ]
       },
       {
-        "id": "GazeDrain",
+        "id": "ParalyzingGaze",
+        "templateID": "expandedAreas:Paralyze",
+        "name": "Paralyzing Gaze",
+        "media": "assets/combat/status/paralyzed.png",
+        "target": "Target",
+        "statGroups": [],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff",
+          "expandedAreas:Paralyze",
+          "expandedAreas:Gaze"
+        ]
+      },
+      {
+        "id": "FrighteningGaze",
+        "templateID": "melvorD:Fear",
+        "name": "Gaze: Fear",
+        "media": "assets/combat/status/fear.svg",
+        "target": "Target",
+        "statGroups": [],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff",
+          "melvorD:Fear",
+          "expandedAreas:Gaze"
+        ]
+      },
+      {
+        "id": "DrainingGaze",
         "templateID": "melvorD:StaticSelfCountingModifier",
-        "name": "Gaze: Drain",
-        "media": "assets/nothing.png",
+        "name": "Draining Gaze",
+        "media": "assets/combat/status/slowed.svg",
         "target": "Target",
         "tooltipSpans": [
           {
@@ -4768,86 +5184,85 @@
           {
             "name": "stacks",
             "modifiers": {
-              "cantSpecialAttack": 1
-            },
-            "combatEffects": [
-              {
-                "effectID": "melvorD:Slow",
-                "appliesWhen": "PostAttack",
-                "initialParams": [
-                  {
-                    "name": "magnitude",
-                    "value": 10
-                  },
-                  {
-                    "name": "turns",
-                    "value": 2
-                  }
-                ]
-              }
-            ]
-          }
-        ],
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 2
-          }
-        ],
-        "effectGroups": [
-          "melvorD:Debuff",
-          "expandedAreas:Gaze"
-        ]
-      },
-      {
-        "id": "GazeWither",
-        "templateID": "melvorD:StaticSelfCountingModifier",
-        "name": "Gaze: Wither",
-        "media": "assets/combat/status/wither.png",
-        "target": "Target",
-        "statGroups": [
-          {
-            "name": "stacks",
-            "modifiers": {
-              "maxHitpoints": -20
+              "cantSpecialAttack": 1,
+              "attackInterval": 50
             }
           }
         ],
         "parameters": [
           {
             "name": "turns",
-            "initialValue": 2
+            "initialValue": 3
           }
         ],
         "effectGroups": [
           "melvorD:Debuff",
+          "melvorD:Slow",
           "expandedAreas:Gaze"
         ]
       },
       {
-        "id": "GazeTelekinesis",
+        "id": "WitheringGaze",
+        "templateID": "melvorD:BurnDOT",
+        "name": "Withering Gaze",
+        "media": "assets/combat/status/wither.png",
+        "target": "Target",
+        "statGroups": [],
+        "parameters": [
+          {
+            "name": "procs",
+            "initialValue": 10
+          },
+          {
+            "name": "interval",
+            "initialValue": 6000
+          }
+        ],
+        "damageGroups": [
+          {
+            "name": "total",
+            "damage": [
+              {
+                "character": "Target",
+                "roll": false,
+                "maxRoll": "MaxHP",
+                "maxPercent": 5000
+              }
+            ],
+            "applyDamageModifiers": false,
+            "applyResistance": true
+          }
+        ],
+        "effectGroups": [
+          "melvorD:DamageOverTime",
+          "melvorD:BurnDOT",
+          "expandedAreas:Gaze"
+        ]
+      },
+      {
+        "id": "TelekineticGaze",
         "templateID": "melvorD:StaticSelfCountingModifier",
-        "name": "Gaze: Telekinesis",
+        "name": "Telekinetic Gaze",
         "media": "assets/combat/status/evasion_decrease.svg",
         "target": "Target",
         "statGroups": [
           {
             "name": "stacks",
             "modifiers": {
-              "flatResistance": [
+              "resistance": [
                 {
                   "damageTypeID": "melvorD:Normal",
-                  "value": -5
+                  "value": -50
                 }
               ],
-              "evasion": -10
+              "evasion": -50
             }
           }
         ],
         "parameters": [
           {
             "name": "turns",
-            "initialValue": 2
+            "initialValue": 3
           }
         ],
         "effectGroups": [
@@ -4856,57 +5271,42 @@
         ]
       },
       {
-        "id": "GazeSleep",
-        "templateID": "melvorD:StaticSelfCountingModifier",
-        "name": "Gaze: Sleep",
-        "media": "assets/nothing.png",
+        "id": "SleepGaze",
+        "templateID": "melvorD:Sleep",
+        "name": "Sleep Gaze",
+        "media": "assets/combat/status/sleep.svg",
         "target": "Target",
-        "statGroups": [
-          {
-            "name": "stacks",
-            "combatEffects": [
-              {
-                "appliesWhen": "PostAttack",
-                "effectID": "melvorD:Sleep",
-                "initialParams": [
-                  {
-                    "name": "turns",
-                    "value": 2
-                  }
-                ]
-              }
-            ]
-          }
-        ],
+        "statGroups": [],
         "parameters": [
           {
             "name": "turns",
-            "initialValue": 2
+            "initialValue": 3
           }
         ],
         "effectGroups": [
           "melvorD:Debuff",
+          "melvorD:Sleep",
           "expandedAreas:Gaze"
         ]
       },
       {
-        "id": "GazeFailure",
+        "id": "FailureGaze",
         "templateID": "melvorD:StaticSelfCountingModifier",
-        "name": "Gaze: Failure",
+        "name": "Failure Gaze",
         "media": "assets/combat/status/attack_decrease.svg",
         "target": "Target",
         "statGroups": [
           {
             "name": "stacks",
             "modifiers": {
-              "accuracyRating": -50
+              "accuracyRating": -80
             }
           }
         ],
         "parameters": [
           {
             "name": "turns",
-            "initialValue": 2
+            "initialValue": 3
           }
         ],
         "effectGroups": [
@@ -4915,9 +5315,9 @@
         ]
       },
       {
-        "id": "GazeNullify",
+        "id": "NullificationGaze",
         "templateID": "melvorD:StaticSelfCountingModifier",
-        "name": "Gaze: Nullify",
+        "name": "Nullification Gaze",
         "media": "assets/combat/status/null.svg",
         "target": "Target",
         "statGroups": [
@@ -4936,40 +5336,11 @@
         "parameters": [
           {
             "name": "turns",
-            "initialValue": 2
+            "initialValue": 3
           }
         ],
         "effectGroups": [
           "melvorD:Debuff",
-          "expandedAreas:Gaze"
-        ]
-      },
-      {
-        "id": "GazeDeath",
-        "templateID": "melvorD:StaticSelfCountingModifier",
-        "name": "Gaze: Death",
-        "media": "assets/combat/status/instakill.png",
-        "target": "Target",
-        "statGroups": [
-          {
-            "name": "stacks",
-            "combatEffects": [
-              {
-                "appliesWhen": "PostAttack",
-                "effectID": "expandedAreas:DeathMagic",
-                "chance": 50
-              }
-            ]
-          }
-        ],
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 1
-          }
-        ],
-        "effectGroups": [
-          "expandedAreas:DeathMagic",
           "expandedAreas:Gaze"
         ]
       },
@@ -4982,7 +5353,7 @@
         "parameters": [
           {
             "name": "turns",
-            "initialValue": 3
+            "initialValue": 5
           }
         ],
         "statGroups": [
@@ -5246,7 +5617,7 @@
         "parameters": [
           {
             "name": "turns",
-            "initialValue": 2
+            "initialValue": 5
           },
           {
             "name": "initialStacks",
@@ -5258,7 +5629,7 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 10
+            "initialValue": 20
           }
         ],
         "statGroups": [
@@ -5331,7 +5702,7 @@
                 "roll": false,
                 "character": "Attacker",
                 "maxRoll": "MaxHP",
-                "maxPercent": 0.5
+                "maxPercent": 5
               }
             ]
           }
@@ -6228,107 +6599,6 @@
         ]
       },
       {
-        "id": "DeathMagic",
-        "templateID": "expandedAreas:DeathMagic",
-        "parameters": [
-          {
-            "name": "procs",
-            "initialValue": 1
-          },
-          {
-            "name": "interval",
-            "initialValue": 50
-          }
-        ],
-        "behaviours": [
-          {
-            "type": "InterruptTurn",
-            "triggersOn": [
-              {
-                "type": "EffectApplied"
-              }
-            ]
-          }
-        ],
-        "damageGroups": [
-          {
-            "name": "total",
-            "damage": [
-              {
-                "character": "Target",
-                "roll": false,
-                "maxRoll": "MaxHP",
-                "maxPercent": 666
-              }
-            ],
-            "applyDamageModifiers": false,
-            "applyResistance": false
-          }
-        ],
-        "effectGroups": [
-          "expandedAreas:DeathMagic",
-          "melvorD:DamageOverTime"
-        ]
-      },
-      {
-        "id": "PolymorphCow",
-        "templateID": "melvorD:StaticSelfCountingModifier",
-        "name": "Polymorphed",
-        "media": "assets/combat/status/polymorphed.png",
-        "target": "Target",
-        "tooltipSpans": [
-          {
-            "type": "String",
-            "value": "As harmless as a cow."
-          },
-          {
-            "type": "Turns",
-            "turns": "p.turns"
-          }
-        ],
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 2
-          }
-        ],
-        "statGroups": [
-          {
-            "name": "stacks",
-            "modifiers": {
-              "effectImmunity": [
-                {
-                  "effectGroupID": "melvorD:FearImmune",
-                  "value": 1
-                },
-                {
-                  "effectGroupID": "melvorD:StunImmune",
-                  "value": 1
-                },
-                {
-                  "effectGroupID": "melvorD:SleepImmune",
-                  "value": 1
-                }
-              ],
-              "cantSpecialAttack": 1,
-              "damageDealt": -99,
-              "accuracyRating": -99,
-              "evasion": -99,
-              "maxHitpoints": -99,
-              "resistance": [
-                {
-                  "damageTypeID": "melvorD:Normal",
-                  "value": -99
-                }
-              ]
-            }
-          }
-        ],
-        "effectGroups": [
-          "melvorD:Debuff"
-        ]
-      },
-      {
         "id": "Shock",
         "templateID": "melvorD:StackingNonCountingModifier",
         "name": "Shocked",
@@ -6564,7 +6834,7 @@
         ]
       },
       {
-        "id": "CreatureTypeBestial",
+        "id": "MonsterTypeBestial",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Bestial",
         "media": "assets/combat/status/animal.png",
@@ -6577,7 +6847,7 @@
         ]
       },
       {
-        "id": "CreatureTypeConstructed",
+        "id": "MonsterTypeConstructed",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Constructed",
         "media": "assets/combat/status/constructed.png",
@@ -6590,7 +6860,7 @@
         ]
       },
       {
-        "id": "CreatureTypeDraconic",
+        "id": "MonsterTypeDraconic",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Draconic",
         "media": "assets/combat/status/draconic.png",
@@ -6603,7 +6873,7 @@
         ]
       },
       {
-        "id": "CreatureTypeElemental",
+        "id": "MonsterTypeElemental",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Elemental",
         "media": "assets/combat/status/elemental.png",
@@ -6616,7 +6886,7 @@
         ]
       },
       {
-        "id": "CreatureTypeFae",
+        "id": "MonsterTypeFae",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Fae",
         "media": "assets/combat/status/fae.png",
@@ -6629,7 +6899,7 @@
         ]
       },
       {
-        "id": "CreatureTypeGelatinous",
+        "id": "MonsterTypeGelatinous",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Gelatinous",
         "media": "assets/combat/status/gelatinous.png",
@@ -6642,7 +6912,7 @@
         ]
       },
       {
-        "id": "CreatureTypeGiantkin",
+        "id": "MonsterTypeGiantkin",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Giantkin",
         "media": "assets/combat/status/giantkin.png",
@@ -6655,7 +6925,7 @@
         ]
       },
       {
-        "id": "CreatureTypeHeavenly",
+        "id": "MonsterTypeHeavenly",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Heavenly",
         "media": "assets/combat/status/heavenly.png",
@@ -6668,7 +6938,7 @@
         ]
       },
       {
-        "id": "CreatureTypeHellish",
+        "id": "MonsterTypeHellish",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Hellish",
         "media": "assets/combat/status/hellish.png",
@@ -6687,7 +6957,7 @@
         ]
       },
       {
-        "id": "CreatureTypeHumanoid",
+        "id": "MonsterTypeHumanoid",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Humanoid",
         "media": "assets/combat/status/human.png",
@@ -6700,7 +6970,7 @@
         ]
       },
       {
-        "id": "CreatureTypeMonstrous",
+        "id": "MonsterTypeMonstrous",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Monstrous",
         "media": "assets/combat/status/monstrous.png",
@@ -6713,7 +6983,7 @@
         ]
       },
       {
-        "id": "CreatureTypePlantlike",
+        "id": "MonsterTypePlantlike",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Plantlike",
         "media": "assets/combat/status/plant.png",
@@ -6726,7 +6996,7 @@
         ]
       },
       {
-        "id": "CreatureTypeStrange",
+        "id": "MonsterTypeStrange",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Strange",
         "media": "assets/combat/status/strange.png",
@@ -6739,7 +7009,7 @@
         ]
       },
       {
-        "id": "CreatureTypeUndead",
+        "id": "MonsterTypeUndead",
         "templateID": "melvorD:StaticNonCountingModifier",
         "name": "Undead",
         "media": "assets/combat/status/undead.png",
@@ -6883,27 +7153,35 @@
         }
       },
       {
+        "id": "FlyingPermanent",
+        "name": "Flying",
+        "customDescription": "This monster can fly. It has +50% Evasion against Melee and +25% chance to ignore Stun, Paralyze, Crystallize, Freeze, and Slow.",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "expandedAreas:FlyingPermanent",
+            "chance": 100
+          }
+        ]
+      },
+      {
+        "id": "Gazer",
+        "name": "Gazer",
+        "customDescription": "This monster is a Gazer. Its eyestalks shoot rays that inflict random Debuffs (e.g. Fear) or Damage Over Time (e.g. Burn) effects. Gazers themselves have a 50% chance to ignore Gaze attacks.",
+        "modifiers": {
+          "effectIgnoreChance": [
+            {
+              "effectGroupID": "expandedAreas:Gaze",
+              "value": 50
+            }
+          ]
+        }
+      },
+      {
         "id": "BastionOfTyranny",
         "name": "Bastion of Tyranny",
+        "customDescription": "The Tyrant Mother has a 75% chance to ignore Debuffs, Curses, and Fear",
         "modifiers": {
-          "flatResistanceAgainstMelee": [
-            {
-              "damageTypeID": "melvorD:Normal",
-              "value": 50
-            }
-          ],
-          "flatResistanceAgainstRanged": [
-            {
-              "damageTypeID": "melvorD:Normal",
-              "value": 50
-            }
-          ],
-          "flatResistanceAgainstMagic": [
-            {
-              "damageTypeID": "melvorD:Normal",
-              "value": 75
-            }
-          ],
           "effectIgnoreChance": [
             {
               "effectGroupID": "melvorD:Curse",
@@ -6912,16 +7190,10 @@
             {
               "effectGroupID": "melvorD:Debuff",
               "value": 75
-            }
-          ],
-          "damageTaken": [
-            {
-              "effectGroupID": "melvorD:Frostburn",
-              "value": -75
             },
             {
-              "effectGroupID": "melvorD:BurnDOT",
-              "value": -75
+              "effectGroupID": "melvorD:Fear",
+              "value": 75
             }
           ]
         }
@@ -6929,7 +7201,7 @@
       {
         "id": "StrangeBiology",
         "name": "Strange Biology",
-        "customDescription": "Immune to Stunlikes, Crystallization, Sleep, Slow, and Critical Hits.",
+        "customDescription": "Immune to Stun, Freeze, Crystallization, Paralyze, Sleep, Slow, and Critical Hits. +50% chance to ignore Bleed and Poison.",
         "modifiers": {
           "effectImmunity": [
             {
@@ -6956,6 +7228,16 @@
               "effectGroupID": "expandedAreas:Paralyze",
               "value": 1
             }
+          ],
+          "effectIgnoreChance": [
+            {
+              "effectGroupID": "melvorD:BleedDOT",
+              "value": 50
+            },
+            {
+              "effectGroupID": "melvorD:PoisonDOT",
+              "value": 50
+            }
           ]
         },
         "playerModifiers": {
@@ -6966,11 +7248,61 @@
       {
         "id": "NullifyingEye",
         "name": "Nullifying Eye",
-        "customDescription": "At the start of the fight, has a 50% chance to create an Anti-Magic Field, disabling your Magic attacks, negating your Magic Evasion, and removing and preventing any Buffs on you for 3 turns.",
+        "customDescription": "The gazer's central Eye creates an Anti-Magic Field, disabling your Magic attacks, negating your Magic Evasion, and preventing any Buffs on you for 5 turns. The Eye opens at the Start of the Fight and has a 10% chance to reopen on each character's turn until the End of the Fight.",
         "combatEffects": [
           {
             "appliesWhen": "StartOfFight",
-            "chance": 50,
+            "chance": 100,
+            "effectID": "expandedAreas:AntiMagicField"
+          },
+          {
+            "appliesWhen": "EvadedAttack",
+            "chance": 10,
+            "effectID": "expandedAreas:AntiMagicField"
+          },
+          {
+            "appliesWhen": "BeingAttacked",
+            "chance": 10,
+            "effectID": "expandedAreas:AntiMagicField"
+          },
+          {
+            "appliesWhen": "CritWithAttack",
+            "chance": 10,
+            "effectID": "expandedAreas:AntiMagicField"
+          },
+          {
+            "appliesWhen": "HitByAttack",
+            "chance": 10,
+            "effectID": "expandedAreas:AntiMagicField"
+          },
+          {
+            "appliesWhen": "HitByFirstAttack",
+            "chance": 10,
+            "effectID": "expandedAreas:AntiMagicField"
+          },
+          {
+            "appliesWhen": "PostAttack",
+            "chance": 10,
+            "effectID": "expandedAreas:AntiMagicField"
+          },
+          {
+            "appliesWhen": "PostFirstAttack",
+            "chance": 10,
+            "effectID": "expandedAreas:AntiMagicField"
+          },
+          {
+            "appliesWhen": "PreAttack",
+            "chance": 10,
+            "effectID": "expandedAreas:AntiMagicField"
+          },
+          {
+            "appliesWhen": "SummonAttack",
+            "chance": 10,
+            "effectID": "expandedAreas:AntiMagicField"
+          },
+          {
+            "appliesWhen": "WasAttacked",
+            "chance": 10,
             "effectID": "expandedAreas:AntiMagicField"
           }
         ]
@@ -7249,7 +7581,7 @@
       {
         "id": "UnfairBossImmunities",
         "name": "Unfair Boss Immunities",
-        "customDescription": "Immune to Stun, Stunlikes, Poison, Fear, Drowsy, and Sleep",
+        "customDescription": "Immune to Stun and Stunlikes, Poison, Fear, Drowsy, Death Magic, and Sleep",
         "modifiers": {
           "effectImmunity": [
             {
@@ -7279,6 +7611,10 @@
             {
               "effectGroupID": "melvorD:Sleep",
               "value": 1
+            },
+            {
+              "effectGroupID": "melvorD:Fear",
+              "value": 1
             }
           ]
         }
@@ -7286,7 +7622,7 @@
       {
         "id": "DarkEnergyCore",
         "name": "Dark Energy Core",
-        "customDescription": "A little alien asshole follows you around, applying 1 stack of Dark Energy Sap, reducing your max HP by 2.5% per hit (30% chance, up to 10 stacks) and healing the Beast by 0.5% of its max HP. When the Beast reaches 50% HP, the Core gives it 10% lifesteal and regen equal to 0.5% of the Beast's max HP.",
+        "customDescription": "A little alien follows you around, applying 1 stack of Dark Energy Sap, reducing your max HP by 2.5% per hit (30% chance, up to 20 stacks). Periodically, the Beast will also heal for 5% of its maximum HP. When the Beast reaches 50% HP, the Core gives it 25% lifesteal and regen equal to 0.5% of the Beast's max HP.",
         "combatEffects": [
           {
             "appliesWhen": "PostAttack",
@@ -7296,25 +7632,20 @@
           {
             "appliesWhen": "PostAttack",
             "effectID": "expandedAreas:CorporealBeastHeal0",
-            "chance": 30,
-            "condition": {
-              "effectID": "expandedAreas:DarkEnergySap",
-              "character": "Enemy",
-              "type": "CombatEffect"
-            }
+            "chance": 30
           }
         ],
         "conditionalModifiers": [
           {
             "condition": {
               "type": "Hitpoints",
-              "character": "Enemy",
+              "character": "Player",
               "operator": "<=",
               "value": 50
             },
             "modifiers": {
               "hPRegenBasedOnMaxHP": 0.5,
-              "lifesteal": 10
+              "lifesteal": 25
             }
           }
         ]
@@ -7322,7 +7653,7 @@
       {
         "id": "StabMeOrElse",
         "name": "Stab Me or Else",
-        "customDescription": "You have 50% reduced Global Accuracy with Magic, Ranged, or any Melee setup that does not have a stab attack bonus of at least 100.",
+        "customDescription": "You have 100% reduced Global Accuracy if you do not have a Stab Attack Bonus of at least 100.",
         "conditionalModifiers": [
           {
             "condition": {
@@ -7343,7 +7674,7 @@
               ]
             },
             "modifiers": {
-              "accuracyRating": -50
+              "accuracyRating": -100
             },
             "isNegative": true
           }
@@ -7643,142 +7974,142 @@
         "customDescription": "Immune to all Ranged Attacks"
       },
       {
-        "id": "CreatureTypeBestial",
+        "id": "MonsterTypeBestial",
         "name": "Bestial",
         "combatEffects": [
           {
             "appliesWhen": "StartOfFight",
-            "effectID": "expandedAreas:CreatureTypeBestial"
+            "effectID": "expandedAreas:MonsterTypeBestial"
           }
         ]
       },
       {
-        "id": "CreatureTypeConstructed",
+        "id": "MonsterTypeConstructed",
         "name": "Constructed",
         "combatEffects": [
           {
             "appliesWhen": "StartOfFight",
-            "effectID": "expandedAreas:CreatureTypeConstructed"
+            "effectID": "expandedAreas:MonsterTypeConstructed"
           }
         ]
       },
       {
-        "id": "CreatureTypeDraconic",
+        "id": "MonsterTypeDraconic",
         "name": "Draconic",
         "combatEffects": [
           {
             "appliesWhen": "StartOfFight",
-            "effectID": "expandedAreas:CreatureTypeDraconic"
+            "effectID": "expandedAreas:MonsterTypeDraconic"
           }
         ]
       },
       {
-        "id": "CreatureTypeElemental",
+        "id": "MonsterTypeElemental",
         "name": "Elemental",
         "combatEffects": [
           {
             "appliesWhen": "StartOfFight",
-            "effectID": "expandedAreas:CreatureTypeElemental"
+            "effectID": "expandedAreas:MonsterTypeElemental"
           }
         ]
       },
       {
-        "id": "CreatureTypeFae",
+        "id": "MonsterTypeFae",
         "name": "Fae",
         "combatEffects": [
           {
             "appliesWhen": "StartOfFight",
-            "effectID": "expandedAreas:CreatureTypeFae"
+            "effectID": "expandedAreas:MonsterTypeFae"
           }
         ]
       },
       {
-        "id": "CreatureTypeGelatinous",
+        "id": "MonsterTypeGelatinous",
         "name": "Gelatinous",
         "combatEffects": [
           {
             "appliesWhen": "StartOfFight",
-            "effectID": "expandedAreas:CreatureTypeGelatinous"
+            "effectID": "expandedAreas:MonsterTypeGelatinous"
           }
         ]
       },
       {
-        "id": "CreatureTypeGiantkin",
+        "id": "MonsterTypeGiantkin",
         "name": "Giantkin",
         "combatEffects": [
           {
             "appliesWhen": "StartOfFight",
-            "effectID": "expandedAreas:CreatureTypeGiantkin"
+            "effectID": "expandedAreas:MonsterTypeGiantkin"
           }
         ]
       },
       {
-        "id": "CreatureTypeHeavenly",
+        "id": "MonsterTypeHeavenly",
         "name": "Heavenly",
         "combatEffects": [
           {
             "appliesWhen": "StartOfFight",
-            "effectID": "expandedAreas:CreatureTypeHeavenly"
+            "effectID": "expandedAreas:MonsterTypeHeavenly"
           }
         ]
       },
       {
-        "id": "CreatureTypeHellish",
+        "id": "MonsterTypeHellish",
         "name": "Hellish",
         "combatEffects": [
           {
             "appliesWhen": "StartOfFight",
-            "effectID": "expandedAreas:CreatureTypeHellish"
+            "effectID": "expandedAreas:MonsterTypeHellish"
           }
         ]
       },
       {
-        "id": "CreatureTypeHumanoid",
+        "id": "MonsterTypeHumanoid",
         "name": "Humanoid",
         "combatEffects": [
           {
             "appliesWhen": "StartOfFight",
-            "effectID": "expandedAreas:CreatureTypeHumanoid"
+            "effectID": "expandedAreas:MonsterTypeHumanoid"
           }
         ]
       },
       {
-        "id": "CreatureTypeMonstrous",
+        "id": "MonsterTypeMonstrous",
         "name": "Monstrous",
         "combatEffects": [
           {
             "appliesWhen": "StartOfFight",
-            "effectID": "expandedAreas:CreatureTypeMonstrous"
+            "effectID": "expandedAreas:MonsterTypeMonstrous"
           }
         ]
       },
       {
-        "id": "CreatureTypePlantlike",
+        "id": "MonsterTypePlantlike",
         "name": "Plantlike",
         "combatEffects": [
           {
             "appliesWhen": "StartOfFight",
-            "effectID": "expandedAreas:CreatureTypePlantlike"
+            "effectID": "expandedAreas:MonsterTypePlantlike"
           }
         ]
       },
       {
-        "id": "CreatureTypeStrange",
+        "id": "MonsterTypeStrange",
         "name": "Strange",
         "combatEffects": [
           {
             "appliesWhen": "StartOfFight",
-            "effectID": "expandedAreas:CreatureTypeStrange"
+            "effectID": "expandedAreas:MonsterTypeStrange"
           }
         ]
       },
       {
-        "id": "CreatureTypeUndead",
+        "id": "MonsterTypeUndead",
         "name": "Undead",
         "combatEffects": [
           {
             "appliesWhen": "StartOfFight",
-            "effectID": "expandedAreas:CreatureTypeUndead"
+            "effectID": "expandedAreas:MonsterTypeUndead"
           },
           {
             "appliesWhen": "StartOfFight",
@@ -9380,223 +9711,6 @@
         ],
         "itemType": "Weapon",
         "attackType": "magic"
-      },
-      {
-        "itemType": "Equipment",
-        "id": "Shield_of_Eyes",
-        "name": "Shield of Eyes",
-        "category": "Misc",
-        "type": "Armour",
-        "media": "assets/bank/Shield_of_Eyes.png",
-        "customDescription": "Passive: +65% Chance to ignore Gaze attacks; +50% Evasion and Reflect Damage against Ranged; +35% Evasion and Deflect Damage against Magic; +20% Evasion and Reflect Damage against Melee<br>+20% Chance on Being Hit to make a random Gaze attack at the Target",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 10000000,
-        "tier": "none",
-        "validSlots": [
-          "Shield"
-        ],
-        "occupiesSlots": [],
-        "equipRequirements": [
-          {
-            "type": "SkillLevel",
-            "skillID": "melvorD:Defence",
-            "level": 120
-          },
-          {
-            "type": "DungeonCompletion",
-            "dungeonID": "melvorF:Impending_Darkness",
-            "count": 1
-          }
-        ],
-        "equipmentStats": [
-          {
-            "key": "stabAttackBonus",
-            "value": 50
-          },
-          {
-            "key": "blockAttackBonus",
-            "value": 50
-          },
-          {
-            "key": "rangedAttackBonus",
-            "value": 20
-          },
-          {
-            "key": "magicAttackBonus",
-            "value": 30
-          },
-          {
-            "key": "meleeStrengthBonus",
-            "value": 20
-          },
-          {
-            "key": "rangedStrengthBonus",
-            "value": 8
-          },
-          {
-            "key": "magicDamageBonus",
-            "value": 12
-          },
-          {
-            "key": "meleeDefenceBonus",
-            "value": 320
-          },
-          {
-            "key": "rangedDefenceBonus",
-            "value": 280
-          },
-          {
-            "key": "magicDefenceBonus",
-            "value": 400
-          },
-          {
-            "key": "damageReduction",
-            "value": 10
-          }
-        ],
-        "conditionalModifiers": [
-          {
-            "condition": {
-              "character": "Enemy",
-              "thisAttackType": "ranged",
-              "targetAttackType": "any",
-              "type": "CombatType"
-            },
-            "modifiers": {
-              "evasion": 50,
-              "reflectDamage": 50
-            }
-          },
-          {
-            "condition": {
-              "character": "Enemy",
-              "thisAttackType": "magic",
-              "targetAttackType": "any",
-              "type": "CombatType"
-            },
-            "modifiers": {
-              "evasion": 35,
-              "reflectDamage": 35
-            }
-          },
-          {
-            "condition": {
-              "character": "Enemy",
-              "thisAttackType": "melee",
-              "targetAttackType": "any",
-              "type": "CombatType"
-            },
-            "modifiers": {
-              "evasion": 20,
-              "reflectDamage": 20,
-              "effectIgnoreChance": [
-                {
-                  "effectGroupID": "expandedAreas:Gaze",
-                  "value": 65
-                }
-              ]
-            }
-          }
-        ],
-        "combatEffects": [
-          {
-            "appliesWhen": "HitByAttack",
-            "tableID": "expandedAreas:RandomGaze",
-            "targetOverride": "Target",
-            "chance": 20
-          }
-        ],
-        "specialAttacks": [
-          "expandedAreas:AntiMagicField"
-        ]
-      },
-      {
-        "itemType": "Equipment",
-        "id": "Reflection_Shield",
-        "name": "Reflection Shield",
-        "category": "Combat",
-        "type": "Armour",
-        "media": "assets/bank/Reflection_Shield.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 1000000,
-        "customDescription": "Passive: +10% Reflect Damage, +35% Chance to ignore Gaze attacks",
-        "tier": "slayer",
-        "validSlots": [
-          "Shield",
-          "Passive"
-        ],
-        "occupiesSlots": [],
-        "equipRequirements": [
-          {
-            "type": "SkillLevel",
-            "skillID": "melvorD:Defence",
-            "level": 100
-          },
-          {
-            "type": "SkillLevel",
-            "skillID": "melvorD:Slayer",
-            "level": 100
-          }
-        ],
-        "equipmentStats": [
-          {
-            "key": "stabAttackBonus",
-            "value": 20
-          },
-          {
-            "key": "blockAttackBonus",
-            "value": 20
-          },
-          {
-            "key": "rangedAttackBonus",
-            "value": 8
-          },
-          {
-            "key": "magicAttackBonus",
-            "value": 12
-          },
-          {
-            "key": "meleeStrengthBonus",
-            "value": 10
-          },
-          {
-            "key": "rangedStrengthBonus",
-            "value": 4
-          },
-          {
-            "key": "magicDamageBonus",
-            "value": 6
-          },
-          {
-            "key": "meleeDefenceBonus",
-            "value": 160
-          },
-          {
-            "key": "rangedDefenceBonus",
-            "value": 140
-          },
-          {
-            "key": "magicDefenceBonus",
-            "value": 200
-          },
-          {
-            "key": "damageReduction",
-            "value": 8
-          }
-        ],
-        "modifiers": {
-          "reflectDamage": 10,
-          "effectIgnoreChance": [
-            {
-              "effectGroupID": "expandedAreas:Gaze",
-              "value": 35
-            }
-          ]
-        }
       },
       {
         "itemType": "Item",
@@ -19488,9 +19602,86 @@
         "attackType": "melee"
       },
       {
+        "id": "Pick_of_Colossal_Excavation",
+        "name": "Pick of Colossal Excavation",
+        "tier": "artifact",
+        "type": "Weapon",
+        "category": "Weapon",
+        "itemType": "Weapon",
+        "sellsFor": 100000000,
+        "media": "assets/bank/Pick_of_Colossal_Excavation.png",
+        "customDescription": "-25% Mining Interval, +50% Mining XP, and +200% increased Attack and Strength Levels when fighting Constructed monsters",
+        "attackType": "melee",
+        "validSlots": [
+          "Weapon",
+          "expandedAreas:Tool"
+        ],
+        "occupiesSlots": [
+          "Shield"
+        ],
+        "obtainFromItemLog": false,
+        "ignoreCompletion": false,
+        "golbinRaidExclusive": false,
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2800
+          }
+        ],
+        "damageType": "melvorF:Pure",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "expandedAreas:MonsterTypeConstructed",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "flatHiddenSkillLevelBasedOnLevels": [
+                {
+                  "skillID": "melvorD:Strength",
+                  "value": 200
+                },
+                {
+                  "skillID": "melvorD:Attack",
+                  "value": 200
+                }
+              ]
+            }
+          }
+        ],
+        "modifiers": {
+          "skillInterval": [
+            {
+              "skillID": "melvorD:Mining",
+              "realmID": "melvorD:Melvor",
+              "value": -25
+            }
+          ],
+          "skillXP": [
+            {
+              "skillID": "melvorD:Mining",
+              "value": 50
+            }
+          ]
+        },
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "level": 70,
+            "skillID": "melvorD:Strength"
+          },
+          {
+            "type": "SkillLevel",
+            "level": 70,
+            "skillID": "melvorD:Mining"
+          }
+        ]
+      },
+      {
         "id": "Skeleton_Key",
-        "name": "Skeleton_Key",
-        "customDescription": "Wonder what this opens...",
+        "name": "Skeleton Key",
+        "customDescription": "It seems this would fit into a skull-shaped lock...",
         "category": "Key",
         "type": "Key",
         "media": "assets/bank/Skeleton_Key.png",
@@ -19499,6 +19690,31 @@
         "golbinRaidExclusive": false,
         "sellsFor": 1,
         "itemType": "Item"
+      },
+      {
+        "id": "Mysterious_Chest",
+        "name": "Mysterious Chest (Locked)",
+        "category": "Misc",
+        "type": "Chest",
+        "media": "assets/bank/mysterious_chest.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 500,
+        "customDescription": "The keyhole appears to fit that of a skeleton key...",
+        "itemType": "Openable",
+        "dropTable": [
+          {
+            "itemID": "expandedAreas:Pick_of_Colossal_Excavation",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 1
+          }
+        ],
+        "keyItem": {
+          "id": "expandedAreas:Skeleton_Key",
+          "quantity": 1
+        }
       },
       {
         "id": "Lamp",
@@ -19557,11 +19773,31 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 1000,
+        "sellsFor": 1,
         "itemType": "Openable",
         "dropTable": [
           {
             "itemID": "melvorD:Cabbage",
+            "minQuantity": 2,
+            "maxQuantity": 2,
+            "weight": 1
+          }
+        ]
+      },
+      {
+        "id": "Bag_of_Endless_Gold2",
+        "name": "Bag of Endless Gold",
+        "category": "Openable",
+        "type": "Chest",
+        "media": "assets/bank/Bag_of_Endless_Gold.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1,
+        "itemType": "Openable",
+        "dropTable": [
+          {
+            "itemID": "expandedAreas:Bag_of_Endless_Gold1",
             "minQuantity": 2,
             "maxQuantity": 2,
             "weight": 1
@@ -19701,84 +19937,6 @@
             "maxQuantity": 1,
             "itemID": "expandedAreas:Lamp",
             "weight": 50
-          }
-        ]
-      },
-      {
-        "itemType": "Equipment",
-        "id": "The_Spike",
-        "name": "The Spike",
-        "category": "Combat",
-        "type": "Shield",
-        "media": "assets/bank/The_Spike.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 34777,
-        "customDescription": "Passive: +15% chance on hit or when hit by an attack to inflict Bleed that deals 100% of the attacker's maximum HP over 10s.",
-        "tier": "misc",
-        "validSlots": [
-          "Shield",
-          "Passive"
-        ],
-        "occupiesSlots": [],
-        "equipRequirements": [
-          {
-            "type": "SkillLevel",
-            "skillID": "melvorD:Defence",
-            "level": 60
-          },
-          {
-            "type": "SkillLevel",
-            "skillID": "melvorD:Strength",
-            "level": 60
-          }
-        ],
-        "equipmentStats": [
-          {
-            "key": "rangedAttackBonus",
-            "value": 6
-          },
-          {
-            "key": "meleeStrengthBonus",
-            "value": 6
-          },
-          {
-            "key": "stabAttackBonus",
-            "value": 6
-          },
-          {
-            "key": "magicAttackBonus",
-            "value": -12
-          },
-          {
-            "key": "meleeDefenceBonus",
-            "value": 42
-          },
-          {
-            "key": "rangedDefenceBonus",
-            "value": 35
-          },
-          {
-            "key": "magicDefenceBonus",
-            "value": -17
-          },
-          {
-            "key": "damageReduction",
-            "value": 4
-          }
-        ],
-        "combatEffects": [
-          {
-            "appliesWhen": "HitByAttack",
-            "chance": 15,
-            "effectID": "melvorD:Bleed100",
-            "targetOverride": "Target"
-          },
-          {
-            "appliesWhen": "HitWithAttack",
-            "chance": 15,
-            "effectID": "melvorD:Bleed100"
           }
         ]
       },
@@ -21266,15 +21424,15 @@
         "equipmentStats": [
           {
             "key": "rangedAttackBonus",
-            "value": 17
+            "value": 34
           },
           {
             "key": "rangedStrengthBonus",
-            "value": 22
+            "value": 44
           },
           {
             "key": "attackSpeed",
-            "value": 1200
+            "value": 2400
           }
         ]
       },
@@ -21294,7 +21452,7 @@
         "sellsFor": 160000,
         "tier": "dragon",
         "validSlots": [
-          "Weapon"
+          "Shield"
         ],
         "occupiesSlots": [],
         "equipRequirements": [
@@ -21307,15 +21465,11 @@
         "equipmentStats": [
           {
             "key": "rangedAttackBonus",
-            "value": 17
+            "value": 34
           },
           {
             "key": "rangedStrengthBonus",
-            "value": 22
-          },
-          {
-            "key": "attackSpeed",
-            "value": 1200
+            "value": 44
           }
         ]
       },
@@ -22017,7 +22171,13 @@
             "itemID": "expandedAreas:Karils_Crossbow",
             "minQuantity": 1,
             "maxQuantity": 1,
-            "weight": 50
+            "weight": 25
+          },
+          {
+            "itemID": "expandedAreas:Karils_Crossbow2",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 25
           },
           {
             "itemID": "expandedAreas:Torags_Helm",
@@ -22597,7 +22757,13 @@
             "itemID": "expandedAreas:Karils_Crossbow",
             "minQuantity": 1,
             "maxQuantity": 1,
-            "weight": 50
+            "weight": 25
+          },
+          {
+            "itemID": "expandedAreas:Karils_Crossbow2",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 25
           }
         ]
       },
@@ -23617,87 +23783,6 @@
           "flatPrayerPointCost": -1,
           "prayerPointPreservationChance": 10
         }
-      },
-      {
-        "id": "Pick_of_Colossal_Excavation",
-        "name": "Pick of Colossal Excavation",
-        "tier": "none",
-        "type": "Weapon",
-        "category": "Weapon",
-        "itemType": "Weapon",
-        "sellsFor": 100,
-        "media": "assets/bank/Pick_of_Colossal_Excavation.png",
-        "attackType": "melee",
-        "validSlots": [
-          "Weapon",
-          "expandedAreas:Tool"
-        ],
-        "occupiesSlots": [
-          "Shield"
-        ],
-        "obtainFromItemLog": false,
-        "ignoreCompletion": false,
-        "golbinRaidExclusive": false,
-        "equipmentStats": [
-          {
-            "key": "attackSpeed",
-            "value": 2800
-          },
-          {
-            "key": "stabAttackBonus",
-            "value": 59
-          },
-          {
-            "key": "blockAttackBonus",
-            "value": 59
-          },
-          {
-            "key": "slashAttackBonus",
-            "value": -6
-          },
-          {
-            "key": "meleeStrengthBonus",
-            "value": 100
-          }
-        ],
-        "conditionalModifiers": [
-          {
-            "condition": {
-              "effectID": "expandedAreas:CreatureTypeConstructed",
-              "character": "Enemy",
-              "type": "CombatEffect"
-            },
-            "modifiers": {
-              "flatHiddenSkillLevelBasedOnLevels": [
-                {
-                  "skillID": "melvorD:Strength",
-                  "value": 100
-                }
-              ]
-            }
-          }
-        ],
-        "modifiers": {
-          "flatSkillInterval": [
-            {
-              "skillID": "melvorD:Mining",
-              "realmID": "melvorD:Melvor",
-              "value": -100
-            }
-          ]
-        },
-        "equipRequirements": [
-          {
-            "type": "SkillLevel",
-            "level": 70,
-            "skillID": "melvorD:Strength"
-          },
-          {
-            "type": "SkillLevel",
-            "level": 70,
-            "skillID": "melvorD:Mining"
-          }
-        ]
       },
       {
         "itemType": "Equipment",
@@ -29079,7 +29164,7 @@
         "conditionalModifiers": [
           {
             "condition": {
-              "effectID": "expandedAreas:CreatureTypeDraconic",
+              "effectID": "expandedAreas:MonsterTypeDraconic",
               "character": "Enemy",
               "type": "CombatEffect"
             },
@@ -29116,7 +29201,7 @@
         "conditionalModifiers": [
           {
             "condition": {
-              "effectID": "expandedAreas:CreatureTypeDraconic",
+              "effectID": "expandedAreas:MonsterTypeDraconic",
               "character": "Enemy",
               "type": "CombatEffect"
             },
@@ -30950,18 +31035,6 @@
       },
       {
         "itemType": "Item",
-        "id": "Black_Thrownaxe_Head",
-        "name": "Black Thrownaxe Heads",
-        "category": "Smithing",
-        "type": "Thrownaxe",
-        "media": "assets/bank/Black_Thrownaxe_Head.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 7
-      },
-      {
-        "itemType": "Item",
         "id": "Mithril_Thrownaxe_Head",
         "name": "Mithril Thrownaxe Heads",
         "category": "Smithing",
@@ -30995,6 +31068,18 @@
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 13
+      },
+      {
+        "itemType": "Item",
+        "id": "Silver_Thrownaxe_Head",
+        "name": "Silver Thrownaxe Heads",
+        "category": "Smithing",
+        "type": "Thrownaxe",
+        "media": "assets/bank/Silver_Thrownaxe_Head.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 14
       },
       {
         "itemType": "Item",
@@ -33735,6 +33820,10 @@
           {
             "key": "meleeDefenceBonus",
             "value": 12
+          },
+          {
+            "key": "damageReduction",
+            "value": 1
           }
         ]
       },
@@ -33859,6 +33948,79 @@
         ]
       },
       {
+        "id": "Silver_Spear",
+        "name": "Silver Spear",
+        "category": "Combat",
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "type": "Weapon",
+        "media": "assets/bank/Silver_Spear.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 300,
+        "tier": "none",
+        "validSlots": [
+          "melvorD:Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "skillID": "melvorD:Attack",
+            "level": 50,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Defence",
+            "level": 50,
+            "type": "SkillLevel"
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2500
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 72
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 72
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 72
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 72
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 36
+          },
+          {
+            "key": "damageReduction",
+            "value": 4
+          }
+        ],
+        "customDescription": "+25% Melee Max Hit against Silver-Vulnerable monsters",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "expandedAreas:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "meleeMaxHit": 25
+            }
+          }
+        ]
+      },
+      {
         "id": "Dragon_Spear",
         "name": "Dragon Spear",
         "category": "Combat",
@@ -33914,7 +34076,7 @@
           },
           {
             "key": "damageReduction",
-            "value": 4
+            "value": 5
           }
         ]
       },
@@ -34472,6 +34634,583 @@
         "ammoTypeRequired": "ThrowingKnives"
       },
       {
+        "itemType": "Item",
+        "id": "Silver_Crossbow_Head",
+        "name": "Silver Crossbow Head",
+        "category": "Smithing",
+        "type": "Crossbow",
+        "media": "assets/bank/crossbow_head_silver.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1124
+      },
+      {
+        "id": "Silver_Crossbow",
+        "name": "Silver Crossbow",
+        "category": "Combat",
+        "type": "Ranged Weapon",
+        "media": "assets/bank/weapon_crossbow_silver.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1350,
+        "tier": "rune",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 50
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3200
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": 59
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 86
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "ranged",
+        "ammoTypeRequired": "Bolts"
+      },
+      {
+        "id": "Silver_Throwing_Knife",
+        "name": "Silver Throwing Knife",
+        "category": "Combat",
+        "type": "Ranged Weapon",
+        "media": "assets/bank/weapon_throwingknife_silver.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 22,
+        "tier": "rune",
+        "validSlots": [
+          "Quiver"
+        ],
+        "occupiesSlots": [
+          "Weapon"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 50
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2000
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": 5
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 40
+          }
+        ],
+        "modifiers": {
+          "ammoPreservationChance": 15
+        },
+        "ammoType": "ThrowingKnives",
+        "itemType": "Weapon",
+        "attackType": "ranged",
+        "ammoTypeRequired": "ThrowingKnives",
+        "customDescription": "+25% Ranged Max Hit against Silver-Vulnerable monsters",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "expandedAreas:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "rangedMaxHit": 25
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Topaz_Bolts",
+        "name": "Silver Topaz Bolts",
+        "category": "Combat",
+        "type": "Ammo",
+        "media": "assets/bank/ammo_bolt_silver_topaz.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 190,
+        "tier": "none",
+        "validSlots": [
+          "Quiver"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 50
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedStrengthBonus",
+            "value": 70
+          }
+        ],
+        "ammoType": "Bolts",
+        "customDescription": "+25% Ranged Max Hit against Silver-Vulnerable monsters",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "expandedAreas:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "rangedMaxHit": 25
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Sapphire_Bolts",
+        "name": "Silver Sapphire Bolts",
+        "category": "Combat",
+        "type": "Ammo",
+        "media": "assets/bank/ammo_bolt_silver_sapphire.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 270,
+        "tier": "none",
+        "validSlots": [
+          "Quiver"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 60
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedStrengthBonus",
+            "value": 81
+          }
+        ],
+        "ammoType": "Bolts",
+        "customDescription": "+25% Ranged Max Hit against Silver-Vulnerable monsters",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "expandedAreas:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "rangedMaxHit": 25
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Ruby_Bolts",
+        "name": "Silver Ruby Bolts",
+        "category": "Combat",
+        "type": "Ammo",
+        "media": "assets/bank/ammo_bolt_silver_ruby.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 420,
+        "tier": "none",
+        "validSlots": [
+          "Quiver"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 70
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedStrengthBonus",
+            "value": 93
+          }
+        ],
+        "ammoType": "Bolts",
+        "customDescription": "+25% Ranged Max Hit against Silver-Vulnerable monsters",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "expandedAreas:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "rangedMaxHit": 25
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Emerald_Bolts",
+        "name": "Silver Emerald Bolts",
+        "category": "Combat",
+        "type": "Ammo",
+        "media": "assets/bank/ammo_bolt_silver_emerald.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 440,
+        "tier": "none",
+        "validSlots": [
+          "Quiver"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 80
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedStrengthBonus",
+            "value": 106
+          }
+        ],
+        "ammoType": "Bolts",
+        "customDescription": "+25% Ranged Max Hit against Silver-Vulnerable monsters",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "expandedAreas:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "rangedMaxHit": 25
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Diamond_Bolts",
+        "name": "Silver Diamond Bolts",
+        "category": "Combat",
+        "type": "Ammo",
+        "media": "assets/bank/ammo_bolt_silver_diamond.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 900,
+        "tier": "none",
+        "validSlots": [
+          "Quiver"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 90
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedStrengthBonus",
+            "value": 133
+          }
+        ],
+        "ammoType": "Bolts",
+        "customDescription": "+25% Ranged Max Hit against Silver-Vulnerable monsters",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "expandedAreas:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "rangedMaxHit": 25
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Jadestone_Bolts",
+        "name": "Silver Jadestone Bolts",
+        "category": "Combat",
+        "type": "Ammo",
+        "media": "assets/bank/ammo_bolt_silver_jadestone.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 3610,
+        "tier": "none",
+        "validSlots": [
+          "Quiver"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 95
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedStrengthBonus",
+            "value": 157
+          }
+        ],
+        "ammoType": "Bolts",
+        "customDescription": "+25% Ranged Max Hit against Silver-Vulnerable monsters",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "expandedAreas:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "rangedMaxHit": 25
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Item",
+        "id": "Silver_Headless_Bolts",
+        "name": "Silver Headless Bolts",
+        "category": "Fletching",
+        "type": "Arrows",
+        "media": "assets/bank/headless_bolts_silver.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1
+      },
+      {
+        "itemType": "Item",
+        "id": "Silver_Arrowtips",
+        "name": "Silver Arrowtips",
+        "category": "Smithing",
+        "type": "Arrowtips",
+        "media": "assets/bank/arrowtips_silver.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Arrows",
+        "name": "Silver Arrows",
+        "category": "Combat",
+        "type": "Ammo",
+        "media": "assets/bank/ammo_arrow_silver.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 35,
+        "tier": "silver",
+        "validSlots": [
+          "Quiver"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 50
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "rangedStrengthBonus",
+            "value": 52
+          }
+        ],
+        "ammoType": "Arrows",
+        "customDescription": "+25% Ranged Max Hit against Silver-Vulnerable monsters",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "expandedAreas:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "rangedMaxHit": 25
+            }
+          }
+        ]
+      },
+      {
+        "id": "Silver_Javelin",
+        "name": "Silver Javelin",
+        "category": "Combat",
+        "type": "Ranged Weapon",
+        "media": "assets/bank/weapon_javelin_silver.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 283,
+        "tier": "silver",
+        "validSlots": [
+          "Quiver"
+        ],
+        "occupiesSlots": [
+          "Weapon"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 50
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2200
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": 12
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 85
+          }
+        ],
+        "modifiers": {
+          "ammoPreservationChance": 15
+        },
+        "ammoType": "Javelins",
+        "itemType": "Weapon",
+        "attackType": "ranged",
+        "ammoTypeRequired": "Javelins",
+        "customDescription": "+25% Ranged Max Hit against Silver-Vulnerable monsters",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "expandedAreas:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "rangedMaxHit": 25
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Item",
+        "id": "Silver_Javelin_Heads",
+        "name": "Silver Javelin Heads",
+        "category": "Smithing",
+        "type": "Javelin",
+        "media": "assets/bank/javelin_heads_silver.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 135
+      },
+      {
+        "id": "Silver_Thrownaxe",
+        "name": "Silver Thrownaxe",
+        "category": "Combat",
+        "type": "Ranged Weapon",
+        "media": "assets/bank/Silver_Thrownaxe.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 242,
+        "tier": "Silver",
+        "validSlots": [
+          "Quiver"
+        ],
+        "occupiesSlots": [
+          "Weapon"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 50
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2100
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": 12
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 64
+          }
+        ],
+        "modifiers": {
+          "melvorD:rangedCritChance": [
+            {
+              "value": 8
+            }
+          ]
+        },
+        "ammoType": "ThrowingKnives",
+        "itemType": "Weapon",
+        "attackType": "ranged",
+        "ammoTypeRequired": "ThrowingKnives",
+        "customDescription": "+25% Ranged Max Hit against Silver-Vulnerable monsters",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "effectID": "expandedAreas:VulnerabilitySilver",
+              "character": "Enemy",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "rangedMaxHit": 25
+            }
+          }
+        ]
+      },
+      {
         "id": "Dragon_Thrownaxe",
         "name": "Dragon Thrownaxe",
         "category": "Combat",
@@ -34502,17 +35241,17 @@
           },
           {
             "key": "rangedAttackBonus",
-            "value": 12
+            "value": 14
           },
           {
             "key": "rangedStrengthBonus",
-            "value": 66
+            "value": 72
           }
         ],
         "modifiers": {
           "melvorD:rangedCritChance": [
             {
-              "value": 8
+              "value": 9
             }
           ]
         },
@@ -36909,18 +37648,6 @@
         "ammoTypeRequired": "ThrowingKnives"
       },
       {
-        "itemType": "Item",
-        "id": "Black_Arrowtips",
-        "name": "Black Arrowtips",
-        "category": "Smithing",
-        "type": "Arrowtips",
-        "media": "assets/bank/Black_Arrowtips.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 1
-      },
-      {
         "itemType": "Equipment",
         "id": "Black_Arrows",
         "name": "Black Arrows",
@@ -37014,18 +37741,6 @@
         ]
       },
       {
-        "itemType": "Item",
-        "id": "Black_Javelin_Heads",
-        "name": "Black Javelin Heads",
-        "category": "Smithing",
-        "type": "Javelin",
-        "media": "assets/bank/Black_Javelin_Heads.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 31
-      },
-      {
         "id": "Black_Javelin",
         "name": "Black Javelin",
         "category": "Combat",
@@ -37070,18 +37785,6 @@
         "itemType": "Weapon",
         "attackType": "ranged",
         "ammoTypeRequired": "Javelins"
-      },
-      {
-        "itemType": "Item",
-        "id": "Black_Crossbow_Head",
-        "name": "Black Crossbow Head",
-        "category": "Smithing",
-        "type": "Crossbow",
-        "media": "assets/bank/Black_Crossbow_Head.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 242
       },
       {
         "id": "Black_Crossbow",
@@ -43074,105 +43777,6 @@
       },
       {
         "itemType": "Equipment",
-        "id": "Wand_of_Death",
-        "name": "Wand of Death",
-        "category": "Weapon",
-        "type": "Weapon",
-        "media": "assets/bank/wand_death.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 2500000,
-        "tier": "none",
-        "validSlots": [
-          "melvorD:Shield"
-        ],
-        "equipRequirements": [
-          {
-            "skillID": "melvorD:Magic",
-            "level": 95,
-            "type": "SkillLevel"
-          }
-        ],
-        "occupiesSlots": [],
-        "equipmentStats": [],
-        "modifiers": {
-          "attackInterval": 50
-        },
-        "conditionalModifiers": [
-          {
-            "condition": {
-              "type": "ItemCharge",
-              "itemID": "expandedAreas:Wand_of_Death",
-              "operator": "<",
-              "value": 1
-            },
-            "modifiers": {
-              "cantAttack": 1
-            }
-          }
-        ],
-        "consumesChargesOn": [
-          {
-            "type": "MonsterKilled"
-          }
-        ],
-        "specialAttacks": [
-          "expandedAreas:WandDeath"
-        ]
-      },
-      {
-        "itemType": "Equipment",
-        "id": "Wand_of_Polymorph",
-        "name": "Wand of Polymorph",
-        "category": "Weapon",
-        "type": "Weapon",
-        "media": "assets/bank/wand_polymorph.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 1000000,
-        "tier": "none",
-        "validSlots": [
-          "melvorD:Shield"
-        ],
-        "equipRequirements": [
-          {
-            "skillID": "melvorD:Magic",
-            "level": 80,
-            "type": "SkillLevel"
-          }
-        ],
-        "occupiesSlots": [],
-        "equipmentStats": [],
-        "modifiers": {
-          "attackInterval": 30
-        },
-        "conditionalModifiers": [
-          {
-            "condition": {
-              "type": "ItemCharge",
-              "itemID": "expandedAreas:Wand_of_Polymorph",
-              "operator": "<",
-              "value": 1
-            },
-            "modifiers": {
-              "cantAttack": 1
-            }
-          }
-        ],
-        "consumesChargesOn": [
-          {
-            "type": "PlayerAttack"
-          }
-        ],
-        "specialAttacks": [
-          "expandedAreas:PolymorphWand",
-          "expandedAreas:PolymorphWandOops"
-        ]
-      },
-      {
-        "itemType": "Equipment",
         "id": "Wand_of_Frost",
         "name": "Wand of Frost",
         "category": "Weapon",
@@ -45612,7 +46216,8 @@
           "expandedAreas:Karils_Coif",
           "expandedAreas:Karils_Leathertop",
           "expandedAreas:Karils_Leatherskirt",
-          "expandedAreas:Karils_Crossbow"
+          "expandedAreas:Karils_Crossbow",
+          "expandedAreas:Karils_Crossbow2"
         ],
         "combatEffects": [
           {
@@ -49165,7 +49770,7 @@
             "weight": 555555
           },
           {
-            "itemID": "expandedAreas:Black_Thrownaxe_Head",
+            "itemID": "expandedAreas:Black_Thrownaxe",
             "minQuantity": 3,
             "maxQuantity": 6,
             "weight": 444444
@@ -50059,12 +50664,12 @@
         "name": "Abhorrent Beast",
         "media": "assets/combat/monsters/corp.png",
         "levels": {
-          "Hitpoints": 2000,
-          "Attack": 320,
-          "Strength": 320,
-          "Defence": 310,
-          "Ranged": 150,
-          "Magic": 350
+          "Hitpoints": 4000,
+          "Attack": 640,
+          "Strength": 640,
+          "Defence": 620,
+          "Ranged": 300,
+          "Magic": 700
         },
         "pet": {
           "id": "expandedAreas:Dark_Core",
@@ -50081,25 +50686,26 @@
           },
           {
             "key": "meleeDefenceBonus",
-            "value": 200
+            "value": 100
           },
           {
             "key": "magicDefenceBonus",
-            "value": 150
+            "value": 300
           },
           {
             "key": "rangedDefenceBonus",
-            "value": 230
+            "value": 460
           },
           {
             "key": "damageReduction",
-            "value": 25
+            "value": 50
           }
         ],
         "ignoreCompletion": false,
         "attackType": "magic",
         "specialAttacks": [
-          "expandedAreas:Stomp"
+          "expandedAreas:Stomp",
+          "expandedAreas:TheTongue"
         ],
         "passives": [
           "expandedAreas:UnfairBossImmunities",
@@ -50299,31 +50905,31 @@
             "itemID": "expandedAreas:Holy_Elixir",
             "minQuantity": 1,
             "maxQuantity": 1,
-            "weight": 58
+            "weight": 88
           },
           {
             "itemID": "expandedAreas:Spectral_Sigil",
             "minQuantity": 1,
             "maxQuantity": 1,
-            "weight": 7
+            "weight": 28
           },
           {
             "itemID": "expandedAreas:Arcane_Sigil",
             "minQuantity": 1,
             "maxQuantity": 1,
-            "weight": 7
+            "weight": 28
           },
           {
             "itemID": "expandedAreas:Elysian_Sigil",
             "minQuantity": 1,
             "maxQuantity": 1,
-            "weight": 4
+            "weight": 20
           },
           {
             "itemID": "expandedAreas:Divine_Sigil",
             "minQuantity": 1,
             "maxQuantity": 1,
-            "weight": 2
+            "weight": 15
           }
         ],
         "canSlayer": false,
@@ -52269,7 +52875,7 @@
           "expandedAreas:Charge"
         ],
         "passives": [
-          "expandedAreas:CreatureTypeMonstrous"
+          "expandedAreas:MonsterTypeMonstrous"
         ],
         "lootChance": 100,
         "lootTable": [
@@ -54908,6 +55514,22 @@
     ],
     "prayers": [
       {
+        "id": "Divine_Intervention",
+        "level": 99,
+        "name": "Divine Intervention",
+        "media": "assets/combat/prayer/Divine_Intervention.png",
+        "pointsPerPlayer": 0,
+        "pointsPerEnemy": 20,
+        "pointsPerRegen": 0,
+        "modifiers": {
+          "rebirthChance": 20
+        },
+        "allowedDamageTypeIDs": [
+          "melvorD:Normal",
+          "melvorF:Pure"
+        ]
+      },
+      {
         "id": "Negate_Magic",
         "level": 96,
         "name": "Negate Magic",
@@ -54916,7 +55538,13 @@
         "pointsPerEnemy": 30,
         "pointsPerRegen": 0,
         "modifiers": {
-          "magicProtection": 85
+          "flatResistanceAgainstMagic": [
+            {
+              "damageTypeID": "melvorD:Normal",
+              "value": 5
+            }
+          ],
+          "magicEvasion": 50
         },
         "allowedDamageTypeIDs": [
           "melvorD:Normal",
@@ -54932,7 +55560,13 @@
         "pointsPerEnemy": 30,
         "pointsPerRegen": 0,
         "modifiers": {
-          "rangedProtection": 85
+          "flatResistanceAgainstRanged": [
+            {
+              "damageTypeID": "melvorD:Normal",
+              "value": 5
+            }
+          ],
+          "rangedEvasion": 50
         },
         "allowedDamageTypeIDs": [
           "melvorD:Normal",
@@ -54948,54 +55582,18 @@
         "pointsPerEnemy": 30,
         "pointsPerRegen": 0,
         "modifiers": {
-          "meleeProtection": 85
+          "flatResistanceAgainstMelee": [
+            {
+              "damageTypeID": "melvorD:Normal",
+              "value": 5
+            }
+          ],
+          "meleeEvasion": 50
         },
         "allowedDamageTypeIDs": [
           "melvorD:Normal",
           "melvorF:Pure"
         ]
-      },
-      {
-        "id": "Divine_Intervention",
-        "level": 99,
-        "name": "Divine Intervention",
-        "media": "assets/combat/prayer/Divine_Intervention.png",
-        "pointsPerPlayer": 0,
-        "pointsPerEnemy": 20,
-        "pointsPerRegen": 0,
-        "modifiers": {
-          "rebirthChance": 20
-        },
-        "allowedDamageTypeIDs": [
-          "melvorD:Normal",
-          "melvorF:Pure"
-        ]
-      }
-    ],
-    "randomSuperiorGems": [
-      {
-        "itemID": "expandedAreas:Dragonstone",
-        "weight": 10,
-        "minQuantity": 1,
-        "maxQuantity": 1
-      },
-      {
-        "itemID": "expandedAreas:Moonstone",
-        "weight": 10,
-        "minQuantity": 1,
-        "maxQuantity": 1
-      },
-      {
-        "itemID": "expandedAreas:Black_Diamond",
-        "weight": 5,
-        "minQuantity": 1,
-        "maxQuantity": 1
-      },
-      {
-        "itemID": "expandedAreas:Sunstone",
-        "weight": 5,
-        "minQuantity": 1,
-        "maxQuantity": 1
       }
     ],
     "shopCategories": [
@@ -55165,9 +55763,7 @@
         "ids": [
           "expandedAreas:Wand_of_Fireball",
           "expandedAreas:Wand_of_Frost",
-          "expandedAreas:Wand_of_Lightning",
-          "expandedAreas:Wand_of_Polymorph",
-          "expandedAreas:Wand_of_Death"
+          "expandedAreas:Wand_of_Lightning"
         ]
       },
       {
@@ -59284,80 +59880,6 @@
         "showBuyLimit": false,
         "customName": "Allow Nonmagic Curses",
         "customDescription": "Allows you to use Curses without equipping a Magic Weapon (also deactivates the Allow Nonmagic Auroras Shop Purchase)"
-      },
-      {
-        "id": "Wand_of_Death",
-        "media": "assets/bank/wand_death.png",
-        "category": "expandedAreas:ChargeableItems",
-        "contains": {
-          "items": [],
-          "itemCharges": {
-            "id": "expandedAreas:Wand_of_Death",
-            "quantity": 10
-          }
-        },
-        "cost": {
-          "items": [
-            {
-              "id": "melvorD:Magic_Bones",
-              "quantity": 1000
-            }
-          ],
-          "currencies": [
-            {
-              "currency": "melvorD:GP",
-              "type": "Fixed",
-              "cost": 20000000
-            }
-          ]
-        },
-        "allowQuantityPurchase": true,
-        "unlockRequirements": [],
-        "purchaseRequirements": [],
-        "defaultBuyLimit": 0,
-        "buyLimitOverrides": [],
-        "showBuyLimit": false
-      },
-      {
-        "id": "Wand_of_Polymorph",
-        "media": "assets/bank/wand_polymorph.png",
-        "category": "expandedAreas:ChargeableItems",
-        "contains": {
-          "items": [],
-          "itemCharges": {
-            "id": "expandedAreas:Wand_of_Polymorph",
-            "quantity": 10
-          }
-        },
-        "cost": {
-          "items": [
-            {
-              "id": "melvorD:Leather",
-              "quantity": 10
-            },
-            {
-              "id": "melvorD:Raw_Beef",
-              "quantity": 10
-            },
-            {
-              "id": "melvorD:Bones",
-              "quantity": 10
-            }
-          ],
-          "currencies": [
-            {
-              "currency": "melvorD:GP",
-              "type": "Fixed",
-              "cost": 10000000
-            }
-          ]
-        },
-        "allowQuantityPurchase": true,
-        "unlockRequirements": [],
-        "purchaseRequirements": [],
-        "defaultBuyLimit": 0,
-        "buyLimitOverrides": [],
-        "showBuyLimit": false
       },
       {
         "id": "Wand_of_Lightning",
@@ -68277,6 +68799,25 @@
               "currencyCosts": []
             },
             {
+              "id": "Silver_Spear",
+              "level": 83,
+              "productID": "expandedAreas:Silver_Spear",
+              "baseQuantity": 1,
+              "baseExperience": 70,
+              "categoryID": "melvorF:Javelins",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Magic_Logs",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Silver_Javelin_Heads",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
               "id": "Dragon_Spear",
               "level": 92,
               "productID": "expandedAreas:Dragon_Spear",
@@ -68410,6 +68951,200 @@
               "currencyCosts": []
             },
             {
+              "id": "Silver_Thrownaxe",
+              "level": 83,
+              "productID": "expandedAreas:Silver_Thrownaxe",
+              "baseQuantity": 3,
+              "baseExperience": 192,
+              "categoryID": "expandedAreas:Standard_Thrownaxes",
+              "itemCosts": [
+                {
+                  "id": "expandedAreas:Loblolly_Logs",
+                  "quantity": 2
+                },
+                {
+                  "id": "expandedAreas:Silver_Thrownaxe_Head",
+                  "quantity": 3
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Crossbow",
+              "level": 85,
+              "productID": "expandedAreas:Silver_Crossbow",
+              "baseQuantity": 1,
+              "baseExperience": 250,
+              "categoryID": "melvorF:Crossbows",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Magic_Logs",
+                  "quantity": 3
+                },
+                {
+                  "id": "expandedAreas:Silver_Crossbow_Head",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorD:Bowstring",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Javelin",
+              "level": 84,
+              "productID": "expandedAreas:Silver_Javelin",
+              "baseQuantity": 5,
+              "baseExperience": 215,
+              "categoryID": "melvorF:Javelins",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Magic_Logs",
+                  "quantity": 3
+                },
+                {
+                  "id": "expandedAreas:Silver_Javelin_Heads",
+                  "quantity": 5
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Topaz_Bolts",
+              "level": 50,
+              "productID": "expandedAreas:Silver_Topaz_Bolts",
+              "baseQuantity": 3,
+              "baseExperience": 48,
+              "categoryID": "melvorF:Bolts",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Topaz",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Silver_Headless_Bolts",
+                  "quantity": 3
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Sapphire_Bolts",
+              "level": 60,
+              "productID": "expandedAreas:Silver_Sapphire_Bolts",
+              "baseQuantity": 3,
+              "baseExperience": 90,
+              "categoryID": "melvorF:Bolts",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Sapphire",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Silver_Headless_Bolts",
+                  "quantity": 3
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Ruby_Bolts",
+              "level": 70,
+              "productID": "expandedAreas:Silver_Ruby_Bolts",
+              "baseQuantity": 3,
+              "baseExperience": 110,
+              "categoryID": "melvorF:Bolts",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Ruby",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Silver_Headless_Bolts",
+                  "quantity": 3
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Emerald_Bolts",
+              "level": 80,
+              "productID": "expandedAreas:Silver_Emerald_Bolts",
+              "baseQuantity": 3,
+              "baseExperience": 180,
+              "categoryID": "melvorF:Bolts",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Emerald",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Silver_Headless_Bolts",
+                  "quantity": 3
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Diamond_Bolts",
+              "level": 90,
+              "productID": "expandedAreas:Silver_Diamond_Bolts",
+              "baseQuantity": 3,
+              "baseExperience": 300,
+              "categoryID": "melvorF:Bolts",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Diamond",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Silver_Headless_Bolts",
+                  "quantity": 3
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Jadestone_Bolts",
+              "level": 99,
+              "productID": "expandedAreas:Silver_Jadestone_Bolts",
+              "baseQuantity": 3,
+              "baseExperience": 400,
+              "categoryID": "melvorF:Bolts",
+              "itemCosts": [
+                {
+                  "id": "melvorF:Jadestone",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Silver_Headless_Bolts",
+                  "quantity": 3
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Arrows",
+              "level": 82,
+              "productID": "expandedAreas:Silver_Arrows",
+              "baseQuantity": 15,
+              "baseExperience": 200,
+              "categoryID": "melvorF:Arrows",
+              "itemCosts": [
+                {
+                  "id": "expandedAreas:Silver_Arrowtips",
+                  "quantity": 15
+                },
+                {
+                  "id": "melvorD:Headless_Arrows",
+                  "quantity": 15
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
               "id": "Dragon_Thrownaxe",
               "level": 90,
               "productID": "expandedAreas:Dragon_Thrownaxe",
@@ -68418,7 +69153,7 @@
               "categoryID": "expandedAreas:Standard_Thrownaxes",
               "itemCosts": [
                 {
-                  "id": "expandedAreas:Loblolly_Logs",
+                  "id": "melvorD:Redwood_Logs",
                   "quantity": 2
                 },
                 {
@@ -68860,6 +69595,24 @@
               "expandedAreas:MinersQuarry"
             ]
           },
+          "rareDrops": [
+            {
+              "itemID": "expandedAreas:Mysterious_Chest",
+              "quantity": 1,
+              "requirements": [
+                {
+                  "type": "ItemFound",
+                  "itemID": "expandedAreas:Skeleton_Key"
+                }
+              ],
+              "chance": {
+                "type": "TotalMasteryScaling",
+                "maxChance": 0.0005,
+                "baseChance": 0.000005,
+                "scalingFactor": 4e-8
+              }
+            }
+          ],
           "rockData": [
             {
               "id": "Platinum_Ore",
@@ -68904,10 +69657,10 @@
               "id": "Saltpetre",
               "name": "Saltpetre Deposit",
               "media": "assets/skills/mining/deposit_saltpetre.png",
-              "level": 65,
-              "baseExperience": 70,
+              "level": 20,
+              "baseExperience": 20,
               "productId": "expandedAreas:Unrefined_Saltpetre",
-              "baseRespawnInterval": 40000,
+              "baseRespawnInterval": 10000,
               "baseQuantity": 2,
               "hasPassiveRegen": true,
               "category": "melvorD:Ore",
@@ -69782,10 +70535,10 @@
           "recipes": [
             {
               "id": "Pyrite_Chunk",
-              "level": 30,
+              "level": 10,
               "productID": "expandedAreas:Pyrite_Chunk",
-              "baseQuantity": 2,
-              "baseExperience": 15,
+              "baseQuantity": 5,
+              "baseExperience": 10,
               "categoryID": "melvorD:Bars",
               "itemCosts": [
                 {
@@ -69797,10 +70550,10 @@
             },
             {
               "id": "Refined_Saltpetre",
-              "level": 45,
+              "level": 15,
               "productID": "expandedAreas:Saltpetre",
-              "baseQuantity": 1,
-              "baseExperience": 30,
+              "baseQuantity": 5,
+              "baseExperience": 15,
               "categoryID": "melvorD:Bars",
               "itemCosts": [
                 {
@@ -69811,28 +70564,8 @@
               "currencyCosts": []
             },
             {
-              "id": "Bronze_Arquebus_Barrel",
-              "level": 17,
-              "productID": "expandedAreas:Bronze_Arquebus_Barrel",
-              "baseQuantity": 1,
-              "baseExperience": 40,
-              "categoryID": "melvorD:BronzeGear",
-              "subcategoryID": "expandedAreas:FirearmComponents",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Bronze_Bar",
-                  "quantity": 4
-                },
-                {
-                  "id": "expandedAreas:Pyrite_Chunk",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
               "id": "Bronze_Cannonball",
-              "level": 6,
+              "level": 1,
               "productID": "expandedAreas:Bronze_Cannonball",
               "baseQuantity": 5,
               "baseExperience": 50,
@@ -69846,8 +70579,23 @@
               "currencyCosts": []
             },
             {
+              "id": "Bronze_Shot",
+              "level": 1,
+              "productID": "expandedAreas:Bronze_Shot",
+              "baseQuantity": 7,
+              "baseExperience": 10,
+              "categoryID": "melvorD:BronzeGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Bronze_Bar",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
               "id": "Bronze_Handcannon",
-              "level": 20,
+              "level": 19,
               "productID": "expandedAreas:Bronze_Handcannon",
               "baseQuantity": 1,
               "baseExperience": 100,
@@ -69866,7 +70614,7 @@
             },
             {
               "id": "Bronze_Pistol_Barrel",
-              "level": 13,
+              "level": 20,
               "productID": "expandedAreas:Bronze_Pistol_Barrel",
               "baseQuantity": 1,
               "baseExperience": 20,
@@ -69885,32 +70633,21 @@
               "currencyCosts": []
             },
             {
-              "id": "Bronze_Shot",
-              "level": 5,
-              "productID": "expandedAreas:Bronze_Shot",
-              "baseQuantity": 7,
-              "baseExperience": 10,
-              "categoryID": "melvorD:BronzeGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Bronze_Bar",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Iron_Arquebus_Barrel",
-              "level": 26,
-              "productID": "expandedAreas:Iron_Arquebus_Barrel",
+              "id": "Bronze_Arquebus_Barrel",
+              "level": 21,
+              "productID": "expandedAreas:Bronze_Arquebus_Barrel",
               "baseQuantity": 1,
-              "baseExperience": 80,
-              "categoryID": "melvorD:IronGear",
+              "baseExperience": 40,
+              "categoryID": "melvorD:BronzeGear",
               "subcategoryID": "expandedAreas:FirearmComponents",
               "itemCosts": [
                 {
-                  "id": "melvorD:Iron_Bar",
+                  "id": "melvorD:Bronze_Bar",
                   "quantity": 4
+                },
+                {
+                  "id": "expandedAreas:Pyrite_Chunk",
+                  "quantity": 1
                 }
               ],
               "currencyCosts": []
@@ -69931,8 +70668,23 @@
               "currencyCosts": []
             },
             {
+              "id": "Iron_Shot",
+              "level": 12,
+              "productID": "expandedAreas:Iron_Shot",
+              "baseQuantity": 7,
+              "baseExperience": 20,
+              "categoryID": "melvorD:IronGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Iron_Bar",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
               "id": "Iron_Handcannon",
-              "level": 30,
+              "level": 28,
               "productID": "expandedAreas:Iron_Handcannon",
               "baseQuantity": 1,
               "baseExperience": 200,
@@ -69951,7 +70703,7 @@
             },
             {
               "id": "Iron_Pistol_Barrel",
-              "level": 22,
+              "level": 28,
               "productID": "expandedAreas:Iron_Pistol_Barrel",
               "baseQuantity": 1,
               "baseExperience": 40,
@@ -69966,31 +70718,16 @@
               "currencyCosts": []
             },
             {
-              "id": "Iron_Shot",
-              "level": 16,
-              "productID": "expandedAreas:Iron_Shot",
-              "baseQuantity": 7,
-              "baseExperience": 20,
-              "categoryID": "melvorD:IronGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Iron_Bar",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Steel_Arquebus_Barrel",
-              "level": 47,
-              "productID": "expandedAreas:Steel_Arquebus_Barrel",
+              "id": "Iron_Arquebus_Barrel",
+              "level": 30,
+              "productID": "expandedAreas:Iron_Arquebus_Barrel",
               "baseQuantity": 1,
-              "baseExperience": 120,
-              "categoryID": "melvorD:SteelGear",
+              "baseExperience": 80,
+              "categoryID": "melvorD:IronGear",
               "subcategoryID": "expandedAreas:FirearmComponents",
               "itemCosts": [
                 {
-                  "id": "melvorD:Steel_Bar",
+                  "id": "melvorD:Iron_Bar",
                   "quantity": 4
                 }
               ],
@@ -70012,8 +70749,23 @@
               "currencyCosts": []
             },
             {
+              "id": "Steel_Shot",
+              "level": 27,
+              "productID": "expandedAreas:Steel_Shot",
+              "baseQuantity": 7,
+              "baseExperience": 30,
+              "categoryID": "melvorD:SteelGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Steel_Bar",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
               "id": "Steel_Handcannon",
-              "level": 45,
+              "level": 43,
               "productID": "expandedAreas:Steel_Handcannon",
               "baseQuantity": 1,
               "baseExperience": 300,
@@ -70032,7 +70784,7 @@
             },
             {
               "id": "Steel_Pistol_Barrel",
-              "level": 46,
+              "level": 44,
               "productID": "expandedAreas:Steel_Pistol_Barrel",
               "baseQuantity": 1,
               "baseExperience": 60,
@@ -70047,16 +70799,17 @@
               "currencyCosts": []
             },
             {
-              "id": "Steel_Shot",
-              "level": 28,
-              "productID": "expandedAreas:Steel_Shot",
-              "baseQuantity": 7,
-              "baseExperience": 30,
+              "id": "Steel_Arquebus_Barrel",
+              "level": 45,
+              "productID": "expandedAreas:Steel_Arquebus_Barrel",
+              "baseQuantity": 1,
+              "baseExperience": 120,
               "categoryID": "melvorD:SteelGear",
+              "subcategoryID": "expandedAreas:FirearmComponents",
               "itemCosts": [
                 {
                   "id": "melvorD:Steel_Bar",
-                  "quantity": 1
+                  "quantity": 4
                 }
               ],
               "currencyCosts": []
@@ -70093,8 +70846,23 @@
               "currencyCosts": []
             },
             {
+              "id": "Mithril_Shot",
+              "level": 42,
+              "productID": "expandedAreas:Mithril_Shot",
+              "baseQuantity": 7,
+              "baseExperience": 50,
+              "categoryID": "melvorD:MithrilGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Mithril_Bar",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
               "id": "Mithril_Handcannon",
-              "level": 60,
+              "level": 58,
               "productID": "expandedAreas:Mithril_Handcannon",
               "baseQuantity": 1,
               "baseExperience": 500,
@@ -70113,7 +70881,7 @@
             },
             {
               "id": "Mithril_Pistol_Barrel",
-              "level": 63,
+              "level": 59,
               "productID": "expandedAreas:Mithril_Pistol_Barrel",
               "baseQuantity": 1,
               "baseExperience": 100,
@@ -70128,39 +70896,8 @@
               "currencyCosts": []
             },
             {
-              "id": "Mithril_Shot",
-              "level": 41,
-              "productID": "expandedAreas:Mithril_Shot",
-              "baseQuantity": 7,
-              "baseExperience": 50,
-              "categoryID": "melvorD:MithrilGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Mithril_Bar",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Adamant_Arquebus_Barrel",
-              "level": 80,
-              "productID": "expandedAreas:Adamant_Arquebus_Barrel",
-              "baseQuantity": 1,
-              "baseExperience": 240,
-              "categoryID": "melvorD:AdamantGear",
-              "subcategoryID": "expandedAreas:FirearmComponents",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Adamantite_Bar",
-                  "quantity": 4
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
               "id": "Adamant_Cannonball",
-              "level": 57,
+              "level": 60,
               "productID": "expandedAreas:Adamant_Cannonball",
               "baseQuantity": 5,
               "baseExperience": 300,
@@ -70174,8 +70911,23 @@
               "currencyCosts": []
             },
             {
+              "id": "Adamant_Shot",
+              "level": 57,
+              "productID": "expandedAreas:Adamant_Shot",
+              "baseQuantity": 7,
+              "baseExperience": 60,
+              "categoryID": "melvorD:AdamantGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Adamantite_Bar",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
               "id": "Adamant_Handcannon",
-              "level": 75,
+              "level": 71,
               "productID": "expandedAreas:Adamant_Handcannon",
               "baseQuantity": 1,
               "baseExperience": 600,
@@ -70194,7 +70946,7 @@
             },
             {
               "id": "Adamant_Pistol_Barrel",
-              "level": 78,
+              "level": 72,
               "productID": "expandedAreas:Adamant_Pistol_Barrel",
               "baseQuantity": 1,
               "baseExperience": 120,
@@ -70209,31 +70961,16 @@
               "currencyCosts": []
             },
             {
-              "id": "Adamant_Shot",
-              "level": 54,
-              "productID": "expandedAreas:Adamant_Shot",
-              "baseQuantity": 7,
-              "baseExperience": 60,
-              "categoryID": "melvorD:AdamantGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Adamantite_Bar",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Rune_Arquebus_Barrel",
-              "level": 95,
-              "productID": "expandedAreas:Rune_Arquebus_Barrel",
+              "id": "Adamant_Arquebus_Barrel",
+              "level": 73,
+              "productID": "expandedAreas:Adamant_Arquebus_Barrel",
               "baseQuantity": 1,
-              "baseExperience": 300,
-              "categoryID": "melvorD:RuneGear",
+              "baseExperience": 240,
+              "categoryID": "melvorD:AdamantGear",
               "subcategoryID": "expandedAreas:FirearmComponents",
               "itemCosts": [
                 {
-                  "id": "melvorD:Runite_Bar",
+                  "id": "melvorD:Adamantite_Bar",
                   "quantity": 4
                 }
               ],
@@ -70255,8 +70992,23 @@
               "currencyCosts": []
             },
             {
+              "id": "Rune_Shot",
+              "level": 72,
+              "productID": "expandedAreas:Rune_Shot",
+              "baseQuantity": 7,
+              "baseExperience": 75,
+              "categoryID": "melvorD:RuneGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Runite_Bar",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
               "id": "Rune_Handcannon",
-              "level": 90,
+              "level": 88,
               "productID": "expandedAreas:Rune_Handcannon",
               "baseQuantity": 1,
               "baseExperience": 750,
@@ -70275,7 +71027,7 @@
             },
             {
               "id": "Rune_Pistol_Barrel",
-              "level": 88,
+              "level": 89,
               "productID": "expandedAreas:Rune_Pistol_Barrel",
               "baseQuantity": 1,
               "baseExperience": 150,
@@ -70290,39 +71042,279 @@
               "currencyCosts": []
             },
             {
-              "id": "Rune_Shot",
-              "level": 70,
-              "productID": "expandedAreas:Rune_Shot",
-              "baseQuantity": 7,
-              "baseExperience": 75,
-              "categoryID": "melvorD:RuneGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Runite_Bar",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Silver_Arquebus_Barrel",
-              "level": 100,
-              "productID": "expandedAreas:Silver_Arquebus_Barrel",
+              "id": "Rune_Arquebus_Barrel",
+              "level": 90,
+              "productID": "expandedAreas:Rune_Arquebus_Barrel",
               "baseQuantity": 1,
-              "baseExperience": 320,
-              "categoryID": "expandedAreas:SilverGear",
+              "baseExperience": 300,
+              "categoryID": "melvorD:RuneGear",
               "subcategoryID": "expandedAreas:FirearmComponents",
               "itemCosts": [
                 {
-                  "id": "melvorD:Silver_Bar",
+                  "id": "melvorD:Runite_Bar",
                   "quantity": 4
                 }
               ],
               "currencyCosts": []
             },
             {
-              "id": "Silver_Cannonball",
+              "id": "Silver_Dagger",
+              "level": 77,
+              "productID": "expandedAreas:Silver_Dagger",
+              "baseQuantity": 1,
+              "baseExperience": 85,
+              "categoryID": "expandedAreas:SilverGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Silver_Bar",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Headless_Bolts",
+              "level": 78,
+              "productID": "expandedAreas:Silver_Headless_Bolts",
+              "baseQuantity": 5,
+              "baseExperience": 85,
+              "categoryID": "expandedAreas:SilverGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Silver_Bar",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Throwing_Knife",
+              "level": 78,
+              "productID": "expandedAreas:Silver_Throwing_Knife",
+              "baseQuantity": 1,
+              "baseExperience": 85,
+              "categoryID": "expandedAreas:SilverGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Silver_Bar",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Sword",
               "level": 79,
+              "productID": "expandedAreas:Silver_Sword",
+              "baseQuantity": 1,
+              "baseExperience": 170,
+              "categoryID": "expandedAreas:SilverGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Silver_Bar",
+                  "quantity": 2
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Arrowtips",
+              "level": 80,
+              "productID": "expandedAreas:Silver_Arrowtips",
+              "baseQuantity": 1,
+              "baseExperience": 85,
+              "categoryID": "expandedAreas:SilverGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Silver_Bar",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Gloves",
+              "level": 82,
+              "productID": "expandedAreas:Silver_Gloves",
+              "baseQuantity": 1,
+              "baseExperience": 170,
+              "categoryID": "expandedAreas:SilverGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Silver_Bar",
+                  "quantity": 2
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Scimitar",
+              "level": 83,
+              "productID": "expandedAreas:Silver_Scimitar",
+              "baseQuantity": 1,
+              "baseExperience": 170,
+              "categoryID": "expandedAreas:SilverGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Silver_Bar",
+                  "quantity": 2
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Helmet",
+              "level": 84,
+              "productID": "expandedAreas:Silver_Helmet",
+              "baseQuantity": 1,
+              "baseExperience": 170,
+              "categoryID": "expandedAreas:SilverGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Silver_Bar",
+                  "quantity": 2
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Battleaxe",
+              "level": 85,
+              "productID": "expandedAreas:Silver_Battleaxe",
+              "baseQuantity": 1,
+              "baseExperience": 255,
+              "categoryID": "expandedAreas:SilverGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Silver_Bar",
+                  "quantity": 3
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Javelin_Heads",
+              "level": 86,
+              "productID": "expandedAreas:Silver_Javelin_Heads",
+              "baseQuantity": 1,
+              "baseExperience": 170,
+              "categoryID": "expandedAreas:SilverGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Silver_Bar",
+                  "quantity": 2
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Boots",
+              "level": 87,
+              "productID": "expandedAreas:Silver_Boots",
+              "baseQuantity": 1,
+              "baseExperience": 170,
+              "categoryID": "expandedAreas:SilverGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Silver_Bar",
+                  "quantity": 2
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Shield",
+              "level": 88,
+              "productID": "expandedAreas:Silver_Shield",
+              "baseQuantity": 1,
+              "baseExperience": 255,
+              "categoryID": "expandedAreas:SilverGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Silver_Bar",
+                  "quantity": 3
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_2H_Sword",
+              "level": 89,
+              "productID": "expandedAreas:Silver_2H_Sword",
+              "baseQuantity": 1,
+              "baseExperience": 255,
+              "categoryID": "expandedAreas:SilverGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Silver_Bar",
+                  "quantity": 3
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Crossbow_Head",
+              "level": 90,
+              "productID": "expandedAreas:Silver_Crossbow_Head",
+              "baseQuantity": 1,
+              "baseExperience": 255,
+              "categoryID": "expandedAreas:SilverGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Silver_Bar",
+                  "quantity": 3
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Platelegs",
+              "level": 91,
+              "productID": "expandedAreas:Silver_Platelegs",
+              "baseQuantity": 1,
+              "baseExperience": 255,
+              "categoryID": "expandedAreas:SilverGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Silver_Bar",
+                  "quantity": 3
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Platebody",
+              "level": 92,
+              "productID": "expandedAreas:Silver_Platebody",
+              "baseQuantity": 1,
+              "baseExperience": 425,
+              "categoryID": "expandedAreas:SilverGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Silver_Bar",
+                  "quantity": 5
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Thrownaxe_Head",
+              "level": 81,
+              "productID": "expandedAreas:Silver_Thrownaxe_Head",
+              "baseQuantity": 5,
+              "baseExperience": 170,
+              "categoryID": "expandedAreas:SilverGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Silver_Bar",
+                  "quantity": 2
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Cannonball",
+              "level": 81,
               "productID": "expandedAreas:Silver_Cannonball",
               "baseQuantity": 5,
               "baseExperience": 425,
@@ -70336,8 +71328,23 @@
               "currencyCosts": []
             },
             {
+              "id": "Silver_Shot",
+              "level": 82,
+              "productID": "expandedAreas:Silver_Shot",
+              "baseQuantity": 7,
+              "baseExperience": 85,
+              "categoryID": "expandedAreas:SilverGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Silver_Bar",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
               "id": "Silver_Handcannon",
-              "level": 95,
+              "level": 93,
               "productID": "expandedAreas:Silver_Handcannon",
               "baseQuantity": 1,
               "baseExperience": 850,
@@ -70356,7 +71363,7 @@
             },
             {
               "id": "Silver_Pistol_Barrel",
-              "level": 98,
+              "level": 94,
               "productID": "expandedAreas:Silver_Pistol_Barrel",
               "baseQuantity": 1,
               "baseExperience": 170,
@@ -70371,31 +71378,16 @@
               "currencyCosts": []
             },
             {
-              "id": "Silver_Shot",
-              "level": 80,
-              "productID": "expandedAreas:Silver_Shot",
-              "baseQuantity": 7,
-              "baseExperience": 85,
-              "categoryID": "expandedAreas:SilverGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Silver_Bar",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Dragon_Arquebus_Barrel",
-              "level": 105,
-              "productID": "expandedAreas:Dragon_Arquebus_Barrel",
+              "id": "Silver_Arquebus_Barrel",
+              "level": 95,
+              "productID": "expandedAreas:Silver_Arquebus_Barrel",
               "baseQuantity": 1,
-              "baseExperience": 400,
-              "categoryID": "melvorD:DragonGear",
+              "baseExperience": 340,
+              "categoryID": "expandedAreas:SilverGear",
               "subcategoryID": "expandedAreas:FirearmComponents",
               "itemCosts": [
                 {
-                  "id": "melvorD:Dragonite_Bar",
+                  "id": "melvorD:Silver_Bar",
                   "quantity": 4
                 }
               ],
@@ -70412,6 +71404,21 @@
                 {
                   "id": "melvorD:Dragonite_Bar",
                   "quantity": 5
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Dragon_Shot",
+              "level": 87,
+              "productID": "expandedAreas:Dragon_Shot",
+              "baseQuantity": 7,
+              "baseExperience": 100,
+              "categoryID": "melvorD:DragonGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Dragonite_Bar",
+                  "quantity": 1
                 }
               ],
               "currencyCosts": []
@@ -70437,7 +71444,7 @@
             },
             {
               "id": "Dragon_Pistol_Barrel",
-              "level": 103,
+              "level": 101,
               "productID": "expandedAreas:Dragon_Pistol_Barrel",
               "baseQuantity": 1,
               "baseExperience": 200,
@@ -70452,16 +71459,17 @@
               "currencyCosts": []
             },
             {
-              "id": "Dragon_Shot",
-              "level": 90,
-              "productID": "expandedAreas:Dragon_Shot",
-              "baseQuantity": 7,
-              "baseExperience": 100,
+              "id": "Dragon_Arquebus_Barrel",
+              "level": 102,
+              "productID": "expandedAreas:Dragon_Arquebus_Barrel",
+              "baseQuantity": 1,
+              "baseExperience": 400,
               "categoryID": "melvorD:DragonGear",
+              "subcategoryID": "expandedAreas:FirearmComponents",
               "itemCosts": [
                 {
                   "id": "melvorD:Dragonite_Bar",
-                  "quantity": 1
+                  "quantity": 4
                 }
               ],
               "currencyCosts": []
@@ -70485,13 +71493,13 @@
               "id": "Bronze_Thrownaxe_Head",
               "productID": "expandedAreas:Bronze_Thrownaxe_Head",
               "categoryID": "melvorD:BronzeGear",
-              "baseExperience": 10,
-              "baseQuantity": 3,
+              "baseExperience": 20,
+              "baseQuantity": 5,
               "level": 4,
               "itemCosts": [
                 {
                   "id": "melvorD:Bronze_Bar",
-                  "quantity": 1
+                  "quantity": 2
                 }
               ]
             },
@@ -70499,13 +71507,13 @@
               "id": "Iron_Thrownaxe_Head",
               "productID": "expandedAreas:Iron_Thrownaxe_Head",
               "categoryID": "melvorD:IronGear",
-              "baseExperience": 20,
-              "baseQuantity": 3,
+              "baseExperience": 40,
+              "baseQuantity": 5,
               "level": 13,
               "itemCosts": [
                 {
                   "id": "melvorD:Iron_Bar",
-                  "quantity": 1
+                  "quantity": 2
                 }
               ]
             },
@@ -70513,13 +71521,13 @@
               "id": "Steel_Thrownaxe_Head",
               "productID": "expandedAreas:Steel_Thrownaxe_Head",
               "categoryID": "melvorD:SteelGear",
-              "baseExperience": 30,
-              "baseQuantity": 3,
+              "baseExperience": 60,
+              "baseQuantity": 5,
               "level": 28,
               "itemCosts": [
                 {
                   "id": "melvorD:Steel_Bar",
-                  "quantity": 1
+                  "quantity": 2
                 }
               ]
             },
@@ -70527,13 +71535,13 @@
               "id": "Mithril_Thrownaxe_Head",
               "productID": "expandedAreas:Mithril_Thrownaxe_Head",
               "categoryID": "melvorD:MithrilGear",
-              "baseExperience": 50,
-              "baseQuantity": 3,
+              "baseExperience": 100,
+              "baseQuantity": 5,
               "level": 43,
               "itemCosts": [
                 {
                   "id": "melvorD:Mithril_Bar",
-                  "quantity": 1
+                  "quantity": 2
                 }
               ]
             },
@@ -70541,13 +71549,13 @@
               "id": "Adamant_Thrownaxe_Head",
               "productID": "expandedAreas:Adamant_Thrownaxe_Head",
               "categoryID": "melvorD:AdamantGear",
-              "baseExperience": 60,
+              "baseExperience": 120,
               "baseQuantity": 3,
               "level": 58,
               "itemCosts": [
                 {
                   "id": "melvorD:Adamantite_Bar",
-                  "quantity": 1
+                  "quantity": 2
                 }
               ]
             },
@@ -70555,13 +71563,13 @@
               "id": "Rune_Thrownaxe_Head",
               "productID": "expandedAreas:Rune_Thrownaxe_Head",
               "categoryID": "melvorD:RuneGear",
-              "baseExperience": 75,
-              "baseQuantity": 3,
+              "baseExperience": 150,
+              "baseQuantity": 5,
               "level": 73,
               "itemCosts": [
                 {
                   "id": "melvorD:Runite_Bar",
-                  "quantity": 1
+                  "quantity": 2
                 }
               ]
             },
@@ -70569,13 +71577,13 @@
               "id": "Dragon_Thrownaxe_Head",
               "productID": "expandedAreas:Dragon_Thrownaxe_Head",
               "categoryID": "melvorD:DragonGear",
-              "baseExperience": 100,
-              "baseQuantity": 3,
+              "baseExperience": 200,
+              "baseQuantity": 5,
               "level": 88,
               "itemCosts": [
                 {
                   "id": "melvorD:Dragonite_Bar",
-                  "quantity": 1
+                  "quantity": 2
                 }
               ]
             }
@@ -71128,7 +72136,7 @@
         "name": "Lair of Abhorrence",
         "media": "assets/combat/combatAreas/corp.png",
         "difficulty": [
-          5
+          6
         ],
         "monsterIDs": [
           "expandedAreas:Corporeal_Beast"
@@ -71137,6 +72145,17 @@
         "pet": {
           "petID": "expandedAreas:Dark_Core",
           "weight": 5000
+        },
+        "areaEffectDescription": "The Abhorrent Beast takes ${effectValue}% less damage from Magic and Ranged attacks. You have -${effectValue}% Magic and Ranged Accuracy.",
+        "areaEffect": {
+          "target": "Enemy",
+          "magnitude": 100,
+          "modifiers": {
+            "rangedMaxHit": -1,
+            "rangedAccuracyRating": -1,
+            "magicMaxHit": -1,
+            "magicAccuracyRating": -1
+          }
         }
       },
       {

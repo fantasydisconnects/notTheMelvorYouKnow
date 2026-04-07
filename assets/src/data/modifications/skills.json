@@ -1,0 +1,65 @@
+{
+  "$schema": "https://melvoridle.com/assets/schema/gameData.json",
+  "namespace": "expandedAreas",
+  "modifications": {
+    "skillData": [
+      {
+        "skillID": "melvorD:Fletching",
+        "data": {
+          "recipes": [
+            {
+              "id": "melvorF:Arrow_Shafts",
+              "alternativeCosts": [
+                {
+                  "itemCosts": [
+                    {
+                      "id": "expandedAreas:Evergreen_Logs",
+                      "quantity": 1
+                    }
+                  ],
+                  "quantityMultiplier": 2
+                },
+                {
+                  "itemCosts": [
+                    {
+                      "id": "expandedAreas:Longleaf_Logs",
+                      "quantity": 1
+                    }
+                  ],
+                  "quantityMultiplier": 5
+                },
+                {
+                  "itemCosts": [
+                    {
+                      "id": "expandedAreas:Frostpine_Logs",
+                      "quantity": 1
+                    }
+                  ],
+                  "quantityMultiplier": 7
+                },
+                {
+                  "itemCosts": [
+                    {
+                      "id": "expandedAreas:White_Pine_Logs",
+                      "quantity": 1
+                    }
+                  ],
+                  "quantityMultiplier": 8
+                },
+                {
+                  "itemCosts": [
+                    {
+                      "id": "expandedAreas:Loblolly_Logs",
+                      "quantity": 1
+                    }
+                  ],
+                  "quantityMultiplier": 9
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
