@@ -5,6 +5,253 @@
     {
       "namespace": "melvorAoD",
       "modifications": {
+        "items": [
+          {
+            "id": "melvorAoD:Book_of_Prayers",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Accessory1",
+                "expandedAreas:Accessory2"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:Bottle_of_Mystic_Water",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Accessory1",
+                "expandedAreas:Accessory2"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:Circlet_of_Pain",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Accessory1",
+                "expandedAreas:Accessory2"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:Ring_of_Deception",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Ring2"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:Ring_of_Faith",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Ring2"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:Ring_of_Malice",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Ring2"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:Ring_of_Summoning",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Ring2"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:Bone_Ring",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Ring2"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:Rusted_Ring",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Ring2"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:Bronze_Ring",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Ring2"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:Cursed_Ring",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Ring2"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:Unholy_Ring",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Ring2"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:Haunted_Ring",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Ring2"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:Cleansing_Ring",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Ring2"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:Ring_of_Barrier_Touch",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Ring2"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:Silver_Magic_Band",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Ring2"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:Barrier_Hunter_Ring",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Ring2"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:Barrier_Eroding_Ring",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Ring2"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:Summoners_Blessed_Ring",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Ring2"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:Sailors_Compass",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Accessory1",
+                "expandedAreas:Accessory2"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:Ghostly_Parrot",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Accessory1",
+                "expandedAreas:Accessory2"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:Ancient_Scythe",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Tool"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:Archaeologists_Whip",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Tool"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:Chisel",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Tool"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:Enhanced_Spyglass",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Tool"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:Fishing_Net",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Tool"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:Old_Spyglass",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Tool"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:Old_Wooden_Ladle",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Tool"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:Stone_Hammer",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Tool"
+              ]
+            }
+          },
+          {
+            "id": "melvorAoD:Golden_Trowel",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Tool"
+              ]
+            }
+          }
+        ],
         "monsters": [
           {
             "id": "melvorAoD:AngryTeak",
@@ -138,7 +385,6 @@
               "add": [
                 "expandedAreas:MonsterTypeConstructed",
                 "expandedAreas:MonsterTypeElemental"
-                
               ]
             }
           },

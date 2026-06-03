@@ -3,7 +3,9 @@
     "setup": "src/setup.mjs",
     "icon": "assets/ICON.png",
     "load": [
-        "src/data/new/main.json",
-        "src/data/new/modifications.json"
+        "src/data/main.json",
+        "src/data/modifications.json",
+        "src/dependentData/AoD.json",
+        "src/dependentData/TotH.json"
     ]
 }

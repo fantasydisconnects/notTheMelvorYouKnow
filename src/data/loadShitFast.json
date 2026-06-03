@@ -2,308 +2,140 @@
   "$schema": "https://melvoridle.com/assets/schema/gameData.json",
   "namespace": "expandedAreas",
   "data": {
-    "attacks": [],
+    "attacks": [
+      {
+        "id": "FistOfTheWinterWinds",
+        "defaultChance": 15,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 100
+          },
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "maxRoll": "MagicScaling",
+            "maxPercent": 35,
+            "roll": false
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Freeze",
+            "chance": 25,
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 2
+              }
+            ]
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 500,
+        "lifesteal": 0,
+        "name": "Fist of the Winter Winds",
+        "description": "Harness the winter winds, striking for ${attackDamageMaxValue0}% of your normal damage + ${attackDamageMaxValue1}% of your Magic level. On a hit, ${onHitEffect0chance}% chance to inflict Freeze for ${onHitEffect0turns} turns.",
+        "descriptionGenerator": "An <avoidable> attack that deals <damage> damage. On a hit, <hitEffect>.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "ToxicNeedleFlurry",
+        "defaultChance": 15,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 80
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Poison",
+            "chance": 20
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 5,
+        "attackInterval": 200,
+        "lifesteal": 0,
+        "name": "Toxic Needle Flurry",
+        "description": "Fire ${hitCount} small needles from your knuckles in a flurry of long-reaching jabs that deal up to ${attackDamageMaxValue0}% of your normal damage each (Avoidable). On a hit has a ${onHitEffect0chance}% chance to inflict Poison that deals ${onHitEffect0DamageMaxValue0}% of the Enemy's max hitpoints as damage over ${onHitEffect0duration}s.",
+        "descriptionGenerator": "Fire <count> small needles that deal <damage> damage each (<Avoidable>). On a hit <hitEffect>.",
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "CycloneFist",
+        "defaultChance": 15,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 75
+          }
+        ],
+        "prehitEffects": [
+          {
+            "effectID": "WTM:CycloneFist0"
+          }
+        ],
+        "onhitEffects": [],
+        "cantMiss": false,
+        "attackCount": 7,
+        "attackInterval": 600,
+        "lifesteal": 0,
+        "name": "Cyclone",
+        "description": "Surrounds you in wind for ${duration}s, while dealing ${attackDamageMaxValue0}% normal damage ${hitCount} times. Gives you +${preHitEffect0modValue0}% Global Evasion and +${preHitEffect0modValue1} Reflect Damage until the end of the attack.",
+        "descriptionGenerator": "Surrounds <attacker> in wind for <duration>, while dealing <damage> <avoidable> damage <count> times. On use, <prehitEffect>.",
+        "usesRunesPerProc": false
+      }
+    ],
     "prayers": [],
     "attackSpells": [],
     "combatAreas": [],
     "slayerAreas": [],
     "dungeons": [],
-    "combatEffects": [],
+    "combatEffects": [
+      {
+        "id": "CycloneFist0",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Cyclone Fist",
+        "media": "assets/combat/status/evasion_increase.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 0
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "evasion": 10,
+              "flatReflectDamage": 30
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      }
+    ],
     "combatEffectGroups": [],
     "combatEffectTables": [],
+    "combatEffectTemplates": [],
     "combatPassives": [],
     "items": [
       {
-        "itemType": "Equipment",
-        "id": "Reflection_Shield",
-        "name": "Reflection Shield",
-        "category": "Combat",
-        "type": "Armour",
-        "media": "assets/bank/Reflection_Shield.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 1000000,
-        "customDescription": "Passive: +10% Reflect Damage, +35% Chance to ignore Gaze attacks",
-        "tier": "slayer",
-        "validSlots": [
-          "Shield",
-          "Passive"
-        ],
-        "occupiesSlots": [],
-        "equipRequirements": [
-          {
-            "type": "SkillLevel",
-            "skillID": "melvorD:Defence",
-            "level": 100
-          },
-          {
-            "type": "SkillLevel",
-            "skillID": "melvorD:Slayer",
-            "level": 100
-          }
-        ],
-        "equipmentStats": [
-          {
-            "key": "stabAttackBonus",
-            "value": 20
-          },
-          {
-            "key": "blockAttackBonus",
-            "value": 20
-          },
-          {
-            "key": "rangedAttackBonus",
-            "value": 8
-          },
-          {
-            "key": "magicAttackBonus",
-            "value": 12
-          },
-          {
-            "key": "meleeStrengthBonus",
-            "value": 10
-          },
-          {
-            "key": "rangedStrengthBonus",
-            "value": 4
-          },
-          {
-            "key": "magicDamageBonus",
-            "value": 6
-          },
-          {
-            "key": "meleeDefenceBonus",
-            "value": 160
-          },
-          {
-            "key": "rangedDefenceBonus",
-            "value": 140
-          },
-          {
-            "key": "magicDefenceBonus",
-            "value": 200
-          },
-          {
-            "key": "damageReduction",
-            "value": 8
-          }
-        ],
-        "modifiers": {
-          "reflectDamage": 10,
-          "effectIgnoreChance": [
-            {
-              "effectGroupID": "expandedAreas:Gaze",
-              "value": 35
-            }
-          ]
-        }
-      },
-      {
-        "itemType": "Equipment",
-        "id": "Shield_of_Eyes",
-        "name": "Shield of Eyes",
-        "category": "Misc",
-        "type": "Armour",
-        "media": "assets/bank/Shield_of_Eyes.png",
-        "customDescription": "Passive: +65% Chance to ignore Gaze attacks; +50% Evasion and Reflect Damage against Ranged; +35% Evasion and Deflect Damage against Magic; +20% Evasion and Reflect Damage against Melee<br>+20% Chance on Being Hit to make a random Gaze attack at the Target",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 10000000,
-        "tier": "none",
-        "validSlots": [
-          "Shield"
-        ],
-        "occupiesSlots": [],
-        "equipRequirements": [
-          {
-            "type": "SkillLevel",
-            "skillID": "melvorD:Defence",
-            "level": 120
-          },
-          {
-            "type": "DungeonCompletion",
-            "dungeonID": "melvorF:Impending_Darkness",
-            "count": 1
-          }
-        ],
-        "equipmentStats": [
-          {
-            "key": "stabAttackBonus",
-            "value": 50
-          },
-          {
-            "key": "blockAttackBonus",
-            "value": 50
-          },
-          {
-            "key": "rangedAttackBonus",
-            "value": 20
-          },
-          {
-            "key": "magicAttackBonus",
-            "value": 30
-          },
-          {
-            "key": "meleeStrengthBonus",
-            "value": 20
-          },
-          {
-            "key": "rangedStrengthBonus",
-            "value": 8
-          },
-          {
-            "key": "magicDamageBonus",
-            "value": 12
-          },
-          {
-            "key": "meleeDefenceBonus",
-            "value": 320
-          },
-          {
-            "key": "rangedDefenceBonus",
-            "value": 280
-          },
-          {
-            "key": "magicDefenceBonus",
-            "value": 400
-          },
-          {
-            "key": "damageReduction",
-            "value": 10
-          }
-        ],
-        "conditionalModifiers": [
-          {
-            "condition": {
-              "character": "Enemy",
-              "thisAttackType": "ranged",
-              "targetAttackType": "any",
-              "type": "CombatType"
-            },
-            "modifiers": {
-              "evasion": 50,
-              "reflectDamage": 50
-            }
-          },
-          {
-            "condition": {
-              "character": "Enemy",
-              "thisAttackType": "magic",
-              "targetAttackType": "any",
-              "type": "CombatType"
-            },
-            "modifiers": {
-              "evasion": 35,
-              "reflectDamage": 35
-            }
-          },
-          {
-            "condition": {
-              "character": "Enemy",
-              "thisAttackType": "melee",
-              "targetAttackType": "any",
-              "type": "CombatType"
-            },
-            "modifiers": {
-              "evasion": 20,
-              "reflectDamage": 20,
-              "effectIgnoreChance": [
-                {
-                  "effectGroupID": "expandedAreas:Gaze",
-                  "value": 65
-                }
-              ]
-            }
-          }
-        ],
-        "combatEffects": [
-          {
-            "appliesWhen": "HitByAttack",
-            "tableID": "expandedAreas:RandomGaze",
-            "targetOverride": "Target",
-            "chance": 20
-          }
-        ],
-        "specialAttacks": [
-          "expandedAreas:AntiMagicField"
-        ]
-      },
-
+        "modifiers": {}
+      }
     ],
     "itemSynergies": [],
-    "monsters": [      {
-        "id": "TheTyrantMother",
-        "name": "The Tyrant Mother",
-        "media": "assets/combat/monsters/tyrantmother.png",
-        "levels": {
-          "Hitpoints": 15000,
-          "Attack": 1500,
-          "Strength": 1500,
-          "Defence": 1500,
-          "Ranged": 1500,
-          "Magic": 1500
-        },
-        "equipmentStats": [
-          {
-            "key": "attackSpeed",
-            "value": 3200
-          },
-          {
-            "key": "magicAttackBonus",
-            "value": 100
-          },
-          {
-            "key": "meleeDefenceBonus",
-            "value": 150
-          },
-          {
-            "key": "magicDefenceBonus",
-            "value": 200
-          },
-          {
-            "key": "damageReduction",
-            "value": 50
-          }
-        ],
-        "ignoreCompletion": false,
-        "attackType": "magic",
-        "specialAttacks": [
-          "expandedAreas:TyrannicalGazeRays"
-        ],
-        "passives": [
-          "expandedAreas:Gazer",
-          "expandedAreas:NullifyingEye",
-          "expandedAreas:StrangeBiology",
-          "expandedAreas:FlyingPermanent",
-          "expandedAreas:BastionOfTyranny",
-          "expandedAreas:Banisher"
-        ],
-        "lootChance": 0,
-        "lootTable": [],
-        "canSlayer": false,
-        "isBoss": true,
-        "selectedSpell": "expandedAreas:ElementalStorm",
-        "bones": {
-          "itemID": "melvorD:Bones",
-          "quantity": 1
-        },
-        "currencyDrops": []
-      },],
-    "skillData": [
-      {
-        "skillID": "melvorD:Smithing",
-        "data": {
-          "recipes": [
-            
-            
-            
-            
-
-          ]
-        }
-      }
-    ]
+    "monsters": [],
+    "pets": [],
+    "skillData": [],
+    "strongholds": []
   }
 }

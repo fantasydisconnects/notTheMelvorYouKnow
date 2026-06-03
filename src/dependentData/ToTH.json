@@ -5,6 +5,161 @@
     {
       "namespace": "melvorTotH",
       "modifications": {
+        "items": [
+          {
+            "id": "melvorTotH:Voodoo_Trinket",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Accessory1",
+                "expandedAreas:Accessory2"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Blood_Ring",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Ring2"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Iridium_Cerulean_Ring",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Ring2"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Iridium_Onyx_Ring",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Ring2"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Iridium_Oricha_Ring",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Ring2"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Iridium_Runestone_Ring",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Ring2"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Iridium_Zephyte_Ring",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Ring2"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Meteorite_Marksman_Ring",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Ring2"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Meteorite_Spellcaster_Ring",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Ring2"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Meteorite_Warrior_Ring",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Ring2"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Palladium_Cerulean_Ring",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Ring2"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Palladium_Onyx_Ring",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Ring2"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Palladium_Oricha_Ring",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Ring2"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Palladium_Runestone_Ring",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Ring2"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Palladium_Zephyte_Ring",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Ring2"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Ring_of_Curse_Protection",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Ring2"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Ring_of_Phantom_Summon",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Ring2"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Grappling_Hook",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Tool"
+              ]
+            }
+          },
+          {
+            "id": "melvorTotH:Potion_Stirrer",
+            "validSlots": {
+              "add": [
+                "expandedAreas:Tool"
+              ]
+            }
+          }
+        ],
         "monsters": [
           {
             "id": "melvorTotH:Alraune",
@@ -355,7 +510,6 @@
               "add": [
                 "expandedAreas:MonsterTypeBestial",
                 "expandedAreas:MonsterTypeUndead"
-                
               ]
             }
           },
@@ -364,7 +518,6 @@
             "passives": {
               "add": [
                 "expandedAreas:MonsterTypeUndead"
-                
               ]
             }
           },
@@ -374,7 +527,6 @@
               "add": [
                 "expandedAreas:MonsterTypeBestial",
                 "expandedAreas:MonsterTypeMonstrous"
-                
               ]
             }
           },
@@ -408,7 +560,6 @@
               "add": [
                 "expandedAreas:MonsterTypeBestial",
                 "expandedAreas:MonsterTypeHeavenly"
-                
               ]
             }
           },
@@ -417,7 +568,6 @@
             "passives": {
               "add": [
                 "expandedAreas:MonsterTypeBestial"
-                
               ]
             }
           },
@@ -426,7 +576,6 @@
             "passives": {
               "add": [
                 "expandedAreas:MonsterTypePlantlike"
-                
               ]
             }
           },
@@ -436,7 +585,6 @@
               "add": [
                 "expandedAreas:MonsterTypePlantlike",
                 "expandedAreas:MonsterTypeUndead"
-                
               ]
             }
           },
@@ -445,7 +593,6 @@
             "passives": {
               "add": [
                 "expandedAreas:MonsterTypeGiantkin"
-                
               ]
             }
           },
@@ -455,7 +602,6 @@
               "add": [
                 "expandedAreas:MonsterTypeBestial",
                 "expandedAreas:MonsterTypeDraconic"
-                
               ]
             }
           },
@@ -464,7 +610,6 @@
             "passives": {
               "add": [
                 "expandedAreas:MonsterTypeUndead"
-                
               ]
             }
           },
@@ -473,7 +618,6 @@
             "passives": {
               "add": [
                 "expandedAreas:MonsterTypeUndead"
-                
               ]
             }
           },
@@ -482,7 +626,6 @@
             "passives": {
               "add": [
                 "expandedAreas:MonsterTypeUndead"
-                
               ]
             }
           },
@@ -491,7 +634,6 @@
             "passives": {
               "add": [
                 "expandedAreas:MonsterTypeBestial"
-                
               ]
             }
           }
