@@ -1501,7 +1501,7 @@
               },
               {
                 "name": "turns",
-                "value": 5
+                "value": 3
               }
             ]
           }
@@ -1536,7 +1536,7 @@
             "damageType": "Custom",
             "character": "Attacker",
             "minRoll": "Fixed",
-            "minPercent": 6,
+            "minPercent": 3,
             "maxRoll": "Fixed",
             "maxPercent": 24,
             "roll": true,
@@ -1546,7 +1546,7 @@
             "damageType": "Custom",
             "character": "Attacker",
             "minRoll": "Fixed",
-            "minPercent": 6,
+            "minPercent": 1.5,
             "maxRoll": "Fixed",
             "maxPercent": 12,
             "roll": true,
@@ -2728,23 +2728,9 @@
       },
       {
         "insertAt": "After",
-        "afterID": "melvorF:Mining_Scroll_Of_XP",
-        "ids": [
-          "expandedAreas:Dynamite"
-        ]
-      },
-      {
-        "insertAt": "After",
         "afterID": "melvorD:Magic_Chest",
         "ids": [
           "expandedAreas:Raid_Spoils"
-        ]
-      },
-      {
-        "insertAt": "After",
-        "afterID": "melvorD:Weird_Gloop",
-        "ids": [
-          "expandedAreas:Insecticide"
         ]
       },
       {
@@ -3119,9 +3105,7 @@
           "expandedAreas:Fearful_Eyeball",
           "expandedAreas:Celestial_Feather",
           "expandedAreas:Phoenix_Feather",
-          "expandedAreas:Pureform_Rune",
-          "expandedAreas:Spider_Silk",
-          "expandedAreas:String"
+          "expandedAreas:Pureform_Rune"
         ]
       },
       {
@@ -52331,61 +52315,7 @@
           }
         ]
       },
-      {
-        "id": "Minotaur",
-        "name": "Minotaur",
-        "media": "assets/combat/monsters/mythical_minotaur.png",
-        "levels": {
-          "Hitpoints": 100,
-          "Attack": 100,
-          "Strength": 100,
-          "Defence": 75,
-          "Ranged": 1,
-          "Magic": 1
-        },
-        "equipmentStats": [
-          {
-            "key": "attackSpeed",
-            "value": 3100
-          }
-        ],
-        "ignoreCompletion": false,
-        "attackType": "melee",
-        "specialAttacks": [
-          "expandedAreas:Charge"
-        ],
-        "passives": [
-          "expandedAreas:MonsterTypeMonstrous"
-        ],
-        "lootChance": 100,
-        "lootTable": [
-          {
-            "itemID": "expandedAreas:Hoof",
-            "minQuantity": 1,
-            "maxQuantity": 2,
-            "weight": 12
-          },
-          {
-            "itemID": "melvorD:Rune_Battleaxe",
-            "minQuantity": 1,
-            "maxQuantity": 2,
-            "weight": 12
-          },
-          {
-            "itemID": "melvorF:Summoning_Familiar_Minotaur",
-            "minQuantity": 1,
-            "maxQuantity": 1,
-            "weight": 12
-          }
-        ],
-        "canSlayer": true,
-        "isBoss": false,
-        "selectedSpell": "melvorD:WindStrike",
-        "bones": {
-          "itemID": "melvorD:Big_Bones",
-          "quantity": 1
-        }
-      },
+      
       {
         "id": "Monk_of_the_Flame",
         "name": "Monk of the Flame",
@@ -56450,12 +56380,12 @@
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 10000000,
+              "cost": 1000000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 100000000,
+              "cost": 10000000,
               "type": "Fixed"
             }
           ]
@@ -59333,6 +59263,8 @@
         "id": "Wand_of_Lightning",
         "media": "assets/bank/wand_lightning.png",
         "category": "expandedAreas:ChargeableItems",
+        "customDescription": "Equips in Offhand Slot, at a penalty of +20% Attack Interval. Has the Special Attack, Lightning Arc (15%): An arc of lightning zaps the target 3 times over 0.3s, dealing 60-480 damage on the first hit, 30-240 on the second, and 15-120 on the third. Each hit applies 1 stack of Shock (-5% Accuracy, up to 10 stacks) and has a 10% chance to apply Stun for 1 turn.",
+       
         "contains": {
           "items": [],
           "itemCharges": {
@@ -59361,6 +59293,7 @@
         "id": "Wand_of_Frost",
         "media": "assets/bank/wand_frost.png",
         "category": "expandedAreas:ChargeableItems",
+        "customDescription": "Equips in Offhand Slot, at a penalty of +20% Attack Interval. Has the Special Attack, Feelin' Frost? (15%): A ray of biting cold pierces the target, dealing damage equal to 1 + 5-10% of their Magic level. On hit, Slows the target for 15% for 3 turns, and has a 20% chance to Freeze the target for 2 turns.",
         "contains": {
           "items": [],
           "itemCharges": {
@@ -69021,7 +68954,6 @@
               "melvorF:Miners_Body",
               "melvorF:Miners_Leggings",
               "melvorF:Miners_Boots",
-              "expandedAreas:Dynamite",
               "melvorF:Mining_Scroll_Of_XP",
               "melvorF:Scroll_Of_Essence",
               "melvorF:Gem_Finder_Scroll"
@@ -71556,11 +71488,25 @@
           "melvorF:CursedMaiden",
           "melvorF:CursedMaiden",
           "melvorF:CursedMaiden",
+          "melvorF:CursedMaiden",
+          "melvorF:CursedMaiden",
+          "melvorF:CursedMaiden",
+          "melvorF:CursedMaiden",
           "melvorF:CursedLich",
           "melvorF:CursedLich",
           "melvorF:CursedLich",
           "melvorF:CursedLich",
           "melvorF:CursedLich",
+          "melvorF:CursedLich",
+          "melvorF:CursedLich",
+          "melvorF:CursedLich",
+          "melvorF:CursedLich",
+          "melvorF:CursedLich",
+          "melvorF:GreaterSkeletalDragon",
+          "melvorF:GreaterSkeletalDragon",
+          "melvorF:GreaterSkeletalDragon",
+          "melvorF:GreaterSkeletalDragon",
+          "melvorF:GreaterSkeletalDragon",
           "melvorF:GreaterSkeletalDragon",
           "melvorF:GreaterSkeletalDragon",
           "melvorF:GreaterSkeletalDragon",

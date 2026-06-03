@@ -135,6 +135,37 @@
     "itemSynergies": [],
     "monsters": [],
     "pets": [],
+    "shopPurchases": [
+      {
+        "id": "Wand_of_Fireball",
+        "media": "assets/bank/wand_fireball.png",
+        "category": "expandedAreas:ChargeableItems",
+        "customDescription": "Equips in Offhand Slot, at a penalty of +20% Attack Interval. Has the Special Attack, FIREBALL! (15%): Launch an avoidable fireball that deals 60-600 damage. On a hit, inflicts Burn.",
+        "contains": {
+          "items": [],
+          "itemCharges": {
+            "id": "expandedAreas:Wand_of_Fireball",
+            "quantity": 10
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 500000
+            }
+          ]
+        },
+        "allowQuantityPurchase": true,
+        "unlockRequirements": [],
+        "purchaseRequirements": [],
+        "defaultBuyLimit": 0,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false
+      }
+    ],
     "skillData": [],
     "strongholds": []
   }

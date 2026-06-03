@@ -148,3 +148,5 @@ SAE v0.9.2.7
 - Unused items removed (e.g. silk, string, dynamite)
 
 # Fixes
+- Strength Training reduced by 10x to its intended 1M SC and 10M GP cost (prev. 10M SC 100M GP)
+- Wands in Shop descriptions have been adjusted to show what they actually do
