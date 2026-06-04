@@ -40648,7 +40648,7 @@
         "modifiers": {
           "maxHitBasedOnTargetCurrentHitpoints": 0.02
         },
-        "ammoType": "Bolts"
+        "ammoType": "Javelins"
       },
       {
         "itemType": "Equipment",
@@ -41493,6 +41493,16 @@
         "itemType": "Weapon",
         "attackType": "ranged",
         "ammoTypeRequired": "Javelins",
+        "cantEquipWith": [
+          "expandedAreas:Bronze_Cannonball",
+          "expandedAreas:Iron_Cannonball",
+          "expandedAreas:Steel_Cannonball",
+          "expandedAreas:Mithril_Cannonball",
+          "expandedAreas:Adamant_Cannonball",
+          "expandedAreas:Rune_Cannonball",
+          "expandedAreas:Silver_Cannonball",
+          "expandedAreas:Dragon_Cannonball"
+        ],
         "id": "Bronze_Pistol",
         "name": "Bronze Pistol",
         "category": "Combat",
@@ -41538,6 +41548,16 @@
         "itemType": "Weapon",
         "attackType": "ranged",
         "ammoTypeRequired": "Javelins",
+        "cantEquipWith": [
+          "expandedAreas:Bronze_Cannonball",
+          "expandedAreas:Iron_Cannonball",
+          "expandedAreas:Steel_Cannonball",
+          "expandedAreas:Mithril_Cannonball",
+          "expandedAreas:Adamant_Cannonball",
+          "expandedAreas:Rune_Cannonball",
+          "expandedAreas:Silver_Cannonball",
+          "expandedAreas:Dragon_Cannonball"
+        ],
         "id": "Iron_Pistol",
         "name": "Iron Pistol",
         "customDescription": "+2% Ranged Crit Chance and -22% Accuracy.<br>Requires Shot to fire.",
@@ -41583,6 +41603,16 @@
         "itemType": "Weapon",
         "attackType": "ranged",
         "ammoTypeRequired": "Javelins",
+        "cantEquipWith": [
+          "expandedAreas:Bronze_Cannonball",
+          "expandedAreas:Iron_Cannonball",
+          "expandedAreas:Steel_Cannonball",
+          "expandedAreas:Mithril_Cannonball",
+          "expandedAreas:Adamant_Cannonball",
+          "expandedAreas:Rune_Cannonball",
+          "expandedAreas:Silver_Cannonball",
+          "expandedAreas:Dragon_Cannonball"
+        ],
         "id": "Steel_Pistol",
         "name": "Steel Pistol",
         "customDescription": "+3% Ranged Crit Chance and -20% Accuracy.<br>Requires Shot to fire.",
@@ -41633,6 +41663,16 @@
         "itemType": "Weapon",
         "attackType": "ranged",
         "ammoTypeRequired": "Javelins",
+        "cantEquipWith": [
+          "expandedAreas:Bronze_Cannonball",
+          "expandedAreas:Iron_Cannonball",
+          "expandedAreas:Steel_Cannonball",
+          "expandedAreas:Mithril_Cannonball",
+          "expandedAreas:Adamant_Cannonball",
+          "expandedAreas:Rune_Cannonball",
+          "expandedAreas:Silver_Cannonball",
+          "expandedAreas:Dragon_Cannonball"
+        ],
         "id": "Mithril_Pistol",
         "name": "Mithril Pistol",
         "customDescription": "+4% Ranged Crit Chance and -18% Accuracy.<br>Requires Shot to fire.",
@@ -41683,6 +41723,16 @@
         "itemType": "Weapon",
         "attackType": "ranged",
         "ammoTypeRequired": "Javelins",
+        "cantEquipWith": [
+          "expandedAreas:Bronze_Cannonball",
+          "expandedAreas:Iron_Cannonball",
+          "expandedAreas:Steel_Cannonball",
+          "expandedAreas:Mithril_Cannonball",
+          "expandedAreas:Adamant_Cannonball",
+          "expandedAreas:Rune_Cannonball",
+          "expandedAreas:Silver_Cannonball",
+          "expandedAreas:Dragon_Cannonball"
+        ],
         "id": "Adamant_Pistol",
         "name": "Adamant Pistol",
         "customDescription": "+5% Ranged Crit Chance and -16% Accuracy.<br>Requires Shot to fire.",
@@ -41733,6 +41783,16 @@
         "itemType": "Weapon",
         "attackType": "ranged",
         "ammoTypeRequired": "Javelins",
+        "cantEquipWith": [
+          "expandedAreas:Bronze_Cannonball",
+          "expandedAreas:Iron_Cannonball",
+          "expandedAreas:Steel_Cannonball",
+          "expandedAreas:Mithril_Cannonball",
+          "expandedAreas:Adamant_Cannonball",
+          "expandedAreas:Rune_Cannonball",
+          "expandedAreas:Silver_Cannonball",
+          "expandedAreas:Dragon_Cannonball"
+        ],
         "id": "Rune_Pistol",
         "name": "Rune Pistol",
         "customDescription": "+6% Ranged Crit Chance and -14% Accuracy.<br>Requires Shot to fire.",
@@ -41783,6 +41843,16 @@
         "itemType": "Weapon",
         "attackType": "ranged",
         "ammoTypeRequired": "Javelins",
+        "cantEquipWith": [
+          "expandedAreas:Bronze_Cannonball",
+          "expandedAreas:Iron_Cannonball",
+          "expandedAreas:Steel_Cannonball",
+          "expandedAreas:Mithril_Cannonball",
+          "expandedAreas:Adamant_Cannonball",
+          "expandedAreas:Rune_Cannonball",
+          "expandedAreas:Silver_Cannonball",
+          "expandedAreas:Dragon_Cannonball"
+        ],
         "id": "Silver_Pistol",
         "name": "Silver Pistol",
         "customDescription": "+7% Ranged Crit Chance and -12% Accuracy Rating.",
@@ -41833,6 +41903,16 @@
         "itemType": "Weapon",
         "attackType": "ranged",
         "ammoTypeRequired": "Javelins",
+        "cantEquipWith": [
+          "expandedAreas:Bronze_Cannonball",
+          "expandedAreas:Iron_Cannonball",
+          "expandedAreas:Steel_Cannonball",
+          "expandedAreas:Mithril_Cannonball",
+          "expandedAreas:Adamant_Cannonball",
+          "expandedAreas:Rune_Cannonball",
+          "expandedAreas:Silver_Cannonball",
+          "expandedAreas:Dragon_Cannonball"
+        ],
         "id": "Dragon_Pistol",
         "name": "Dragon Pistol",
         "customDescription": "+10% Ranged Crit Chance and -10% Accuracy.<br>Requires Shot to fire.",
@@ -42233,6 +42313,16 @@
         "golbinRaidExclusive": false,
         "sellsFor": 150,
         "tier": "bronze",
+        "cantEquipWith": [
+          "expandedAreas:Bronze_Cannonball",
+          "expandedAreas:Iron_Cannonball",
+          "expandedAreas:Steel_Cannonball",
+          "expandedAreas:Mithril_Cannonball",
+          "expandedAreas:Adamant_Cannonball",
+          "expandedAreas:Rune_Cannonball",
+          "expandedAreas:Silver_Cannonball",
+          "expandedAreas:Dragon_Cannonball"
+        ],
         "validSlots": [
           "Weapon"
         ],
@@ -42279,6 +42369,16 @@
         "golbinRaidExclusive": false,
         "sellsFor": 300,
         "tier": "iron",
+        "cantEquipWith": [
+          "expandedAreas:Bronze_Cannonball",
+          "expandedAreas:Iron_Cannonball",
+          "expandedAreas:Steel_Cannonball",
+          "expandedAreas:Mithril_Cannonball",
+          "expandedAreas:Adamant_Cannonball",
+          "expandedAreas:Rune_Cannonball",
+          "expandedAreas:Silver_Cannonball",
+          "expandedAreas:Dragon_Cannonball"
+        ],
         "validSlots": [
           "Weapon"
         ],
@@ -42325,6 +42425,16 @@
         "golbinRaidExclusive": false,
         "sellsFor": 700,
         "tier": "steel",
+        "cantEquipWith": [
+          "expandedAreas:Bronze_Cannonball",
+          "expandedAreas:Iron_Cannonball",
+          "expandedAreas:Steel_Cannonball",
+          "expandedAreas:Mithril_Cannonball",
+          "expandedAreas:Adamant_Cannonball",
+          "expandedAreas:Rune_Cannonball",
+          "expandedAreas:Silver_Cannonball",
+          "expandedAreas:Dragon_Cannonball"
+        ],
         "validSlots": [
           "Weapon"
         ],
@@ -42376,6 +42486,16 @@
         "golbinRaidExclusive": false,
         "sellsFor": 2550,
         "tier": "mithril",
+        "cantEquipWith": [
+          "expandedAreas:Bronze_Cannonball",
+          "expandedAreas:Iron_Cannonball",
+          "expandedAreas:Steel_Cannonball",
+          "expandedAreas:Mithril_Cannonball",
+          "expandedAreas:Adamant_Cannonball",
+          "expandedAreas:Rune_Cannonball",
+          "expandedAreas:Silver_Cannonball",
+          "expandedAreas:Dragon_Cannonball"
+        ],
         "validSlots": [
           "Weapon"
         ],
@@ -42427,6 +42547,16 @@
         "golbinRaidExclusive": false,
         "sellsFor": 3750,
         "tier": "adamant",
+        "cantEquipWith": [
+          "expandedAreas:Bronze_Cannonball",
+          "expandedAreas:Iron_Cannonball",
+          "expandedAreas:Steel_Cannonball",
+          "expandedAreas:Mithril_Cannonball",
+          "expandedAreas:Adamant_Cannonball",
+          "expandedAreas:Rune_Cannonball",
+          "expandedAreas:Silver_Cannonball",
+          "expandedAreas:Dragon_Cannonball"
+        ],
         "validSlots": [
           "Weapon"
         ],
@@ -42478,6 +42608,16 @@
         "golbinRaidExclusive": false,
         "sellsFor": 4750,
         "tier": "rune",
+        "cantEquipWith": [
+          "expandedAreas:Bronze_Cannonball",
+          "expandedAreas:Iron_Cannonball",
+          "expandedAreas:Steel_Cannonball",
+          "expandedAreas:Mithril_Cannonball",
+          "expandedAreas:Adamant_Cannonball",
+          "expandedAreas:Rune_Cannonball",
+          "expandedAreas:Silver_Cannonball",
+          "expandedAreas:Dragon_Cannonball"
+        ],
         "validSlots": [
           "Weapon"
         ],
@@ -42529,6 +42669,16 @@
         "golbinRaidExclusive": false,
         "sellsFor": 6000,
         "tier": "silver",
+        "cantEquipWith": [
+          "expandedAreas:Bronze_Cannonball",
+          "expandedAreas:Iron_Cannonball",
+          "expandedAreas:Steel_Cannonball",
+          "expandedAreas:Mithril_Cannonball",
+          "expandedAreas:Adamant_Cannonball",
+          "expandedAreas:Rune_Cannonball",
+          "expandedAreas:Silver_Cannonball",
+          "expandedAreas:Dragon_Cannonball"
+        ],
         "validSlots": [
           "Weapon"
         ],
@@ -42592,6 +42742,16 @@
         "golbinRaidExclusive": false,
         "sellsFor": 10750,
         "tier": "dragon",
+        "cantEquipWith": [
+          "expandedAreas:Bronze_Cannonball",
+          "expandedAreas:Iron_Cannonball",
+          "expandedAreas:Steel_Cannonball",
+          "expandedAreas:Mithril_Cannonball",
+          "expandedAreas:Adamant_Cannonball",
+          "expandedAreas:Rune_Cannonball",
+          "expandedAreas:Silver_Cannonball",
+          "expandedAreas:Dragon_Cannonball"
+        ],
         "validSlots": [
           "Weapon"
         ],
@@ -42634,6 +42794,16 @@
       {
         "id": "Bronze_Handcannon",
         "name": "Bronze Handcannon",
+        "cantEquipWith": [
+          "expandedAreas:Bronze_Shot",
+          "expandedAreas:Iron_Shot",
+          "expandedAreas:Steel_Shot",
+          "expandedAreas:Mithril_Shot",
+          "expandedAreas:Adamant_Shot",
+          "expandedAreas:Rune_Shot",
+          "expandedAreas:Silver_Shot",
+          "expandedAreas:Dragon_Shot"
+        ],
         "customDescription": "+5% Ranged Crit Chance and -65% Ranged Accuracy.<br>Requires Cannonballs to fire.",
         "category": "Combat",
         "type": "Ranged Weapon",
@@ -42686,6 +42856,16 @@
       {
         "id": "Iron_Handcannon",
         "name": "Iron Handcannon",
+        "cantEquipWith": [
+          "expandedAreas:Bronze_Shot",
+          "expandedAreas:Iron_Shot",
+          "expandedAreas:Steel_Shot",
+          "expandedAreas:Mithril_Shot",
+          "expandedAreas:Adamant_Shot",
+          "expandedAreas:Rune_Shot",
+          "expandedAreas:Silver_Shot",
+          "expandedAreas:Dragon_Shot"
+        ],
         "customDescription": "+5% Ranged Crit Chance and -60% Ranged Accuracy.<br>Requires Cannonballs to fire.",
         "category": "Combat",
         "type": "Ranged Weapon",
@@ -42738,6 +42918,16 @@
       {
         "id": "Steel_Handcannon",
         "name": "Steel Handcannon",
+        "cantEquipWith": [
+          "expandedAreas:Bronze_Shot",
+          "expandedAreas:Iron_Shot",
+          "expandedAreas:Steel_Shot",
+          "expandedAreas:Mithril_Shot",
+          "expandedAreas:Adamant_Shot",
+          "expandedAreas:Rune_Shot",
+          "expandedAreas:Silver_Shot",
+          "expandedAreas:Dragon_Shot"
+        ],
         "customDescription": "+15% Ranged Crit Chance and -55% Ranged Accuracy.<br>Requires Cannonballs to fire.",
         "category": "Combat",
         "type": "Ranged Weapon",
@@ -42795,6 +42985,16 @@
       {
         "id": "Mithril_Handcannon",
         "name": "Mithril Handcannon",
+        "cantEquipWith": [
+          "expandedAreas:Bronze_Shot",
+          "expandedAreas:Iron_Shot",
+          "expandedAreas:Steel_Shot",
+          "expandedAreas:Mithril_Shot",
+          "expandedAreas:Adamant_Shot",
+          "expandedAreas:Rune_Shot",
+          "expandedAreas:Silver_Shot",
+          "expandedAreas:Dragon_Shot"
+        ],
         "customDescription": "+20% Ranged Crit Chance and -50% Ranged Accuracy.<br>Requires Cannonballs to fire.",
         "category": "Combat",
         "type": "Ranged Weapon",
@@ -42852,6 +43052,16 @@
       {
         "id": "Adamant_Handcannon",
         "name": "Adamant Handcannon",
+        "cantEquipWith": [
+          "expandedAreas:Bronze_Shot",
+          "expandedAreas:Iron_Shot",
+          "expandedAreas:Steel_Shot",
+          "expandedAreas:Mithril_Shot",
+          "expandedAreas:Adamant_Shot",
+          "expandedAreas:Rune_Shot",
+          "expandedAreas:Silver_Shot",
+          "expandedAreas:Dragon_Shot"
+        ],
         "customDescription": "+25% Ranged Crit Chance and -45% Ranged Accuracy.<br>Requires Cannonballs to fire.",
         "category": "Combat",
         "type": "Ranged Weapon",
@@ -42909,6 +43119,16 @@
       {
         "id": "Rune_Handcannon",
         "name": "Rune Handcannon",
+        "cantEquipWith": [
+          "expandedAreas:Bronze_Shot",
+          "expandedAreas:Iron_Shot",
+          "expandedAreas:Steel_Shot",
+          "expandedAreas:Mithril_Shot",
+          "expandedAreas:Adamant_Shot",
+          "expandedAreas:Rune_Shot",
+          "expandedAreas:Silver_Shot",
+          "expandedAreas:Dragon_Shot"
+        ],
         "customDescription": "+30% Ranged Crit Chance and -40% Ranged Accuracy.<br>Requires Cannonballs to fire.",
         "category": "Combat",
         "type": "Ranged Weapon",
@@ -42966,6 +43186,16 @@
       {
         "id": "Silver_Handcannon",
         "name": "Silver Handcannon",
+        "cantEquipWith": [
+          "expandedAreas:Bronze_Shot",
+          "expandedAreas:Iron_Shot",
+          "expandedAreas:Steel_Shot",
+          "expandedAreas:Mithril_Shot",
+          "expandedAreas:Adamant_Shot",
+          "expandedAreas:Rune_Shot",
+          "expandedAreas:Silver_Shot",
+          "expandedAreas:Dragon_Shot"
+        ],
         "customDescription": "+30% Ranged Crit Chance and -40% Ranged Accuracy.<br>Requires Cannonballs to fire.",
         "category": "Combat",
         "type": "Ranged Weapon",
@@ -43023,6 +43253,16 @@
       {
         "id": "Dragon_Handcannon",
         "name": "Dragon Handcannon",
+        "cantEquipWith": [
+          "expandedAreas:Bronze_Shot",
+          "expandedAreas:Iron_Shot",
+          "expandedAreas:Steel_Shot",
+          "expandedAreas:Mithril_Shot",
+          "expandedAreas:Adamant_Shot",
+          "expandedAreas:Rune_Shot",
+          "expandedAreas:Silver_Shot",
+          "expandedAreas:Dragon_Shot"
+        ],
         "customDescription": "+35% Ranged Crit Chance and -35% Ranged Accuracy.<br>Requires Cannonballs to fire.",
         "category": "Combat",
         "type": "Ranged Weapon",
@@ -52315,7 +52555,6 @@
           }
         ]
       },
-      
       {
         "id": "Monk_of_the_Flame",
         "name": "Monk of the Flame",
@@ -59264,7 +59503,6 @@
         "media": "assets/bank/wand_lightning.png",
         "category": "expandedAreas:ChargeableItems",
         "customDescription": "Equips in Offhand Slot, at a penalty of +20% Attack Interval. Has the Special Attack, Lightning Arc (15%): An arc of lightning zaps the target 3 times over 0.3s, dealing 60-480 damage on the first hit, 30-240 on the second, and 15-120 on the third. Each hit applies 1 stack of Shock (-5% Accuracy, up to 10 stacks) and has a 10% chance to apply Stun for 1 turn.",
-       
         "contains": {
           "items": [],
           "itemCharges": {
