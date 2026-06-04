@@ -41994,8 +41994,8 @@
           }
         ],
         "modifiers": {
-          "critChance": 2,
-          "accuracyRating": -65
+          "rangedCritChance": 2,
+          "rangedAccuracyRating": -65
         }
       },
       {
@@ -42033,8 +42033,8 @@
           }
         ],
         "modifiers": {
-          "critChance": 3,
-          "accuracyRating": -60
+          "rangedCritChance": 3,
+          "rangedAccuracyRating": -60
         }
       },
       {
@@ -42077,8 +42077,8 @@
           }
         ],
         "modifiers": {
-          "critChance": 4,
-          "accuracyRating": -50
+          "rangedCritChance": 4,
+          "rangedAccuracyRating": -50
         }
       },
       {
@@ -42121,8 +42121,8 @@
           }
         ],
         "modifiers": {
-          "critChance": 5,
-          "accuracyRating": -45
+          "rangedCritChance": 5,
+          "rangedAccuracyRating": -45
         }
       },
       {
@@ -42165,8 +42165,8 @@
           }
         ],
         "modifiers": {
-          "critChance": 6,
-          "accuracyRating": -40
+          "rangedCritChance": 6,
+          "rangedAccuracyRating": -40
         }
       },
       {
@@ -42209,8 +42209,8 @@
           }
         ],
         "modifiers": {
-          "critChance": 7,
-          "accuracyRating": -30
+          "rangedCritChance": 7,
+          "rangedAccuracyRating": -30
         }
       },
       {
@@ -42253,8 +42253,8 @@
           }
         ],
         "modifiers": {
-          "critChance": 8,
-          "accuracyRating": -25
+          "rangedCritChance": 8,
+          "rangedAccuracyRating": -25
         }
       },
       {
@@ -42297,8 +42297,8 @@
           }
         ],
         "modifiers": {
-          "critChance": 10,
-          "accuracyRating": -20
+          "rangedCritChance": 10,
+          "rangedAccuracyRating": -20
         }
       },
       {
