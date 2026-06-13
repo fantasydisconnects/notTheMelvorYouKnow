@@ -3,6 +3,7 @@
   "namespace": "expandedAreas",
   "data": {
     "attacks": [
+      
       {
         "id": "FistOfTheWinterWinds",
         "defaultChance": 15,
@@ -97,6 +98,7 @@
     "slayerAreas": [],
     "dungeons": [],
     "combatEffects": [
+     
       {
         "id": "CycloneFist0",
         "templateID": "melvorD:StaticSelfCountingModifier",
@@ -129,7 +131,14 @@
     "combatPassives": [],
     "items": [
       {
-        "modifiers": {}
+        "modifiers": {
+          "skillXP": [
+            {
+              "skillID": "melvorD:Strength",
+              "value": 5
+            }
+          ]
+        }
       }
     ],
     "itemSynergies": [],

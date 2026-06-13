@@ -1763,8 +1763,7 @@
         "damage": [
           {
             "damageType": "Normal",
-            "amplitude": 120,
-            "attackCount": 2
+            "amplitude": 120
           }
         ],
         "prehitEffects": [
@@ -1839,8 +1838,7 @@
         "damage": [
           {
             "damageType": "Normal",
-            "amplitude": 100,
-            "attackCount": 2
+            "amplitude": 100
           }
         ],
         "prehitEffects": [

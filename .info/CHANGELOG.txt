@@ -150,3 +150,11 @@ SAE v0.9.2.7
 # Fixes
 - Strength Training reduced by 10x to its intended 1M SC and 10M GP cost (prev. 10M SC 100M GP)
 - Wands in Shop descriptions have been adjusted to show what they actually do
+
+SAE v0.9.2.7.1
+# Fixes
+- Pistols now don't shoot cannonballs
+
+SAE v0.9.2.7.2
+# Fixes
+- Wide Slash and Counterattack now correctly deal damage
