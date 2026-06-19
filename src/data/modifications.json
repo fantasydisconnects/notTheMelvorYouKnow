@@ -369,22 +369,6 @@
       {
         "id": "melvorF:Potion_Box_II",
         "dropTable": {
-          "remove": [
-            "melvorD:Cabbage"
-          ],
-          "add": [
-            {
-              "itemID": "expandedAreas:Bag_of_Endless_Gold1",
-              "minQuantity": 2,
-              "maxQuantity": 2,
-              "weight": 1
-            }
-          ]
-        }
-      },
-      {
-        "id": "melvorF:Potion_Box_II",
-        "dropTable": {
           "add": [
             {
               "itemID": "expandedAreas:Antivenom_I",
@@ -4760,6 +4744,2123 @@
             "expandedAreas:MonsterSubtypeLycanthrope"
           ]
         }
+      }
+    ],
+    "shopPurchases": [
+      {
+        "id": "melvorF:Woodcutters_Hat",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 20
+              },
+              {
+                "type": "TownshipTask",
+                "count": 10
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 20
+              },
+              {
+                "type": "TownshipTask",
+                "count": 10
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 20
+              },
+              {
+                "type": "TownshipTask",
+                "count": 10
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Woodcutters_Body",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 40
+              },
+              {
+                "type": "TownshipTask",
+                "count": 20
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 40
+              },
+              {
+                "type": "TownshipTask",
+                "count": 20
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 40
+              },
+              {
+                "type": "TownshipTask",
+                "count": 20
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Woodcutters_Leggings",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 60
+              },
+              {
+                "type": "TownshipTask",
+                "count": 30
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 60
+              },
+              {
+                "type": "TownshipTask",
+                "count": 30
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 60
+              },
+              {
+                "type": "TownshipTask",
+                "count": 30
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Woodcutters_Boots",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 80
+              },
+              {
+                "type": "TownshipTask",
+                "count": 40
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 80
+              },
+              {
+                "type": "TownshipTask",
+                "count": 40
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 80
+              },
+              {
+                "type": "TownshipTask",
+                "count": 40
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Burning_Mans_Hat",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 20
+              },
+              {
+                "type": "TownshipTask",
+                "count": 10
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 20
+              },
+              {
+                "type": "TownshipTask",
+                "count": 10
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 20
+              },
+              {
+                "type": "TownshipTask",
+                "count": 10
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Burning_Mans_Body",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 40
+              },
+              {
+                "type": "TownshipTask",
+                "count": 20
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 40
+              },
+              {
+                "type": "TownshipTask",
+                "count": 20
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 40
+              },
+              {
+                "type": "TownshipTask",
+                "count": 20
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Burning_Mans_Leggings",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 60
+              },
+              {
+                "type": "TownshipTask",
+                "count": 30
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 60
+              },
+              {
+                "type": "TownshipTask",
+                "count": 30
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 60
+              },
+              {
+                "type": "TownshipTask",
+                "count": 30
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Burning_Mans_Boots",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 80
+              },
+              {
+                "type": "TownshipTask",
+                "count": 40
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 80
+              },
+              {
+                "type": "TownshipTask",
+                "count": 40
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 80
+              },
+              {
+                "type": "TownshipTask",
+                "count": 40
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Blacksmiths_Hat",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 20
+              },
+              {
+                "type": "TownshipTask",
+                "count": 10
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 20
+              },
+              {
+                "type": "TownshipTask",
+                "count": 10
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 20
+              },
+              {
+                "type": "TownshipTask",
+                "count": 10
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Blacksmiths_Body",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 40
+              },
+              {
+                "type": "TownshipTask",
+                "count": 20
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 40
+              },
+              {
+                "type": "TownshipTask",
+                "count": 20
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 40
+              },
+              {
+                "type": "TownshipTask",
+                "count": 20
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Blacksmiths_Leggings",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 60
+              },
+              {
+                "type": "TownshipTask",
+                "count": 30
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 60
+              },
+              {
+                "type": "TownshipTask",
+                "count": 30
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 60
+              },
+              {
+                "type": "TownshipTask",
+                "count": 30
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Blacksmiths_Boots",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 80
+              },
+              {
+                "type": "TownshipTask",
+                "count": 40
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 80
+              },
+              {
+                "type": "TownshipTask",
+                "count": 40
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 80
+              },
+              {
+                "type": "TownshipTask",
+                "count": 40
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Fishermans_Hat",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 20
+              },
+              {
+                "type": "TownshipTask",
+                "count": 10
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 20
+              },
+              {
+                "type": "TownshipTask",
+                "count": 10
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 20
+              },
+              {
+                "type": "TownshipTask",
+                "count": 10
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Fishermans_Body",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 40
+              },
+              {
+                "type": "TownshipTask",
+                "count": 20
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 40
+              },
+              {
+                "type": "TownshipTask",
+                "count": 20
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 40
+              },
+              {
+                "type": "TownshipTask",
+                "count": 20
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Fishermans_Leggings",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 60
+              },
+              {
+                "type": "TownshipTask",
+                "count": 30
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 60
+              },
+              {
+                "type": "TownshipTask",
+                "count": 30
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 60
+              },
+              {
+                "type": "TownshipTask",
+                "count": 30
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Fishermans_Boots",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 80
+              },
+              {
+                "type": "TownshipTask",
+                "count": 40
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 80
+              },
+              {
+                "type": "TownshipTask",
+                "count": 40
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 80
+              },
+              {
+                "type": "TownshipTask",
+                "count": 40
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Miners_Hat",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 20
+              },
+              {
+                "type": "TownshipTask",
+                "count": 10
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 20
+              },
+              {
+                "type": "TownshipTask",
+                "count": 10
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 20
+              },
+              {
+                "type": "TownshipTask",
+                "count": 10
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Miners_Body",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 40
+              },
+              {
+                "type": "TownshipTask",
+                "count": 20
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 40
+              },
+              {
+                "type": "TownshipTask",
+                "count": 20
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 40
+              },
+              {
+                "type": "TownshipTask",
+                "count": 20
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Miners_Leggings",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 60
+              },
+              {
+                "type": "TownshipTask",
+                "count": 30
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 60
+              },
+              {
+                "type": "TownshipTask",
+                "count": 30
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 60
+              },
+              {
+                "type": "TownshipTask",
+                "count": 30
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Miners_Boots",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 80
+              },
+              {
+                "type": "TownshipTask",
+                "count": 40
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 80
+              },
+              {
+                "type": "TownshipTask",
+                "count": 40
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 80
+              },
+              {
+                "type": "TownshipTask",
+                "count": 40
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Fletchers_Hat",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 20
+              },
+              {
+                "type": "TownshipTask",
+                "count": 10
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 20
+              },
+              {
+                "type": "TownshipTask",
+                "count": 10
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 20
+              },
+              {
+                "type": "TownshipTask",
+                "count": 10
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Fletchers_Body",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 40
+              },
+              {
+                "type": "TownshipTask",
+                "count": 20
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 40
+              },
+              {
+                "type": "TownshipTask",
+                "count": 20
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 40
+              },
+              {
+                "type": "TownshipTask",
+                "count": 20
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Fletchers_Leggings",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 60
+              },
+              {
+                "type": "TownshipTask",
+                "count": 30
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 60
+              },
+              {
+                "type": "TownshipTask",
+                "count": 30
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 60
+              },
+              {
+                "type": "TownshipTask",
+                "count": 30
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Fletchers_Boots",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 80
+              },
+              {
+                "type": "TownshipTask",
+                "count": 40
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 80
+              },
+              {
+                "type": "TownshipTask",
+                "count": 40
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 80
+              },
+              {
+                "type": "TownshipTask",
+                "count": 40
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Crafters_Hat",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 20
+              },
+              {
+                "type": "TownshipTask",
+                "count": 10
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 20
+              },
+              {
+                "type": "TownshipTask",
+                "count": 10
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 20
+              },
+              {
+                "type": "TownshipTask",
+                "count": 10
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Crafters_Body",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 40
+              },
+              {
+                "type": "TownshipTask",
+                "count": 20
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 40
+              },
+              {
+                "type": "TownshipTask",
+                "count": 20
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 40
+              },
+              {
+                "type": "TownshipTask",
+                "count": 20
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Crafters_Leggings",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 60
+              },
+              {
+                "type": "TownshipTask",
+                "count": 30
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 60
+              },
+              {
+                "type": "TownshipTask",
+                "count": 30
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 60
+              },
+              {
+                "type": "TownshipTask",
+                "count": 30
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Crafters_Boots",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 80
+              },
+              {
+                "type": "TownshipTask",
+                "count": 40
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 80
+              },
+              {
+                "type": "TownshipTask",
+                "count": 40
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 80
+              },
+              {
+                "type": "TownshipTask",
+                "count": 40
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Runecrafters_Hat",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 20
+              },
+              {
+                "type": "TownshipTask",
+                "count": 10
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 20
+              },
+              {
+                "type": "TownshipTask",
+                "count": 10
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 20
+              },
+              {
+                "type": "TownshipTask",
+                "count": 10
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Runecrafters_Body",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 40
+              },
+              {
+                "type": "TownshipTask",
+                "count": 20
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 40
+              },
+              {
+                "type": "TownshipTask",
+                "count": 20
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 40
+              },
+              {
+                "type": "TownshipTask",
+                "count": 20
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Runecrafters_Leggings",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 60
+              },
+              {
+                "type": "TownshipTask",
+                "count": 30
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 60
+              },
+              {
+                "type": "TownshipTask",
+                "count": 30
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 60
+              },
+              {
+                "type": "TownshipTask",
+                "count": 30
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Runecrafters_Boots",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 80
+              },
+              {
+                "type": "TownshipTask",
+                "count": 40
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 80
+              },
+              {
+                "type": "TownshipTask",
+                "count": 40
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 80
+              },
+              {
+                "type": "TownshipTask",
+                "count": 40
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Potion_Makers_Hat",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 20
+              },
+              {
+                "type": "TownshipTask",
+                "count": 10
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 20
+              },
+              {
+                "type": "TownshipTask",
+                "count": 10
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 20
+              },
+              {
+                "type": "TownshipTask",
+                "count": 10
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Potion_Makers_Body",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 40
+              },
+              {
+                "type": "TownshipTask",
+                "count": 20
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 40
+              },
+              {
+                "type": "TownshipTask",
+                "count": 20
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 40
+              },
+              {
+                "type": "TownshipTask",
+                "count": 20
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Potion_Makers_Leggings",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 60
+              },
+              {
+                "type": "TownshipTask",
+                "count": 30
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 60
+              },
+              {
+                "type": "TownshipTask",
+                "count": 30
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 60
+              },
+              {
+                "type": "TownshipTask",
+                "count": 30
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Potion_Makers_Boots",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 80
+              },
+              {
+                "type": "TownshipTask",
+                "count": 40
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 80
+              },
+              {
+                "type": "TownshipTask",
+                "count": 40
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 80
+              },
+              {
+                "type": "TownshipTask",
+                "count": 40
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Performance_Enhancing_Hat",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 20
+              },
+              {
+                "type": "TownshipTask",
+                "count": 10
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 20
+              },
+              {
+                "type": "TownshipTask",
+                "count": 10
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 20
+              },
+              {
+                "type": "TownshipTask",
+                "count": 10
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Performance_Enhancing_Body",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 40
+              },
+              {
+                "type": "TownshipTask",
+                "count": 20
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 40
+              },
+              {
+                "type": "TownshipTask",
+                "count": 20
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 40
+              },
+              {
+                "type": "TownshipTask",
+                "count": 20
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Performance_Enhancing_Leggings",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 60
+              },
+              {
+                "type": "TownshipTask",
+                "count": 30
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 60
+              },
+              {
+                "type": "TownshipTask",
+                "count": 30
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 60
+              },
+              {
+                "type": "TownshipTask",
+                "count": 30
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Performance_Enhancing_Boots",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 80
+              },
+              {
+                "type": "TownshipTask",
+                "count": 40
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 80
+              },
+              {
+                "type": "TownshipTask",
+                "count": 40
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 80
+              },
+              {
+                "type": "TownshipTask",
+                "count": 40
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Star_Gazing_Hat",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 20
+              },
+              {
+                "type": "TownshipTask",
+                "count": 10
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 20
+              },
+              {
+                "type": "TownshipTask",
+                "count": 10
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 20
+              },
+              {
+                "type": "TownshipTask",
+                "count": 10
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Star_Gazing_Body",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 40
+              },
+              {
+                "type": "TownshipTask",
+                "count": 20
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 40
+              },
+              {
+                "type": "TownshipTask",
+                "count": 20
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 40
+              },
+              {
+                "type": "TownshipTask",
+                "count": 20
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Star_Gazing_Leggings",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 60
+              },
+              {
+                "type": "TownshipTask",
+                "count": 30
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 60
+              },
+              {
+                "type": "TownshipTask",
+                "count": 30
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 60
+              },
+              {
+                "type": "TownshipTask",
+                "count": 30
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Star_Gazing_Boots",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 80
+              },
+              {
+                "type": "TownshipTask",
+                "count": 40
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 80
+              },
+              {
+                "type": "TownshipTask",
+                "count": 40
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 80
+              },
+              {
+                "type": "TownshipTask",
+                "count": 40
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "melvorF:Skilling_Outfit_Upgrade",
+        "purchaseRequirements": [
+          {
+            "gamemodeID": "melvorD:Standard",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 95
+              },
+              {
+                "type": "TownshipTask",
+                "count": 80
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Hardcore",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 95
+              },
+              {
+                "type": "TownshipTask",
+                "count": 80
+              }
+            ]
+          },
+          {
+            "gamemodeID": "melvorF:Adventure",
+            "newRequirements": [
+              {
+                "type": "SkillLevel",
+                "skillID": "melvorD:Township",
+                "level": 95
+              },
+              {
+                "type": "TownshipTask",
+                "count": 80
+              }
+            ]
+          }
+        ]
       }
     ],
     "skillData": [

@@ -158,3 +158,10 @@ SAE v0.9.2.7.1
 SAE v0.9.2.7.2
 # Fixes
 - Wide Slash and Counterattack now correctly deal damage
+
+SAE v0.9.3 — Balance Changes and Quality of Life
+# Changes
+- Task Completion Requirements to purchase Skilling outfits (and the upgrade) from Township have been changed to be much more obtainable; consequently, the level requirement has been increased. 
+  - Tasks required to purchase set pieces reduced by 50% per piece, and tasks required to purchase the outfit upgrade reduced from 95 -> 80.
+  - Township level required to purchase set pieces increased by 10 for Hats and 20 for the rest.
+  - These changes do not apply to Ancient Relics Mode for balance reasons.

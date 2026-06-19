@@ -2,180 +2,29 @@
   "$schema": "https://melvoridle.com/assets/schema/gameData.json",
   "namespace": "expandedAreas",
   "data": {
-    "attacks": [
-      
-      {
-        "id": "FistOfTheWinterWinds",
-        "defaultChance": 15,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 100
-          },
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "maxRoll": "MagicScaling",
-            "maxPercent": 35,
-            "roll": false
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "melvorD:Freeze",
-            "chance": 25,
-            "initialParams": [
-              {
-                "name": "turns",
-                "value": 2
-              }
-            ]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 500,
-        "lifesteal": 0,
-        "name": "Fist of the Winter Winds",
-        "description": "Harness the winter winds, striking for ${attackDamageMaxValue0}% of your normal damage + ${attackDamageMaxValue1}% of your Magic level. On a hit, ${onHitEffect0chance}% chance to inflict Freeze for ${onHitEffect0turns} turns.",
-        "descriptionGenerator": "An <avoidable> attack that deals <damage> damage. On a hit, <hitEffect>.",
-        "usesRunesPerProc": false
-      },
-      {
-        "id": "ToxicNeedleFlurry",
-        "defaultChance": 15,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 80
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "melvorD:Poison",
-            "chance": 20
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 5,
-        "attackInterval": 200,
-        "lifesteal": 0,
-        "name": "Toxic Needle Flurry",
-        "description": "Fire ${hitCount} small needles from your knuckles in a flurry of long-reaching jabs that deal up to ${attackDamageMaxValue0}% of your normal damage each (Avoidable). On a hit has a ${onHitEffect0chance}% chance to inflict Poison that deals ${onHitEffect0DamageMaxValue0}% of the Enemy's max hitpoints as damage over ${onHitEffect0duration}s.",
-        "descriptionGenerator": "Fire <count> small needles that deal <damage> damage each (<Avoidable>). On a hit <hitEffect>.",
-        "usesRunesPerProc": false
-      },
-      {
-        "id": "CycloneFist",
-        "defaultChance": 15,
-        "damage": [
-          {
-            "damageType": "Normal",
-            "amplitude": 75
-          }
-        ],
-        "prehitEffects": [
-          {
-            "effectID": "WTM:CycloneFist0"
-          }
-        ],
-        "onhitEffects": [],
-        "cantMiss": false,
-        "attackCount": 7,
-        "attackInterval": 600,
-        "lifesteal": 0,
-        "name": "Cyclone",
-        "description": "Surrounds you in wind for ${duration}s, while dealing ${attackDamageMaxValue0}% normal damage ${hitCount} times. Gives you +${preHitEffect0modValue0}% Global Evasion and +${preHitEffect0modValue1} Reflect Damage until the end of the attack.",
-        "descriptionGenerator": "Surrounds <attacker> in wind for <duration>, while dealing <damage> <avoidable> damage <count> times. On use, <prehitEffect>.",
-        "usesRunesPerProc": false
-      }
-    ],
-    "prayers": [],
+    "attacks": [],
     "attackSpells": [],
     "combatAreas": [],
-    "slayerAreas": [],
-    "dungeons": [],
-    "combatEffects": [
-     
-      {
-        "id": "CycloneFist0",
-        "templateID": "melvorD:StaticSelfCountingModifier",
-        "name": "Cyclone Fist",
-        "media": "assets/combat/status/evasion_increase.png",
-        "target": "Self",
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 0
-          }
-        ],
-        "statGroups": [
-          {
-            "name": "stacks",
-            "modifiers": {
-              "evasion": 10,
-              "flatReflectDamage": 30
-            }
-          }
-        ],
-        "effectGroups": [
-          "melvorD:Buff"
-        ]
-      }
-    ],
     "combatEffectGroups": [],
+    "combatEffects": [],
     "combatEffectTables": [],
     "combatEffectTemplates": [],
     "combatPassives": [],
+    "dungeons": [],
     "items": [
-      {
-        "modifiers": {
-          "skillXP": [
-            {
-              "skillID": "melvorD:Strength",
-              "value": 5
-            }
-          ]
-        }
-      }
+
     ],
     "itemSynergies": [],
     "monsters": [],
     "pets": [],
-    "shopPurchases": [
-      {
-        "id": "Wand_of_Fireball",
-        "media": "assets/bank/wand_fireball.png",
-        "category": "expandedAreas:ChargeableItems",
-        "customDescription": "Equips in Offhand Slot, at a penalty of +20% Attack Interval. Has the Special Attack, FIREBALL! (15%): Launch an avoidable fireball that deals 60-600 damage. On a hit, inflicts Burn.",
-        "contains": {
-          "items": [],
-          "itemCharges": {
-            "id": "expandedAreas:Wand_of_Fireball",
-            "quantity": 10
-          }
-        },
-        "cost": {
-          "items": [],
-          "currencies": [
-            {
-              "currency": "melvorD:GP",
-              "type": "Fixed",
-              "cost": 500000
-            }
-          ]
-        },
-        "allowQuantityPurchase": true,
-        "unlockRequirements": [],
-        "purchaseRequirements": [],
-        "defaultBuyLimit": 0,
-        "buyLimitOverrides": [],
-        "showBuyLimit": false
-      }
+    "prayers": [],
+    "shopPurchases": [],
+    "skillData": [
+
     ],
-    "skillData": [],
+    "slayerAreas": [
+
+    ],
     "strongholds": []
   }
 }
