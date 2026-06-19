@@ -165,3 +165,5 @@ SAE v0.9.3 — Balance Changes and Quality of Life
   - Tasks required to purchase set pieces reduced by 50% per piece, and tasks required to purchase the outfit upgrade reduced from 95 -> 80.
   - Township level required to purchase set pieces increased by 10 for Hats and 20 for the rest.
   - These changes do not apply to Ancient Relics Mode for balance reasons.
+- Box types I and II purchased from Township have had their drop table loot reduced by 10-75%, with higher-level items reduced the most. Potion boxes were hit the hardest (reduced from 300 -> 75). The tables have now been weighted towards rolling more consistent quantities of each item to compensate.
+  - Exception: Ore Box II's drop table has been increased overall

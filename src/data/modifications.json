@@ -326,6 +326,610 @@
     ],
     "items": [
       {
+        "id": "melvorF:Food_Box_I",
+        "dropTable": {
+          "remove": [
+            "melvorD:Shrimp",
+            "melvorD:Beef",
+            "melvorD:Chicken",
+            "melvorD:Salmon",
+            "melvorD:Lobster",
+            "melvorD:Swordfish",
+            "melvorD:Crab",
+            "melvorD:Bread",
+            "melvorD:Plain_Pizza_Slice",
+            "melvorD:Basic_Soup"
+          ],
+          "add": [
+            {
+              "itemID": "melvorD:Bread",
+              "minQuantity": 10,
+              "maxQuantity": 50,
+              "weight": 160
+            },
+            {
+              "itemID": "melvorD:Plain_Pizza_Slice",
+              "minQuantity": 10,
+              "maxQuantity": 50,
+              "weight": 73
+            },
+            {
+              "itemID": "melvorD:Basic_Soup",
+              "minQuantity": 10,
+              "maxQuantity": 50,
+              "weight": 46
+            },
+            {
+              "itemID": "melvorD:Beef",
+              "minQuantity": 10,
+              "maxQuantity": 50,
+              "weight": 109
+            },
+            {
+              "itemID": "melvorD:Shrimp",
+              "minQuantity": 10,
+              "maxQuantity": 50,
+              "weight": 94
+            },
+            {
+              "itemID": "melvorD:Chicken",
+              "minQuantity": 10,
+              "maxQuantity": 50,
+              "weight": 70
+            },
+            {
+              "itemID": "melvorD:Salmon",
+              "minQuantity": 10,
+              "maxQuantity": 40,
+              "weight": 9
+            },
+            {
+              "itemID": "melvorD:Lobster",
+              "minQuantity": 10,
+              "maxQuantity": 30,
+              "weight": 6
+            },
+            {
+              "itemID": "melvorD:Swordfish",
+              "minQuantity": 10,
+              "maxQuantity": 20,
+              "weight": 5
+            },
+            {
+              "itemID": "melvorD:Crab",
+              "minQuantity": 5,
+              "maxQuantity": 10,
+              "weight": 2
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Food_Box_II",
+        "dropTable": {
+          "remove": [
+            "melvorD:Shark",
+            "melvorD:Cave_Fish",
+            "melvorD:Manta_Ray",
+            "melvorD:Whale",
+            "melvorD:Meat_Pizza_Slice",
+            "melvorD:Cherry_Cupcake",
+            "melvorD:Strawberry_Cupcake",
+            "melvorD:Hearty_Soup"
+          ],
+          "add": [
+            {
+              "itemID": "melvorD:Meat_Pizza_Slice",
+              "minQuantity": 10,
+              "maxQuantity": 50,
+              "weight": 176
+            },
+            {
+              "itemID": "melvorD:Hearty_Soup",
+              "minQuantity": 10,
+              "maxQuantity": 50,
+              "weight": 56
+            },
+            {
+              "itemID": "melvorD:Cherry_Cupcake",
+              "minQuantity": 10,
+              "maxQuantity": 40,
+              "weight": 37
+            },
+            {
+              "itemID": "melvorD:Strawberry_Cupcake",
+              "minQuantity": 10,
+              "maxQuantity": 40,
+              "weight": 14
+            },
+            {
+              "itemID": "melvorD:Shark",
+              "minQuantity": 10,
+              "maxQuantity": 30,
+              "weight": 4
+            },
+            {
+              "itemID": "melvorD:Cave_Fish",
+              "minQuantity": 10,
+              "maxQuantity": 20,
+              "weight": 3
+            },
+            {
+              "itemID": "melvorD:Manta_Ray",
+              "minQuantity": 5,
+              "maxQuantity": 10,
+              "weight": 2
+            },
+            {
+              "itemID": "melvorD:Whale",
+              "minQuantity": 1,
+              "maxQuantity": 5,
+              "weight": 1
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Bar_Box_I",
+        "dropTable": {
+          "remove": [
+            "melvorD:Bronze_Bar",
+            "melvorD:Iron_Bar",
+            "melvorD:Steel_Bar",
+            "melvorD:Silver_Bar"
+          ],
+          "add": [
+            {
+              "itemID": "melvorD:Bronze_Bar",
+              "minQuantity": 10,
+              "maxQuantity": 50,
+              "weight": 32
+            },
+            {
+              "itemID": "melvorD:Iron_Bar",
+              "minQuantity": 10,
+              "maxQuantity": 40,
+              "weight": 21
+            },
+            {
+              "itemID": "melvorD:Steel_Bar",
+              "minQuantity": 10,
+              "maxQuantity": 30,
+              "weight": 12
+            },
+            {
+              "itemID": "melvorD:Silver_Bar",
+              "minQuantity": 10,
+              "maxQuantity": 20,
+              "weight": 9
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Bar_Box_II",
+        "dropTable": {
+          "remove": [
+            "melvorD:Gold_Bar",
+            "melvorD:Mithril_Bar",
+            "melvorD:Adamantite_Bar",
+            "melvorD:Runite_Bar"
+          ],
+          "add": [
+            {
+              "itemID": "melvorD:Gold_Bar",
+              "minQuantity": 10,
+              "maxQuantity": 50,
+              "weight": 45
+            },
+            {
+              "itemID": "melvorD:Mithril_Bar",
+              "minQuantity": 10,
+              "maxQuantity": 40,
+              "weight": 32
+            },
+            {
+              "itemID": "melvorD:Adamantite_Bar",
+              "minQuantity": 10,
+              "maxQuantity": 30,
+              "weight": 19
+            },
+            {
+              "itemID": "melvorD:Runite_Bar",
+              "minQuantity": 10,
+              "maxQuantity": 20,
+              "weight": 6
+            },
+            {
+              "itemID": "melvorD:Dragonite_Bar",
+              "minQuantity": 5,
+              "maxQuantity": 10,
+              "weight": 1
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Herb_Box_I",
+        "dropTable": {
+          "remove": [
+            "melvorD:Garum_Herb",
+            "melvorD:Sourweed_Herb",
+            "melvorD:Mantalyme_Herb",
+            "melvorD:Lemontyle_Herb"
+          ],
+          "add": [
+            {
+              "itemID": "melvorD:Garum_Herb",
+              "minQuantity": 10,
+              "maxQuantity": 50,
+              "weight": 77
+            },
+            {
+              "itemID": "melvorD:Sourweed_Herb",
+              "minQuantity": 10,
+              "maxQuantity": 40,
+              "weight": 32
+            },
+            {
+              "itemID": "melvorD:Mantalyme_Herb",
+              "minQuantity": 10,
+              "maxQuantity": 30,
+              "weight": 21
+            },
+            {
+              "itemID": "melvorD:Lemontyle_Herb",
+              "minQuantity": 10,
+              "maxQuantity": 20,
+              "weight": 4
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Herb_Box_II",
+        "dropTable": {
+          "remove": [
+            "melvorD:Oxilyme_Herb",
+            "melvorF:Poraxx_Herb",
+            "melvorF:Pigtayle_Herb",
+            "melvorF:Barrentoe_Herb"
+          ],
+          "add": [
+            {
+              "itemID": "melvorD:Oxilyme_Herb",
+              "minQuantity": 10,
+              "maxQuantity": 50,
+              "weight": 129
+            },
+            {
+              "itemID": "melvorF:Poraxx_Herb",
+              "minQuantity": 10,
+              "maxQuantity": 40,
+              "weight": 97
+            },
+            {
+              "itemID": "melvorF:Pigtayle_Herb",
+              "minQuantity": 10,
+              "maxQuantity": 30,
+              "weight": 48
+            },
+            {
+              "itemID": "melvorF:Barrentoe_Herb",
+              "minQuantity": 10,
+              "maxQuantity": 20,
+              "weight": 6
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Potion_Box_I",
+        "dropTable": {
+          "remove": [
+            "melvorF:Melee_Accuracy_Potion_I",
+            "melvorF:Ranged_Assistance_Potion_I",
+            "melvorF:Magic_Assistance_Potion_I",
+            "melvorF:Famished_Potion_I",
+            "melvorF:Bird_Nest_Potion_I",
+            "melvorF:Controlled_Heat_Potion_I",
+            "melvorF:Generous_Cook_Potion_I",
+            "melvorF:Fishermans_Potion_I",
+            "melvorF:Fletching_Potion_I"
+          ],
+          "add": [
+            {
+              "itemID": "melvorF:Bird_Nest_Potion_I",
+              "minQuantity": 10,
+              "maxQuantity": 50,
+              "weight": 200
+            },
+            {
+              "itemID": "melvorF:Melee_Accuracy_Potion_I",
+              "minQuantity": 10,
+              "maxQuantity": 50,
+              "weight": 132
+            },
+            {
+              "itemID": "melvorF:Ranged_Assistance_Potion_I",
+              "minQuantity": 10,
+              "maxQuantity": 50,
+              "weight": 68
+            },
+            {
+              "itemID": "melvorF:Magic_Assistance_Potion_I",
+              "minQuantity": 10,
+              "maxQuantity": 50,
+              "weight": 26
+            },
+            {
+              "itemID": "melvorF:Famished_Potion_I",
+              "minQuantity": 10,
+              "maxQuantity": 40,
+              "weight": 21
+            },
+            {
+              "itemID": "melvorF:Controlled_Heat_Potion_I",
+              "minQuantity": 10,
+              "maxQuantity": 40,
+              "weight": 22
+            },
+            {
+              "itemID": "melvorF:Generous_Cook_Potion_I",
+              "minQuantity": 10,
+              "maxQuantity": 40,
+              "weight": 17
+            },
+            {
+              "itemID": "melvorF:Fishermans_Potion_I",
+              "minQuantity": 10,
+              "maxQuantity": 30,
+              "weight": 17
+            },
+            {
+              "itemID": "melvorF:Fletching_Potion_I",
+              "minQuantity": 10,
+              "maxQuantity": 30,
+              "weight": 16
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Potion_Box_II",
+        "dropTable": {
+          "remove": [
+            "melvorF:Ranged_Strength_Potion_I",
+            "melvorF:Melee_Strength_Potion_I",
+            "melvorF:Magic_Damage_Potion_I",
+            "melvorF:Diamond_Luck_Potion_I",
+            "melvorF:Damage_Reduction_Potion_I",
+            "melvorF:Gentle_Hands_Potion_I",
+            "melvorF:Secret_Stardust_Potion_I",
+            "melvorF:Necromancer_Potion_I",
+            "melvorF:Elemental_Potion_I",
+            "melvorF:Herblore_Potion_I"
+          ],
+          "add": [
+            {
+              "itemID": "melvorF:Secret_Stardust_Potion_I",
+              "minQuantity": 10,
+              "maxQuantity": 50,
+              "weight": 38
+            },
+            {
+              "itemID": "melvorF:Gentle_Hands_Potion_I",
+              "minQuantity": 10,
+              "maxQuantity": 50,
+              "weight": 35
+            },
+            {
+              "itemID": "melvorF:Ranged_Strength_Potion_I",
+              "minQuantity": 10,
+              "maxQuantity": 40,
+              "weight": 22
+            },
+            {
+              "itemID": "melvorF:Melee_Strength_Potion_I",
+              "minQuantity": 10,
+              "maxQuantity": 40,
+              "weight": 21
+            },
+            {
+              "itemID": "melvorF:Magic_Damage_Potion_I",
+              "minQuantity": 10,
+              "maxQuantity": 40,
+              "weight": 20
+            },
+            {
+              "itemID": "melvorF:Elemental_Potion_I",
+              "minQuantity": 10,
+              "maxQuantity": 30,
+              "weight": 20
+            },
+            {
+              "itemID": "melvorF:Necromancer_Potion_I",
+              "minQuantity": 10,
+              "maxQuantity": 20,
+              "weight": 15
+            },
+            {
+              "itemID": "melvorF:Herblore_Potion_I",
+              "minQuantity": 5,
+              "maxQuantity": 10,
+              "weight": 10
+            },
+            {
+              "itemID": "melvorF:Diamond_Luck_Potion_I",
+              "minQuantity": 5,
+              "maxQuantity": 10,
+              "weight": 4
+            },
+            {
+              "itemID": "melvorF:Damage_Reduction_Potion_I",
+              "minQuantity": 1,
+              "maxQuantity": 5,
+              "weight": 7
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Ore_Box_I",
+        "dropTable": {
+          "remove": [
+            "melvorD:Copper_Ore",
+            "melvorD:Tin_Ore",
+            "melvorD:Iron_Ore",
+            "melvorD:Silver_Ore"
+          ],
+          "add": [
+            {
+              "itemID": "melvorD:Copper_Ore",
+              "minQuantity": 20,
+              "maxQuantity": 100,
+              "weight": 49
+            },
+            {
+              "itemID": "melvorD:Tin_Ore",
+              "minQuantity": 20,
+              "maxQuantity": 100,
+              "weight": 49
+            },
+            {
+              "itemID": "melvorD:Iron_Ore",
+              "minQuantity": 15,
+              "maxQuantity": 75,
+              "weight": 28
+            },
+            {
+              "itemID": "melvorD:Silver_Ore",
+              "minQuantity": 10,
+              "maxQuantity": 50,
+              "weight": 11
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Ore_Box_II",
+        "dropTable": {
+          "remove": [
+            "melvorD:Gold_Ore",
+            "melvorD:Mithril_Ore",
+            "melvorD:Adamantite_Ore",
+            "melvorD:Runite_Ore",
+            "melvorD:Dragonite_Ore"
+          ],
+          "add": [
+            {
+              "itemID": "melvorD:Gold_Ore",
+              "minQuantity": 20,
+              "maxQuantity": 100,
+              "weight": 60
+            },
+            {
+              "itemID": "melvorD:Mithril_Ore",
+              "minQuantity": 15,
+              "maxQuantity": 75,
+              "weight": 40
+            },
+            {
+              "itemID": "melvorD:Adamantite_Ore",
+              "minQuantity": 10,
+              "maxQuantity": 50,
+              "weight": 25
+            },
+            {
+              "itemID": "melvorD:Runite_Ore",
+              "minQuantity": 10,
+              "maxQuantity": 40,
+              "weight": 10
+            },
+            {
+              "itemID": "melvorD:Dragonite_Ore",
+              "minQuantity": 10,
+              "maxQuantity": 30,
+              "weight": 1
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Wood_Box_I",
+        "dropTable": {
+          "remove": [
+            "melvorD:Normal_Logs",
+            "melvorD:Oak_Logs",
+            "melvorD:Willow_Logs",
+            "melvorD:Teak_Logs"
+          ],
+          "add": [
+            {
+              "itemID": "melvorD:Normal_Logs",
+              "minQuantity": 20,
+              "maxQuantity": 100,
+              "weight": 108
+            },
+            {
+              "itemID": "melvorD:Oak_Logs",
+              "minQuantity": 15,
+              "maxQuantity": 75,
+              "weight": 41
+            },
+            {
+              "itemID": "melvorD:Willow_Logs",
+              "minQuantity": 10,
+              "maxQuantity": 50,
+              "weight": 27
+            },
+            {
+              "itemID": "melvorD:Teak_Logs",
+              "minQuantity": 5,
+              "maxQuantity": 25,
+              "weight": 13
+            }
+          ]
+        }
+      },
+      {
+        "id": "melvorF:Wood_Box_II",
+        "dropTable": {
+          "remove": [
+            "melvorD:Mahogany_Logs",
+            "melvorD:Yew_Logs",
+            "melvorD:Magic_Logs",
+            "melvorD:Redwood_Logs"
+          ],
+          "add": [
+            {
+              "itemID": "melvorD:Mahogany_Logs",
+              "minQuantity": 20,
+              "maxQuantity": 100,
+              "weight": 60
+            },
+            {
+              "itemID": "melvorD:Yew_Logs",
+              "minQuantity": 15,
+              "maxQuantity": 75,
+              "weight": 12
+            },
+            {
+              "itemID": "melvorD:Magic_Logs",
+              "minQuantity": 10,
+              "maxQuantity": 50,
+              "weight": 7
+            },
+            {
+              "itemID": "melvorD:Redwood_Logs",
+              "minQuantity": 5,
+              "maxQuantity": 25,
+              "weight": 1
+            }
+          ]
+        }
+      },
+      {
         "id": "expandedAreas:Bag_of_Endless_Gold1",
         "dropTable": {
           "remove": [

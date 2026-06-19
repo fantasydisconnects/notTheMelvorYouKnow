@@ -20,7 +20,22 @@
     "prayers": [],
     "shopPurchases": [],
     "skillData": [
-
+{
+  "skillID": "melvorD:Township",
+  "data": {
+    "itemConversions":{
+      "fromTownship": [
+        {
+          "items": [
+            {
+              "itemID":"melvorAoD:Accuracy_Gem",
+              ""
+          ]
+        }
+      ]
+    }
+  }
+}
     ],
     "slayerAreas": [
 
