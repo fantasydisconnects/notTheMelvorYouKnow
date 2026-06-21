@@ -2,7 +2,71 @@
   "$schema": "https://melvoridle.com/assets/schema/gameData.json",
   "namespace": "expandedAreas",
   "data": {
-    "attacks": [],
+    "attacks": [
+            {
+        "id": "TyrannicalGazeRays",
+        "defaultChance": 25,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 100,
+            "attackCount": 0
+          },
+          {
+            "damageType": "Normal",
+            "amplitude": 125,
+            "attackCount": 1
+          },
+          {
+            "damageType": "Normal",
+            "amplitude": 150,
+            "attackCount": 2
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "tableID": "expandedAreas:RandomGaze"
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 3,
+        "attackInterval": 500,
+        "lifesteal": 0,
+        "name": "Tyrannical Gaze Rays",
+        "description": "The Enemy shoots ${hitCount} gaze rays at you, dealing ${attackDamageMaxValue0}% of its normal damage with the 1st ray, ${attackDamageMaxValue1}% with the 2nd, and ${attackDamageMaxValue2}% with the 3rd ray. Each ray inflicts a random Debuff or Damage Over Time effect on hit.",
+        "descriptionGenerator": "The enemy attacks <hitCount> times and deals <damage> damage. On hit, <hitEffect>."
+      },
+      {
+        "id": "AntiMagicField",
+        "defaultChance": 5,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "roll": false,
+            "maxRoll": "MagicScaling",
+            "maxPercent": 25,
+            "character": "Target"
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "expandedAreas:AntiMagicField",
+            "bypassBarrier": true
+          }
+        ],
+        "cantMiss": true,
+        "canNormalAttack": true,
+        "attackCount": 2,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Anti-Magic Field",
+        "description": "Creates an anti-magic field that stops the target from using, evading, or hitting with Magic (including Buffs) for ${preHitEffect0turns} turns. Then, the field automatically deals ${attackDamageMaxValue0}% of the target's Magic level + 1. If the field is already active, the attacker performs a regular attack instead.",
+        "descriptionGenerator": "<Avoidable> Creates an anti-magic field, preventing <target> from using Magic (including Buffs). Deals <damage>.",
+        "usesRunesPerProc": false
+      },
+    ],
     "attackSpells": [],
     "combatAreas": [],
     "combatEffectGroups": [],

@@ -168,6 +168,14 @@ SAE v0.9.3.1 — Some Balance Changes and Quality of Life
 - Box types I and II purchased from Township have had their drop table loot reduced by 10-75%, with higher-level items reduced the most. Potion boxes were hit the hardest (reduced from 300 -> 75). The tables have now been weighted towards rolling more consistent quantities of each item to compensate.
   - Exception: Ore Box II's drop table has been increased overall
 
-SAE v0.9.3.2 — 
+SAE v0.9.3.2 — Consistency and Rounding off Edges
 # Fixes
 - Barrows Equipment descriptions updated to show synergy text on hover
+
+# Changes
+- Bob the Farmer's loot table has been revamped. It now includes all allotment and fruit tree seeds, as well as the stronger version of Compost, Supercompost.
+- Herb Sack has been removed from the game because it contains seeds and is not a sack of herbs. It has been replaced with the Seed Sack, which can be obtained (rarely) from other Thieving NPCs and Combat Area Monsters.
+- Merchant Thieving NPC completely changed; obtaining all herbs from one source was too powerful. It also sort of made no sense, since you don't exactly expect herbs to come from a "typical" farm. The Merchant's loot table is now more akin to a Grocer, with items such as leather, sacks of food, bowstring, flour, and other similar sundries that would be produced by a farm. Low- to mid-level herbs now have been moved to Petunia, Master Gardener, and high-level herbs have been moved to [NPC].
+
+# New Content
+- 
