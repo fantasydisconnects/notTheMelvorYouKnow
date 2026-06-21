@@ -976,14 +976,14 @@
           "add": [
             {
               "itemID": "expandedAreas:Antivenom_I",
-              "minQuantity": 1,
-              "maxQuantity": 300,
+              "minQuantity": 10,
+              "maxQuantity": 20,
               "weight": 5
             },
             {
               "itemID": "expandedAreas:Aeris_Brew_I",
-              "minQuantity": 1,
-              "maxQuantity": 300,
+              "minQuantity": 5,
+              "maxQuantity": 10,
               "weight": 3
             }
           ]

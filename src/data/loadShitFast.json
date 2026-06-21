@@ -6,40 +6,157 @@
     "attackSpells": [],
     "combatAreas": [],
     "combatEffectGroups": [],
-    "combatEffects": [],
-    "combatEffectTables": [],
-    "combatEffectTemplates": [],
-    "combatPassives": [],
-    "dungeons": [],
-    "items": [
-
+    "combatEffects": [
+      {
+        "progressBar":{
+          "maxValue"
+        },
+        "behaviours": [
+          {
+            "applicator": {
+              "effectID":"expandedAreas:BuffOverload",
+              "condition":{
+                "character": "Player",
+                "groupID":"melvorD:Buff",
+                "type": "CombatEffectGroup"
+              }
+            },
+            "type": "ProcessApplicator",
+            "triggersOn": [
+              {
+                "type": "EffectApplied"
+              }
+            ]
+          }
+        ]
+      }
     ],
+    "combatEffectTables": [
+      {
+        "id": "MistBuff",
+        "table": [
+          {
+            "effectID": "melvorD:",
+            "weight": 1
+          },
+          {
+            "effectID": "melvorD:Fleetness0",
+            "weight": 1
+          },
+          {
+            "effectID": "melvorD:RapidFire0",
+            "weight": 1
+          }
+        ]
+      }
+    ],
+    "combatEffectTemplates": [],
+    "combatPassives": [
+      {
+        "id": "RandomMistBuff",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "groupID": "melvorD:Buff",
+              "character": "Player",
+              "type": "CombatEffectGroup"
+            }
+          }
+        ],
+        "combatEffects": [
+          {
+            "tableID": "expandedAreas:MistBuff",
+            ""
+          }
+        ]
+      }
+    ],
+    "dungeons": [
+      {
+        "id": "Heart_of_the_Mist1",
+        "name": "Heart of the Mist1",
+        "media": "assets/mist.png",
+        "monsterIDs": [
+          "melvorF:RandomITM",
+          "melvorF:RandomITM",
+          "melvorF:RandomITM",
+          "melvorF:RandomITM",
+          "melvorF:RandomITM",
+          "melvorF:RandomITM",
+          "melvorF:RandomITM",
+          "melvorF:RandomITM",
+          "melvorF:RandomITM",
+          "melvorF:RandomITM",
+          "melvorF:RandomITM",
+          "melvorF:RandomITM",
+          "melvorF:RandomITM",
+          "melvorF:RandomITM",
+          "melvorF:RandomITM",
+          "melvorF:RandomITM",
+          "melvorF:RandomITM",
+          "melvorF:RandomITM",
+          "melvorF:RandomITM",
+          "melvorF:RandomITM",
+          "melvorF:RandomITM",
+          "melvorF:RandomITM",
+          "melvorF:RandomITM",
+          "melvorF:RandomITM",
+          "melvorF:RandomITM",
+          "melvorF:RandomITM",
+          "melvorF:RandomITM",
+          "melvorF:RandomITM",
+          "melvorF:RandomITM",
+          "melvorF:RandomITM",
+          "melvorF:RandomITM",
+        ],
+        "difficulty": [
+          6
+        ],
+        "entryRequirements": [
+          {
+            "type": "DungeonCompletion",
+            "dungeonID": "melvorF:Into_the_Mist",
+            "count": 1
+          }
+        ],
+        "oneTimeRewardID": "expandedAreas:AchievementReward",
+        "rewardItemIDs": [
+          "expandedAreas:CompletionChest"
+        ],
+        "dropBones": true,
+        "fixedPetClears": false,
+        "pauseOnBosses": false,
+        "floors": [
+          8,
+          6,
+          4,
+          2,
+          1
+        ],
+        "allowedDamageTypeIDs": [
+          "melvorD:Normal"
+        ],
+        "bossOnlyPassives": [
+          "melvorF:Afflicted"
+        ],
+        "nonBossPassives": [
+          "melvorF:Afflicted"
+        ],
+        "overrideDamageType": "expandedAreas:Mist"
+      }
+    ],
+    "items": [],
     "itemSynergies": [],
-    "monsters": [],
+    "monsters": [
+      {
+        ""
+      }
+    ],
     "pets": [],
     "prayers": [],
     "shopPurchases": [],
-    "skillData": [
-{
-  "skillID": "melvorD:Township",
-  "data": {
-    "itemConversions":{
-      "fromTownship": [
-        {
-          "items": [
-            {
-              "itemID":"melvorAoD:Accuracy_Gem",
-              ""
-          ]
-        }
-      ]
-    }
-  }
-}
-    ],
-    "slayerAreas": [
-
-    ],
+    "skillData": [],
+    "slayerAreas": [],
     "strongholds": []
   }
 }

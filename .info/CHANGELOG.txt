@@ -159,7 +159,7 @@ SAE v0.9.2.7.2
 # Fixes
 - Wide Slash and Counterattack now correctly deal damage
 
-SAE v0.9.3 — Balance Changes and Quality of Life
+SAE v0.9.3.1 — Some Balance Changes and Quality of Life
 # Changes
 - Task Completion Requirements to purchase Skilling outfits (and the upgrade) from Township have been changed to be much more obtainable; consequently, the level requirement has been increased. 
   - Tasks required to purchase set pieces reduced by 50% per piece, and tasks required to purchase the outfit upgrade reduced from 95 -> 80.
@@ -167,3 +167,7 @@ SAE v0.9.3 — Balance Changes and Quality of Life
   - These changes do not apply to Ancient Relics Mode for balance reasons.
 - Box types I and II purchased from Township have had their drop table loot reduced by 10-75%, with higher-level items reduced the most. Potion boxes were hit the hardest (reduced from 300 -> 75). The tables have now been weighted towards rolling more consistent quantities of each item to compensate.
   - Exception: Ore Box II's drop table has been increased overall
+
+SAE v0.9.3.2 — 
+# Fixes
+- Barrows Equipment descriptions updated to show synergy text on hover
