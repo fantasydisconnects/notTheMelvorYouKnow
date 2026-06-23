@@ -210,7 +210,7 @@
       }
     ],
     "items": [
-
+      
     ],
     "itemSynergies": [],
     "monsters": [
@@ -221,7 +221,9 @@
     "pets": [],
     "prayers": [],
     "shopPurchases": [],
-    "skillData": [],
+    "skillData": [
+
+    ],
     "slayerAreas": [],
     "strongholds": []
   }

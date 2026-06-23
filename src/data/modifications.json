@@ -7721,7 +7721,7 @@
                     "weight": 1667
                   },
                   {
-                    "itemID": "expandedAreas:Barley",
+                    "itemID": "expandedAreas:Ale_Yeast",
                     "minQuantity": 1,
                     "maxQuantity": 1,
                     "weight": 1667
@@ -7734,8 +7734,8 @@
                   },
                   {
                     "itemID": "expandedAreas:Basket_of_Tomatoes",
-                    "minQuantity": 50,
-                    "maxQuantity": 50,
+                    "minQuantity": 1,
+                    "maxQuantity": 1,
                     "weight": 833
                   },
                   {
@@ -7781,7 +7781,7 @@
                     "weight": 78
                   },
                   {
-                    "itemID": "expandedAreas:Sack_of_Food",
+                    "itemID": "expandedAreas:Food_Sack",
                     "minQuantity": 1,
                     "maxQuantity": 20,
                     "weight": 39
