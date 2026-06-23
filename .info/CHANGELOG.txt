@@ -175,7 +175,7 @@ SAE v0.9.3.2 — Consistency and Rounding off Edges
 # Changes
 - Bob the Farmer's loot table has been revamped. It now includes all allotment and fruit tree seeds, as well as the stronger version of Compost, Supercompost.
 - Herb Sack has been removed from the game because it contains seeds and is not a sack of herbs. It has been replaced with the Seed Sack, which can be obtained (rarely) from other Thieving NPCs and Combat Area Monsters.
-- Merchant Thieving NPC completely changed; obtaining all herbs from one source was too powerful. It also sort of made no sense, since you don't exactly expect herbs to come from a "typical" farm. The Merchant's loot table is now more akin to a Grocer, with items such as leather, sacks of food, bowstring, flour, and other similar sundries that would be produced by a farm. Low- to mid-level herbs now have been moved to Petunia, Master Gardener, and high-level herbs have been moved to [NPC].
+- Merchant Thieving NPC completely changed; obtaining all herbs from one source was too powerful. It also sort of made no sense, since you don't exactly expect herbs to come from a "typical" farm. The Merchant's loot table is now more akin to a Grocer, with items such as leather, sacks of food, bowstring, flour, and other similar sundries that would be produced by a farm. Herbs have been moved to Petunia, Master Gardener, at a much lower rate.
 
 # New Content
 - 

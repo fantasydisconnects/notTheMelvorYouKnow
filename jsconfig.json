@@ -1,0 +1,16 @@
+  {
+    "compilerOptions": {
+      "target": "ES2020",
+      "lib": [
+        "ES2020",
+        "DOM"
+      ],
+      "checkJs": false
+    },
+    "include": [
+      "**/*.mjs",
+      "**/*.js",
+      "../Melvor-Typing-Project/src/gameTypes/**/*.d.ts",
+      "../Melvor-Typing-Project/src/libraryTypes/**/*.d.ts"
+    ]
+  }

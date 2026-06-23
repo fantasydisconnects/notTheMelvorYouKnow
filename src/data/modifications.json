@@ -7556,151 +7556,146 @@
                     "itemID": "melvorD:Potato_Seed",
                     "minQuantity": 1,
                     "maxQuantity": 1,
-                    "weight": 400
+                    "weight": 280
                   },
                   {
                     "itemID": "expandedAreas:Jute_Seed",
                     "minQuantity": 1,
                     "maxQuantity": 1,
-                    "weight": 380
+                    "weight": 224
                   },
                   {
                     "itemID": "melvorD:Onion_Seed",
                     "minQuantity": 1,
                     "maxQuantity": 1,
-                    "weight": 360
+                    "weight": 180
                   },
                   {
                     "itemID": "expandedAreas:Barley_Seed",
                     "minQuantity": 1,
                     "maxQuantity": 1,
-                    "weight": 340
+                    "weight": 159
                   },
                   {
                     "itemID": "melvorD:Cabbage_Seed",
                     "minQuantity": 1,
                     "maxQuantity": 1,
-                    "weight": 300
+                    "weight": 140
                   },
                   {
                     "itemID": "expandedAreas:Plumm_Seed",
                     "minQuantity": 1,
                     "maxQuantity": 1,
-                    "weight": 280
+                    "weight": 124
                   },
                   {
                     "itemID": "melvorD:Tomato_Seed",
                     "minQuantity": 1,
                     "maxQuantity": 1,
-                    "weight": 260
+                    "weight": 110
                   },
                   {
                     "itemID": "expandedAreas:Firewine_Seed",
                     "minQuantity": 1,
                     "maxQuantity": 1,
-                    "weight": 240
+                    "weight": 94
                   },
                   {
                     "itemID": "melvorD:Sweetcorn_Seed",
                     "minQuantity": 1,
                     "maxQuantity": 1,
-                    "weight": 200
+                    "weight": 80
                   },
                   {
                     "itemID": "expandedAreas:Andlovan_Seed",
                     "minQuantity": 1,
                     "maxQuantity": 1,
-                    "weight": 180
+                    "weight": 63
                   },
                   {
                     "itemID": "melvorD:Strawberry_Seed",
                     "minQuantity": 1,
                     "maxQuantity": 1,
-                    "weight": 160
+                    "weight": 50
                   },
                   {
                     "itemID": "expandedAreas:Goldengod_Seed",
                     "minQuantity": 1,
                     "maxQuantity": 1,
-                    "weight": 140
+                    "weight": 42
                   },
                   {
                     "itemID": "melvorD:Cherry_Seeds",
                     "minQuantity": 1,
                     "maxQuantity": 1,
-                    "weight": 100
+                    "weight": 35
                   },
                   {
                     "itemID": "expandedAreas:Wildblood_Seed",
                     "minQuantity": 1,
                     "maxQuantity": 1,
-                    "weight": 80
+                    "weight": 26
                   },
                   {
                     "itemID": "melvorD:Watermelon_Seed",
                     "minQuantity": 1,
                     "maxQuantity": 1,
-                    "weight": 60
+                    "weight": 20
                   },
                   {
                     "itemID": "expandedAreas:Orange_Tree_Seed",
                     "minQuantity": 1,
                     "maxQuantity": 1,
-                    "weight": 220
+                    "weight": 20
                   },
                   {
                     "itemID": "melvorD:Compost",
                     "minQuantity": 1,
                     "maxQuantity": 1,
-                    "weight": 140
+                    "weight": 20
                   },
                   {
                     "itemID": "expandedAreas:Curry_Tree_Seed",
                     "minQuantity": 1,
                     "maxQuantity": 1,
-                    "weight": 100
+                    "weight": 19
                   },
                   {
                     "itemID": "melvorD:Snape_Grass_Seed",
                     "minQuantity": 1,
                     "maxQuantity": 1,
-                    "weight": 60
+                    "weight": 18
                   },
                   {
                     "itemID": "expandedAreas:Papaya_Tree_Seed",
                     "minQuantity": 1,
                     "maxQuantity": 1,
-                    "weight": 80
+                    "weight": 16
                   },
                   {
                     "itemID": "melvorD:Carrot_Seeds",
                     "minQuantity": 1,
                     "maxQuantity": 1,
-                    "weight": 10
-                  },
-                  {
-                    "itemID": "expandedAreas:Superfertilizer",
-                    "minQuantity": 1,
-                    "maxQuantity": 1,
-                    "weight": 40
+                    "weight": 15
                   },
                   {
                     "itemID": "expandedAreas:Palm_Tree_Seed",
                     "minQuantity": 1,
                     "maxQuantity": 1,
-                    "weight": 5
+                    "weight": 13
                   },
                   {
                     "itemID": "expandedAreas:Dragonfruit_Tree_Seed",
                     "minQuantity": 1,
                     "maxQuantity": 1,
-                    "weight": 1
+                    "weight": 11
                   }
                 ]
               }
             },
             {
               "id": "melvorF:MERCHANT",
+              "name": "Grocer",
               "lootTable": {
                 "remove": [
                   "melvorD:Garum_Herb",
@@ -7714,82 +7709,82 @@
                 ],
                 "add": [
                   {
-                    "itemID": "melvorD:Bag_of_Flour",
-                    "minQuantity": 1,
-                    "maxQuantity": 1,
-                    "weight": 200
-                  },
-                  {
-                    "itemID": "melvorD:Cheese",
-                    "minQuantity": 1,
-                    "maxQuantity": 1,
-                    "weight": 150
-                  },
-                  {
-                    "itemID": "melvorD:Cream",
-                    "minQuantity": 1,
-                    "maxQuantity": 1,
-                    "weight": 120
-                  },
-                  {
                     "itemID": "expandedAreas:Sack_of_Potatoes",
                     "minQuantity": 1,
                     "maxQuantity": 1,
-                    "weight": 80
-                  },
-                  {
-                    "itemID": "melvorD:Feathers",
-                    "minQuantity": 50,
-                    "maxQuantity": 50,
-                    "weight": 70
-                  },
-                  {
-                    "itemID": "melvorD:Compost",
-                    "minQuantity": 1,
-                    "maxQuantity": 1,
-                    "weight": 70
+                    "weight": 2500
                   },
                   {
                     "itemID": "expandedAreas:Sack_of_Onions",
                     "minQuantity": 1,
                     "maxQuantity": 1,
-                    "weight": 55
+                    "weight": 1667
                   },
                   {
-                    "itemID": "melvorD:Bowstring",
+                    "itemID": "expandedAreas:Barley",
                     "minQuantity": 1,
                     "maxQuantity": 1,
-                    "weight": 41
+                    "weight": 1667
                   },
                   {
                     "itemID": "expandedAreas:Sack_of_Cabbage",
                     "minQuantity": 1,
                     "maxQuantity": 1,
-                    "weight": 32
+                    "weight": 1250
                   },
                   {
-                    "itemID": "melvorD:Leather",
-                    "minQuantity": 1,
-                    "maxQuantity": 1,
-                    "weight": 23
+                    "itemID": "expandedAreas:Basket_of_Tomatoes",
+                    "minQuantity": 50,
+                    "maxQuantity": 50,
+                    "weight": 833
                   },
                   {
-                    "itemID": "expandedAreas:Ale_Yeast",
+                    "itemID": "expandedAreas:Sack_of_Curry_Leaves",
                     "minQuantity": 1,
                     "maxQuantity": 1,
-                    "weight": 15
-                  },
-                  {
-                    "itemID": "expandedAreas:Basket_of_Strawberries",
-                    "minQuantity": 1,
-                    "maxQuantity": 1,
-                    "weight": 9
+                    "weight": 833
                   },
                   {
                     "itemID": "expandedAreas:Basket_of_Sweetcorn",
                     "minQuantity": 1,
                     "maxQuantity": 1,
-                    "weight": 5
+                    "weight": 650
+                  },
+                  {
+                    "itemID": "expandedAreas:Basket_of_Cherries",
+                    "minQuantity": 1,
+                    "maxQuantity": 1,
+                    "weight": 417
+                  },
+                  {
+                    "itemID": "expandedAreas:Basket_of_Strawberries",
+                    "minQuantity": 1,
+                    "maxQuantity": 1,
+                    "weight": 417
+                  },
+                  {
+                    "itemID": "expandedAreas:Basket_of_Apples",
+                    "minQuantity": 1,
+                    "maxQuantity": 1,
+                    "weight": 256
+                  },
+                  {
+                    "itemID": "expandedAreas:Sack_of_Carrots",
+                    "minQuantity": 1,
+                    "maxQuantity": 1,
+                    "weight": 104
+                  },
+                  {
+                    "itemID": "expandedAreas:Sack_of_Peppers",
+                    "minQuantity": 1,
+                    "maxQuantity": 1,
+                    "weight": 78
+                  },
+                  {
+                    "itemID": "expandedAreas:Sack_of_Food",
+                    "minQuantity": 1,
+                    "maxQuantity": 20,
+                    "weight": 39
                   }
                 ]
               }

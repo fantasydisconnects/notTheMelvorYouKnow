@@ -3,7 +3,6 @@
   "namespace": "expandedAreas",
   "data": {
     "attacks": [
-
       {
         "id": "SwampSludge",
         "defaultChance": 100,
@@ -8716,6 +8715,121 @@
       }
     ],
     "items": [
+            {
+        "id": "Lucky_Secateurs",
+        "name": "Lucky Secateurs",
+        "category": "Tool",
+        "type": "Tool",
+        "media": "assets/bank/Lucky_Secateurs.png",
+        "customDescription": "Passive: When equipped in the Tool Slot, you gain 10% Farming Yield from all crops<br>Passive: When equipped in the Weapon Slot and used against Plants, you have +10% Max Hit and a 10% Chance to inflict a 100% Bleed on Hit.",
+        "ignoreCompletion": false,
+        "golbinRaidExclusive": false,
+        "obtainFromItemLog": false,
+        "sellsFor": 10000,
+        "tier": "none",
+        "itemType": "Weapon",
+        "attackType": "melee",
+        "validSlots": [
+          "Weapon",
+          "expandedAreas:Tool"
+        ],
+        "occupiesSlots": [],
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "effectID": "melvorD:Bleed100",
+            "chance": 10,
+            "condition": {
+              "type": "Every",
+              "conditions": [
+                {
+                  "character": "Enemy",
+                  "effectID": "expandedAreas:MonsterTypePlant",
+                  "type": "CombatEffect"
+                },
+                {
+                  "character": "Player",
+                  "thisAttackType": "melee",
+                  "targetAttackType": "any",
+                  "type": "CombatType"
+                }
+              ]
+            }
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "Every",
+              "conditions": [
+                {
+                  "character": "Enemy",
+                  "effectID": "expandedAreas:MonsterTypePlant",
+                  "type": "CombatEffect"
+                },
+                {
+                  "character": "Player",
+                  "thisAttackType": "melee",
+                  "targetAttackType": "any",
+                  "type": "CombatType"
+                }
+              ]
+            },
+            "modifiers": {
+              "maxHit": 10
+            }
+          }
+        ],
+        "modifiers": {
+          "basePrimaryProductQuantity": [
+            {
+              "skillID": "melvorD:Farming",
+              "value": 10
+            }
+          ]
+        },
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3000
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 1
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 7
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 9
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": -5
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": 1
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 1
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 1
+          }
+        ],
+        "equipRequirements": [
+          {
+            "skillID": "melvorD:Farming",
+            "level": 65,
+            "type": "SkillLevel"
+          }
+        ]
+      },
       {
         "itemType": "Equipment",
         "id": "Cursed_Enhancement_1",
@@ -71036,6 +71150,154 @@
         "data": {
           "headerUpgradeChains": [
             "expandedAreas:ThievingTools"
+          ],
+          "npcs": [
+            {
+              "id": "PETUNIA_MASTER_GARDENER",
+              "baseExperience": 42,
+              "level": 52,
+              "name": "Petunia, Master Gardener",
+              "media": "assets/combat/monsters/Master_Gardener.png",
+              "perception": 420,
+              "maxHit": 11.5,
+              "currencyDrops": [
+                {
+                  "id": "melvorD:GP",
+                  "quantity": 425
+                }
+              ],
+              "lootTable": [
+                {
+                  "itemID": "expandedAreas:Lavender_Seed",
+                  "minQuantity": 1,
+                  "maxQuantity": 1,
+                  "weight": 1667
+                },
+                {
+                  "itemID": "expandedAreas:Booberry_Seed",
+                  "minQuantity": 1,
+                  "maxQuantity": 1,
+                  "weight": 1667
+                },
+                {
+                  "itemID": "expandedAreas:Sunflower_Seed",
+                  "minQuantity": 1,
+                  "maxQuantity": 1,
+                  "weight": 1250
+                },
+                {
+                  "itemID": "expandedAreas:Gammonberry_Seed",
+                  "minQuantity": 1,
+                  "maxQuantity": 1,
+                  "weight": 1250
+                },
+                {
+                  "itemID": "expandedAreas:Tulip_Seed",
+                  "minQuantity": 1,
+                  "maxQuantity": 1,
+                  "weight": 1252
+                },
+                
+                {
+                  "itemID": "expandedAreas:Yellowberry_Seed",
+                  "minQuantity": 1,
+                  "maxQuantity": 1,
+                  "weight": 833
+                },
+                {
+                  "itemID": "expandedAreas:Rose_Seed",
+                  "minQuantity": 1,
+                  "maxQuantity": 1,
+                  "weight": 833
+                },
+                {
+                  "itemID": "expandedAreas:Pineapple_Seed",
+                  "minQuantity": 1,
+                  "maxQuantity": 1,
+                  "weight": 833
+                },
+                {
+                  "itemID": "expandedAreas:Blueberry_Seed",
+                  "minQuantity": 1,
+                  "maxQuantity": 1,
+                  "weight": 417
+                },
+                {
+                  "itemID": "expandedAreas:Lily_Seed",
+                  "minQuantity": 1,
+                  "maxQuantity": 1,
+                  "weight": 417
+                },
+                {
+                  "itemID": "expandedAreas:Mumuberry_Seed",
+                  "minQuantity": 1,
+                  "maxQuantity": 1,
+                  "weight": 313
+                },
+                {
+                  "itemID": "expandedAreas:Coffea_Seed",
+                  "minQuantity": 1,
+                  "maxQuantity": 1,
+                  "weight": 156
+                },
+                {
+                  "itemID": "expandedAreas:Nasturtium_Seed",
+                  "minQuantity": 1,
+                  "maxQuantity": 1,
+                  "weight": 156
+                },
+                {
+                  "itemID": "expandedAreas:Teak_Tree_Seed",
+                  "minQuantity": 1,
+                  "maxQuantity": 1,
+                  "weight": 417
+                },
+                {
+                  "itemID": "expandedAreas:Mahogany_Tree_Seed",
+                  "minQuantity": 1,
+                  "maxQuantity": 1,
+                  "weight": 156
+                },
+                {
+                  "itemID": "expandedAreas:Superfertilizer",
+                  "minQuantity": 1,
+                  "maxQuantity": 1,
+                  "weight": 156
+                },
+                {
+                  "itemID": "melvorD:Yew_Tree_Seed",
+                  "minQuantity": 1,
+                  "maxQuantity": 1,
+                  "weight": 104
+                },
+                {
+                  "itemID": "melvorD:Magic_Tree_Seed",
+                  "minQuantity": 1,
+                  "maxQuantity": 1,
+                  "weight": 78
+                },
+                {
+                  "itemID": "expandedAreas:Redwood_Tree_Seed",
+                  "minQuantity": 1,
+                  "maxQuantity": 1,
+                  "weight": 39
+                },
+                {
+                  "itemID": "expandedAreas:Poison_Ivy_Seed",
+                  "minQuantity": 1,
+                  "maxQuantity": 1,
+                  "weight": 39
+                }
+                
+              ],
+              "uniqueDrop": {
+                "id": "expandedAreas:Lucky_Secateurs",
+                "quantity": 1
+              },
+              "allowedDamageTypeIDs": [
+                "melvorD:Normal"
+              ]
+            }
           ]
         }
       },

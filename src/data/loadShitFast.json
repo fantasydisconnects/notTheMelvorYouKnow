@@ -3,7 +3,7 @@
   "namespace": "expandedAreas",
   "data": {
     "attacks": [
-            {
+      {
         "id": "TyrannicalGazeRays",
         "defaultChance": 25,
         "damage": [
@@ -72,16 +72,16 @@
     "combatEffectGroups": [],
     "combatEffects": [
       {
-        "progressBar":{
+        "progressBar": {
           "maxValue"
         },
         "behaviours": [
           {
             "applicator": {
-              "effectID":"expandedAreas:BuffOverload",
-              "condition":{
+              "effectID": "expandedAreas:BuffOverload",
+              "condition": {
                 "character": "Player",
-                "groupID":"melvorD:Buff",
+                "groupID": "melvorD:Buff",
                 "type": "CombatEffectGroup"
               }
             },
@@ -209,7 +209,9 @@
         "overrideDamageType": "expandedAreas:Mist"
       }
     ],
-    "items": [],
+    "items": [
+
+    ],
     "itemSynergies": [],
     "monsters": [
       {
