@@ -168,14 +168,19 @@ SAE v0.9.3.1 — Some Balance Changes and Quality of Life
 - Box types I and II purchased from Township have had their drop table loot reduced by 10-75%, with higher-level items reduced the most. Potion boxes were hit the hardest (reduced from 300 -> 75). The tables have now been weighted towards rolling more consistent quantities of each item to compensate.
   - Exception: Ore Box II's drop table has been increased overall
 
-SAE v0.9.3.2 — Consistency and Rounding off Edges
-# Fixes
-- Barrows Equipment descriptions updated to show synergy text on hover
+SAE v0.9.3.2 — Balance, Consistency, and Rounding off Edges
+# New Content
+- Added the Alchemist Thieving NPC to Wizard Tower. Requires level 88 Thieving, and drops herbs and Herblore ingredients. Unique Item, Alchemist's Alembic (Tool Slot Item): +25% Herblore Production, 1/10,000 chance on Herblore Action that Alembic is destroyed.
+- Added Retired Pirate Thieving NPC to Port of Lemvor. Requires level 65 Thieving, and drops Alcohol, Treasure, and a Scimitar. Unique Item, Goldilocks (Ranged Weapon): Requires no ammo; instead, consumes Gold Bars when attacking. +5% Ranged Crit Chance, -10% Ranged Accuracy, +500% Ranged Damage Dealt gained as GP.
 
 # Changes
 - Bob the Farmer's loot table has been revamped. It now includes all allotment and fruit tree seeds, as well as the stronger version of Compost, Supercompost.
-- Herb Sack has been removed from the game because it contains seeds and is not a sack of herbs. It has been replaced with the Seed Sack, which can be obtained (rarely) from other Thieving NPCs and Combat Area Monsters.
-- Merchant Thieving NPC completely changed; obtaining all herbs from one source was too powerful. It also sort of made no sense, since you don't exactly expect herbs to come from a "typical" farm. The Merchant's loot table is now more akin to a Grocer, with items such as leather, sacks of food, bowstring, flour, and other similar sundries that would be produced by a farm. Herbs have been moved to Petunia, Master Gardener, at a much lower rate.
+- Herb Sack has been removed from the game because it contains seeds and is not a sack of herbs. Bear + Leprechaun Synergy changed from +3% Chance to gain an Herb Sack when obtaining a common drop from Bob the Farmer -> +3% Chance to gain an Alchemist's Sack when obtaining a common drop from the Alchemist
+- Merchant Thieving NPC completely changed; obtaining all herbs from one low-level source was way too powerful. It also sort of made no sense, since you don't exactly expect herbs to come from a "typical" farm. The Merchant's loot table is now more akin to a Grocer, with farm food items such as sacks of cabbage and baskets of strawberries. Herbs have been moved to the new Thieving NPC, the Alchemist.
 
-# New Content
-- 
+# Fixes
+- Barrows Equipment descriptions updated to show synergy text on hover
+
+SAE v0.9.3.2.1 — Hotfix
+# Fixes
+- Fixed a gamebreaking bug where the Magic Golbin was giving the player Corruption and breaking the save when Into the Abyss was not active

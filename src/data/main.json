@@ -8731,12 +8731,75 @@
     ],
     "items": [
       {
+        "itemType": "Weapon",
+        "attackType": "ranged",
+        "ammoTypeRequired": "None",
+        "id": "Goldilocks",
+        "name": "Goldilocks",
+        "category": "Combat",
+        "type": "Ranged Weapon",
+        "media": "assets/bank/Goldilocks.png",
+        "customDescription": "Requires no Ammo. Instead, consumes Gold Bars when attacking.<br>Passive: +500% of Ranged Damage Dealt Gained as GP, +5% Ranged Crit Chance, and -10% Ranged Accuracy.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 10000,
+        "tier": "none",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Ranged",
+            "level": 60
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 2850
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": 40
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 35
+          }
+        ],
+        "modifiers": {
+          "rangedCritChance": 5,
+          "rangedAccuracyRating": -10,
+          "currencyGainPerRangedDamageDealt": [
+            {
+              "currencyID": "melvorD:GP",
+              "value": 500
+            }
+          ]
+        },
+        "consumesItemOn": {
+          "chance": 100,
+          "itemID": "melvorD:Gold_Bar",
+          "matchers": [
+            {
+              "attackTypes": [
+                "ranged"
+              ],
+              "type": "PlayerAttack"
+            }
+          ]
+        }
+      },
+      {
         "itemType": "Equipment",
         "id": "Alchemists_Alembic",
         "name": "Alchemist's Alembic",
         "category": "Thieving",
         "type": "Tool",
-        "media": "assets/bank/alembic.png",
+        "media": "assets/bank/Alchemists_Alembic.png",
         "customDescription": "Passive: When equipped in the Tool Slot, you have +25% Base Primary Product Quantity in Herblore. 1/10,000 chance per Herblore action for the Alembic to be destroyed.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
@@ -8759,7 +8822,7 @@
         },
         "consumesItemOn": {
           "chance": 0.0001,
-          "itemID": "expandedAreas:Alembic",
+          "itemID": "expandedAreas:Alchemists_Alembic",
           "matchers": [
             {
               "type": "HerbloreAction"
@@ -52335,8 +52398,7 @@
           "Hitpoints": 25,
           "Magic": 25,
           "Ranged": 1,
-          "Strength": 10,
-          "Corruption": 1
+          "Strength": 10
         },
         "equipmentStats": [
           {
@@ -71200,18 +71262,19 @@
       {
         "skillID": "melvorD:Thieving",
         "data": {
+          "bearLeprechaunItem": "melvorF:Alchemists_Bag",
           "headerUpgradeChains": [
             "expandedAreas:ThievingTools"
           ],
           "npcs": [
             {
               "id": "ALCHEMIST",
-              "baseExperience": 100,
+              "baseExperience": 106,
               "level": 88,
               "name": "Alchemist",
               "media": "assets/skills/thieving/alchemist.svg",
-              "perception": 790,
-              "maxHit": 22.7,
+              "perception": 850,
+              "maxHit": 20.7,
               "currencyDrops": [
                 {
                   "id": "melvorD:GP",
@@ -71319,17 +71382,95 @@
               ]
             },
             {
-              "id": "PETUNIA_MASTER_GARDENER",
-              "baseExperience": 42,
-              "level": 52,
-              "name": "Petunia, Master Gardener",
-              "media": "assets/combat/monsters/Master_Gardener.png",
-              "perception": 420,
-              "maxHit": 11.5,
+              "id": "RETIRED_PIRATE",
+              "baseExperience": 65,
+              "level": 65,
+              "name": "Retired Pirate",
+              "media": "assets/skills/thieving/retired_pirate.svg",
+              "perception": 520,
+              "maxHit": 14.5,
               "currencyDrops": [
                 {
                   "id": "melvorD:GP",
-                  "quantity": 425
+                  "quantity": 540
+                }
+              ],
+              "lootTable": [
+                {
+                  "itemID": "expandedAreas:Apple_Cider",
+                  "minQuantity": 1,
+                  "maxQuantity": 1,
+                  "weight": 80
+                },
+                {
+                  "itemID": "expandedAreas:The_Firebreather",
+                  "minQuantity": 1,
+                  "maxQuantity": 1,
+                  "weight": 80
+                },
+                {
+                  "itemID": "expandedAreas:Sailors_Respite",
+                  "minQuantity": 1,
+                  "maxQuantity": 1,
+                  "weight": 60
+                },
+                {
+                  "itemID": "expandedAreas:Fools_Gold_Ale",
+                  "minQuantity": 1,
+                  "maxQuantity": 1,
+                  "weight": 46
+                },
+                {
+                  "itemID": "expandedAreas:The_Green_Golbin",
+                  "minQuantity": 1,
+                  "maxQuantity": 1,
+                  "weight": 36
+                },
+                {
+                  "itemID": "expandedAreas:Sourberry_Ale",
+                  "minQuantity": 1,
+                  "maxQuantity": 1,
+                  "weight": 29
+                },
+                {
+                  "itemID": "melvorD:Adamant_Scimitar",
+                  "minQuantity": 1,
+                  "maxQuantity": 1,
+                  "weight": 23
+                },
+                {
+                  "itemID": "melvorD:Treasure_Chest",
+                  "minQuantity": 1,
+                  "maxQuantity": 1,
+                  "weight": 16
+                },
+                {
+                  "itemID": "expandedAreas:The_Good_Stuff",
+                  "minQuantity": 1,
+                  "maxQuantity": 1,
+                  "weight": 11
+                }
+              ],
+              "uniqueDrop": {
+                "id": "expandedAreas:Goldilocks",
+                "quantity": 1
+              },
+              "allowedDamageTypeIDs": [
+                "melvorD:Normal"
+              ]
+            },
+            {
+              "id": "PETUNIA_MASTER_GARDENER",
+              "baseExperience": 56,
+              "level": 59,
+              "name": "Petunia, Master Gardener",
+              "media": "assets/combat/monsters/Master_Gardener.png",
+              "perception": 550,
+              "maxHit": 10.1,
+              "currencyDrops": [
+                {
+                  "id": "melvorD:GP",
+                  "quantity": 400
                 }
               ],
               "lootTable": [

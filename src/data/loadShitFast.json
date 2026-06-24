@@ -66,34 +66,13 @@
         "descriptionGenerator": "<Avoidable> Creates an anti-magic field, preventing <target> from using Magic (including Buffs). Deals <damage>.",
         "usesRunesPerProc": false
       },
+
     ],
     "attackSpells": [],
     "combatAreas": [],
     "combatEffectGroups": [],
     "combatEffects": [
-      {
-        "progressBar": {
-          "maxValue"
-        },
-        "behaviours": [
-          {
-            "applicator": {
-              "effectID": "expandedAreas:BuffOverload",
-              "condition": {
-                "character": "Player",
-                "groupID": "melvorD:Buff",
-                "type": "CombatEffectGroup"
-              }
-            },
-            "type": "ProcessApplicator",
-            "triggersOn": [
-              {
-                "type": "EffectApplied"
-              }
-            ]
-          }
-        ]
-      }
+      
     ],
     "combatEffectTables": [
       {
@@ -210,19 +189,31 @@
       }
     ],
     "items": [
-      
-    ],
-    "itemSynergies": [],
-    "monsters": [
       {
-        ""
+        "validSlots": [],
+        "modifiers": {
+          "cantMiss": 1
+        },
+        "conditionalModifiers": []
       }
     ],
+    "itemSynergies": [],
+    "monsters": [],
     "pets": [],
     "prayers": [],
     "shopPurchases": [],
     "skillData": [
-
+      {
+        "skillID": "melvorD:Thieving",
+        "data": {
+          "areas": [
+            {
+              "name": ""
+            }
+          ],
+          "customMilestones": []
+        }
+      }
     ],
     "slayerAreas": [],
     "strongholds": []
