@@ -7,6 +7,38 @@
       "modifications": {
         "items": [
           {
+            "id": "melvorTotH:Poison_Rune",
+            "sellsFor": 820
+          },
+          {
+            "id": "melvorTotH:Decay_Rune",
+            "sellsFor": 980
+          },
+          {
+            "id": "melvorTotH:Infernal_Rune",
+            "sellsFor": 1140
+          },
+          {
+            "id": "melvorTotH:Despair_Rune",
+            "sellsFor": 1300
+          },
+          {
+            "id": "melvorTotH:Soul_Rune",
+            "sellsFor": 1460
+          },
+          {
+            "id": "melvorTotH:Lightning_Rune",
+            "sellsFor": 1620
+          },
+          {
+            "id": "melvorTotH:Archaic_Rune",
+            "sellsFor": 1780
+          },
+          {
+            "id": "melvorTotH:Calamity_Rune",
+            "sellsFor": 1940
+          },
+          {
             "id": "melvorTotH:Voodoo_Trinket",
             "validSlots": {
               "add": [

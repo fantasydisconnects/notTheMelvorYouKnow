@@ -181,6 +181,25 @@ SAE v0.9.3.2 — Balance, Consistency, and Rounding off Edges
 # Fixes
 - Barrows Equipment descriptions updated to show synergy text on hover
 
-SAE v0.9.3.2.1 — Hotfix
+SAE v0.9.3.2.1 — Hotfix and Mini Changes
+# Changes
+- Added Skill Level Cap Increases for Ancient Relics Mode for all SUPER AWESOME Dungeons and Challenges
+
 # Fixes
 - Fixed a gamebreaking bug where the Magic Golbin was giving the player Corruption and breaking the save when Into the Abyss was not active
+
+SAE v0.9.3.2.2 — Lil Magical Update
+# New Content
+- Added Elemental Runes to the Magic Shoppe (no requirements to purchase)
+- Added Catalytic Runes to the Magic Shoppe (requires at least 1 Hall of Wizards completion)
+- Added new Aurora Spell, Golden Aura: Level 55, 5 Light Runes, +1 Prayer Point when Hit, +0.5% Reflect Damage (increased to 5% against Hellish and Undead Monsters)
+- Added new Occult Spell, Wither Away: Level 65, 4 Death Runes, 6 Body Runes, 2 Blood Runes, 200 Max Hit, 25% chance to apply Wither (Enemy has -5% Max HP for 3 turns, takes 20% Max HP as damage over 20s) on hit, increased to 100% if Enemy is Plantlike
+
+# Changes
+- Changed Novice Necromancer's special attacks to be more consistent with the quality expected from SAE
+- Drastically increased sell prices of Runes
+- Changed Chargeable Items category name → Magic Shoppe
+- Changed Grave Touch spell to require Book of Occults, reduced chance to apply Heal Immunity from 50% → 25%, increased duration from 2 → 3 turns
+
+# Fixes
+- Fixed some Shop descriptions

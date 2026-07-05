@@ -1067,87 +1067,72 @@
         ]
       },
       {
-        "id": "Zombie_Summon",
-        "name": "Zombie Summon",
-        "defaultChance": 40,
+        "id": "ZombieThrall",
+        "name": "Zombie Thrall",
+        "defaultChance": 10,
         "damage": [
           {
             "damageType": "Custom",
             "character": "Attacker",
+            "minRoll": "Fixed",
+            "maxRoll": "Fixed",
             "roll": true,
-            "minRoll": "MinHit",
-            "minPercent": 100,
-            "maxRoll": "MaxHit",
-            "maxPercent": 100
+            "minPercent": 0.1,
+            "maxPercent": 5.2,
+            "attackCount": 0
           },
           {
             "damageType": "Custom",
             "character": "Attacker",
-            "roll": false,
+            "minRoll": "Fixed",
             "maxRoll": "Fixed",
-            "maxPercent": 5.2
+            "roll": true,
+            "minPercent": 0.1,
+            "maxPercent": 5.2,
+            "attackCount": 1
           }
         ],
         "prehitEffects": [],
         "onhitEffects": [],
         "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 3100,
+        "attackCount": 2,
+        "attackInterval": 3000,
         "lifesteal": 0,
-        "description": "Perform a regular attack. On use, summon a Zombie Hand that attacks for 42 damage.",
-        "usesRunesPerProc": true,
-        "attackTypes": [
-          "magic"
-        ],
-        "extraRuneConsumption": [
-          {
-            "id": "melvorD:Death_Rune",
-            "quantity": 2
-          },
-          {
-            "id": "melvorD:Earth_Rune",
-            "quantity": 3
-          },
-          {
-            "id": "melvorD:Body_Rune",
-            "quantity": 3
-          }
-        ]
+        "description": "The necromancer commands its zombie thrall to attack you twice, dealing up to ${attackDamageMaxValue0} per hit.",
+        "descriptionGenerator": "The necromancer attacks with a ghastly hand, dealing <damage>. On hit, <hitEffect>."
       },
       {
-        "id": "Novice_Necromancer_Zombie_Summon",
-        "name": "Zombie Summon",
-        "defaultChance": 100,
+        "id": "GraveTouch",
+        "name": "Grave Touch",
+        "defaultChance": 25,
         "damage": [
           {
             "damageType": "Custom",
             "character": "Attacker",
-            "roll": true,
-            "minRoll": "MinHit",
-            "minPercent": 100,
-            "maxRoll": "MaxHit",
-            "maxPercent": 50
-          },
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "roll": false,
             "maxRoll": "Fixed",
-            "maxPercent": 5.2
+            "roll": false,
+            "maxPercent": 10
           }
         ],
         "prehitEffects": [],
-        "onhitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "expandedAreas:HealImmunity",
+            "targetOverride": "Target",
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 2
+              }
+            ]
+          }
+        ],
         "cantMiss": false,
         "attackCount": 1,
-        "attackInterval": 3100,
+        "attackInterval": 100,
         "lifesteal": 0,
-        "description": "Summon a Zombie Hand to attack once, dealing ${attackDamageMaxValue0} damage (Can miss)..",
-        "descriptionGenerator": "Attack once dealing <damage> damage (<CanMiss>).",
-        "usesRunesPerProc": true,
-        "attackTypes": [
-          "magic"
-        ]
+        "description": "The necromancer summons a ghastly hand to grasp at your life force, dealing ${attackDamageMaxValue0} damage on hit, and inflicting Heal Immunity (can't regen or receive healing from non-food sources) on you for 2 turns.",
+        "descriptionGenerator": "The necromancer attacks with a ghastly hand, dealing <damage>. On hit, <hitEffect>."
       },
       {
         "id": "Zephyr_Strike",
@@ -2604,14 +2589,14 @@
         "maxHit": 10,
         "combatEffects": [
           {
-            "chance": 50,
+            "chance": 25,
             "effectID": "expandedAreas:HealImmunity",
             "appliesWhen": "HitWithAttack",
             "targetOverride": "Target",
             "initialParams": [
               {
                 "name": "turns",
-                "value": 2
+                "value": 3
               }
             ]
           }
@@ -2620,7 +2605,100 @@
           "expandedAreas:Spirit",
           "expandedAreas:Death"
         ],
-        "spellbook": "expandedAreas:Occult"
+        "spellbook": "expandedAreas:Occult",
+        "requiredItemID": "melvorF:Book_of_Occults"
+      },
+      {
+        "id": "WitherAway",
+        "name": "Wither Away",
+        "media": "assets/combat/magic/witheraway.svg",
+        "level": 65,
+        "runesRequired": [
+          {
+            "id": "melvorD:Death_Rune",
+            "quantity": 4
+          },
+          {
+            "id": "melvorD:Body_Rune",
+            "quantity": 6
+          },
+          {
+            "id": "melvorD:Blood_Rune",
+            "quantity": 2
+          }
+        ],
+        "maxHit": 20,
+        "combatEffects": [
+          {
+            "customDescription": "<br>Against Plantlike Monsters: 100% Chance to inflict Wither on hit (Enemy has -5% Max HP for 10 turns, takes 20% Max HP as damage over 20s)",
+            "appliesWhen": "HitWithAttack",
+            "chance": 100,
+            "condition": {
+              "character": "Enemy",
+              "effectID": "expandedAreas:MonsterTypePlantlike",
+              "type": "CombatEffect"
+            },
+            "effectID": "expandedAreas:Wither"
+          },
+          {
+            "customDescription": "<br>Against all other non-Undead Monsters: 25% Chance to inflict Wither on hit (Enemy has -5% Max HP for 10 turns, takes 20% Max HP as damage over 20s)",
+            "appliesWhen": "HitWithAttack",
+            "chance": 25,
+            "effectID": "expandedAreas:Wither",
+            "condition": {
+              "inverted": true,
+              "character": "Enemy",
+              "effectID": "expandedAreas:MonsterTypeUndead",
+              "type": "CombatEffect"
+            }
+          }
+        ],
+        "categories": [
+          "expandedAreas:Death"
+        ],
+        "spellbook": "expandedAreas:Occult",
+        "requiredItemID": "melvorF:Book_of_Occults"
+      }
+    ],
+    "auroraSpells": [
+      {
+        "id": "GoldenAura",
+        "name": "Golden Aura",
+        "media": "assets/combat/magic/golden_aura.svg",
+        "level": 55,
+        "runesRequired": [
+          {
+            "id": "melvorD:Light_Rune",
+            "quantity": 5
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "description": "+5% Reflect Damage against Hellish and Undead Monsters",
+            "modifiers": {
+              "reflectDamage": 4.5
+            },
+            "condition": {
+              "type": "Some",
+              "conditions": [
+                {
+                  "character": "Enemy",
+                  "effectID": "expandedAreas:MonsterTypeHellish",
+                  "type": "CombatEffect"
+                },
+                {
+                  "character": "Enemy",
+                  "effectID": "expandedAreas:MonsterTypeUndead",
+                  "type": "CombatEffect"
+                }
+              ]
+            }
+          }
+        ],
+        "modifiers": {
+          "flatPrayerPointsWhenHit": 1,
+          "reflectDamage": 0.5
+        }
       }
     ],
     "bankSortOrder": [
@@ -4092,6 +4170,22 @@
         ]
       },
       {
+  "insertAt": "After",
+  "afterID": "melvorF:Gold_Diamond_Necklace",
+  "ids": [
+    "expandedAreas:Silver_Topaz_Bracelet",
+    "expandedAreas:Silver_Sapphire_Bracelet",
+    "expandedAreas:Silver_Ruby_Bracelet",
+    "expandedAreas:Silver_Emerald_Bracelet",
+    "expandedAreas:Silver_Diamond_Bracelet",
+    "expandedAreas:Gold_Topaz_Bracelet",
+    "expandedAreas:Gold_Sapphire_Bracelet",
+    "expandedAreas:Gold_Ruby_Bracelet",
+    "expandedAreas:Gold_Emerald_Bracelet",
+    "expandedAreas:Gold_Diamond_Bracelet"
+  ]
+},
+      {
         "insertAt": "After",
         "afterID": "melvorF:Wizards_Sigil",
         "ids": [
@@ -4766,9 +4860,9 @@
         "adjective": "Heal Immune"
       },
       {
-        "id": "Gaze",
-        "name": "Gazes",
-        "adjective": "Gazed at"
+        "id": "DeathMagic",
+        "name": "Death Magic",
+        "adjective": "cursed by Death Magic"
       },
       {
         "id": "Paralyze",
@@ -4781,50 +4875,68 @@
         "adjective": "Vulnerable"
       }
     ],
-    "combatEffectTables": [
-      {
-        "id": "RandomGaze",
-        "table": [
-          {
-            "effectID": "expandedAreas:CharmingGaze",
-            "weight": 3
-          },
-          {
-            "effectID": "expandedAreas:ParalyzingGaze",
-            "weight": 3
-          },
-          {
-            "effectID": "expandedAreas:FrighteningGaze",
-            "weight": 3
-          },
-          {
-            "effectID": "expandedAreas:DrainingGaze",
-            "weight": 3
-          },
-          {
-            "effectID": "expandedAreas:WitheringGaze",
-            "weight": 3
-          },
-          {
-            "effectID": "expandedAreas:TelekineticGaze",
-            "weight": 3
-          },
-          {
-            "effectID": "expandedAreas:SleepGaze",
-            "weight": 3
-          },
-          {
-            "effectID": "expandedAreas:FailureGaze",
-            "weight": 3
-          },
-          {
-            "effectID": "expandedAreas:NullificationGaze",
-            "weight": 3
-          }
-        ]
-      }
-    ],
+    "combatEffectTables": [],
     "combatEffectTemplates": [
+      {
+        "id": "WitherDOT",
+        "baseTemplates": [
+          "melvorD:DOT",
+          "melvorD:SelfTurnCounting"
+        ],
+        "baseEffectData": {
+          "tooltipSpans": [
+            {
+              "type": "Stats",
+              "statGroupName": "debuff"
+            },
+            {
+              "type": "String",
+              "value": "Taking 20% of Max HP as damage over 20s"
+            },
+            {
+              "type": "Turns",
+              "turns": "p.turns"
+            }
+          ],
+          "target": "Target",
+          "parameters": [
+            {
+              "name": "turns",
+              "initialValue": 10
+            }
+          ],
+          "name": "Wither",
+          "media": "assets/combat/status/wither.svg",
+          "behaviours": [
+            {
+              "type": "DamageCharacter",
+              "value": "p.damagePerProc",
+              "triggersOn": [
+                {
+                  "type": "TimerFired",
+                  "timerName": "proc"
+                }
+              ]
+            },
+            {
+              "type": "ModifyStats",
+              "statGroupName": "debuff",
+              "newValue": 1,
+              "triggersOn": [
+                {
+                  "type": "EffectApplied"
+                }
+              ]
+            }
+          ],
+          "effectGroups": [
+            "expandedAreas:DeathMagic"
+          ],
+          "exclusiveGroups": [
+            "expandedAreas:DeathMagic"
+          ]
+        }
+      },
       {
         "id": "Paralyze",
         "description": "Endpoint Template. Defines behaviours for an effect that: Interrupts a character's turn when applied; prevents them from attacking, evading, or regenerating barrier; and causes them to take 100% more damage. Also grants immunity to stun-likes for 3 turns.",
@@ -4937,6 +5049,49 @@
     ],
     "combatEffects": [
       {
+        "id": "Wither",
+        "name": "Wither",
+        "media": "assets/combat/status/wither.svg",
+        "templateID": "expandedAreas:WitherDOT",
+        "parameters": [
+          {
+            "name": "procs",
+            "initialValue": 10
+          },
+          {
+            "name": "interval",
+            "initialValue": 2000
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "debuff",
+            "modifiers": {
+              "maxHitpoints": -5
+            }
+          }
+        ],
+        "damageGroups": [
+          {
+            "name": "total",
+            "damage": [
+              {
+                "character": "Target",
+                "roll": false,
+                "maxRoll": "MaxHP",
+                "maxPercent": 20
+              }
+            ],
+            "applyDamageModifiers": false,
+            "applyResistance": false
+          }
+        ],
+        "effectGroups": [
+          "expandedAreas:DeathMagic",
+          "melvorD:Debuff"
+        ]
+      },
+      {
         "id": "Cursed_Enhancement_Superior",
         "templateID": "melvorD:NonCountingIncremental",
         "name": "Cursed Enhancement (Superior)",
@@ -5033,278 +5188,6 @@
         ],
         "effectGroups": [
           "melvorD:Buff"
-        ]
-      },
-      {
-        "id": "CharmingGaze",
-        "templateID": "melvorD:StaticSelfCountingModifier",
-        "name": "Charming Gaze",
-        "media": "assets/combat/status/strength_decrease.png",
-        "target": "Target",
-        "statGroups": [
-          {
-            "name": "stacks",
-            "modifiers": {
-              "damageDealt": -30
-            }
-          }
-        ],
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 3
-          }
-        ],
-        "effectGroups": [
-          "melvorD:Debuff",
-          "expandedAreas:Gaze"
-        ]
-      },
-      {
-        "id": "ParalyzingGaze",
-        "templateID": "expandedAreas:Paralyze",
-        "name": "Paralyzing Gaze",
-        "media": "assets/combat/status/paralyzed.png",
-        "target": "Target",
-        "statGroups": [],
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 3
-          }
-        ],
-        "effectGroups": [
-          "melvorD:Debuff",
-          "expandedAreas:Paralyze",
-          "expandedAreas:Gaze"
-        ]
-      },
-      {
-        "id": "FrighteningGaze",
-        "templateID": "melvorD:Fear",
-        "name": "Gaze: Fear",
-        "media": "assets/combat/status/fear.svg",
-        "target": "Target",
-        "statGroups": [],
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 3
-          }
-        ],
-        "effectGroups": [
-          "melvorD:Debuff",
-          "melvorD:Fear",
-          "expandedAreas:Gaze"
-        ]
-      },
-      {
-        "id": "DrainingGaze",
-        "templateID": "melvorD:StaticSelfCountingModifier",
-        "name": "Draining Gaze",
-        "media": "assets/combat/status/slowed.svg",
-        "target": "Target",
-        "tooltipSpans": [
-          {
-            "type": "Stats",
-            "statGroupName": "stacks"
-          }
-        ],
-        "statGroups": [
-          {
-            "name": "stacks",
-            "modifiers": {
-              "cantSpecialAttack": 1,
-              "attackInterval": 50
-            }
-          }
-        ],
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 3
-          }
-        ],
-        "effectGroups": [
-          "melvorD:Debuff",
-          "melvorD:Slow",
-          "expandedAreas:Gaze"
-        ]
-      },
-      {
-        "id": "WitheringGaze",
-        "templateID": "melvorD:BurnDOT",
-        "name": "Withering Gaze",
-        "media": "assets/combat/status/wither.png",
-        "target": "Target",
-        "statGroups": [],
-        "parameters": [
-          {
-            "name": "procs",
-            "initialValue": 10
-          },
-          {
-            "name": "interval",
-            "initialValue": 6000
-          }
-        ],
-        "damageGroups": [
-          {
-            "name": "total",
-            "damage": [
-              {
-                "character": "Target",
-                "roll": false,
-                "maxRoll": "MaxHP",
-                "maxPercent": 5000
-              }
-            ],
-            "applyDamageModifiers": false,
-            "applyResistance": true
-          }
-        ],
-        "effectGroups": [
-          "melvorD:DamageOverTime",
-          "melvorD:BurnDOT",
-          "expandedAreas:Gaze"
-        ]
-      },
-      {
-        "id": "TelekineticGaze",
-        "templateID": "melvorD:StaticSelfCountingModifier",
-        "name": "Telekinetic Gaze",
-        "media": "assets/combat/status/evasion_decrease.svg",
-        "target": "Target",
-        "statGroups": [
-          {
-            "name": "stacks",
-            "modifiers": {
-              "resistance": [
-                {
-                  "damageTypeID": "melvorD:Normal",
-                  "value": -50
-                }
-              ],
-              "evasion": -50
-            }
-          }
-        ],
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 3
-          }
-        ],
-        "effectGroups": [
-          "melvorD:Debuff",
-          "expandedAreas:Gaze"
-        ]
-      },
-      {
-        "id": "SleepGaze",
-        "templateID": "melvorD:Sleep",
-        "name": "Sleep Gaze",
-        "media": "assets/combat/status/sleep.svg",
-        "target": "Target",
-        "statGroups": [],
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 3
-          }
-        ],
-        "effectGroups": [
-          "melvorD:Debuff",
-          "melvorD:Sleep",
-          "expandedAreas:Gaze"
-        ]
-      },
-      {
-        "id": "FailureGaze",
-        "templateID": "melvorD:StaticSelfCountingModifier",
-        "name": "Failure Gaze",
-        "media": "assets/combat/status/attack_decrease.svg",
-        "target": "Target",
-        "statGroups": [
-          {
-            "name": "stacks",
-            "modifiers": {
-              "accuracyRating": -80
-            }
-          }
-        ],
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 3
-          }
-        ],
-        "effectGroups": [
-          "melvorD:Debuff",
-          "expandedAreas:Gaze"
-        ]
-      },
-      {
-        "id": "NullificationGaze",
-        "templateID": "melvorD:StaticSelfCountingModifier",
-        "name": "Nullification Gaze",
-        "media": "assets/combat/status/null.svg",
-        "target": "Target",
-        "statGroups": [
-          {
-            "name": "stacks",
-            "modifiers": {
-              "effectImmunity": [
-                {
-                  "effectGroupID": "melvorD:Buff",
-                  "value": 1
-                }
-              ]
-            }
-          }
-        ],
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 3
-          }
-        ],
-        "effectGroups": [
-          "melvorD:Debuff",
-          "expandedAreas:Gaze"
-        ]
-      },
-      {
-        "id": "AntiMagicField",
-        "templateID": "melvorD:StaticSelfCountingModifier",
-        "name": "Anti-Magic Field",
-        "media": "assets/combat/status/antimagic.png",
-        "target": "Target",
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 5
-          }
-        ],
-        "statGroups": [
-          {
-            "name": "stacks",
-            "modifiers": {
-              "magicAttackInterval": 999999,
-              "magicAccuracyRating": -999999,
-              "magicMaxHit": -999999,
-              "magicEvasion": -999999,
-              "effectImmunity": [
-                {
-                  "effectGroupID": "melvorD:Buff",
-                  "value": 1
-                }
-              ]
-            }
-          }
-        ],
-        "effectGroups": [
-          "melvorD:Debuff"
         ]
       },
       {
@@ -6502,7 +6385,7 @@
             "turns": "p.turns"
           }
         ],
-        "target": "Self",
+        "target": "Target",
         "parameters": [
           {
             "name": "turns",
@@ -6519,8 +6402,8 @@
                   "value": 1
                 }
               ],
-              "lifesteal": -99999999,
-              "hitpointRegeneration": -999999
+              "disableHPRegeneration": 1,
+              "disableLifesteal": 1
             }
           }
         ],
@@ -7159,158 +7042,6 @@
             "chance": 100
           }
         ]
-      },
-      {
-        "id": "Gazer",
-        "name": "Gazer",
-        "customDescription": "This monster is a Gazer. Its eyestalks shoot rays that inflict random Debuffs (e.g. Fear) or Damage Over Time (e.g. Burn) effects. Gazers themselves have a 50% chance to ignore Gaze attacks.",
-        "modifiers": {
-          "effectIgnoreChance": [
-            {
-              "effectGroupID": "expandedAreas:Gaze",
-              "value": 50
-            }
-          ]
-        }
-      },
-      {
-        "id": "BastionOfTyranny",
-        "name": "Bastion of Tyranny",
-        "customDescription": "The Tyrant Mother has a 75% chance to ignore Debuffs, Curses, and Fear",
-        "modifiers": {
-          "effectIgnoreChance": [
-            {
-              "effectGroupID": "melvorD:Curse",
-              "value": 75
-            },
-            {
-              "effectGroupID": "melvorD:Debuff",
-              "value": 75
-            },
-            {
-              "effectGroupID": "melvorD:Fear",
-              "value": 75
-            }
-          ]
-        }
-      },
-      {
-        "id": "StrangeBiology",
-        "name": "Strange Biology",
-        "customDescription": "Immune to Stun, Freeze, Crystallization, Paralyze, Sleep, Slow, and Critical Hits. +50% chance to ignore Bleed and Poison.",
-        "modifiers": {
-          "effectImmunity": [
-            {
-              "effectGroupID": "melvorD:StunLike",
-              "value": 1
-            },
-            {
-              "effectGroupID": "melvorD:Crystallize",
-              "value": 1
-            },
-            {
-              "effectGroupID": "melvorD:CrystalSanction",
-              "value": 1
-            },
-            {
-              "effectGroupID": "melvorD:Sleep",
-              "value": 1
-            },
-            {
-              "effectGroupID": "melvorD:Slow",
-              "value": 1
-            },
-            {
-              "effectGroupID": "expandedAreas:Paralyze",
-              "value": 1
-            }
-          ],
-          "effectIgnoreChance": [
-            {
-              "effectGroupID": "melvorD:BleedDOT",
-              "value": 50
-            },
-            {
-              "effectGroupID": "melvorD:PoisonDOT",
-              "value": 50
-            }
-          ]
-        },
-        "playerModifiers": {
-          "critChance": -999999,
-          "critMultiplier": -999999
-        }
-      },
-      {
-        "id": "NullifyingEye",
-        "name": "Nullifying Eye",
-        "customDescription": "The gazer's central Eye creates an Anti-Magic Field, disabling your Magic attacks, negating your Magic Evasion, and preventing any Buffs on you for 5 turns. The Eye opens at the Start of the Fight and has a 10% chance to reopen on each character's turn until the End of the Fight.",
-        "combatEffects": [
-          {
-            "appliesWhen": "StartOfFight",
-            "chance": 100,
-            "effectID": "expandedAreas:AntiMagicField"
-          },
-          {
-            "appliesWhen": "EvadedAttack",
-            "chance": 10,
-            "effectID": "expandedAreas:AntiMagicField"
-          },
-          {
-            "appliesWhen": "BeingAttacked",
-            "chance": 10,
-            "effectID": "expandedAreas:AntiMagicField"
-          },
-          {
-            "appliesWhen": "CritWithAttack",
-            "chance": 10,
-            "effectID": "expandedAreas:AntiMagicField"
-          },
-          {
-            "appliesWhen": "HitByAttack",
-            "chance": 10,
-            "effectID": "expandedAreas:AntiMagicField"
-          },
-          {
-            "appliesWhen": "HitByFirstAttack",
-            "chance": 10,
-            "effectID": "expandedAreas:AntiMagicField"
-          },
-          {
-            "appliesWhen": "PostAttack",
-            "chance": 10,
-            "effectID": "expandedAreas:AntiMagicField"
-          },
-          {
-            "appliesWhen": "PostFirstAttack",
-            "chance": 10,
-            "effectID": "expandedAreas:AntiMagicField"
-          },
-          {
-            "appliesWhen": "PreAttack",
-            "chance": 10,
-            "effectID": "expandedAreas:AntiMagicField"
-          },
-          {
-            "appliesWhen": "SummonAttack",
-            "chance": 10,
-            "effectID": "expandedAreas:AntiMagicField"
-          },
-          {
-            "appliesWhen": "WasAttacked",
-            "chance": 10,
-            "effectID": "expandedAreas:AntiMagicField"
-          }
-        ]
-      },
-      {
-        "id": "Banisher",
-        "name": "Banisher",
-        "customDescription": "The Enemy banishes your Familiars, preventing them from attacking or dealing damage.",
-        "playerModifiers": {
-          "summoningMaxHit": -999999,
-          "summoningAttackInterval": 999999
-        }
       },
       {
         "id": "PhaseHP10",
@@ -8730,6 +8461,353 @@
       }
     ],
     "items": [
+      {
+        "itemType": "Equipment",
+        "id": "Gold_Topaz_Bracelet",
+        "name": "Gold Topaz Bracelet",
+        "category": "Crafting",
+        "type": "Bracelet",
+        "media": "assets/bank/bracelet_gold_topaz.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 250,
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "crafting30CurrencyGainChance": [
+            {
+              "currencyID": "melvorD:GP",
+              "value": 3
+            }
+          ]
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Gold_Sapphire_Bracelet",
+        "name": "Gold Sapphire Bracelet",
+        "category": "Combat",
+        "type": "Bracelet",
+        "media": "assets/bank/bracelet_gold_sapphire.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 300,
+        "customDescription": "Passive: When Enemy's Combat Style is opposite to yours, you have +1% Reflect Damage (Reflect Dmg activates once per 2 secs, gives no XP, and can't kill the Enemy) ",
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "conditionalModifiers": [
+          {
+            "modifiers": {
+              "reflectDamage": 1
+            },
+            "condition": {
+              "type": "Some",
+              "conditions": [
+                {
+                  "character": "Player",
+                  "thisAttackType": "magic",
+                  "targetAttackType": "ranged",
+                  "type": "CombatType"
+                },
+                {
+                  "character": "Player",
+                  "thisAttackType": "ranged",
+                  "targetAttackType": "melee",
+                  "type": "CombatType"
+                },
+                {
+                  "character": "Player",
+                  "thisAttackType": "melee",
+                  "targetAttackType": "magic",
+                  "type": "CombatType"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Gold_Ruby_Bracelet",
+        "name": "Gold Ruby Bracelet",
+        "category": "Combat",
+        "type": "Bracelet",
+        "media": "assets/bank/bracelet_gold_ruby.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 500,
+        "customDescription": "Passive: +20 Max HP when Fighting Bosses",
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "conditionalModifiers": [
+          {
+            "modifiers": {
+              "flatMaxHitpoints": 2
+            },
+            "condition": {
+              "type": "FightingBoss",
+              "character": "Player"
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Gold_Emerald_Bracelet",
+        "name": "Gold Emerald Bracelet",
+        "category": "Fletching",
+        "type": "Bracelet",
+        "media": "assets/bank/bracelet_gold_emerald.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 550,
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "flatBasePrimaryProductQuantity": [
+            {
+              "skillID": "melvorD:Fletching",
+              "categoryID": "melvorF:Arrows",
+              "value": 3
+            },
+            {
+              "skillID": "melvorD:Fletching",
+              "categoryID": "melvorF:Bolts",
+              "value": 1
+            }
+          ]
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Gold_Diamond_Bracelet",
+        "name": "Gold Diamond Bracelet",
+        "category": "Combat",
+        "type": "Bracelet",
+        "media": "assets/bank/bracelet_gold_diamond.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 950,
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "effectIgnoreChance": [
+            {
+              "effectGroupID": "melvorD:Debuff",
+              "value": 1
+            },
+            {
+              "effectGroupID": "melvorD:DamageOverTime",
+              "value": 1
+            }
+          ]
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Topaz_Bracelet",
+        "name": "Silver Topaz Bracelet",
+        "category": "Mining",
+        "type": "Bracelet",
+        "media": "assets/bank/bracelet_silver_topaz.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 250,
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "flatAdditionalPrimaryProductQuantity": [
+            {
+              "skillID": "melvorD:Mining",
+              "actionID": "melvorD:Rune_Essence",
+              "value": 2
+            }
+          ]
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Sapphire_Bracelet",
+        "name": "Silver Sapphire Bracelet",
+        "category": "Slayer",
+        "type": "Bracelet",
+        "media": "assets/bank/bracelet_silver_sapphire.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 500,
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "doubleSlayerTaskKillChance": 5
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Ruby_Bracelet",
+        "name": "Silver Ruby Bracelet",
+        "category": "Food",
+        "type": "Bracelet",
+        "media": "assets/bank/bracelet_silver_ruby.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 550,
+        "customDescription": "Passive: +25% Food Healing Value from Soups and Curries",
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "foodHealingValue": [
+            {
+              "actionID": "melvorD:Basic_Soup",
+              "value": 25
+            },
+            {
+              "actionID": "melvorD:Hearty_Soup",
+              "value": 25
+            },
+            {
+              "actionID": "melvorD:Cream_Corn_Soup",
+              "value": 25
+            },
+            {
+              "actionID": "melvorD:Chicken_Soup",
+              "value": 25
+            },
+            {
+              "actionID": "expandedAreas:Basic_Curry",
+              "value": 25
+            },
+            {
+              "actionID": "expandedAreas:Spicy_Curry",
+              "value": 25
+            },
+            {
+              "actionID": "expandedAreas:Shrimp_Curry",
+              "value": 25
+            },
+            {
+              "actionID": "expandedAreas:Massaman_Curry",
+              "value": 25
+            },
+            {
+              "actionID": "expandedAreas:Spicy_Papaya_Curry",
+              "value": 25
+            }
+          ]
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Emerald_Bracelet",
+        "name": "Silver Emerald Bracelet",
+        "category": "Skilling",
+        "type": "Bracelet",
+        "media": "assets/bank/bracelet_silver_emerald.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 850,
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "skillCostReduction": 20,
+          "skillXP": -80
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Diamond_Bracelet",
+        "name": "Silver Diamond Bracelet",
+        "category": "Combat",
+        "type": "Bracelet",
+        "media": "assets/bank/bracelet_silver_diamond.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 950,
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "endOfTurnEvasion2": 5
+        }
+      },
       {
         "itemType": "Weapon",
         "attackType": "ranged",
@@ -31659,7 +31737,7 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 7
+        "sellsFor": 760
       },
       {
         "itemType": "Rune",
@@ -31671,7 +31749,7 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 6
+        "sellsFor": 600
       },
       {
         "id": "Pure_Elementalist_Sceptre",
@@ -53378,7 +53456,8 @@
         "ignoreCompletion": false,
         "attackType": "magic",
         "specialAttacks": [
-          "expandedAreas:Novice_Necromancer_Zombie_Summon"
+          "expandedAreas:GraveTouch",
+          "expandedAreas:ZombieThrall"
         ],
         "passives": [],
         "lootChance": 100,
@@ -55427,9 +55506,9 @@
         "media": "assets/shop/combatMastery/combat_header.svg"
       },
       {
-        "id": "ChargeableItems",
-        "name": "Chargeable Items",
-        "media": "assets/bank/wand_fireball.png"
+        "id": "MagicShoppe",
+        "name": "Magic Shoppe",
+        "media": "assets/shop/magicshoppe.svg"
       }
     ],
     "shopCategoryOrder": [
@@ -55444,7 +55523,7 @@
         "afterID": "melvorD:Gloves",
         "insertAt": "After",
         "ids": [
-          "expandedAreas:ChargeableItems"
+          "expandedAreas:MagicShoppe"
         ]
       }
     ],
@@ -55584,6 +55663,14 @@
       {
         "insertAt": "Start",
         "ids": [
+          "expandedAreas:Air_Rune",
+          "expandedAreas:Water_Rune",
+          "expandedAreas:Earth_Rune",
+          "expandedAreas:Fire_Rune",
+          "expandedAreas:Mind_Rune",
+          "expandedAreas:Body_Rune",
+          "expandedAreas:Chaos_Rune",
+          "expandedAreas:Death_Rune",
           "expandedAreas:Wand_of_Fireball",
           "expandedAreas:Wand_of_Frost",
           "expandedAreas:Wand_of_Lightning"
@@ -59663,9 +59750,273 @@
         "customDescription": "Allows you to use Curses without equipping a Magic Weapon (also deactivates the Allow Nonmagic Auroras Shop Purchase)"
       },
       {
+        "id": "Air_Rune",
+        "media": "assets/bank/rune_air.png",
+        "category": "expandedAreas:MagicShoppe",
+        "contains": {
+          "items": [
+            {
+              "id": "melvorD:Air_Rune",
+              "quantity": 1
+            }
+          ]
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "initial": 4,
+              "scaling": 1,
+              "type": "Linear"
+            }
+          ]
+        },
+        "allowQuantityPurchase": true,
+        "unlockRequirements": [],
+        "purchaseRequirements": [],
+        "defaultBuyLimit": 0,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false
+      },
+      {
+        "id": "Water_Rune",
+        "media": "assets/bank/rune_water.png",
+        "category": "expandedAreas:MagicShoppe",
+        "contains": {
+          "items": [
+            {
+              "id": "melvorD:Water_Rune",
+              "quantity": 1
+            }
+          ]
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "initial": 4,
+              "scaling": 1,
+              "type": "Linear"
+            }
+          ]
+        },
+        "allowQuantityPurchase": true,
+        "unlockRequirements": [],
+        "purchaseRequirements": [],
+        "defaultBuyLimit": 0,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false
+      },
+      {
+        "id": "Earth_Rune",
+        "media": "assets/bank/rune_earth.png",
+        "category": "expandedAreas:MagicShoppe",
+        "contains": {
+          "items": [
+            {
+              "id": "melvorD:Earth_Rune",
+              "quantity": 1
+            }
+          ]
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "initial": 4,
+              "scaling": 1,
+              "type": "Linear"
+            }
+          ]
+        },
+        "allowQuantityPurchase": true,
+        "unlockRequirements": [],
+        "purchaseRequirements": [],
+        "defaultBuyLimit": 0,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false
+      },
+      {
+        "id": "Fire_Rune",
+        "media": "assets/bank/rune_fire.png",
+        "category": "expandedAreas:MagicShoppe",
+        "contains": {
+          "items": [
+            {
+              "id": "melvorD:Fire_Rune",
+              "quantity": 1
+            }
+          ]
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "initial": 4,
+              "scaling": 1,
+              "type": "Linear"
+            }
+          ]
+        },
+        "allowQuantityPurchase": true,
+        "unlockRequirements": [],
+        "purchaseRequirements": [],
+        "defaultBuyLimit": 0,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false
+      },
+      {
+        "id": "Mind_Rune",
+        "media": "assets/bank/rune_mind.png",
+        "category": "expandedAreas:MagicShoppe",
+        "contains": {
+          "items": [
+            {
+              "id": "melvorD:Mind_Rune",
+              "quantity": 1
+            }
+          ]
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "initial": 3,
+              "scaling": 1,
+              "type": "Linear"
+            }
+          ]
+        },
+        "allowQuantityPurchase": true,
+        "unlockRequirements": [],
+        "purchaseRequirements": [
+          {
+            "dungeonID": "melvorD:Hall_of_Wizards",
+            "count": 1,
+            "type": "DungeonCompletion"
+          }
+        ],
+        "defaultBuyLimit": 0,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false
+      },
+      {
+        "id": "Body_Rune",
+        "media": "assets/bank/rune_body.png",
+        "category": "expandedAreas:MagicShoppe",
+        "contains": {
+          "items": [
+            {
+              "id": "melvorD:Body_Rune",
+              "quantity": 1
+            }
+          ]
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "initial": 3,
+              "scaling": 1,
+              "type": "Linear"
+            }
+          ]
+        },
+        "allowQuantityPurchase": true,
+        "unlockRequirements": [],
+        "purchaseRequirements": [
+          {
+            "dungeonID": "melvorD:Hall_of_Wizards",
+            "count": 1,
+            "type": "DungeonCompletion"
+          }
+        ],
+        "defaultBuyLimit": 0,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false
+      },
+      {
+        "id": "Chaos_Rune",
+        "media": "assets/bank/rune_chaos.png",
+        "category": "expandedAreas:MagicShoppe",
+        "contains": {
+          "items": [
+            {
+              "id": "melvorD:Chaos_Rune",
+              "quantity": 1
+            }
+          ]
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "initial": 90,
+              "scaling": 5,
+              "type": "Linear"
+            }
+          ]
+        },
+        "allowQuantityPurchase": true,
+        "unlockRequirements": [],
+        "purchaseRequirements": [
+          {
+            "dungeonID": "melvorD:Hall_of_Wizards",
+            "count": 1,
+            "type": "DungeonCompletion"
+          }
+        ],
+        "defaultBuyLimit": 0,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false
+      },
+      {
+        "id": "Death_Rune",
+        "media": "assets/bank/rune_death.png",
+        "category": "expandedAreas:MagicShoppe",
+        "contains": {
+          "items": [
+            {
+              "id": "melvorD:Death_Rune",
+              "quantity": 1
+            }
+          ]
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "initial": 180,
+              "scaling": 9,
+              "type": "Linear"
+            }
+          ]
+        },
+        "allowQuantityPurchase": true,
+        "unlockRequirements": [],
+        "purchaseRequirements": [
+          {
+            "dungeonID": "melvorD:Hall_of_Wizards",
+            "count": 1,
+            "type": "DungeonCompletion"
+          }
+        ],
+        "defaultBuyLimit": 0,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false
+      },
+      {
         "id": "Wand_of_Lightning",
         "media": "assets/bank/wand_lightning.png",
-        "category": "expandedAreas:ChargeableItems",
+        "category": "expandedAreas:MagicShoppe",
         "customDescription": "Equips in Offhand Slot, at a penalty of +20% Attack Interval. Has the Special Attack, Lightning Arc (15%): An arc of lightning zaps the target 3 times over 0.3s, dealing 60-480 damage on the first hit, 30-240 on the second, and 15-120 on the third. Each hit applies 1 stack of Shock (-5% Accuracy, up to 10 stacks) and has a 10% chance to apply Stun for 1 turn.",
         "contains": {
           "items": [],
@@ -59694,8 +60045,8 @@
       {
         "id": "Wand_of_Frost",
         "media": "assets/bank/wand_frost.png",
-        "category": "expandedAreas:ChargeableItems",
-        "customDescription": "Equips in Offhand Slot, at a penalty of +20% Attack Interval. Has the Special Attack, Feelin' Frost? (15%): A ray of biting cold pierces the target, dealing damage equal to 1 + 5-10% of their Magic level. On hit, Slows the target for 15% for 3 turns, and has a 20% chance to Freeze the target for 2 turns.",
+        "category": "expandedAreas:MagicShoppe",
+        "customDescription": "Equips in Offhand Slot, at a penalty of +20% Attack Interval. Has the Special Attack, Feelin' Frosty? (15%): A ray of biting cold pierces the target, dealing damage equal to 1 + 5-10% of their Magic level. On hit, Slows the target for 15% for 3 turns, and has a 20% chance to Freeze the target for 2 turns.",
         "contains": {
           "items": [],
           "itemCharges": {
@@ -59723,7 +60074,8 @@
       {
         "id": "Wand_of_Fireball",
         "media": "assets/bank/wand_fireball.png",
-        "category": "expandedAreas:ChargeableItems",
+        "customDescription": "Equips in Offhand Slot, at a penalty of +20% Attack Interval. Has the Special Attack, FIREBALL! (15%): Launch an avoidable fireball that deals 60-360 damage. On a hit, inflicts Burn.",
+        "category": "expandedAreas:MagicShoppe",
         "contains": {
           "items": [],
           "itemCharges": {
@@ -65445,6 +65797,196 @@
             "upgrades": []
           },
           "recipes": [
+            {
+              "id": "Gold_Topaz_Bracelet",
+              "level": 10,
+              "productID": "expandedAreas:Gold_Topaz_Bracelet",
+              "baseQuantity": 1,
+              "baseExperience": 24,
+              "categoryID": "expandedAreas:Accessories",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Gold_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorD:Topaz",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Gold_Sapphire_Bracelet",
+              "level": 20,
+              "productID": "expandedAreas:Gold_Sapphire_Bracelet",
+              "baseQuantity": 1,
+              "baseExperience": 45,
+              "categoryID": "expandedAreas:Accessories",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Gold_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorD:Sapphire",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Gold_Ruby_Bracelet",
+              "level": 25,
+              "productID": "expandedAreas:Gold_Ruby_Bracelet",
+              "baseQuantity": 1,
+              "baseExperience": 60,
+              "categoryID": "expandedAreas:Accessories",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Gold_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorD:Ruby",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Gold_Emerald_Bracelet",
+              "level": 50,
+              "productID": "expandedAreas:Gold_Emerald_Bracelet",
+              "baseQuantity": 1,
+              "baseExperience": 130,
+              "categoryID": "expandedAreas:Accessories",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Gold_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorD:Emerald",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Gold_Diamond_Bracelet",
+              "level": 80,
+              "productID": "expandedAreas:Gold_Diamond_Bracelet",
+              "baseQuantity": 1,
+              "baseExperience": 250,
+              "categoryID": "expandedAreas:Accessories",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Gold_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorD:Diamond",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Topaz_Bracelet",
+              "level": 10,
+              "productID": "expandedAreas:Silver_Topaz_Bracelet",
+              "baseQuantity": 1,
+              "baseExperience": 24,
+              "categoryID": "expandedAreas:Accessories",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Silver_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorD:Topaz",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Sapphire_Bracelet",
+              "level": 20,
+              "productID": "expandedAreas:Silver_Sapphire_Bracelet",
+              "baseQuantity": 1,
+              "baseExperience": 45,
+              "categoryID": "expandedAreas:Accessories",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Silver_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorD:Sapphire",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Ruby_Bracelet",
+              "level": 25,
+              "productID": "expandedAreas:Silver_Ruby_Bracelet",
+              "baseQuantity": 1,
+              "baseExperience": 60,
+              "categoryID": "expandedAreas:Accessories",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Silver_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorD:Ruby",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Emerald_Bracelet",
+              "level": 50,
+              "productID": "expandedAreas:Silver_Emerald_Bracelet",
+              "baseQuantity": 1,
+              "baseExperience": 130,
+              "categoryID": "expandedAreas:Accessories",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Silver_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorD:Emerald",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Silver_Diamond_Bracelet",
+              "level": 80,
+              "productID": "expandedAreas:Silver_Diamond_Bracelet",
+              "baseQuantity": 1,
+              "baseExperience": 250,
+              "categoryID": "expandedAreas:Accessories",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Silver_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorD:Diamond",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
             {
               "id": "Topaz_Dust",
               "level": 9,

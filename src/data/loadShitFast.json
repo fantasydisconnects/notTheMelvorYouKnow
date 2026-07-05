@@ -4,6 +4,45 @@
   "data": {
     "attacks": [
       {
+        "id": "Shadowshot",
+        "defaultChance": 15,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 25
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Bleed100"
+          },
+          {
+            "effectID": "WTM:Immobilize",
+            "targetOverride": "Target",
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "effectID": "WTM:Shadowshot0",
+            "targetOverride": "Self"
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "name": "Shadowshot",
+        "description": "You quickly fire a targeted arrow that deals ${attackDamageMaxValue0}% of your normal damage. On hit, inflict Bleed that deals ${onHitEffect0DamageMaxValue0} damage over ${onHitEffect0duration}s, and apply Immobilize (Can't Attack) for ${onHitEffect1turns} turns. Then, slink into the shadows and gain +${onHitEffect2modValue0}% Global Evasion, +${onHitEffect2modValue1}% Damage Reduction and -${onHitEffect2modValue2}% Attack Interval for ${onHitEffect2turns} turns. If effects are already active, perform a regular attack instead.",
+        "descriptionGenerator": "Quickly fire an arrow, dealing <damage> and <onhitEffect>. If effects already active, perform a regular attack instead.",
+        "usesRunesPerProc": false,
+        "canNormalAttack": true
+      },
+      {
         "id": "TyrannicalGazeRays",
         "defaultChance": 25,
         "damage": [
@@ -66,15 +105,406 @@
         "descriptionGenerator": "<Avoidable> Creates an anti-magic field, preventing <target> from using Magic (including Buffs). Deals <damage>.",
         "usesRunesPerProc": false
       },
-
     ],
     "attackSpells": [],
+    "auroraSpells": [],
     "combatAreas": [],
     "combatEffectGroups": [],
     "combatEffects": [
-      
+      {
+        "id": "Shadowshot0",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Shadowshot",
+        "media": "assets/combat/status/evasion_increase.svg",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 1
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "evasion": 40,
+              "flatResistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": 10
+                }
+              ],
+              "flatAttackInterval": -200
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "BurnSusceptibility",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Burn Susceptibility",
+        "media": "assets/combat/status/vulnerability.png",
+        "target": "Target",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "burnDOTDamageTaken": 100
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "DOTVulnerability",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "DOT Vulnerability",
+        "media": "assets/combat/status/vulnerability.png",
+        "target": "Target",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "dotDamageTaken": 25
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
+        "id": "CharmingGaze",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Charming Gaze",
+        "media": "assets/combat/status/strength_decrease.png",
+        "target": "Target",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "damageDealt": -30
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff",
+          "expandedAreas:Gaze"
+        ]
+      },
+      {
+        "id": "ParalyzingGaze",
+        "templateID": "expandedAreas:Paralyze",
+        "name": "Paralyzing Gaze",
+        "media": "assets/combat/status/paralyzed.png",
+        "target": "Target",
+        "statGroups": [],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff",
+          "expandedAreas:Paralyze",
+          "expandedAreas:Gaze"
+        ]
+      },
+      {
+        "id": "FrighteningGaze",
+        "templateID": "melvorD:Fear",
+        "name": "Gaze: Fear",
+        "media": "assets/combat/status/fear.svg",
+        "target": "Target",
+        "statGroups": [],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff",
+          "melvorD:Fear",
+          "expandedAreas:Gaze"
+        ]
+      },
+      {
+        "id": "DrainingGaze",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Draining Gaze",
+        "media": "assets/combat/status/slowed.svg",
+        "target": "Target",
+        "tooltipSpans": [
+          {
+            "type": "Stats",
+            "statGroupName": "stacks"
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "cantSpecialAttack": 1,
+              "attackInterval": 50
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff",
+          "melvorD:Slow",
+          "expandedAreas:Gaze"
+        ]
+      },
+      {
+        "id": "WitheringGaze",
+        "templateID": "melvorD:BurnDOT",
+        "name": "Withering Gaze",
+        "media": "assets/combat/status/wither.png",
+        "target": "Target",
+        "statGroups": [],
+        "parameters": [
+          {
+            "name": "procs",
+            "initialValue": 10
+          },
+          {
+            "name": "interval",
+            "initialValue": 6000
+          }
+        ],
+        "damageGroups": [
+          {
+            "name": "total",
+            "damage": [
+              {
+                "character": "Target",
+                "roll": false,
+                "maxRoll": "MaxHP",
+                "maxPercent": 5000
+              }
+            ],
+            "applyDamageModifiers": false,
+            "applyResistance": true
+          }
+        ],
+        "effectGroups": [
+          "melvorD:DamageOverTime",
+          "melvorD:BurnDOT",
+          "expandedAreas:Gaze"
+        ]
+      },
+      {
+        "id": "TelekineticGaze",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Telekinetic Gaze",
+        "media": "assets/combat/status/evasion_decrease.svg",
+        "target": "Target",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "resistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": -50
+                }
+              ],
+              "evasion": -50
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff",
+          "expandedAreas:Gaze"
+        ]
+      },
+      {
+        "id": "SleepGaze",
+        "templateID": "melvorD:Sleep",
+        "name": "Sleep Gaze",
+        "media": "assets/combat/status/sleep.svg",
+        "target": "Target",
+        "statGroups": [],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff",
+          "melvorD:Sleep",
+          "expandedAreas:Gaze"
+        ]
+      },
+      {
+        "id": "FailureGaze",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Failure Gaze",
+        "media": "assets/combat/status/attack_decrease.svg",
+        "target": "Target",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "accuracyRating": -80
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff",
+          "expandedAreas:Gaze"
+        ]
+      },
+      {
+        "id": "NullificationGaze",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Nullification Gaze",
+        "media": "assets/combat/status/null.svg",
+        "target": "Target",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "effectImmunity": [
+                {
+                  "effectGroupID": "melvorD:Buff",
+                  "value": 1
+                }
+              ]
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff",
+          "expandedAreas:Gaze"
+        ]
+      },
+      {
+        "id": "AntiMagicField",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Anti-Magic Field",
+        "media": "assets/combat/status/antimagic.png",
+        "target": "Target",
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 5
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "magicAttackInterval": 999999,
+              "magicAccuracyRating": -999999,
+              "magicMaxHit": -999999,
+              "magicEvasion": -999999,
+              "effectImmunity": [
+                {
+                  "effectGroupID": "melvorD:Buff",
+                  "value": 1
+                }
+              ]
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
     ],
     "combatEffectTables": [
+      {
+        "id": "RandomGaze",
+        "table": [
+          {
+            "effectID": "expandedAreas:CharmingGaze",
+            "weight": 3
+          },
+          {
+            "effectID": "expandedAreas:ParalyzingGaze",
+            "weight": 3
+          },
+          {
+            "effectID": "expandedAreas:FrighteningGaze",
+            "weight": 3
+          },
+          {
+            "effectID": "expandedAreas:DrainingGaze",
+            "weight": 3
+          },
+          {
+            "effectID": "expandedAreas:WitheringGaze",
+            "weight": 3
+          },
+          {
+            "effectID": "expandedAreas:TelekineticGaze",
+            "weight": 3
+          },
+          {
+            "effectID": "expandedAreas:SleepGaze",
+            "weight": 3
+          },
+          {
+            "effectID": "expandedAreas:FailureGaze",
+            "weight": 3
+          },
+          {
+            "effectID": "expandedAreas:NullificationGaze",
+            "weight": 3
+          }
+        ]
+      },
       {
         "id": "MistBuff",
         "table": [
@@ -95,6 +525,158 @@
     ],
     "combatEffectTemplates": [],
     "combatPassives": [
+      {
+        "id": "Gazer",
+        "name": "Gazer",
+        "customDescription": "This monster is a Gazer. Its eyestalks shoot rays that inflict random Debuffs (e.g. Fear) or Damage Over Time (e.g. Burn) effects. Gazers themselves have a 50% chance to ignore Gaze attacks.",
+        "modifiers": {
+          "effectIgnoreChance": [
+            {
+              "effectGroupID": "expandedAreas:Gaze",
+              "value": 50
+            }
+          ]
+        }
+      },
+      {
+        "id": "BastionOfTyranny",
+        "name": "Bastion of Tyranny",
+        "customDescription": "The Tyrant Mother has a 75% chance to ignore Debuffs, Curses, and Fear",
+        "modifiers": {
+          "effectIgnoreChance": [
+            {
+              "effectGroupID": "melvorD:Curse",
+              "value": 75
+            },
+            {
+              "effectGroupID": "melvorD:Debuff",
+              "value": 75
+            },
+            {
+              "effectGroupID": "melvorD:Fear",
+              "value": 75
+            }
+          ]
+        }
+      },
+      {
+        "id": "StrangeBiology",
+        "name": "Strange Biology",
+        "customDescription": "Immune to Stun, Freeze, Crystallization, Paralyze, Sleep, Slow, and Critical Hits. +50% chance to ignore Bleed and Poison.",
+        "modifiers": {
+          "effectImmunity": [
+            {
+              "effectGroupID": "melvorD:StunLike",
+              "value": 1
+            },
+            {
+              "effectGroupID": "melvorD:Crystallize",
+              "value": 1
+            },
+            {
+              "effectGroupID": "melvorD:CrystalSanction",
+              "value": 1
+            },
+            {
+              "effectGroupID": "melvorD:Sleep",
+              "value": 1
+            },
+            {
+              "effectGroupID": "melvorD:Slow",
+              "value": 1
+            },
+            {
+              "effectGroupID": "expandedAreas:Paralyze",
+              "value": 1
+            }
+          ],
+          "effectIgnoreChance": [
+            {
+              "effectGroupID": "melvorD:BleedDOT",
+              "value": 50
+            },
+            {
+              "effectGroupID": "melvorD:PoisonDOT",
+              "value": 50
+            }
+          ]
+        },
+        "playerModifiers": {
+          "critChance": -999999,
+          "critMultiplier": -999999
+        }
+      },
+      {
+        "id": "NullifyingEye",
+        "name": "Nullifying Eye",
+        "customDescription": "The gazer's central Eye creates an Anti-Magic Field, disabling your Magic attacks, negating your Magic Evasion, and preventing any Buffs on you for 5 turns. The Eye opens at the Start of the Fight and has a 10% chance to reopen on each character's turn until the End of the Fight.",
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "chance": 100,
+            "effectID": "expandedAreas:AntiMagicField"
+          },
+          {
+            "appliesWhen": "EvadedAttack",
+            "chance": 10,
+            "effectID": "expandedAreas:AntiMagicField"
+          },
+          {
+            "appliesWhen": "BeingAttacked",
+            "chance": 10,
+            "effectID": "expandedAreas:AntiMagicField"
+          },
+          {
+            "appliesWhen": "CritWithAttack",
+            "chance": 10,
+            "effectID": "expandedAreas:AntiMagicField"
+          },
+          {
+            "appliesWhen": "HitByAttack",
+            "chance": 10,
+            "effectID": "expandedAreas:AntiMagicField"
+          },
+          {
+            "appliesWhen": "HitByFirstAttack",
+            "chance": 10,
+            "effectID": "expandedAreas:AntiMagicField"
+          },
+          {
+            "appliesWhen": "PostAttack",
+            "chance": 10,
+            "effectID": "expandedAreas:AntiMagicField"
+          },
+          {
+            "appliesWhen": "PostFirstAttack",
+            "chance": 10,
+            "effectID": "expandedAreas:AntiMagicField"
+          },
+          {
+            "appliesWhen": "PreAttack",
+            "chance": 10,
+            "effectID": "expandedAreas:AntiMagicField"
+          },
+          {
+            "appliesWhen": "SummonAttack",
+            "chance": 10,
+            "effectID": "expandedAreas:AntiMagicField"
+          },
+          {
+            "appliesWhen": "WasAttacked",
+            "chance": 10,
+            "effectID": "expandedAreas:AntiMagicField"
+          }
+        ]
+      },
+      {
+        "id": "Banisher",
+        "name": "Banisher",
+        "customDescription": "The Enemy banishes your Familiars, preventing them from attacking or dealing damage.",
+        "playerModifiers": {
+          "summoningMaxHit": -999999,
+          "summoningAttackInterval": 999999
+        }
+      },
       {
         "id": "RandomMistBuff",
         "conditionalModifiers": [
@@ -189,13 +771,7 @@
       }
     ],
     "items": [
-      {
-        "validSlots": [],
-        "modifiers": {
-          "cantMiss": 1
-        },
-        "conditionalModifiers": []
-      }
+
     ],
     "itemSynergies": [],
     "monsters": [],

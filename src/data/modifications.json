@@ -326,6 +326,86 @@
     ],
     "items": [
       {
+        "id": "melvorD:Air_Rune",
+        "sellsFor": 4
+      },
+      {
+        "id": "melvorD:Mind_Rune",
+        "sellsFor": 3
+      },
+      {
+        "id": "melvorD:Water_Rune",
+        "sellsFor": 4
+      },
+      {
+        "id": "melvorD:Earth_Rune",
+        "sellsFor": 4
+      },
+      {
+        "id": "melvorD:Fire_Rune",
+        "sellsFor": 4
+      },
+      {
+        "id": "melvorD:Light_Rune",
+        "sellsFor": 50
+      },
+      {
+        "id": "melvorD:Body_Rune",
+        "sellsFor": 3
+      },
+      {
+        "id": "melvorD:Chaos_Rune",
+        "sellsFor": 90
+      },
+      {
+        "id": "melvorF:Nature_Rune",
+        "sellsFor": 180
+      },
+      {
+        "id": "melvorF:Havoc_Rune",
+        "sellsFor": 240
+      },
+      {
+        "id": "melvorD:Death_Rune",
+        "sellsFor": 180
+      },
+      {
+        "id": "melvorD:Blood_Rune",
+        "sellsFor": 400
+      },
+      {
+        "id": "melvorF:Spirit_Rune",
+        "sellsFor": 300
+      },
+      {
+        "id": "melvorD:Ancient_Rune",
+        "sellsFor": 500
+      },
+      {
+        "id": "melvorD:Mist_Rune",
+        "sellsFor": 20
+      },
+      {
+        "id": "melvorD:Dust_Rune",
+        "sellsFor": 20
+      },
+      {
+        "id": "melvorF:Mud_Rune",
+        "sellsFor": 20
+      },
+      {
+        "id": "melvorD:Smoke_Rune",
+        "sellsFor": 20
+      },
+      {
+        "id": "melvorF:Steam_Rune",
+        "sellsFor": 20
+      },
+      {
+        "id": "melvorF:Lava_Rune",
+        "sellsFor": 20
+      },
+      {
         "id": "melvorF:Food_Box_I",
         "dropTable": {
           "remove": [
@@ -960,12 +1040,7 @@
         "id": "melvorF:Mirror_Shield",
         "modifiers": {
           "add": {
-            "effectIgnoreChance": [
-              {
-                "effectGroupID": "expandedAreas:Gaze",
-                "value": 25
-              }
-            ],
+            
             "reflectDamage": 5
           }
         }

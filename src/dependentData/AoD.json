@@ -4,7 +4,107 @@
   "dependentData": [
     {
       "namespace": "melvorAoD",
+      "data": {
+        "skillLevelCapIncreases": [
+          {
+            "id": "Pre99Dungeons",
+            "levelType": "Standard",
+            "requirementSets": [
+              {
+                "id": 0,
+                "requirements": [
+                  {
+                    "type": "DungeonCompletion",
+                    "dungeonID": "expandedAreas:Golbin_Hideout",
+                    "count": 1
+                  }
+                ]
+              },
+              {
+                "id": 1,
+                "requirements": [
+                  {
+                    "type": "DungeonCompletion",
+                    "dungeonID": "expandedAreas:The_Dungeon",
+                    "count": 1
+                  }
+                ]
+              },
+              {
+                "id": 2,
+                "requirements": [
+                  {
+                    "type": "DungeonCompletion",
+                    "dungeonID": "expandedAreas:The_Barbarian_Trials",
+                    "count": 1
+                  }
+                ]
+              },
+              {
+                "id": 3,
+                "requirements": [
+                  {
+                    "type": "DungeonCompletion",
+                    "dungeonID": "expandedAreas:Elemental_Sanctuary",
+                    "count": 1
+                  }
+                ]
+              },
+              {
+                "id": 4,
+                "requirements": [
+                  {
+                    "type": "DungeonCompletion",
+                    "dungeonID": "expandedAreas:The_Barrows",
+                    "count": 1
+                  }
+                ]
+              },
+              {
+                "id": 5,
+                "requirements": [
+                  {
+                    "type": "DungeonCompletion",
+                    "dungeonID": "expandedAreas:Swamp_of_Desolation",
+                    "count": 1
+                  }
+                ]
+              },
+              {
+                "id": 6,
+                "requirements": [
+                  {
+                    "type": "MonsterKilled",
+                    "monsterID": "expandedAreas:Corporeal_Beast",
+                    "count": 1
+                  }
+                ]
+              },
+              {
+                "id": 7,
+                "requirements": [
+                  {
+                    "type": "MonsterKilled",
+                    "monsterID": "expandedAreas:Giant_Mole",
+                    "count": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
       "modifications": {
+        "gamemodes": [
+          {
+            "id": "melvorAoD:AncientRelics",
+            "levelCapIncreases": {
+              "add": [
+                "expandedAreas:Pre99Dungeons"
+              ]
+            }
+          }
+        ],
         "items": [
           {
             "id": "melvorAoD:Book_of_Prayers",
