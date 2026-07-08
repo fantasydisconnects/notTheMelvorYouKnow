@@ -108,88 +108,27 @@
     ],
     "attackSpells": [],
     "auroraSpells": [],
+    "bankSortOrder": [
+      {
+        "afterID": "melvorF:Marksmans_Sigil",
+        "insertAt": "After",
+        "ids": [
+          "expandedAreas:Sigil_of_the_Bison",
+          "expandedAreas:Sigil_of_the_Cat",
+          "expandedAreas:Sigil_of_the_Eagle",
+          "expandedAreas:Sigil_of_the_Iron",
+          "expandedAreas:Sigil_of_the_Manta_Ray",
+          "expandedAreas:Sigil_of_the_Rainstorm",
+          "expandedAreas:Sigil_of_the_Tiger",
+          "expandedAreas:Sigil_of_the_Tree",
+          "expandedAreas:Sigil_of_the_Volcano",
+          "expandedAreas:Sigil_of_the_Wind"
+        ]
+      }
+    ],
     "combatAreas": [],
     "combatEffectGroups": [],
     "combatEffects": [
-      {
-        "id": "Shadowshot0",
-        "templateID": "melvorD:StaticSelfCountingModifier",
-        "name": "Shadowshot",
-        "media": "assets/combat/status/evasion_increase.svg",
-        "target": "Self",
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 1
-          }
-        ],
-        "statGroups": [
-          {
-            "name": "stacks",
-            "modifiers": {
-              "evasion": 40,
-              "flatResistance": [
-                {
-                  "damageTypeID": "melvorD:Normal",
-                  "value": 10
-                }
-              ],
-              "flatAttackInterval": -200
-            }
-          }
-        ],
-        "effectGroups": [
-          "melvorD:Buff"
-        ]
-      },
-      {
-        "id": "BurnSusceptibility",
-        "templateID": "melvorD:StaticSelfCountingModifier",
-        "name": "Burn Susceptibility",
-        "media": "assets/combat/status/vulnerability.png",
-        "target": "Target",
-        "statGroups": [
-          {
-            "name": "stacks",
-            "modifiers": {
-              "burnDOTDamageTaken": 100
-            }
-          }
-        ],
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 3
-          }
-        ],
-        "effectGroups": [
-          "melvorD:Debuff"
-        ]
-      },
-      {
-        "id": "DOTVulnerability",
-        "templateID": "melvorD:StaticSelfCountingModifier",
-        "name": "DOT Vulnerability",
-        "media": "assets/combat/status/vulnerability.png",
-        "target": "Target",
-        "statGroups": [
-          {
-            "name": "stacks",
-            "modifiers": {
-              "dotDamageTaken": 25
-            }
-          }
-        ],
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 3
-          }
-        ],
-        "effectGroups": [
-          "melvorD:Debuff"
-        ]
-      },
       {
         "id": "CharmingGaze",
         "templateID": "melvorD:StaticSelfCountingModifier",
@@ -771,7 +710,38 @@
       }
     ],
     "items": [
-
+      {
+        "itemType": "Item",
+        "id": "Shadow_Essence",
+        "name": "Shadow Essence",
+        "category": "Mining",
+        "type": "Essence",
+        "media": "assets/bank/essence_shadow.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1
+      },
+    ],
+    "itemUpgrades": [
+      {
+        "upgradedItemID": "",
+        "itemCosts": [
+          {
+            "id": "SigilID",
+            "quantity": 1
+          },
+          {
+            "id": "WeaponID",
+            "quantity": 1
+          }
+        ],
+        "rootItemIDs": [
+          "WeaponID"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": []
+      }
     ],
     "itemSynergies": [],
     "monsters": [],
@@ -780,14 +750,9 @@
     "shopPurchases": [],
     "skillData": [
       {
-        "skillID": "melvorD:Thieving",
+        "skillID": "melvorD:Runecrafting",
         "data": {
-          "areas": [
-            {
-              "name": ""
-            }
-          ],
-          "customMilestones": []
+          "recipes": []
         }
       }
     ],

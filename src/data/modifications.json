@@ -1040,7 +1040,6 @@
         "id": "melvorF:Mirror_Shield",
         "modifiers": {
           "add": {
-            
             "reflectDamage": 5
           }
         }
@@ -1798,6 +1797,12 @@
               "minQuantity": 1,
               "maxQuantity": 1,
               "weight": 5
+            },
+            {
+              "itemID": "melvorF:Wizards_Sigil",
+              "minQuantity": 1,
+              "maxQuantity": 5,
+              "weight": 4
             },
             {
               "itemID": "expandedAreas:Ancient_Staff",
@@ -3065,216 +3070,6 @@
     ],
     "monsters": [
       {
-        "id": "melvorF:NoxiousSerpent",
-        "lootTable": {
-          "add": [
-            {
-              "itemID": "expandedAreas:Large_Fang",
-              "minQuantity": 1,
-              "maxQuantity": 3,
-              "weight": 35
-            }
-          ]
-        }
-      },
-      {
-        "id": "melvorF:VenomousSnake",
-        "lootTable": {
-          "add": [
-            {
-              "itemID": "expandedAreas:Large_Fang",
-              "minQuantity": 1,
-              "maxQuantity": 3,
-              "weight": 35
-            }
-          ]
-        }
-      },
-      {
-        "id": "melvorF:RagingHornedElite",
-        "lootTable": {
-          "add": [
-            {
-              "itemID": "expandedAreas:Large_Fang",
-              "minQuantity": 1,
-              "maxQuantity": 4,
-              "weight": 200
-            }
-          ]
-        }
-      },
-      {
-        "id": "melvorF:SeethingHornedElite",
-        "lootTable": {
-          "add": [
-            {
-              "itemID": "expandedAreas:Large_Fang",
-              "minQuantity": 1,
-              "maxQuantity": 4,
-              "weight": 120
-            }
-          ]
-        }
-      },
-      {
-        "id": "melvorF:DarkHornedElite",
-        "lootTable": {
-          "add": [
-            {
-              "itemID": "expandedAreas:Large_Fang",
-              "minQuantity": 1,
-              "maxQuantity": 4,
-              "weight": 90
-            }
-          ]
-        }
-      },
-      {
-        "id": "melvorF:FuriousHornedElite",
-        "lootTable": {
-          "add": [
-            {
-              "itemID": "expandedAreas:Large_Fang",
-              "minQuantity": 1,
-              "maxQuantity": 4,
-              "weight": 100
-            }
-          ]
-        }
-      },
-      {
-        "id": "melvorF:WickedGreaterDragon",
-        "lootTable": {
-          "add": [
-            {
-              "itemID": "expandedAreas:Massive_Fang",
-              "minQuantity": 1,
-              "maxQuantity": 6,
-              "weight": 125
-            }
-          ]
-        }
-      },
-      {
-        "id": "melvorF:HuntingGreaterDragon",
-        "lootTable": {
-          "add": [
-            {
-              "itemID": "expandedAreas:Massive_Fang",
-              "minQuantity": 1,
-              "maxQuantity": 6,
-              "weight": 125
-            }
-          ]
-        }
-      },
-      {
-        "id": "melvorF:ChaoticGreaterDragon",
-        "lootTable": {
-          "add": [
-            {
-              "itemID": "expandedAreas:Massive_Fang",
-              "minQuantity": 1,
-              "maxQuantity": 6,
-              "weight": 125
-            }
-          ]
-        }
-      },
-      {
-        "id": "melvorF:RancoraSpider",
-        "lootTable": {
-          "add": [
-            {
-              "itemID": "expandedAreas:Massive_Fang",
-              "minQuantity": 1,
-              "maxQuantity": 6,
-              "weight": 125
-            }
-          ]
-        }
-      },
-      {
-        "id": "melvorF:FearfulEye",
-        "bones": {
-          "itemID": "expandedAreas:Fearful_Eyeball",
-          "quantity": 1
-        }
-      },
-      {
-        "id": "melvorD:ElerineArcher",
-        "lootTable": {
-          "add": [
-            {
-              "itemID": "expandedAreas:Hoof",
-              "minQuantity": 1,
-              "maxQuantity": 4,
-              "weight": 33
-            }
-          ]
-        }
-      },
-      {
-        "id": "melvorD:ElerineWarrior",
-        "lootTable": {
-          "add": [
-            {
-              "itemID": "expandedAreas:Hoof",
-              "minQuantity": 1,
-              "maxQuantity": 4,
-              "weight": 33
-            }
-          ]
-        }
-      },
-      {
-        "id": "melvorD:ElerineMage",
-        "lootTable": {
-          "add": [
-            {
-              "itemID": "expandedAreas:Hoof",
-              "minQuantity": 1,
-              "maxQuantity": 4,
-              "weight": 33
-            }
-          ]
-        }
-      },
-      {
-        "id": "melvorF:Pegasus",
-        "lootChance": 100,
-        "lootTable": {
-          "add": [
-            {
-              "itemID": "expandedAreas:Hoof",
-              "minQuantity": 1,
-              "maxQuantity": 4,
-              "weight": 22
-            },
-            {
-              "itemID": "expandedAreas:Celestial_Feather",
-              "minQuantity": 1,
-              "maxQuantity": 3,
-              "weight": 11
-            }
-          ]
-        }
-      },
-      {
-        "id": "melvorF:Phoenix",
-        "bones": {
-          "itemID": "expandedAreas:Phoenix_Feather",
-          "quantity": 1
-        }
-      },
-      {
-        "id": "melvorF:Aleron",
-        "bones": {
-          "itemID": "expandedAreas:Celestial_Feather",
-          "quantity": 6
-        }
-      },
-      {
         "id": "melvorD:AdamantKnight",
         "passives": {
           "add": [
@@ -3599,6 +3394,12 @@
               "minQuantity": 1,
               "maxQuantity": 20,
               "weight": 3
+            },
+            {
+              "itemID": "melvorF:Wizards_Sigil",
+              "minQuantity": 1,
+              "maxQuantity": 5,
+              "weight": 1
             }
           ]
         },
@@ -4140,6 +3941,16 @@
       },
       {
         "id": "melvorF:Paladin",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "melvorF:Knights_Sigil",
+              "minQuantity": 1,
+              "maxQuantity": 5,
+              "weight": 4
+            }
+          ]
+        },
         "passives": {
           "add": [
             "expandedAreas:MonsterTypeHumanoid"
@@ -4463,6 +4274,16 @@
       },
       {
         "id": "melvorF:Thief",
+        "lootTable": {
+          "add": [
+            {
+              "itemID": "melvorF:Marksmans_Sigil",
+              "minQuantity": 1,
+              "maxQuantity": 5,
+              "weight": 1
+            }
+          ]
+        },
         "passives": {
           "add": [
             "expandedAreas:MonsterTypeHumanoid"

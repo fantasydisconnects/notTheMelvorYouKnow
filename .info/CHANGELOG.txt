@@ -203,3 +203,48 @@ SAE v0.9.3.2.2 — Lil Magical Update
 
 # Fixes
 - Fixed some Shop descriptions
+
+SAE v0.9.3.2.3
+# New Content 
+- Added Bracelets to Crafting
+
+# Changes 
+- Level cap increased to 1,000. Why? Because I can. No one will ever get there without cheating, anyway
+
+SAE v0.9.3.2.4
+# New Content
+- Added Minor and Major Essence Extraction spells to Alt. Magic
+  - Minor: Converts 1 of any item into 25% of its base sale cost into Rune Essence
+  - Major: Same as Minor but 50%
+- Added Marksman's (level 25), Knight's (level 60), and Wizard's Extraction (level 72) spells to Alt. Magic
+  - Each extracts 10 Pure Nature/Body/Mind Essence from 1 Knight's/Marksman's/Wizard's Sigil for use in Runecrafting to create Special Runes
+
+# Changes
+- Completely reworked Sigils
+  - Reasons:
+    - Firstly, they were shamelessly almost 1-for-1 copied from Guild Wars 2, and I have since acquired the ability to come up with original ideas (if still mostly based on that game's Sigils and Runes)
+    - Secondly, they felt too chaotic, confusing, unwieldy to craft, and just not in the spirit of the game
+  - The Details:
+    - Firstly, Sigils have been removed as Equipment items and have instead been made into Enhancements. As of this updates, only Lesser Sigils exist. Test them out!
+    - Secondly, crafting Sigils has been made much more streamlined. No longer do you have to search for several unique components just to create a specific Sigil. Each Sigil now follows this basic process:
+      - Acquire Marksman's, Knight's, and Wizard's Sigils from Thieving or Combat
+      - Extract Nature, Body, and Mind Essence from those Sigils by casting their respective spells in Alt. Magic
+      - Create a Sigil in the Special Runes & Sigils Category in Runecrafting using a Silver/Gold/Platinum Bar, 1 Nature/Body/Mind Essence, 10 Golden Stardust/Golden Star/Golden Star II, and a combination of Runes
+- Added 1-5 Marksman's Sigils as a possible rare drop from Bandit Chest, and as a very rare drop from Thief
+- Added 1-5 Knight's Sigils as a possible rare drop from Raid Loot, and as a very rare drop from Paladin
+- Added 1-5 Wizard's Sigils as a possible rare drop from Magic Chest, and as a very rare drop from Elementalist
+- Removed unused tertiary ingredients from the game:
+  - Hoof, Fang, Large Fang, Massive Fang, Celestial Feather, Phoenix Feather
+- Removed gem dust and enchanted gem dust from the game
+- Moved Elemental Gear Upgrades to Runecrafting in the Air/Water/Earth/Fire Gear categories. Their recipes no longer require Ancient Gear, and instead now require:
+  - 84 Runecrafting for all Air Elementalist Gear, Nature Runes, Air Runes, and Eyes of Air
+  - 88 Runecrafting for all Water Elementalist Gear, Nature Runes, Water Runes, and Eyes of Water
+  - 92 Runecrafting for all Earth Elementalist Gear, Nature Runes, Earth Runes, and Eyes of Earth
+  - 96 Runecrafting for all Fire Elementalist Gear, Nature Runes, Fire Runes, and Eyes of Fire
+- Moved Elemental Staves Upgrades to Runecrafting in the Staves & Wands category. Their recipes no longer require Ancient Staves, and instead now require:
+  - 84 Runecrafting, Redwood Logs, Nature Runes, Air Runes, Eyes of Air, and Mystic Air Staves
+  - 88 Runecrafting, Redwood Logs, Nature Runes, Water Runes, Eyes of Water, and Mystic Air Staves
+  - 92 Runecrafting, Redwood Logs, Nature Runes, Earth Runes, Eyes of Earth, and Mystic Air Staves
+  - 96 Runecrafting, Redwood Logs, Nature Runes, Fire Runes, Eyes of Fire, and Mystic Air Staves
+
+SAE v0.9.3.2.5
