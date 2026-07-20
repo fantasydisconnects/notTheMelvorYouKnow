@@ -38737,14 +38737,6 @@
             "value": 16
           }
         ],
-        "modifiers": {
-          "meleeCritChance": 25
-        },
-        "specialAttacks": [
-          "expandedAreas:WildStrike",
-          "expandedAreas:Heartseeker",
-          "expandedAreas:DeadlyDelivery"
-        ],
         "itemType": "Weapon",
         "attackType": "melee",
         "customDescription": "+25% Melee Max Hit against Silver-Vulnerable monsters",

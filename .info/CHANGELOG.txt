@@ -260,3 +260,10 @@ SAE v0.9.3.2.5
   - These old Sigils can still be used if the Player has them; they just cannot be obtained or crafted any longer.
 - Removed duplicate `lootTable` removals from AdultFarmer
 - Fixed typo in `lootTable` removal for Bird_Nest
+
+SAE v0.9.4
+# New Content
+- Added support for new mod dependency coming soon (TM)
+
+# Changes
+- Removed special attacks from daggers, 2H swords, and defenders
