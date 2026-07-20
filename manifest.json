@@ -5,6 +5,7 @@
     "load": [
         "src/data/main.json",
         "src/data/modifications.json",
+        "src/data/weaponMasteries.json",
         "src/dependentData/AoD.json",
         "src/dependentData/TotH.json"
     ]

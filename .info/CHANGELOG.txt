@@ -248,3 +248,15 @@ SAE v0.9.3.2.4
   - 96 Runecrafting, Redwood Logs, Nature Runes, Fire Runes, Eyes of Fire, and Mystic Air Staves
 
 SAE v0.9.3.2.5
+# New Content
+- Added T60 Sigils
+
+# Changes
+- Changed Essence Extraction spells to give flat amount due to vanilla bug with converting items into anything other than GP
+
+# Fixes 
+- Added missing art for Alt. Magic
+- Re-added three of the old Sigils to prevent save-breaking bugs due to nonexistent combat effects being applied by nonexistent Sigils
+  - These old Sigils can still be used if the Player has them; they just cannot be obtained or crafted any longer.
+- Removed duplicate `lootTable` removals from AdultFarmer
+- Fixed typo in `lootTable` removal for Bird_Nest

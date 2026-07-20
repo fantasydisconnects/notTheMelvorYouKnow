@@ -1,0 +1,106 @@
+{
+  "$schema": "https://melvoridle.com/assets/schema/gameData.json",
+  "namespace": "expandedAreas",
+  "dependentData": [
+    {
+      "namespace": "WTM",
+      "modifications": {
+        "skillData": [
+          {
+            "skillID": "melvorD:Agility",
+            "data": {
+              "weaponMasteries": [
+                {
+                  "id": "WTM:ThrustingSwords",
+                  "uniq": [
+                    "Linzas_Longsword3",
+                    "Barbarian_Longblade2"
+                  ]
+                },
+                {
+                  "id": "WTM:Daggers",
+                  "mat": [
+                    "Dirk"
+                  ],
+                  "uniq": [
+                    "Magmatic_Fangblade4"
+                  ]
+                },
+                {
+                  "id": "WTM:Blunts",
+                  "uniq": [
+                    "Golden_Sceptre2",
+                    "Torags_Hammers3",
+                    "Veracs_Flail3"
+                  ]
+                },
+                {
+                  "id": "WTM:Polearms",
+                  "mat": [
+                    "Spear"
+                  ],
+                  "uniq": [
+                    "Guthans_Warspear3"
+                  ]
+                },
+                {
+                  "id": "WTM:Axes",
+                  "uniq": [
+                    "Pick_of_Colossal_Excavation5",
+                    "Dharoks_Greataxe3",
+                    "Barbarian_Berserker_Axe2"
+                  ]
+                },
+                {
+                  "id": "WTM:HandToHand",
+                  "uniq": [
+                    "Barbarian_Brawling_Gloves2"
+                  ]
+                },
+                {
+                  "id": "WTM:Staves",
+                  "uniq": [
+                    "Ahrims_Staff3",
+                    "Ancient_Staff2",
+                    "Air_Elementalist_Staff",
+                    "Water_Elementalist_Staff",
+                    "Earth_Elementalist_Staff",
+                    "Fire_Elementalist_Staff"
+                  ]
+                },
+                {
+                  "id": "WTM:Wands",
+                  "uniq": [
+                    "Wand_of_Frost2",
+                    "Wand_of_Lightning2",
+                    "Wand_of_Fireball2",
+                    "Wand_of_the_Swamp4",
+                    "Pure_Elementalist_Sceptre5"
+                  ]
+                },
+                {
+                  "id": "WTM:Special",
+                  "uniq": [
+                    "Staff_Spiritcaller2"
+                  ]
+                },
+                {
+                  "id": "WTM:LightBows",
+                  "uniq": [
+                    "Toxic_Quickbow4"
+                  ]
+                },
+                {
+                  "id": "WTM:Crossbows",
+                  "uniq": [
+                    "Karils_Crossbow3"
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

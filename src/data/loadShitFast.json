@@ -124,7 +124,7 @@
           "expandedAreas:Sigil_of_the_Volcano",
           "expandedAreas:Sigil_of_the_Wind"
         ]
-      }
+      },
     ],
     "combatAreas": [],
     "combatEffectGroups": [],
@@ -403,6 +403,7 @@
       },
     ],
     "combatEffectTables": [
+
       {
         "id": "RandomGaze",
         "table": [
@@ -709,20 +710,7 @@
         "overrideDamageType": "expandedAreas:Mist"
       }
     ],
-    "items": [
-      {
-        "itemType": "Item",
-        "id": "Shadow_Essence",
-        "name": "Shadow Essence",
-        "category": "Mining",
-        "type": "Essence",
-        "media": "assets/bank/essence_shadow.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 1
-      },
-    ],
+    "items": [],
     "itemUpgrades": [
       {
         "upgradedItemID": "",
@@ -752,7 +740,314 @@
       {
         "skillID": "melvorD:Runecrafting",
         "data": {
-          "recipes": []
+          "recipes": [
+            {
+              "id": "SigilAnnihilation",
+              "level": 90,
+              "productID": "expandedAreas:Sigil_of_Annihilation",
+              "baseQuantity": 1,
+              "baseExperience": 300,
+              "categoryID": "expandedAreas:SpecialRunesSigils",
+              "subcategories": [
+                "expandedAreas:Sigils"
+              ],
+              "itemCosts": [
+                {
+                  "id": "expandedAreas:Platinum_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Spirit_Essence",
+                  "quantity": 10
+                },
+                {
+                  "id": "melvorF:Golden_Star",
+                  "quantity": 100
+                },
+                {
+                  "id": "melvorF:Spirit_Rune",
+                  "quantity": 100
+                },
+                {
+                  "id": "AnyItemI'lllFillInLater",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "SigilBirth",
+              "level": 90,
+              "productID": "expandedAreas:Sigil_of_Birth",
+              "baseQuantity": 1,
+              "baseExperience": 300,
+              "categoryID": "expandedAreas:SpecialRunesSigils",
+              "subcategories": [
+                "expandedAreas:Sigils"
+              ],
+              "itemCosts": [
+                {
+                  "id": "expandedAreas:Platinum_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Spirit_Essence",
+                  "quantity": 10
+                },
+                {
+                  "id": "melvorF:Golden_Star",
+                  "quantity": 100
+                },
+                {
+                  "id": "melvorF:Spirit_Rune",
+                  "quantity": 100
+                },
+                {
+                  "id": "AnyItemI'lllFillInLater",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "SigilCurses",
+              "level": 90,
+              "productID": "expandedAreas:Sigil_of_Curses",
+              "baseQuantity": 1,
+              "baseExperience": 300,
+              "categoryID": "expandedAreas:SpecialRunesSigils",
+              "subcategories": [
+                "expandedAreas:Sigils"
+              ],
+              "itemCosts": [
+                {
+                  "id": "expandedAreas:Platinum_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Spirit_Essence",
+                  "quantity": 10
+                },
+                {
+                  "id": "melvorF:Golden_Star",
+                  "quantity": 100
+                },
+                {
+                  "id": "melvorF:Spirit_Rune",
+                  "quantity": 100
+                },
+                {
+                  "id": "AnyItemI'lllFillInLater",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "SigilDeath",
+              "level": 90,
+              "productID": "expandedAreas:Sigil_of_Death",
+              "baseQuantity": 1,
+              "baseExperience": 300,
+              "categoryID": "expandedAreas:SpecialRunesSigils",
+              "subcategories": [
+                "expandedAreas:Sigils"
+              ],
+              "itemCosts": [
+                {
+                  "id": "expandedAreas:Platinum_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Spirit_Essence",
+                  "quantity": 10
+                },
+                {
+                  "id": "melvorF:Golden_Star",
+                  "quantity": 100
+                },
+                {
+                  "id": "melvorF:Spirit_Rune",
+                  "quantity": 100
+                },
+                {
+                  "id": "AnyItemI'lllFillInLater",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "SigilOrder",
+              "level": 90,
+              "productID": "expandedAreas:Sigil_of_Order",
+              "baseQuantity": 1,
+              "baseExperience": 300,
+              "categoryID": "expandedAreas:SpecialRunesSigils",
+              "subcategories": [
+                "expandedAreas:Sigils"
+              ],
+              "itemCosts": [
+                {
+                  "id": "expandedAreas:Platinum_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Spirit_Essence",
+                  "quantity": 10
+                },
+                {
+                  "id": "melvorF:Golden_Star",
+                  "quantity": 100
+                },
+                {
+                  "id": "melvorF:Spirit_Rune",
+                  "quantity": 100
+                },
+                {
+                  "id": "AnyItemI'lllFillInLater",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "SigilPandemonium",
+              "level": 90,
+              "productID": "expandedAreas:Sigil_of_Pandemonium",
+              "baseQuantity": 1,
+              "baseExperience": 300,
+              "categoryID": "expandedAreas:SpecialRunesSigils",
+              "subcategories": [
+                "expandedAreas:Sigils"
+              ],
+              "itemCosts": [
+                {
+                  "id": "expandedAreas:Platinum_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Spirit_Essence",
+                  "quantity": 10
+                },
+                {
+                  "id": "melvorF:Golden_Star",
+                  "quantity": 100
+                },
+                {
+                  "id": "melvorF:Spirit_Rune",
+                  "quantity": 100
+                },
+                {
+                  "id": "AnyItemI'lllFillInLater",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "SigilStars",
+              "level": 90,
+              "productID": "expandedAreas:Sigil_of_Stars",
+              "baseQuantity": 1,
+              "baseExperience": 300,
+              "categoryID": "expandedAreas:SpecialRunesSigils",
+              "subcategories": [
+                "expandedAreas:Sigils"
+              ],
+              "itemCosts": [
+                {
+                  "id": "expandedAreas:Platinum_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Spirit_Essence",
+                  "quantity": 10
+                },
+                {
+                  "id": "melvorF:Golden_Star",
+                  "quantity": 100
+                },
+                {
+                  "id": "melvorF:Spirit_Rune",
+                  "quantity": 100
+                },
+                {
+                  "id": "AnyItemI'lllFillInLater",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "SigilTime",
+              "level": 90,
+              "productID": "expandedAreas:Sigil_of_Time",
+              "baseQuantity": 1,
+              "baseExperience": 300,
+              "categoryID": "expandedAreas:SpecialRunesSigils",
+              "subcategories": [
+                "expandedAreas:Sigils"
+              ],
+              "itemCosts": [
+                {
+                  "id": "expandedAreas:Platinum_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Spirit_Essence",
+                  "quantity": 10
+                },
+                {
+                  "id": "melvorF:Golden_Star",
+                  "quantity": 100
+                },
+                {
+                  "id": "melvorF:Spirit_Rune",
+                  "quantity": 100
+                },
+                {
+                  "id": "AnyItemI'lllFillInLater",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "SigilWorlds",
+              "level": 90,
+              "productID": "expandedAreas:Sigil_of_Worlds",
+              "baseQuantity": 1,
+              "baseExperience": 300,
+              "categoryID": "expandedAreas:SpecialRunesSigils",
+              "subcategories": [
+                "expandedAreas:Sigils"
+              ],
+              "itemCosts": [
+                {
+                  "id": "expandedAreas:Platinum_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Spirit_Essence",
+                  "quantity": 10
+                },
+                {
+                  "id": "melvorF:Golden_Star",
+                  "quantity": 100
+                },
+                {
+                  "id": "melvorF:Spirit_Rune",
+                  "quantity": 100
+                },
+                {
+                  "id": "AnyItemI'lllFillInLater",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+          ]
         }
       }
     ],

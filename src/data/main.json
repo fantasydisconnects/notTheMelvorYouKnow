@@ -2719,6 +2719,21 @@
         ]
       },
       {
+        "afterID": "melvorF:Knights_Sigil",
+        "insertAt": "After",
+        "ids": [
+          "expandedAreas:Sigil_of_Anger",
+          "expandedAreas:Sigil_of_Clarity",
+          "expandedAreas:Sigil_of_Dread",
+          "expandedAreas:Sigil_of_Focus",
+          "expandedAreas:Sigil_of_Generosity",
+          "expandedAreas:Sigil_of_Loyalty",
+          "expandedAreas:Sigil_of_Pain",
+          "expandedAreas:Sigil_of_Vengeance",
+          "expandedAreas:Sigil_of_Weakness"
+        ]
+      },
+      {
         "insertAt": "After",
         "afterID": "melvorD:Treasure_Chest",
         "ids": [
@@ -4783,6 +4798,11 @@
     ],
     "combatEffectGroups": [
       {
+        "id": "RandomT2PotionEffect",
+        "name": "Random Tier II Potion Effect",
+        "adjective": "under the effects of a random Tier II potion"
+      },
+      {
         "id": "Daze",
         "name": "Daze",
         "adjective": "Dazed"
@@ -4806,6 +4826,53 @@
         "id": "Vulnerability",
         "name": "Vulnerability",
         "adjective": "Vulnerable"
+      }
+    ],
+    "combatEffectTables": [
+      {
+        "id": "RandomT2PotionEffect",
+        "table": [
+          {
+            "effectID": "expandedAreas:RandomT2PotionEffect0",
+            "weight": 1
+          },
+          {
+            "effectID": "expandedAreas:RandomT2PotionEffect1",
+            "weight": 1
+          },
+          {
+            "effectID": "expandedAreas:RandomT2PotionEffect2",
+            "weight": 1
+          },
+          {
+            "effectID": "expandedAreas:RandomT2PotionEffect3",
+            "weight": 1
+          },
+          {
+            "effectID": "expandedAreas:RandomT2PotionEffect4",
+            "weight": 1
+          },
+          {
+            "effectID": "expandedAreas:RandomT2PotionEffect5",
+            "weight": 1
+          },
+          {
+            "effectID": "expandedAreas:RandomT2PotionEffect6",
+            "weight": 1
+          },
+          {
+            "effectID": "expandedAreas:RandomT2PotionEffect7",
+            "weight": 1
+          },
+          {
+            "effectID": "expandedAreas:RandomT2PotionEffect8",
+            "weight": 1
+          },
+          {
+            "effectID": "expandedAreas:RandomT2PotionEffect9",
+            "weight": 1
+          }
+        ]
       }
     ],
     "combatEffectTemplates": [
@@ -4980,6 +5047,885 @@
       }
     ],
     "combatEffects": [
+      {
+        "id": "SigilVengeance",
+        "templateID": "melvorD:StaticTargetCountingModifier",
+        "name": "Sigil of Vengeance",
+        "media": "assets/bank/sigilvengeance.png",
+        "target": "Self",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "reflectDamage": 75
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 1
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Sigil_of_Vengeance"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "RandomT2PotionEffect9",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Burn Relief Potion II",
+        "media": "assets/bank/sigilloyalty.png",
+        "target": "Self",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "burnDOTDamageTaken": -15
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Sigil_of_Loyalty"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff",
+          "expandedAreas:RandomT2PotionEffect"
+        ]
+      },
+      {
+        "id": "RandomT2PotionEffect8",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Melee Strength Potion II",
+        "media": "assets/bank/sigilloyalty.png",
+        "target": "Self",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "meleeMaxHit": 3
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Sigil_of_Loyalty"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff",
+          "expandedAreas:RandomT2PotionEffect"
+        ]
+      },
+      {
+        "id": "RandomT2PotionEffect7",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Divine Potion II",
+        "media": "assets/bank/sigilloyalty.png",
+        "target": "Self",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "prayerPointPreservationChancePerPoint": 1.5
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Sigil_of_Loyalty"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff",
+          "expandedAreas:RandomT2PotionEffect"
+        ]
+      },
+      {
+        "id": "RandomT2PotionEffect6",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Ranged Strength Potion II",
+        "media": "assets/bank/sigilloyalty.png",
+        "target": "Self",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "rangedMaxHit": 10
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Sigil_of_Loyalty"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff",
+          "expandedAreas:RandomT2PotionEffect"
+        ]
+      },
+      {
+        "id": "RandomT2PotionEffect5",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Regeneration Potion II",
+        "media": "assets/bank/sigilloyalty.png",
+        "target": "Self",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "hitpointRegeneration": 60
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Sigil_of_Loyalty"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff",
+          "expandedAreas:RandomT2PotionEffect"
+        ]
+      },
+      {
+        "id": "RandomT2PotionEffect4",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Magic Assistance Potion II",
+        "media": "assets/bank/sigilloyalty.png",
+        "target": "Self",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "magicAccuracyRating": 8,
+              "magicEvasion": 8,
+              "effectIgnoreChance": [
+                {
+                  "effectGroupID": "melvorD:Frostburn",
+                  "value": 10
+                },
+                {
+                  "effectGroupID": "melvorD:BurnDOT",
+                  "value": 10
+                }
+              ]
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Sigil_of_Loyalty"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff",
+          "expandedAreas:RandomT2PotionEffect"
+        ]
+      },
+      {
+        "id": "RandomT2PotionEffect3",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Hinder Potion II",
+        "media": "assets/bank/sigilloyalty.png",
+        "target": "Self",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "onHitSlowMagnitude": 6
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Sigil_of_Loyalty"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff",
+          "expandedAreas:RandomT2PotionEffect"
+        ]
+      },
+      {
+        "id": "RandomT2PotionEffect2",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Ranged Assistance Potion II",
+        "media": "assets/bank/sigilloyalty.png",
+        "target": "Self",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "rangedAccuracyRating": 8,
+              "rangedEvasion": 8,
+              "effectIgnoreChance": [
+                {
+                  "effectGroupID": "melvorD:PoisonDOT",
+                  "value": 10
+                }
+              ]
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Sigil_of_Loyalty"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff",
+          "expandedAreas:RandomT2PotionEffect"
+        ]
+      },
+      {
+        "id": "RandomT2PotionEffect1",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Melee Evasion Potion II",
+        "media": "assets/bank/sigilloyalty.png",
+        "target": "Self",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "meleeEvasion": 12,
+              "effectIgnoreChance": [
+                {
+                  "effectGroupID": "melvorD:StunLike",
+                  "value": 10
+                }
+              ]
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Sigil_of_Loyalty"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff",
+          "expandedAreas:RandomT2PotionEffect"
+        ]
+      },
+      {
+        "id": "RandomT2PotionEffect0",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Melee Accuracy Potion II",
+        "media": "assets/bank/sigilloyalty.png",
+        "target": "Self",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "meleeAccuracyRating": 12
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 3
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Sigil_of_Loyalty"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff",
+          "expandedAreas:RandomT2PotionEffect"
+        ]
+      },
+      {
+        "id": "SigilFocus",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Sigil of Focus",
+        "media": "assets/bank/sigilfocus.png",
+        "target": "Self",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "critChance": 100
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 1
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Sigil_of_Focus"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "SigilDread",
+        "templateID": "melvorD:NonCountingResettingIncremental",
+        "name": "Sigil of Dread",
+        "media": "assets/bank/sigildread.png",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "combatEffects": [
+              {
+                "effectID": "melvorD:Fear",
+                "chance": 2,
+                "appliesWhen": "PostAttack"
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "maxStacks",
+            "initialValue": 5
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Sigil_of_Dread"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "SigilClarity",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Sigil of Clarity",
+        "media": "assets/bank/sigilclarity.png",
+        "target": "Self",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "cantMiss": 1
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 1
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Sigil_of_Clarity"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "Lesser_Sigil_of_Perception",
+        "templateID": "expandedAreas:SadCombo",
+        "name": "Sigil of Clarity",
+        "media": "assets/bank/sigilclarity.png",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "accuracyRating": 4
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "maxStacks",
+            "initialValue": 5
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Sigil_of_Clarity"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "Greater_Sigil_of_Perception",
+        "templateID": "expandedAreas:SadCombo",
+        "name": "Sigil of Perception (Greater)",
+        "media": "assets/bank/Greater_Sigil_of_Perception.png",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "accuracyRating": 15
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "maxStacks",
+            "initialValue": 5
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Greater_Sigil_of_Perception"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "Superior_Sigil_of_Perception",
+        "templateID": "expandedAreas:SadCombo",
+        "name": "Sigil of Perception (Superior)",
+        "media": "assets/bank/Superior_Sigil_of_Perception.png",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "accuracyRating": 20
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "maxStacks",
+            "initialValue": 5
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Superior_Sigil_of_Perception"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "Lesser_Sigil_of_Battle",
+        "templateID": "melvorD:NonCountingIncremental",
+        "name": "Sigil of Battle (Lesser)",
+        "media": "assets/bank/Lesser_Sigil_of_Battle.png",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "maxHit": 2
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "maxStacks",
+            "initialValue": 5
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Lesser_Sigil_of_Battle"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "Greater_Sigil_of_Battle",
+        "templateID": "melvorD:NonCountingIncremental",
+        "name": "Sigil of Battle (Greater)",
+        "media": "assets/bank/Greater_Sigil_of_Battle.png",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "maxHit": 3
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "maxStacks",
+            "initialValue": 5
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Greater_Sigil_of_Battle"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "Superior_Sigil_of_Battle",
+        "templateID": "melvorD:NonCountingIncremental",
+        "name": "Sigil of Battle (Superior)",
+        "media": "assets/bank/Superior_Sigil_of_Battle.png",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "maxHit": 4
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "maxStacks",
+            "initialValue": 5
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Superior_Sigil_of_Battle"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "Lesser_Sigil_of_Ferocity",
+        "templateID": "melvorD:NonCountingIncremental",
+        "name": "Sigil of Ferocity (Lesser)",
+        "media": "assets/bank/Lesser_Sigil_of_Ferocity.png",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "critMultiplier": 2
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "maxStacks",
+            "initialValue": 25
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Lesser_Sigil_of_Ferocity"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "Greater_Sigil_of_Ferocity",
+        "templateID": "melvorD:NonCountingIncremental",
+        "name": "Sigil of Ferocity (Greater)",
+        "media": "assets/bank/Greater_Sigil_of_Ferocity.png",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "critMultiplier": 4
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "maxStacks",
+            "initialValue": 25
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Greater_Sigil_of_Ferocity"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
+        "id": "Superior_Sigil_of_Ferocity",
+        "templateID": "melvorD:NonCountingIncremental",
+        "name": "Sigil of Ferocity (Superior)",
+        "media": "assets/bank/Superior_Sigil_of_Ferocity.png",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "critMultiplier": 6
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "maxStacks",
+            "initialValue": 25
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "EquipmentChanged",
+                "isNotEquipped": [
+                  "expandedAreas:Superior_Sigil_of_Ferocity"
+                ]
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
       {
         "id": "Wither",
         "name": "Wither",
@@ -8069,6 +9015,1158 @@
       }
     ],
     "items": [
+      {
+        "itemType": "Item",
+        "id": "Shadow_Essence",
+        "name": "Shadow Essence",
+        "category": "Mining",
+        "type": "Essence",
+        "media": "assets/bank/essence_shadow.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 1
+      },
+      {
+        "itemType": "Equipment",
+        "tier": "none",
+        "id": "Sigil_of_Anger",
+        "name": "Sigil of Anger",
+        "category": "Enhancement",
+        "type": "Sigil",
+        "media": "assets/bank/sigilanger.png",
+        "customDescription": "+1% Crit Chance, +2% Max Hit, and -3% Global Evasion for every 10% of your Missing HP. +0.4% of damage taken from attacks healed on next hitpoint regeneration",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 10000,
+        "validSlots": [
+          "Enhancement1",
+          "Enhancement2",
+          "Enhancement3"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "skillID": "melvorD:Attack",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Strength",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Hitpoints",
+            "level": 60,
+            "type": "SkillLevel"
+          }
+        ],
+        "equipmentStats": [],
+        "modifiers": {
+          "regenPerDamageTaken": 0.4
+        },
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 90
+            },
+            "modifiers": {
+              "critChance": 1,
+              "maxHit": 2,
+              "evasion": -3
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 80
+            },
+            "modifiers": {
+              "critChance": 1,
+              "maxHit": 2,
+              "evasion": -3
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 70
+            },
+            "modifiers": {
+              "critChance": 1,
+              "maxHit": 2,
+              "evasion": -3
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 60
+            },
+            "modifiers": {
+              "critChance": 1,
+              "maxHit": 2,
+              "evasion": -3
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 50
+            },
+            "modifiers": {
+              "critChance": 1,
+              "maxHit": 2,
+              "evasion": -3
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 40
+            },
+            "modifiers": {
+              "critChance": 1,
+              "maxHit": 2,
+              "evasion": -3
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 30
+            },
+            "modifiers": {
+              "critChance": 1,
+              "maxHit": 2,
+              "evasion": -3
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 20
+            },
+            "modifiers": {
+              "critChance": 1,
+              "maxHit": 2,
+              "evasion": -3
+            }
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "type": "Hitpoints",
+              "operator": "<=",
+              "value": 10
+            },
+            "modifiers": {
+              "critChance": 1,
+              "maxHit": 2,
+              "evasion": -3
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "tier": "none",
+        "id": "Sigil_of_Clarity",
+        "name": "Sigil of Clarity",
+        "category": "Enhancement",
+        "type": "Sigil",
+        "media": "assets/bank/sigilclarity.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 10000,
+        "validSlots": [
+          "Enhancement1",
+          "Enhancement2",
+          "Enhancement3"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "skillID": "melvorD:Attack",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Ranged",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Astrology",
+            "level": 60,
+            "type": "SkillLevel"
+          }
+        ],
+        "equipmentStats": [],
+        "combatEffects": [
+          {
+            "effectID": "expandedAreas:SigilClarity",
+            "appliesWhen": "StartOfFight",
+            "applyEffectWhenMerged": true,
+            "customDescription": "Your first attack each Fight cannot miss"
+          },
+          {
+            "effectID": "expandedAreas:Lesser_Sigil_of_Perception",
+            "applyEffectWhenMerged": true,
+            "appliesWhen": "PostAttack",
+            "customDescription": "+4% Global Accuracy Rating for each time you Miss (stacks up to 5 times)"
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "tier": "none",
+        "id": "Sigil_of_Dread",
+        "name": "Sigil of Dread",
+        "category": "Enhancement",
+        "type": "Sigil",
+        "media": "assets/bank/sigildread.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 10000,
+        "validSlots": [
+          "Enhancement1",
+          "Enhancement2",
+          "Enhancement3"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "skillID": "melvorD:Slayer",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Magic",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Prayer",
+            "level": 60,
+            "type": "SkillLevel"
+          }
+        ],
+        "equipmentStats": [],
+        "enemyModifiers": {
+          "currentHPDamageTakenOnAttack": 4
+        },
+        "combatEffects": [
+          {
+            "effectID": "expandedAreas:SigilDread",
+            "appliesWhen": "StartOfFight",
+            "applyEffectWhenMerged": true,
+            "customDescription": "+2% chance to apply Fear, per Attack Turn, stacking up to 5 times (Stacks reset to 0 at maximum stacks)"
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "tier": "none",
+        "id": "Sigil_of_Focus",
+        "name": "Sigil of Focus",
+        "category": "Enhancement",
+        "type": "Sigil",
+        "media": "assets/bank/sigilfocus.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 10000,
+        "validSlots": [
+          "Enhancement1",
+          "Enhancement2",
+          "Enhancement3"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "skillID": "melvorD:Attack",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Ranged",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Slayer",
+            "level": 60,
+            "type": "SkillLevel"
+          }
+        ],
+        "equipmentStats": [],
+        "modifiers": {
+          "doubleSlayerTaskKillChance": 4
+        },
+        "combatEffects": [
+          {
+            "effectID": "expandedAreas:SigilFocus",
+            "appliesWhen": "StartOfFight",
+            "applyEffectWhenMerged": true,
+            "customDescription": "Your first hit each Fight is guaranteed to be a critical hit"
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "tier": "none",
+        "id": "Sigil_of_Generosity",
+        "name": "Sigil of Generosity",
+        "category": "Enhancement",
+        "type": "Sigil",
+        "media": "assets/bank/sigilgenerosity.png",
+        "customDescription": "When afflicted by a Debuff or DOT effect, you have a 4% chance to share that effect with the Enemy whenever you are hit by an attack",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 10000,
+        "validSlots": [
+          "Enhancement1",
+          "Enhancement2",
+          "Enhancement3"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "skillID": "melvorD:Thieving",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Township",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Cooking",
+            "level": 60,
+            "type": "SkillLevel"
+          }
+        ],
+        "equipmentStats": [],
+        "combatEffects": [
+          {
+            "condition": {
+              "character": "Player",
+              "effectID": "melvorD:Bleed100",
+              "type": "CombatEffect"
+            },
+            "effectID": "melvorD:Bleed100",
+            "appliesWhen": "HitByAttack",
+            "chance": 4
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "effectID": "melvorD:Bleed200",
+              "type": "CombatEffect"
+            },
+            "effectID": "melvorD:Bleed200",
+            "appliesWhen": "HitByAttack",
+            "chance": 4
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "effectID": "melvorD:Bleed400",
+              "type": "CombatEffect"
+            },
+            "effectID": "melvorD:Bleed400",
+            "appliesWhen": "HitByAttack",
+            "chance": 4
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "effectID": "melvorD:Burn",
+              "type": "CombatEffect"
+            },
+            "effectID": "melvorD:Burn",
+            "appliesWhen": "HitByAttack",
+            "chance": 4
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "groupID": "melvorD:Curse",
+              "type": "CombatEffectGroup"
+            },
+            "tableID": "melvorF:RandomCurse",
+            "appliesWhen": "HitByAttack",
+            "chance": 4
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "effectID": "melvorD:DeadlyPoison",
+              "type": "CombatEffect"
+            },
+            "effectID": "melvorD:DeadlyPoison",
+            "appliesWhen": "HitByAttack",
+            "chance": 4
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "effectID": "melvorD:Fear",
+              "type": "CombatEffect"
+            },
+            "effectID": "melvorD:Fear",
+            "appliesWhen": "HitByAttack",
+            "chance": 4
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "effectID": "melvorD:Freeze",
+              "type": "CombatEffect"
+            },
+            "effectID": "melvorD:Freeze",
+            "appliesWhen": "HitByAttack",
+            "chance": 4
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "effectID": "melvorD:Frostburn",
+              "type": "CombatEffect"
+            },
+            "effectID": "melvorD:Frostburn",
+            "appliesWhen": "HitByAttack",
+            "chance": 4
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "effectID": "melvorD:Poison",
+              "type": "CombatEffect"
+            },
+            "effectID": "melvorD:Poison",
+            "appliesWhen": "HitByAttack",
+            "chance": 4
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "effectID": "melvorD:Sleep",
+              "type": "CombatEffect"
+            },
+            "effectID": "melvorD:Slow",
+            "appliesWhen": "HitByAttack",
+            "chance": 4
+          },
+          {
+            "condition": {
+              "character": "Player",
+              "effectID": "melvorD:Stun",
+              "type": "CombatEffect"
+            },
+            "effectID": "melvorD:Stun",
+            "appliesWhen": "HitByAttack",
+            "chance": 4
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "tier": "none",
+        "id": "Sigil_of_Loyalty",
+        "name": "Sigil of Loyalty",
+        "category": "Enhancement",
+        "type": "Sigil",
+        "media": "assets/bank/sigilloyalty.png",
+        "customDescription": "+4% Chance on Summon Attack to apply a random Combat Potion effect for 3 turns. Potions selected require Level 60 Herblore and below, and are automatically Tier II.<br>While under the effects of a random potion, you have +4% Summoning Max Hit, -4% Summoning Attack Interval, and +4% Summoning Attack Lifesteal.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 10000,
+        "validSlots": [
+          "Enhancement1",
+          "Enhancement2",
+          "Enhancement3"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "skillID": "melvorD:Summoning",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Herblore",
+            "level": 60,
+            "type": "SkillLevel"
+          }
+        ],
+        "equipmentStats": [],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "character": "Player",
+              "groupID": "expandedAreas:RandomT2PotionEffect",
+              "type": "CombatEffectGroup"
+            },
+            "modifiers": {
+              "summoningAttackLifesteal": 4,
+              "summoningMaxHit": 4,
+              "summoningAttackInterval": -4
+            }
+          }
+        ],
+        "combatEffects": [
+          {
+            "appliesWhen": "SummonAttack",
+            "chance": 4,
+            "tableID": "expandedAreas:RandomT2PotionEffect"
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "tier": "none",
+        "id": "Sigil_of_Pain",
+        "name": "Sigil of Pain",
+        "category": "Enhancement",
+        "type": "Sigil",
+        "media": "assets/bank/sigilpain.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 10000,
+        "validSlots": [
+          "Enhancement1",
+          "Enhancement2",
+          "Enhancement3"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "skillID": "melvorD:Attack",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Strength",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Defence",
+            "level": 60,
+            "type": "SkillLevel"
+          }
+        ],
+        "equipmentStats": [],
+        "enemyModifiers": {
+          "selfDamageOnHitBasedOnCurrentHitpoints": 4,
+          "dotDamageTaken": 4
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "tier": "none",
+        "id": "Sigil_of_Vengeance",
+        "name": "Sigil of Vengeance",
+        "category": "Enhancement",
+        "type": "Sigil",
+        "media": "assets/bank/sigilvengeance.png",
+        "customDescription": "At the Start of the Fight, gain 75% Reflect damage until the end of the Enemy's next turn. 4% chance to reapply this effec at the end of each of your turns.",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 10000,
+        "validSlots": [
+          "Enhancement1",
+          "Enhancement2",
+          "Enhancement3"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "skillID": "melvorD:Defence",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Hitpoints",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Magic",
+            "level": 60,
+            "type": "SkillLevel"
+          }
+        ],
+        "equipmentStats": [],
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "expandedAreas:SigilVengeance",
+            "applyEffectWhenMerged": true
+          },
+          {
+            "appliesWhen": "PostAttack",
+            "effectID": "expandedAreas:SigilVengeance",
+            "applyEffectWhenMerged": true,
+            "chance": 4
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "tier": "none",
+        "id": "Sigil_of_Weakness",
+        "name": "Sigil of Weakness",
+        "category": "Enhancement",
+        "type": "Sigil",
+        "media": "assets/bank/sigilweakness.png",
+       
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 10000,
+        "validSlots": [
+          "Enhancement1",
+          "Enhancement2",
+          "Enhancement3"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "skillID": "melvorD:Slayer",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Hitpoints",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Ranged",
+            "level": 60,
+            "type": "SkillLevel"
+          }
+        ],
+        "equipmentStats": [],
+        "modifiers": {
+          "stunDurationIncreaseChance": 4
+        },
+        "enemyModifiers": {
+          "stunAvoidChance": -4,
+          "damageDealt": -4
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Lesser_Sigil_of_Perception",
+        "name": "Sigil of Perception (Lesser)",
+        "category": "Accessory",
+        "type": "Sigil",
+        "media": "assets/bank/Lesser_Sigil_of_Perception.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 5000,
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "level": 50,
+            "skillID": "melvorD:Attack"
+          },
+          {
+            "type": "SkillLevel",
+            "level": 50,
+            "skillID": "melvorD:Strength"
+          },
+          {
+            "type": "SkillLevel",
+            "level": 50,
+            "skillID": "melvorD:Magic"
+          },
+          {
+            "type": "SkillLevel",
+            "level": 50,
+            "skillID": "melvorD:Ranged"
+          }
+        ],
+        "equipmentStats": [],
+        "modifiers": {
+          "accuracyRating": 10
+        },
+        "combatEffects": [
+          {
+            "effectID": "expandedAreas:Lesser_Sigil_of_Perception",
+            "appliesWhen": "PostAttack",
+            "applyEffectWhenMerged": true,
+            "customDescription": "+10% Global Accuracy for each time you Miss (stacks up to 5 times)."
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Greater_Sigil_of_Perception",
+        "name": "Sigil of Perception (Greater)",
+        "category": "Accessory",
+        "type": "Sigil",
+        "media": "assets/bank/Greater_Sigil_of_Perception.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 10000,
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "level": 60,
+            "skillID": "melvorD:Attack"
+          },
+          {
+            "type": "SkillLevel",
+            "level": 60,
+            "skillID": "melvorD:Strength"
+          },
+          {
+            "type": "SkillLevel",
+            "level": 60,
+            "skillID": "melvorD:Magic"
+          },
+          {
+            "type": "SkillLevel",
+            "level": 60,
+            "skillID": "melvorD:Ranged"
+          }
+        ],
+        "equipmentStats": [],
+        "cantEquipWith": [
+          "expandedAreas:Lesser_Sigil_of_Perception"
+        ],
+        "modifiers": {
+          "accuracyRating": 15
+        },
+        "combatEffects": [
+          {
+            "effectID": "expandedAreas:Greater_Sigil_of_Perception",
+            "appliesWhen": "PostAttack",
+            "applyEffectWhenMerged": true,
+            "customDescription": "+15% Global Accuracy for each time you Miss (stacks up to 5 times)."
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Superior_Sigil_of_Perception",
+        "name": "Sigil of Perception (Superior)",
+        "category": "Accessory",
+        "type": "Sigil",
+        "media": "assets/bank/Superior_Sigil_of_Perception.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 15000,
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "level": 70,
+            "skillID": "melvorD:Attack"
+          },
+          {
+            "type": "SkillLevel",
+            "level": 70,
+            "skillID": "melvorD:Strength"
+          },
+          {
+            "type": "SkillLevel",
+            "level": 70,
+            "skillID": "melvorD:Magic"
+          },
+          {
+            "type": "SkillLevel",
+            "level": 70,
+            "skillID": "melvorD:Ranged"
+          }
+        ],
+        "equipmentStats": [],
+        "cantEquipWith": [
+          "expandedAreas:Lesser_Sigil_of_Perception",
+          "expandedAreas:Greater_Sigil_of_Perception"
+        ],
+        "modifiers": {
+          "accuracyRating": 20
+        },
+        "combatEffects": [
+          {
+            "effectID": "expandedAreas:Superior_Sigil_of_Perception",
+            "appliesWhen": "PostAttack",
+            "applyEffectWhenMerged": true,
+            "customDescription": "+20% Global Accuracy for each time you Miss (stacks up to 5 times)."
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Lesser_Sigil_of_Battle",
+        "name": "Sigil of Battle (Lesser)",
+        "category": "Accessory",
+        "type": "Sigil",
+        "media": "assets/bank/Lesser_Sigil_of_Battle.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 5000,
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "level": 50,
+            "skillID": "melvorD:Attack"
+          },
+          {
+            "type": "SkillLevel",
+            "level": 50,
+            "skillID": "melvorD:Strength"
+          },
+          {
+            "type": "SkillLevel",
+            "level": 50,
+            "skillID": "melvorD:Magic"
+          },
+          {
+            "type": "SkillLevel",
+            "level": 50,
+            "skillID": "melvorD:Ranged"
+          }
+        ],
+        "equipmentStats": [],
+        "combatEffects": [
+          {
+            "effectID": "expandedAreas:Lesser_Sigil_of_Battle",
+            "appliesWhen": "StartOfFight",
+            "applyEffectWhenMerged": true,
+            "customDescription": "+2% Maximum Hit per attack turn (Stacks up to 5 times)"
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Greater_Sigil_of_Battle",
+        "name": "Sigil of Battle (Greater)",
+        "category": "Accessory",
+        "type": "Sigil",
+        "media": "assets/bank/Greater_Sigil_of_Battle.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 10000,
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "level": 60,
+            "skillID": "melvorD:Attack"
+          },
+          {
+            "type": "SkillLevel",
+            "level": 60,
+            "skillID": "melvorD:Strength"
+          },
+          {
+            "type": "SkillLevel",
+            "level": 60,
+            "skillID": "melvorD:Magic"
+          },
+          {
+            "type": "SkillLevel",
+            "level": 60,
+            "skillID": "melvorD:Ranged"
+          }
+        ],
+        "equipmentStats": [],
+        "cantEquipWith": [
+          "expandedAreas:Lesser_Sigil_of_Battle"
+        ],
+        "combatEffects": [
+          {
+            "effectID": "expandedAreas:Greater_Sigil_of_Battle",
+            "appliesWhen": "StartOfFight",
+            "applyEffectWhenMerged": true,
+            "customDescription": "+3% Maximum Hit per attack turn (Stacks up to 5 times)"
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Superior_Sigil_of_Battle",
+        "name": "Sigil of Battle (Superior)",
+        "category": "Accessory",
+        "type": "Sigil",
+        "media": "assets/bank/Superior_Sigil_of_Battle.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 15000,
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "level": 70,
+            "skillID": "melvorD:Attack"
+          },
+          {
+            "type": "SkillLevel",
+            "level": 70,
+            "skillID": "melvorD:Strength"
+          },
+          {
+            "type": "SkillLevel",
+            "level": 70,
+            "skillID": "melvorD:Magic"
+          },
+          {
+            "type": "SkillLevel",
+            "level": 70,
+            "skillID": "melvorD:Ranged"
+          }
+        ],
+        "equipmentStats": [],
+        "cantEquipWith": [
+          "expandedAreas:Lesser_Sigil_of_Battle",
+          "expandedAreas:Greater_Sigil_of_Battle"
+        ],
+        "combatEffects": [
+          {
+            "effectID": "expandedAreas:Superior_Sigil_of_Battle",
+            "appliesWhen": "StartOfFight",
+            "applyEffectWhenMerged": true,
+            "customDescription": "+4% Maximum Hit per attack turn (Stacks up to 5 times)"
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Lesser_Sigil_of_Ferocity",
+        "name": "Sigil of Ferocity (Lesser)",
+        "category": "Accessory",
+        "type": "Sigil",
+        "media": "assets/bank/Lesser_Sigil_of_Ferocity.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 5000,
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "level": 50,
+            "skillID": "melvorD:Attack"
+          },
+          {
+            "type": "SkillLevel",
+            "level": 50,
+            "skillID": "melvorD:Strength"
+          },
+          {
+            "type": "SkillLevel",
+            "level": 50,
+            "skillID": "melvorD:Magic"
+          },
+          {
+            "type": "SkillLevel",
+            "level": 50,
+            "skillID": "melvorD:Ranged"
+          }
+        ],
+        "equipmentStats": [],
+        "combatEffects": [
+          {
+            "effectID": "expandedAreas:Lesser_Sigil_of_Ferocity",
+            "appliesWhen": "StartOfFight",
+            "applyEffectWhenMerged": true,
+            "customDescription": "+2% Critical Damage per attack turn (Stacks up to 25 times)"
+          }
+        ],
+        "cantEquipWith": [
+          "expandedAreas:Lesser_Sigil_of_Battle",
+          "expandedAreas:Greater_Sigil_of_Battle",
+          "expandedAreas:Superior_Sigil_of_Battle"
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Greater_Sigil_of_Ferocity",
+        "name": "Sigil of Ferocity (Greater)",
+        "category": "Accessory",
+        "type": "Sigil",
+        "media": "assets/bank/Greater_Sigil_of_Ferocity.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 10000,
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "level": 60,
+            "skillID": "melvorD:Attack"
+          },
+          {
+            "type": "SkillLevel",
+            "level": 60,
+            "skillID": "melvorD:Strength"
+          },
+          {
+            "type": "SkillLevel",
+            "level": 60,
+            "skillID": "melvorD:Magic"
+          },
+          {
+            "type": "SkillLevel",
+            "level": 60,
+            "skillID": "melvorD:Ranged"
+          }
+        ],
+        "equipmentStats": [],
+        "cantEquipWith": [
+          "expandedAreas:Lesser_Sigil_of_Ferocity",
+          "expandedAreas:Lesser_Sigil_of_Battle",
+          "expandedAreas:Greater_Sigil_of_Battle",
+          "expandedAreas:Superior_Sigil_of_Battle"
+        ],
+        "combatEffects": [
+          {
+            "effectID": "expandedAreas:Greater_Sigil_of_Ferocity",
+            "appliesWhen": "StartOfFight",
+            "applyEffectWhenMerged": true,
+            "customDescription": "+4% Critical Damage per attack turn (Stacks up to 25 times)"
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Superior_Sigil_of_Ferocity",
+        "name": "Sigil of Ferocity (Superior)",
+        "category": "Accessory",
+        "type": "Sigil",
+        "media": "assets/bank/Superior_Sigil_of_Ferocity.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 15000,
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "level": 70,
+            "skillID": "melvorD:Attack"
+          },
+          {
+            "type": "SkillLevel",
+            "level": 70,
+            "skillID": "melvorD:Strength"
+          },
+          {
+            "type": "SkillLevel",
+            "level": 70,
+            "skillID": "melvorD:Magic"
+          },
+          {
+            "type": "SkillLevel",
+            "level": 70,
+            "skillID": "melvorD:Ranged"
+          }
+        ],
+        "equipmentStats": [],
+        "cantEquipWith": [
+          "expandedAreas:Lesser_Sigil_of_Ferocity",
+          "expandedAreas:Greater_Sigil_of_Ferocity",
+          "expandedAreas:Lesser_Sigil_of_Battle",
+          "expandedAreas:Greater_Sigil_of_Battle",
+          "expandedAreas:Superior_Sigil_of_Battle"
+        ],
+        "combatEffects": [
+          {
+            "effectID": "expandedAreas:Superior_Sigil_of_Ferocity",
+            "appliesWhen": "StartOfFight",
+            "applyEffectWhenMerged": true,
+            "customDescription": "+6% Critical Damage per attack turn (Stacks up to 25 times)"
+          }
+        ]
+      },
       {
         "itemType": "Equipment",
         "tier": "none",
@@ -31018,15 +33116,15 @@
           },
           {
             "key": "meleeDefenceBonus",
-            "value": 6
+            "value": 4
           },
           {
             "key": "rangedDefenceBonus",
-            "value": 37
+            "value": 36
           },
           {
             "key": "magicDefenceBonus",
-            "value": 28
+            "value": 24
           }
         ]
       },
@@ -31056,7 +33154,7 @@
         "equipmentStats": [
           {
             "key": "rangedAttackBonus",
-            "value": 10
+            "value": 11
           },
           {
             "key": "magicAttackBonus",
@@ -31064,11 +33162,11 @@
           },
           {
             "key": "meleeDefenceBonus",
-            "value": 4
+            "value": 6
           },
           {
             "key": "rangedDefenceBonus",
-            "value": 33
+            "value": 37
           },
           {
             "key": "magicDefenceBonus",
@@ -64824,7 +66922,7 @@
                   "quantity": 2
                 }
               ],
-              "description": "Destroy Any Item and extract Rune Essence from it equal to 25% of the item's base sale price",
+              "description": "Destroy Any Item and extract ${amount} Rune Essence from it",
               "baseExperience": 16,
               "specialCost": {
                 "type": "AnyItem",
@@ -64832,11 +66930,11 @@
                 "quantity": 1
               },
               "produces": "melvorD:Rune_Essence",
-              "productionRatio": 0.25
+              "productionRatio": 50
             },
             {
               "id": "EssenceExtractionMajor",
-              "name": "Minor Essence Extraction",
+              "name": "Major Essence Extraction",
               "media": "assets/skills/magic/essence_extraction_major.png",
               "level": 55,
               "runesRequired": [
@@ -64849,7 +66947,7 @@
                   "quantity": 3
                 }
               ],
-              "description": "Destroy Any Item and extract Rune Essence from it equal to 50% of the item's base sale price",
+              "description": "Destroy Any Item and extract ${amount} Rune Essence from it",
               "baseExperience": 22,
               "specialCost": {
                 "type": "AnyItem",
@@ -64857,7 +66955,7 @@
                 "quantity": 1
               },
               "produces": "melvorD:Rune_Essence",
-              "productionRatio": 0.5
+              "productionRatio": 100
             },
             {
               "id": "EssenceExtractionMarksman",
@@ -64887,11 +66985,11 @@
                 "quantity": 1
               },
               "produces": "expandedAreas:Nature_Essence",
-              "productionRatio": 3
+              "productionRatio": 2
             },
             {
               "id": "EssenceExtractionKnight",
-              "name": "Knight's Essence Extraction",
+              "name": "Mind Essence Extraction",
               "media": "assets/skills/magic/essence_extraction_knight.png",
               "level": 60,
               "runesRequired": [
@@ -64917,11 +67015,11 @@
                 "quantity": 1
               },
               "produces": "expandedAreas:Mind_Essence",
-              "productionRatio": 3
+              "productionRatio": 2
             },
             {
               "id": "EssenceExtractionWizard",
-              "name": "Wizard's Essence Extraction",
+              "name": "Spirit Essence Extraction",
               "media": "assets/skills/magic/essence_extraction_wizard.png",
               "level": 72,
               "runesRequired": [
@@ -64947,7 +67045,7 @@
                 "quantity": 1
               },
               "produces": "expandedAreas:Spirit_Essence",
-              "productionRatio": 3
+              "productionRatio": 2
             }
           ],
           "headerUpgradeChains": [
@@ -65074,15 +67172,15 @@
                 },
                 {
                   "id": "expandedAreas:Nature_Essence",
-                  "quantity": 1
+                  "quantity": 10
                 },
                 {
-                  "id": "melvorF:Golden_Stardust",
-                  "quantity": 10
+                  "id": "melvorF:Stardust",
+                  "quantity": 100
                 },
                 {
                   "id": "melvorF:Nature_Rune",
-                  "quantity": 10
+                  "quantity": 100
                 },
                 {
                   "id": "melvorD:Chaos_Rune",
@@ -65108,15 +67206,15 @@
                 },
                 {
                   "id": "expandedAreas:Nature_Essence",
-                  "quantity": 1
+                  "quantity": 10
                 },
                 {
-                  "id": "melvorF:Golden_Stardust",
-                  "quantity": 10
+                  "id": "melvorF:Stardust",
+                  "quantity": 100
                 },
                 {
                   "id": "melvorF:Nature_Rune",
-                  "quantity": 10
+                  "quantity": 100
                 },
                 {
                   "id": "melvorF:Lava_Rune",
@@ -65142,15 +67240,15 @@
                 },
                 {
                   "id": "expandedAreas:Nature_Essence",
-                  "quantity": 1
+                  "quantity": 10
                 },
                 {
-                  "id": "melvorF:Golden_Stardust",
-                  "quantity": 10
+                  "id": "melvorF:Stardust",
+                  "quantity": 100
                 },
                 {
                   "id": "melvorF:Nature_Rune",
-                  "quantity": 10
+                  "quantity": 100
                 },
                 {
                   "id": "melvorD:Mist_Rune",
@@ -65176,15 +67274,15 @@
                 },
                 {
                   "id": "expandedAreas:Nature_Essence",
-                  "quantity": 1
+                  "quantity": 10
                 },
                 {
-                  "id": "melvorF:Golden_Stardust",
-                  "quantity": 10
+                  "id": "melvorF:Stardust",
+                  "quantity": 100
                 },
                 {
                   "id": "melvorF:Nature_Rune",
-                  "quantity": 10
+                  "quantity": 100
                 },
                 {
                   "id": "melvorF:Mud_Rune",
@@ -65210,15 +67308,15 @@
                 },
                 {
                   "id": "expandedAreas:Nature_Essence",
-                  "quantity": 1
+                  "quantity": 10
                 },
                 {
-                  "id": "melvorF:Golden_Stardust",
-                  "quantity": 10
+                  "id": "melvorF:Stardust",
+                  "quantity": 100
                 },
                 {
                   "id": "melvorF:Nature_Rune",
-                  "quantity": 10
+                  "quantity": 100
                 },
                 {
                   "id": "melvorD:Dust_Rune",
@@ -65244,15 +67342,15 @@
                 },
                 {
                   "id": "expandedAreas:Nature_Essence",
-                  "quantity": 1
+                  "quantity": 10
                 },
                 {
-                  "id": "melvorF:Golden_Stardust",
-                  "quantity": 10
+                  "id": "melvorF:Stardust",
+                  "quantity": 100
                 },
                 {
                   "id": "melvorF:Nature_Rune",
-                  "quantity": 10
+                  "quantity": 100
                 },
                 {
                   "id": "melvorD:Iron_Ore",
@@ -65278,15 +67376,15 @@
                 },
                 {
                   "id": "expandedAreas:Nature_Essence",
-                  "quantity": 1
+                  "quantity": 10
                 },
                 {
-                  "id": "melvorF:Golden_Stardust",
-                  "quantity": 10
+                  "id": "melvorF:Stardust",
+                  "quantity": 100
                 },
                 {
                   "id": "melvorF:Nature_Rune",
-                  "quantity": 10
+                  "quantity": 100
                 },
                 {
                   "id": "melvorD:Earth_Rune",
@@ -65312,15 +67410,15 @@
                 },
                 {
                   "id": "expandedAreas:Nature_Essence",
-                  "quantity": 1
+                  "quantity": 10
                 },
                 {
-                  "id": "melvorF:Golden_Stardust",
-                  "quantity": 10
+                  "id": "melvorF:Stardust",
+                  "quantity": 100
                 },
                 {
                   "id": "melvorF:Nature_Rune",
-                  "quantity": 10
+                  "quantity": 100
                 },
                 {
                   "id": "melvorD:Air_Rune",
@@ -65346,15 +67444,15 @@
                 },
                 {
                   "id": "expandedAreas:Nature_Essence",
-                  "quantity": 1
+                  "quantity": 10
                 },
                 {
-                  "id": "melvorF:Golden_Stardust",
-                  "quantity": 10
+                  "id": "melvorF:Stardust",
+                  "quantity": 100
                 },
                 {
                   "id": "melvorF:Nature_Rune",
-                  "quantity": 10
+                  "quantity": 100
                 },
                 {
                   "id": "melvorD:Water_Rune",
@@ -65380,18 +67478,321 @@
                 },
                 {
                   "id": "expandedAreas:Nature_Essence",
-                  "quantity": 1
+                  "quantity": 10
                 },
                 {
-                  "id": "melvorF:Golden_Stardust",
-                  "quantity": 10
+                  "id": "melvorF:Stardust",
+                  "quantity": 100
                 },
                 {
                   "id": "melvorF:Nature_Rune",
-                  "quantity": 10
+                  "quantity": 100
                 },
                 {
                   "id": "melvorD:Fire_Rune",
+                  "quantity": 100
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "SigilAnger",
+              "level": 65,
+              "productID": "expandedAreas:Sigil_of_Anger",
+              "baseQuantity": 1,
+              "baseExperience": 200,
+              "categoryID": "expandedAreas:SpecialRunesSigils",
+              "subcategories": [
+                "expandedAreas:Sigils"
+              ],
+              "itemCosts": [
+                {
+                  "id": "melvorD:Gold_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Mind_Essence",
+                  "quantity": 10
+                },
+                {
+                  "id": "melvorF:Golden_Stardust",
+                  "quantity": 100
+                },
+                {
+                  "id": "melvorD:Mind_Rune",
+                  "quantity": 100
+                },
+                {
+                  "id": "expandedAreas:Rage_Rune",
+                  "quantity": 100
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "SigilClarity",
+              "level": 65,
+              "productID": "expandedAreas:Sigil_of_Clarity",
+              "baseQuantity": 1,
+              "baseExperience": 200,
+              "categoryID": "expandedAreas:SpecialRunesSigils",
+              "subcategories": [
+                "expandedAreas:Sigils"
+              ],
+              "itemCosts": [
+                {
+                  "id": "melvorD:Gold_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Mind_Essence",
+                  "quantity": 10
+                },
+                {
+                  "id": "melvorF:Golden_Stardust",
+                  "quantity": 100
+                },
+                {
+                  "id": "melvorD:Mind_Rune",
+                  "quantity": 100
+                },
+                {
+                  "id": "melvorD:Light_Rune",
+                  "quantity": 100
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "SigilDread",
+              "level": 65,
+              "productID": "expandedAreas:Sigil_of_Dread",
+              "baseQuantity": 1,
+              "baseExperience": 200,
+              "categoryID": "expandedAreas:SpecialRunesSigils",
+              "subcategories": [
+                "expandedAreas:Sigils"
+              ],
+              "itemCosts": [
+                {
+                  "id": "melvorD:Gold_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Mind_Essence",
+                  "quantity": 10
+                },
+                {
+                  "id": "melvorF:Golden_Stardust",
+                  "quantity": 100
+                },
+                {
+                  "id": "melvorD:Mind_Rune",
+                  "quantity": 100
+                },
+                {
+                  "id": "melvorF:Havoc_Rune",
+                  "quantity": 100
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "SigilFocus",
+              "level": 65,
+              "productID": "expandedAreas:Sigil_of_Focus",
+              "baseQuantity": 1,
+              "baseExperience": 200,
+              "categoryID": "expandedAreas:SpecialRunesSigils",
+              "subcategories": [
+                "expandedAreas:Sigils"
+              ],
+              "itemCosts": [
+                {
+                  "id": "melvorD:Gold_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Mind_Essence",
+                  "quantity": 10
+                },
+                {
+                  "id": "melvorF:Golden_Stardust",
+                  "quantity": 100
+                },
+                {
+                  "id": "melvorD:Mind_Rune",
+                  "quantity": 200
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "SigilGenerosity",
+              "level": 65,
+              "productID": "expandedAreas:Sigil_of_Generosity",
+              "baseQuantity": 1,
+              "baseExperience": 200,
+              "categoryID": "expandedAreas:SpecialRunesSigils",
+              "subcategories": [
+                "expandedAreas:Sigils"
+              ],
+              "itemCosts": [
+                {
+                  "id": "melvorD:Gold_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Mind_Essence",
+                  "quantity": 10
+                },
+                {
+                  "id": "melvorF:Golden_Stardust",
+                  "quantity": 100
+                },
+                {
+                  "id": "melvorD:Mind_Rune",
+                  "quantity": 100
+                }
+              ],
+              "currencyCosts": [
+                {
+                  "id": "melvorD:GP",
+                  "quantity": 10000
+                }
+              ]
+            },
+            {
+              "id": "SigilLoyalty",
+              "level": 65,
+              "productID": "expandedAreas:Sigil_of_Loyalty",
+              "baseQuantity": 1,
+              "baseExperience": 200,
+              "categoryID": "expandedAreas:SpecialRunesSigils",
+              "subcategories": [
+                "expandedAreas:Sigils"
+              ],
+              "itemCosts": [
+                {
+                  "id": "melvorD:Gold_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Mind_Essence",
+                  "quantity": 10
+                },
+                {
+                  "id": "melvorF:Golden_Stardust",
+                  "quantity": 100
+                },
+                {
+                  "id": "melvorD:Mind_Rune",
+                  "quantity": 100
+                },
+                {
+                  "id": "melvorF:Nature_Rune",
+                  "quantity": 100
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "SigilPain",
+              "level": 65,
+              "productID": "expandedAreas:Sigil_of_Pain",
+              "baseQuantity": 1,
+              "baseExperience": 200,
+              "categoryID": "expandedAreas:SpecialRunesSigils",
+              "subcategories": [
+                "expandedAreas:Sigils"
+              ],
+              "itemCosts": [
+                {
+                  "id": "melvorD:Gold_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Mind_Essence",
+                  "quantity": 10
+                },
+                {
+                  "id": "melvorF:Golden_Stardust",
+                  "quantity": 100
+                },
+                {
+                  "id": "melvorD:Mind_Rune",
+                  "quantity": 100
+                },
+                {
+                  "id": "melvorD:Blood_Rune",
+                  "quantity": 100
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "SigilVengeance",
+              "level": 65,
+              "productID": "expandedAreas:Sigil_of_Vengeance",
+              "baseQuantity": 1,
+              "baseExperience": 200,
+              "categoryID": "expandedAreas:SpecialRunesSigils",
+              "subcategories": [
+                "expandedAreas:Sigils"
+              ],
+              "itemCosts": [
+                {
+                  "id": "melvorD:Gold_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Mind_Essence",
+                  "quantity": 10
+                },
+                {
+                  "id": "melvorF:Golden_Stardust",
+                  "quantity": 100
+                },
+                {
+                  "id": "melvorD:Mind_Rune",
+                  "quantity": 100
+                },
+                {
+                  "id": "melvorD:Death_Rune",
+                  "quantity": 100
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "SigilWeakness",
+              "level": 65,
+              "productID": "expandedAreas:Sigil_of_Weakness",
+              "baseQuantity": 1,
+              "baseExperience": 200,
+              "categoryID": "expandedAreas:SpecialRunesSigils",
+              "subcategories": [
+                "expandedAreas:Sigils"
+              ],
+              "itemCosts": [
+                {
+                  "id": "melvorD:Gold_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Mind_Essence",
+                  "quantity": 10
+                },
+                {
+                  "id": "melvorF:Golden_Stardust",
+                  "quantity": 100
+                },
+                {
+                  "id": "melvorD:Mind_Rune",
+                  "quantity": 100
+                },
+                {
+                  "id": "melvorD:Body_Rune",
                   "quantity": 100
                 }
               ],
