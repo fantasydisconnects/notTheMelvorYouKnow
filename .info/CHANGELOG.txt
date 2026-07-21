@@ -275,3 +275,11 @@ SAE v0.9.4.1
 SAE v0.9.4.2
 # Fixes
 - Fixed Lair of Abhorrence incorrectly giving the Abhorrent Beast -100% Ranged and Magic Max hit. It now correctly gives this penalty to the Player.
+# Changes
+## Equipment
+- Elementalist Staves and Pure Elementalist Sceptre Min and Max Hit bonuses have been reduced
+  - Elementalist Staves: +100 Min and +100 Max -> +15 Min + 15 Max
+  - Pure Elementalist Sceptre: +50 Min and +100 Max -> +30 Min +30 Max
+- Spiritcaller Staff Summoning Requirement increased 40 -> 60, Summoning Max Hit decreased 100% -> 40%, Can't Attack changed -> Max Hit -50%
+# New Content
+- A new late-game magic weapon has been added to the game

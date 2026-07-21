@@ -4,6 +4,33 @@
   "data": {
     "attacks": [
       {
+        "id": "CallOfTheDeep",
+        "defaultChance": 100,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Target",
+            "maxRoll": "MaxHP",
+            "maxPercent": 5,
+            "roll": false
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "expandedAreas:BlessingOfTheSea"
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 100,
+        "attackInterval": 3000,
+        "lifesteal": 0,
+        "name": "Call of the Deep",
+        "description": "Call upon the waves, the creatures of the sea, and the depths where sleeping gods lie dreaming, and assail the Enemy endlessly, dealing ${attackDamageMaxValue0}% of the Enemy's Max HP on hit every 3s until they perish. Each time you hit, gain 1 Blessing of the Sea, which gives you +${onHitEffect0modValue2}% Hitpoint Regen and your familiars -${onHitEffect0modValue0}% Attack Interval and +${onHitEffect0modValue1}% Max Hit per Blessing (up to 20) until the End of the Fight.",
+        "descriptionGenerator": "Assail the Enemy endlessly with the power of the sea, dealing <damage> every 3s. On hit, <hitEffect>.",
+        "usesRunesPerProc": false
+      },
+      {
         "id": "SwampSludge",
         "defaultChance": 100,
         "damage": [
@@ -4629,15 +4656,6 @@
         "insertAt": "After",
         "afterID": "melvorF:Training_Shield",
         "ids": [
-          "expandedAreas:Bronze_Dirk",
-          "expandedAreas:Iron_Dirk",
-          "expandedAreas:Steel_Dirk",
-          "expandedAreas:Black_Dirk",
-          "expandedAreas:Mithril_Dirk",
-          "expandedAreas:Adamant_Dirk",
-          "expandedAreas:Rune_Dirk",
-          "expandedAreas:Silver_Dirk",
-          "expandedAreas:Dragon_Dirk",
           "expandedAreas:Bronze_Pistol_Offhand",
           "expandedAreas:Iron_Pistol_Offhand",
           "expandedAreas:Steel_Pistol_Offhand",
@@ -4650,25 +4668,10 @@
       },
       {
         "insertAt": "After",
-        "afterID": "melvorD:Diamond",
-        "ids": [
-          "expandedAreas:Dragonstone"
-        ]
-      },
-      {
-        "insertAt": "After",
-        "afterID": "melvorF:Jadestone",
-        "ids": [
-          "expandedAreas:Moonstone",
-          "expandedAreas:Black_Diamond",
-          "expandedAreas:Sunstone"
-        ]
-      },
-      {
-        "insertAt": "After",
         "afterID": "melvorF:Natures_Wrath_Staff",
         "ids": [
-          "expandedAreas:Staff_Spiritcaller"
+          "expandedAreas:Staff_Spiritcaller",
+          "expandedAreas:Trident_of_Aquaniux"
         ]
       },
       {
@@ -5047,6 +5050,40 @@
       }
     ],
     "combatEffects": [
+      {
+        "id": "BlessingOfTheSea",
+        "templateID": "melvorD:StackingNonCountingModifier",
+        "name": "Blessing of the Sea",
+        "media": "assets/combat/status/mermaid.png",
+        "target": "Self",
+        "parameters": [
+          {
+            "name": "initialStacks",
+            "initialValue": 1
+          },
+          {
+            "name": "stacksToAdd",
+            "initialValue": 1
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 20
+          }
+        ],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "summoningAttackInterval": -5,
+              "summoningMaxHit": 5,
+              "hitpointRegeneration": 50
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
       {
         "id": "SigilVengeance",
         "templateID": "melvorD:StaticTargetCountingModifier",
@@ -9016,16 +9053,110 @@
     ],
     "items": [
       {
-        "itemType": "Item",
-        "id": "Shadow_Essence",
-        "name": "Shadow Essence",
-        "category": "Mining",
-        "type": "Essence",
-        "media": "assets/bank/essence_shadow.png",
+        "id": "Trident_of_Aquaniux",
+        "name": "Trident of Aquaniux",
+        "category": "Combat",
+        "type": "Staff",
+        "media": "assets/bank/Trident_of_Aquaniux.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 1
+        "sellsFor": 100000000,
+        "tier": "misc",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [
+          "Shield"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Magic",
+            "level": 99
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Prayer",
+            "level": 99
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Fishing",
+            "level": 99
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3200
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": 65
+          },
+          {
+            "key": "magicDamageBonus",
+            "value": 65
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 65
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 65
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 65
+          },
+          {
+            "key": "damageReduction",
+            "value": 6
+          }
+        ],
+        "modifiers": {
+          "flatMagicMaxHit": [
+            {
+              "subcategoryID": "melvorD:Water",
+              "value": 10
+            }
+          ],
+          "summoningMaxHit": 80,
+          "summoningAttackInterval": -40,
+          "flatPrayerPointsPerMonsterKill": 10,
+          "skillInterval": [
+            {
+              "skillID": "melvorD:Fishing",
+              "value": -25
+            }
+          ],
+          "flatAdditionalPrimaryProductQuantity": [
+            {
+              "skillID": "melvorD:Fishing",
+              "value": 3
+            }
+          ]
+        },
+        "combatEffects": [
+          {
+            "appliesWhen": "SummonAttack",
+            "effectID": "expandedAreas:BlessingOfTheSea",
+            "chance": 10
+          }
+        ],
+        "specialAttacks": [
+          "expandedAreas:CallOfTheDeep"
+        ],
+        "providedRunes": [
+          {
+            "id": "melvorD:Water_Rune",
+            "quantity": 10
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "magic"
       },
       {
         "itemType": "Equipment",
@@ -9648,7 +9779,6 @@
         "category": "Enhancement",
         "type": "Sigil",
         "media": "assets/bank/sigilweakness.png",
-       
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -31030,7 +31160,7 @@
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 1000000,
-        "customDescription": "Passive: +50 Minimum and Maximum Elemental and Nature Spell Dmg. Reduces the Elemental Rune cost of Magic Spells by 4 when equipped as a Weapon.",
+        "customDescription": "Passive: +30 Minimum and Maximum Elemental and Nature Spell Dmg. Reduces the Elemental Rune cost of Magic Spells by 4 when equipped as a Weapon.",
         "tier": "staff",
         "validSlots": [
           "Weapon"
@@ -31073,21 +31203,21 @@
           "flatMagicMaxHit": [
             {
               "subcategoryID": "melvorD:Elemental",
-              "value": 5
+              "value": 3
             },
             {
               "subcategoryID": "melvorF:Nature",
-              "value": 5
+              "value": 3
             }
           ],
           "flatMagicMinHit": [
             {
               "subcategoryID": "melvorD:Elemental",
-              "value": 5
+              "value": 3
             },
             {
               "subcategoryID": "melvorF:Nature",
-              "value": 5
+              "value": 3
             }
           ]
         },
@@ -35790,7 +35920,7 @@
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 500000,
-        "customDescription": "+100 Minimum Air Spell Dmg and +100 Maximum Air Spell Dmg. Reduces the Air Rune cost of Magic Spells by 6 when equipped as a Weapon.",
+        "customDescription": "+15 Minimum Air Spell Dmg and +15 Maximum Air Spell Dmg. Reduces the Air Rune cost of Magic Spells by 6 when equipped as a Weapon.",
         "tier": "ancient",
         "validSlots": [
           "Weapon"
@@ -35827,13 +35957,13 @@
           "flatMagicMaxHit": [
             {
               "subcategoryID": "melvorD:Air",
-              "value": 10
+              "value": 1.5
             }
           ],
           "flatMagicMinHit": [
             {
               "subcategoryID": "melvorD:Air",
-              "value": 10
+              "value": 1.5
             }
           ]
         },
@@ -36124,7 +36254,7 @@
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 500000,
-        "customDescription": "+100 Minimum Water Spell Dmg and +100 Maximum Water Spell Dmg. Reduces the Water Rune cost of Magic Spells by 6 when equipped as a Weapon.",
+        "customDescription": "+15 Minimum Water Spell Dmg and +15 Maximum Water Spell Dmg. Reduces the Water Rune cost of Magic Spells by 6 when equipped as a Weapon.",
         "tier": "ancient",
         "validSlots": [
           "Weapon"
@@ -36161,13 +36291,13 @@
           "flatMagicMaxHit": [
             {
               "subcategoryID": "melvorD:Water",
-              "value": 10
+              "value": 1.5
             }
           ],
           "flatMagicMinHit": [
             {
               "subcategoryID": "melvorD:Water",
-              "value": 10
+              "value": 1.5
             }
           ]
         },
@@ -36458,7 +36588,7 @@
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 500000,
-        "customDescription": "+100 Minimum Earth Spell Dmg and +100 Maximum Earth Spell Dmg. Reduces the Water Rune cost of Magic Spells by 6 when equipped as a Weapon.",
+        "customDescription": "+15 Minimum Earth Spell Dmg and +15 Maximum Earth Spell Dmg. Reduces the Water Rune cost of Magic Spells by 6 when equipped as a Weapon.",
         "tier": "ancient",
         "validSlots": [
           "Weapon"
@@ -36495,13 +36625,13 @@
           "flatMagicMaxHit": [
             {
               "subcategoryID": "melvorD:Earth",
-              "value": 10
+              "value": 1.5
             }
           ],
           "flatMagicMinHit": [
             {
               "subcategoryID": "melvorD:Earth",
-              "value": 10
+              "value": 1.5
             }
           ]
         },
@@ -36792,7 +36922,7 @@
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 500000,
-        "customDescription": "+100 Minimum Fire Spell Dmg and +100 Maximum Fire Spell Dmg. Reduces the Fire Rune cost of Magic Spells by 6 when equipped as a Weapon.",
+        "customDescription": "+15 Minimum Fire Spell Dmg and +15 Maximum Fire Spell Dmg. Reduces the Fire Rune cost of Magic Spells by 6 when equipped as a Weapon.",
         "tier": "ancient",
         "validSlots": [
           "Weapon"
@@ -36829,13 +36959,13 @@
           "flatMagicMaxHit": [
             {
               "subcategoryID": "melvorD:Fire",
-              "value": 10
+              "value": 1.5
             }
           ],
           "flatMagicMinHit": [
             {
               "subcategoryID": "melvorD:Fire",
-              "value": 10
+              "value": 1.5
             }
           ]
         },
@@ -42904,828 +43034,12 @@
         ]
       },
       {
-        "itemType": "Equipment",
-        "id": "Bronze_Dirk",
-        "name": "Bronze Dirk",
-        "category": "Combat",
-        "type": "Weapon",
-        "media": "assets/bank/weapon_dirk_bronze.png",
-        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.01s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 10,
-        "tier": "none",
-        "validSlots": [
-          "Shield",
-          "Passive"
-        ],
-        "occupiesSlots": [],
-        "equipRequirements": [],
-        "equipmentStats": [
-          {
-            "key": "meleeStrengthBonus",
-            "value": 2
-          },
-          {
-            "key": "stabAttackBonus",
-            "value": 6
-          },
-          {
-            "key": "slashAttackBonus",
-            "value": 4
-          },
-          {
-            "key": "blockAttackBonus",
-            "value": 2
-          },
-          {
-            "key": "meleeDefenceBonus",
-            "value": 6
-          }
-        ],
-        "conditionalModifiers": [
-          {
-            "condition": {
-              "type": "Every",
-              "conditions": [
-                {
-                  "type": "CombatType",
-                  "character": "Player",
-                  "thisAttackType": "melee",
-                  "targetAttackType": "any"
-                },
-                {
-                  "character": "Player",
-                  "damageType": "melvorD:Normal",
-                  "type": "DamageType"
-                }
-              ]
-            },
-            "modifiers": {
-              "flatStabAttackBonus": 3,
-              "flatBlockAttackBonus": 3,
-              "flatSlashAttackBonus": 3,
-              "flatAttackInterval": -10,
-              "flatResistance": [
-                {
-                  "damageTypeID": "melvorD:Normal",
-                  "value": -5
-                }
-              ]
-            }
-          }
-        ],
-        "specialAttacks": [
-          "expandedAreas:DisruptingStab",
-          "expandedAreas:CripplingStrike"
-        ]
-      },
-      {
-        "itemType": "Equipment",
-        "id": "Iron_Dirk",
-        "name": "Iron Dirk",
-        "category": "Combat",
-        "type": "Weapon",
-        "media": "assets/bank/weapon_dirk_iron.png",
-        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.02s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 20,
-        "tier": "none",
-        "validSlots": [
-          "Shield",
-          "Passive"
-        ],
-        "occupiesSlots": [],
-        "equipRequirements": [],
-        "equipmentStats": [
-          {
-            "key": "meleeStrengthBonus",
-            "value": 4
-          },
-          {
-            "key": "stabAttackBonus",
-            "value": 10
-          },
-          {
-            "key": "slashAttackBonus",
-            "value": 8
-          },
-          {
-            "key": "blockAttackBonus",
-            "value": 6
-          },
-          {
-            "key": "meleeDefenceBonus",
-            "value": 10
-          }
-        ],
-        "conditionalModifiers": [
-          {
-            "condition": {
-              "type": "Every",
-              "conditions": [
-                {
-                  "type": "CombatType",
-                  "character": "Player",
-                  "thisAttackType": "melee",
-                  "targetAttackType": "any"
-                },
-                {
-                  "character": "Player",
-                  "damageType": "melvorD:Normal",
-                  "type": "DamageType"
-                }
-              ]
-            },
-            "modifiers": {
-              "flatStabAttackBonus": 3,
-              "flatBlockAttackBonus": 3,
-              "flatSlashAttackBonus": 3,
-              "flatAttackInterval": -20,
-              "flatResistance": [
-                {
-                  "damageTypeID": "melvorD:Normal",
-                  "value": -5
-                }
-              ]
-            }
-          }
-        ],
-        "specialAttacks": [
-          "expandedAreas:DisruptingStab",
-          "expandedAreas:CripplingStrike"
-        ]
-      },
-      {
-        "itemType": "Equipment",
-        "id": "Steel_Dirk",
-        "name": "Steel Dirk",
-        "category": "Combat",
-        "type": "Weapon",
-        "media": "assets/bank/weapon_dirk_steel.png",
-        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.03s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 40,
-        "tier": "none",
-        "validSlots": [
-          "Shield",
-          "Passive"
-        ],
-        "occupiesSlots": [],
-        "equipRequirements": [
-          {
-            "type": "SkillLevel",
-            "skillID": "melvorD:Attack",
-            "level": 5
-          }
-        ],
-        "equipmentStats": [
-          {
-            "key": "meleeStrengthBonus",
-            "value": 6
-          },
-          {
-            "key": "stabAttackBonus",
-            "value": 14
-          },
-          {
-            "key": "slashAttackBonus",
-            "value": 12
-          },
-          {
-            "key": "blockAttackBonus",
-            "value": 10
-          },
-          {
-            "key": "meleeDefenceBonus",
-            "value": 14
-          }
-        ],
-        "conditionalModifiers": [
-          {
-            "condition": {
-              "type": "Every",
-              "conditions": [
-                {
-                  "type": "CombatType",
-                  "character": "Player",
-                  "thisAttackType": "melee",
-                  "targetAttackType": "any"
-                },
-                {
-                  "character": "Player",
-                  "damageType": "melvorD:Normal",
-                  "type": "DamageType"
-                }
-              ]
-            },
-            "modifiers": {
-              "flatStabAttackBonus": 3,
-              "flatBlockAttackBonus": 3,
-              "flatSlashAttackBonus": 3,
-              "flatAttackInterval": -30,
-              "flatResistance": [
-                {
-                  "damageTypeID": "melvorD:Normal",
-                  "value": -5
-                }
-              ]
-            }
-          }
-        ],
-        "specialAttacks": [
-          "expandedAreas:DisruptingStab",
-          "expandedAreas:CripplingStrike"
-        ]
-      },
-      {
-        "itemType": "Equipment",
-        "id": "Black_Dirk",
-        "name": "Black Dirk",
-        "category": "Combat",
-        "type": "Weapon",
-        "media": "assets/bank/weapon_dirk_black.png",
-        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.04s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 80,
-        "tier": "none",
-        "validSlots": [
-          "Shield",
-          "Passive"
-        ],
-        "occupiesSlots": [],
-        "equipRequirements": [
-          {
-            "type": "SkillLevel",
-            "skillID": "melvorD:Attack",
-            "level": 10
-          }
-        ],
-        "equipmentStats": [
-          {
-            "key": "meleeStrengthBonus",
-            "value": 8
-          },
-          {
-            "key": "stabAttackBonus",
-            "value": 18
-          },
-          {
-            "key": "slashAttackBonus",
-            "value": 16
-          },
-          {
-            "key": "blockAttackBonus",
-            "value": 14
-          },
-          {
-            "key": "meleeDefenceBonus",
-            "value": 18
-          }
-        ],
-        "conditionalModifiers": [
-          {
-            "condition": {
-              "type": "Every",
-              "conditions": [
-                {
-                  "type": "CombatType",
-                  "character": "Player",
-                  "thisAttackType": "melee",
-                  "targetAttackType": "any"
-                },
-                {
-                  "character": "Player",
-                  "damageType": "melvorD:Normal",
-                  "type": "DamageType"
-                }
-              ]
-            },
-            "modifiers": {
-              "flatStabAttackBonus": 3,
-              "flatBlockAttackBonus": 3,
-              "flatSlashAttackBonus": 3,
-              "flatAttackInterval": -40,
-              "flatResistance": [
-                {
-                  "damageTypeID": "melvorD:Normal",
-                  "value": -5
-                }
-              ]
-            }
-          }
-        ],
-        "specialAttacks": [
-          "expandedAreas:DisruptingStab",
-          "expandedAreas:CripplingStrike"
-        ]
-      },
-      {
-        "itemType": "Equipment",
-        "id": "Mithril_Dirk",
-        "name": "Mithril Dirk",
-        "category": "Combat",
-        "type": "Weapon",
-        "media": "assets/bank/weapon_dirk_mithril.png",
-        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.05s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 160,
-        "tier": "none",
-        "validSlots": [
-          "Shield",
-          "Passive"
-        ],
-        "occupiesSlots": [],
-        "equipRequirements": [
-          {
-            "type": "SkillLevel",
-            "skillID": "melvorD:Attack",
-            "level": 20
-          }
-        ],
-        "equipmentStats": [
-          {
-            "key": "meleeStrengthBonus",
-            "value": 10
-          },
-          {
-            "key": "stabAttackBonus",
-            "value": 20
-          },
-          {
-            "key": "slashAttackBonus",
-            "value": 18
-          },
-          {
-            "key": "blockAttackBonus",
-            "value": 16
-          },
-          {
-            "key": "meleeDefenceBonus",
-            "value": 20
-          }
-        ],
-        "conditionalModifiers": [
-          {
-            "condition": {
-              "type": "Every",
-              "conditions": [
-                {
-                  "type": "CombatType",
-                  "character": "Player",
-                  "thisAttackType": "melee",
-                  "targetAttackType": "any"
-                },
-                {
-                  "character": "Player",
-                  "damageType": "melvorD:Normal",
-                  "type": "DamageType"
-                }
-              ]
-            },
-            "modifiers": {
-              "flatStabAttackBonus": 3,
-              "flatBlockAttackBonus": 3,
-              "flatSlashAttackBonus": 3,
-              "flatAttackInterval": -50,
-              "flatResistance": [
-                {
-                  "damageTypeID": "melvorD:Normal",
-                  "value": -5
-                }
-              ]
-            }
-          }
-        ],
-        "specialAttacks": [
-          "expandedAreas:DisruptingStab",
-          "expandedAreas:CripplingStrike"
-        ]
-      },
-      {
-        "itemType": "Equipment",
-        "id": "Adamant_Dirk",
-        "name": "Adamant Dirk",
-        "category": "Combat",
-        "type": "Weapon",
-        "media": "assets/bank/weapon_dirk_adamant.png",
-        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.06s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 320,
-        "tier": "none",
-        "validSlots": [
-          "Shield",
-          "Passive"
-        ],
-        "occupiesSlots": [],
-        "equipRequirements": [
-          {
-            "type": "SkillLevel",
-            "skillID": "melvorD:Attack",
-            "level": 30
-          }
-        ],
-        "equipmentStats": [
-          {
-            "key": "meleeStrengthBonus",
-            "value": 12
-          },
-          {
-            "key": "stabAttackBonus",
-            "value": 26
-          },
-          {
-            "key": "slashAttackBonus",
-            "value": 24
-          },
-          {
-            "key": "blockAttackBonus",
-            "value": 22
-          },
-          {
-            "key": "meleeDefenceBonus",
-            "value": 26
-          }
-        ],
-        "conditionalModifiers": [
-          {
-            "condition": {
-              "type": "Every",
-              "conditions": [
-                {
-                  "type": "CombatType",
-                  "character": "Player",
-                  "thisAttackType": "melee",
-                  "targetAttackType": "any"
-                },
-                {
-                  "character": "Player",
-                  "damageType": "melvorD:Normal",
-                  "type": "DamageType"
-                }
-              ]
-            },
-            "modifiers": {
-              "flatStabAttackBonus": 3,
-              "flatBlockAttackBonus": 3,
-              "flatSlashAttackBonus": 3,
-              "flatAttackInterval": -60,
-              "flatResistance": [
-                {
-                  "damageTypeID": "melvorD:Normal",
-                  "value": -5
-                }
-              ]
-            }
-          }
-        ],
-        "specialAttacks": [
-          "expandedAreas:DisruptingStab",
-          "expandedAreas:CripplingStrike"
-        ]
-      },
-      {
-        "itemType": "Equipment",
-        "id": "Rune_Dirk",
-        "name": "Rune Dirk",
-        "category": "Combat",
-        "type": "Weapon",
-        "media": "assets/bank/weapon_dirk_rune.png",
-        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.07s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 640,
-        "tier": "none",
-        "validSlots": [
-          "Shield",
-          "Passive"
-        ],
-        "occupiesSlots": [],
-        "equipRequirements": [
-          {
-            "type": "SkillLevel",
-            "skillID": "melvorD:Attack",
-            "level": 40
-          }
-        ],
-        "equipmentStats": [
-          {
-            "key": "meleeStrengthBonus",
-            "value": 14
-          },
-          {
-            "key": "stabAttackBonus",
-            "value": 36
-          },
-          {
-            "key": "slashAttackBonus",
-            "value": 34
-          },
-          {
-            "key": "blockAttackBonus",
-            "value": 32
-          },
-          {
-            "key": "meleeDefenceBonus",
-            "value": 36
-          }
-        ],
-        "conditionalModifiers": [
-          {
-            "condition": {
-              "type": "Every",
-              "conditions": [
-                {
-                  "type": "CombatType",
-                  "character": "Player",
-                  "thisAttackType": "melee",
-                  "targetAttackType": "any"
-                },
-                {
-                  "character": "Player",
-                  "damageType": "melvorD:Normal",
-                  "type": "DamageType"
-                }
-              ]
-            },
-            "modifiers": {
-              "flatStabAttackBonus": 3,
-              "flatBlockAttackBonus": 3,
-              "flatSlashAttackBonus": 3,
-              "flatAttackInterval": -70,
-              "flatResistance": [
-                {
-                  "damageTypeID": "melvorD:Normal",
-                  "value": -5
-                }
-              ]
-            }
-          }
-        ],
-        "specialAttacks": [
-          "expandedAreas:DisruptingStab",
-          "expandedAreas:CripplingStrike"
-        ]
-      },
-      {
-        "itemType": "Equipment",
-        "id": "Silver_Dirk",
-        "name": "Silver Dirk",
-        "category": "Combat",
-        "type": "Weapon",
-        "media": "assets/bank/weapon_dirk_silver.png",
-        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.08s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus<br>(MELEE ONLY) Against monsters with vulnerability to silver, gain +5% Reflect Damage.",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 1280,
-        "tier": "none",
-        "validSlots": [
-          "Shield"
-        ],
-        "occupiesSlots": [],
-        "equipRequirements": [
-          {
-            "type": "SkillLevel",
-            "skillID": "melvorD:Attack",
-            "level": 50
-          }
-        ],
-        "equipmentStats": [
-          {
-            "key": "meleeStrengthBonus",
-            "value": 16
-          },
-          {
-            "key": "stabAttackBonus",
-            "value": 42
-          },
-          {
-            "key": "slashAttackBonus",
-            "value": 40
-          },
-          {
-            "key": "blockAttackBonus",
-            "value": 38
-          },
-          {
-            "key": "meleeDefenceBonus",
-            "value": 42
-          }
-        ],
-        "conditionalModifiers": [
-          {
-            "condition": {
-              "type": "Every",
-              "conditions": [
-                {
-                  "type": "CombatType",
-                  "character": "Player",
-                  "thisAttackType": "melee",
-                  "targetAttackType": "any"
-                },
-                {
-                  "character": "Player",
-                  "damageType": "melvorD:Normal",
-                  "type": "DamageType"
-                }
-              ]
-            },
-            "modifiers": {
-              "flatStabAttackBonus": 3,
-              "flatBlockAttackBonus": 3,
-              "flatSlashAttackBonus": 3,
-              "flatAttackInterval": -80,
-              "flatResistance": [
-                {
-                  "damageTypeID": "melvorD:Normal",
-                  "value": -5
-                }
-              ]
-            }
-          },
-          {
-            "condition": {
-              "type": "Every",
-              "conditions": [
-                {
-                  "character": "Enemy",
-                  "effectID": "expandedAreas:VulnerabilitySilver",
-                  "type": "CombatEffect"
-                },
-                {
-                  "character": "Player",
-                  "thisAttackType": "melee",
-                  "targetAttackType": "melee",
-                  "type": "CombatType"
-                }
-              ]
-            },
-            "modifiers": {
-              "reflectDamage": 5
-            }
-          }
-        ],
-        "specialAttacks": [
-          "expandedAreas:DisruptingStab",
-          "expandedAreas:CripplingStrike"
-        ]
-      },
-      {
-        "itemType": "Equipment",
-        "id": "Dragon_Dirk",
-        "name": "Dragon Dirk",
-        "category": "Combat",
-        "type": "Weapon",
-        "media": "assets/bank/weapon_dirk_dragon.png",
-        "customDescription": "Passive: (MELEE ONLY) While using Normal Damage, -0.09s Attack Interval, -5% Damage Reduction, +3 Melee Attack Bonus",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 2560,
-        "tier": "none",
-        "validSlots": [
-          "Shield",
-          "Passive"
-        ],
-        "occupiesSlots": [],
-        "equipRequirements": [
-          {
-            "type": "SkillLevel",
-            "skillID": "melvorD:Attack",
-            "level": 60
-          }
-        ],
-        "equipmentStats": [
-          {
-            "key": "meleeStrengthBonus",
-            "value": 18
-          },
-          {
-            "key": "stabAttackBonus",
-            "value": 50
-          },
-          {
-            "key": "slashAttackBonus",
-            "value": 48
-          },
-          {
-            "key": "blockAttackBonus",
-            "value": 46
-          },
-          {
-            "key": "meleeDefenceBonus",
-            "value": 50
-          }
-        ],
-        "conditionalModifiers": [
-          {
-            "condition": {
-              "type": "Every",
-              "conditions": [
-                {
-                  "type": "CombatType",
-                  "character": "Player",
-                  "thisAttackType": "melee",
-                  "targetAttackType": "any"
-                },
-                {
-                  "character": "Player",
-                  "damageType": "melvorD:Normal",
-                  "type": "DamageType"
-                }
-              ]
-            },
-            "modifiers": {
-              "flatStabAttackBonus": 3,
-              "flatBlockAttackBonus": 3,
-              "flatSlashAttackBonus": 3,
-              "flatAttackInterval": -90,
-              "flatResistance": [
-                {
-                  "damageTypeID": "melvorD:Normal",
-                  "value": -5
-                }
-              ]
-            }
-          }
-        ],
-        "specialAttacks": [
-          "expandedAreas:DisruptingStab",
-          "expandedAreas:CripplingStrike"
-        ]
-      },
-      {
-        "itemType": "Item",
-        "id": "Sunstone",
-        "name": "Sunstone",
-        "category": "Gemstone",
-        "type": "Gem",
-        "media": "assets/bank/gem_sunstone.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 625,
-        "customDescription": "Standard Gem"
-      },
-      {
-        "itemType": "Item",
-        "id": "Dragonstone",
-        "name": "Dragonstone",
-        "category": "Gemstone",
-        "type": "Gem",
-        "media": "assets/bank/gem_dragonstone.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 7000,
-        "customDescription": "Standard Gem"
-      },
-      {
-        "itemType": "Item",
-        "id": "Moonstone",
-        "name": "Moonstone",
-        "category": "Gemstone",
-        "type": "Gem",
-        "media": "assets/bank/gem_moonstone.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 8500,
-        "customDescription": "Standard Gem"
-      },
-      {
-        "itemType": "Item",
-        "id": "Black_Diamond",
-        "name": "Black Diamond",
-        "category": "Gemstone",
-        "type": "Gem",
-        "media": "assets/bank/gem_black_diamond.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 10000,
-        "customDescription": "Standard Gem"
-      },
-      {
         "id": "Staff_Spiritcaller",
         "name": "Spiritcaller Staff",
         "category": "Combat",
         "type": "Magic Staff",
         "media": "assets/bank/staff_spiritcaller.png",
-        "customDescription": "Passive: Your attacks deal no damage while this is equipped. -10% Summoning Attack Interval and +100% Summoning Max Hit. +10% chance on Summon Attack to apply a random Elemental effect to the Enemy.<br><span class=\"text-warning\">When equipped with the Book of Occults, gain +10% chance on Summon Attack to inflict a random Curse on the Enemy.</span>",
+        "customDescription": "Passive: -50% Max Hit while this is equipped. -20% Summoning Attack Interval and +40% Summoning Max Hit. +10% chance on Summon Attack to apply a random Elemental effect to the Enemy.<br><span class=\"text-warning\">When equipped with the Book of Occults, gain +10% chance on Summon Attack to inflict a random Curse on the Enemy.</span>",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -43739,16 +43053,16 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Summoning",
-            "level": 40
+            "level": 60
           }
         ],
         "equipmentStats": [],
         "itemType": "Weapon",
         "attackType": "magic",
         "modifiers": {
-          "cantAttack": 1,
-          "summoningAttackInterval": -10,
-          "summoningMaxHit": 100
+          "maxHit": -50,
+          "summoningAttackInterval": -20,
+          "summoningMaxHit": 40
         },
         "combatEffects": [
           {
@@ -45518,6 +44832,40 @@
       }
     ],
     "itemUpgrades": [
+      {
+        "upgradedItemID": "expandedAreas:Trident_of_Aquaniux",
+        "itemCosts": [
+          {
+            "id": "melvorF:Shockwave_Fragment",
+            "quantity": 1000
+          },
+          {
+            "id": "melvorF:Ocean_Song_Fragment",
+            "quantity": 1000
+          },
+          {
+            "id": "melvorF:Tidal_Edge_Fragment",
+            "quantity": 1000
+          },
+          {
+            "id": "melvorF:Cloudburst_Staff",
+            "quantity": 1
+          },
+          {
+            "id": "expandedAreas:Staff_Spiritcaller",
+            "quantity": 1
+          },
+          {
+            "id": "expandedAreas:Spirit_Essence",
+            "quantity": 5000
+          }
+        ],
+        "rootItemIDs": [
+          "expandedAreas:Staff_Spiritcaller"
+        ],
+        "isDowngrade": false,
+        "currencyCosts": []
+      },
       {
         "rootItemIDs": [
           "expandedAreas:Magmatic_Fang",

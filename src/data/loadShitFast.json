@@ -403,7 +403,6 @@
       },
     ],
     "combatEffectTables": [
-
       {
         "id": "RandomGaze",
         "table": [
@@ -712,24 +711,7 @@
     ],
     "items": [],
     "itemUpgrades": [
-      {
-        "upgradedItemID": "",
-        "itemCosts": [
-          {
-            "id": "SigilID",
-            "quantity": 1
-          },
-          {
-            "id": "WeaponID",
-            "quantity": 1
-          }
-        ],
-        "rootItemIDs": [
-          "WeaponID"
-        ],
-        "isDowngrade": false,
-        "currencyCosts": []
-      }
+
     ],
     "itemSynergies": [],
     "monsters": [],
