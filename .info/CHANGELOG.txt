@@ -283,3 +283,16 @@ SAE v0.9.4.2
 - Spiritcaller Staff Summoning Requirement increased 40 -> 60, Summoning Max Hit decreased 100% -> 40%, Can't Attack changed -> Max Hit -50%
 # New Content
 - A new late-game magic weapon has been added to the game
+
+SAE v0.9.4.3
+# Fixes
+## Art
+- remove unused art
+- compressed art to save on ~12MB of space--mod should load much faster now
+
+## bank
+- update bank sort order to include cursed enhancement stuff 
+
+# Changes
+## Summoning
+- remove pets as familiars

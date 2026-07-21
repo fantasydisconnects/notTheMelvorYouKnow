@@ -2730,6 +2730,27 @@
     ],
     "bankSortOrder": [
       {
+        "afterID": "melvorF:Gods_Enhancement_Scroll_Augmented",
+        "insertAt": "After",
+        "ids": [
+          "expandedAreas:Cursed_Enhancement_Scroll",
+          "expandedAreas:Cursed_Enhancement_Scroll_Augmented"
+        ]
+      },
+      {
+        "afterID": "melvorF:Gods_Enhancement_Superior",
+        "insertAt": "After",
+        "ids": [
+                "expandedAreas:Cursed_Enhancement_1",
+                "expandedAreas:Cursed_Enhancement_2",
+                "expandedAreas:Cursed_Enhancement_3",
+                "expandedAreas:Cursed_Enhancement_1_Augmented",
+                "expandedAreas:Cursed_Enhancement_2_Augmented",
+                "expandedAreas:Cursed_Enhancement_3_Augmented",
+                "expandedAreas:Cursed_Enhancement_Superior"
+        ]
+      },
+      {
         "afterID": "melvorF:Marksmans_Sigil",
         "insertAt": "After",
         "ids": [
