@@ -71086,7 +71086,7 @@
         },
         "areaEffectDescription": "The Abhorrent Beast takes ${effectValue}% less damage from Magic and Ranged attacks. You have -${effectValue}% Magic and Ranged Accuracy.",
         "areaEffect": {
-          "target": "Enemy",
+          "target": "Player",
           "magnitude": 100,
           "modifiers": {
             "rangedMaxHit": -1,

@@ -267,3 +267,11 @@ SAE v0.9.4
 
 # Changes
 - Removed special attacks from daggers, 2H swords, and defenders
+
+SAE v0.9.4.1
+# Fixes
+- Fixed Elemental Staves not correctly being added to Weapon Masteries
+
+SAE v0.9.4.2
+# Fixes
+- Fixed Lair of Abhorrence incorrectly giving the Abhorrent Beast -100% Ranged and Magic Max hit. It now correctly gives this penalty to the Player.
