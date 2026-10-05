@@ -1,0 +1,10 @@
+{
+  "base_url": "",
+  "cache_seconds": 300,
+  "upload_concurrency": 3,
+  "r2": {
+    "account_id": "",
+    "bucket": "",
+    "jurisdiction": "default"
+  }
+}

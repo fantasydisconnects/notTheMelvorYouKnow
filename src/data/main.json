@@ -4841,7 +4841,7 @@
       {
         "id": "Challenges",
         "name": "Challenges",
-        "media": "assets/icons/skull.png",
+        "media": "assets/icons/Skull.png",
         "areas": [
           "expandedAreas:Mole_Lair",
           "expandedAreas:Freeskies",
@@ -6812,7 +6812,7 @@
         "id": "ResistanceIncrease5",
         "templateID": "melvorD:StaticSelfCountingModifier",
         "name": "+5% Damage Reduction",
-        "media": "assets/combat/status/evasion_increase.png",
+        "media": "assets/combat/status/evasion_increase.svg",
         "target": "Self",
         "parameters": [
           {
@@ -6841,7 +6841,7 @@
         "id": "ResistanceIncrease10",
         "templateID": "melvorD:StaticSelfCountingModifier",
         "name": "+10% Damage Reduction",
-        "media": "assets/combat/status/evasion_increase.png",
+        "media": "assets/combat/status/evasion_increase.svg",
         "target": "Self",
         "parameters": [
           {
@@ -6870,7 +6870,7 @@
         "id": "ResistanceIncrease15",
         "templateID": "melvorD:StaticSelfCountingModifier",
         "name": "+15% Damage Reduction",
-        "media": "assets/combat/status/evasion_increase.png",
+        "media": "assets/combat/status/evasion_increase.svg",
         "target": "Self",
         "parameters": [
           {
