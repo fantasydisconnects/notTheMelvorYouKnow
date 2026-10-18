@@ -1,0 +1,16 @@
+{
+  "name": "sae-maintainer-tools",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "assets": "node scripts/assets.mjs",
+    "build": "node scripts/build.mjs",
+    "login": "wrangler login",
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "fflate": "0.8.3",
+    "wrangler": "4.146.0"
+  }
+}

@@ -1,0 +1,7 @@
+/node_modules/
+/dist/
+/.asset-state/
+/.wrangler/
+/asset-hosting.local.json
+.DS_Store
+Thumbs.db
