@@ -513,3 +513,23 @@ SAE v0.9.4.9
 - Made Rex Heads and Rex Blood root items for item upgrades to show the player what items can be upgraded
 - Removed unused items from the game that still existed in database
 - Added missing (S) Silver Shield upgrade
+
+SAE v0.9.5
+# Changes
+- Chest of Gems has been rebalanced to include three completely new gems and now includes jadestone
+- Infernal Stronghold now rewards the Infernal Chest alongside its original rewards
+
+# Content
+- Three new semi-precious gems (slightly cheaper than Topaz) have been added: Opal, Spinel, and Quartz
+  - These can also be obtained from Mining, same as the vanilla gems; this, however has made the vanilla gems slightly more rare to find. Sorry!
+- 24 new jewelry items have been added
+  - all semi-precious gems can only be crafted with bronze bars to make bronze jewelry
+  - new Earrings jewelry has been added for all gem types including jadestone
+  - 4 jewelry pieces have been added for Jadestone
+    - requires level 90, Platinum Bars, and Jadestones
+  - 4 jewlery pieces have been added for Volkanum
+    - requires Volkanum Bars, level 99, and 25 infernal cores to create a piece of jewelry
+- Two new mining rocks have been added: the Gem Rocks (level 65 required) which give--you guessed it--gems! And the illustrious Volkanum (level 90 required, must purchase Access Pass to Volcanic Mine). Volkanum is a T99 material that can be made into bars, which can then be made into certain jewelry. (Later, there may be items created through Smithing. Keep a look out...!)
+  - Note: Raw Volkanum is INCREDIBLY difficult to form into bars. Thus, it requires quite a few Raw Volkanum to make a single bar!
+- A new chest has been added to the game: Infernal Chest! It contains some scrolls for Firemaking, high-level ores and materials, rare amulets, more infernal cores, and... a very rare new item...
+- ...the Infernal Hammer! A new Tool slot item (not weapon, sorry <3) that reduces your Bars smithing interval by 0.5s!!! It also cheekily has a 5% chance to activate a really explosive special attack (but I won't ruin that surprise for you here)

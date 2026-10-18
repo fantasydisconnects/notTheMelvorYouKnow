@@ -4,6 +4,33 @@
   "data": {
     "attacks": [
       {
+        "id": "InfernalCataclysm",
+        "defaultChance": 5,
+        "damage": [
+          {
+            "damageType": "Custom",
+            "character": "Attacker",
+            "maxRoll": "Fixed",
+            "maxPercent": 10,
+            "roll": false
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Burn"
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 20,
+        "attackInterval": 200,
+        "lifesteal": 0,
+        "name": "Infernal Cataclysm",
+        "description": "Your infernal hammer grows to enormous size and moves of its own volition. It slams itself into the ground, generating a shockwave of molten earth that deals ${attackDamageMaxValue0} damage ${hitCount} times over ${duration}s. On hit, inflicts Burn that deals ${onHitEffect0DamageMaxValue0}% of the enemy's current hitpoints as damage over ${onHitEffect0duration}s.",
+        "descriptionGenerator": "Your infernal hammer generates a shockwave that deals <damage> <count> times over <duration>. On hit, <hitEffect>.",
+        "usesRunesPerProc": false
+      },
+      {
         "id": "ToTheSkies",
         "defaultChance": 10,
         "damage": [
@@ -2892,6 +2919,20 @@
     "bankSortOrder": [
       {
         "insertAt": "After",
+        "afterID": "melvorD:Elite_Chest",
+        "ids": [
+          "expandedAreas:Infernal_Chest"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Infernal_Core",
+        "ids": [
+          "expandedAreas:Infernal_Hammer"
+        ]
+      },
+      {
+        "insertAt": "After",
         "afterID": "melvorF:Dragon_Claw",
         "ids": [
           "expandedAreas:Rex_Heads",
@@ -4368,9 +4409,76 @@
         ]
       },
       {
+        "insertAt": "Before",
+        "beforeID": "melvorD:Topaz",
+        "ids": [
+          "expandedAreas:Opal",
+          "expandedAreas:Spinel",
+          "expandedAreas:Quartz"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Dragonite_Ore",
+        "ids": [
+          "expandedAreas:Raw_Volkanum"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Mithril_Ore",
+        "ids": [
+          "expandedAreas:Geode"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Dragonite_Bar",
+        "ids": [
+          "expandedAreas:Volkanum_Bar"
+        ]
+      },
+      {
         "insertAt": "After",
         "afterID": "melvorF:Gold_Diamond_Necklace",
         "ids": [
+          "expandedAreas:Platinum_Jadestone_Necklace",
+          "expandedAreas:Volkanum_Necklace"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Gold_Diamond_Ring",
+        "ids": [
+          "expandedAreas:Platinum_Jadestone_Ring",
+          "expandedAreas:Volkanum_Ring"
+        ]
+      },
+      {
+        "insertAt": "Before",
+        "beforeID": "melvorD:Gold_Topaz_Ring",
+        "ids": [
+          "expandedAreas:Bronze_Opal_Ring",
+          "expandedAreas:Bronze_Spinel_Ring",
+          "expandedAreas:Bronze_Quartz_Ring"
+        ]
+      },
+      {
+        "insertAt": "Before",
+        "beforeID": "melvorF:Gold_Topaz_Necklace",
+        "ids": [
+          "expandedAreas:Bronze_Opal_Necklace",
+          "expandedAreas:Bronze_Spinel_Necklace",
+          "expandedAreas:Bronze_Quartz_Necklace"
+        ]
+      },
+      {
+        "insertAt": "After",
+        "afterID": "melvorF:Gold_Diamond_Necklace",
+        "ids": [
+          "expandedAreas:Bronze_Opal_Bracelet",
+          "expandedAreas:Bronze_Spinel_Bracelet",
+          "expandedAreas:Bronze_Quartz_Bracelet",
           "expandedAreas:Silver_Topaz_Bracelet",
           "expandedAreas:Silver_Sapphire_Bracelet",
           "expandedAreas:Silver_Ruby_Bracelet",
@@ -4380,7 +4488,24 @@
           "expandedAreas:Gold_Sapphire_Bracelet",
           "expandedAreas:Gold_Ruby_Bracelet",
           "expandedAreas:Gold_Emerald_Bracelet",
-          "expandedAreas:Gold_Diamond_Bracelet"
+          "expandedAreas:Gold_Diamond_Bracelet",
+          "expandedAreas:Platinum_Jadestone_Bracelet",
+          "expandedAreas:Volkanum_Bracelet",
+          "expandedAreas:Bronze_Opal_Earrings",
+          "expandedAreas:Bronze_Spinel_Earrings",
+          "expandedAreas:Bronze_Quartz_Earrings",
+          "expandedAreas:Silver_Topaz_Earrings",
+          "expandedAreas:Silver_Sapphire_Earrings",
+          "expandedAreas:Silver_Ruby_Earrings",
+          "expandedAreas:Silver_Emerald_Earrings",
+          "expandedAreas:Silver_Diamond_Earrings",
+          "expandedAreas:Gold_Topaz_Earrings",
+          "expandedAreas:Gold_Sapphire_Earrings",
+          "expandedAreas:Gold_Ruby_Earrings",
+          "expandedAreas:Gold_Emerald_Earrings",
+          "expandedAreas:Gold_Diamond_Earrings",
+          "expandedAreas:Platinum_Jadestone_Earrings",
+          "expandedAreas:Volkanum_Earrings"
         ]
       },
       {
@@ -9634,6 +9759,1148 @@
     ],
     "items": [
       {
+        "id": "Infernal_Hammer",
+        "name": "Infernal Hammer",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/bank/infernal_hammer.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 6666666,
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Tool"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Smithing",
+            "level": 70
+          }
+        ],
+        "equipmentStats": [],
+        "modifiers": {
+          "flatSkillInterval": [
+            {
+              "skillID": "melvorD:Smithing",
+              "categoryID": "melvorD:Bars",
+              "value": -500
+            }
+          ]
+        },
+        "specialAttacks": [
+          "expandedAreas:InfernalCataclysm"
+        ],
+        "itemType": "Equipment"
+      },
+      {
+        "itemType": "Item",
+        "id": "Raw_Volkanum",
+        "name": "Raw Volkanum",
+        "category": "Mining",
+        "type": "Ore",
+        "media": "assets/bank/raw_volkanum.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 850,
+        "customDescription": "One of the hardest, most powerful minerals in existence…a marvel formed by heat at the heart of the world."
+      },
+      {
+        "itemType": "Item",
+        "id": "Volkanum_Bar",
+        "name": "Volkanum Bar",
+        "category": "Smithing",
+        "type": "Bar",
+        "media": "assets/bank/volkanum_bar.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 10000,
+        "customDescription": "One of the hardest, most powerful minerals in existence…a workable bar formed by the hands of a master blacksmith."
+      },
+      {
+        "itemType": "Item",
+        "id": "Opal",
+        "name": "Opal",
+        "category": "Gemstone",
+        "type": "Gem",
+        "media": "assets/bank/gem_opal.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 20,
+        "customDescription": "Semiprecious Gem"
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Bronze_Opal_Ring",
+        "name": "Bronze Opal Ring",
+        "category": "Astrology",
+        "type": "Ring",
+        "media": "assets/bank/bronze_opal_ring.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 40,
+        "tier": "none",
+        "validSlots": [
+          "Ring",
+          "expandedAreas:Ring2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "starFallChance": 5
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Bronze_Opal_Necklace",
+        "name": "Bronze Opal Necklace",
+        "category": "Thieving",
+        "type": "Necklace",
+        "media": "assets/bank/bronze_opal_necklace.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 40,
+        "tier": "none",
+        "validSlots": [
+          "Amulet",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "stunAvoidChance": 10
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Bronze_Opal_Bracelet",
+        "name": "Bronze Opal Bracelet",
+        "category": "Slayer",
+        "type": "Bracelet",
+        "media": "assets/bank/bronze_opal_bracelet.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 40,
+        "tier": "none",
+        "validSlots": [
+          "Gloves",
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "slayerTaskLength": 10
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Bronze_Opal_Earrings",
+        "name": "Bronze Opal Earrings",
+        "category": "Slayer",
+        "type": "Earrings",
+        "media": "assets/bank/bronze_opal_earrings.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 40,
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "flatFarmingSeedCost": [
+            {
+              "categoryID": "melvorD:Allotment",
+              "value": -1
+            }
+          ]
+        }
+      },
+      {
+        "itemType": "Item",
+        "id": "Spinel",
+        "name": "Spinel",
+        "category": "Gemstone",
+        "type": "Gem",
+        "media": "assets/bank/gem_spinel.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 65,
+        "customDescription": "Semiprecious Gem"
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Bronze_Spinel_Ring",
+        "name": "Bronze Spinel Ring",
+        "category": "Township",
+        "type": "Ring",
+        "media": "assets/bank/bronze_spinel_ring.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 80,
+        "tier": "none",
+        "validSlots": [
+          "Ring",
+          "expandedAreas:Ring2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "townshipRepairCost": -5
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Bronze_Spinel_Necklace",
+        "name": "Bronze Spinel Necklace",
+        "category": "Agility",
+        "type": "Necklace",
+        "media": "assets/bank/bronze_spinel_necklace.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 80,
+        "tier": "none",
+        "validSlots": [
+          "Amulet",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "skillXP": [
+            {
+              "skillID": "melvorD:Agility",
+              "value": 2
+            }
+          ],
+          "currencyGain": [
+            {
+              "skillID": "melvorD:Agility",
+              "currencyID": "melvorD:GP",
+              "value": 2
+            }
+          ]
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Bronze_Spinel_Bracelet",
+        "name": "Bronze Spinel Bracelet",
+        "category": "Magic",
+        "type": "Bracelet",
+        "media": "assets/bank/bronze_spinel_bracelet.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 80,
+        "tier": "none",
+        "validSlots": [
+          "Gloves",
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "flatSpellRuneCost": [
+            {
+              "itemID": "melvorD:Light_Rune",
+              "value": -1
+            },
+            {
+              "itemID": "melvorD:Chaos_Rune",
+              "value": -1
+            },
+            {
+              "itemID": "melvorD:Death_Rune",
+              "value": -1
+            }
+          ]
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Bronze_Spinel_Earrings",
+        "name": "Bronze Spinel Earrings",
+        "category": "Herblore",
+        "type": "Earrings",
+        "media": "assets/bank/bronze_spinel_earrings.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 80,
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "flatPotionCharges": 2
+        }
+      },
+      {
+        "itemType": "Item",
+        "id": "Quartz",
+        "name": "Quartz",
+        "category": "Gemstone",
+        "type": "Gem",
+        "media": "assets/bank/gem_quartz.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 90,
+        "customDescription": "Semiprecious Gem"
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Bronze_Quartz_Ring",
+        "name": "Bronze Quartz Ring",
+        "category": "Combat",
+        "type": "Ring",
+        "media": "assets/bank/bronze_quartz_ring.png",
+        "customDescription": "+10% Accuracy and Max Hit against Undead monsters",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 115,
+        "tier": "none",
+        "validSlots": [
+          "Ring",
+          "expandedAreas:Ring2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "character": "Enemy",
+              "effectID": "expandedAreas:MonsterTypeUndead",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "accuracyRating": 10,
+              "maxHit": 10
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Bronze_Quartz_Necklace",
+        "name": "Bronze Quartz Necklace",
+        "category": "Prayer",
+        "type": "Necklace",
+        "media": "assets/bank/bronze_quartz_necklace.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 115,
+        "tier": "none",
+        "validSlots": [
+          "Amulet",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "prayerPointCost": -20
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Bronze_Quartz_Bracelet",
+        "name": "Bronze Quartz Bracelet",
+        "category": "Slayer",
+        "type": "Bracelet",
+        "media": "assets/bank/bronze_quartz_bracelet.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 115,
+        "tier": "none",
+        "validSlots": [
+          "Gloves",
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "damageDealtToSlayerTasks": 5
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Bronze_Quartz_Earrings",
+        "name": "Bronze Quartz Earrings",
+        "category": "Combat",
+        "type": "Earrings",
+        "media": "assets/bank/bronze_quartz_earrings.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 115,
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "burnDOTDamageTaken": -10
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Topaz_Earrings",
+        "name": "Silver Topaz Earrings",
+        "category": "Money",
+        "type": "Earrings",
+        "media": "assets/bank/silver_topaz_earrings.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 250,
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "gpFromItemAlchemy": 3,
+          "itemSaleCurrencyGain": [
+            {
+              "currencyID": "melvorD:GP",
+              "value": 3
+            }
+          ]
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Sapphire_Earrings",
+        "name": "Silver Sapphire Earrings",
+        "category": "Summoning",
+        "type": "Earrings",
+        "media": "assets/bank/silver_sapphire_earrings.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 500,
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "flatSummoningShardCost": -1
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Ruby_Earrings",
+        "name": "Silver Ruby Earrings",
+        "category": "Firemaking",
+        "type": "Earrings",
+        "media": "assets/bank/silver_ruby_earrings.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 550,
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "firemakingBonfireInterval": 25
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Emerald_Earrings",
+        "name": "Silver Emerald Earrings",
+        "category": "Woodcutting",
+        "type": "Earrings",
+        "media": "assets/bank/silver_emerald_earrings.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 850,
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "woodcuttingArrowShaftChance": 10
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Silver_Diamond_Earrings",
+        "name": "Silver Diamond Earrings",
+        "category": "Combat",
+        "type": "Earrings",
+        "media": "assets/bank/silver_diamond_earrings.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 950,
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "flatMeleeDefenceBonusBasedOnResistance": [
+            {
+              "damageTypeID": "melvorD:Normal",
+              "value": 1
+            }
+          ],
+          "flatMagicDefenceBonusBasedOnResistance": [
+            {
+              "damageTypeID": "melvorD:Normal",
+              "value": 1
+            }
+          ],
+          "flatRangedDefenceBonusBasedOnResistance": [
+            {
+              "damageTypeID": "melvorD:Normal",
+              "value": 1
+            }
+          ]
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Gold_Topaz_Earrings",
+        "name": "Gold Topaz Earrings",
+        "category": "Cooking",
+        "type": "Earrings",
+        "media": "assets/bank/gold_topaz_earrings.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 250,
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "additionalPerfectItemChance": 10
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Gold_Sapphire_Earrings",
+        "name": "Gold Sapphire Earrings",
+        "category": "Magic",
+        "type": "Earrings",
+        "media": "assets/bank/gold_sapphire_earrings.png",
+        "customDescription": "-0.1s Alt. Magic Interval",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 500,
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "flatSkillInterval": [
+            {
+              "skillID": "melvorD:Magic",
+              "value": -100
+            }
+          ]
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Gold_Ruby_Earrings",
+        "name": "Gold Ruby Earrings",
+        "category": "Smithing",
+        "type": "Earrings",
+        "media": "assets/bank/gold_ruby_earrings.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 550,
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "smithingCoalCost": -1
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Gold_Emerald_Earrings",
+        "name": "Gold Emerald Earrings",
+        "category": "Fishing",
+        "type": "Earrings",
+        "media": "assets/bank/gold_emerald_earrings.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 850,
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "fishingAdditionalSpecialItemChance": 100
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Gold_Diamond_Earrings",
+        "name": "Gold Diamond Earrings",
+        "category": "Combat",
+        "type": "Earrings",
+        "media": "assets/bank/gold_diamond_earrings.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 950,
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [
+          {
+            "key": "blockAttackBonus",
+            "value": 6
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": 6
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 6
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": 6
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": 6
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 6
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 6
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": 6
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Platinum_Jadestone_Ring",
+        "name": "Platinum Jadestone Ring",
+        "category": "Skilling",
+        "type": "Ring",
+        "media": "assets/bank/platinum_jadestone_ring.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 10000,
+        "tier": "none",
+        "validSlots": [
+          "Ring",
+          "expandedAreas:Ring2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "flatMasteryTokens": 1
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Platinum_Jadestone_Necklace",
+        "name": "Platinum Jadestone Necklace",
+        "category": "Skilling",
+        "type": "Necklace",
+        "media": "assets/bank/platinum_jadestone_necklace.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 10000,
+        "tier": "none",
+        "validSlots": [
+          "Amulet",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "flatSkillInterval": -100
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Platinum_Jadestone_Bracelet",
+        "name": "Platinum Jadestone Bracelet",
+        "category": "Slayer",
+        "type": "Bracelet",
+        "media": "assets/bank/platinum_jadestone_bracelet.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 10000,
+        "tier": "none",
+        "validSlots": [
+          "Gloves",
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "flatHiddenSkillLevel": [
+            {
+              "skillID": "melvorD:Attack",
+              "value": 6
+            },
+            {
+              "skillID": "melvorD:Strength",
+              "value": 6
+            },
+            {
+              "skillID": "melvorD:Defence",
+              "value": 6
+            },
+            {
+              "skillID": "melvorD:Ranged",
+              "value": 6
+            },
+            {
+              "skillID": "melvorD:Magic",
+              "value": 6
+            }
+          ]
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Platinum_Jadestone_Earrings",
+        "name": "Platinum Jadestone Earrings",
+        "category": "Slayer",
+        "type": "Earrings",
+        "media": "assets/bank/platinum_jadestone_earrings.png",
+        "customDescription": "+25% Combat XP when fighting bosses",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 10000,
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "character": "Player",
+              "type": "FightingBoss"
+            },
+            "modifiers": {
+              "skillXP": [
+                {
+                  "skillID": "melvorD:Attack",
+                  "value": 25
+                },
+                {
+                  "skillID": "melvorD:Strength",
+                  "value": 25
+                },
+                {
+                  "skillID": "melvorD:Defence",
+                  "value": 25
+                },
+                {
+                  "skillID": "melvorD:Hitpoints",
+                  "value": 25
+                },
+                {
+                  "skillID": "melvorD:Magic",
+                  "value": 25
+                },
+                {
+                  "skillID": "melvorD:Ranged",
+                  "value": 25
+                },
+                {
+                  "skillID": "melvorD:Prayer",
+                  "value": 25
+                },
+                {
+                  "skillID": "melvorD:Slayer",
+                  "value": 25
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Volkanum_Ring",
+        "name": "Volkanum Ring",
+        "category": "Combat",
+        "type": "Ring",
+        "media": "assets/bank/volkanum_ring.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 2000000,
+        "tier": "none",
+        "validSlots": [
+          "Ring",
+          "expandedAreas:Ring2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [
+          {
+            "key": "meleeDefenceBonus",
+            "value": 50
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": 50
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 50
+          }
+        ],
+        "modifiers": {
+          "flatAttackInterval": 300,
+          "flatResistance": [
+            {
+              "damageTypeID": "melvorD:Normal",
+              "value": 5
+            }
+          ]
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Volkanum_Necklace",
+        "name": "Volkanum Necklace",
+        "category": "Combat",
+        "type": "Combat",
+        "media": "assets/bank/volkanum_necklace.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 2000000,
+        "tier": "none",
+        "validSlots": [
+          "Amulet",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [
+          {
+            "key": "meleeStrengthBonus",
+            "value": 8
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 8
+          },
+          {
+            "key": "magicDamageBonus",
+            "value": 8
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": -10
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": -10
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": -10
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": -10
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": -10
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": -50
+          },
+          {
+            "key": "rangedDefenceBonus",
+            "value": -50
+          },
+          {
+            "key": "meleeDefenceBonus",
+            "value": -50
+          }
+        ],
+        "modifiers": {
+          "flatMaxHitpoints": -6,
+          "flatAttackInterval": -300,
+          "maxHit": 9
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Volkanum_Bracelet",
+        "name": "Volkanum Bracelet",
+        "category": "Skilling",
+        "type": "Bracelet",
+        "media": "assets/bank/volkanum_bracelet.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 2000000,
+        "tier": "none",
+        "validSlots": [
+          "Gloves",
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "woodcuttingXPAddedAsFiremakingXP": 1,
+          "fishingCookedChance": 15,
+          "miningBarChance": 15,
+          "randomProductChance": [
+            {
+              "skillID": "melvorD:Firemaking",
+              "itemID": "melvorD:Coal_Ore",
+              "value": 15
+            }
+          ]
+        }
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Volkanum_Earrings",
+        "name": "Volkanum Earrings",
+        "category": "Skilling",
+        "type": "Earrings",
+        "media": "assets/bank/volkanum_earrings.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 2000000,
+        "tier": "none",
+        "validSlots": [
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [],
+        "equipmentStats": [],
+        "modifiers": {
+          "flatSkillInterval": [
+            {
+              "skillID": "melvorD:Smithing",
+              "value": -200
+            },
+            {
+              "skillID": "melvorD:Cooking",
+              "value": -200
+            },
+            {
+              "skillID": "melvorD:Firemaking",
+              "value": -200
+            }
+          ]
+        }
+      },
+      {
+        "itemType": "Openable",
+        "id": "Geode",
+        "name": "Geode",
+        "category": "Mining",
+        "type": "Gem",
+        "media": "assets/bank/geode.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 100,
+        "customDescription": "Inside could be any number of precious gems, or even garbage!",
+        "dropTable": [
+          {
+            "itemID": "expandedAreas:Opal",
+            "minQuantity": 1,
+            "maxQuantity": 5,
+            "weight": 200
+          },
+          {
+            "itemID": "expandedAreas:Spinel",
+            "minQuantity": 1,
+            "maxQuantity": 5,
+            "weight": 175
+          },
+          {
+            "itemID": "expandedAreas:Quartz",
+            "minQuantity": 1,
+            "maxQuantity": 4,
+            "weight": 150
+          },
+          {
+            "itemID": "melvorD:Topaz",
+            "minQuantity": 1,
+            "maxQuantity": 3,
+            "weight": 120
+          },
+          {
+            "itemID": "melvorD:Sapphire",
+            "minQuantity": 1,
+            "maxQuantity": 3,
+            "weight": 80
+          },
+          {
+            "itemID": "melvorD:Ruby",
+            "minQuantity": 1,
+            "maxQuantity": 2,
+            "weight": 40
+          },
+          {
+            "itemID": "melvorD:Emerald",
+            "minQuantity": 1,
+            "maxQuantity": 2,
+            "weight": 20
+          },
+          {
+            "itemID": "melvorD:Diamond",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 10
+          },
+          {
+            "itemID": "melvorF:Jadestone",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 1
+          }
+        ]
+      },
+      {
         "id": "Rex_Blood",
         "name": "Blood of the King",
         "category": "Material",
@@ -11792,6 +13059,7 @@
         "validSlots": [
           "expandedAreas:Accessory1",
           "expandedAreas:Accessory2",
+          "Gloves",
           "Passive"
         ],
         "occupiesSlots": [],
@@ -11822,6 +13090,7 @@
         "validSlots": [
           "expandedAreas:Accessory1",
           "expandedAreas:Accessory2",
+          "Gloves",
           "Passive"
         ],
         "occupiesSlots": [],
@@ -11874,6 +13143,7 @@
         "validSlots": [
           "expandedAreas:Accessory1",
           "expandedAreas:Accessory2",
+          "Gloves",
           "Passive"
         ],
         "occupiesSlots": [],
@@ -11906,6 +13176,7 @@
         "validSlots": [
           "expandedAreas:Accessory1",
           "expandedAreas:Accessory2",
+          "Gloves",
           "Passive"
         ],
         "occupiesSlots": [],
@@ -11941,6 +13212,7 @@
         "validSlots": [
           "expandedAreas:Accessory1",
           "expandedAreas:Accessory2",
+          "Gloves",
           "Passive"
         ],
         "occupiesSlots": [],
@@ -11974,6 +13246,7 @@
         "validSlots": [
           "expandedAreas:Accessory1",
           "expandedAreas:Accessory2",
+          "Gloves",
           "Passive"
         ],
         "occupiesSlots": [],
@@ -12004,6 +13277,7 @@
         "validSlots": [
           "expandedAreas:Accessory1",
           "expandedAreas:Accessory2",
+          "Gloves",
           "Passive"
         ],
         "occupiesSlots": [],
@@ -12029,6 +13303,7 @@
         "validSlots": [
           "expandedAreas:Accessory1",
           "expandedAreas:Accessory2",
+          "Gloves",
           "Passive"
         ],
         "occupiesSlots": [],
@@ -12090,6 +13365,7 @@
         "validSlots": [
           "expandedAreas:Accessory1",
           "expandedAreas:Accessory2",
+          "Gloves",
           "Passive"
         ],
         "occupiesSlots": [],
@@ -12115,6 +13391,7 @@
         "validSlots": [
           "expandedAreas:Accessory1",
           "expandedAreas:Accessory2",
+          "Gloves",
           "Passive"
         ],
         "occupiesSlots": [],
@@ -35954,6 +37231,92 @@
             "weight": 1
           }
         ]
+      },
+      {
+        "id": "Infernal_Chest",
+        "name": "Infernal Chest",
+        "category": "Openable",
+        "type": "Chest",
+        "media": "assets/bank/infernal_chest.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 10000,
+        "itemType": "Openable",
+        "dropTable": [
+          {
+            "itemID": "melvorF:Burning_Scroll_Of_Ash",
+            "minQuantity": 10,
+            "maxQuantity": 30,
+            "weight": 150
+          },
+          {
+            "itemID": "melvorF:Quick_Burner",
+            "minQuantity": 10,
+            "maxQuantity": 30,
+            "weight": 150
+          },
+          {
+            "itemID": "melvorD:Runite_Ore",
+            "minQuantity": 30,
+            "maxQuantity": 200,
+            "weight": 100
+          },
+          {
+            "itemID": "melvorD:Dragonite_Ore",
+            "minQuantity": 20,
+            "maxQuantity": 100,
+            "weight": 70
+          },
+          {
+            "itemID": "melvorF:Infernal_Core",
+            "minQuantity": 1,
+            "maxQuantity": 2,
+            "weight": 55
+          },
+          {
+            "itemID": "melvorD:Elite_Amulet_of_Strength",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 35
+          },
+          {
+            "itemID": "melvorD:Amulet_of_Fury",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 30
+          },
+          {
+            "itemID": "expandedAreas:Tome_of_Fire",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 20
+          },
+          {
+            "itemID": "expandedAreas:Raw_Volkanum",
+            "minQuantity": 1,
+            "maxQuantity": 5,
+            "weight": 10
+          },
+          {
+            "itemID": "melvorD:Amulet_of_Torture",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 5
+          },
+          {
+            "itemID": "expandedAreas:Volkanum_Necklace",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 3
+          },
+          {
+            "itemID": "expandedAreas:Infernal_Hammer",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 1
+          }
+        ]
       }
     ],
     "itemSynergies": [
@@ -45444,6 +46807,26 @@
         ]
       }
     ],
+    "randomGems": [
+      {
+        "itemID": "expandedAreas:Opal",
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "weight": 23
+      },
+      {
+        "itemID": "expandedAreas:Spinel",
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "weight": 19
+      },
+      {
+        "itemID": "expandedAreas:Quartz",
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "weight": 10
+      }
+    ],
     "shopCategories": [
       {
         "id": "HirelingContracts",
@@ -45479,6 +46862,13 @@
       }
     ],
     "shopDisplayOrder": [
+      {
+        "insertAt": "After",
+        "afterID": "melvorD:Magic_Pot",
+        "ids": [
+          "expandedAreas:Access_Pass_to_Volcanic_Mines"
+        ]
+      },
       {
         "insertAt": "Start",
         "ids": [
@@ -45752,6 +47142,39 @@
       }
     ],
     "shopPurchases": [
+      {
+        "id": "Access_Pass_to_Volcanic_Mines",
+        "media": "assets/shop/Access_Pass_to_Volcanic_Mines.png",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {}
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 10000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [],
+        "purchaseRequirements": [
+          {
+            "type": "DungeonCompletion",
+            "dungeonID": "melvorF:Infernal_Stronghold",
+            "count": 1
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Access Pass to the Volcanic Mines",
+        "customDescription": "Gain access to the Volcanic Mines, allowing you to mine Volkanum"
+      },
       {
         "id": "Murky_Healing_Potion",
         "customName": "Murky Healing 'Potion'",
@@ -56283,6 +57706,406 @@
           },
           "recipes": [
             {
+              "id": "Bronze_Opal_Ring",
+              "level": 1,
+              "productID": "expandedAreas:Bronze_Opal_Ring",
+              "baseQuantity": 1,
+              "baseExperience": 6,
+              "categoryID": "melvorF:Rings",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Bronze_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Opal",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Bronze_Opal_Necklace",
+              "level": 1,
+              "productID": "expandedAreas:Bronze_Opal_Necklace",
+              "baseQuantity": 1,
+              "baseExperience": 6,
+              "categoryID": "melvorF:Necklaces",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Bronze_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Opal",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Bronze_Opal_Bracelet",
+              "level": 1,
+              "productID": "expandedAreas:Bronze_Opal_Bracelet",
+              "baseQuantity": 1,
+              "baseExperience": 6,
+              "categoryID": "expandedAreas:StandardAccessories",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Bronze_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Opal",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Bronze_Opal_Earrings",
+              "level": 1,
+              "productID": "expandedAreas:Bronze_Opal_Earrings",
+              "baseQuantity": 1,
+              "baseExperience": 6,
+              "categoryID": "expandedAreas:StandardAccessories",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Bronze_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Opal",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Bronze_Spinel_Ring",
+              "level": 15,
+              "productID": "expandedAreas:Bronze_Spinel_Ring",
+              "baseQuantity": 1,
+              "baseExperience": 35,
+              "categoryID": "melvorF:Rings",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Bronze_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Spinel",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Bronze_Spinel_Necklace",
+              "level": 15,
+              "productID": "expandedAreas:Bronze_Spinel_Necklace",
+              "baseQuantity": 1,
+              "baseExperience": 35,
+              "categoryID": "melvorF:Necklaces",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Bronze_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Spinel",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Bronze_Spinel_Bracelet",
+              "level": 15,
+              "productID": "expandedAreas:Bronze_Spinel_Bracelet",
+              "baseQuantity": 1,
+              "baseExperience": 35,
+              "categoryID": "expandedAreas:StandardAccessories",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Bronze_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Spinel",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Bronze_Spinel_Earrings",
+              "level": 15,
+              "productID": "expandedAreas:Bronze_Spinel_Earrings",
+              "baseQuantity": 1,
+              "baseExperience": 35,
+              "categoryID": "expandedAreas:StandardAccessories",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Bronze_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Spinel",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Bronze_Quartz_Ring",
+              "level": 40,
+              "productID": "expandedAreas:Bronze_Quartz_Ring",
+              "baseQuantity": 1,
+              "baseExperience": 110,
+              "categoryID": "melvorF:Rings",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Bronze_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Quartz",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Bronze_Quartz_Necklace",
+              "level": 40,
+              "productID": "expandedAreas:Bronze_Quartz_Necklace",
+              "baseQuantity": 1,
+              "baseExperience": 110,
+              "categoryID": "melvorF:Necklaces",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Bronze_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Quartz",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Bronze_Quartz_Bracelet",
+              "level": 40,
+              "productID": "expandedAreas:Bronze_Quartz_Bracelet",
+              "baseQuantity": 1,
+              "baseExperience": 110,
+              "categoryID": "expandedAreas:StandardAccessories",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Bronze_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Quartz",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Bronze_Quartz_Earrings",
+              "level": 40,
+              "productID": "expandedAreas:Bronze_Quartz_Earrings",
+              "baseQuantity": 1,
+              "baseExperience": 110,
+              "categoryID": "expandedAreas:StandardAccessories",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Bronze_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Quartz",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Platinum_Jadestone_Ring",
+              "level": 90,
+              "productID": "expandedAreas:Platinum_Jadestone_Ring",
+              "baseQuantity": 1,
+              "baseExperience": 300,
+              "categoryID": "melvorF:Rings",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "expandedAreas:Platinum_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorF:Jadestone",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Platinum_Jadestone_Necklace",
+              "level": 90,
+              "productID": "expandedAreas:Platinum_Jadestone_Necklace",
+              "baseQuantity": 1,
+              "baseExperience": 300,
+              "categoryID": "melvorF:Necklaces",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "expandedAreas:Platinum_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorF:Jadestone",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Platinum_Jadestone_Bracelet",
+              "level": 90,
+              "productID": "expandedAreas:Platinum_Jadestone_Bracelet",
+              "baseQuantity": 1,
+              "baseExperience": 300,
+              "categoryID": "expandedAreas:StandardAccessories",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "expandedAreas:Platinum_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorF:Jadestone",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Platinum_Jadestone_Earrings",
+              "level": 90,
+              "productID": "expandedAreas:Platinum_Jadestone_Earrings",
+              "baseQuantity": 1,
+              "baseExperience": 300,
+              "categoryID": "expandedAreas:StandardAccessories",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "expandedAreas:Platinum_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorF:Jadestone",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Volkanum_Ring",
+              "level": 99,
+              "productID": "expandedAreas:Volkanum_Ring",
+              "baseQuantity": 1,
+              "baseExperience": 5000,
+              "categoryID": "melvorF:Rings",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "melvorF:Infernal_Core",
+                  "quantity": 25
+                },
+                {
+                  "id": "expandedAreas:Volkanum_Bar",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Volkanum_Necklace",
+              "level": 99,
+              "productID": "expandedAreas:Volkanum_Necklace",
+              "baseQuantity": 1,
+              "baseExperience": 5000,
+              "categoryID": "melvorF:Necklaces",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "melvorF:Infernal_Core",
+                  "quantity": 25
+                },
+                {
+                  "id": "expandedAreas:Volkanum_Bar",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Volkanum_Bracelet",
+              "level": 99,
+              "productID": "expandedAreas:Volkanum_Bracelet",
+              "baseQuantity": 1,
+              "baseExperience": 5000,
+              "categoryID": "expandedAreas:StandardAccessories",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "melvorF:Infernal_Core",
+                  "quantity": 25
+                },
+                {
+                  "id": "expandedAreas:Volkanum_Bar",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Volkanum_Earrings",
+              "level": 99,
+              "productID": "expandedAreas:Volkanum_Earrings",
+              "baseQuantity": 1,
+              "baseExperience": 5000,
+              "categoryID": "expandedAreas:StandardAccessories",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "melvorF:Infernal_Core",
+                  "quantity": 25
+                },
+                {
+                  "id": "expandedAreas:Volkanum_Bar",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
               "id": "Gold_Topaz_Bracelet",
               "level": 10,
               "productID": "expandedAreas:Gold_Topaz_Bracelet",
@@ -59073,6 +60896,34 @@
               "hasPassiveRegen": true,
               "category": "melvorD:Ore",
               "giveGems": true
+            },
+            {
+              "id": "Volkanum",
+              "name": "Volkanum",
+              "media": "assets/skills/mining/volkanum.png",
+              "level": 90,
+              "baseExperience": 500,
+              "productId": "expandedAreas:Raw_Volkanum",
+              "shopItemPurchased": "expandedAreas:Access_Pass_to_Volcanic_Mines",
+              "baseRespawnInterval": 600000,
+              "baseQuantity": 1,
+              "fixedMaxHP": 5,
+              "hasPassiveRegen": true,
+              "category": "melvorD:Ore",
+              "giveGems": false
+            },
+            {
+              "id": "GemRocks",
+              "name": "Gem Rocks",
+              "media": "assets/skills/mining/gemrocks.png",
+              "level": 65,
+              "baseExperience": 50,
+              "productId": "expandedAreas:Geode",
+              "baseRespawnInterval": 100000,
+              "baseQuantity": 1,
+              "hasPassiveRegen": true,
+              "category": "melvorD:Ore",
+              "giveGems": true
             }
           ]
         }
@@ -61165,6 +63016,25 @@
             ]
           },
           "recipes": [
+            {
+              "id": "Volkanum_Bar",
+              "level": 99,
+              "productID": "expandedAreas:Volkanum_Bar",
+              "baseQuantity": 1,
+              "baseExperience": 500,
+              "categoryID": "melvorD:Bars",
+              "itemCosts": [
+                {
+                  "id": "melvorF:Infernal_Core",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Raw_Volkanum",
+                  "quantity": 10
+                }
+              ],
+              "currencyCosts": []
+            },
             {
               "id": "Bronze_Cannonball",
               "level": 1,

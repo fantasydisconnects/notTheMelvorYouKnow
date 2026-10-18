@@ -332,6 +332,74 @@
     ],
     "items": [
       {
+        "id": "melvorF:Chest_Of_Gems",
+        "dropTable": {
+          "remove": [
+            "melvorD:Topaz",
+            "melvorD:Sapphire",
+            "melvorD:Emerald",
+            "melvorD:Ruby",
+            "melvorD:Diamond"
+          ],
+          "add": [
+            {
+              "itemID": "expandedAreas:Opal",
+              "minQuantity": 25,
+              "maxQuantity": 200,
+              "weight": 150
+            },
+            {
+              "itemID": "expandedAreas:Spinel",
+              "minQuantity": 25,
+              "maxQuantity": 200,
+              "weight": 120
+            },
+            {
+              "itemID": "expandedAreas:Quartz",
+              "minQuantity": 25,
+              "maxQuantity": 200,
+              "weight": 100
+            },
+            {
+              "itemID": "melvorD:Topaz",
+              "minQuantity": 20,
+              "maxQuantity": 200,
+              "weight": 80
+            },
+            {
+              "itemID": "melvorD:Sapphire",
+              "minQuantity": 15,
+              "maxQuantity": 175,
+              "weight": 60
+            },
+            {
+              "itemID": "melvorD:Ruby",
+              "minQuantity": 10,
+              "maxQuantity": 150,
+              "weight": 40
+            },
+            {
+              "itemID": "melvorD:Emerald",
+              "minQuantity": 10,
+              "maxQuantity": 125,
+              "weight": 20
+            },
+            {
+              "itemID": "melvorD:Diamond",
+              "minQuantity": 10,
+              "maxQuantity": 100,
+              "weight": 10
+            },
+            {
+              "itemID": "melvorF:Jadestone",
+              "minQuantity": 5,
+              "maxQuantity": 50,
+              "weight": 1
+            }
+          ]
+        }
+      },
+      {
         "id": "melvorD:Dragonfire_Shield",
         "modifiers": {
           "add": {
@@ -3483,6 +3551,10 @@
           "add": [
             "expandedAreas:MonsterTypeDraconic"
           ]
+        },
+        "bones": {
+          "itemID": "expandedAreas:Infernal_Chest",
+          "quantity": 1
         }
       },
       {

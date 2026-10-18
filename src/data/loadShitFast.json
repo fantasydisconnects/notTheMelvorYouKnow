@@ -5,7 +5,9 @@
     "attacks": [],
     "attackSpells": [],
     "auroraSpells": [],
-    "bankSortOrder": [],
+    "bankSortOrder": [
+
+    ],
     "combatAreas": [],
     "combatEffectGroups": [],
     "combatEffects": [],
@@ -13,8 +15,9 @@
     "combatEffectTemplates": [],
     "combatPassives": [],
     "dungeons": [],
+    "randomGems": [],
     "items": [
-      
+
     ],
     "itemUpgrades": [],
     "itemSynergies": [],
@@ -24,7 +27,439 @@
     "shopCategories": [],
     "shopCategoryOrder": [],
     "shopPurchases": [],
-    "skillData": [],
+    "skillData": [
+      {
+        "skillID": "melvorD:Magic",
+        "data": {
+          "spellCategories": [
+            {
+              "id": "superheat",
+              "name": "superheat"
+            }
+          ],
+          "altSpells": [
+            {
+              "categories": [
+                "expandedAreas:superheat"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "skillID": "melvorD:Crafting",
+        "data": {
+          "recipes": [
+            {
+              "id": "Bronze_Opal_Ring",
+              "level": 1,
+              "productID": "expandedAreas:Bronze_Opal_Ring",
+              "baseQuantity": 1,
+              "baseExperience": 6,
+              "categoryID": "melvorF:Rings",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Bronze_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Opal",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Bronze_Opal_Necklace",
+              "level": 1,
+              "productID": "expandedAreas:Bronze_Opal_Necklace",
+              "baseQuantity": 1,
+              "baseExperience": 6,
+              "categoryID": "melvorF:Necklaces",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Bronze_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Opal",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Bronze_Opal_Bracelet",
+              "level": 1,
+              "productID": "expandedAreas:Bronze_Opal_Bracelet",
+              "baseQuantity": 1,
+              "baseExperience": 6,
+              "categoryID": "expandedAreas:StandardAccessories",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Bronze_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Opal",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Bronze_Opal_Earrings",
+              "level": 1,
+              "productID": "expandedAreas:Bronze_Opal_Earrings",
+              "baseQuantity": 1,
+              "baseExperience": 6,
+              "categoryID": "expandedAreas:StandardAccessories",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Bronze_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Opal",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Bronze_Spinel_Ring",
+              "level": 15,
+              "productID": "expandedAreas:Bronze_Spinel_Ring",
+              "baseQuantity": 1,
+              "baseExperience": 35,
+              "categoryID": "melvorF:Rings",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Bronze_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Spinel",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Bronze_Spinel_Necklace",
+              "level": 15,
+              "productID": "expandedAreas:Bronze_Spinel_Necklace",
+              "baseQuantity": 1,
+              "baseExperience": 35,
+              "categoryID": "melvorF:Necklaces",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Bronze_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Spinel",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Bronze_Spinel_Bracelet",
+              "level": 15,
+              "productID": "expandedAreas:Bronze_Spinel_Bracelet",
+              "baseQuantity": 1,
+              "baseExperience": 35,
+              "categoryID": "expandedAreas:StandardAccessories",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Bronze_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Spinel",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Bronze_Spinel_Earrings",
+              "level": 15,
+              "productID": "expandedAreas:Bronze_Spinel_Earrings",
+              "baseQuantity": 1,
+              "baseExperience": 35,
+              "categoryID": "expandedAreas:StandardAccessories",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Bronze_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Spinel",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Bronze_Quartz_Ring",
+              "level": 40,
+              "productID": "expandedAreas:Bronze_Quartz_Ring",
+              "baseQuantity": 1,
+              "baseExperience": 110,
+              "categoryID": "melvorF:Rings",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Bronze_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Quartz",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Bronze_Quartz_Necklace",
+              "level": 40,
+              "productID": "expandedAreas:Bronze_Quartz_Necklace",
+              "baseQuantity": 1,
+              "baseExperience": 110,
+              "categoryID": "melvorF:Necklaces",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Bronze_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Quartz",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Bronze_Quartz_Bracelet",
+              "level": 40,
+              "productID": "expandedAreas:Bronze_Quartz_Bracelet",
+              "baseQuantity": 1,
+              "baseExperience": 110,
+              "categoryID": "expandedAreas:StandardAccessories",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Bronze_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Quartz",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Bronze_Quartz_Earrings",
+              "level": 40,
+              "productID": "expandedAreas:Bronze_Quartz_Earrings",
+              "baseQuantity": 1,
+              "baseExperience": 110,
+              "categoryID": "expandedAreas:StandardAccessories",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Bronze_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "expandedAreas:Quartz",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Platinum_Jadestone_Ring",
+              "level": 90,
+              "productID": "expandedAreas:Platinum_Jadestone_Ring",
+              "baseQuantity": 1,
+              "baseExperience": 300,
+              "categoryID": "melvorF:Rings",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "expandedAreas:Platinum_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorF:Jadestone",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Platinum_Jadestone_Necklace",
+              "level": 90,
+              "productID": "expandedAreas:Platinum_Jadestone_Necklace",
+              "baseQuantity": 1,
+              "baseExperience": 300,
+              "categoryID": "melvorF:Necklaces",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "expandedAreas:Platinum_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorF:Jadestone",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Platinum_Jadestone_Bracelet",
+              "level": 90,
+              "productID": "expandedAreas:Platinum_Jadestone_Bracelet",
+              "baseQuantity": 1,
+              "baseExperience": 300,
+              "categoryID": "expandedAreas:StandardAccessories",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "expandedAreas:Platinum_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorF:Jadestone",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Platinum_Jadestone_Earrings",
+              "level": 90,
+              "productID": "expandedAreas:Platinum_Jadestone_Earrings",
+              "baseQuantity": 1,
+              "baseExperience": 300,
+              "categoryID": "expandedAreas:StandardAccessories",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "expandedAreas:Platinum_Bar",
+                  "quantity": 1
+                },
+                {
+                  "id": "melvorF:Jadestone",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Volkanum_Ring",
+              "level": 99,
+              "productID": "expandedAreas:Volkanum_Ring",
+              "baseQuantity": 1,
+              "baseExperience": 5000,
+              "categoryID": "melvorF:Rings",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "melvorF:Infernal_Core",
+                  "quantity": 25
+                },
+                {
+                  "id": "expandedAreas:Volkanum_Bar",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Volkanum_Necklace",
+              "level": 99,
+              "productID": "expandedAreas:Volkanum_Necklace",
+              "baseQuantity": 1,
+              "baseExperience": 5000,
+              "categoryID": "melvorF:Necklaces",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "melvorF:Infernal_Core",
+                  "quantity": 25
+                },
+                {
+                  "id": "expandedAreas:Volkanum_Bar",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Volkanum_Bracelet",
+              "level": 99,
+              "productID": "expandedAreas:Volkanum_Bracelet",
+              "baseQuantity": 1,
+              "baseExperience": 5000,
+              "categoryID": "expandedAreas:StandardAccessories",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "melvorF:Infernal_Core",
+                  "quantity": 25
+                },
+                {
+                  "id": "expandedAreas:Volkanum_Bar",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Volkanum_Earrings",
+              "level": 99,
+              "productID": "expandedAreas:Volkanum_Earrings",
+              "baseQuantity": 1,
+              "baseExperience": 5000,
+              "categoryID": "expandedAreas:StandardAccessories",
+              "subcategoryID": "melvorF:Jewelry",
+              "itemCosts": [
+                {
+                  "id": "melvorF:Infernal_Core",
+                  "quantity": 25
+                },
+                {
+                  "id": "expandedAreas:Volkanum_Bar",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            }
+          ]
+        }
+      },
+      {
+        "skillID": "melvorD:Mining",
+        "data": {
+          "rockData": []
+        }
+      }
+    ],
     "slayerAreas": [],
     "strongholds": []
   }
