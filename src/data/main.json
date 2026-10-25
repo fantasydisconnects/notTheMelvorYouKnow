@@ -4966,7 +4966,7 @@
       {
         "id": "Challenges",
         "name": "Challenges",
-        "media": "assets/icons/Skull.png",
+        "media": "assets/icons/skull.png",
         "areas": [
           "expandedAreas:Mole_Lair",
           "expandedAreas:Freeskies",
@@ -11705,7 +11705,7 @@
           "flatSkillInterval": [
             {
               "skillID": "melvorD:Woodcutting",
-              "value": -2
+              "value": -200
             }
           ]
         },

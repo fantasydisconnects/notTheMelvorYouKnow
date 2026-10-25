@@ -533,3 +533,11 @@ SAE v0.9.5
   - Note: Raw Volkanum is INCREDIBLY difficult to form into bars. Thus, it requires quite a few Raw Volkanum to make a single bar!
 - A new chest has been added to the game: Infernal Chest! It contains some scrolls for Firemaking, high-level ores and materials, rare amulets, more infernal cores, and... a very rare new item...
 - ...the Infernal Hammer! A new Tool slot item (not weapon, sorry <3) that reduces your Bars smithing interval by 0.5s!!! It also cheekily has a 5% chance to activate a really explosive special attack (but I won't ruin that surprise for you here)
+
+SAE v0.9.6 - The Balance Patch
+
+# Changes
+
+# Fixes
+## Summoning Familiars
+- Conrad the Barbearian now correctly reduces Woodcutting interval by 0.2s.
