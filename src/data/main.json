@@ -6248,7 +6248,7 @@
             "combatEffects": [
               {
                 "effectID": "melvorD:Fear",
-                "chance": 2,
+                "chance": 1,
                 "appliesWhen": "PostAttack"
               }
             ]
@@ -6257,7 +6257,7 @@
         "parameters": [
           {
             "name": "maxStacks",
-            "initialValue": 5
+            "initialValue": 4
           }
         ],
         "behaviours": [
@@ -12169,15 +12169,24 @@
           }
         ],
         "equipmentStats": [],
-        "enemyModifiers": {
-          "currentHPDamageTakenOnAttack": 4
-        },
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "groupID": "melvorD:Fear",
+              "type": "CombatEffectGroup",
+              "character": "Enemy"
+            },
+            "enemyModifiers": {
+              "damageTakenPerAttack": 4
+            }
+          }
+        ],
         "combatEffects": [
           {
             "effectID": "expandedAreas:SigilDread",
             "appliesWhen": "StartOfFight",
             "applyEffectWhenMerged": true,
-            "customDescription": "+2% chance to apply Fear, per Attack Turn, stacking up to 5 times (Stacks reset to 0 at maximum stacks)"
+            "customDescription": "+1% chance to apply Fear, per Attack Turn, stacking up to 5 times (Stacks reset to 0 at maximum stacks)"
           }
         ]
       },
