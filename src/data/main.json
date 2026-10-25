@@ -12249,7 +12249,8 @@
             },
             "effectID": "melvorD:Bleed100",
             "appliesWhen": "HitByAttack",
-            "chance": 4
+            "chance": 4,
+            "customDescription": ""
           },
           {
             "condition": {
@@ -12259,7 +12260,8 @@
             },
             "effectID": "melvorD:Bleed200",
             "appliesWhen": "HitByAttack",
-            "chance": 4
+            "chance": 4,
+            "customDescription": ""
           },
           {
             "condition": {
@@ -12269,7 +12271,8 @@
             },
             "effectID": "melvorD:Bleed400",
             "appliesWhen": "HitByAttack",
-            "chance": 4
+            "chance": 4,
+            "customDescription": ""
           },
           {
             "condition": {
@@ -12279,7 +12282,8 @@
             },
             "effectID": "melvorD:Burn",
             "appliesWhen": "HitByAttack",
-            "chance": 4
+            "chance": 4,
+            "customDescription": ""
           },
           {
             "condition": {
@@ -12289,7 +12293,8 @@
             },
             "tableID": "melvorF:RandomCurse",
             "appliesWhen": "HitByAttack",
-            "chance": 4
+            "chance": 4,
+            "customDescription": ""
           },
           {
             "condition": {
@@ -12299,7 +12304,8 @@
             },
             "effectID": "melvorD:DeadlyPoison",
             "appliesWhen": "HitByAttack",
-            "chance": 4
+            "chance": 4,
+            "customDescription": ""
           },
           {
             "condition": {
@@ -12309,7 +12315,8 @@
             },
             "effectID": "melvorD:Fear",
             "appliesWhen": "HitByAttack",
-            "chance": 4
+            "chance": 4,
+            "customDescription": ""
           },
           {
             "condition": {
@@ -12319,7 +12326,8 @@
             },
             "effectID": "melvorD:Freeze",
             "appliesWhen": "HitByAttack",
-            "chance": 4
+            "chance": 4,
+            "customDescription": ""
           },
           {
             "condition": {
@@ -12329,7 +12337,8 @@
             },
             "effectID": "melvorD:Frostburn",
             "appliesWhen": "HitByAttack",
-            "chance": 4
+            "chance": 4,
+            "customDescription": ""
           },
           {
             "condition": {
@@ -12339,7 +12348,8 @@
             },
             "effectID": "melvorD:Poison",
             "appliesWhen": "HitByAttack",
-            "chance": 4
+            "chance": 4,
+            "customDescription": ""
           },
           {
             "condition": {
@@ -12349,7 +12359,8 @@
             },
             "effectID": "melvorD:Slow",
             "appliesWhen": "HitByAttack",
-            "chance": 4
+            "chance": 4,
+            "customDescription": ""
           },
           {
             "condition": {
@@ -12359,7 +12370,8 @@
             },
             "effectID": "melvorD:Stun",
             "appliesWhen": "HitByAttack",
-            "chance": 4
+            "chance": 4,
+            "customDescription": ""
           }
         ]
       },
@@ -12454,7 +12466,7 @@
         ],
         "equipmentStats": [],
         "enemyModifiers": {
-          "selfDamageOnHitBasedOnCurrentHitpoints": 4,
+          "damageDealtWith2Effects": -4,
           "dotDamageTaken": 4
         }
       },
