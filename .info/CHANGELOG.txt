@@ -541,6 +541,7 @@ SAE v0.9.6 - The Balance Patch
 - Sigil of Anger no longer gives regeneration.
 - Sigil of Clarity now gives +4% accuracy in addition to the first attack being unable to miss.
 - Sigil of Dread chance to apply Fear reduced from 2% per stack -> 1%. Enemy now takes 4% of current HP per attack only while affected by Fear effects.
+- Sigil of Focus no longer guarantees a critical hit. Instead, you have 4% crit chance against Slayer tasks.
 
 # Fixes
 ## Summoning Familiars

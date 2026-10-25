@@ -6201,43 +6201,6 @@
         ]
       },
       {
-        "id": "SigilFocus",
-        "templateID": "melvorD:StaticSelfCountingModifier",
-        "name": "Sigil of Focus",
-        "media": "assets/bank/sigilfocus.png",
-        "target": "Self",
-        "statGroups": [
-          {
-            "name": "stacks",
-            "modifiers": {
-              "critChance": 100
-            }
-          }
-        ],
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 1
-          }
-        ],
-        "behaviours": [
-          {
-            "type": "RemoveEffect",
-            "triggersOn": [
-              {
-                "type": "EquipmentChanged",
-                "isNotEquipped": [
-                  "expandedAreas:Sigil_of_Focus"
-                ]
-              }
-            ]
-          }
-        ],
-        "effectGroups": [
-          "melvorD:Buff"
-        ]
-      },
-      {
         "id": "SigilDread",
         "templateID": "melvorD:NonCountingResettingIncremental",
         "name": "Sigil of Dread",
@@ -12229,12 +12192,14 @@
         "modifiers": {
           "doubleSlayerTaskKillChance": 4
         },
-        "combatEffects": [
+        "conditionalModifiers": [
           {
-            "effectID": "expandedAreas:SigilFocus",
-            "appliesWhen": "StartOfFight",
-            "applyEffectWhenMerged": true,
-            "customDescription": "Your first hit each Fight is guaranteed to be a critical hit"
+            "condition": {
+              "type": "FightingSlayerTask"
+            },
+            "modifiers": {
+              "critChance": 4
+            }
           }
         ]
       },
