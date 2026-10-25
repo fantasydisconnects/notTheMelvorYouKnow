@@ -539,6 +539,8 @@ SAE v0.9.6 - The Balance Patch
 # Changes
 ## Sigils
 - Sigil of Anger no longer gives regeneration.
+- Sigil of Clarity now gives +4% accuracy in addition to the first attack being unable to miss.
+- 
 
 # Fixes
 ## Summoning Familiars

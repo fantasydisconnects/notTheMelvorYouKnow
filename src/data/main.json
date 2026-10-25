@@ -11965,7 +11965,6 @@
           }
         ],
         "equipmentStats": [],
-       
         "conditionalModifiers": [
           {
             "condition": {
@@ -12122,6 +12121,9 @@
           }
         ],
         "equipmentStats": [],
+        "modifiers": {
+          "accuracyRating": 4
+        },
         "combatEffects": [
           {
             "effectID": "expandedAreas:SigilClarity",
