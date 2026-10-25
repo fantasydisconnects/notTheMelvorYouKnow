@@ -537,6 +537,8 @@ SAE v0.9.5
 SAE v0.9.6 - The Balance Patch
 
 # Changes
+## Sigils
+- Sigil of Anger no longer gives regeneration.
 
 # Fixes
 ## Summoning Familiars

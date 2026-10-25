@@ -11936,7 +11936,7 @@
         "category": "Enhancement",
         "type": "Sigil",
         "media": "assets/bank/sigilanger.png",
-        "customDescription": "+1% Crit Chance, +2% Max Hit, and -3% Global Evasion for every 10% of your Missing HP. +0.4% of damage taken from attacks healed on next hitpoint regeneration",
+        "customDescription": "+1% Crit Chance, +2% Max Hit, and -3% Global Evasion for every 10% of your Missing HP.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -11965,9 +11965,7 @@
           }
         ],
         "equipmentStats": [],
-        "modifiers": {
-          "regenPerDamageTaken": 0.4
-        },
+       
         "conditionalModifiers": [
           {
             "condition": {
