@@ -12545,18 +12545,21 @@
             "type": "SkillLevel"
           },
           {
-            "skillID": "melvorD:Ranged",
+            "skillID": "melvorD:Magic",
             "level": 60,
             "type": "SkillLevel"
           }
         ],
         "equipmentStats": [],
-        "modifiers": {
-          "stunDurationIncreaseChance": 4
-        },
+        "modifiers": {},
         "enemyModifiers": {
-          "stunAvoidChance": -4,
-          "damageDealt": -4
+          "attackInterval": 4,
+          "effectIgnoreChance": [
+            {
+              "effectGroupID": "melvorD:Buff",
+              "value": 4
+            }
+          ]
         }
       },
       {
