@@ -48124,8 +48124,13 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "meleeCritChance": 2,
-            "meleeAccuracyRating": 3
+            "ignoreResistanceWhenAttackingChance": [
+              {
+                "damageTypeID":"melvorD:Normal",
+                "value": 2
+              }
+            ],
+            "convertMissIntoHit": 2
           }
         },
         "cost": {
@@ -48133,12 +48138,12 @@
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 5000000,
+              "cost": 1500000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 50000000,
+              "cost": 15000000,
               "type": "Fixed"
             }
           ]
@@ -48162,7 +48167,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Attack Expert",
-        "customDescription": "Gain +2% Melee Critical Hit Chance and +3% Melee Accuracy"
+        "customDescription": "Gain +2% chance to ignore Enemy Resistance when attacking, and +2% chance to convert a Miss into a Hit"
       },
       {
         "id": "Attack_Master",
@@ -48171,13 +48176,7 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "ignoreResistanceWhenAttackingChance": [
-              {
-                "damageTypeID": "melvorD:Normal",
-                "value": 2
-              }
-            ],
-            "meleeAccuracyRating": 3
+            "flatMeleeAccuracyBonusPerAttackInterval": 1
           }
         },
         "cost": {
@@ -48185,12 +48184,12 @@
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 10000000,
+              "cost": 4500000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 100000000,
+              "cost": 45000000,
               "type": "Fixed"
             }
           ]
@@ -48211,7 +48210,7 @@
           },
           {
             "type": "DungeonCompletion",
-            "dungeonID": "melvorF:Into_the_Mist",
+            "dungeonID": "melvorF:Air_God_Dungeon",
             "count": 1
           }
         ],

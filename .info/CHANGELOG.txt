@@ -546,6 +546,7 @@ SAE v0.9.6 - The Balance Patch
 - Autoeat IV and V prices reduced (1b -> 500m, 5b -> 1b). Auto eat threshold bonuses removed; efficiency and limit bonuses increased (+10% and +5%, respectively).
 - Bunsen Burner buffs changed from percentages to flat. Now, each tier gives -0.1s Herblore interval and +1 Potion Charge, up to -0.7s and +7 Potion Charges at Dragon.
 - Attack Adept attack interval changed from -5% to -0.1s, accuracy reduced from 6% -> 3%. Price reduced to 500k SC and 5M GP.
+- Attack Expert reworked: now gives +2% each to Convert Miss into Hit Chance and Ignore Enemy Resistance Chance. Price reduced to 1.5M SC and 15M GP.
 ## Sigils
 - Sigil of Anger no longer gives regeneration.
 - Sigil of Clarity now gives +4% accuracy in addition to the first attack being unable to miss.
