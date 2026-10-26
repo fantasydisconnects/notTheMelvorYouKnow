@@ -538,6 +538,7 @@ SAE v0.9.6 - The Balance Patch
 
 # Changes
 ## Consumables
+- Guillermo the Slayer's +2% dmg boost to Slayer Tasks changed to +2% accuracy rating against Slayer Tasks.
 - Nasturtium Global Gold and Rare Item chance decreased from 5% -> 2%.
 - White Lily now supplies 1 earth rune instead of nature rune. Alt Magic XP bonus reduced from 6% -> 3%.
 ## Sigils

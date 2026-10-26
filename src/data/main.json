@@ -11626,9 +11626,16 @@
               "currencyID": "melvorD:SlayerCoins",
               "value": 2
             }
-          ],
-          "damageDealtToSlayerTasks": 2
+          ]
         },
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "FightingSlayerTask"
+            },
+            "accuracyRating": 2
+          }
+        ],
         "consumesOn": [
           {
             "type": "PlayerSummonAttack"
@@ -47363,7 +47370,7 @@
       {
         "id": "Hireling_Contract_Slayer_Hunter",
         "customName": "Contract Hours for Guillermo the Slayer's Services",
-        "customDescription": "Tier 2 Hireling<br>+141 Summoning Max Hit. +2 Slayer Coins gained per monster kill (based on Combat Level) and +2% Damage Dealt to Slayer Tasks when equipped, until depleted",
+        "customDescription": "Tier 2 Hireling<br>+141 Summoning Max Hit. +2 Slayer Coins gained per monster kill (based on Combat Level) and +2% Accuracy Rating against Slayer Tasks when equipped, until depleted",
         "media": "assets/bank/hireling_contract_slayer_hunter.png",
         "category": "expandedAreas:HirelingContracts",
         "contains": {
