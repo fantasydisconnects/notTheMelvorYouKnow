@@ -558,6 +558,8 @@ SAE v0.9.6 - The Balance Patch
 # Fixes
 ## Enhancements
 - Cursed Enhancement description fixed.
+## Pets
+- Fixed hint errors on multiple pets.
 ## Sigils
 - Sigil of Generosity is no longer as verbose when its effects are exposed by other mods such as Skill Boosts.
 - Sigil of Vengeance description fixed.

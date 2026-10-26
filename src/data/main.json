@@ -46541,6 +46541,7 @@
       {
         "id": "Regina",
         "name": "Regina",
+        "hint": "Draconis Rex",
         "media": "assets/pets/Regina.png",
         "ignoreCompletion": false,
         "modifiers": {
@@ -46552,6 +46553,7 @@
       },
       {
         "id": "CursedStrongholdPet",
+        "hint": "Cursed Stronghold",
         "name": "Jade",
         "media": "assets/pets/CursedStrongholdPet.png",
         "ignoreCompletion": false,
@@ -46564,6 +46566,7 @@
       {
         "id": "Zully",
         "media": "assets/pets/Zully.png",
+        "hint": "Zulrah",
         "name": "Zully",
         "modifiers": {
           "burnDOTDamageTaken": -2,
@@ -46578,7 +46581,7 @@
       {
         "id": "DonJonLuter",
         "name": "Don Jon Luter",
-        "hint": "Obtained from The Dungeon",
+        "hint": "The Dungeon",
         "media": "assets/pets/Don_Jon_Luter.png",
         "scaleChanceWithMasteryPool": false,
         "ignoreCompletion": false,
@@ -46597,6 +46600,7 @@
         "id": "Dark_Core",
         "name": "Dark Core",
         "media": "assets/pets/core.png",
+        "hint": "Abhorrent Beast",
         "ignoreCompletion": false,
         "modifiers": {
           "hPRegenBasedOnMaxHP": 0.1
@@ -46609,6 +46613,7 @@
         "name": "Baby Mole",
         "media": "assets/pets/mole.png",
         "ignoreCompletion": false,
+        "hint": "Giant Mole",
         "modifiers": {
           "seedDropConversionChance": 1
         },
@@ -46622,6 +46627,7 @@
         "modifiers": {
           "prayerPointsFromBurying": 5
         },
+        "hint": "The Barrows",
         "scaleChanceWithMasteryPool": false,
         "activeInRaid": false,
         "ignoreCompletion": false
@@ -46630,7 +46636,7 @@
         "id": "Swirli",
         "name": "Swirli",
         "media": "assets/pets/Swirli.svg",
-        "hint": "Obtained from Guardian of the Elements",
+        "hint": "Guardian of the Elements",
         "ignoreCompletion": false,
         "modifiers": {
           "runePreservationChance": 0.5
@@ -46642,7 +46648,7 @@
         "id": "Tinychief",
         "name": "Tinychief",
         "media": "assets/pets/Tinychief.svg",
-        "hint": "Obtained from Golbin Chieftain",
+        "hint": "Golbin Chieftain",
         "ignoreCompletion": false,
         "modifiers": {
           "combatLootDoublingChance": 0.1
@@ -46654,7 +46660,7 @@
         "id": "Yeemik",
         "name": "Yeemik",
         "media": "assets/pets/Yeemik.svg",
-        "hint": "Obtained from Golbin Hideout",
+        "hint": "Golbin Hideout",
         "ignoreCompletion": false,
         "modifiers": {
           "dodgeChance": 1
@@ -46666,7 +46672,7 @@
         "id": "Lil_Erik",
         "name": "Lil Erik",
         "media": "assets/pets/Lil_Erik.svg",
-        "hint": "Obtained from Chieftain Erik",
+        "hint": "Chieftain Erik",
         "ignoreCompletion": false,
         "modifiers": {
           "globalItemDoublingChance": 0.5
@@ -46678,7 +46684,7 @@
         "id": "Ellie",
         "name": "Ellie",
         "media": "assets/pets/Ellie.svg",
-        "hint": "Obtained from Elemental Sanctuary",
+        "hint": "Elemental Sanctuary",
         "ignoreCompletion": false,
         "modifiers": {
           "flatMagicMinHit": [
@@ -46701,7 +46707,7 @@
         "id": "Fenri",
         "name": "Fenri",
         "media": "assets/pets/Fenri.svg",
-        "hint": "Obtained from The Barbarian Trials",
+        "hint": "The Barbarian Trials",
         "ignoreCompletion": false,
         "modifiers": {
           "flatHiddenSkillLevel": [
