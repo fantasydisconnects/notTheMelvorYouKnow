@@ -537,6 +537,8 @@ SAE v0.9.5
 SAE v0.9.6 - The Balance Patch
 
 # Changes
+## Consumables
+- White Lily now supplies 1 earth rune instead of nature rune. Alt Magic XP bonus reduced from 6% -> 3%.
 ## Sigils
 - Sigil of Anger no longer gives regeneration.
 - Sigil of Clarity now gives +4% accuracy in addition to the first attack being unable to miss.
@@ -548,6 +550,8 @@ SAE v0.9.6 - The Balance Patch
 - Sigil of Weakness has been reworked: Enemy has 4% chance to ignore Buffs, and has +4% attack interval. Ranged Level requirement changed to Magic.
 
 # Fixes
+## Enhancements
+- Cursed Enhancement description fixed.
 ## Sigils
 - Sigil of Generosity is no longer as verbose when its effects are exposed by other mods such as Skill Boosts.
 - Sigil of Vengeance description fixed.

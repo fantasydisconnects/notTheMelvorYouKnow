@@ -13785,12 +13785,14 @@
             "tableID": "melvorF:RandomCurse",
             "targetOverride": "Self",
             "appliesWhen": "StartOfFight",
-            "applyEffectWhenMerged": true
+            "applyEffectWhenMerged": true,
+            "customDescription": "Apply a Random Curse to yourself at the Start of the Fight"
           },
           {
             "effectID": "expandedAreas:Cursed_Enhancement_Superior",
             "appliesWhen": "StartOfFight",
-            "applyEffectWhenMerged": true
+            "applyEffectWhenMerged": true,
+            "customDescription": "+2% Damage per effect affected by per stack, up to 5 stacks"
           }
         ]
       },
@@ -23541,10 +23543,10 @@
         "equipRequirements": [],
         "equipmentStats": [],
         "modifiers": {
-          "altMagicSkillXP": 6,
+          "altMagicSkillXP": 3,
           "flatSpellRuneCost": [
             {
-              "itemID": "melvorF:Nature_Rune",
+              "itemID": "melvorD:Earth_Rune",
               "value": -1
             }
           ]
