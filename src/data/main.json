@@ -47123,14 +47123,6 @@
           "expandedAreas:Auto_Eat_Tier_IV",
           "expandedAreas:Auto_Eat_Tier_V"
         ]
-      },
-      {
-        "insertAt": "After",
-        "afterID": "melvorF:Extra_Equipment_Set_III",
-        "ids": [
-          "expandedAreas:Allow_Nonmagic_Auroras",
-          "expandedAreas:Allow_Nonmagic_Curses"
-        ]
       }
     ],
     "shopPurchases": [
@@ -51532,88 +51524,6 @@
         "showBuyLimit": false,
         "customName": "Redwood Barrel",
         "customDescription": "+3% Perfect Cook Chance for Fermenting Tank only for a total of +10% Perfect Cook Chance from your Fermenting Tank."
-      },
-      {
-        "id": "Allow_Nonmagic_Auroras",
-        "media": "assets/combat/magic/surge.svg",
-        "category": "melvorD:General",
-        "contains": {
-          "items": [],
-          "modifiers": {
-            "allowAttackAugmentingMagic": 1,
-            "allowNonMagicCurses": 0
-          }
-        },
-        "cost": {
-          "items": [],
-          "currencies": [
-            {
-              "currency": "melvorD:GP",
-              "type": "Fixed",
-              "cost": 100000000
-            }
-          ]
-        },
-        "allowQuantityPurchase": false,
-        "unlockRequirements": [],
-        "purchaseRequirements": [
-          {
-            "skillID": "melvorD:Magic",
-            "level": 80,
-            "type": "SkillLevel"
-          },
-          {
-            "dungeonID": "expandedAreas:Elemental_Sanctuary",
-            "count": 100,
-            "type": "DungeonCompletion"
-          }
-        ],
-        "defaultBuyLimit": 0,
-        "buyLimitOverrides": [],
-        "showBuyLimit": false,
-        "customName": "Allow Nonmagic Auroras",
-        "customDescription": "Allows you to use Auroras without equipping a Magic Weapon (also deactivates the Allow Nonmagic Curses Shop Purchase)"
-      },
-      {
-        "id": "Allow_Nonmagic_Curses",
-        "media": "assets/combat/magic/decay.svg",
-        "category": "melvorD:General",
-        "contains": {
-          "items": [],
-          "modifiers": {
-            "allowNonMagicCurses": 1,
-            "allowAttackAugmentingMagic": 0
-          }
-        },
-        "cost": {
-          "items": [],
-          "currencies": [
-            {
-              "currency": "melvorD:GP",
-              "type": "Fixed",
-              "cost": 100000000
-            }
-          ]
-        },
-        "allowQuantityPurchase": false,
-        "unlockRequirements": [],
-        "purchaseRequirements": [
-          {
-            "skillID": "melvorD:Magic",
-            "level": 80,
-            "type": "SkillLevel"
-          },
-          {
-            "dungeonID": "expandedAreas:Elemental_Sanctuary",
-            "count": 100,
-            "type": "DungeonCompletion"
-          }
-        ],
-        "defaultBuyLimit": 0,
-        "buyLimitOverrides": [],
-        "showBuyLimit": false,
-        "customName": "Allow Nonmagic Curses",
-        "customDescription": "Allows you to use Curses without equipping a Magic Weapon (also deactivates the Allow Nonmagic Auroras Shop Purchase)"
       },
       {
         "id": "Air_Rune",
