@@ -48071,23 +48071,33 @@
         "category": "expandedAreas:CombatMastery",
         "contains": {
           "items": [],
-          "modifiers": {
-            "meleeAttackInterval": -5,
-            "meleeCritChance": 1,
-            "meleeAccuracyRating": 6
-          }
+          "conditionalModifiers": [
+            {
+              "condition": {
+                "character": "Player",
+                "thisAttackType": "melee",
+                "targetAttackType": "any",
+                "type": "CombatType"
+              },
+              "modifiers": {
+                "flatAttackInterval": -100,
+                "meleeCritChance": 1,
+                "meleeAccuracyRating": 3
+              }
+            }
+          ]
         },
         "cost": {
           "items": [],
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 2500000,
+              "cost": 500000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 25000000,
+              "cost": 5000000,
               "type": "Fixed"
             }
           ]
@@ -48105,7 +48115,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Attack Adept",
-        "customDescription": "Gain -5% Melee Attack Interval, +1% Melee Critical Hit Chance, and +6% Melee Accuracy"
+        "customDescription": "Gain -0.1s Melee Attack Interval, +1% Melee Critical Hit Chance, and +3% Melee Accuracy"
       },
       {
         "id": "Attack_Expert",
