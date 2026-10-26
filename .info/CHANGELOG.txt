@@ -543,6 +543,7 @@ SAE v0.9.6 - The Balance Patch
 - White Lily now supplies 1 earth rune instead of nature rune. Alt Magic XP bonus reduced from 6% -> 3%.
 ## Shop Purchases
 - Allow Nonmagic Auroras and Allow Nonmagic Curses have been removed from the Shop.
+- Autoeat IV and V prices reduced (1b -> 500m, 5b -> 1b). Auto eat threshold bonuses removed; efficiency and limit bonuses increased (+10% and +5%, respectively).
 - Bunsen Burner buffs changed from percentages to flat. Now, each tier gives -0.1s Herblore interval and +1 Potion Charge, up to -0.7s and +7 Potion Charges at Dragon.
 ## Sigils
 - Sigil of Anger no longer gives regeneration.
