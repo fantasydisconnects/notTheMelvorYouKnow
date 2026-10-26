@@ -23393,10 +23393,10 @@
           "currencyGain": [
             {
               "currencyID": "melvorD:GP",
-              "value": 5
+              "value": 2
             }
           ],
-          "offItemChance": 5,
+          "offItemChance": 2,
           "allowSignetDrops": 1
         },
         "consumesOn": [
