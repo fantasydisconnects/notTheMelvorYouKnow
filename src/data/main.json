@@ -12904,7 +12904,7 @@
         "itemType": "Equipment",
         "tier": "none",
         "id": "Sigil_of_the_Manta_Ray",
-        "name": "Sigil of the Manta Ray",
+        "name": "Sigil of the Stingray",
         "category": "Enhancement",
         "type": "Sigil",
         "media": "assets/bank/sigilmantaray.png",
@@ -12932,7 +12932,7 @@
         ],
         "equipmentStats": [],
         "modifiers": {
-          "reflectDamage": 2
+          "stunDurationIncreaseChance": 2
         },
         "combatEffects": [
           {
