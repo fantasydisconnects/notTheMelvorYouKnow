@@ -5761,7 +5761,7 @@
       },
       {
         "id": "SigilVengeance",
-        "templateID": "melvorD:StaticTargetCountingModifier",
+        "templateID": "melvorD:StaticSelfCountingModifier",
         "name": "Sigil of Vengeance",
         "media": "assets/bank/sigilvengeance.png",
         "target": "Self",
@@ -5769,7 +5769,7 @@
           {
             "name": "stacks",
             "modifiers": {
-              "reflectDamage": 75
+              "reflectDamage": 40
             }
           }
         ],
@@ -12478,7 +12478,7 @@
         "category": "Enhancement",
         "type": "Sigil",
         "media": "assets/bank/sigilvengeance.png",
-        "customDescription": "At the Start of the Fight, gain 75% Reflect damage until the end of the Enemy's next turn. 4% chance to reapply this effec at the end of each of your turns.",
+        "customDescription": "Reflects up to 4% of damage dealt to you (Reflect dmg cannot activate more than once per Enemy turn. Reflect dmg cannot kill an Enemy nor provide XP. At the Start of the Fight, reflect 40% of damage dealt to you until the end of your first turn.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -12511,13 +12511,7 @@
           {
             "appliesWhen": "StartOfFight",
             "effectID": "expandedAreas:SigilVengeance",
-            "applyEffectWhenMerged": true
-          },
-          {
-            "appliesWhen": "PostAttack",
-            "effectID": "expandedAreas:SigilVengeance",
-            "applyEffectWhenMerged": true,
-            "chance": 4
+            "customDescription": "Reflect up to 40% of damage dealt to you until the end of your first turn."
           }
         ]
       },

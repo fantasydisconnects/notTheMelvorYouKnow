@@ -543,9 +543,11 @@ SAE v0.9.6 - The Balance Patch
 - Sigil of Dread chance to apply Fear reduced from 2% per stack -> 1%. Enemy now takes 4% of current HP per attack only while affected by Fear effects.
 - Sigil of Focus no longer guarantees a critical hit. Instead, you have 4% crit chance against Slayer tasks.
 - Sigil of Pain has been reworked: Enemy takes +4% DOT Damage and deals -4% Damage when affected by 2 or more effects.
+- Sigil of Vengeance now always reflects 4% of Enemy dmg, and Start of Fight reflect dmg reduced from 75% -> 40%.
 
 # Fixes
 ## Sigils
 - Sigil of Generosity is no longer as verbose when its effects are exposed by other mods such as Skill Boosts.
+- Sigil of Vengeance description fixed.
 ## Summoning Familiars
 - Conrad the Barbearian now correctly reduces Woodcutting interval by 0.2s.
