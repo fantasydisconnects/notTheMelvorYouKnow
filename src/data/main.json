@@ -5760,6 +5760,41 @@
         ]
       },
       {
+        "id": "AttackGrandmaster",
+        "templateID": "melvorD:StaticSelfCountingModifier",
+        "name": "Attack Grandmaster",
+        "media": "assets/shop/combatMastery/attack_grandmaster.png",
+        "target": "Self",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "cantMiss": 1,
+              "meleeCritChance": 3
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "turns",
+            "initialValue": 1
+          }
+        ],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "HitWithAttack"
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
         "id": "SigilVengeance",
         "templateID": "melvorD:StaticSelfCountingModifier",
         "name": "Sigil of Vengeance",
@@ -5788,6 +5823,9 @@
                 "isNotEquipped": [
                   "expandedAreas:Sigil_of_Vengeance"
                 ]
+              },
+              {
+                "type": "HitByAttack"
               }
             ]
           }
@@ -48126,7 +48164,7 @@
           "modifiers": {
             "ignoreResistanceWhenAttackingChance": [
               {
-                "damageTypeID":"melvorD:Normal",
+                "damageTypeID": "melvorD:Normal",
                 "value": 2
               }
             ],
@@ -48210,7 +48248,7 @@
           },
           {
             "type": "DungeonCompletion",
-            "dungeonID": "melvorF:Air_God_Dungeon",
+            "dungeonID": "melvorF:Infernal_Stronghold",
             "count": 1
           }
         ],
@@ -48218,7 +48256,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Attack Master",
-        "customDescription": "Gain +3% Melee Accuracy and +2% Chance to ignore Enemy Resistance when Attacking"
+        "customDescription": "Gain +1 Flat Melee Accuracy Bonus per 0.1s Attack Interval (doubled if equipped weapon is 2H)"
       },
       {
         "id": "Attack_Grandmaster",
@@ -48226,28 +48264,31 @@
         "category": "expandedAreas:CombatMastery",
         "contains": {
           "items": [],
-          "modifiers": {
-            "meleeAttackInterval": -5,
-            "ignoreResistanceWhenAttackingChance": [
-              {
-                "damageTypeID": "melvorD:Normal",
-                "value": 4
+          "combatEffects": [
+            {
+              "appliesWhen": "PreAttack",
+              "effectID": "expandedAreas:AttackGrandmaster",
+              "chance": 3,
+              "condition": {
+                "character": "Player",
+                "type": "CombatType",
+                "thisAttackType": "melee",
+                "targetAttackType": "any"
               }
-            ],
-            "meleeAccuracyRating": 3
-          }
+            }
+          ]
         },
         "cost": {
           "items": [],
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 20000000,
+              "cost": 10000000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 200000000,
+              "cost": 100000000,
               "type": "Fixed"
             }
           ]
@@ -48263,7 +48304,7 @@
         "purchaseRequirements": [
           {
             "type": "DungeonCompletion",
-            "dungeonID": "melvorF:Impending_Darkness",
+            "dungeonID": "melvorF:Fire_God_Dungeon",
             "count": 1
           },
           {
@@ -48276,7 +48317,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Attack Grandmaster",
-        "customDescription": "Gain -5% Melee Attack Interval, +3% Melee Accuracy, and +4% Chance to ignore Enemy Resistance when Attacking"
+        "customDescription": "+3% chance before each attack to guarantee a hit with +3% crit chance"
       },
       {
         "id": "Attack_Training",
@@ -48295,12 +48336,12 @@
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 150000,
+              "cost": 50000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 1500000,
+              "cost": 500000,
               "type": "Fixed"
             }
           ]

@@ -547,6 +547,9 @@ SAE v0.9.6 - The Balance Patch
 - Bunsen Burner buffs changed from percentages to flat. Now, each tier gives -0.1s Herblore interval and +1 Potion Charge, up to -0.7s and +7 Potion Charges at Dragon.
 - Attack Adept attack interval changed from -5% to -0.1s, accuracy reduced from 6% -> 3%. Price reduced to 500k SC and 5M GP.
 - Attack Expert reworked: now gives +2% each to Convert Miss into Hit Chance and Ignore Enemy Resistance Chance. Price reduced to 1.5M SC and 15M GP.
+- Attack Master reworked: now gives +1 Flat Melee Accuracy per 0.1s Attack Interval (doubled if equipped weapon is 2H). Price reduced to 4.5M SC and 45M GP. Requirement lowered from 1 Into the Mist Completion to 1 Infernal Stronghold completion.
+- Attack Grandmaster reworked: now has 3% chance before each attack to guarantee a hit with +3% crit chance. Price reduced to 10M SC and 100M GP. Requirement lowered from 1 Impending Darkness Completion to 1 Fire God Dungeon completion.
+- Attack Training price reduced to 50K SC and 500K GP.
 ## Sigils
 - Sigil of Anger no longer gives regeneration.
 - Sigil of Clarity now gives +4% accuracy in addition to the first attack being unable to miss.
