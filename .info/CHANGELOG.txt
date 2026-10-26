@@ -541,6 +541,8 @@ SAE v0.9.6 - The Balance Patch
 - Guillermo the Slayer's +2% dmg boost to Slayer Tasks changed to +2% accuracy rating against Slayer Tasks.
 - Nasturtium Global Gold and Rare Item chance decreased from 5% -> 2%.
 - White Lily now supplies 1 earth rune instead of nature rune. Alt Magic XP bonus reduced from 6% -> 3%.
+## Shop Purchases
+- Bunsen Burner buffs changed from percentages to flat. Now, each tier gives -0.1s Herblore interval and +1 Potion Charge, up to -0.7s and +7 Potion Charges at Dragon.
 ## Sigils
 - Sigil of Anger no longer gives regeneration.
 - Sigil of Clarity now gives +4% accuracy in addition to the first attack being unable to miss.

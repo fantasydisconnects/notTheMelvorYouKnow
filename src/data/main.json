@@ -52835,13 +52835,13 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "skillInterval": [
+            "flatSkillInterval": [
               {
                 "skillID": "melvorD:Herblore",
-                "value": -1
+                "value": -100
               }
             ],
-            "potionCharges": 10
+            "flatPotionCharges": 1
           }
         },
         "cost": {
@@ -52861,7 +52861,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Iron Bunsen Burner",
-        "customDescription": "-1% Herblore Interval for a total of -1% Herblore Interval from your Bunsen Burner. +10% added to all potion charges for a total of +10% added to all potion charges from your Bunsen Burner."
+        "customDescription": "-0.1s Herblore Interval for a total of -0.1s Herblore Interval from your Bunsen Burner. +1 potion charges for a total of +1 potion charges from your Bunsen Burner."
       },
       {
         "id": "Bunsen_Burner_Steel",
@@ -52870,13 +52870,14 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "skillInterval": [
+            "flatSkillInterval": [
               {
                 "skillID": "melvorD:Herblore",
-                "value": -1
+                "value": -100
               }
             ],
-            "potionCharges": 10
+            "flatPotionCharges": 1
+          
           }
         },
         "cost": {
@@ -52908,7 +52909,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Steel Bunsen Burner",
-        "customDescription": "-1% Herblore Interval for a total of -2% Herblore Interval from your Bunsen Burner. +10% added to all potion charges for a total of +20% added to all potion charges from your Bunsen Burner."
+        "customDescription": "-0.1s Herblore Interval for a total of -0.2s from your Bunsen Burner. +1 potion charges for a total of +2 charges from your Bunsen Burner."
       },
       {
         "id": "Bunsen_Burner_Black",
@@ -52917,13 +52918,13 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "skillInterval": [
+            "flatSkillInterval": [
               {
                 "skillID": "melvorD:Herblore",
-                "value": -1
+                "value": -100
               }
             ],
-            "potionCharges": 10
+            "flatPotionCharges": 1
           }
         },
         "cost": {
@@ -52955,7 +52956,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Black Bunsen Burner",
-        "customDescription": "-1% Herblore Interval for a total of -3% Herblore Interval from your Bunsen Burner. +10% added to all potion charges for a total of +30% added to all potion charges from your Bunsen Burner."
+        "customDescription": "-0.1s Herblore Interval for a total of -0.3s from your Bunsen Burner. +1 potion charges for a total of +3 charges from your Bunsen Burner."
       },
       {
         "id": "Bunsen_Burner_Mithril",
@@ -52964,13 +52965,13 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "skillInterval": [
+            "flatSkillInterval": [
               {
                 "skillID": "melvorD:Herblore",
-                "value": -1
+                "value": -100
               }
             ],
-            "potionCharges": 10
+            "flatPotionCharges": 1
           }
         },
         "cost": {
@@ -53002,7 +53003,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Mithril Bunsen Burner",
-        "customDescription": "-1% Herblore Interval for a total of -4% Herblore Interval from your Bunsen Burner. +10% added to all potion charges for a total of +40% added to all potion charges from your Bunsen Burner."
+        "customDescription": "-0.1s Herblore Interval for a total of -0.4s from your Bunsen Burner. +1 potion charges for a total of +4 charges from your Bunsen Burner."
       },
       {
         "id": "Bunsen_Burner_Adamant",
@@ -53011,13 +53012,13 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "skillInterval": [
+            "flatSkillInterval": [
               {
                 "skillID": "melvorD:Herblore",
-                "value": -1
+                "value": -100
               }
             ],
-            "potionCharges": 10
+            "flatPotionCharges": 1
           }
         },
         "cost": {
@@ -53049,7 +53050,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Adamant Bunsen Burner",
-        "customDescription": "-1% Herblore Interval for a total of -5% Herblore Interval from your Bunsen Burner. +10% added to all potion charges for a total of +50% added to all potion charges from your Bunsen Burner."
+        "customDescription": "-0.1s Herblore Interval for a total of -0.5s from your Bunsen Burner. +1 potion charges for a total of +5 charges from your Bunsen Burner."
       },
       {
         "id": "Bunsen_Burner_Rune",
@@ -53058,13 +53059,13 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "skillInterval": [
+            "flatSkillInterval": [
               {
                 "skillID": "melvorD:Herblore",
-                "value": -1
+                "value": -100
               }
             ],
-            "potionCharges": 10
+            "flatPotionCharges": 1
           }
         },
         "cost": {
@@ -53096,7 +53097,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Rune Bunsen Burner",
-        "customDescription": "-1% Herblore Interval for a total of -6% Herblore Interval from your Bunsen Burner. +10% added to all potion charges for a total of +60% added to all potion charges from your Bunsen Burner."
+        "customDescription": "-0.1s Herblore Interval for a total of -0.6s from your Bunsen Burner. +1 potion charges for a total of +6 charges from your Bunsen Burner."
       },
       {
         "id": "Bunsen_Burner_Dragon",
@@ -53105,13 +53106,13 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "skillInterval": [
+            "flatSkillInterval": [
               {
                 "skillID": "melvorD:Herblore",
-                "value": -1
+                "value": -100
               }
             ],
-            "potionCharges": 10
+            "flatPotionCharges": 1
           }
         },
         "cost": {
@@ -53143,7 +53144,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Dragon Bunsen Burner",
-        "customDescription": "-1% Herblore Interval for a total of -7% from your Bunsen Burner. +10% added to all potion charges for a total of +70% from your Bunsen Burner."
+        "customDescription": "-0.1s Herblore Interval for a total of -0.7s from your Bunsen Burner. +1 potion charges for a total of +7 charges from your Bunsen Burner."
       },
       {
         "id": "Essence_Resonator_Iron",
