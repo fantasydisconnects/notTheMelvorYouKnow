@@ -20600,7 +20600,7 @@
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 500000,
-        "customDescription": "+20 Flat Melee Strength Bonus +1 extra for every 0.1s Attack Interval (doubled if a 2-Handed weapon is equipped).",
+        "customDescription": "+20 Flat Melee Strength Bonus +1 extra for every 0.5s Attack Interval (doubled if a 2-Handed weapon is equipped).",
         "tier": "Skillcape",
         "validSlots": [
           "Cape"
@@ -20637,7 +20637,7 @@
           }
         ],
         "modifiers": {
-          "flatMeleeStrengthBonusPerAttackInterval": 1
+          "flatMeleeStrengthBonusPerAttackInterval": 0.2
         }
       },
       {
@@ -48377,7 +48377,7 @@
           "currencies": [
             {
               "currency": "melvorD:GP",
-              "cost": 50000000,
+              "cost": 9999999,
               "type": "Fixed"
             }
           ]
@@ -48416,13 +48416,12 @@
                 "type": "CombatType"
               },
               "modifiers": {
-                "critMultiplier": 25
+                "critMultiplier": 20
               }
             }
           ],
           "modifiers": {
-            "meleeMinHitBasedOnMaxHit": 5,
-            "meleeMaxHit": 2.5
+            "flatMeleeStrengthBonus": 10
           }
         },
         "cost": {
@@ -48430,12 +48429,12 @@
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 3500000,
+              "cost": 500000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 35000000,
+              "cost": 5000000,
               "type": "Fixed"
             }
           ]
@@ -48453,7 +48452,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Strength Adept",
-        "customDescription": "Gain +5% Melee Maximum Hit added to Melee Minimum Hit, +25% Melee Critical Damage, and +2.5% Melee Maximum Hit"
+        "customDescription": "Gain +10 Flat Melee Strength Bonus and +25% Melee Critical Damage"
       },
       {
         "id": "Strength_Expert",
@@ -48461,21 +48460,9 @@
         "category": "expandedAreas:CombatMastery",
         "contains": {
           "items": [],
-          "conditionalModifiers": [
-            {
-              "condition": {
-                "character": "Player",
-                "thisAttackType": "melee",
-                "targetAttackType": "any",
-                "type": "CombatType"
-              },
-              "modifiers": {
-                "critMultiplier": 50
-              }
-            }
-          ],
           "modifiers": {
-            "meleeMaxHit": 5
+            "meleeStrengthBonus": 5,
+            "meleeStrengthBonusWith2HWeapon": 5
           }
         },
         "cost": {
@@ -48483,12 +48470,12 @@
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 7000000,
+              "cost": 1500000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 70000000,
+              "cost": 15000000,
               "type": "Fixed"
             }
           ]
@@ -48512,7 +48499,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Strength Expert",
-        "customDescription": "Gain +50% Melee Critical Damage, +5% Melee Maximum Hit"
+        "customDescription": "+5% Melee Strength Bonus from Equipment, plus an extra 5% if using a two-handed weapon"
       },
       {
         "id": "Strength_Master",
@@ -48521,8 +48508,13 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "meleeMaxHit": 5,
-            "meleeStrengthBonusPer10EnemyDR": 5
+            "meleeMinHitBasedOnMaxHit": 2,
+            "meleeStrengthBonusPer10EnemyResistance": [
+              {
+                "damageTypeID": "melvorD:Normal",
+                "value": 2
+              }
+            ]
           }
         },
         "cost": {
@@ -48530,12 +48522,12 @@
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 14000000,
+              "cost": 4500000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 140000000,
+              "cost": 45000000,
               "type": "Fixed"
             }
           ]
@@ -48551,7 +48543,7 @@
         "purchaseRequirements": [
           {
             "type": "DungeonCompletion",
-            "dungeonID": "melvorF:Into_the_Mist",
+            "dungeonID": "melvorF:Infernal_Stronghold",
             "count": 1
           },
           {
@@ -48564,7 +48556,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Strength Master",
-        "customDescription": "Gain +5% Melee Maximum Hit and +5% Melee Maximum Hit per 10 Enemy Damage Reduction"
+        "customDescription": "+2% Melee Max Hit added to Melee Min Hit, and +2% Melee Strength Bonus from Equipment per 10% Enemy DR"
       },
       {
         "id": "Strength_Grandmaster",
@@ -48573,22 +48565,39 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "meleeMinHitBasedOnMaxHit": 5,
-            "meleeMaxHit": 5,
-            "meleeStrengthBonusPer10EnemyDR": 10
-          }
+            "meleeMaxHit": 1
+          },
+          "combatEffects": [
+            {
+              "appliesWhen": "CritWithAttack",
+              "condition": {
+                "thisAttackType": "melee",
+                "targetAttackType": "any",
+                "character": "Player",
+                "type": "CombatType"
+              },
+              "chance": 5,
+              "effectID": "melvorD:Stun",
+              "initialParams": [
+                {
+                  "name": "turns",
+                  "value": 2
+                }
+              ]
+            }
+          ]
         },
         "cost": {
           "items": [],
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 28000000,
+              "cost": 10000000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 280000000,
+              "cost": 100000000,
               "type": "Fixed"
             }
           ]
@@ -48604,7 +48613,7 @@
         "purchaseRequirements": [
           {
             "type": "DungeonCompletion",
-            "dungeonID": "melvorF:Impending_Darkness",
+            "dungeonID": "melvorF:Fire_God_Dungeon",
             "count": 1
           },
           {
@@ -48617,7 +48626,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Strength Grandmaster",
-        "customDescription": "Gain +5% Melee Maximum Hit added to Melee Minimum Hit, +5% Melee Maximum Hit, and +10% Melee Maximum Hit per 10 Enemy Damage Reduction"
+        "customDescription": "5% chance on Crit to apply a 2-turn Stun to the Enemy, +1% Melee Max Hit"
       },
       {
         "id": "Strength_Training",
@@ -48626,7 +48635,7 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "meleeStrengthBonus": 1
+            "flatMeleeStrengthBonus": 1
           }
         },
         "cost": {
@@ -48634,12 +48643,12 @@
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 1000000,
+              "cost": 50000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 10000000,
+              "cost": 500000,
               "type": "Fixed"
             }
           ]
@@ -48675,7 +48684,7 @@
           "currencies": [
             {
               "currency": "melvorD:GP",
-              "cost": 50000000,
+              "cost": 9999999,
               "type": "Fixed"
             }
           ]
