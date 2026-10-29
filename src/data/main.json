@@ -5829,6 +5829,35 @@
         ]
       },
       {
+        "id": "RangedGrandmaster",
+        "templateID": "melvorD:DecrementalOnHit",
+        "name": "Ranged Grandmaster",
+        "media": "assets/shop/combatMastery/ranged_grandmaster.png",
+        "target": "Self",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "rangedAccuracyRating": 1,
+              "rangedAttackInterval": -1
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "stacksToAdd",
+            "initialValue": 10
+          },
+          {
+            "name": "maxStacks",
+            "initialValue": 10
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
         "id": "SigilVengeance",
         "templateID": "melvorD:StaticSelfCountingModifier",
         "name": "Sigil of Vengeance",
@@ -20788,7 +20817,7 @@
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 500000,
-        "customDescription": "+50% Ammo Preservation Chance and +20% Ranged Accuracy Rating",
+        "customDescription": "+50% Ammo Preservation Chance and -0.2s Ranged Attack Interval",
         "tier": "Skillcape",
         "validSlots": [
           "Cape"
@@ -20821,9 +20850,21 @@
           }
         ],
         "modifiers": {
-          "ammoPreservationChance": 50,
-          "rangedAccuracyRating": 20
-        }
+          "ammoPreservationChance": 50
+        },
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "thisAttackType": "ranged",
+              "targetAttackType": "any",
+              "type": "CombatType",
+              "character": "Player"
+            },
+            "modifiers": {
+              "flatAttackInterval": -200
+            }
+          }
+        ]
       },
       {
         "itemType": "Equipment",
@@ -48920,7 +48961,8 @@
           "combatEffects": [
             {
               "appliesWhen": "StartOfFight",
-              "effectID": "expandedAreas:DefenceGrandmaster"
+              "effectID": "expandedAreas:DefenceGrandmaster",
+              "customDescription": "At the Start of the Fight, +25% Total DR until the next time you are hit"
             }
           ]
         },
@@ -49216,11 +49258,11 @@
           "modifiers": {
             "effectIgnoreChance": [
               {
-                "effectGroupID":"melvorD:Debuff",
+                "effectGroupID": "melvorD:Debuff",
                 "value": 2
               },
               {
-                "effectGroupID":"melvorD:DamageOverTime",
+                "effectGroupID": "melvorD:DamageOverTime",
                 "value": 2
               }
             ],
@@ -49355,9 +49397,8 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "rangedAttackInterval": -5,
-            "rangedMaxHit": 5,
-            "rangedAccuracyRating": 10
+            "rangedMaxHit": 2,
+            "rangedAccuracyRating": 4
           }
         },
         "cost": {
@@ -49365,12 +49406,12 @@
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 5000000,
+              "cost": 500000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 50000000,
+              "cost": 5000000,
               "type": "Fixed"
             }
           ]
@@ -49388,7 +49429,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Ranged Adept",
-        "customDescription": "Gain -5% Ranged Attack Interval, +5% Ranged Max Hit, and +10% Ranged Accuracy"
+        "customDescription": "+2% Ranged Max Hit, +4% Ranged Accuracy Rating"
       },
       {
         "id": "Ranged_Expert",
@@ -49397,18 +49438,18 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "rangedCritChance": 10
+            "rangedStrengthBonusPer8Ranged": 1
           },
           "conditionalModifiers": [
             {
               "condition": {
+                "type": "CombatType",
                 "character": "Player",
-                "targetAttackType": "any",
                 "thisAttackType": "ranged",
-                "type": "CombatType"
+                "targetAttackType": "any"
               },
               "modifiers": {
-                "attackRolls": 2
+                "flatAttackInterval": -100
               }
             }
           ]
@@ -49418,12 +49459,12 @@
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 10000000,
+              "cost": 1500000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 100000000,
+              "cost": 15000000,
               "type": "Fixed"
             }
           ]
@@ -49447,7 +49488,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Ranged Expert",
-        "customDescription": "Gain +10% Ranged Critical Hit Chance and Ranged Lucky1 (Ranged Attacks roll twice and take the higher result)"
+        "customDescription": "+1% Ranged Strength Bonus from Equipment per 8 Ranged Levels (Floored), -0.1s Ranged Attack Interval"
       },
       {
         "id": "Ranged_Master",
@@ -49456,18 +49497,27 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "rangedAccuracyRating": 10
+            "rangedAccuracyRating": 2,
+            "rangedCritChance": 1
           },
           "conditionalModifiers": [
             {
               "condition": {
                 "character": "Player",
-                "thisAttackType": "ranged",
-                "targetAttackType": "any",
-                "type": "CombatType"
+                "type": "FightingBoss"
               },
               "modifiers": {
-                "convertMissIntoHit": 5
+                "rangedAccuracyRating": 4,
+                "rangedCritChance": 2
+              }
+            },
+            {
+              "condition": {
+                "type": "FightingSlayerTask"
+              },
+              "modifiers": {
+                "rangedAccuracyRating": 2,
+                "rangedCritChance": 1
               }
             }
           ]
@@ -49477,12 +49527,12 @@
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 20000000,
+              "cost": 4500000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 200000000,
+              "cost": 45000000,
               "type": "Fixed"
             }
           ]
@@ -49503,7 +49553,7 @@
           },
           {
             "type": "DungeonCompletion",
-            "dungeonID": "melvorF:Into_the_Mist",
+            "dungeonID": "melvorF:Infernal_Stronghold",
             "count": 1
           }
         ],
@@ -49511,7 +49561,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Ranged Master",
-        "customDescription": "Gain +10% Ranged Accuracy and +5% Chance to Convert a Ranged Miss into a Hit"
+        "customDescription": "+2% Ranged Accuracy Rating and +1% Ranged Crit Chance (both are doubled if fighting a Slayer Task, or tripled if fighting a Boss)"
       },
       {
         "id": "Ranged_Grandmaster",
@@ -49519,35 +49569,24 @@
         "category": "expandedAreas:CombatMastery",
         "contains": {
           "items": [],
-          "conditionalModifiers": [
+          "combatEffects": [
             {
-              "condition": {
-                "character": "Player",
-                "thisAttackType": "ranged",
-                "targetAttackType": "any",
-                "type": "CombatType"
-              },
-              "modifiers": {
-                "critMultiplier": 50
-              }
+              "appliesWhen": "StartOfFight",
+              "effectID": "expandedAreas:RangedGrandmaster"
             }
-          ],
-          "modifiers": {
-            "rangedMinHitBasedOnMaxHit": 5,
-            "rangedAccuracyRating": 10
-          }
+          ]
         },
         "cost": {
           "items": [],
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 40000000,
+              "cost": 10000000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 400000000,
+              "cost": 100000000,
               "type": "Fixed"
             }
           ]
@@ -49563,7 +49602,7 @@
         "purchaseRequirements": [
           {
             "type": "DungeonCompletion",
-            "dungeonID": "melvorF:Impending_Darkness",
+            "dungeonID": "melvorF:Fire_God_Dungeon",
             "count": 1
           },
           {
@@ -49576,7 +49615,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Ranged Grandmaster",
-        "customDescription": "Gain +5% Ranged Maximum Hit added to Ranged Mininum Hit, +10% Ranged Accuracy Rating, and +50% Ranged Critical Multiplier"
+        "customDescription": "Start each fight with 10 stacks that give +1% Ranged Accuracy Rating and -1% Ranged Attack Interval. One stack is removed each time you hit with an attack."
       },
       {
         "id": "Ranged_Training",
@@ -49585,8 +49624,8 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "flatRangedAttackBonus": 1,
-            "flatRangedStrengthBonus": 1
+            "flatRangedAttackBonus": 0.5,
+            "flatRangedStrengthBonus": 0.2
           }
         },
         "cost": {
@@ -49594,12 +49633,12 @@
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 400000,
+              "cost": 50000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 4000000,
+              "cost": 500000,
               "type": "Fixed"
             }
           ]
@@ -49611,7 +49650,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": true,
         "customName": "Ranged Training",
-        "customDescription": "Gain +1 Flat Bonus to Ranged Attack and Ranged Strength"
+        "customDescription": "Gain +0.5 Flat Bonus to Ranged Attack and +0.2 Ranged Strength"
       },
       {
         "id": "Ranged_Mastery_Cape",
@@ -49635,7 +49674,7 @@
           "currencies": [
             {
               "currency": "melvorD:GP",
-              "cost": 50000000,
+              "cost": 9999999,
               "type": "Fixed"
             }
           ]

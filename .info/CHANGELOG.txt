@@ -589,10 +589,16 @@ SAE v0.9.6.2 - The Balance Patch Part 2
 - Defence Mastery Cape price reduced to 9.99M GP. Reworked from +5% Flat Resistance against Bosses to +10% Global Evasion against Bosses.
 - Hitpoints Adept reworked to give +50% Hitpoint Regen, +10% Chance to Ignore Poison and Bleed. Price reduced to 500K SC and 5M GP.
 - Hitpoints Expert reworked to give +2% Chance to ignore Stuns and Stunlikes, +3% Lifesteal. Price reduced to 1.5M SC and 15M GP.
-- Hitpoints Master reworked to give +1% Maximum HP, -0.5s Regen Interval, -10% Dmg Taken from Bleed & Poison. Price reduced to 4.5M SC and 15M GP. Requirement to purchase reduced to 1 Completion of Infernal Stronghold.
+- Hitpoints Master reworked to give +1% Maximum HP, -0.5s Regen Interval, -10% Dmg Taken from Bleed & Poison. Price reduced to 4.5M SC and 45M GP. Requirement to purchase reduced to 1 Completion of Infernal Stronghold.
 - Hitpoints Grandmaster reworked to give +2% Chance to ignore Debuffs and DOT effects, +50% HP Regen. Price reduced to 10M SC and 100M GP. Requirement to purchase reduced to 1 Completion of Fire God Dungeon.
 - Hitpoints Training reworked to give -0.01s HP Regen Interval. Price reduced to 50K SC and 500K GP.
 - Hitpoints Mastery Cape reworked to give +1% Max HP and +25% HP Regen. Price to purchase reduced to 9.99M GP.
+- Ranged Adept reworked to give +2% Ranged Max Hit, +4% Ranged Accuracy Rating. Price reduced to 500K SC and 5M GP.
+- Ranged Expert reworked to give +1% Ranged Strength Bonus from Equipment per 8 Ranged Levels (Floored), -0.1s Ranged Attack Interval. Price reduced to 1.5M SC and 15M GP.
+- Ranged Master reworked to give +2% Ranged Accuracy Rating and +1% Ranged Crit Chance (both are doubled if fighting a Slayer Task, or tripled if fighting a Boss). Price reduced to 4.5M SC and 45M GP.
+- Ranged Grandmaster reworked to start each fight with 10 stacks that give +1% Ranged Accuracy Rating and -1% Ranged Attack Interval. One stack is removed each time you hit with an attack. Price reduced to 10M SC and 100M GP.
+- Ranged Training buffs reduced to +0.5 Flat Ranged Attack Bonus and +0.2 Ranged Strength Bonus (down from +1 to both). Price reduced to 50K SC and 500K GP.
+- Ranged Mastery Cape price reduced to 9.99M GP. Reworked to give +50% Ammo Preservation and -0.2s Ranged Attack Interval.
 
 # Fixes
 ## Shop Purchases
