@@ -5,9 +5,7 @@
     "attacks": [],
     "attackSpells": [],
     "auroraSpells": [],
-    "bankSortOrder": [
-
-    ],
+    "bankSortOrder": [],
     "combatAreas": [],
     "combatEffectGroups": [],
     "combatEffects": [],
@@ -17,7 +15,71 @@
     "dungeons": [],
     "randomGems": [],
     "items": [
-
+      {
+        "id": "Bronze_2H_Sword",
+        "name": "Bronze 2H Sword",
+        "category": "Combat",
+        "type": "Weapon",
+        "media": "assets/media/bank/weapon_2h_bronze.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 2,
+        "tier": "bronze",
+        "validSlots": [
+          "Weapon"
+        ],
+        "occupiesSlots": [
+          "Shield"
+        ],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Attack",
+            "level": 1
+          }
+        ],
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "FightingBoss",
+              "character": "Player"
+            },
+            "modifiers": {
+              "resistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": 10
+                }
+              ]
+            }
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "attackSpeed",
+            "value": 3600
+          },
+          {
+            "key": "stabAttackBonus",
+            "value": -4
+          },
+          {
+            "key": "slashAttackBonus",
+            "value": 18
+          },
+          {
+            "key": "blockAttackBonus",
+            "value": 18
+          },
+          {
+            "key": "meleeStrengthBonus",
+            "value": 18
+          }
+        ],
+        "itemType": "Weapon",
+        "attackType": "melee"
+      }
     ],
     "itemUpgrades": [],
     "itemSynergies": [],

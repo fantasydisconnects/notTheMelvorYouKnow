@@ -5795,6 +5795,40 @@
         ]
       },
       {
+        "id": "DefenceGrandmaster",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Defence Grandmaster",
+        "media": "assets/shop/combatMastery/defence_grandmaster.png",
+        "target": "Self",
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "resistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": 25
+                }
+              ]
+            }
+          }
+        ],
+        "parameters": [],
+        "behaviours": [
+          {
+            "type": "RemoveEffect",
+            "triggersOn": [
+              {
+                "type": "HitByAttack"
+              }
+            ]
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Buff"
+        ]
+      },
+      {
         "id": "SigilVengeance",
         "templateID": "melvorD:StaticSelfCountingModifier",
         "name": "Sigil of Vengeance",
@@ -20683,14 +20717,17 @@
             "value": 80
           }
         ],
-        "modifiers": {
-          "melvorD:flatResistanceAgainstBosses": [
-            {
-              "damageTypeID": "melvorD:Normal",
-              "value": 5
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "type": "FightingBoss",
+              "character": "Player"
+            },
+            "modifiers": {
+              "evasion": 10
             }
-          ]
-        }
+          }
+        ]
       },
       {
         "itemType": "Equipment",
@@ -48715,14 +48752,13 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "reflectDamage": 5,
-            "resistance": [
+            "flatResistance": [
               {
                 "damageTypeID": "melvorD:Normal",
                 "value": 1
               }
             ],
-            "evasion": 6
+            "evasion": 4
           }
         },
         "cost": {
@@ -48730,12 +48766,12 @@
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 2500000,
+              "cost": 500000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 25000000,
+              "cost": 5000000,
               "type": "Fixed"
             }
           ]
@@ -48753,7 +48789,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Defence Adept",
-        "customDescription": "Gain +5% Reflect Damage, +1% Damage Reduction, and +6% Global Evasion"
+        "customDescription": "+1% DR and +4% Global Evasion"
       },
       {
         "id": "Defence_Expert",
@@ -48762,13 +48798,25 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "resistance": [
+            "dodgeChance": 3,
+            "flatMagicDefenceBonusBasedOnResistance": [
               {
                 "damageTypeID": "melvorD:Normal",
-                "value": 2
+                "value": 0.1
               }
             ],
-            "evasion": 3
+            "flatMeleeDefenceBonusBasedOnResistance": [
+              {
+                "damageTypeID": "melvorD:Normal",
+                "value": 0.2
+              }
+            ],
+            "flatRangedDefenceBonusBasedOnResistance": [
+              {
+                "damageTypeID": "melvorD:Normal",
+                "value": 0.3
+              }
+            ]
           }
         },
         "cost": {
@@ -48776,12 +48824,12 @@
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 5000000,
+              "cost": 1500000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 50000000,
+              "cost": 15000000,
               "type": "Fixed"
             }
           ]
@@ -48805,7 +48853,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Defence Expert",
-        "customDescription": "Gain +2% Damage Reduction, +3% Global Evasion"
+        "customDescription": "+3% chance to turn Enemy Hit into Miss, +1/+2/+3 Flat Magic/Melee/Ranged Defence Bonus per 10% total DR"
       },
       {
         "id": "Defence_Master",
@@ -48814,9 +48862,67 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "evasion": 3,
-            "damageTaken": -1
+            "evasionBasedOnResistance": [
+              {
+                "damageTypeID": "melvorD:Normal",
+                "value": 0.5
+              }
+            ]
           }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:SlayerCoins",
+              "cost": 4500000,
+              "type": "Fixed"
+            },
+            {
+              "currency": "melvorD:GP",
+              "cost": 45000000,
+              "type": "Fixed"
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "purchaseID": "expandedAreas:Defence_Expert",
+            "count": 1,
+            "type": "ShopPurchase"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "type": "DungeonCompletion",
+            "dungeonID": "melvorF:Infernal_Stronghold",
+            "count": 1
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Defence",
+            "level": 80
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Defence Master",
+        "customDescription": "+1% Global Evasion per 4% DR"
+      },
+      {
+        "id": "Defence_Grandmaster",
+        "media": "assets/shop/combatMastery/defence_grandmaster.png",
+        "category": "expandedAreas:CombatMastery",
+        "contains": {
+          "items": [],
+          "combatEffects": [
+            {
+              "appliesWhen": "StartOfFight",
+              "effectID": "expandedAreas:DefenceGrandmaster"
+            }
+          ]
         },
         "cost": {
           "items": [],
@@ -48836,59 +48942,6 @@
         "allowQuantityPurchase": false,
         "unlockRequirements": [
           {
-            "purchaseID": "expandedAreas:Defence_Expert",
-            "count": 1,
-            "type": "ShopPurchase"
-          }
-        ],
-        "purchaseRequirements": [
-          {
-            "type": "DungeonCompletion",
-            "dungeonID": "melvorF:Into_the_Mist",
-            "count": 1
-          },
-          {
-            "type": "SkillLevel",
-            "skillID": "melvorD:Defence",
-            "level": 80
-          }
-        ],
-        "defaultBuyLimit": 1,
-        "buyLimitOverrides": [],
-        "showBuyLimit": false,
-        "customName": "Defence Master",
-        "customDescription": "Gain +3% Global Evasion and -1% Damage Taken from All Sources"
-      },
-      {
-        "id": "Defence_Grandmaster",
-        "media": "assets/shop/combatMastery/defence_grandmaster.png",
-        "category": "expandedAreas:CombatMastery",
-        "contains": {
-          "items": [],
-          "modifiers": {
-            "reflectDamage": 5,
-            "evasion": 3,
-            "damageTaken": -2
-          }
-        },
-        "cost": {
-          "items": [],
-          "currencies": [
-            {
-              "currency": "melvorD:SlayerCoins",
-              "cost": 20000000,
-              "type": "Fixed"
-            },
-            {
-              "currency": "melvorD:GP",
-              "cost": 200000000,
-              "type": "Fixed"
-            }
-          ]
-        },
-        "allowQuantityPurchase": false,
-        "unlockRequirements": [
-          {
             "purchaseID": "expandedAreas:Defence_Master",
             "count": 1,
             "type": "ShopPurchase"
@@ -48897,7 +48950,7 @@
         "purchaseRequirements": [
           {
             "type": "DungeonCompletion",
-            "dungeonID": "melvorF:Impending_Darkness",
+            "dungeonID": "melvorF:Fire_God_Dungeon",
             "count": 1
           },
           {
@@ -48910,7 +48963,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Defence Grandmaster",
-        "customDescription": "Gain +5% Reflect Damage, +3% Global Evasion, and -2% Damage Taken from All Sources"
+        "customDescription": "At the Start of the Fight, increase your total DR by 25% until the next time you are hit."
       },
       {
         "id": "Defence_Training",
@@ -48929,12 +48982,12 @@
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 150000,
+              "cost": 50000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 1500000,
+              "cost": 500000,
               "type": "Fixed"
             }
           ]
@@ -48970,7 +49023,7 @@
           "currencies": [
             {
               "currency": "melvorD:GP",
-              "cost": 50000000,
+              "cost": 9999999,
               "type": "Fixed"
             }
           ]
