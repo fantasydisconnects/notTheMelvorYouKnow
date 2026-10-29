@@ -20773,8 +20773,8 @@
           }
         ],
         "modifiers": {
-          "flatHPRegen": 1,
-          "maxHitpoints": 5
+          "hitpointRegeneration": 25,
+          "maxHitpoints": 1
         }
       },
       {
@@ -49054,7 +49054,7 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "hPRegenBasedOnMaxHP": 5,
+            "hitpointRegeneration": 50,
             "effectIgnoreChance": [
               {
                 "effectGroupID": "melvorD:PoisonDOT",
@@ -49064,8 +49064,7 @@
                 "effectGroupID": "melvorD:BleedDOT",
                 "value": 10
               }
-            ],
-            "maxHitpoints": 2
+            ]
           }
         },
         "cost": {
@@ -49073,12 +49072,12 @@
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 2500000,
+              "cost": 500000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 25000000,
+              "cost": 5000000,
               "type": "Fixed"
             }
           ]
@@ -49096,7 +49095,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Hitpoints Adept",
-        "customDescription": "Gain +5% Maximum Hitpoints added as Regen, +10% Chance to Ignore Poison and Bleed, and +2% Maximum Hitpoints"
+        "customDescription": "+50% Hitpoint Regen, +10% Chance to Ignore Poison and Bleed"
       },
       {
         "id": "Hitpoints_Expert",
@@ -49105,17 +49104,17 @@
         "contains": {
           "items": [],
           "modifiers": {
+            "lifesteal": 3,
             "effectIgnoreChance": [
               {
-                "effectGroupID": "melvorD:PoisonDOT",
-                "value": 20
+                "effectGroupID": "melvorD:Stun",
+                "value": 2
               },
               {
-                "effectGroupID": "melvorD:BleedDOT",
-                "value": 20
+                "effectGroupID": "melvorD:StunLike",
+                "value": 2
               }
-            ],
-            "maxHitpoints": 2
+            ]
           }
         },
         "cost": {
@@ -49123,12 +49122,12 @@
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 5000000,
+              "cost": 1500000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 50000000,
+              "cost": 15000000,
               "type": "Fixed"
             }
           ]
@@ -49152,7 +49151,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Hitpoints Expert",
-        "customDescription": "Gain +20% Chance to Ignore Poison and Bleed and +2% Maximum Hitpoints"
+        "customDescription": "+2% Chance to ignore Stuns and Stunlikes, +3% Lifesteal"
       },
       {
         "id": "Hitpoints_Master",
@@ -49161,8 +49160,10 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "maxHitpoints": 2,
-            "flatRegenerationInterval": -1000
+            "maxHitpoints": 1,
+            "flatRegenerationInterval": -500,
+            "bleedDOTDamageTaken": -10,
+            "poisonDOTDamageTaken": -10
           }
         },
         "cost": {
@@ -49170,12 +49171,12 @@
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 10000000,
+              "cost": 4500000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 100000000,
+              "cost": 45000000,
               "type": "Fixed"
             }
           ]
@@ -49196,7 +49197,7 @@
           },
           {
             "type": "DungeonCompletion",
-            "dungeonID": "melvorF:Into_the_Mist",
+            "dungeonID": "melvorF:Infernal_Stronghold",
             "count": 1
           }
         ],
@@ -49204,7 +49205,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Hitpoints Master",
-        "customDescription": "Gain +2% Maximum Hitpoints and -1s Regen Interval"
+        "customDescription": "+1% Maximum HP, -0.5s Regen Interval, -10% Dmg Taken from Bleed & Poison"
       },
       {
         "id": "Hitpoints_Grandmaster",
@@ -49213,9 +49214,17 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "hPRegenBasedOnMaxHP": 5,
-            "maxHitpoints": 2,
-            "flatRegenerationInterval": -2000
+            "effectIgnoreChance": [
+              {
+                "effectGroupID":"melvorD:Debuff",
+                "value": 2
+              },
+              {
+                "effectGroupID":"melvorD:DamageOverTime",
+                "value": 2
+              }
+            ],
+            "hitpointRegeneration": 50
           }
         },
         "cost": {
@@ -49223,12 +49232,12 @@
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 20000000,
+              "cost": 10000000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 200000000,
+              "cost": 100000000,
               "type": "Fixed"
             }
           ]
@@ -49249,7 +49258,7 @@
           },
           {
             "type": "DungeonCompletion",
-            "dungeonID": "melvorF:Impending_Darkness",
+            "dungeonID": "melvorF:Fire_God_Dungeon",
             "count": 1
           }
         ],
@@ -49257,7 +49266,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Hitpoints Grandmaster",
-        "customDescription": "Gain +5% Maximum Hitpoints added as Regen, +1% Maximum Hitpoints, and -2s Regen Interval"
+        "customDescription": "+2% Chance to ignore Debuffs and DOT effects, +50% HP Regen"
       },
       {
         "id": "Hitpoints_Training",
@@ -49266,7 +49275,7 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "flatMaxHitpoints": 0.1
+            "flatRegenerationInterval": -10
           }
         },
         "cost": {
@@ -49274,12 +49283,12 @@
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 750000,
+              "cost": 50000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 7500000,
+              "cost": 500000,
               "type": "Fixed"
             }
           ]
@@ -49291,7 +49300,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": true,
         "customName": "Hitpoints Training",
-        "customDescription": "Gain +1 Maximum Hitpoints"
+        "customDescription": "-0.01s HP Regen Interval"
       },
       {
         "id": "Hitpoints_Mastery_Cape",
@@ -49315,7 +49324,7 @@
           "currencies": [
             {
               "currency": "melvorD:GP",
-              "cost": 50000000,
+              "cost": 9999999,
               "type": "Fixed"
             }
           ]

@@ -587,6 +587,12 @@ SAE v0.9.6.2 - The Balance Patch Part 2
 - Defence Grandmaster reworked to increase current DR by 25% for the first time you are hit each Fight. Price reduced to 10M SC and 100M GP. Requirement to purchase reduced to 1 Completion of Fire God Dungeon.
 - Defence Training price reduced to 50K SC and 500K GP.
 - Defence Mastery Cape price reduced to 9.99M GP. Reworked from +5% Flat Resistance against Bosses to +10% Global Evasion against Bosses.
+- Hitpoints Adept reworked to give +50% Hitpoint Regen, +10% Chance to Ignore Poison and Bleed. Price reduced to 500K SC and 5M GP.
+- Hitpoints Expert reworked to give +2% Chance to ignore Stuns and Stunlikes, +3% Lifesteal. Price reduced to 1.5M SC and 15M GP.
+- Hitpoints Master reworked to give +1% Maximum HP, -0.5s Regen Interval, -10% Dmg Taken from Bleed & Poison. Price reduced to 4.5M SC and 15M GP. Requirement to purchase reduced to 1 Completion of Infernal Stronghold.
+- Hitpoints Grandmaster reworked to give +2% Chance to ignore Debuffs and DOT effects, +50% HP Regen. Price reduced to 10M SC and 100M GP. Requirement to purchase reduced to 1 Completion of Fire God Dungeon.
+- Hitpoints Training reworked to give -0.01s HP Regen Interval. Price reduced to 50K SC and 500K GP.
+- Hitpoints Mastery Cape reworked to give +1% Max HP and +25% HP Regen. Price to purchase reduced to 9.99M GP.
 
 # Fixes
 ## Shop Purchases
