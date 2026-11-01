@@ -2877,6 +2877,53 @@
     ],
     "auroraSpells": [
       {
+        "id": "StormlightAura",
+        "name": "Stormlight Aura",
+        "media": "assets/combat/magic/stormlight_aura.png",
+        "level": 90,
+        "requirements": [
+          {
+            "purchaseID": "expandedAreas:Magic_Grandmaster",
+            "type": "ShopPurchase",
+            "count": 1
+          }
+        ],
+        "runesRequired": [
+          {
+            "id": "melvorD:Light_Rune",
+            "quantity": 5
+          },
+          {
+            "id": "melvorD:Air_Rune",
+            "quantity": 5
+          },
+          {
+            "id": "melvorD:Water_Rune",
+            "quantity": 5
+          },
+          {
+            "id": "melvorD:Earth_Rune",
+            "quantity": 5
+          },
+          {
+            "id": "melvorD:Fire_Rune",
+            "quantity": 5
+          }
+        ],
+        "enemyModifiers": {
+          "flatAttackInterval": 100,
+          "accuracyRating": -5
+        },
+        "combatEffects": [
+          {
+            "appliesWhen": "HitByAttack",
+            "tableID": "melvorF:ElementalEffect",
+            "chance": 10,
+            "customDescription": "10% chance to apply a random Elemental effect to the Enemy when you are hit by an attack"
+          }
+        ]
+      },
+      {
         "id": "GoldenAura",
         "name": "Golden Aura",
         "media": "assets/combat/magic/golden_aura.svg",
@@ -2884,14 +2931,14 @@
         "runesRequired": [
           {
             "id": "melvorD:Light_Rune",
-            "quantity": 5
+            "quantity": 10
           }
         ],
         "conditionalModifiers": [
           {
-            "description": "+5% Reflect Damage against Hellish and Undead Monsters",
+            "description": "+15% Reflect Damage against Hellish and Undead Monsters",
             "modifiers": {
-              "reflectDamage": 4.5
+              "reflectDamage": 10
             },
             "condition": {
               "type": "Some",
@@ -2911,8 +2958,8 @@
           }
         ],
         "modifiers": {
-          "flatPrayerPointsWhenHit": 1,
-          "reflectDamage": 0.5
+          "healingWhenHit": 0.5,
+          "reflectDamage": 5
         }
       }
     ],
@@ -11734,7 +11781,9 @@
             "condition": {
               "type": "FightingSlayerTask"
             },
-            "accuracyRating": 2
+            "modifiers": {
+              "accuracyRating": 2
+            }
           }
         ],
         "consumesOn": [
@@ -20636,6 +20685,10 @@
           {
             "key": "magicDefenceBonus",
             "value": 9
+          },
+          {
+            "key": "damageReduction",
+            "value": 1
           }
         ],
         "conditionalModifiers": [
@@ -20697,6 +20750,10 @@
           {
             "key": "magicDefenceBonus",
             "value": 9
+          },
+          {
+            "key": "damageReduction",
+            "value": 1
           }
         ],
         "modifiers": {
@@ -20744,6 +20801,10 @@
           {
             "key": "magicDefenceBonus",
             "value": 80
+          },
+          {
+            "key": "damageReduction",
+            "value": 1
           }
         ],
         "conditionalModifiers": [
@@ -20799,6 +20860,10 @@
           {
             "key": "magicDefenceBonus",
             "value": 9
+          },
+          {
+            "key": "damageReduction",
+            "value": 1
           }
         ],
         "modifiers": {
@@ -20847,6 +20912,18 @@
           {
             "key": "magicDefenceBonus",
             "value": 9
+          },
+          {
+            "key": "rangedAttackBonus",
+            "value": 9
+          },
+          {
+            "key": "rangedStrengthBonus",
+            "value": 3
+          },
+          {
+            "key": "damageReduction",
+            "value": 1
           }
         ],
         "modifiers": {
@@ -20877,7 +20954,6 @@
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 500000,
-        "customDescription": "Rune-providing items provide 2x as many runes, and +5% Chance to ignore any Debuffs while your Attack Style is Magic",
         "tier": "Skillcape",
         "validSlots": [
           "Cape"
@@ -20907,29 +20983,30 @@
           {
             "key": "magicDefenceBonus",
             "value": 9
+          },
+          {
+            "key": "magicDamageBonus",
+            "value": 3
+          },
+          {
+            "key": "magicAttackBonus",
+            "value": 9
+          },
+          {
+            "key": "damageReduction",
+            "value": 1
           }
         ],
         "modifiers": {
-          "doubleRuneProvision": 1
-        },
-        "conditionalModifiers": [
-          {
-            "condition": {
-              "character": "Player",
-              "thisAttackType": "magic",
-              "targetAttackType": "any",
-              "type": "CombatType"
-            },
-            "modifiers": {
-              "effectIgnoreChance": [
-                {
-                  "effectGroupID": "melvorD:Debuff",
-                  "value": 5
-                }
-              ]
+          "doubleRuneProvision": 1,
+          "magicLifesteal": 3,
+          "flatSkillInterval": [
+            {
+              "skillID": "melvorD:Magic",
+              "value": -100
             }
-          }
-        ]
+          ]
+        }
       },
       {
         "itemType": "Equipment",
@@ -20942,7 +21019,6 @@
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 500000,
-        "customDescription": "-50% Prayer Point Cost and Bones are automatically buried for 5x their Prayer Point value",
         "tier": "Skillcape",
         "validSlots": [
           "Cape"
@@ -20972,11 +21048,16 @@
           {
             "key": "magicDefenceBonus",
             "value": 9
+          },
+          {
+            "key": "damageReduction",
+            "value": 1
           }
         ],
         "modifiers": {
           "prayerPointCost": -50,
-          "melvorD:autoBurying": 500
+          "flatPrayerPointsWhenHit": 2,
+          "itemProtection": 1
         }
       },
       {
@@ -49705,9 +49786,9 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "magicLifesteal": 5,
-            "magicMaxHitAgainstMelee": 3,
-            "magicAccuracyRating": 10
+            "magicEvasion": 4,
+            "bypassRunePreservationChance": 3,
+            "magicMaxHit": 1
           }
         },
         "cost": {
@@ -49715,12 +49796,12 @@
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 7500000,
+              "cost": 500000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 75000000,
+              "cost": 5000000,
               "type": "Fixed"
             }
           ]
@@ -49738,7 +49819,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Magic Adept",
-        "customDescription": "Gain +5% Magic Lifesteal, +3% Magic Maximum Hit (tripled against Melee Enemies), and +10% Magic Accuracy"
+        "customDescription": "+1% Magic Max Hit, +4% Magic Evasion, +3% Rune Preservation Chance (Bypasses Gamemode limitations)"
       },
       {
         "id": "Magic_Expert",
@@ -49755,10 +49836,15 @@
                 "type": "CombatType"
               },
               "modifiers": {
-                "curseLifesteal": 10
+                "curseLifesteal": 3
               },
               "enemyModifiers": {
-                "dotDamageTaken": 20
+                "damageTaken": [
+                  {
+                    "effectGroupID": "melvorD:Curse",
+                    "value": 3
+                  }
+                ]
               }
             }
           ]
@@ -49768,12 +49854,12 @@
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 15000000,
+              "cost": 1500000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 150000000,
+              "cost": 15000000,
               "type": "Fixed"
             }
           ]
@@ -49797,7 +49883,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Magic Expert",
-        "customDescription": "Gain +10% Magic Lifesteal while the Enemy is Cursed and +20% DoT Damage"
+        "customDescription": "+3% Magic Lifesteal while Enemy is Cursed, Enemy takes +3% Damage while Cursed"
       },
       {
         "id": "Magic_Master",
@@ -49805,23 +49891,86 @@
         "category": "expandedAreas:CombatMastery",
         "contains": {
           "items": [],
-          "modifiers": {
-            "magicAccuracyRating": 10,
-            "magicProtection": 10,
-            "runePreservationChance": 10
-          }
+          "combatEffects": [
+            {
+              "appliesWhen": "PostAttack",
+              "chance": 1,
+              "tableID": "melvorF:ElementalEffect",
+              "condition": {
+                "type": "Some",
+                "conditions": [
+                  {
+                    "character": "Player",
+                    "thisAttackType": "melee",
+                    "targetAttackType": "any",
+                    "type": "CombatType"
+                  },
+                  {
+                    "character": "Player",
+                    "thisAttackType": "ranged",
+                    "targetAttackType": "any",
+                    "type": "CombatType"
+                  }
+                ]
+              }
+            },
+            {
+              "appliesWhen": "PostAttack",
+              "chance": 3,
+              "tableID": "melvorF:ElementalEffect",
+              "condition": {
+                "character": "Player",
+                "thisAttackType": "magic",
+                "targetAttackType": "any",
+                "type": "CombatType"
+              }
+            },
+            {
+              "appliesWhen": "PostAttack",
+              "chance": 1,
+              "tableID": "melvorF:RandomCurse",
+              "condition": {
+                "type": "Some",
+                "conditions": [
+                  {
+                    "character": "Player",
+                    "thisAttackType": "melee",
+                    "targetAttackType": "any",
+                    "type": "CombatType"
+                  },
+                  {
+                    "character": "Player",
+                    "thisAttackType": "ranged",
+                    "targetAttackType": "any",
+                    "type": "CombatType"
+                  }
+                ]
+              }
+            },
+            {
+              "appliesWhen": "PostAttack",
+              "chance": 3,
+              "tableID": "melvorF:RandomCurse",
+              "condition": {
+                "character": "Player",
+                "thisAttackType": "magic",
+                "targetAttackType": "any",
+                "type": "CombatType"
+              }
+            }
+          ]
         },
         "cost": {
           "items": [],
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 30000000,
+              "cost": 4500000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 300000000,
+              "cost": 45000000,
               "type": "Fixed"
             }
           ]
@@ -49837,7 +49986,7 @@
         "purchaseRequirements": [
           {
             "type": "DungeonCompletion",
-            "dungeonID": "melvorF:Into_the_Mist",
+            "dungeonID": "melvorF:Infernal_Stronghold",
             "count": 1
           },
           {
@@ -49850,7 +49999,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Magic Master",
-        "customDescription": "Gain +10% to: Magic Accuracy Rating, Rune Preservation Chance, and Dodge Chance against Magic Enemies"
+        "customDescription": "1% chance when attacking to apply a random Elemental effect or Curse when using any Combat Style, increased to 3% when using Magic."
       },
       {
         "id": "Magic_Grandmaster",
@@ -49858,68 +50007,39 @@
         "category": "expandedAreas:CombatMastery",
         "contains": {
           "items": [],
-          "modifiers": {
-            "flatSpellRuneCost": [
-              {
-                "itemID": "melvorD:Mind_Rune",
-                "value": -1
-              },
-              {
-                "itemID": "melvorD:Chaos_Rune",
-                "value": -1
-              },
-              {
-                "itemID": "melvorD:Death_Rune",
-                "value": -1
-              },
-              {
-                "itemID": "melvorD:Blood_Rune",
-                "value": -1
-              },
-              {
-                "itemID": "melvorD:Ancient_Rune",
-                "value": -1
-              }
-            ]
-          },
           "conditionalModifiers": [
             {
               "condition": {
-                "character": "Player",
                 "thisAttackType": "magic",
                 "targetAttackType": "any",
+                "character": "Player",
                 "type": "CombatType"
               },
-              "enemyModifiers": {
-                "dotDamageTaken": 10
+              "modifiers": {
+                "flatAttackInterval": -100
               }
             }
           ],
-          "combatEffects": [
-            {
-              "appliesWhen": "HitByFirstAttack",
-              "chance": 50,
-              "condition": {
-                "character": "Player",
-                "thisAttackType": "magic",
-                "targetAttackType": "ranged",
-                "type": "CombatType"
-              },
-              "effectID": "melvorD:Freeze"
-            }
-          ]
+          "modifiers": {
+            "flatSkillInterval": [
+              {
+                "skillID": "melvorD:Magic",
+                "value": -100
+              }
+            ]
+          }
         },
         "cost": {
           "items": [],
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 60000000,
+              "cost": 10000000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 600000000,
+              "cost": 100000000,
               "type": "Fixed"
             }
           ]
@@ -49935,7 +50055,7 @@
         "purchaseRequirements": [
           {
             "type": "DungeonCompletion",
-            "dungeonID": "melvorF:Impending_Darkness",
+            "dungeonID": "melvorF:Fire_God_Dungeon",
             "count": 1
           },
           {
@@ -49948,7 +50068,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Magic Grandmaster",
-        "customDescription": "Gain +10% DoT damage, -1 Flat Attack Spell Rune Cost, and a 50% Chance when hit by the first Ranged Attack of the Fight to Freeze the Enemy for 2 turns."
+        "customDescription": "-0.1s Magic Attack Interval and -0.1s Alt. Magic Interval. Gain access to the Aurora Spell, Stormlight Aura.<br>Stormlight Aura: Enemy has +0.1s Attack Interval and -5% Global Accuracy Rating. 10% chance when you are hit by an attack to apply a random Elemental effect to the Enemy."
       },
       {
         "id": "Magic_Training",
@@ -49958,8 +50078,8 @@
           "items": [],
           "modifiers": {
             "flatMagicAttackBonus": 1,
-            "flatMagicMaxHit": 1,
-            "flatMagicDefenceBonus": 1
+            "flatMagicDefenceBonus": 1,
+            "bypassRunePreservationChance": 0.1
           }
         },
         "cost": {
@@ -49967,12 +50087,12 @@
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 550000,
+              "cost": 50000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 5500000,
+              "cost": 500000,
               "type": "Fixed"
             }
           ]
@@ -49984,7 +50104,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": true,
         "customName": "Magic Training",
-        "customDescription": "Gain a +1 Flat Bonus to: Magic Attack, Magic Max Hit, and Magic Defence"
+        "customDescription": "+1 Magic Attack and Defence Bonus, +0.1% Rune Preservation Chance (Bypasses Gamemode limitations)"
       },
       {
         "id": "Magic_Mastery_Cape",
@@ -50008,7 +50128,7 @@
           "currencies": [
             {
               "currency": "melvorD:GP",
-              "cost": 50000000,
+              "cost": 9999999,
               "type": "Fixed"
             }
           ]
@@ -50034,9 +50154,8 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "damageTakenAddedAsPrayerPoints": 5,
-            "maxHitBasedOnPrayerCost": 0.5,
-            "prayerPointPreservationChance": 10
+            "damageTakenAddedAsPrayerPoints": 10,
+            "prayerPointPreservationChance": 5
           }
         },
         "cost": {
@@ -50044,12 +50163,12 @@
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 1000000,
+              "cost": 250000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 10000000,
+              "cost": 2500000,
               "type": "Fixed"
             }
           ]
@@ -50067,7 +50186,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Prayer Adept",
-        "customDescription": "5% of Damage Taken added as Prayer Points, +0.5% Maximum Hit per Prayer Point Cost of Active Prayers, and +10% Chance to Preserve Prayer Points"
+        "customDescription": "10% of Dmg Taken added as Prayer Points, +5% Prayer Point Preservation Chance"
       },
       {
         "id": "Prayer_Expert",
@@ -50076,13 +50195,8 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "flatResistanceWithActivePrayer": [
-              {
-                "damageTypeID": "melvorD:Normal",
-                "value": 2
-              }
-            ],
-            "prayerPointPreservationChance": 10
+            "prayerPointsFromBurying": 100,
+            "flatPrayerPointsPerMonsterKill": 10
           }
         },
         "cost": {
@@ -50090,12 +50204,12 @@
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 2000000,
+              "cost": 750000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 20000000,
+              "cost": 7500000,
               "type": "Fixed"
             }
           ]
@@ -50119,7 +50233,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Prayer Expert",
-        "customDescription": "2% Resistance while at least one Prayer is Active and +10% Chance to Preserve Prayer Points"
+        "customDescription": "x2 Prayer Points from Burying, 10 Prayer Points gained per Monster Kill"
       },
       {
         "id": "Prayer_Master",
@@ -50128,8 +50242,8 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "prayerPointPreservationChance": 10,
-            "rebirthChance": 1
+            "maxHitBasedOnPrayerCost": 0.1,
+            "prayerPointsFromBurying": 100
           }
         },
         "cost": {
@@ -50137,12 +50251,12 @@
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 4000000,
+              "cost": 1500000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 40000000,
+              "cost": 15000000,
               "type": "Fixed"
             }
           ]
@@ -50158,7 +50272,7 @@
         "purchaseRequirements": [
           {
             "type": "DungeonCompletion",
-            "dungeonID": "melvorF:Into_the_Mist",
+            "dungeonID": "melvorF:Infernal_Stronghold",
             "count": 1
           },
           {
@@ -50171,7 +50285,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Prayer Master",
-        "customDescription": "+10% Chance to Preserve Prayer Points and +1% Rebirth Chance"
+        "customDescription": "x3 Prayer Points from Burying, +0.1% Max Hit per Prayer Point cost of active prayers"
       },
       {
         "id": "Prayer_Grandmaster",
@@ -50180,9 +50294,9 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "damageTakenAddedAsPrayerPoints": 5,
-            "maxHitBasedOnPrayerCost": 0.5,
-            "rebirthChance": 2
+            "rebirthChance": 10,
+            "prayerPointPreservationChance": 5,
+            "freeProtectItem": 1
           }
         },
         "cost": {
@@ -50190,12 +50304,12 @@
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 8000000,
+              "cost": 5000000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 80000000,
+              "cost": 50000000,
               "type": "Fixed"
             }
           ]
@@ -50215,7 +50329,7 @@
             "type": "SkillLevel"
           },
           {
-            "dungeonID": "melvorF:Impending_Darkness",
+            "dungeonID": "melvorF:Fire_God_Dungeon",
             "count": 1,
             "type": "DungeonCompletion"
           }
@@ -50224,7 +50338,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Prayer Grandmaster",
-        "customDescription": "+5% of Damage Taken added as Prayer Points, +0.5% Maximum Hit per Prayer Point cost, and +2% Rebirth Chance"
+        "customDescription": "+10% Rebirth Chance (respawn with 100% HP after being killed), +5% Prayer Point Preservation Chance, and the Protect Item prayer now costs nothing"
       },
       {
         "id": "Prayer_Training",
@@ -50233,8 +50347,8 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "prayerPointsFromBurying": 1,
-            "prayerPointPreservationChance": 0.25
+            "prayerPointsFromBurying": 10,
+            "flatPrayerPointsPerMonsterKill": 1
           }
         },
         "cost": {
@@ -50242,12 +50356,12 @@
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 100000,
+              "cost": 25000,
               "type": "Fixed"
             },
             {
               "currency": "melvorD:GP",
-              "cost": 1000000,
+              "cost": 250000,
               "type": "Fixed"
             }
           ]
@@ -50259,7 +50373,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": true,
         "customName": "Prayer Training",
-        "customDescription": "Gain +1% to Prayer Points from Burying and +0.25% Prayer Point Preservation Chance"
+        "customDescription": "+10% Prayer Points from Burying, +1 Flat Prayer Point per Monster Kill"
       },
       {
         "id": "Prayer_Mastery_Cape",
@@ -50283,7 +50397,7 @@
           "currencies": [
             {
               "currency": "melvorD:GP",
-              "cost": 50000000,
+              "cost": 9999999,
               "type": "Fixed"
             }
           ]

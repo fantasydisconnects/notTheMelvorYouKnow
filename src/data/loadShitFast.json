@@ -4,7 +4,9 @@
   "data": {
     "attacks": [],
     "attackSpells": [],
-    "auroraSpells": [],
+    "auroraSpells": [
+      
+    ],
     "bankSortOrder": [],
     "combatAreas": [],
     "combatEffectGroups": [],
@@ -42,8 +44,8 @@
         "conditionalModifiers": [
           {
             "condition": {
-              "type": "FightingBoss",
-              "character": "Player"
+              "character": "Player",
+              "effectID": ""
             },
             "modifiers": {
               "resistance": [

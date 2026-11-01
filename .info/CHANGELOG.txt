@@ -599,8 +599,21 @@ SAE v0.9.6.2 - The Balance Patch Part 2
 - Ranged Grandmaster reworked to start each fight with 10 stacks that give +1% Ranged Accuracy Rating and -1% Ranged Attack Interval. One stack is removed each time you hit with an attack. Price reduced to 10M SC and 100M GP.
 - Ranged Training buffs reduced to +0.5 Flat Ranged Attack Bonus and +0.2 Ranged Strength Bonus (down from +1 to both). Price reduced to 50K SC and 500K GP.
 - Ranged Mastery Cape price reduced to 9.99M GP. Reworked to give +50% Ammo Preservation and -0.2s Ranged Attack Interval.
+- Magic Adept reworked to give +1% Magic Max Hit, +4% Magic Evasion, +3% Rune Preservation Chance (Bypasses Gamemode limitations). Price reduced to 500K SC and 5M GP.
+- Magic Expert reworked to give +3% Lifesteal while Enemy is Cursed, Enemy takes +3% damage while Cursed. Price reduced to 1.5M SC and 15M GP.
+- Magic Master reworked to give 1% chance when attacking to apply a random Elemental effect or Curse when using any Combat Style, increased to 3% when using Magic. Price reduced to 4.5M SC and 45M GP. Requirement to purchase reduced to 1 Completion of Infernal Stronghold.
+- Magic Grandmaster reworked to give -0.1s Magic Attack Interval and -0.1s Alt. Magic Interval. Gain access to the Aurora Spell, Stormlight Aura.<br>Stormlight Aura: Enemy has +0.1s Attack Interval and -5% Global Accuracy Rating. 10% chance when you are hit by an attack to apply a random Elemental effect to the Enemy. Price reduced to 10M SC and 100M GP.
+- Magic Training reworked to give +1 Magic Attack and Defence Bonus, +0.1% Rune Preservation Chance (Bypasses Gamemode limitations). Price reduced to 50K SC and 500K GP.
+- Magic Mastery Cape reworked to give x2 Rune Provision, +3% Magic Lifesteal, and -0.1s Alt. Magic Interval.
+- Prayer Adept reworked to give 10% of Dmg Taken added as Prayer Points, +5% Prayer Point Preservation Chance. Price reduced to 250K SC and 2.5M GP.
+- Prayer Expert reworked to give x2 Prayer Points from Burying, 10 Prayer Points gained per Monster Kill. Price reduced to 750K SC and 7.5M GP.
+- Prayer Master reworked to give x3 Prayer Points from Buring, +0.1% Max Hit per Prayer Point cost of Active Prayers. Price reduced to 1.5M SC and 15M GP.
+- Prayer Grandmaster reworked to give +10% Rebirth Chance (respawn with 100% HP after being killed), +5% Prayer Point Preservation Chance, and the Protect Item prayer now costs nothing. Price reduced to 5M SC and 50M GP.
+- Prayer Training reworked to give +10% Prayer Points from Burying, +1 Flat Prayer Point per Monster Kill. Price reduced to 25K SC and 250K GP.
 
 # Fixes
 ## Shop Purchases
 - Strength Training modifier fixed to accurately reflect its description. (Previously, it incorrectly gave +1% Melee Strength Bonus from Equipment per purchase.)
 - Defence Adept resistance modifier fixed to accurately reflect its description. (Previously, it incorrectly increased *total* DR by 1%--essentially nothing.)
+## Summoning Familiars
+- Guillermo the Slayer mistakenly was not giving +2% Slayer Task Accuracy as intended.
