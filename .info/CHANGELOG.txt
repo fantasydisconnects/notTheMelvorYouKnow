@@ -610,6 +610,11 @@ SAE v0.9.6.2 - The Balance Patch Part 2
 - Prayer Master reworked to give x3 Prayer Points from Buring, +0.1% Max Hit per Prayer Point cost of Active Prayers. Price reduced to 1.5M SC and 15M GP.
 - Prayer Grandmaster reworked to give +10% Rebirth Chance (respawn with 100% HP after being killed), +5% Prayer Point Preservation Chance, and the Protect Item prayer now costs nothing. Price reduced to 5M SC and 50M GP.
 - Prayer Training reworked to give +10% Prayer Points from Burying, +1 Flat Prayer Point per Monster Kill. Price reduced to 25K SC and 250K GP.
+- Slayer Adept reworked to give -5% Slayer Task and Task Extension costs, +5% Slayer Area Effect Negation. Price reduced to 500K SC and 5M GP.
+- Slayer Expert reworked to give +2% Dmg Dealt to Slayer Area Monsters, +2% Flat Resistance against Slayer Tasks. Price reduced to 1.5M SC and 15M GP.
+- Slayer Master reworked to give +5% Flat Slayer Area Effect Negation, -0.1s Monster Respawn Interval, Slayer Task Enemies have -10% Accuracy. Price reduced to 4.5M SC and 45M GP. Requirement to purchase reduced to 1 Completion of Infernal Stronghold.
+- Slayer Grandmaster reworked to give +10% Slayer Area Effect Negation, +10% Slayer Task Loot Doubling Chance, -0.2s Slayer Task Respawn Interval. Price reduced to 10M SC and 100M GP. Requirement to purchase reduced to 1 Completion of Fire God Dungeon.
+- Slayer Mastery Cape reworked to give -10% Slayer Task Cost, -0.1s Monster Respawn Interval (in addition to the Slayer Skillcape bonuses). Price reduced to 9.99M.
 
 # Fixes
 ## Shop Purchases
