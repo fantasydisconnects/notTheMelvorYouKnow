@@ -624,6 +624,13 @@ SAE v0.9.6.2 - The Balance Patch Part 2
 - Guillermo the Slayer mistakenly was not giving +2% Slayer Task Accuracy as intended.
 
 SAE v0.9.6.3 - The Balance Patch Part 3
+# Additions
+
+## Shop Purchases
+
+### Skilling Upgrades
+- A Township Upgrade Chain with 6 tiers has been added. Each contains flavorful bonuses and penalties, and are very costly.
+
 # Changes
 ## Shop Purchases
 
