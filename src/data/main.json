@@ -53722,7 +53722,6 @@
                 "value": -100
               }
             ],
-            "firemakingBonfireInterval": 10,
             "firemakingBonfireInterval": 10
           }
         },
@@ -55981,16 +55980,52 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "flatBasePrimaryProductQuantity": [
+            "flatSkillInterval": [
               {
                 "skillID": "melvorD:Fletching",
-                "value": 1
+                "categoryID": "melvorF:Arrows",
+                "value": -100
+              },
+              {
+                "skillID": "melvorD:Fletching",
+                "categoryID": "melvorF:Javelins",
+                "value": -100
+              },
+              {
+                "skillID": "melvorD:Fletching",
+                "categoryID": "melvorF:Bolts",
+                "value": -100
+              },
+              {
+                "skillID": "melvorD:Fletching",
+                "categoryID": "expandedAreas:StandardThrownaxes",
+                "value": -100
               }
             ],
-            "skillPreservationChance": [
+            "additional8PrimaryProductChance": [
               {
+                "categoryID": "melvorF:Arrows",
                 "skillID": "melvorD:Fletching",
-                "value": 1
+                "value": 5
+              }
+            ],
+            "additional3PrimaryProductChance": [
+              {
+                "categoryID": "melvorF:Javelins",
+                "skillID": "melvorD:Fletching",
+                "value": 5
+              }
+            ],
+            "additionalPrimaryProductChance": [
+              {
+                "categoryID": "melvorF:Bolts",
+                "skillID": "melvorD:Fletching",
+                "value": 5
+              },
+              {
+                "categoryID": "expandedAreas:StandardThrownaxes",
+                "skillID": "melvorD:Fletching",
+                "value": 5
               }
             ]
           }
@@ -56012,7 +56047,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Iron Whittling Tools",
-        "customDescription": "+1 flat base primary Fletching product for a total of +1 applied from your Whittling Tools.<br>+1% Fletching preservation chance for a total of +1% applied from your Whittling Tools."
+        "customDescription": "+5% chance to produce 50% more projectiles from Fletching (rounded up, cannot be doubled), -0.1s Fletching interval for projectiles. Total so far: +5%, -0.1s."
       },
       {
         "id": "Whittling_Tools_Steel",
@@ -56021,10 +56056,52 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "skillPreservationChance": [
+            "flatSkillInterval": [
               {
                 "skillID": "melvorD:Fletching",
-                "value": 1
+                "categoryID": "melvorF:Arrows",
+                "value": -100
+              },
+              {
+                "skillID": "melvorD:Fletching",
+                "categoryID": "melvorF:Javelins",
+                "value": -100
+              },
+              {
+                "skillID": "melvorD:Fletching",
+                "categoryID": "melvorF:Bolts",
+                "value": -100
+              },
+              {
+                "skillID": "melvorD:Fletching",
+                "categoryID": "expandedAreas:StandardThrownaxes",
+                "value": -100
+              }
+            ],
+            "additional8PrimaryProductChance": [
+              {
+                "categoryID": "melvorF:Arrows",
+                "skillID": "melvorD:Fletching",
+                "value": 5
+              }
+            ],
+            "additional3PrimaryProductChance": [
+              {
+                "categoryID": "melvorF:Javelins",
+                "skillID": "melvorD:Fletching",
+                "value": 5
+              }
+            ],
+            "additionalPrimaryProductChance": [
+              {
+                "categoryID": "melvorF:Bolts",
+                "skillID": "melvorD:Fletching",
+                "value": 5
+              },
+              {
+                "categoryID": "expandedAreas:StandardThrownaxes",
+                "skillID": "melvorD:Fletching",
+                "value": 5
               }
             ]
           }
@@ -56058,7 +56135,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Steel Whittling Tools",
-        "customDescription": "+1% Fletching preservation chance for a total of +2% applied from your Whittling Tools."
+        "customDescription": "+5% chance to produce 50% more projectiles from Fletching (rounded up, cannot be doubled), -0.1s Fletching interval for projectiles. Total so far: +10%, -0.2s."
       },
       {
         "id": "Whittling_Tools_Black",
@@ -56067,16 +56144,52 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "flatBasePrimaryProductQuantity": [
+            "flatSkillInterval": [
               {
                 "skillID": "melvorD:Fletching",
-                "value": 1
+                "categoryID": "melvorF:Arrows",
+                "value": -100
+              },
+              {
+                "skillID": "melvorD:Fletching",
+                "categoryID": "melvorF:Javelins",
+                "value": -100
+              },
+              {
+                "skillID": "melvorD:Fletching",
+                "categoryID": "melvorF:Bolts",
+                "value": -100
+              },
+              {
+                "skillID": "melvorD:Fletching",
+                "categoryID": "expandedAreas:StandardThrownaxes",
+                "value": -100
               }
             ],
-            "skillPreservationChance": [
+            "additional8PrimaryProductChance": [
               {
+                "categoryID": "melvorF:Arrows",
                 "skillID": "melvorD:Fletching",
-                "value": 1
+                "value": 5
+              }
+            ],
+            "additional3PrimaryProductChance": [
+              {
+                "categoryID": "melvorF:Javelins",
+                "skillID": "melvorD:Fletching",
+                "value": 5
+              }
+            ],
+            "additionalPrimaryProductChance": [
+              {
+                "categoryID": "melvorF:Bolts",
+                "skillID": "melvorD:Fletching",
+                "value": 5
+              },
+              {
+                "categoryID": "expandedAreas:StandardThrownaxes",
+                "skillID": "melvorD:Fletching",
+                "value": 5
               }
             ]
           }
@@ -56110,7 +56223,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Black Whittling Tools",
-        "customDescription": "+1 flat base primary Fletching product for a total of +2 applied from your Whittling Tools.<br>+1% Fletching preservation chance for a total of +3% applied from your Whittling Tools."
+        "customDescription": "+5% chance to produce 50% more projectiles from Fletching (rounded up, cannot be doubled), -0.1s Fletching interval for projectiles. Total so far: +15%, -0.3s."
       },
       {
         "id": "Whittling_Tools_Mithril",
@@ -56119,10 +56232,52 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "skillPreservationChance": [
+            "flatSkillInterval": [
               {
                 "skillID": "melvorD:Fletching",
-                "value": 1
+                "categoryID": "melvorF:Arrows",
+                "value": -100
+              },
+              {
+                "skillID": "melvorD:Fletching",
+                "categoryID": "melvorF:Javelins",
+                "value": -100
+              },
+              {
+                "skillID": "melvorD:Fletching",
+                "categoryID": "melvorF:Bolts",
+                "value": -100
+              },
+              {
+                "skillID": "melvorD:Fletching",
+                "categoryID": "expandedAreas:StandardThrownaxes",
+                "value": -100
+              }
+            ],
+            "additional8PrimaryProductChance": [
+              {
+                "categoryID": "melvorF:Arrows",
+                "skillID": "melvorD:Fletching",
+                "value": 5
+              }
+            ],
+            "additional3PrimaryProductChance": [
+              {
+                "categoryID": "melvorF:Javelins",
+                "skillID": "melvorD:Fletching",
+                "value": 5
+              }
+            ],
+            "additionalPrimaryProductChance": [
+              {
+                "categoryID": "melvorF:Bolts",
+                "skillID": "melvorD:Fletching",
+                "value": 5
+              },
+              {
+                "categoryID": "expandedAreas:StandardThrownaxes",
+                "skillID": "melvorD:Fletching",
+                "value": 5
               }
             ]
           }
@@ -56156,7 +56311,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Mithril Whittling Tools",
-        "customDescription": "+1% Fletching preservation chance for a total of +4% applied from your Whittling Tools."
+        "customDescription": "+5% chance to produce 50% more projectiles from Fletching (rounded up, cannot be doubled), -0.1s Fletching interval for projectiles. Total so far: +20%, -0.4s."
       },
       {
         "id": "Whittling_Tools_Adamant",
@@ -56165,16 +56320,52 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "flatBasePrimaryProductQuantity": [
+            "flatSkillInterval": [
               {
                 "skillID": "melvorD:Fletching",
-                "value": 1
+                "categoryID": "melvorF:Arrows",
+                "value": -100
+              },
+              {
+                "skillID": "melvorD:Fletching",
+                "categoryID": "melvorF:Javelins",
+                "value": -100
+              },
+              {
+                "skillID": "melvorD:Fletching",
+                "categoryID": "melvorF:Bolts",
+                "value": -100
+              },
+              {
+                "skillID": "melvorD:Fletching",
+                "categoryID": "expandedAreas:StandardThrownaxes",
+                "value": -100
               }
             ],
-            "skillPreservationChance": [
+            "additional8PrimaryProductChance": [
               {
+                "categoryID": "melvorF:Arrows",
                 "skillID": "melvorD:Fletching",
-                "value": 1
+                "value": 5
+              }
+            ],
+            "additional3PrimaryProductChance": [
+              {
+                "categoryID": "melvorF:Javelins",
+                "skillID": "melvorD:Fletching",
+                "value": 5
+              }
+            ],
+            "additionalPrimaryProductChance": [
+              {
+                "categoryID": "melvorF:Bolts",
+                "skillID": "melvorD:Fletching",
+                "value": 5
+              },
+              {
+                "categoryID": "expandedAreas:StandardThrownaxes",
+                "skillID": "melvorD:Fletching",
+                "value": 5
               }
             ]
           }
@@ -56208,7 +56399,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Adamant Whittling Tools",
-        "customDescription": "+1 flat base primary Fletching product for a total of +3 applied from your Whittling Tools.<br>+1% Fletching preservation chance for a total of +5% applied from your Whittling Tools."
+        "customDescription": "+5% chance to produce 50% more projectiles from Fletching (rounded up, cannot be doubled), -0.1s Fletching interval for projectiles. Total so far: +25%, -0.5s."
       },
       {
         "id": "Whittling_Tools_Rune",
@@ -56217,10 +56408,52 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "skillPreservationChance": [
+            "flatSkillInterval": [
               {
                 "skillID": "melvorD:Fletching",
-                "value": 1
+                "categoryID": "melvorF:Arrows",
+                "value": -100
+              },
+              {
+                "skillID": "melvorD:Fletching",
+                "categoryID": "melvorF:Javelins",
+                "value": -100
+              },
+              {
+                "skillID": "melvorD:Fletching",
+                "categoryID": "melvorF:Bolts",
+                "value": -100
+              },
+              {
+                "skillID": "melvorD:Fletching",
+                "categoryID": "expandedAreas:StandardThrownaxes",
+                "value": -100
+              }
+            ],
+            "additional8PrimaryProductChance": [
+              {
+                "categoryID": "melvorF:Arrows",
+                "skillID": "melvorD:Fletching",
+                "value": 5
+              }
+            ],
+            "additional3PrimaryProductChance": [
+              {
+                "categoryID": "melvorF:Javelins",
+                "skillID": "melvorD:Fletching",
+                "value": 5
+              }
+            ],
+            "additionalPrimaryProductChance": [
+              {
+                "categoryID": "melvorF:Bolts",
+                "skillID": "melvorD:Fletching",
+                "value": 5
+              },
+              {
+                "categoryID": "expandedAreas:StandardThrownaxes",
+                "skillID": "melvorD:Fletching",
+                "value": 5
               }
             ]
           }
@@ -56254,7 +56487,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Rune Whittling Tools",
-        "customDescription": "+1% Fletching preservation chance for a total of +6% applied from your Whittling Tools."
+        "customDescription": "+5% chance to produce 50% more projectiles from Fletching (rounded up, cannot be doubled), -0.1s Fletching interval for projectiles. Total so far: +30%, -0.6s."
       },
       {
         "id": "Whittling_Tools_Dragon",
@@ -56263,16 +56496,52 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "flatBasePrimaryProductQuantity": [
+            "flatSkillInterval": [
               {
                 "skillID": "melvorD:Fletching",
-                "value": 1
+                "categoryID": "melvorF:Arrows",
+                "value": -100
+              },
+              {
+                "skillID": "melvorD:Fletching",
+                "categoryID": "melvorF:Javelins",
+                "value": -100
+              },
+              {
+                "skillID": "melvorD:Fletching",
+                "categoryID": "melvorF:Bolts",
+                "value": -100
+              },
+              {
+                "skillID": "melvorD:Fletching",
+                "categoryID": "expandedAreas:StandardThrownaxes",
+                "value": -100
               }
             ],
-            "skillPreservationChance": [
+            "additional8PrimaryProductChance": [
               {
+                "categoryID": "melvorF:Arrows",
                 "skillID": "melvorD:Fletching",
-                "value": 1
+                "value": 5
+              }
+            ],
+            "additional3PrimaryProductChance": [
+              {
+                "categoryID": "melvorF:Javelins",
+                "skillID": "melvorD:Fletching",
+                "value": 5
+              }
+            ],
+            "additionalPrimaryProductChance": [
+              {
+                "categoryID": "melvorF:Bolts",
+                "skillID": "melvorD:Fletching",
+                "value": 5
+              },
+              {
+                "categoryID": "expandedAreas:StandardThrownaxes",
+                "skillID": "melvorD:Fletching",
+                "value": 5
               }
             ]
           }
@@ -56306,7 +56575,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Dragon Whittling Tools",
-        "customDescription": "+1 flat base primary Fletching product for a total of +4 applied from your Whittling Tools.<br>+1% Fletching preservation chance for a total of +7% applied from your Whittling Tools."
+        "customDescription": "+5% chance to produce 50% more projectiles from Fletching (rounded up, cannot be doubled), -0.1s Fletching interval for projectiles. Total so far: +35%, -0.7s."
       },
       {
         "id": "Auto_Eat_Tier_IV",
