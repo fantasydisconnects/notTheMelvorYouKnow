@@ -626,9 +626,15 @@ SAE v0.9.6.2 - The Balance Patch Part 2
 SAE v0.9.6.3 - The Balance Patch Part 3
 # Changes
 ## Shop Purchases
+
 ### Combat Mastery
+
 #### Training
 - All training purchases have been rebalanced (previously gave +1 flat bonuses per purchase). Accuracy bonuses reduced to +0.2, defence bonuses to +0.3, and strength/damage bonuses reduced to +0.1
   - Ranged Training also received +0.1% Ammo Preservation Chance per purchase
+
 #### Mastery Capes
 - Magic Mastery Cape magic lifesteal increased from 3% -> 12%, Alt. Magic Interval decreased from -0.1s -> -0.2
+
+### Skilling Upgrades
+- F
