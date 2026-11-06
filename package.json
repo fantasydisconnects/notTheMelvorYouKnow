@@ -13,10 +13,10 @@
   },
   "devDependencies": {
     "fflate": "0.8.3",
-    "wrangler": "4.146.0"
+    "wrangler": "^4.156.1"
   },
   "allowScripts": {
-    "esbuild@0.28.1": true,
-    "workerd@1.20261001.1": true
+    "esbuild@0.28.2": true,
+    "workerd@1.20261101.1": true
   }
 }

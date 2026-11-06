@@ -8002,6 +8002,45 @@
     ],
     "combatEffectTemplates": [
       {
+        "id": "KillCombo",
+        "description": "An effect that applies stacks of modifiers. Stacks are increased by 1 each time the character kills a monster. The effect is only removed when the character leaves combat.",
+        "baseEffectData": {
+          "turnText": "statGroup.stacks",
+          "tooltipSpans": [
+            {
+              "type": "Stats",
+              "statGroupName": "stacks"
+            },
+            {
+              "type": "StacksWithMax",
+              "stacks": "statGroup.stacks",
+              "maxStacks": "p.maxStacks"
+            }
+          ],
+          "descriptionTemplateData": {
+            "initialParameters": {
+              "maxStacks": "maxStacks"
+            },
+            "statGroups": {
+              "": "stacks"
+            }
+          },
+          "target": "Self",
+          "behaviours": [
+            {
+              "type": "ModifyStats",
+              "statGroupName": "stacks",
+              "newValue": "min(statGroup.stacks + 1, p.maxStacks)",
+              "triggersOn": [
+                {
+                  "type": "EndOfFight"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
         "id": "WitherDOT",
         "baseTemplates": [
           "melvorD:DOT",
@@ -20771,7 +20810,7 @@
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 500000,
-        "customDescription": "+80 All Defence Bonuses and +5% Resistance against Bosses",
+        "customDescription": "+80 All Defence Bonuses and +10% Evasion Rating against Bosses",
         "tier": "Skillcape",
         "validSlots": [
           "Cape"
@@ -20830,7 +20869,6 @@
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 500000,
-        "customDescription": "+10 Flat Regen and +5% Maximum Hitpoints",
         "tier": "Skillcape",
         "validSlots": [
           "Cape"
@@ -20999,11 +21037,11 @@
         ],
         "modifiers": {
           "doubleRuneProvision": 1,
-          "magicLifesteal": 3,
+          "magicLifesteal": 12,
           "flatSkillInterval": [
             {
               "skillID": "melvorD:Magic",
-              "value": -100
+              "value": -200
             }
           ]
         }
@@ -48485,9 +48523,9 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "flatStabAttackBonus": 1,
-            "flatSlashAttackBonus": 1,
-            "flatBlockAttackBonus": 1
+            "flatStabAttackBonus": 0.3,
+            "flatSlashAttackBonus": 0.3,
+            "flatBlockAttackBonus": 0.3
           }
         },
         "cost": {
@@ -48512,7 +48550,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": true,
         "customName": "Attack Training",
-        "customDescription": "Gain +1 Flat Melee Accuracy"
+        "customDescription": "+0.3 Flat Melee Accuracy"
       },
       {
         "id": "Attack_Mastery_Cape",
@@ -48557,8 +48595,7 @@
         ],
         "defaultBuyLimit": 1,
         "buyLimitOverrides": [],
-        "showBuyLimit": false,
-        "customName": "Attack Mastery Cape"
+        "showBuyLimit": false
       },
       {
         "id": "Strength_Adept",
@@ -48794,7 +48831,7 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "flatMeleeStrengthBonus": 1
+            "flatMeleeStrengthBonus": 0.2
           }
         },
         "cost": {
@@ -48819,7 +48856,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": true,
         "customName": "Strength Training",
-        "customDescription": "Gain +1 Flat Melee Strength Bonus"
+        "customDescription": "Gain +0.2 Flat Melee Strength Bonus"
       },
       {
         "id": "Strength_Mastery_Cape",
@@ -48864,8 +48901,7 @@
         ],
         "defaultBuyLimit": 0,
         "buyLimitOverrides": [],
-        "showBuyLimit": false,
-        "customName": "Strength Mastery Cape"
+        "showBuyLimit": false
       },
       {
         "id": "Defence_Adept",
@@ -49095,9 +49131,9 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "flatMeleeDefenceBonus": 1,
-            "flatRangedDefenceBonus": 1,
-            "flatMagicDefenceBonus": 1
+            "flatMeleeDefenceBonus": 0.3,
+            "flatRangedDefenceBonus": 0.3,
+            "flatMagicDefenceBonus": 0.3
           }
         },
         "cost": {
@@ -49122,7 +49158,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": true,
         "customName": "Defence Training",
-        "customDescription": "Gain +1 Flat Defence Bonus"
+        "customDescription": "+0.3 Flat Defence Bonus"
       },
       {
         "id": "Defence_Mastery_Cape",
@@ -49167,8 +49203,7 @@
         ],
         "defaultBuyLimit": 0,
         "buyLimitOverrides": [],
-        "showBuyLimit": false,
-        "customName": "Defence Mastery Cape"
+        "showBuyLimit": false
       },
       {
         "id": "Hitpoints_Adept",
@@ -49422,8 +49457,7 @@
         "defaultBuyLimit": 100,
         "buyLimitOverrides": [],
         "showBuyLimit": true,
-        "customName": "Hitpoints Training",
-        "customDescription": "-0.01s HP Regen Interval"
+        "customName": "Hitpoints Training"
       },
       {
         "id": "Hitpoints_Mastery_Cape",
@@ -49468,8 +49502,7 @@
         ],
         "defaultBuyLimit": 0,
         "buyLimitOverrides": [],
-        "showBuyLimit": false,
-        "customName": "Hitpoints Mastery Cape"
+        "showBuyLimit": false
       },
       {
         "id": "Ranged_Adept",
@@ -49705,8 +49738,9 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "flatRangedAttackBonus": 0.5,
-            "flatRangedStrengthBonus": 0.2
+            "flatRangedAttackBonus": 0.3,
+            "flatRangedStrengthBonus": 0.1,
+            "bypassAmmoPreservationChance": 0.1
           }
         },
         "cost": {
@@ -49731,7 +49765,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": true,
         "customName": "Ranged Training",
-        "customDescription": "Gain +0.5 Flat Bonus to Ranged Attack and +0.2 Ranged Strength"
+        "customDescription": "+0.3 Ranged Attack Bonus, +0.1 Ranged Strength Bonus, +0.1% Ammo Preservation Chance (Bypasses Gamemode limitations)"
       },
       {
         "id": "Ranged_Mastery_Cape",
@@ -50077,8 +50111,8 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "flatMagicAttackBonus": 1,
-            "flatMagicDefenceBonus": 1,
+            "flatMagicAttackBonus": 0.1,
+            "flatMagicDefenceBonus": 0.2,
             "bypassRunePreservationChance": 0.1
           }
         },
@@ -50104,7 +50138,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": true,
         "customName": "Magic Training",
-        "customDescription": "+1 Magic Attack and Defence Bonus, +0.1% Rune Preservation Chance (Bypasses Gamemode limitations)"
+        "customDescription": "+0.1 Magic Attack Bonus, +0.2 Magic Defence Bonus, +0.1 Magic Damage Bonus, +0.1% Rune Preservation Chance (Bypasses Gamemode limitations)"
       },
       {
         "id": "Magic_Mastery_Cape",
@@ -50144,8 +50178,7 @@
         ],
         "defaultBuyLimit": 0,
         "buyLimitOverrides": [],
-        "showBuyLimit": false,
-        "customName": "Magic Mastery Cape"
+        "showBuyLimit": false
       },
       {
         "id": "Prayer_Adept",
@@ -53683,12 +53716,14 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "skillInterval": [
+            "flatSkillInterval": [
               {
                 "skillID": "melvorD:Firemaking",
-                "value": -5
+                "value": -100
               }
-            ]
+            ],
+            "firemakingBonfireInterval": 10,
+            "firemakingBonfireInterval": 10
           }
         },
         "cost": {
@@ -53708,7 +53743,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Iron Firestarter",
-        "customDescription": "-5% Firemaking interval reduction for a total of -5% applied from your Firestarter."
+        "customDescription": "-0.1s Firemaking interval and +10% Bonfire interval. Total bonus so far: -0.1s and +10%."
       },
       {
         "id": "Firestarter_Steel",
@@ -53717,12 +53752,13 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "skillInterval": [
+            "flatSkillInterval": [
               {
                 "skillID": "melvorD:Firemaking",
-                "value": -5
+                "value": -100
               }
-            ]
+            ],
+            "firemakingBonfireInterval": 10
           }
         },
         "cost": {
@@ -53754,7 +53790,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Steel Firestarter",
-        "customDescription": "-5% Firemaking interval reduction for a total of -10% applied from your Firestarter."
+        "customDescription": "-0.1s Firemaking interval and +10% Bonfire interval. Total bonus so far: -0.2s and +20%."
       },
       {
         "id": "Firestarter_Black",
@@ -53763,12 +53799,13 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "skillInterval": [
+            "flatSkillInterval": [
               {
                 "skillID": "melvorD:Firemaking",
-                "value": -5
+                "value": -100
               }
-            ]
+            ],
+            "firemakingBonfireInterval": 10
           }
         },
         "cost": {
@@ -53800,7 +53837,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Black Firestarter",
-        "customDescription": "-5% Firemaking interval reduction for a total of -15% applied from your Firestarter."
+        "customDescription": "-0.1s Firemaking interval and +10% Bonfire interval. Total bonus so far: -0.3s and +30%."
       },
       {
         "id": "Firestarter_Mithril",
@@ -53809,12 +53846,13 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "skillInterval": [
+            "flatSkillInterval": [
               {
                 "skillID": "melvorD:Firemaking",
-                "value": -5
+                "value": -100
               }
-            ]
+            ],
+            "firemakingBonfireInterval": 10
           }
         },
         "cost": {
@@ -53846,7 +53884,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Mithril Firestarter",
-        "customDescription": "-5% Firemaking interval reduction for a total of -20% applied from your Firestarter."
+        "customDescription": "-0.1s Firemaking interval and +10% Bonfire interval. Total bonus so far: -0.4s and +40%."
       },
       {
         "id": "Firestarter_Adamant",
@@ -53855,12 +53893,13 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "skillInterval": [
+            "flatSkillInterval": [
               {
                 "skillID": "melvorD:Firemaking",
-                "value": -5
+                "value": -100
               }
-            ]
+            ],
+            "firemakingBonfireInterval": 10
           }
         },
         "cost": {
@@ -53892,7 +53931,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Adamant Firestarter",
-        "customDescription": "-5% Firemaking interval reduction for a total of -25% applied from your Firestarter."
+        "customDescription": "-0.1s Firemaking interval and +10% Bonfire interval. Total bonus so far: -0.5s and +50%."
       },
       {
         "id": "Firestarter_Rune",
@@ -53901,12 +53940,13 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "skillInterval": [
+            "flatSkillInterval": [
               {
                 "skillID": "melvorD:Firemaking",
-                "value": -5
+                "value": -100
               }
-            ]
+            ],
+            "firemakingBonfireInterval": 10
           }
         },
         "cost": {
@@ -53938,7 +53978,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Rune Firestarter",
-        "customDescription": "-5% Firemaking interval reduction for a total of -30% applied from your Firestarter."
+        "customDescription": "-0.1s Firemaking interval and +10% Bonfire interval. Total bonus so far: -0.6s and +60%."
       },
       {
         "id": "Firestarter_Dragon",
@@ -53947,12 +53987,13 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "skillInterval": [
+            "flatSkillInterval": [
               {
                 "skillID": "melvorD:Firemaking",
-                "value": -5
+                "value": -100
               }
-            ]
+            ],
+            "firemakingBonfireInterval": 10
           }
         },
         "cost": {
@@ -53984,7 +54025,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Dragon Firestarter",
-        "customDescription": "-5% Firemaking interval reduction for a total of -35% applied from your Firestarter."
+        "customDescription": "-0.1s Firemaking interval and +10% Bonfire interval. Total bonus so far: -0.7s and +70%."
       },
       {
         "id": "Hoe_Iron",
@@ -53993,10 +54034,11 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "basePrimaryProductQuantity": [
+            "bypassCompostPreservationChance": 5,
+            "skillInterval": [
               {
                 "skillID": "melvorD:Farming",
-                "value": 10
+                "value": -3
               }
             ]
           }
@@ -54018,7 +54060,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Iron Hoe",
-        "customDescription": "+10% Farming Crop Yield for a total of +10% applied from your Hoe."
+        "customDescription": "+5% chance to preserve Compost applied to Farming Plots when harvesting Melvor Realm crops, -3% Farming Interval. Total so far: +5%, -3%."
       },
       {
         "id": "Hoe_Steel",
@@ -54027,10 +54069,11 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "basePrimaryProductQuantity": [
+            "bypassCompostPreservationChance": 5,
+            "skillInterval": [
               {
                 "skillID": "melvorD:Farming",
-                "value": 10
+                "value": -3
               }
             ]
           }
@@ -54064,7 +54107,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Steel Hoe",
-        "customDescription": "+10% Farming Crop Yield for a total of +20% applied from your Hoe."
+        "customDescription": "+5% chance to preserve Compost applied to Farming Plots when harvesting Melvor Realm crops, -3% Farming Interval. Total so far: +5%, -3%."
       },
       {
         "id": "Hoe_Black",
@@ -54073,10 +54116,11 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "basePrimaryProductQuantity": [
+            "bypassCompostPreservationChance": 5,
+            "skillInterval": [
               {
                 "skillID": "melvorD:Farming",
-                "value": 10
+                "value": -3
               }
             ]
           }
@@ -54110,7 +54154,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Black Hoe",
-        "customDescription": "+10% Farming Crop Yield for a total of +30% applied from your Hoe."
+        "customDescription": "+5% chance to preserve Compost applied to Farming Plots when harvesting Melvor Realm crops, -3% Farming Interval. Total so far: +5%, -3%."
       },
       {
         "id": "Hoe_Mithril",
@@ -54119,10 +54163,11 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "basePrimaryProductQuantity": [
+            "bypassCompostPreservationChance": 5,
+            "skillInterval": [
               {
                 "skillID": "melvorD:Farming",
-                "value": 10
+                "value": -3
               }
             ]
           }
@@ -54156,7 +54201,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Mithril Hoe",
-        "customDescription": "+10% Farming Crop Yield for a total of +40% applied from your Hoe."
+        "customDescription": "+5% chance to preserve Compost applied to Farming Plots when harvesting Melvor Realm crops, -3% Farming Interval. Total so far: +5%, -3%."
       },
       {
         "id": "Hoe_Adamant",
@@ -54165,10 +54210,11 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "basePrimaryProductQuantity": [
+            "bypassCompostPreservationChance": 5,
+            "skillInterval": [
               {
                 "skillID": "melvorD:Farming",
-                "value": 10
+                "value": -3
               }
             ]
           }
@@ -54202,7 +54248,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Adamant Hoe",
-        "customDescription": "+10% Farming Crop Yield for a total of +50% applied from your Hoe."
+        "customDescription": "+5% chance to preserve Compost applied to Farming Plots when harvesting Melvor Realm crops, -3% Farming Interval. Total so far: +5%, -3%."
       },
       {
         "id": "Hoe_Rune",
@@ -54211,10 +54257,11 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "basePrimaryProductQuantity": [
+            "bypassCompostPreservationChance": 5,
+            "skillInterval": [
               {
                 "skillID": "melvorD:Farming",
-                "value": 10
+                "value": -3
               }
             ]
           }
@@ -54248,7 +54295,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Rune Hoe",
-        "customDescription": "+10% Farming Crop Yield for a total of +60% applied from your Hoe."
+        "customDescription": "+5% chance to preserve Compost applied to Farming Plots when harvesting Melvor Realm crops, -3% Farming Interval. Total so far: +5%, -3%."
       },
       {
         "id": "Hoe_Dragon",
@@ -54257,10 +54304,11 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "basePrimaryProductQuantity": [
+            "bypassCompostPreservationChance": 5,
+            "skillInterval": [
               {
                 "skillID": "melvorD:Farming",
-                "value": 10
+                "value": -3
               }
             ]
           }
@@ -54294,7 +54342,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Dragon Hoe",
-        "customDescription": "+10% Farming Crop Yield for a total of +70% applied from your Hoe."
+        "customDescription": "+5% chance to preserve Compost applied to Farming Plots when harvesting Melvor Realm crops, -3% Farming Interval. Total so far: +5%, -3%."
       },
       {
         "id": "Mark_Stag",
