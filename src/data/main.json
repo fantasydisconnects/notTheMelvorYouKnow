@@ -56004,7 +56004,7 @@
               },
               {
                 "skillID": "melvorD:Fletching",
-                "categoryID": "expandedAreas:StandardThrownaxes",
+                "categoryID": "expandedAreas:Thrownaxes",
                 "value": -100
               }
             ],
@@ -56029,7 +56029,7 @@
                 "value": 5
               },
               {
-                "categoryID": "expandedAreas:StandardThrownaxes",
+                "categoryID": "expandedAreas:Thrownaxes",
                 "skillID": "melvorD:Fletching",
                 "value": 5
               }
@@ -56080,7 +56080,7 @@
               },
               {
                 "skillID": "melvorD:Fletching",
-                "categoryID": "expandedAreas:StandardThrownaxes",
+                "categoryID": "expandedAreas:Thrownaxes",
                 "value": -100
               }
             ],
@@ -56105,7 +56105,7 @@
                 "value": 5
               },
               {
-                "categoryID": "expandedAreas:StandardThrownaxes",
+                "categoryID": "expandedAreas:Thrownaxes",
                 "skillID": "melvorD:Fletching",
                 "value": 5
               }
@@ -56168,7 +56168,7 @@
               },
               {
                 "skillID": "melvorD:Fletching",
-                "categoryID": "expandedAreas:StandardThrownaxes",
+                "categoryID": "expandedAreas:Thrownaxes",
                 "value": -100
               }
             ],
@@ -56193,7 +56193,7 @@
                 "value": 5
               },
               {
-                "categoryID": "expandedAreas:StandardThrownaxes",
+                "categoryID": "expandedAreas:Thrownaxes",
                 "skillID": "melvorD:Fletching",
                 "value": 5
               }
@@ -56256,7 +56256,7 @@
               },
               {
                 "skillID": "melvorD:Fletching",
-                "categoryID": "expandedAreas:StandardThrownaxes",
+                "categoryID": "expandedAreas:Thrownaxes",
                 "value": -100
               }
             ],
@@ -56281,7 +56281,7 @@
                 "value": 5
               },
               {
-                "categoryID": "expandedAreas:StandardThrownaxes",
+                "categoryID": "expandedAreas:Thrownaxes",
                 "skillID": "melvorD:Fletching",
                 "value": 5
               }
@@ -56344,7 +56344,7 @@
               },
               {
                 "skillID": "melvorD:Fletching",
-                "categoryID": "expandedAreas:StandardThrownaxes",
+                "categoryID": "expandedAreas:Thrownaxes",
                 "value": -100
               }
             ],
@@ -56369,7 +56369,7 @@
                 "value": 5
               },
               {
-                "categoryID": "expandedAreas:StandardThrownaxes",
+                "categoryID": "expandedAreas:Thrownaxes",
                 "skillID": "melvorD:Fletching",
                 "value": 5
               }
@@ -56432,7 +56432,7 @@
               },
               {
                 "skillID": "melvorD:Fletching",
-                "categoryID": "expandedAreas:StandardThrownaxes",
+                "categoryID": "expandedAreas:Thrownaxes",
                 "value": -100
               }
             ],
@@ -56457,7 +56457,7 @@
                 "value": 5
               },
               {
-                "categoryID": "expandedAreas:StandardThrownaxes",
+                "categoryID": "expandedAreas:Thrownaxes",
                 "skillID": "melvorD:Fletching",
                 "value": 5
               }
@@ -56520,7 +56520,7 @@
               },
               {
                 "skillID": "melvorD:Fletching",
-                "categoryID": "expandedAreas:StandardThrownaxes",
+                "categoryID": "expandedAreas:Thrownaxes",
                 "value": -100
               }
             ],
@@ -56545,7 +56545,7 @@
                 "value": 5
               },
               {
-                "categoryID": "expandedAreas:StandardThrownaxes",
+                "categoryID": "expandedAreas:Thrownaxes",
                 "skillID": "melvorD:Fletching",
                 "value": 5
               }
@@ -60228,7 +60228,7 @@
               "media": "assets/bank/offhand_pistol_dragon.png"
             },
             {
-              "id": "Standard_Thrownaxes",
+              "id": "Thrownaxes",
               "media": "assets/bank/Dragon_Thrownaxe.png",
               "name": "Standard Thrownaxes"
             }
@@ -60969,7 +60969,7 @@
               "productID": "expandedAreas:Bronze_Thrownaxe",
               "baseQuantity": 3,
               "baseExperience": 16,
-              "categoryID": "expandedAreas:Standard_Thrownaxes",
+              "categoryID": "expandedAreas:Thrownaxes",
               "itemCosts": [
                 {
                   "id": "expandedAreas:Evergreen_Logs",
@@ -60988,7 +60988,7 @@
               "productID": "expandedAreas:Iron_Thrownaxe",
               "baseQuantity": 3,
               "baseExperience": 27,
-              "categoryID": "expandedAreas:Standard_Thrownaxes",
+              "categoryID": "expandedAreas:Thrownaxes",
               "itemCosts": [
                 {
                   "id": "expandedAreas:Evergreen_Logs",
@@ -61007,7 +61007,7 @@
               "productID": "expandedAreas:Steel_Thrownaxe",
               "baseQuantity": 3,
               "baseExperience": 61,
-              "categoryID": "expandedAreas:Standard_Thrownaxes",
+              "categoryID": "expandedAreas:Thrownaxes",
               "itemCosts": [
                 {
                   "id": "expandedAreas:Evergreen_Logs",
@@ -61026,7 +61026,7 @@
               "productID": "expandedAreas:Mithril_Thrownaxe",
               "baseQuantity": 3,
               "baseExperience": 105,
-              "categoryID": "expandedAreas:Standard_Thrownaxes",
+              "categoryID": "expandedAreas:Thrownaxes",
               "itemCosts": [
                 {
                   "id": "expandedAreas:Longleaf_Logs",
@@ -61045,7 +61045,7 @@
               "productID": "expandedAreas:Adamant_Thrownaxe",
               "baseQuantity": 3,
               "baseExperience": 121,
-              "categoryID": "expandedAreas:Standard_Thrownaxes",
+              "categoryID": "expandedAreas:Thrownaxes",
               "itemCosts": [
                 {
                   "id": "expandedAreas:Frostpine_Logs",
@@ -61064,7 +61064,7 @@
               "productID": "expandedAreas:Rune_Thrownaxe",
               "baseQuantity": 3,
               "baseExperience": 174,
-              "categoryID": "expandedAreas:Standard_Thrownaxes",
+              "categoryID": "expandedAreas:Thrownaxes",
               "itemCosts": [
                 {
                   "id": "expandedAreas:White_Pine_Logs",
@@ -61083,7 +61083,7 @@
               "productID": "expandedAreas:Silver_Thrownaxe",
               "baseQuantity": 3,
               "baseExperience": 192,
-              "categoryID": "expandedAreas:Standard_Thrownaxes",
+              "categoryID": "expandedAreas:Thrownaxes",
               "itemCosts": [
                 {
                   "id": "expandedAreas:Loblolly_Logs",
@@ -61277,7 +61277,7 @@
               "productID": "expandedAreas:Dragon_Thrownaxe",
               "baseQuantity": 3,
               "baseExperience": 219,
-              "categoryID": "expandedAreas:Standard_Thrownaxes",
+              "categoryID": "expandedAreas:Thrownaxes",
               "itemCosts": [
                 {
                   "id": "melvorD:Redwood_Logs",
