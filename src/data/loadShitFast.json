@@ -14,9 +14,7 @@
     "combatPassives": [],
     "dungeons": [],
     "randomGems": [],
-    "items": [
-      
-    ],
+    "items": [],
     "itemUpgrades": [],
     "itemSynergies": [],
     "monsters": [],
@@ -24,440 +22,278 @@
     "prayers": [],
     "shopCategories": [],
     "shopCategoryOrder": [],
-    "shopPurchases": [],
-    "skillData": [
+    "shopPurchases": [
       {
-        "skillID": "melvorD:Magic",
-        "data": {
-          "spellCategories": [
+        "id": "Township1",
+        "media": "assets/shop/skillUpgrades/township1.gif",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "townshipBuildingCost": -10,
+            "townshipRepairCost": -10,
+            "minimumTownshipBuildingEfficiency": 10,
+            "townshipFoodUsage": 5,
+            "townshipCoalUsage": 5
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
             {
-              "id": "superheat",
-              "name": "superheat"
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 1000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Township",
+            "level": 5,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Good Doing Business!",
+        "customDescription": "Hire outside contractors to assist with developing your town. -10% Township Building and Repair Costs, +10% Minimum Township Building Efficiency; +5% Food and Coal Usage."
+      },
+      {
+        "id": "Township2",
+        "media": "assets/shop/skillUpgrades/township2.gif",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "townshipFoodUsage": 10,
+            "townshipGPProduction": 10,
+            "flatTownshipHappiness": 10
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 5000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "expandedAreas:Township1"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Township",
+            "level": 20,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Fanfare for All!",
+        "customDescription": "Sponsor entertainers for regular performances to keep up your town's morale. +10% Happiness and +10% Township GP Production; +10% Food Usage."
+      },
+      {
+        "id": "Township3",
+        "media": "assets/shop/skillUpgrades/township3.gif",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "flatTownshipHappiness": 15,
+            "townshipBuildingHappinessPenalties": -5
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 10000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "expandedAreas:Township2"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Township",
+            "level": 35,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Executive Order!",
+        "customDescription": "Deal with criminals, old-fashioned style. +15% Township Happiness and -5% Township Building Happiness Penalties."
+      },
+      {
+        "id": "Township4",
+        "media": "assets/shop/skillUpgrades/township4.gif",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "flatTownshipEducation": 10,
+            "townshipHealth": 10,
+            "townshipGPProduction": -5
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
+            {
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 20000000
+            }
+          ]
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "expandedAreas:Township3"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Township",
+            "level": 50,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "The Gods Provide!",
+        "customDescription": "Churches need worshipers, but to attract worshipers, you need experienced clergyfolk to spread the word. Luckily for you, a group of [Insert your god here] clergyfolk just so happened to be visiting from a nearby village. They've offered to stay awhile and heal the sick. +10% Education and Health; -5% GP Production."
+      },
+      {
+        "id": "Township5",
+        "media": "assets/shop/skillUpgrades/township5.gif",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [
+            {
+              "id": "melvorD:Gold_Bar",
+              "quantity": 10000
+            },
+            {
+              "id": "melvorD:Silver_Bar",
+              "quantity": 10000
             }
           ],
-          "altSpells": [
+          "modifiers": {
+            "townshipTaxPerCitizen": 5,
+            "townshipFoodUsage": -5,
+            "townshipGPProduction": 5,
+            "townshipResourceProduction": 10,
+            "flatTownshipHappiness": -20
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
             {
-              "categories": [
-                "expandedAreas:superheat"
-              ]
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 50000000
             }
           ]
-        }
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "expandedAreas:Township4"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Township",
+            "level": 65,
+            "type": "SkillLevel"
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "Oh Lord!",
+        "customDescription": "Every town eventually gets big enough it attracts wealthy, powerful lords seeking to purchase large tracts of land. You're busy slaying wicked monsters, so of course you sell some land to one...at a loss. Unfortunately for you, this lord was exiled from their former home for unscrupulous dealings, and now this pustule lives among your people. +5% Township GP Production and Citizen Tax Rate, -5% Food Costs, +10% Building Production...-20% Happiness."
       },
       {
-        "skillID": "melvorD:Crafting",
-        "data": {
-          "recipes": [
+        "id": "Township6",
+        "media": "assets/shop/skillUpgrades/township6.gif",
+        "category": "melvorD:SkillUpgrades",
+        "contains": {
+          "items": [],
+          "modifiers": {
+            "townshipMaxStorage": 100,
+            "bankSpace": 5
+          }
+        },
+        "cost": {
+          "items": [],
+          "currencies": [
             {
-              "id": "Bronze_Opal_Ring",
-              "level": 1,
-              "productID": "expandedAreas:Bronze_Opal_Ring",
-              "baseQuantity": 1,
-              "baseExperience": 6,
-              "categoryID": "melvorF:Rings",
-              "subcategoryID": "melvorF:Jewelry",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Bronze_Bar",
-                  "quantity": 1
-                },
-                {
-                  "id": "expandedAreas:Opal",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Bronze_Opal_Necklace",
-              "level": 1,
-              "productID": "expandedAreas:Bronze_Opal_Necklace",
-              "baseQuantity": 1,
-              "baseExperience": 6,
-              "categoryID": "melvorF:Necklaces",
-              "subcategoryID": "melvorF:Jewelry",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Bronze_Bar",
-                  "quantity": 1
-                },
-                {
-                  "id": "expandedAreas:Opal",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Bronze_Opal_Bracelet",
-              "level": 1,
-              "productID": "expandedAreas:Bronze_Opal_Bracelet",
-              "baseQuantity": 1,
-              "baseExperience": 6,
-              "categoryID": "expandedAreas:StandardAccessories",
-              "subcategoryID": "melvorF:Jewelry",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Bronze_Bar",
-                  "quantity": 1
-                },
-                {
-                  "id": "expandedAreas:Opal",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Bronze_Opal_Earrings",
-              "level": 1,
-              "productID": "expandedAreas:Bronze_Opal_Earrings",
-              "baseQuantity": 1,
-              "baseExperience": 6,
-              "categoryID": "expandedAreas:StandardAccessories",
-              "subcategoryID": "melvorF:Jewelry",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Bronze_Bar",
-                  "quantity": 1
-                },
-                {
-                  "id": "expandedAreas:Opal",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Bronze_Spinel_Ring",
-              "level": 15,
-              "productID": "expandedAreas:Bronze_Spinel_Ring",
-              "baseQuantity": 1,
-              "baseExperience": 35,
-              "categoryID": "melvorF:Rings",
-              "subcategoryID": "melvorF:Jewelry",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Bronze_Bar",
-                  "quantity": 1
-                },
-                {
-                  "id": "expandedAreas:Spinel",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Bronze_Spinel_Necklace",
-              "level": 15,
-              "productID": "expandedAreas:Bronze_Spinel_Necklace",
-              "baseQuantity": 1,
-              "baseExperience": 35,
-              "categoryID": "melvorF:Necklaces",
-              "subcategoryID": "melvorF:Jewelry",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Bronze_Bar",
-                  "quantity": 1
-                },
-                {
-                  "id": "expandedAreas:Spinel",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Bronze_Spinel_Bracelet",
-              "level": 15,
-              "productID": "expandedAreas:Bronze_Spinel_Bracelet",
-              "baseQuantity": 1,
-              "baseExperience": 35,
-              "categoryID": "expandedAreas:StandardAccessories",
-              "subcategoryID": "melvorF:Jewelry",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Bronze_Bar",
-                  "quantity": 1
-                },
-                {
-                  "id": "expandedAreas:Spinel",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Bronze_Spinel_Earrings",
-              "level": 15,
-              "productID": "expandedAreas:Bronze_Spinel_Earrings",
-              "baseQuantity": 1,
-              "baseExperience": 35,
-              "categoryID": "expandedAreas:StandardAccessories",
-              "subcategoryID": "melvorF:Jewelry",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Bronze_Bar",
-                  "quantity": 1
-                },
-                {
-                  "id": "expandedAreas:Spinel",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Bronze_Quartz_Ring",
-              "level": 40,
-              "productID": "expandedAreas:Bronze_Quartz_Ring",
-              "baseQuantity": 1,
-              "baseExperience": 110,
-              "categoryID": "melvorF:Rings",
-              "subcategoryID": "melvorF:Jewelry",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Bronze_Bar",
-                  "quantity": 1
-                },
-                {
-                  "id": "expandedAreas:Quartz",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Bronze_Quartz_Necklace",
-              "level": 40,
-              "productID": "expandedAreas:Bronze_Quartz_Necklace",
-              "baseQuantity": 1,
-              "baseExperience": 110,
-              "categoryID": "melvorF:Necklaces",
-              "subcategoryID": "melvorF:Jewelry",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Bronze_Bar",
-                  "quantity": 1
-                },
-                {
-                  "id": "expandedAreas:Quartz",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Bronze_Quartz_Bracelet",
-              "level": 40,
-              "productID": "expandedAreas:Bronze_Quartz_Bracelet",
-              "baseQuantity": 1,
-              "baseExperience": 110,
-              "categoryID": "expandedAreas:StandardAccessories",
-              "subcategoryID": "melvorF:Jewelry",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Bronze_Bar",
-                  "quantity": 1
-                },
-                {
-                  "id": "expandedAreas:Quartz",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Bronze_Quartz_Earrings",
-              "level": 40,
-              "productID": "expandedAreas:Bronze_Quartz_Earrings",
-              "baseQuantity": 1,
-              "baseExperience": 110,
-              "categoryID": "expandedAreas:StandardAccessories",
-              "subcategoryID": "melvorF:Jewelry",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Bronze_Bar",
-                  "quantity": 1
-                },
-                {
-                  "id": "expandedAreas:Quartz",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Platinum_Jadestone_Ring",
-              "level": 90,
-              "productID": "expandedAreas:Platinum_Jadestone_Ring",
-              "baseQuantity": 1,
-              "baseExperience": 300,
-              "categoryID": "melvorF:Rings",
-              "subcategoryID": "melvorF:Jewelry",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Platinum_Bar",
-                  "quantity": 1
-                },
-                {
-                  "id": "melvorF:Jadestone",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Platinum_Jadestone_Necklace",
-              "level": 90,
-              "productID": "expandedAreas:Platinum_Jadestone_Necklace",
-              "baseQuantity": 1,
-              "baseExperience": 300,
-              "categoryID": "melvorF:Necklaces",
-              "subcategoryID": "melvorF:Jewelry",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Platinum_Bar",
-                  "quantity": 1
-                },
-                {
-                  "id": "melvorF:Jadestone",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Platinum_Jadestone_Bracelet",
-              "level": 90,
-              "productID": "expandedAreas:Platinum_Jadestone_Bracelet",
-              "baseQuantity": 1,
-              "baseExperience": 300,
-              "categoryID": "expandedAreas:StandardAccessories",
-              "subcategoryID": "melvorF:Jewelry",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Platinum_Bar",
-                  "quantity": 1
-                },
-                {
-                  "id": "melvorF:Jadestone",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Platinum_Jadestone_Earrings",
-              "level": 90,
-              "productID": "expandedAreas:Platinum_Jadestone_Earrings",
-              "baseQuantity": 1,
-              "baseExperience": 300,
-              "categoryID": "expandedAreas:StandardAccessories",
-              "subcategoryID": "melvorF:Jewelry",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Platinum_Bar",
-                  "quantity": 1
-                },
-                {
-                  "id": "melvorF:Jadestone",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Volkanum_Ring",
-              "level": 99,
-              "productID": "expandedAreas:Volkanum_Ring",
-              "baseQuantity": 1,
-              "baseExperience": 5000,
-              "categoryID": "melvorF:Rings",
-              "subcategoryID": "melvorF:Jewelry",
-              "itemCosts": [
-                {
-                  "id": "melvorF:Infernal_Core",
-                  "quantity": 25
-                },
-                {
-                  "id": "expandedAreas:Volkanum_Bar",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Volkanum_Necklace",
-              "level": 99,
-              "productID": "expandedAreas:Volkanum_Necklace",
-              "baseQuantity": 1,
-              "baseExperience": 5000,
-              "categoryID": "melvorF:Necklaces",
-              "subcategoryID": "melvorF:Jewelry",
-              "itemCosts": [
-                {
-                  "id": "melvorF:Infernal_Core",
-                  "quantity": 25
-                },
-                {
-                  "id": "expandedAreas:Volkanum_Bar",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Volkanum_Bracelet",
-              "level": 99,
-              "productID": "expandedAreas:Volkanum_Bracelet",
-              "baseQuantity": 1,
-              "baseExperience": 5000,
-              "categoryID": "expandedAreas:StandardAccessories",
-              "subcategoryID": "melvorF:Jewelry",
-              "itemCosts": [
-                {
-                  "id": "melvorF:Infernal_Core",
-                  "quantity": 25
-                },
-                {
-                  "id": "expandedAreas:Volkanum_Bar",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Volkanum_Earrings",
-              "level": 99,
-              "productID": "expandedAreas:Volkanum_Earrings",
-              "baseQuantity": 1,
-              "baseExperience": 5000,
-              "categoryID": "expandedAreas:StandardAccessories",
-              "subcategoryID": "melvorF:Jewelry",
-              "itemCosts": [
-                {
-                  "id": "melvorF:Infernal_Core",
-                  "quantity": 25
-                },
-                {
-                  "id": "expandedAreas:Volkanum_Bar",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
+              "currency": "melvorD:GP",
+              "type": "Fixed",
+              "cost": 100000000
             }
           ]
-        }
-      },
-      {
-        "skillID": "melvorD:Mining",
-        "data": {
-          "rockData": []
-        }
+        },
+        "allowQuantityPurchase": false,
+        "unlockRequirements": [
+          {
+            "type": "ShopPurchase",
+            "count": 1,
+            "purchaseID": "expandedAreas:Township5"
+          }
+        ],
+        "purchaseRequirements": [
+          {
+            "skillID": "melvorD:Township",
+            "level": 80,
+            "type": "SkillLevel"
+          },
+          {
+            "type": "TownshipBuilding",
+            "buildingID": "melvorF:Magic_Emporium",
+            "count": 1
+          }
+        ],
+        "defaultBuyLimit": 1,
+        "buyLimitOverrides": [],
+        "showBuyLimit": false,
+        "customName": "It's Bigger on the Inside (I Swear!)",
+        "customDescription": "You have gained so much gold in your adventures, you don't know what to do with it. Your town has produced so much <em>stuff</em> you don't know what to do with it! So, you consult your wizards, and they return a week later with a plan. They're going to magically increase the depth of your warehouses and your Bank! You don't ask how; you just pay up. +100% Township Storage and +5 Bank Space."
       }
+      
     ],
+    "skillData": [],
     "slayerAreas": [],
     "strongholds": []
   }

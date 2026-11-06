@@ -47347,7 +47347,13 @@
           "expandedAreas:Whittling_Tools_Mithril",
           "expandedAreas:Whittling_Tools_Adamant",
           "expandedAreas:Whittling_Tools_Rune",
-          "expandedAreas:Whittling_Tools_Dragon"
+          "expandedAreas:Whittling_Tools_Dragon",
+          "expandedAreas:Township1",
+          "expandedAreas:Township2",
+          "expandedAreas:Township3",
+          "expandedAreas:Township4",
+          "expandedAreas:Township5",
+          "expandedAreas:Township6"
         ]
       },
       {
@@ -56811,6 +56817,13 @@
         "rootUpgradeID": "expandedAreas:Trainers_Elite",
         "defaultName": "Trainers of Sadness",
         "defaultDescription": "No bonuses."
+      },
+      {
+        "id": "Township",
+        "chainName": "Current Mayoral Experience",
+        "rootUpgradeID": "expandedAreas:Township6",
+        "defaultName": "No Mayoral Experience",
+        "defaultDescription": "No bonuses."
       }
     ],
     "skillData": [
@@ -64907,6 +64920,9 @@
       {
         "skillID": "melvorD:Township",
         "data": {
+          "headerUpgradeChains": [
+            "expandedAreas:Township"
+          ],
           "buildingDisplayOrder": [
             {
               "insertAt": "After",
@@ -65195,6 +65211,7 @@
               }
             ]
           },
+
           "tasks": [
             {
               "id": "Giant_Mole",
