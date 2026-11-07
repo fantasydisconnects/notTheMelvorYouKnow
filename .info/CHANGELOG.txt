@@ -650,7 +650,10 @@ SAE v0.9.6.3 - The Balance Patch Part 3
 - Whittling Tools rebalanced: now gives +5% Chance to produce 50% more projectiles in Fletching (rounded up, can't be doubled), and -0.1s Fletching Interval for projectiles per tier. Previously, gave +1% Preservation Chance and +1 Additional Primary Product per tier.
 
 SAE v0.9.6.4 - The Balance Patch Part 4
-Changes
+# Changes
+## Items
+### Equipment
+- Monk Robes reworked to give +25% Prayer Points from Burying. Previously, gave -1 Prayer Point cost and +10% Prayer Point Preservation Chance.
 ## Shop Purchases
 ### Skilling Upgrades
 - Anvil Smithing interval increased by 1% per tier. Now gives -2% per tier, up to -14%.

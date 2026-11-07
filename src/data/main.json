@@ -20250,8 +20250,7 @@
         "equipmentStats": [],
         "itemType": "Equipment",
         "modifiers": {
-          "flatPrayerPointCost": -1,
-          "prayerPointPreservationChance": 10
+          "prayerPointsFromBurying": 25
         }
       },
       {
@@ -20274,8 +20273,7 @@
         "equipmentStats": [],
         "itemType": "Equipment",
         "modifiers": {
-          "flatPrayerPointCost": -1,
-          "prayerPointPreservationChance": 10
+          "prayerPointsFromBurying": 25
         }
       },
       {
