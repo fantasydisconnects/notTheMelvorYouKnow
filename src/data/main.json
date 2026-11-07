@@ -31586,24 +31586,7 @@
         "action": "melvorD:Combat",
         "consumesOn": [
           {
-            "type": "MonsterSpawned",
-            "monsterIDs": [
-              "melvorD:GreenDragon",
-              "melvorD:BlueDragon",
-              "melvorD:RedDragon",
-              "melvorD:BlackDragon",
-              "melvorF:ElderDragon",
-              "melvorD:PratTheProtectorOfSecrets",
-              "melvorD:MalcsTheGuardianOfMelvor",
-              "melvorF:ChaoticGreaterDragon",
-              "melvorF:WickedGreaterDragon",
-              "melvorF:HuntingGreaterDragon",
-              "melvorF:MalcsTheLeaderOfDragons",
-              "melvorF:PratTheGuardianOfSecrets",
-              "melvorF:PratTheGuardianOfSecretsBoss",
-              "melvorF:MalcsTheGuardianOfStrongholds",
-              "melvorF:GreaterSkeletalDragon"
-            ]
+            "type": "EnemyAttack"
           }
         ]
       },
@@ -31626,24 +31609,7 @@
         "action": "melvorD:Combat",
         "consumesOn": [
           {
-            "type": "MonsterSpawned",
-            "monsterIDs": [
-              "melvorD:GreenDragon",
-              "melvorD:BlueDragon",
-              "melvorD:RedDragon",
-              "melvorD:BlackDragon",
-              "melvorF:ElderDragon",
-              "melvorD:PratTheProtectorOfSecrets",
-              "melvorD:MalcsTheGuardianOfMelvor",
-              "melvorF:ChaoticGreaterDragon",
-              "melvorF:WickedGreaterDragon",
-              "melvorF:HuntingGreaterDragon",
-              "melvorF:MalcsTheLeaderOfDragons",
-              "melvorF:PratTheGuardianOfSecrets",
-              "melvorF:PratTheGuardianOfSecretsBoss",
-              "melvorF:MalcsTheGuardianOfStrongholds",
-              "melvorF:GreaterSkeletalDragon"
-            ]
+            "type": "EnemyAttack"
           }
         ]
       },
@@ -31666,24 +31632,7 @@
         "action": "melvorD:Combat",
         "consumesOn": [
           {
-            "type": "MonsterSpawned",
-            "monsterIDs": [
-              "melvorD:GreenDragon",
-              "melvorD:BlueDragon",
-              "melvorD:RedDragon",
-              "melvorD:BlackDragon",
-              "melvorF:ElderDragon",
-              "melvorD:PratTheProtectorOfSecrets",
-              "melvorD:MalcsTheGuardianOfMelvor",
-              "melvorF:ChaoticGreaterDragon",
-              "melvorF:WickedGreaterDragon",
-              "melvorF:HuntingGreaterDragon",
-              "melvorF:MalcsTheLeaderOfDragons",
-              "melvorF:PratTheGuardianOfSecrets",
-              "melvorF:PratTheGuardianOfSecretsBoss",
-              "melvorF:MalcsTheGuardianOfStrongholds",
-              "melvorF:GreaterSkeletalDragon"
-            ]
+            "type": "EnemyAttack"
           }
         ]
       },
@@ -31706,24 +31655,7 @@
         "action": "melvorD:Combat",
         "consumesOn": [
           {
-            "type": "MonsterSpawned",
-            "monsterIDs": [
-              "melvorD:GreenDragon",
-              "melvorD:BlueDragon",
-              "melvorD:RedDragon",
-              "melvorD:BlackDragon",
-              "melvorF:ElderDragon",
-              "melvorD:PratTheProtectorOfSecrets",
-              "melvorD:MalcsTheGuardianOfMelvor",
-              "melvorF:ChaoticGreaterDragon",
-              "melvorF:WickedGreaterDragon",
-              "melvorF:HuntingGreaterDragon",
-              "melvorF:MalcsTheLeaderOfDragons",
-              "melvorF:PratTheGuardianOfSecrets",
-              "melvorF:PratTheGuardianOfSecretsBoss",
-              "melvorF:MalcsTheGuardianOfStrongholds",
-              "melvorF:GreaterSkeletalDragon"
-            ]
+            "type": "EnemyAttack"
           }
         ]
       },
@@ -31746,24 +31678,7 @@
         "action": "melvorD:Combat",
         "consumesOn": [
           {
-            "type": "MonsterSpawned",
-            "monsterIDs": [
-              "melvorD:GreenDragon",
-              "melvorD:BlueDragon",
-              "melvorD:RedDragon",
-              "melvorD:BlackDragon",
-              "melvorF:ElderDragon",
-              "melvorD:PratTheProtectorOfSecrets",
-              "melvorD:MalcsTheGuardianOfMelvor",
-              "melvorF:ChaoticGreaterDragon",
-              "melvorF:WickedGreaterDragon",
-              "melvorF:HuntingGreaterDragon",
-              "melvorF:MalcsTheLeaderOfDragons",
-              "melvorF:PratTheGuardianOfSecrets",
-              "melvorF:PratTheGuardianOfSecretsBoss",
-              "melvorF:MalcsTheGuardianOfStrongholds",
-              "melvorF:GreaterSkeletalDragon"
-            ]
+            "type": "EnemyAttack"
           }
         ]
       },
@@ -31786,24 +31701,7 @@
         "action": "melvorD:Combat",
         "consumesOn": [
           {
-            "type": "MonsterSpawned",
-            "monsterIDs": [
-              "melvorD:GreenDragon",
-              "melvorD:BlueDragon",
-              "melvorD:RedDragon",
-              "melvorD:BlackDragon",
-              "melvorF:ElderDragon",
-              "melvorD:PratTheProtectorOfSecrets",
-              "melvorD:MalcsTheGuardianOfMelvor",
-              "melvorF:ChaoticGreaterDragon",
-              "melvorF:WickedGreaterDragon",
-              "melvorF:HuntingGreaterDragon",
-              "melvorF:MalcsTheLeaderOfDragons",
-              "melvorF:PratTheGuardianOfSecrets",
-              "melvorF:PratTheGuardianOfSecretsBoss",
-              "melvorF:MalcsTheGuardianOfStrongholds",
-              "melvorF:GreaterSkeletalDragon"
-            ]
+            "type": "EnemyAttack"
           }
         ]
       },
@@ -31826,24 +31724,7 @@
         "action": "melvorD:Combat",
         "consumesOn": [
           {
-            "type": "MonsterSpawned",
-            "monsterIDs": [
-              "melvorD:GreenDragon",
-              "melvorD:BlueDragon",
-              "melvorD:RedDragon",
-              "melvorD:BlackDragon",
-              "melvorF:ElderDragon",
-              "melvorD:PratTheProtectorOfSecrets",
-              "melvorD:MalcsTheGuardianOfMelvor",
-              "melvorF:ChaoticGreaterDragon",
-              "melvorF:WickedGreaterDragon",
-              "melvorF:HuntingGreaterDragon",
-              "melvorF:MalcsTheLeaderOfDragons",
-              "melvorF:PratTheGuardianOfSecrets",
-              "melvorF:PratTheGuardianOfSecretsBoss",
-              "melvorF:MalcsTheGuardianOfStrongholds",
-              "melvorF:GreaterSkeletalDragon"
-            ]
+            "type": "EnemyAttack"
           }
         ]
       },
@@ -31866,24 +31747,7 @@
         "action": "melvorD:Combat",
         "consumesOn": [
           {
-            "type": "MonsterSpawned",
-            "monsterIDs": [
-              "melvorD:GreenDragon",
-              "melvorD:BlueDragon",
-              "melvorD:RedDragon",
-              "melvorD:BlackDragon",
-              "melvorF:ElderDragon",
-              "melvorD:PratTheProtectorOfSecrets",
-              "melvorD:MalcsTheGuardianOfMelvor",
-              "melvorF:ChaoticGreaterDragon",
-              "melvorF:WickedGreaterDragon",
-              "melvorF:HuntingGreaterDragon",
-              "melvorF:MalcsTheLeaderOfDragons",
-              "melvorF:PratTheGuardianOfSecrets",
-              "melvorF:PratTheGuardianOfSecretsBoss",
-              "melvorF:MalcsTheGuardianOfStrongholds",
-              "melvorF:GreaterSkeletalDragon"
-            ]
+            "type": "EnemyAttack"
           }
         ]
       },
