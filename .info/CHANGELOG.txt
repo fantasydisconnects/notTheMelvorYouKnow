@@ -654,3 +654,4 @@ Changes
 ## Shop Purchases
 ### Skilling Upgrades
 - Anvil Smithing interval increased by 1% per tier. Now gives -2% per tier, up to -14%.
+- Essence Resonator reworked to give +1 Additional Rune when crafting Runes and Combination Runes, +5% Preservation Chance when crafting Runes and Combination Runes per tier.

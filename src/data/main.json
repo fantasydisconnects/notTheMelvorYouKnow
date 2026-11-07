@@ -53405,10 +53405,27 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "runePreservationChance": 1,
+            "flatAdditionalPrimaryProductQuantity": [
+              {
+                "skillID":"melvorD:Runecrafting",
+                "subcategoryID": "melvorF:Runes",
+                "value": 1
+              },
+              {
+                "skillID":"melvorD:Runecrafting",
+                "subcategoryID": "melvorF:CombinationRunes",
+                "value": 1
+              }
+            ],
             "skillPreservationChance": [
               {
                 "skillID": "melvorD:Runecrafting",
+                "subcategoryID": "melvorF:Runes",
+                "value": 5
+              },
+              {
+                "skillID": "melvorD:Runecrafting",
+                "subcategoryID": "melvorF:CombinationRunes",
                 "value": 5
               }
             ]
@@ -53431,7 +53448,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Iron Essence Resonator",
-        "customDescription": "+1% Rune Preservation chance for a total of +1% chance applied from your Essence Resonator.<br>+5% chance to preserve resources in Runecrafting for a total of +5% chance from your Essence Resonator."
+        "customDescription": "+1 Additional Rune when crafting Runes and Combination Runes, +5% Preservation Chance when crafting Runes and Combination Runes. Total: +1, +5%."
       },
       {
         "id": "Essence_Resonator_Steel",
@@ -53440,10 +53457,27 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "runePreservationChance": 1,
+            "flatAdditionalPrimaryProductQuantity": [
+              {
+                "skillID": "melvorD:Runecrafting",
+                "subcategoryID": "melvorF:Runes",
+                "value": 1
+              },
+              {
+                "skillID": "melvorD:Runecrafting",
+                "subcategoryID": "melvorF:CombinationRunes",
+                "value": 1
+              }
+            ],
             "skillPreservationChance": [
               {
                 "skillID": "melvorD:Runecrafting",
+                "subcategoryID": "melvorF:Runes",
+                "value": 5
+              },
+              {
+                "skillID": "melvorD:Runecrafting",
+                "subcategoryID": "melvorF:CombinationRunes",
                 "value": 5
               }
             ]
@@ -53478,7 +53512,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Steel Essence Resonator",
-        "customDescription": "+1% Rune Preservation chance for a total of +2% chance applied from your Essence Resonator.<br>+5% chance to preserve resources in Runecrafting for a total of +10% chance from your Essence Resonator."
+        "customDescription": "+1 Additional Rune when crafting Runes and Combination Runes, +5% Preservation Chance when crafting Runes and Combination Runes. Total: +2, +10%."
       },
       {
         "id": "Essence_Resonator_Black",
@@ -53487,10 +53521,27 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "runePreservationChance": 1,
+            "flatAdditionalPrimaryProductQuantity": [
+              {
+                "skillID":"melvorD:Runecrafting",
+                "subcategoryID": "melvorF:Runes",
+                "value": 1
+              },
+              {
+                "skillID":"melvorD:Runecrafting",
+                "subcategoryID": "melvorF:CombinationRunes",
+                "value": 1
+              }
+            ],
             "skillPreservationChance": [
               {
                 "skillID": "melvorD:Runecrafting",
+                "subcategoryID": "melvorF:Runes",
+                "value": 5
+              },
+              {
+                "skillID": "melvorD:Runecrafting",
+                "subcategoryID": "melvorF:CombinationRunes",
                 "value": 5
               }
             ]
@@ -53525,7 +53576,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Black Essence Resonator",
-        "customDescription": "+1% Rune Preservation chance for a total of +3% chance applied from your Essence Resonator.<br>+5% chance to preserve resources in Runecrafting for a total of +15% chance from your Essence Resonator."
+        "customDescription": "+1 Additional Rune when crafting Runes and Combination Runes, +5% Preservation Chance when crafting Runes and Combination Runes. Total: +3, +15%."
       },
       {
         "id": "Essence_Resonator_Mithril",
@@ -53534,10 +53585,27 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "runePreservationChance": 1,
+            "flatAdditionalPrimaryProductQuantity": [
+              {
+                "skillID":"melvorD:Runecrafting",
+                "subcategoryID": "melvorF:Runes",
+                "value": 1
+              },
+              {
+                "skillID":"melvorD:Runecrafting",
+                "subcategoryID": "melvorF:CombinationRunes",
+                "value": 1
+              }
+            ],
             "skillPreservationChance": [
               {
                 "skillID": "melvorD:Runecrafting",
+                "subcategoryID": "melvorF:Runes",
+                "value": 5
+              },
+              {
+                "skillID": "melvorD:Runecrafting",
+                "subcategoryID": "melvorF:CombinationRunes",
                 "value": 5
               }
             ]
@@ -53572,7 +53640,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Mithril Essence Resonator",
-        "customDescription": "+1% Rune Preservation chance for a total of +4% chance applied from your Essence Resonator.<br>+5% chance to preserve resources in Runecrafting for a total of +20% chance from your Essence Resonator."
+        "customDescription": "+1 Additional Rune when crafting Runes and Combination Runes, +5% Preservation Chance when crafting Runes and Combination Runes. Total: +4, +20%."
       },
       {
         "id": "Essence_Resonator_Adamant",
@@ -53581,10 +53649,27 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "runePreservationChance": 1,
+            "flatAdditionalPrimaryProductQuantity": [
+              {
+                "skillID":"melvorD:Runecrafting",
+                "subcategoryID": "melvorF:Runes",
+                "value": 1
+              },
+              {
+                "skillID":"melvorD:Runecrafting",
+                "subcategoryID": "melvorF:CombinationRunes",
+                "value": 1
+              }
+            ],
             "skillPreservationChance": [
               {
                 "skillID": "melvorD:Runecrafting",
+                "subcategoryID": "melvorF:Runes",
+                "value": 5
+              },
+              {
+                "skillID": "melvorD:Runecrafting",
+                "subcategoryID": "melvorF:CombinationRunes",
                 "value": 5
               }
             ]
@@ -53619,7 +53704,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Adamant Essence Resonator",
-        "customDescription": "+1% Rune Preservation chance for a total of +5% chance applied from your Essence Resonator.<br>+5% chance to preserve resources in Runecrafting for a total of +25% chance from your Essence Resonator."
+        "customDescription": "+1 Additional Rune when crafting Runes and Combination Runes, +5% Preservation Chance when crafting Runes and Combination Runes. Total: +5, +25%."
       },
       {
         "id": "Essence_Resonator_Rune",
@@ -53628,10 +53713,27 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "runePreservationChance": 1,
+            "flatAdditionalPrimaryProductQuantity": [
+              {
+                "skillID":"melvorD:Runecrafting",
+                "subcategoryID": "melvorF:Runes",
+                "value": 1
+              },
+              {
+                "skillID":"melvorD:Runecrafting",
+                "subcategoryID": "melvorF:CombinationRunes",
+                "value": 1
+              }
+            ],
             "skillPreservationChance": [
               {
                 "skillID": "melvorD:Runecrafting",
+                "subcategoryID": "melvorF:Runes",
+                "value": 5
+              },
+              {
+                "skillID": "melvorD:Runecrafting",
+                "subcategoryID": "melvorF:CombinationRunes",
                 "value": 5
               }
             ]
@@ -53666,7 +53768,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Rune Essence Resonator",
-        "customDescription": "+1% Rune Preservation chance for a total of +6% chance applied from your Essence Resonator.<br>+5% chance to preserve resources in Runecrafting for a total of +30% chance from your Essence Resonator."
+        "customDescription": "+1 Additional Rune when crafting Runes and Combination Runes, +5% Preservation Chance when crafting Runes and Combination Runes. Total: +6, +30%."
       },
       {
         "id": "Essence_Resonator_Dragon",
@@ -53675,10 +53777,27 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "runePreservationChance": 1,
+            "flatAdditionalPrimaryProductQuantity": [
+              {
+                "skillID":"melvorD:Runecrafting",
+                "subcategoryID": "melvorF:Runes",
+                "value": 1
+              },
+              {
+                "skillID":"melvorD:Runecrafting",
+                "subcategoryID": "melvorF:CombinationRunes",
+                "value": 1
+              }
+            ],
             "skillPreservationChance": [
               {
                 "skillID": "melvorD:Runecrafting",
+                "subcategoryID": "melvorF:Runes",
+                "value": 5
+              },
+              {
+                "skillID": "melvorD:Runecrafting",
+                "subcategoryID": "melvorF:CombinationRunes",
                 "value": 5
               }
             ]
@@ -53713,7 +53832,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Dragon Essence Resonator",
-        "customDescription": "+1% Rune Preservation chance for a total of +7% chance applied from your Essence Resonator.<br>+5% chance to preserve resources in Runecrafting for a total of +35% chance from your Essence Resonator."
+        "customDescription": "+1 Additional Rune when crafting Runes and Combination Runes, +5% Preservation Chance when crafting Runes and Combination Runes. Total: +7, +35%."
       },
       {
         "id": "Firestarter_Iron",
