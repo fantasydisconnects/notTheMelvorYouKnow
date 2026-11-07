@@ -648,3 +648,9 @@ SAE v0.9.6.3 - The Balance Patch Part 3
 - Hoe rebalanced: now gives +5% Compost Preservation Chance when Harvesting in Melvor Realm, and -3% Farming Interval per tier. Previously, gave +10% Farming Yield per tier.
 - Needle rebalanced: now gives +1% Mastery XP and -5% Crafting Production Cost per tier. Previously, gave +2% Preservation Chance and +2% Chance to gain 30% of item's base sale price as GP.
 - Whittling Tools rebalanced: now gives +5% Chance to produce 50% more projectiles in Fletching (rounded up, can't be doubled), and -0.1s Fletching Interval for projectiles per tier. Previously, gave +1% Preservation Chance and +1 Additional Primary Product per tier.
+
+SAE v0.9.6.4 - The Balance Patch Part 4
+Changes
+## Shop Purchases
+### Skilling Upgrades
+- Anvil Smithing interval increased by 1% per tier. Now gives -2% per tier, up to -14%.

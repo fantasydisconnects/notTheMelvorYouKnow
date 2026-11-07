@@ -52369,7 +52369,7 @@
             "skillInterval": [
               {
                 "skillID": "melvorD:Smithing",
-                "value": -1
+                "value": -2
               }
             ],
             "skillItemDoublingChance": [
@@ -52397,7 +52397,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Iron Anvil",
-        "customDescription": "-1% Smithing Interval for a total of -1% applied from your Anvil. +1% chance to double smithed items per action for a total of +1% applied from your Anvil."
+        "customDescription": "-2% Smithing Interval for a total of -2% applied from your Anvil. +1% chance to double smithed items per action for a total of +1% applied from your Anvil."
       },
       {
         "id": "Anvil_Steel",
@@ -52409,7 +52409,7 @@
             "skillInterval": [
               {
                 "skillID": "melvorD:Smithing",
-                "value": -1
+                "value": -2
               }
             ],
             "skillItemDoublingChance": [
@@ -52449,7 +52449,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Steel Anvil",
-        "customDescription": "-1% Smithing Interval for a total of -2% applied from your Anvil. +1% chance to double smithed items per action for a total of +2% applied from your Anvil."
+        "customDescription": "-2% Smithing Interval for a total of -4% applied from your Anvil. +1% chance to double smithed items per action for a total of +2% applied from your Anvil."
       },
       {
         "id": "Anvil_Black",
@@ -52461,7 +52461,7 @@
             "skillInterval": [
               {
                 "skillID": "melvorD:Smithing",
-                "value": -1
+                "value": -2
               }
             ],
             "skillItemDoublingChance": [
@@ -52501,7 +52501,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Black Anvil",
-        "customDescription": "-1% Smithing Interval for a total of -3% applied from your Anvil. +1% chance to double smithed items per action for a total of +3% applied from your Anvil."
+        "customDescription": "-2% Smithing Interval for a total of -6% applied from your Anvil. +1% chance to double smithed items per action for a total of +3% applied from your Anvil."
       },
       {
         "id": "Anvil_Mithril",
@@ -52553,7 +52553,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Mithril Anvil",
-        "customDescription": "-1% Smithing Interval for a total of -4% applied from your Anvil. +1% chance to double smithed items per action for a total of +4% applied from your Anvil."
+        "customDescription": "-2% Smithing Interval for a total of -8% applied from your Anvil. +1% chance to double smithed items per action for a total of +4% applied from your Anvil."
       },
       {
         "id": "Anvil_Adamant",
@@ -52605,7 +52605,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Adamant Anvil",
-        "customDescription": "-1% Smithing Interval for a total of -5% applied from your Anvil. +1% chance to double smithed items per action for a total of +5% applied from your Anvil."
+        "customDescription": "-2% Smithing Interval for a total of -10% applied from your Anvil. +1% chance to double smithed items per action for a total of +5% applied from your Anvil."
       },
       {
         "id": "Anvil_Rune",
@@ -52657,7 +52657,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Rune Anvil",
-        "customDescription": "-1% Smithing Interval for a total of -6% applied from your Anvil. +1% chance to double smithed items per action for a total of +6% applied from your Anvil."
+        "customDescription": "-2% Smithing Interval for a total of -12% applied from your Anvil. +1% chance to double smithed items per action for a total of +6% applied from your Anvil."
       },
       {
         "id": "Anvil_Dragon",
@@ -52709,7 +52709,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Dragon Anvil",
-        "customDescription": "-1% Smithing Interval for a total of -7% applied from your Anvil. +1% chance to double smithed items per action for a total of +7% applied from your Anvil."
+        "customDescription": "-2% Smithing Interval for a total of -14% applied from your Anvil. +1% chance to double smithed items per action for a total of +7% applied from your Anvil."
       },
       {
         "id": "Arcanolinth_Tauric",
