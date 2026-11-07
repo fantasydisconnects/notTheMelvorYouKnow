@@ -654,6 +654,10 @@ SAE v0.9.6.4 - The Balance Patch Part 4
 ## Items
 ### Equipment
 - Monk Robes reworked to give +25% Prayer Points from Burying. Previously, gave -1 Prayer Point cost and +10% Prayer Point Preservation Chance.
+- Slayer Summoning Gear has been removed.
+- Wands of Frost, Fireball, and Lightning have been removed.
+- Firearms have been removed. Sorry to those of you that liked these. I no longer think these belong in the game.
+- Silver Weapons changed to give +5% Max Hit (down from 25%). 25% was extremely high for how easy the weapons are to obtain.
 ## Shop Purchases
 ### Skilling Upgrades
 - Anvil Smithing interval increased by 1% per tier. Now gives -2% per tier, up to -14%.
