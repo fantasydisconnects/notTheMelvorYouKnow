@@ -650,21 +650,49 @@ SAE v0.9.6.3 - The Balance Patch Part 3
 - Whittling Tools rebalanced: now gives +5% Chance to produce 50% more projectiles in Fletching (rounded up, can't be doubled), and -0.1s Fletching Interval for projectiles per tier. Previously, gave +1% Preservation Chance and +1 Additional Primary Product per tier.
 
 SAE v0.9.6.4 - The Balance Patch Part 4
+# Additions
+- (Pure) Elementalist Bottoms have been added.
 # Changes
+
 ## Items
+
 ### Descriptions
 - Cringy custom descriptions have been removed…for now.
+
 ### Equipment
 - Monk Robes reworked to give +25% Prayer Points from Burying. Previously, gave -1 Prayer Point cost and +10% Prayer Point Preservation Chance.
 - Slayer Summoning Gear has been removed.
 - Wands of Frost, Fireball, and Lightning have been removed.
 - Firearms have been removed. Sorry to those of you that liked these. I no longer think these belong in the game.
 - Silver Weapons changed to give +5% Max Hit (down from 25%). 25% was extremely high for how easy the weapons are to obtain.
-- Tomes of Air, Earth, Elements, Fire, and Water have had their Max Hit and Accuracy bonuses reduced by 10%. Requirement to equip increased to 75 for Elemental Tomes and 85 for Pure Tome.
+- Tomes of Air, Earth, Elements, Fire, and Water have had their Max Hit and Accuracy bonuses reduced by 10%. Requirement to equip increased to 75 for Elemental Tomes and 85 for Pure Tome. Tomes now also require pages in bank to operate. 1 page = ~100 casts (1% chance to consume a page in bank when using runes).
 - Orb of the Elements Valid Slot changed to Tool and Passive. Magic Level requirement increased to 75. Magic Max Hit removed.
+- (Pure) Elementalist Robes now split into Robes and Bottoms
+- Elementalist Gear reworked to give +6% Max Hit and Accuracy to Storm spells, +10 Min hit to their respective element, and 1% chance to apply an elemental effect on certain triggers.
+  - Air: Windsurge (stacking), -3% Attack Interval per hit, up to -15%. Stacks lost when you miss.
+  - Earth: Earthen Barrier (stacking), gain 5 stacks, each giving 3% DR. Lose 1 stack when hit.
+  - Fire: Burn
+  - Water: Frostburn
+- Pure Elementalist Gear reworked to give +7% Max Hit and Accuracy to Storm spells, +15 Min Hit to all Elements. Staff has 5% chance special attack each for Elemental Impact: Burn/Freeze/Frostburn/Stun. All other gear has 2% chance to apply either Windsurge, Earthen Barrier, Burn, or Frostburn when attacking.
 ### Potions
 - Anti- and Superanti-Dragon potions now consume on Enemy Attack. Previously, they were only consumed when a list of certain Dragons spawned. This prevented the potions from being consumed if new dragons were added.
+
+## Monsters
+- All Secluded Monastery and Elemental Sanctuary monsters (excl. Ozamarathrax) drop Mind Essence, Nature Essence, or Spirit Essence. Monks = Mind, Guardian = Spirit, Sanctuary minibosses = Nature/Mind/Spirit.
+
 ## Shop Purchases
+
 ### Skilling Upgrades
 - Anvil Smithing interval increased by 1% per tier. Now gives -2% per tier, up to -14%.
 - Essence Resonator reworked to give +1 Additional Rune when crafting Runes and Combination Runes, +5% Preservation Chance when crafting Runes and Combination Runes per tier.
+
+## Skills
+
+### Alt. Magic
+- Essence extraction spells now produce 20 Mind/Nature/Spirit Essence per sigil (up from 5).
+
+### Runecrafting
+
+#### Recipes
+- All Elementalist gear now requires 500 Mind Essence instead of 1,000, and Eye of ____ has been replaced with Ancient Wizard ____. Same applies to Elementalist Staff, except needs Ancient Staff.
+- Pure Elementalist gear now requires 500 Spirit Essence and all Elementalist Staves.
