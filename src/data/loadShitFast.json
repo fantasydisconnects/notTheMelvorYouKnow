@@ -15,9 +15,7 @@
     "dungeons": [],
     "randomGems": [],
     "items": [
-      {
-        
-      }
+
     ],
     "itemUpgrades": [],
     "itemSynergies": [],
@@ -28,14 +26,7 @@
     "shopCategoryOrder": [],
     "shopPurchases": [],
     "skillData": [
-      {
-        "skillID": "melvorD:Runecrafting",
-        "data": {
-          "recipes": [
-            
-          ]
-        }
-      }
+
     ],
     "slayerAreas": [],
     "strongholds": []

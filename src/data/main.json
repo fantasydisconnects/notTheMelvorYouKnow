@@ -1601,153 +1601,6 @@
         "descriptionGenerator": "Perform an attack that deals <damage>. On a hit <hitEffect>."
       },
       {
-        "id": "WandFrost",
-        "defaultChance": 15,
-        "attackTypes": [
-          "magic"
-        ],
-        "damage": [
-          {
-            "damageType": "Custom",
-            "character": "Target",
-            "minPercent": 5,
-            "minRoll": "MagicScaling",
-            "maxPercent": 10,
-            "maxRoll": "MagicScaling",
-            "roll": true
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "melvorD:Freeze",
-            "chance": 10,
-            "initialParams": [
-              {
-                "name": "turns",
-                "value": 2
-              }
-            ]
-          },
-          {
-            "effectID": "melvorD:Slow",
-            "initialParams": [
-              {
-                "name": "magnitude",
-                "value": 15
-              },
-              {
-                "name": "turns",
-                "value": 3
-              }
-            ]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 300,
-        "lifesteal": 0,
-        "name": "Feelin' Frosty?",
-        "description": "A ray of biting cold pierces the target, dealing damage equal to 1 + ${attackDamageMinValue0}%-${attackDamageMaxValue0}% of their Magic level. On hit, Slows the target for ${onHitEffect1modValue0}%, and has a ${onHitEffect0chance}% to Freeze the target for ${onHitEffect0turns} of its turns.",
-        "descriptionGenerator": "Make an attack that deals <damage>. On hit, <hitEffect>.",
-        "usesRunesPerProc": false
-      },
-      {
-        "id": "LightningWand",
-        "defaultChance": 15,
-        "attackTypes": [
-          "magic"
-        ],
-        "damage": [
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "minRoll": "Fixed",
-            "minPercent": 6,
-            "maxRoll": "Fixed",
-            "maxPercent": 48,
-            "roll": true,
-            "attackCount": 1
-          },
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "minRoll": "Fixed",
-            "minPercent": 3,
-            "maxRoll": "Fixed",
-            "maxPercent": 24,
-            "roll": true,
-            "attackCount": 2
-          },
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "minRoll": "Fixed",
-            "minPercent": 1.5,
-            "maxRoll": "Fixed",
-            "maxPercent": 12,
-            "roll": true,
-            "attackCount": 3
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "expandedAreas:Shock"
-          },
-          {
-            "effectID": "melvorD:Stun",
-            "chance": 10,
-            "initialParams": [
-              {
-                "name": "turns",
-                "value": 2
-              }
-            ]
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 3,
-        "attackInterval": 300,
-        "lifesteal": 0,
-        "name": "Lightning Arc",
-        "description": "An arc of lightning zaps the target ${hitCount} times over ${duration}s, dealing ${attackDamageMinValue0}-${attackDamageMaxValue0} damage on the first hit, ${attackDamageMinValue1}-${attackDamageMaxValue1} damage on the second hit, and ${attackDamageMinValue2}-${attackDamageMaxValue2} damage on the third hit. Each hit applies 1 stack of Shock (-5% Accuracy, up to 10 stacks) and has a ${onHitEffect1chance}% chance to apply Stun for ${onHitEffect1turns} turns.",
-        "descriptionGenerator": "An arc of lightning zaps the <target> dealing <damage> damage <count> times over <duration>. On a hit, <hitEffect>. <Avoidable>.",
-        "usesRunesPerProc": false
-      },
-      {
-        "id": "FireballWand",
-        "defaultChance": 15,
-        "attackTypes": [
-          "magic"
-        ],
-        "damage": [
-          {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "minRoll": "Fixed",
-            "minPercent": 6,
-            "maxRoll": "Fixed",
-            "maxPercent": 60,
-            "roll": true
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "melvorD:Burn"
-          }
-        ],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 300,
-        "lifesteal": 0,
-        "name": "FIREBALL!",
-        "description": "Launch an avoidable fireball that deals ${attackDamageMinValue0}-${attackDamageMaxValue0} damage. On a hit, inflicts Burn that deals ${onHitEffect0DamageMaxValue0}% of the target's current hitpoints as damage over ${onHitEffect0duration}s.",
-        "descriptionGenerator": "Launch an <avoidable> fireball that deals <damage> damage. On a hit, <hitEffect>.",
-        "usesRunesPerProc": false
-      },
-      {
         "id": "WildStrike",
         "defaultChance": 5,
         "damage": [
@@ -3133,15 +2986,6 @@
       },
       {
         "insertAt": "After",
-        "afterID": "melvorF:Fire_Imbued_Wand",
-        "ids": [
-          "expandedAreas:Wand_of_Fireball",
-          "expandedAreas:Wand_of_Frost",
-          "expandedAreas:Wand_of_Lightning"
-        ]
-      },
-      {
-        "insertAt": "After",
         "afterID": "melvorF:Amulet_Of_Incantation",
         "ids": [
           "expandedAreas:Amulet_of_the_Damned"
@@ -4397,70 +4241,6 @@
         ]
       },
       {
-        "insertAt": "After",
-        "afterID": "melvorD:Bronze_Arrows",
-        "ids": [
-          "expandedAreas:Bronze_Cannonball",
-          "expandedAreas:Bronze_Shot"
-        ]
-      },
-      {
-        "insertAt": "After",
-        "afterID": "melvorD:Iron_Arrows",
-        "ids": [
-          "expandedAreas:Iron_Cannonball",
-          "expandedAreas:Iron_Shot"
-        ]
-      },
-      {
-        "insertAt": "After",
-        "afterID": "melvorD:Steel_Arrows",
-        "ids": [
-          "expandedAreas:Steel_Cannonball",
-          "expandedAreas:Steel_Shot"
-        ]
-      },
-      {
-        "insertAt": "After",
-        "afterID": "melvorD:Mithril_Arrows",
-        "ids": [
-          "expandedAreas:Mithril_Cannonball",
-          "expandedAreas:Mithril_Shot"
-        ]
-      },
-      {
-        "insertAt": "After",
-        "afterID": "melvorD:Adamant_Arrows",
-        "ids": [
-          "expandedAreas:Adamant_Cannonball",
-          "expandedAreas:Adamant_Shot"
-        ]
-      },
-      {
-        "insertAt": "After",
-        "afterID": "melvorD:Rune_Arrows",
-        "ids": [
-          "expandedAreas:Rune_Cannonball",
-          "expandedAreas:Rune_Shot"
-        ]
-      },
-      {
-        "insertAt": "After",
-        "afterID": "expandedAreas:Silver_Arrows",
-        "ids": [
-          "expandedAreas:Silver_Cannonball",
-          "expandedAreas:Silver_Shot"
-        ]
-      },
-      {
-        "insertAt": "After",
-        "afterID": "melvorD:Dragon_Arrows",
-        "ids": [
-          "expandedAreas:Dragon_Cannonball",
-          "expandedAreas:Dragon_Shot"
-        ]
-      },
-      {
         "insertAt": "Before",
         "beforeID": "melvorD:Topaz",
         "ids": [
@@ -4893,127 +4673,9 @@
       },
       {
         "insertAt": "After",
-        "afterID": "melvorF:Jadestone_Bolts",
-        "ids": [
-          "expandedAreas:Bronze_Shot",
-          "expandedAreas:Iron_Shot",
-          "expandedAreas:Steel_Shot",
-          "expandedAreas:Mithril_Shot",
-          "expandedAreas:Adamant_Shot",
-          "expandedAreas:Rune_Shot",
-          "expandedAreas:Silver_Shot",
-          "expandedAreas:Dragon_Shot"
-        ]
-      },
-      {
-        "insertAt": "After",
-        "afterID": "melvorD:Dragon_Crossbow_Head",
-        "ids": [
-          "expandedAreas:Bronze_Pistol_Barrel",
-          "expandedAreas:Iron_Pistol_Barrel",
-          "expandedAreas:Steel_Pistol_Barrel",
-          "expandedAreas:Mithril_Pistol_Barrel",
-          "expandedAreas:Adamant_Pistol_Barrel",
-          "expandedAreas:Rune_Pistol_Barrel",
-          "expandedAreas:Silver_Pistol_Barrel",
-          "expandedAreas:Dragon_Pistol_Barrel",
-          "expandedAreas:Wooden_Pistol_Frame",
-          "expandedAreas:Oak_Pistol_Frame",
-          "expandedAreas:Willow_Pistol_Frame",
-          "expandedAreas:Maple_Pistol_Frame",
-          "expandedAreas:Mahogany_Pistol_Frame",
-          "expandedAreas:Yew_Pistol_Frame",
-          "expandedAreas:Magic_Pistol_Frame",
-          "expandedAreas:Redwood_Pistol_Frame",
-          "expandedAreas:Bronze_Arquebus_Barrel",
-          "expandedAreas:Iron_Arquebus_Barrel",
-          "expandedAreas:Steel_Arquebus_Barrel",
-          "expandedAreas:Mithril_Arquebus_Barrel",
-          "expandedAreas:Adamant_Arquebus_Barrel",
-          "expandedAreas:Rune_Arquebus_Barrel",
-          "expandedAreas:Silver_Arquebus_Barrel",
-          "expandedAreas:Dragon_Arquebus_Barrel",
-          "expandedAreas:Wooden_Arquebus_Stock",
-          "expandedAreas:Oak_Arquebus_Stock",
-          "expandedAreas:Willow_Arquebus_Stock",
-          "expandedAreas:Maple_Arquebus_Stock",
-          "expandedAreas:Mahogany_Arquebus_Stock",
-          "expandedAreas:Yew_Arquebus_Stock",
-          "expandedAreas:Magic_Arquebus_Stock",
-          "expandedAreas:Redwood_Arquebus_Stock"
-        ]
-      },
-      {
-        "insertAt": "After",
-        "afterID": "melvorF:Shockwave",
-        "ids": [
-          "expandedAreas:Bronze_Handcannon",
-          "expandedAreas:Iron_Handcannon",
-          "expandedAreas:Steel_Handcannon",
-          "expandedAreas:Mithril_Handcannon",
-          "expandedAreas:Adamant_Handcannon",
-          "expandedAreas:Rune_Handcannon",
-          "expandedAreas:Silver_Handcannon",
-          "expandedAreas:Dragon_Handcannon",
-          "expandedAreas:Bronze_Pistol",
-          "expandedAreas:Iron_Pistol",
-          "expandedAreas:Steel_Pistol",
-          "expandedAreas:Mithril_Pistol",
-          "expandedAreas:Adamant_Pistol",
-          "expandedAreas:Rune_Pistol",
-          "expandedAreas:Silver_Pistol",
-          "expandedAreas:Dragon_Pistol",
-          "expandedAreas:Bronze_Arquebus",
-          "expandedAreas:Iron_Arquebus",
-          "expandedAreas:Steel_Arquebus",
-          "expandedAreas:Mithril_Arquebus",
-          "expandedAreas:Adamant_Arquebus",
-          "expandedAreas:Rune_Arquebus",
-          "expandedAreas:Silver_Arquebus",
-          "expandedAreas:Dragon_Arquebus"
-        ]
-      },
-      {
-        "insertAt": "After",
-        "afterID": "melvorF:Training_Shield",
-        "ids": [
-          "expandedAreas:Bronze_Pistol_Offhand",
-          "expandedAreas:Iron_Pistol_Offhand",
-          "expandedAreas:Steel_Pistol_Offhand",
-          "expandedAreas:Mithril_Pistol_Offhand",
-          "expandedAreas:Adamant_Pistol_Offhand",
-          "expandedAreas:Rune_Pistol_Offhand",
-          "expandedAreas:Silver_Pistol_Offhand",
-          "expandedAreas:Dragon_Pistol_Offhand"
-        ]
-      },
-      {
-        "insertAt": "After",
         "afterID": "melvorF:Natures_Wrath_Staff",
         "ids": [
           "expandedAreas:Staff_Spiritcaller"
-        ]
-      },
-      {
-        "insertAt": "After",
-        "afterID": "melvorF:Slayer_Wizard_Robes_Master",
-        "ids": [
-          "expandedAreas:Slayer_Summoner_Mask_Basic",
-          "expandedAreas:Slayer_Summoner_Gown_Basic",
-          "expandedAreas:Slayer_Summoner_Kilt_Basic",
-          "expandedAreas:Slayer_Summoner_Sandals_Basic",
-          "expandedAreas:Slayer_Summoner_Mask_Strong",
-          "expandedAreas:Slayer_Summoner_Gown_Strong",
-          "expandedAreas:Slayer_Summoner_Kilt_Strong",
-          "expandedAreas:Slayer_Summoner_Sandals_Strong",
-          "expandedAreas:Slayer_Summoner_Mask_Elite",
-          "expandedAreas:Slayer_Summoner_Gown_Elite",
-          "expandedAreas:Slayer_Summoner_Kilt_Elite",
-          "expandedAreas:Slayer_Summoner_Sandals_Elite",
-          "expandedAreas:Slayer_Summoner_Mask_Master",
-          "expandedAreas:Slayer_Summoner_Gown_Master",
-          "expandedAreas:Slayer_Summoner_Kilt_Master",
-          "expandedAreas:Slayer_Summoner_Sandals_Master"
         ]
       }
     ],
@@ -10529,7 +10191,7 @@
             },
             {
               "skillID": "melvorD:Firemaking",
-              "itemID": "melvorD:Coal",
+              "itemID": "melvorD:Coal_Ore",
               "value": 5
             }
           ]
@@ -30596,6 +30258,386 @@
       },
       {
         "itemType": "Equipment",
+        "id": "Fire_Elementalist_Boots",
+        "name": "Fire Elementalist Boots",
+        "category": "Combat",
+        "type": "Magic Armour",
+        "media": "assets/media/bank/Fire_Elementalist_Boots.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 75000,
+        "tier": "wizard",
+        "validSlots": [
+          "Boots",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Magic",
+            "level": 80
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "magicAttackBonus",
+            "value": 8
+          },
+          {
+            "key": "magicDamageBonus",
+            "value": 2
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 8
+          },
+          {
+            "key": "damageReduction",
+            "value": 6
+          }
+        ],
+        "modifiers": {
+          "flatMagicMinHit": [
+            {
+              "subcategoryID": "melvorD:Fire",
+              "value": 1
+            }
+          ],
+          "magicAccuracyRating": [
+            {
+              "subcategoryID": "expandedAreas:Storm",
+              "value": 6
+            }
+          ],
+          "magicMaxHit": [
+            {
+              "subcategoryID": "expandedAreas:Storm",
+              "value": 6
+            }
+          ]
+        },
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 1,
+            "effectID": "melvorD:Burn",
+            "condition": {
+              "character": "Player",
+              "thisAttackType": "magic",
+              "targetAttackType": "any",
+              "type": "CombatType"
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Fire_Elementalist_Bottoms",
+        "name": "Fire Elementalist Bottoms",
+        "category": "Combat",
+        "type": "Magic Armour",
+        "media": "assets/media/bank/Fire_Elementalist_Bottoms.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 250000,
+        "tier": "wizard",
+        "validSlots": [
+          "Platelegs",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Magic",
+            "level": 80
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "magicAttackBonus",
+            "value": 22
+          },
+          {
+            "key": "magicDamageBonus",
+            "value": 4
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 22
+          },
+          {
+            "key": "damageReduction",
+            "value": 6
+          }
+        ],
+        "modifiers": {
+          "flatMagicMinHit": [
+            {
+              "subcategoryID": "melvorD:Fire",
+              "value": 1
+            }
+          ],
+          "magicAccuracyRating": [
+            {
+              "subcategoryID": "expandedAreas:Storm",
+              "value": 6
+            }
+          ],
+          "magicMaxHit": [
+            {
+              "subcategoryID": "expandedAreas:Storm",
+              "value": 6
+            }
+          ]
+        },
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 1,
+            "effectID": "melvorD:Burn",
+            "condition": {
+              "character": "Player",
+              "thisAttackType": "magic",
+              "targetAttackType": "any",
+              "type": "CombatType"
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Fire_Elementalist_Robes",
+        "name": "Fire Elementalist Robes",
+        "category": "Combat",
+        "type": "Magic Armour",
+        "media": "assets/media/bank/Fire_Elementalist_Robes.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 400000,
+        "tier": "wizard",
+        "validSlots": [
+          "Platebody",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Magic",
+            "level": 80
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "magicAttackBonus",
+            "value": 31
+          },
+          {
+            "key": "magicDamageBonus",
+            "value": 4
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 31
+          },
+          {
+            "key": "damageReduction",
+            "value": 6
+          }
+        ],
+        "modifiers": {
+          "flatMagicMinHit": [
+            {
+              "subcategoryID": "melvorD:Fire",
+              "value": 1
+            }
+          ],
+          "magicAccuracyRating": [
+            {
+              "subcategoryID": "expandedAreas:Storm",
+              "value": 6
+            }
+          ],
+          "magicMaxHit": [
+            {
+              "subcategoryID": "expandedAreas:Storm",
+              "value": 6
+            }
+          ]
+        },
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 1,
+            "effectID": "melvorD:Burn",
+            "condition": {
+              "character": "Player",
+              "thisAttackType": "magic",
+              "targetAttackType": "any",
+              "type": "CombatType"
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Fire_Elementalist_Hat",
+        "name": "Fire Elementalist Hat",
+        "category": "Combat",
+        "type": "Magic Armour",
+        "media": "assets/media/bank/Fire_Elementalist_Hat.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 125000,
+        "tier": "wizard",
+        "validSlots": [
+          "Helmet",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Magic",
+            "level": 80
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "magicAttackBonus",
+            "value": 9
+          },
+          {
+            "key": "magicDamageBonus",
+            "value": 3
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 9
+          },
+          {
+            "key": "damageReduction",
+            "value": 6
+          }
+        ],
+        "modifiers": {
+          "flatMagicMinHit": [
+            {
+              "subcategoryID": "melvorD:Fire",
+              "value": 1
+            }
+          ],
+          "magicAccuracyRating": [
+            {
+              "subcategoryID": "expandedAreas:Storm",
+              "value": 6
+            }
+          ],
+          "magicMaxHit": [
+            {
+              "subcategoryID": "expandedAreas:Storm",
+              "value": 6
+            }
+          ]
+        },
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 1,
+            "effectID": "melvorD:Burn",
+            "condition": {
+              "character": "Player",
+              "thisAttackType": "magic",
+              "targetAttackType": "any",
+              "type": "CombatType"
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
+        "id": "Fire_Elementalist_Gloves",
+        "name": "Fire Elementalist Gloves",
+        "category": "Combat",
+        "type": "Magic Armour",
+        "media": "assets/media/bank/Fire_Elementalist_Gloves.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 75000,
+        "tier": "wizard",
+        "validSlots": [
+          "Gloves",
+          "Passive"
+        ],
+        "occupiesSlots": [],
+        "equipRequirements": [
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Magic",
+            "level": 80
+          }
+        ],
+        "equipmentStats": [
+          {
+            "key": "magicAttackBonus",
+            "value": 6
+          },
+          {
+            "key": "magicDamageBonus",
+            "value": 2
+          },
+          {
+            "key": "magicDefenceBonus",
+            "value": 6
+          },
+          {
+            "key": "damageReduction",
+            "value": 6
+          }
+        ],
+        "modifiers": {
+          "flatMagicMinHit": [
+            {
+              "subcategoryID": "melvorD:Fire",
+              "value": 1
+            }
+          ],
+          "magicAccuracyRating": [
+            {
+              "subcategoryID": "expandedAreas:Storm",
+              "value": 6
+            }
+          ],
+          "magicMaxHit": [
+            {
+              "subcategoryID": "expandedAreas:Storm",
+              "value": 6
+            }
+          ]
+        },
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "chance": 1,
+            "effectID": "melvorD:Burn",
+            "condition": {
+              "character": "Player",
+              "thisAttackType": "magic",
+              "targetAttackType": "any",
+              "type": "CombatType"
+            }
+          }
+        ]
+      },
+      {
+        "itemType": "Equipment",
         "id": "Orb_of_the_Elements",
         "name": "Orb of the Elements",
         "category": "Combat",
@@ -30708,6 +30750,54 @@
         "customDescription": "Used to create Fragmented Elemental Runes."
       },
       {
+        "itemType": "Item",
+        "id": "Wispy_Page",
+        "name": "Wispy Page",
+        "media": "assets/bank/Wispy_Page.png",
+        "category": "Item",
+        "type": "Item",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 50
+      },
+      {
+        "itemType": "Item",
+        "id": "Waterlogged_Page",
+        "name": "Water-logged Page",
+        "media": "assets/bank/Waterlogged_Page.png",
+        "category": "Item",
+        "type": "Item",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 50
+      },
+      {
+        "itemType": "Item",
+        "id": "Muddy_Page",
+        "name": "Muddy Page",
+        "media": "assets/bank/Muddy_Page.png",
+        "category": "Item",
+        "type": "Item",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 50
+      },
+      {
+        "itemType": "Item",
+        "id": "Burnt_Page",
+        "name": "Burnt Page",
+        "media": "assets/bank/Burnt_Page.png",
+        "category": "Item",
+        "type": "Item",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 50
+      },
+      {
         "itemType": "Equipment",
         "id": "Tome_of_the_Elements",
         "name": "Tome of the Elements",
@@ -30811,7 +30901,7 @@
           },
           {
             "condition": {
-              "itemID": "expandedAreas:Soiled_Page",
+              "itemID": "expandedAreas:Muddy_Page",
               "operator": ">=",
               "value": 1,
               "type": "BankItem"
@@ -31043,7 +31133,7 @@
         "conditionalModifiers": [
           {
             "condition": {
-              "itemID": "expandedAreas:Soiled_Page",
+              "itemID": "expandedAreas:Muddy_Page",
               "operator": ">=",
               "value": 1,
               "type": "BankItem"
@@ -31134,54 +31224,6 @@
             }
           }
         ]
-      },
-      {
-        "itemType": "Item",
-        "id": "Wispy_Page",
-        "name": "Wispy Page",
-        "media": "assets/bank/Wispy_Page.png",
-        "category": "Item",
-        "type": "Item",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 50
-      },
-      {
-        "itemType": "Item",
-        "id": "Waterlogged_Page",
-        "name": "Water-logged Page",
-        "media": "assets/bank/Waterlogged_Page.png",
-        "category": "Item",
-        "type": "Item",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 50
-      },
-      {
-        "itemType": "Item",
-        "id": "Muddy_Page",
-        "name": "Muddy Page",
-        "media": "assets/bank/Muddy_Page.png",
-        "category": "Item",
-        "type": "Item",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 50
-      },
-      {
-        "itemType": "Item",
-        "id": "Burnt_Page",
-        "name": "Burnt Page",
-        "media": "assets/bank/Burnt_Page.png",
-        "category": "Item",
-        "type": "Item",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 50
       },
       {
         "itemType": "Item",
@@ -35826,446 +35868,6 @@
             "quantity": 350000
           }
         ]
-      },
-      {
-        "upgradedItemID": "expandedAreas:Bronze_Pistol_Offhand",
-        "itemCosts": [
-          {
-            "id": "expandedAreas:Bronze_Pistol",
-            "quantity": 1
-          }
-        ],
-        "rootItemIDs": [
-          "expandedAreas:Bronze_Pistol"
-        ],
-        "isDowngrade": false,
-        "currencyCosts": []
-      },
-      {
-        "upgradedItemID": "expandedAreas:Bronze_Pistol",
-        "itemCosts": [
-          {
-            "id": "expandedAreas:Bronze_Pistol_Offhand",
-            "quantity": 1
-          }
-        ],
-        "rootItemIDs": [
-          "expandedAreas:Bronze_Pistol_Offhand"
-        ],
-        "isDowngrade": false,
-        "currencyCosts": []
-      },
-      {
-        "upgradedItemID": "expandedAreas:Iron_Pistol_Offhand",
-        "itemCosts": [
-          {
-            "id": "expandedAreas:Iron_Pistol",
-            "quantity": 1
-          }
-        ],
-        "rootItemIDs": [
-          "expandedAreas:Iron_Pistol"
-        ],
-        "isDowngrade": false,
-        "currencyCosts": []
-      },
-      {
-        "upgradedItemID": "expandedAreas:Iron_Pistol",
-        "itemCosts": [
-          {
-            "id": "expandedAreas:Iron_Pistol_Offhand",
-            "quantity": 1
-          }
-        ],
-        "rootItemIDs": [
-          "expandedAreas:Iron_Pistol_Offhand"
-        ],
-        "isDowngrade": false,
-        "currencyCosts": []
-      },
-      {
-        "upgradedItemID": "expandedAreas:Steel_Pistol_Offhand",
-        "itemCosts": [
-          {
-            "id": "expandedAreas:Steel_Pistol",
-            "quantity": 1
-          }
-        ],
-        "rootItemIDs": [
-          "expandedAreas:Steel_Pistol"
-        ],
-        "isDowngrade": false,
-        "currencyCosts": []
-      },
-      {
-        "upgradedItemID": "expandedAreas:Steel_Pistol",
-        "itemCosts": [
-          {
-            "id": "expandedAreas:Steel_Pistol_Offhand",
-            "quantity": 1
-          }
-        ],
-        "rootItemIDs": [
-          "expandedAreas:Steel_Pistol_Offhand"
-        ],
-        "isDowngrade": false,
-        "currencyCosts": []
-      },
-      {
-        "upgradedItemID": "expandedAreas:Mithril_Pistol_Offhand",
-        "itemCosts": [
-          {
-            "id": "expandedAreas:Mithril_Pistol",
-            "quantity": 1
-          }
-        ],
-        "rootItemIDs": [
-          "expandedAreas:Mithril_Pistol"
-        ],
-        "isDowngrade": false,
-        "currencyCosts": []
-      },
-      {
-        "upgradedItemID": "expandedAreas:Mithril_Pistol",
-        "itemCosts": [
-          {
-            "id": "expandedAreas:Mithril_Pistol_Offhand",
-            "quantity": 1
-          }
-        ],
-        "rootItemIDs": [
-          "expandedAreas:Mithril_Pistol_Offhand"
-        ],
-        "isDowngrade": false,
-        "currencyCosts": []
-      },
-      {
-        "upgradedItemID": "expandedAreas:Adamant_Pistol_Offhand",
-        "itemCosts": [
-          {
-            "id": "expandedAreas:Adamant_Pistol",
-            "quantity": 1
-          }
-        ],
-        "rootItemIDs": [
-          "expandedAreas:Adamant_Pistol"
-        ],
-        "isDowngrade": false,
-        "currencyCosts": []
-      },
-      {
-        "upgradedItemID": "expandedAreas:Adamant_Pistol",
-        "itemCosts": [
-          {
-            "id": "expandedAreas:Adamant_Pistol_Offhand",
-            "quantity": 1
-          }
-        ],
-        "rootItemIDs": [
-          "expandedAreas:Adamant_Pistol_Offhand"
-        ],
-        "isDowngrade": false,
-        "currencyCosts": []
-      },
-      {
-        "upgradedItemID": "expandedAreas:Rune_Pistol_Offhand",
-        "itemCosts": [
-          {
-            "id": "expandedAreas:Rune_Pistol",
-            "quantity": 1
-          }
-        ],
-        "rootItemIDs": [
-          "expandedAreas:Rune_Pistol"
-        ],
-        "isDowngrade": false,
-        "currencyCosts": []
-      },
-      {
-        "upgradedItemID": "expandedAreas:Rune_Pistol",
-        "itemCosts": [
-          {
-            "id": "expandedAreas:Rune_Pistol_Offhand",
-            "quantity": 1
-          }
-        ],
-        "rootItemIDs": [
-          "expandedAreas:Rune_Pistol_Offhand"
-        ],
-        "isDowngrade": false,
-        "currencyCosts": []
-      },
-      {
-        "upgradedItemID": "expandedAreas:Silver_Pistol_Offhand",
-        "itemCosts": [
-          {
-            "id": "expandedAreas:Silver_Pistol",
-            "quantity": 1
-          }
-        ],
-        "rootItemIDs": [
-          "expandedAreas:Silver_Pistol"
-        ],
-        "isDowngrade": false,
-        "currencyCosts": []
-      },
-      {
-        "upgradedItemID": "expandedAreas:Silver_Pistol",
-        "itemCosts": [
-          {
-            "id": "expandedAreas:Silver_Pistol_Offhand",
-            "quantity": 1
-          }
-        ],
-        "rootItemIDs": [
-          "expandedAreas:Silver_Pistol_Offhand"
-        ],
-        "isDowngrade": false,
-        "currencyCosts": []
-      },
-      {
-        "upgradedItemID": "expandedAreas:Dragon_Pistol_Offhand",
-        "itemCosts": [
-          {
-            "id": "expandedAreas:Dragon_Pistol",
-            "quantity": 1
-          }
-        ],
-        "rootItemIDs": [
-          "expandedAreas:Dragon_Pistol"
-        ],
-        "isDowngrade": false,
-        "currencyCosts": []
-      },
-      {
-        "upgradedItemID": "expandedAreas:Dragon_Pistol",
-        "itemCosts": [
-          {
-            "id": "expandedAreas:Dragon_Pistol_Offhand",
-            "quantity": 1
-          }
-        ],
-        "rootItemIDs": [
-          "expandedAreas:Dragon_Pistol_Offhand"
-        ],
-        "isDowngrade": false,
-        "currencyCosts": []
-      },
-      {
-        "upgradedItemID": "expandedAreas:Slayer_Summoner_Mask_Strong",
-        "itemCosts": [
-          {
-            "id": "expandedAreas:Slayer_Summoner_Mask_Basic",
-            "quantity": 1
-          },
-          {
-            "id": "melvorF:Slayer_Upgrade_Kit_Strong",
-            "quantity": 1
-          }
-        ],
-        "rootItemIDs": [
-          "expandedAreas:Slayer_Summoner_Mask_Basic"
-        ],
-        "isDowngrade": false,
-        "currencyCosts": []
-      },
-      {
-        "upgradedItemID": "expandedAreas:Slayer_Summoner_Mask_Elite",
-        "itemCosts": [
-          {
-            "id": "expandedAreas:Slayer_Summoner_Mask_Strong",
-            "quantity": 1
-          },
-          {
-            "id": "melvorF:Slayer_Upgrade_Kit_Elite",
-            "quantity": 1
-          }
-        ],
-        "rootItemIDs": [
-          "expandedAreas:Slayer_Summoner_Mask_Strong"
-        ],
-        "isDowngrade": false,
-        "currencyCosts": []
-      },
-      {
-        "upgradedItemID": "expandedAreas:Slayer_Summoner_Mask_Master",
-        "itemCosts": [
-          {
-            "id": "expandedAreas:Slayer_Summoner_Mask_Elite",
-            "quantity": 1
-          },
-          {
-            "id": "melvorF:Slayer_Upgrade_Kit_Master",
-            "quantity": 1
-          }
-        ],
-        "rootItemIDs": [
-          "expandedAreas:Slayer_Summoner_Mask_Elite"
-        ],
-        "isDowngrade": false,
-        "currencyCosts": []
-      },
-      {
-        "upgradedItemID": "expandedAreas:Slayer_Summoner_Gown_Strong",
-        "itemCosts": [
-          {
-            "id": "expandedAreas:Slayer_Summoner_Gown_Basic",
-            "quantity": 1
-          },
-          {
-            "id": "melvorF:Slayer_Upgrade_Kit_Strong",
-            "quantity": 1
-          }
-        ],
-        "rootItemIDs": [
-          "expandedAreas:Slayer_Summoner_Gown_Basic"
-        ],
-        "isDowngrade": false,
-        "currencyCosts": []
-      },
-      {
-        "upgradedItemID": "expandedAreas:Slayer_Summoner_Gown_Elite",
-        "itemCosts": [
-          {
-            "id": "expandedAreas:Slayer_Summoner_Gown_Strong",
-            "quantity": 1
-          },
-          {
-            "id": "melvorF:Slayer_Upgrade_Kit_Elite",
-            "quantity": 1
-          }
-        ],
-        "rootItemIDs": [
-          "expandedAreas:Slayer_Summoner_Gown_Strong"
-        ],
-        "isDowngrade": false,
-        "currencyCosts": []
-      },
-      {
-        "upgradedItemID": "expandedAreas:Slayer_Summoner_Gown_Master",
-        "itemCosts": [
-          {
-            "id": "expandedAreas:Slayer_Summoner_Gown_Elite",
-            "quantity": 1
-          },
-          {
-            "id": "melvorF:Slayer_Upgrade_Kit_Master",
-            "quantity": 1
-          }
-        ],
-        "rootItemIDs": [
-          "expandedAreas:Slayer_Summoner_Gown_Elite"
-        ],
-        "isDowngrade": false,
-        "currencyCosts": []
-      },
-      {
-        "upgradedItemID": "expandedAreas:Slayer_Summoner_Kilt_Strong",
-        "itemCosts": [
-          {
-            "id": "expandedAreas:Slayer_Summoner_Kilt_Basic",
-            "quantity": 1
-          },
-          {
-            "id": "melvorF:Slayer_Upgrade_Kit_Strong",
-            "quantity": 1
-          }
-        ],
-        "rootItemIDs": [
-          "expandedAreas:Slayer_Summoner_Kilt_Basic"
-        ],
-        "isDowngrade": false,
-        "currencyCosts": []
-      },
-      {
-        "upgradedItemID": "expandedAreas:Slayer_Summoner_Kilt_Elite",
-        "itemCosts": [
-          {
-            "id": "expandedAreas:Slayer_Summoner_Kilt_Strong",
-            "quantity": 1
-          },
-          {
-            "id": "melvorF:Slayer_Upgrade_Kit_Elite",
-            "quantity": 1
-          }
-        ],
-        "rootItemIDs": [
-          "expandedAreas:Slayer_Summoner_Kilt_Strong"
-        ],
-        "isDowngrade": false,
-        "currencyCosts": []
-      },
-      {
-        "upgradedItemID": "expandedAreas:Slayer_Summoner_Kilt_Master",
-        "itemCosts": [
-          {
-            "id": "expandedAreas:Slayer_Summoner_Kilt_Elite",
-            "quantity": 1
-          },
-          {
-            "id": "melvorF:Slayer_Upgrade_Kit_Master",
-            "quantity": 1
-          }
-        ],
-        "rootItemIDs": [
-          "expandedAreas:Slayer_Summoner_Kilt_Elite"
-        ],
-        "isDowngrade": false,
-        "currencyCosts": []
-      },
-      {
-        "upgradedItemID": "expandedAreas:Slayer_Summoner_Sandals_Strong",
-        "itemCosts": [
-          {
-            "id": "expandedAreas:Slayer_Summoner_Sandals_Basic",
-            "quantity": 1
-          },
-          {
-            "id": "melvorF:Slayer_Upgrade_Kit_Strong",
-            "quantity": 1
-          }
-        ],
-        "rootItemIDs": [
-          "expandedAreas:Slayer_Summoner_Sandals_Basic"
-        ],
-        "isDowngrade": false,
-        "currencyCosts": []
-      },
-      {
-        "upgradedItemID": "expandedAreas:Slayer_Summoner_Sandals_Elite",
-        "itemCosts": [
-          {
-            "id": "expandedAreas:Slayer_Summoner_Sandals_Strong",
-            "quantity": 1
-          },
-          {
-            "id": "melvorF:Slayer_Upgrade_Kit_Elite",
-            "quantity": 1
-          }
-        ],
-        "rootItemIDs": [
-          "expandedAreas:Slayer_Summoner_Sandals_Strong"
-        ],
-        "isDowngrade": false,
-        "currencyCosts": []
-      },
-      {
-        "upgradedItemID": "expandedAreas:Slayer_Summoner_Sandals_Master",
-        "itemCosts": [
-          {
-            "id": "expandedAreas:Slayer_Summoner_Sandals_Elite",
-            "quantity": 1
-          },
-          {
-            "id": "melvorF:Slayer_Upgrade_Kit_Master",
-            "quantity": 1
-          }
-        ],
-        "rootItemIDs": [
-          "expandedAreas:Slayer_Summoner_Sandals_Elite"
-        ],
-        "isDowngrade": false,
-        "currencyCosts": []
       }
     ],
     "monsters": [
@@ -38299,7 +37901,6 @@
             "key": "attackSpeed",
             "value": 3000
           },
-          
           {
             "key": "meleeDefenceBonus",
             "value": 230
@@ -39787,7 +39388,7 @@
         "selectedSpell": "melvorD:EarthBolt",
         "currencyDrops": [],
         "bones": {
-          "itemID": "melvorD:Spirit_Essence",
+          "itemID": "expandedAreas:Spirit_Essence",
           "quantity": 1
         }
       },
@@ -43589,20 +43190,7 @@
           "expandedAreas:Mind_Rune",
           "expandedAreas:Body_Rune",
           "expandedAreas:Chaos_Rune",
-          "expandedAreas:Death_Rune",
-          "expandedAreas:Wand_of_Fireball",
-          "expandedAreas:Wand_of_Frost",
-          "expandedAreas:Wand_of_Lightning"
-        ]
-      },
-      {
-        "insertAt": "After",
-        "afterID": "melvorF:Slayer_Wizard_Robes_Basic",
-        "ids": [
-          "expandedAreas:Slayer_Summoner_Mask_Basic",
-          "expandedAreas:Slayer_Summoner_Gown_Basic",
-          "expandedAreas:Slayer_Summoner_Kilt_Basic",
-          "expandedAreas:Slayer_Summoner_Sandals_Basic"
+          "expandedAreas:Death_Rune"
         ]
       },
       {
@@ -43848,8 +43436,8 @@
         "cost": {
           "items": [
             {
-              "id": "expandedAreas:Adamant_Shot",
-              "quantity": 1
+              "id": "melvorD:Coal_Ore",
+              "quantity": 10
             }
           ],
           "currencies": [
@@ -48478,233 +48066,6 @@
         "showBuyLimit": false
       },
       {
-        "id": "Wand_of_Lightning",
-        "media": "assets/bank/wand_lightning.png",
-        "category": "expandedAreas:MagicShoppe",
-        "customDescription": "Equips in Offhand Slot, at a penalty of +20% Attack Interval. Has the Special Attack, Lightning Arc (15%): An arc of lightning zaps the target 3 times over 0.3s, dealing 60-480 damage on the first hit, 30-240 on the second, and 15-120 on the third. Each hit applies 1 stack of Shock (-5% Accuracy, up to 10 stacks) and has a 10% chance to apply Stun for 1 turn.",
-        "contains": {
-          "items": [],
-          "itemCharges": {
-            "id": "expandedAreas:Wand_of_Lightning",
-            "quantity": 10
-          }
-        },
-        "cost": {
-          "items": [],
-          "currencies": [
-            {
-              "currency": "melvorD:GP",
-              "type": "Fixed",
-              "cost": 500000
-            }
-          ]
-        },
-        "allowQuantityPurchase": true,
-        "unlockRequirements": [],
-        "purchaseRequirements": [],
-        "defaultBuyLimit": 0,
-        "buyLimitOverrides": [],
-        "showBuyLimit": false
-      },
-      {
-        "id": "Wand_of_Frost",
-        "media": "assets/bank/wand_frost.png",
-        "category": "expandedAreas:MagicShoppe",
-        "customDescription": "Equips in Offhand Slot, at a penalty of +20% Attack Interval. Has the Special Attack, Feelin' Frosty? (15%): A ray of biting cold pierces the target, dealing damage equal to 1 + 5-10% of their Magic level. On hit, Slows the target for 15% for 3 turns, and has a 20% chance to Freeze the target for 2 turns.",
-        "contains": {
-          "items": [],
-          "itemCharges": {
-            "id": "expandedAreas:Wand_of_Frost",
-            "quantity": 10
-          }
-        },
-        "cost": {
-          "items": [],
-          "currencies": [
-            {
-              "currency": "melvorD:GP",
-              "type": "Fixed",
-              "cost": 500000
-            }
-          ]
-        },
-        "allowQuantityPurchase": true,
-        "unlockRequirements": [],
-        "purchaseRequirements": [],
-        "defaultBuyLimit": 0,
-        "buyLimitOverrides": [],
-        "showBuyLimit": false
-      },
-      {
-        "id": "Wand_of_Fireball",
-        "media": "assets/bank/wand_fireball.png",
-        "customDescription": "Equips in Offhand Slot, at a penalty of +20% Attack Interval. Has the Special Attack, FIREBALL! (15%): Launch an avoidable fireball that deals 60-360 damage. On a hit, inflicts Burn.",
-        "category": "expandedAreas:MagicShoppe",
-        "contains": {
-          "items": [],
-          "itemCharges": {
-            "id": "expandedAreas:Wand_of_Fireball",
-            "quantity": 10
-          }
-        },
-        "cost": {
-          "items": [],
-          "currencies": [
-            {
-              "currency": "melvorD:GP",
-              "type": "Fixed",
-              "cost": 500000
-            }
-          ]
-        },
-        "allowQuantityPurchase": true,
-        "unlockRequirements": [],
-        "purchaseRequirements": [],
-        "defaultBuyLimit": 0,
-        "buyLimitOverrides": [],
-        "showBuyLimit": false
-      },
-      {
-        "id": "Slayer_Summoner_Mask_Basic",
-        "media": "assets/bank/summoner_mask_slayer_basic.png",
-        "category": "melvorF:Slayer",
-        "contains": {
-          "items": [
-            {
-              "id": "expandedAreas:Slayer_Summoner_Mask_Basic",
-              "quantity": 1
-            }
-          ]
-        },
-        "cost": {
-          "items": [],
-          "currencies": [
-            {
-              "currency": "melvorD:SlayerCoins",
-              "type": "Fixed",
-              "cost": 10000
-            }
-          ]
-        },
-        "allowQuantityPurchase": false,
-        "unlockRequirements": [],
-        "purchaseRequirements": [
-          {
-            "type": "SlayerTask",
-            "category": "melvorF:Normal",
-            "count": 15
-          }
-        ],
-        "defaultBuyLimit": 0,
-        "buyLimitOverrides": [],
-        "showBuyLimit": false
-      },
-      {
-        "id": "Slayer_Summoner_Gown_Basic",
-        "media": "assets/bank/summoner_gown_slayer_basic.png",
-        "category": "melvorF:Slayer",
-        "contains": {
-          "items": [
-            {
-              "id": "expandedAreas:Slayer_Summoner_Gown_Basic",
-              "quantity": 1
-            }
-          ]
-        },
-        "cost": {
-          "items": [],
-          "currencies": [
-            {
-              "currency": "melvorD:SlayerCoins",
-              "type": "Fixed",
-              "cost": 10000
-            }
-          ]
-        },
-        "allowQuantityPurchase": false,
-        "unlockRequirements": [],
-        "purchaseRequirements": [
-          {
-            "type": "SlayerTask",
-            "category": "melvorF:Normal",
-            "count": 15
-          }
-        ],
-        "defaultBuyLimit": 0,
-        "buyLimitOverrides": [],
-        "showBuyLimit": false
-      },
-      {
-        "id": "Slayer_Summoner_Kilt_Basic",
-        "media": "assets/bank/summoner_kilt_slayer_basic.png",
-        "category": "melvorF:Slayer",
-        "contains": {
-          "items": [
-            {
-              "id": "expandedAreas:Slayer_Summoner_Kilt_Basic",
-              "quantity": 1
-            }
-          ]
-        },
-        "cost": {
-          "items": [],
-          "currencies": [
-            {
-              "currency": "melvorD:SlayerCoins",
-              "type": "Fixed",
-              "cost": 10000
-            }
-          ]
-        },
-        "allowQuantityPurchase": false,
-        "unlockRequirements": [],
-        "purchaseRequirements": [
-          {
-            "type": "SlayerTask",
-            "category": "melvorF:Normal",
-            "count": 15
-          }
-        ],
-        "defaultBuyLimit": 0,
-        "buyLimitOverrides": [],
-        "showBuyLimit": false
-      },
-      {
-        "id": "Slayer_Summoner_Sandals_Basic",
-        "media": "assets/bank/summoner_sandals_slayer_basic.png",
-        "category": "melvorF:Slayer",
-        "contains": {
-          "items": [
-            {
-              "id": "expandedAreas:Slayer_Summoner_Sandals_Basic",
-              "quantity": 1
-            }
-          ]
-        },
-        "cost": {
-          "items": [],
-          "currencies": [
-            {
-              "currency": "melvorD:SlayerCoins",
-              "type": "Fixed",
-              "cost": 10000
-            }
-          ]
-        },
-        "allowQuantityPurchase": false,
-        "unlockRequirements": [],
-        "purchaseRequirements": [
-          {
-            "type": "SlayerTask",
-            "category": "melvorF:Normal",
-            "count": 15
-          }
-        ],
-        "defaultBuyLimit": 0,
-        "buyLimitOverrides": [],
-        "showBuyLimit": false
-      },
-      {
         "id": "Anvil_Iron",
         "media": "assets/shop/skillUpgrades/anvil_iron.png",
         "category": "melvorD:SkillUpgrades",
@@ -49755,22 +49116,12 @@
                 "skillID": "melvorD:Runecrafting",
                 "subcategoryID": "melvorF:Runes",
                 "value": 1
-              },
-              {
-                "skillID": "melvorD:Runecrafting",
-                "subcategoryID": "melvorF:CombinationRunes",
-                "value": 1
               }
             ],
             "skillPreservationChance": [
               {
                 "skillID": "melvorD:Runecrafting",
                 "subcategoryID": "melvorF:Runes",
-                "value": 5
-              },
-              {
-                "skillID": "melvorD:Runecrafting",
-                "subcategoryID": "melvorF:CombinationRunes",
                 "value": 5
               }
             ]
@@ -49807,22 +49158,12 @@
                 "skillID": "melvorD:Runecrafting",
                 "subcategoryID": "melvorF:Runes",
                 "value": 1
-              },
-              {
-                "skillID": "melvorD:Runecrafting",
-                "subcategoryID": "melvorF:CombinationRunes",
-                "value": 1
               }
             ],
             "skillPreservationChance": [
               {
                 "skillID": "melvorD:Runecrafting",
                 "subcategoryID": "melvorF:Runes",
-                "value": 5
-              },
-              {
-                "skillID": "melvorD:Runecrafting",
-                "subcategoryID": "melvorF:CombinationRunes",
                 "value": 5
               }
             ]
@@ -49871,22 +49212,12 @@
                 "skillID": "melvorD:Runecrafting",
                 "subcategoryID": "melvorF:Runes",
                 "value": 1
-              },
-              {
-                "skillID": "melvorD:Runecrafting",
-                "subcategoryID": "melvorF:CombinationRunes",
-                "value": 1
               }
             ],
             "skillPreservationChance": [
               {
                 "skillID": "melvorD:Runecrafting",
                 "subcategoryID": "melvorF:Runes",
-                "value": 5
-              },
-              {
-                "skillID": "melvorD:Runecrafting",
-                "subcategoryID": "melvorF:CombinationRunes",
                 "value": 5
               }
             ]
@@ -49935,22 +49266,12 @@
                 "skillID": "melvorD:Runecrafting",
                 "subcategoryID": "melvorF:Runes",
                 "value": 1
-              },
-              {
-                "skillID": "melvorD:Runecrafting",
-                "subcategoryID": "melvorF:CombinationRunes",
-                "value": 1
               }
             ],
             "skillPreservationChance": [
               {
                 "skillID": "melvorD:Runecrafting",
                 "subcategoryID": "melvorF:Runes",
-                "value": 5
-              },
-              {
-                "skillID": "melvorD:Runecrafting",
-                "subcategoryID": "melvorF:CombinationRunes",
                 "value": 5
               }
             ]
@@ -49999,22 +49320,12 @@
                 "skillID": "melvorD:Runecrafting",
                 "subcategoryID": "melvorF:Runes",
                 "value": 1
-              },
-              {
-                "skillID": "melvorD:Runecrafting",
-                "subcategoryID": "melvorF:CombinationRunes",
-                "value": 1
               }
             ],
             "skillPreservationChance": [
               {
                 "skillID": "melvorD:Runecrafting",
                 "subcategoryID": "melvorF:Runes",
-                "value": 5
-              },
-              {
-                "skillID": "melvorD:Runecrafting",
-                "subcategoryID": "melvorF:CombinationRunes",
                 "value": 5
               }
             ]
@@ -50063,22 +49374,12 @@
                 "skillID": "melvorD:Runecrafting",
                 "subcategoryID": "melvorF:Runes",
                 "value": 1
-              },
-              {
-                "skillID": "melvorD:Runecrafting",
-                "subcategoryID": "melvorF:CombinationRunes",
-                "value": 1
               }
             ],
             "skillPreservationChance": [
               {
                 "skillID": "melvorD:Runecrafting",
                 "subcategoryID": "melvorF:Runes",
-                "value": 5
-              },
-              {
-                "skillID": "melvorD:Runecrafting",
-                "subcategoryID": "melvorF:CombinationRunes",
                 "value": 5
               }
             ]
@@ -50127,22 +49428,12 @@
                 "skillID": "melvorD:Runecrafting",
                 "subcategoryID": "melvorF:Runes",
                 "value": 1
-              },
-              {
-                "skillID": "melvorD:Runecrafting",
-                "subcategoryID": "melvorF:CombinationRunes",
-                "value": 1
               }
             ],
             "skillPreservationChance": [
               {
                 "skillID": "melvorD:Runecrafting",
                 "subcategoryID": "melvorF:Runes",
-                "value": 5
-              },
-              {
-                "skillID": "melvorD:Runecrafting",
-                "subcategoryID": "melvorF:CombinationRunes",
                 "value": 5
               }
             ]
@@ -54995,7 +54286,7 @@
               "productID": "expandedAreas:Bronze_Opal_Bracelet",
               "baseQuantity": 1,
               "baseExperience": 6,
-              "categoryID": "expandedAreas:StandardAccessories",
+              "categoryID": "expandedAreas:Accessories",
               "subcategoryID": "melvorF:Jewelry",
               "itemCosts": [
                 {
@@ -55015,7 +54306,7 @@
               "productID": "expandedAreas:Bronze_Opal_Earrings",
               "baseQuantity": 1,
               "baseExperience": 6,
-              "categoryID": "expandedAreas:StandardAccessories",
+              "categoryID": "expandedAreas:Accessories",
               "subcategoryID": "melvorF:Jewelry",
               "itemCosts": [
                 {
@@ -55075,7 +54366,7 @@
               "productID": "expandedAreas:Bronze_Spinel_Bracelet",
               "baseQuantity": 1,
               "baseExperience": 35,
-              "categoryID": "expandedAreas:StandardAccessories",
+              "categoryID": "expandedAreas:Accessories",
               "subcategoryID": "melvorF:Jewelry",
               "itemCosts": [
                 {
@@ -55095,7 +54386,7 @@
               "productID": "expandedAreas:Bronze_Spinel_Earrings",
               "baseQuantity": 1,
               "baseExperience": 35,
-              "categoryID": "expandedAreas:StandardAccessories",
+              "categoryID": "expandedAreas:Accessories",
               "subcategoryID": "melvorF:Jewelry",
               "itemCosts": [
                 {
@@ -55155,7 +54446,7 @@
               "productID": "expandedAreas:Bronze_Quartz_Bracelet",
               "baseQuantity": 1,
               "baseExperience": 110,
-              "categoryID": "expandedAreas:StandardAccessories",
+              "categoryID": "expandedAreas:Accessories",
               "subcategoryID": "melvorF:Jewelry",
               "itemCosts": [
                 {
@@ -55175,7 +54466,7 @@
               "productID": "expandedAreas:Bronze_Quartz_Earrings",
               "baseQuantity": 1,
               "baseExperience": 110,
-              "categoryID": "expandedAreas:StandardAccessories",
+              "categoryID": "expandedAreas:Accessories",
               "subcategoryID": "melvorF:Jewelry",
               "itemCosts": [
                 {
@@ -55615,7 +54906,7 @@
               "productID": "expandedAreas:Platinum_Jadestone_Bracelet",
               "baseQuantity": 1,
               "baseExperience": 300,
-              "categoryID": "expandedAreas:StandardAccessories",
+              "categoryID": "expandedAreas:Accessories",
               "subcategoryID": "melvorF:Jewelry",
               "itemCosts": [
                 {
@@ -55635,7 +54926,7 @@
               "productID": "expandedAreas:Platinum_Jadestone_Earrings",
               "baseQuantity": 1,
               "baseExperience": 300,
-              "categoryID": "expandedAreas:StandardAccessories",
+              "categoryID": "expandedAreas:Accessories",
               "subcategoryID": "melvorF:Jewelry",
               "itemCosts": [
                 {
@@ -55695,7 +54986,7 @@
               "productID": "expandedAreas:Volkanum_Bracelet",
               "baseQuantity": 1,
               "baseExperience": 5000,
-              "categoryID": "expandedAreas:StandardAccessories",
+              "categoryID": "expandedAreas:Accessories",
               "subcategoryID": "melvorF:Jewelry",
               "itemCosts": [
                 {
@@ -55715,7 +55006,7 @@
               "productID": "expandedAreas:Volkanum_Earrings",
               "baseQuantity": 1,
               "baseExperience": 5000,
-              "categoryID": "expandedAreas:StandardAccessories",
+              "categoryID": "expandedAreas:Accessories",
               "subcategoryID": "melvorF:Jewelry",
               "itemCosts": [
                 {
@@ -55724,206 +55015,6 @@
                 },
                 {
                   "id": "expandedAreas:Volkanum_Bar",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Gold_Topaz_Bracelet",
-              "level": 10,
-              "productID": "expandedAreas:Gold_Topaz_Bracelet",
-              "baseQuantity": 1,
-              "baseExperience": 24,
-              "categoryID": "expandedAreas:StandardAccessories",
-              "subcategoryID": "melvorF:Jewelry",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Gold_Bar",
-                  "quantity": 1
-                },
-                {
-                  "id": "melvorD:Topaz",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Gold_Sapphire_Bracelet",
-              "level": 20,
-              "productID": "expandedAreas:Gold_Sapphire_Bracelet",
-              "baseQuantity": 1,
-              "baseExperience": 45,
-              "categoryID": "expandedAreas:StandardAccessories",
-              "subcategoryID": "melvorF:Jewelry",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Gold_Bar",
-                  "quantity": 1
-                },
-                {
-                  "id": "melvorD:Sapphire",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Gold_Ruby_Bracelet",
-              "level": 25,
-              "productID": "expandedAreas:Gold_Ruby_Bracelet",
-              "baseQuantity": 1,
-              "baseExperience": 60,
-              "categoryID": "expandedAreas:StandardAccessories",
-              "subcategoryID": "melvorF:Jewelry",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Gold_Bar",
-                  "quantity": 1
-                },
-                {
-                  "id": "melvorD:Ruby",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Gold_Emerald_Bracelet",
-              "level": 50,
-              "productID": "expandedAreas:Gold_Emerald_Bracelet",
-              "baseQuantity": 1,
-              "baseExperience": 130,
-              "categoryID": "expandedAreas:StandardAccessories",
-              "subcategoryID": "melvorF:Jewelry",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Gold_Bar",
-                  "quantity": 1
-                },
-                {
-                  "id": "melvorD:Emerald",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Gold_Diamond_Bracelet",
-              "level": 80,
-              "productID": "expandedAreas:Gold_Diamond_Bracelet",
-              "baseQuantity": 1,
-              "baseExperience": 250,
-              "categoryID": "expandedAreas:StandardAccessories",
-              "subcategoryID": "melvorF:Jewelry",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Gold_Bar",
-                  "quantity": 1
-                },
-                {
-                  "id": "melvorD:Diamond",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Silver_Topaz_Bracelet",
-              "level": 10,
-              "productID": "expandedAreas:Silver_Topaz_Bracelet",
-              "baseQuantity": 1,
-              "baseExperience": 24,
-              "categoryID": "expandedAreas:StandardAccessories",
-              "subcategoryID": "melvorF:Jewelry",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Silver_Bar",
-                  "quantity": 1
-                },
-                {
-                  "id": "melvorD:Topaz",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Silver_Sapphire_Bracelet",
-              "level": 20,
-              "productID": "expandedAreas:Silver_Sapphire_Bracelet",
-              "baseQuantity": 1,
-              "baseExperience": 45,
-              "categoryID": "expandedAreas:StandardAccessories",
-              "subcategoryID": "melvorF:Jewelry",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Silver_Bar",
-                  "quantity": 1
-                },
-                {
-                  "id": "melvorD:Sapphire",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Silver_Ruby_Bracelet",
-              "level": 25,
-              "productID": "expandedAreas:Silver_Ruby_Bracelet",
-              "baseQuantity": 1,
-              "baseExperience": 60,
-              "categoryID": "expandedAreas:StandardAccessories",
-              "subcategoryID": "melvorF:Jewelry",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Silver_Bar",
-                  "quantity": 1
-                },
-                {
-                  "id": "melvorD:Ruby",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Silver_Emerald_Bracelet",
-              "level": 50,
-              "productID": "expandedAreas:Silver_Emerald_Bracelet",
-              "baseQuantity": 1,
-              "baseExperience": 130,
-              "categoryID": "expandedAreas:StandardAccessories",
-              "subcategoryID": "melvorF:Jewelry",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Silver_Bar",
-                  "quantity": 1
-                },
-                {
-                  "id": "melvorD:Emerald",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Silver_Diamond_Bracelet",
-              "level": 80,
-              "productID": "expandedAreas:Silver_Diamond_Bracelet",
-              "baseQuantity": 1,
-              "baseExperience": 250,
-              "categoryID": "expandedAreas:StandardAccessories",
-              "subcategoryID": "melvorF:Jewelry",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Silver_Bar",
-                  "quantity": 1
-                },
-                {
-                  "id": "melvorD:Diamond",
                   "quantity": 1
                 }
               ],
@@ -57045,11 +56136,6 @@
         "data": {
           "categories": [
             {
-              "id": "Standard_Firearms",
-              "name": "Standard Firearms",
-              "media": "assets/bank/offhand_pistol_dragon.png"
-            },
-            {
               "id": "Thrownaxes",
               "media": "assets/bank/Dragon_Thrownaxe.png",
               "name": "Standard Thrownaxes"
@@ -57073,566 +56159,6 @@
             "upgrades": []
           },
           "recipes": [
-            {
-              "id": "Wooden_Pistol_Frame",
-              "level": 3,
-              "productID": "expandedAreas:Wooden_Pistol_Frame",
-              "baseQuantity": 1,
-              "baseExperience": 3,
-              "categoryID": "expandedAreas:Standard_Firearms",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Normal_Logs",
-                  "quantity": 2
-                }
-              ],
-              "currencyCosts": [],
-              "subcategoryID": "expandedAreas:FirearmComponents"
-            },
-            {
-              "id": "Oak_Pistol_Frame",
-              "level": 16,
-              "productID": "expandedAreas:Oak_Pistol_Frame",
-              "baseQuantity": 1,
-              "baseExperience": 45,
-              "categoryID": "expandedAreas:Standard_Firearms",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Oak_Logs",
-                  "quantity": 2
-                }
-              ],
-              "currencyCosts": [],
-              "subcategoryID": "expandedAreas:FirearmComponents"
-            },
-            {
-              "id": "Willow_Pistol_Frame",
-              "level": 29,
-              "productID": "expandedAreas:Willow_Pistol_Frame",
-              "baseQuantity": 1,
-              "baseExperience": 87,
-              "categoryID": "expandedAreas:Standard_Firearms",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Willow_Logs",
-                  "quantity": 2
-                }
-              ],
-              "currencyCosts": [],
-              "subcategoryID": "expandedAreas:FirearmComponents"
-            },
-            {
-              "id": "Maple_Pistol_Frame",
-              "level": 42,
-              "productID": "expandedAreas:Maple_Pistol_Frame",
-              "baseQuantity": 1,
-              "baseExperience": 129,
-              "categoryID": "expandedAreas:Standard_Firearms",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Maple_Logs",
-                  "quantity": 2
-                }
-              ],
-              "currencyCosts": [],
-              "subcategoryID": "expandedAreas:FirearmComponents"
-            },
-            {
-              "id": "Mahogany_Pistol_Frame",
-              "level": 55,
-              "productID": "expandedAreas:Mahogany_Pistol_Frame",
-              "baseQuantity": 1,
-              "baseExperience": 171,
-              "categoryID": "expandedAreas:Standard_Firearms",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Mahogany_Logs",
-                  "quantity": 2
-                }
-              ],
-              "currencyCosts": [],
-              "subcategoryID": "expandedAreas:FirearmComponents"
-            },
-            {
-              "id": "Yew_Pistol_Frame",
-              "level": 68,
-              "productID": "expandedAreas:Yew_Pistol_Frame",
-              "baseQuantity": 1,
-              "baseExperience": 213,
-              "categoryID": "expandedAreas:Standard_Firearms",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Yew_Logs",
-                  "quantity": 2
-                }
-              ],
-              "currencyCosts": [],
-              "subcategoryID": "expandedAreas:FirearmComponents"
-            },
-            {
-              "id": "Magic_Pistol_Frame",
-              "level": 81,
-              "productID": "expandedAreas:Magic_Pistol_Frame",
-              "baseQuantity": 1,
-              "baseExperience": 255,
-              "categoryID": "expandedAreas:Standard_Firearms",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Magic_Logs",
-                  "quantity": 2
-                }
-              ],
-              "currencyCosts": [],
-              "subcategoryID": "expandedAreas:FirearmComponents"
-            },
-            {
-              "id": "Redwood_Pistol_Frame",
-              "level": 94,
-              "productID": "expandedAreas:Redwood_Pistol_Frame",
-              "baseQuantity": 1,
-              "baseExperience": 291,
-              "categoryID": "expandedAreas:Standard_Firearms",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Redwood_Logs",
-                  "quantity": 2
-                }
-              ],
-              "currencyCosts": [],
-              "subcategoryID": "expandedAreas:FirearmComponents"
-            },
-            {
-              "id": "Bronze_Pistol",
-              "level": 3,
-              "productID": "expandedAreas:Bronze_Pistol",
-              "baseQuantity": 1,
-              "baseExperience": 3,
-              "categoryID": "expandedAreas:Standard_Firearms",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Wooden_Pistol_Frame",
-                  "quantity": 1
-                },
-                {
-                  "id": "expandedAreas:Bronze_Pistol_Barrel",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Iron_Pistol",
-              "level": 16,
-              "productID": "expandedAreas:Iron_Pistol",
-              "baseQuantity": 1,
-              "baseExperience": 45,
-              "categoryID": "expandedAreas:Standard_Firearms",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Oak_Pistol_Frame",
-                  "quantity": 1
-                },
-                {
-                  "id": "expandedAreas:Iron_Pistol_Barrel",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Steel_Pistol",
-              "level": 29,
-              "productID": "expandedAreas:Steel_Pistol",
-              "baseQuantity": 1,
-              "baseExperience": 87,
-              "categoryID": "expandedAreas:Standard_Firearms",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Willow_Pistol_Frame",
-                  "quantity": 1
-                },
-                {
-                  "id": "expandedAreas:Steel_Pistol_Barrel",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Mithril_Pistol",
-              "level": 42,
-              "productID": "expandedAreas:Mithril_Pistol",
-              "baseQuantity": 1,
-              "baseExperience": 129,
-              "categoryID": "expandedAreas:Standard_Firearms",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Maple_Pistol_Frame",
-                  "quantity": 1
-                },
-                {
-                  "id": "expandedAreas:Mithril_Pistol_Barrel",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Adamant_Pistol",
-              "level": 55,
-              "productID": "expandedAreas:Adamant_Pistol",
-              "baseQuantity": 1,
-              "baseExperience": 171,
-              "categoryID": "expandedAreas:Standard_Firearms",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Mahogany_Pistol_Frame",
-                  "quantity": 1
-                },
-                {
-                  "id": "expandedAreas:Adamant_Pistol_Barrel",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Rune_Pistol",
-              "level": 68,
-              "productID": "expandedAreas:Rune_Pistol",
-              "baseQuantity": 1,
-              "baseExperience": 213,
-              "categoryID": "expandedAreas:Standard_Firearms",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Yew_Pistol_Frame",
-                  "quantity": 1
-                },
-                {
-                  "id": "expandedAreas:Rune_Pistol_Barrel",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Silver_Pistol",
-              "level": 81,
-              "productID": "expandedAreas:Silver_Pistol",
-              "baseQuantity": 1,
-              "baseExperience": 255,
-              "categoryID": "expandedAreas:Standard_Firearms",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Magic_Pistol_Frame",
-                  "quantity": 1
-                },
-                {
-                  "id": "expandedAreas:Silver_Pistol_Barrel",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Dragon_Pistol",
-              "level": 94,
-              "productID": "expandedAreas:Dragon_Pistol",
-              "baseQuantity": 1,
-              "baseExperience": 291,
-              "categoryID": "expandedAreas:Standard_Firearms",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Redwood_Pistol_Frame",
-                  "quantity": 1
-                },
-                {
-                  "id": "expandedAreas:Dragon_Pistol_Barrel",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Wooden_Arquebus_Stock",
-              "level": 5,
-              "productID": "expandedAreas:Wooden_Arquebus_Stock",
-              "baseQuantity": 1,
-              "baseExperience": 4,
-              "categoryID": "expandedAreas:Standard_Firearms",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Normal_Logs",
-                  "quantity": 4
-                }
-              ],
-              "currencyCosts": [],
-              "subcategoryID": "expandedAreas:FirearmComponents"
-            },
-            {
-              "id": "Oak_Arquebus_Stock",
-              "level": 18,
-              "productID": "expandedAreas:Oak_Arquebus_Stock",
-              "baseQuantity": 1,
-              "baseExperience": 51,
-              "categoryID": "expandedAreas:Standard_Firearms",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Oak_Logs",
-                  "quantity": 4
-                }
-              ],
-              "currencyCosts": [],
-              "subcategoryID": "expandedAreas:FirearmComponents"
-            },
-            {
-              "id": "Willow_Arquebus_Stock",
-              "level": 31,
-              "productID": "expandedAreas:Willow_Arquebus_Stock",
-              "baseQuantity": 1,
-              "baseExperience": 99,
-              "categoryID": "expandedAreas:Standard_Firearms",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Willow_Logs",
-                  "quantity": 4
-                }
-              ],
-              "currencyCosts": [],
-              "subcategoryID": "expandedAreas:FirearmComponents"
-            },
-            {
-              "id": "Maple_Arquebus_Stock",
-              "level": 45,
-              "productID": "expandedAreas:Maple_Arquebus_Stock",
-              "baseQuantity": 1,
-              "baseExperience": 146,
-              "categoryID": "expandedAreas:Standard_Firearms",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Maple_Logs",
-                  "quantity": 4
-                }
-              ],
-              "currencyCosts": [],
-              "subcategoryID": "expandedAreas:FirearmComponents"
-            },
-            {
-              "id": "Mahogany_Arquebus_Stock",
-              "level": 58,
-              "productID": "expandedAreas:Mahogany_Arquebus_Stock",
-              "baseQuantity": 1,
-              "baseExperience": 196,
-              "categoryID": "expandedAreas:Standard_Firearms",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Mahogany_Logs",
-                  "quantity": 4
-                }
-              ],
-              "currencyCosts": [],
-              "subcategoryID": "expandedAreas:FirearmComponents"
-            },
-            {
-              "id": "Yew_Arquebus_Stock",
-              "level": 71,
-              "productID": "expandedAreas:Yew_Arquebus_Stock",
-              "baseQuantity": 1,
-              "baseExperience": 241,
-              "categoryID": "expandedAreas:Standard_Firearms",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Yew_Logs",
-                  "quantity": 4
-                }
-              ],
-              "currencyCosts": [],
-              "subcategoryID": "expandedAreas:FirearmComponents"
-            },
-            {
-              "id": "Magic_Arquebus_Stock",
-              "level": 84,
-              "productID": "expandedAreas:Magic_Arquebus_Stock",
-              "baseQuantity": 1,
-              "baseExperience": 287,
-              "categoryID": "expandedAreas:Standard_Firearms",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Magic_Logs",
-                  "quantity": 4
-                }
-              ],
-              "currencyCosts": [],
-              "subcategoryID": "expandedAreas:FirearmComponents"
-            },
-            {
-              "id": "Redwood_Arquebus_Stock",
-              "level": 97,
-              "productID": "expandedAreas:Redwood_Arquebus_Stock",
-              "baseQuantity": 1,
-              "baseExperience": 332,
-              "categoryID": "expandedAreas:Standard_Firearms",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Redwood_Logs",
-                  "quantity": 4
-                }
-              ],
-              "currencyCosts": [],
-              "subcategoryID": "expandedAreas:FirearmComponents"
-            },
-            {
-              "id": "Bronze_Arquebus",
-              "level": 5,
-              "productID": "expandedAreas:Bronze_Arquebus",
-              "baseQuantity": 1,
-              "baseExperience": 4,
-              "categoryID": "expandedAreas:Standard_Firearms",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Wooden_Arquebus_Stock",
-                  "quantity": 1
-                },
-                {
-                  "id": "expandedAreas:Bronze_Arquebus_Barrel",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Iron_Arquebus",
-              "level": 18,
-              "productID": "expandedAreas:Iron_Arquebus",
-              "baseQuantity": 1,
-              "baseExperience": 51,
-              "categoryID": "expandedAreas:Standard_Firearms",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Oak_Arquebus_Stock",
-                  "quantity": 1
-                },
-                {
-                  "id": "expandedAreas:Iron_Arquebus_Barrel",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Steel_Arquebus",
-              "level": 31,
-              "productID": "expandedAreas:Steel_Arquebus",
-              "baseQuantity": 1,
-              "baseExperience": 99,
-              "categoryID": "expandedAreas:Standard_Firearms",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Willow_Arquebus_Stock",
-                  "quantity": 1
-                },
-                {
-                  "id": "expandedAreas:Steel_Arquebus_Barrel",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Mithril_Arquebus",
-              "level": 45,
-              "productID": "expandedAreas:Mithril_Arquebus",
-              "baseQuantity": 1,
-              "baseExperience": 146,
-              "categoryID": "expandedAreas:Standard_Firearms",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Maple_Arquebus_Stock",
-                  "quantity": 1
-                },
-                {
-                  "id": "expandedAreas:Mithril_Arquebus_Barrel",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Adamant_Arquebus",
-              "level": 58,
-              "productID": "expandedAreas:Adamant_Arquebus",
-              "baseQuantity": 1,
-              "baseExperience": 196,
-              "categoryID": "expandedAreas:Standard_Firearms",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Mahogany_Arquebus_Stock",
-                  "quantity": 1
-                },
-                {
-                  "id": "expandedAreas:Adamant_Arquebus_Barrel",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Rune_Arquebus",
-              "level": 71,
-              "productID": "expandedAreas:Rune_Arquebus",
-              "baseQuantity": 1,
-              "baseExperience": 241,
-              "categoryID": "expandedAreas:Standard_Firearms",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Yew_Arquebus_Stock",
-                  "quantity": 1
-                },
-                {
-                  "id": "expandedAreas:Rune_Arquebus_Barrel",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Silver_Arquebus",
-              "level": 84,
-              "productID": "expandedAreas:Silver_Arquebus",
-              "baseQuantity": 1,
-              "baseExperience": 287,
-              "categoryID": "expandedAreas:Standard_Firearms",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Magic_Arquebus_Stock",
-                  "quantity": 1
-                },
-                {
-                  "id": "expandedAreas:Silver_Arquebus_Barrel",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Dragon_Arquebus",
-              "level": 97,
-              "productID": "expandedAreas:Dragon_Arquebus",
-              "baseQuantity": 1,
-              "baseExperience": 332,
-              "categoryID": "expandedAreas:Standard_Firearms",
-              "itemCosts": [
-                {
-                  "id": "expandedAreas:Redwood_Arquebus_Stock",
-                  "quantity": 1
-                },
-                {
-                  "id": "expandedAreas:Dragon_Arquebus_Barrel",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
             {
               "id": "Bronze_Spear",
               "level": 3,
@@ -58593,438 +57119,6 @@
             "upgrades": []
           },
           "recipes": [
-            {
-              "id": "Air_Elementalist_Hat",
-              "level": 72,
-              "productID": "expandedAreas:Air_Elementalist_Hat",
-              "baseQuantity": 1,
-              "baseExperience": 147,
-              "categoryID": "melvorF:AirMagicGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Air_Rune",
-                  "quantity": 500
-                },
-                {
-                  "id": "melvorF:Nature_Rune",
-                  "quantity": 25
-                },
-                {
-                  "id": "expandedAreas:Mind_Essence",
-                  "quantity": 1000
-                },
-                {
-                  "id": "melvorD:Ancient_Wizard_Hat",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Air_Elementalist_Boots",
-              "level": 76,
-              "productID": "expandedAreas:Air_Elementalist_Boots",
-              "baseQuantity": 1,
-              "baseExperience": 151,
-              "categoryID": "melvorF:AirMagicGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Air_Rune",
-                  "quantity": 500
-                },
-                {
-                  "id": "melvorF:Nature_Rune",
-                  "quantity": 25
-                },
-                {
-                  "id": "expandedAreas:Mind_Essence",
-                  "quantity": 1000
-                },
-                {
-                  "id": "melvorD:Ancient_Wizard_Boots",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Air_Elementalist_Gloves",
-              "level": 80,
-              "productID": "expandedAreas:Air_Elementalist_Gloves",
-              "baseQuantity": 1,
-              "baseExperience": 155,
-              "categoryID": "melvorF:AirMagicGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Air_Rune",
-                  "quantity": 500
-                },
-                {
-                  "id": "melvorF:Nature_Rune",
-                  "quantity": 25
-                },
-                {
-                  "id": "expandedAreas:Mind_Essence",
-                  "quantity": 1000
-                },
-                {
-                  "id": "expandedAreas:Ancient_Wizard_Gloves",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Air_Elementalist_Robes",
-              "level": 84,
-              "productID": "expandedAreas:Air_Elementalist_Robes",
-              "baseQuantity": 1,
-              "baseExperience": 162,
-              "categoryID": "melvorF:AirMagicGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Air_Rune",
-                  "quantity": 500
-                },
-                {
-                  "id": "melvorF:Nature_Rune",
-                  "quantity": 25
-                },
-                {
-                  "id": "expandedAreas:Mind_Essence",
-                  "quantity": 1000
-                },
-                {
-                  "id": "melvorD:Ancient_Wizard_Robes",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Water_Elementalist_Hat",
-              "level": 76,
-              "productID": "expandedAreas:Water_Elementalist_Hat",
-              "baseQuantity": 1,
-              "baseExperience": 151,
-              "categoryID": "melvorF:WaterMagicGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Water_Rune",
-                  "quantity": 500
-                },
-                {
-                  "id": "melvorF:Nature_Rune",
-                  "quantity": 25
-                },
-                {
-                  "id": "expandedAreas:Mind_Essence",
-                  "quantity": 1000
-                },
-                {
-                  "id": "expandedAreas:Eye_of_Water",
-                  "quantity": 25
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Water_Elementalist_Boots",
-              "level": 80,
-              "productID": "expandedAreas:Water_Elementalist_Boots",
-              "baseQuantity": 1,
-              "baseExperience": 155,
-              "categoryID": "melvorF:WaterMagicGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Water_Rune",
-                  "quantity": 500
-                },
-                {
-                  "id": "melvorF:Nature_Rune",
-                  "quantity": 25
-                },
-                {
-                  "id": "expandedAreas:Mind_Essence",
-                  "quantity": 1000
-                },
-                {
-                  "id": "expandedAreas:Eye_of_Water",
-                  "quantity": 25
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Water_Elementalist_Gloves",
-              "level": 84,
-              "productID": "expandedAreas:Water_Elementalist_Gloves",
-              "baseQuantity": 1,
-              "baseExperience": 159,
-              "categoryID": "melvorF:WaterMagicGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Water_Rune",
-                  "quantity": 500
-                },
-                {
-                  "id": "melvorF:Nature_Rune",
-                  "quantity": 25
-                },
-                {
-                  "id": "expandedAreas:Mind_Essence",
-                  "quantity": 1000
-                },
-                {
-                  "id": "expandedAreas:Eye_of_Water",
-                  "quantity": 25
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Water_Elementalist_Robes",
-              "level": 88,
-              "productID": "expandedAreas:Water_Elementalist_Robes",
-              "baseQuantity": 1,
-              "baseExperience": 326,
-              "categoryID": "melvorF:WaterMagicGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Water_Rune",
-                  "quantity": 1000
-                },
-                {
-                  "id": "melvorF:Nature_Rune",
-                  "quantity": 50
-                },
-                {
-                  "id": "expandedAreas:Mind_Essence",
-                  "quantity": 4000
-                },
-                {
-                  "id": "expandedAreas:Eye_of_Water",
-                  "quantity": 100
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Earth_Elementalist_Hat",
-              "level": 80,
-              "productID": "expandedAreas:Earth_Elementalist_Hat",
-              "baseQuantity": 1,
-              "baseExperience": 155,
-              "categoryID": "melvorF:EarthMagicGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Earth_Rune",
-                  "quantity": 500
-                },
-                {
-                  "id": "melvorF:Nature_Rune",
-                  "quantity": 25
-                },
-                {
-                  "id": "expandedAreas:Mind_Essence",
-                  "quantity": 1000
-                },
-                {
-                  "id": "expandedAreas:Eye_of_Earth",
-                  "quantity": 25
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Earth_Elementalist_Boots",
-              "level": 84,
-              "productID": "expandedAreas:Earth_Elementalist_Boots",
-              "baseQuantity": 1,
-              "baseExperience": 159,
-              "categoryID": "melvorF:EarthMagicGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Earth_Rune",
-                  "quantity": 500
-                },
-                {
-                  "id": "melvorF:Nature_Rune",
-                  "quantity": 25
-                },
-                {
-                  "id": "expandedAreas:Mind_Essence",
-                  "quantity": 1000
-                },
-                {
-                  "id": "expandedAreas:Eye_of_Earth",
-                  "quantity": 25
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Earth_Elementalist_Gloves",
-              "level": 88,
-              "productID": "expandedAreas:Earth_Elementalist_Gloves",
-              "baseQuantity": 1,
-              "baseExperience": 163,
-              "categoryID": "melvorF:EarthMagicGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Earth_Rune",
-                  "quantity": 500
-                },
-                {
-                  "id": "melvorF:Nature_Rune",
-                  "quantity": 25
-                },
-                {
-                  "id": "expandedAreas:Mind_Essence",
-                  "quantity": 1000
-                },
-                {
-                  "id": "expandedAreas:Eye_of_Earth",
-                  "quantity": 25
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Earth_Elementalist_Robes",
-              "level": 92,
-              "productID": "expandedAreas:Earth_Elementalist_Robes",
-              "baseQuantity": 1,
-              "baseExperience": 334,
-              "categoryID": "melvorF:EarthMagicGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Earth_Rune",
-                  "quantity": 1000
-                },
-                {
-                  "id": "melvorF:Nature_Rune",
-                  "quantity": 50
-                },
-                {
-                  "id": "expandedAreas:Mind_Essence",
-                  "quantity": 4000
-                },
-                {
-                  "id": "expandedAreas:Eye_of_Earth",
-                  "quantity": 100
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Fire_Elementalist_Hat",
-              "level": 84,
-              "productID": "expandedAreas:Fire_Elementalist_Hat",
-              "baseQuantity": 1,
-              "baseExperience": 159,
-              "categoryID": "melvorF:FireMagicGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Fire_Rune",
-                  "quantity": 500
-                },
-                {
-                  "id": "melvorF:Nature_Rune",
-                  "quantity": 25
-                },
-                {
-                  "id": "expandedAreas:Mind_Essence",
-                  "quantity": 1000
-                },
-                {
-                  "id": "expandedAreas:Eye_of_Fire",
-                  "quantity": 25
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Fire_Elementalist_Boots",
-              "level": 88,
-              "productID": "expandedAreas:Fire_Elementalist_Boots",
-              "baseQuantity": 1,
-              "baseExperience": 163,
-              "categoryID": "melvorF:FireMagicGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Fire_Rune",
-                  "quantity": 500
-                },
-                {
-                  "id": "melvorF:Nature_Rune",
-                  "quantity": 25
-                },
-                {
-                  "id": "expandedAreas:Mind_Essence",
-                  "quantity": 1000
-                },
-                {
-                  "id": "expandedAreas:Eye_of_Fire",
-                  "quantity": 25
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Fire_Elementalist_Gloves",
-              "level": 92,
-              "productID": "expandedAreas:Fire_Elementalist_Gloves",
-              "baseQuantity": 1,
-              "baseExperience": 167,
-              "categoryID": "melvorF:FireMagicGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Fire_Rune",
-                  "quantity": 500
-                },
-                {
-                  "id": "melvorF:Nature_Rune",
-                  "quantity": 25
-                },
-                {
-                  "id": "expandedAreas:Mind_Essence",
-                  "quantity": 1000
-                },
-                {
-                  "id": "expandedAreas:Eye_of_Fire",
-                  "quantity": 25
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Fire_Elementalist_Robes",
-              "level": 96,
-              "productID": "expandedAreas:Fire_Elementalist_Robes",
-              "baseQuantity": 1,
-              "baseExperience": 342,
-              "categoryID": "melvorF:FireMagicGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Fire_Rune",
-                  "quantity": 1000
-                },
-                {
-                  "id": "melvorF:Nature_Rune",
-                  "quantity": 50
-                },
-                {
-                  "id": "expandedAreas:Mind_Essence",
-                  "quantity": 4000
-                },
-                {
-                  "id": "expandedAreas:Eye_of_Fire",
-                  "quantity": 100
-                }
-              ],
-              "currencyCosts": []
-            },
             {
               "id": "SigilCat",
               "level": 40,
@@ -61235,468 +59329,6 @@
               "currencyCosts": []
             },
             {
-              "id": "Bronze_Cannonball",
-              "level": 1,
-              "productID": "expandedAreas:Bronze_Cannonball",
-              "baseQuantity": 5,
-              "baseExperience": 50,
-              "categoryID": "melvorD:BronzeGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Bronze_Bar",
-                  "quantity": 5
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Bronze_Shot",
-              "level": 1,
-              "productID": "expandedAreas:Bronze_Shot",
-              "baseQuantity": 7,
-              "baseExperience": 10,
-              "categoryID": "melvorD:BronzeGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Bronze_Bar",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Bronze_Handcannon",
-              "level": 19,
-              "productID": "expandedAreas:Bronze_Handcannon",
-              "baseQuantity": 1,
-              "baseExperience": 100,
-              "categoryID": "melvorD:BronzeGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Bronze_Bar",
-                  "quantity": 10
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Bronze_Pistol_Barrel",
-              "level": 20,
-              "productID": "expandedAreas:Bronze_Pistol_Barrel",
-              "baseQuantity": 1,
-              "baseExperience": 20,
-              "categoryID": "melvorD:BronzeGear",
-              "subcategoryID": "expandedAreas:FirearmComponents",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Bronze_Bar",
-                  "quantity": 2
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Bronze_Arquebus_Barrel",
-              "level": 21,
-              "productID": "expandedAreas:Bronze_Arquebus_Barrel",
-              "baseQuantity": 1,
-              "baseExperience": 40,
-              "categoryID": "melvorD:BronzeGear",
-              "subcategoryID": "expandedAreas:FirearmComponents",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Bronze_Bar",
-                  "quantity": 4
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Iron_Cannonball",
-              "level": 12,
-              "productID": "expandedAreas:Iron_Cannonball",
-              "baseQuantity": 5,
-              "baseExperience": 100,
-              "categoryID": "melvorD:IronGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Iron_Bar",
-                  "quantity": 5
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Iron_Shot",
-              "level": 12,
-              "productID": "expandedAreas:Iron_Shot",
-              "baseQuantity": 7,
-              "baseExperience": 20,
-              "categoryID": "melvorD:IronGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Iron_Bar",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Iron_Handcannon",
-              "level": 28,
-              "productID": "expandedAreas:Iron_Handcannon",
-              "baseQuantity": 1,
-              "baseExperience": 200,
-              "categoryID": "melvorD:IronGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Iron_Bar",
-                  "quantity": 10
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Iron_Pistol_Barrel",
-              "level": 28,
-              "productID": "expandedAreas:Iron_Pistol_Barrel",
-              "baseQuantity": 1,
-              "baseExperience": 40,
-              "categoryID": "melvorD:IronGear",
-              "subcategoryID": "expandedAreas:FirearmComponents",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Iron_Bar",
-                  "quantity": 2
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Iron_Arquebus_Barrel",
-              "level": 30,
-              "productID": "expandedAreas:Iron_Arquebus_Barrel",
-              "baseQuantity": 1,
-              "baseExperience": 80,
-              "categoryID": "melvorD:IronGear",
-              "subcategoryID": "expandedAreas:FirearmComponents",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Iron_Bar",
-                  "quantity": 4
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Steel_Cannonball",
-              "level": 27,
-              "productID": "expandedAreas:Steel_Cannonball",
-              "baseQuantity": 5,
-              "baseExperience": 150,
-              "categoryID": "melvorD:SteelGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Steel_Bar",
-                  "quantity": 5
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Steel_Shot",
-              "level": 27,
-              "productID": "expandedAreas:Steel_Shot",
-              "baseQuantity": 7,
-              "baseExperience": 30,
-              "categoryID": "melvorD:SteelGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Steel_Bar",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Steel_Handcannon",
-              "level": 43,
-              "productID": "expandedAreas:Steel_Handcannon",
-              "baseQuantity": 1,
-              "baseExperience": 300,
-              "categoryID": "melvorD:SteelGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Steel_Bar",
-                  "quantity": 10
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Steel_Pistol_Barrel",
-              "level": 44,
-              "productID": "expandedAreas:Steel_Pistol_Barrel",
-              "baseQuantity": 1,
-              "baseExperience": 60,
-              "categoryID": "melvorD:SteelGear",
-              "subcategoryID": "expandedAreas:FirearmComponents",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Steel_Bar",
-                  "quantity": 2
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Steel_Arquebus_Barrel",
-              "level": 45,
-              "productID": "expandedAreas:Steel_Arquebus_Barrel",
-              "baseQuantity": 1,
-              "baseExperience": 120,
-              "categoryID": "melvorD:SteelGear",
-              "subcategoryID": "expandedAreas:FirearmComponents",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Steel_Bar",
-                  "quantity": 4
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Mithril_Arquebus_Barrel",
-              "level": 65,
-              "productID": "expandedAreas:Mithril_Arquebus_Barrel",
-              "baseQuantity": 1,
-              "baseExperience": 200,
-              "categoryID": "melvorD:MithrilGear",
-              "subcategoryID": "expandedAreas:FirearmComponents",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Mithril_Bar",
-                  "quantity": 4
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Mithril_Cannonball",
-              "level": 42,
-              "productID": "expandedAreas:Mithril_Cannonball",
-              "baseQuantity": 5,
-              "baseExperience": 250,
-              "categoryID": "melvorD:MithrilGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Mithril_Bar",
-                  "quantity": 5
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Mithril_Shot",
-              "level": 42,
-              "productID": "expandedAreas:Mithril_Shot",
-              "baseQuantity": 7,
-              "baseExperience": 50,
-              "categoryID": "melvorD:MithrilGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Mithril_Bar",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Mithril_Handcannon",
-              "level": 58,
-              "productID": "expandedAreas:Mithril_Handcannon",
-              "baseQuantity": 1,
-              "baseExperience": 500,
-              "categoryID": "melvorD:MithrilGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Mithril_Bar",
-                  "quantity": 10
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Mithril_Pistol_Barrel",
-              "level": 59,
-              "productID": "expandedAreas:Mithril_Pistol_Barrel",
-              "baseQuantity": 1,
-              "baseExperience": 100,
-              "categoryID": "melvorD:MithrilGear",
-              "subcategoryID": "expandedAreas:FirearmComponents",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Mithril_Bar",
-                  "quantity": 2
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Adamant_Cannonball",
-              "level": 60,
-              "productID": "expandedAreas:Adamant_Cannonball",
-              "baseQuantity": 5,
-              "baseExperience": 300,
-              "categoryID": "melvorD:AdamantGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Adamantite_Bar",
-                  "quantity": 5
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Adamant_Shot",
-              "level": 57,
-              "productID": "expandedAreas:Adamant_Shot",
-              "baseQuantity": 7,
-              "baseExperience": 60,
-              "categoryID": "melvorD:AdamantGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Adamantite_Bar",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Adamant_Handcannon",
-              "level": 71,
-              "productID": "expandedAreas:Adamant_Handcannon",
-              "baseQuantity": 1,
-              "baseExperience": 600,
-              "categoryID": "melvorD:AdamantGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Adamantite_Bar",
-                  "quantity": 10
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Adamant_Pistol_Barrel",
-              "level": 72,
-              "productID": "expandedAreas:Adamant_Pistol_Barrel",
-              "baseQuantity": 1,
-              "baseExperience": 120,
-              "categoryID": "melvorD:AdamantGear",
-              "subcategoryID": "expandedAreas:FirearmComponents",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Adamantite_Bar",
-                  "quantity": 2
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Adamant_Arquebus_Barrel",
-              "level": 73,
-              "productID": "expandedAreas:Adamant_Arquebus_Barrel",
-              "baseQuantity": 1,
-              "baseExperience": 240,
-              "categoryID": "melvorD:AdamantGear",
-              "subcategoryID": "expandedAreas:FirearmComponents",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Adamantite_Bar",
-                  "quantity": 4
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Rune_Cannonball",
-              "level": 72,
-              "productID": "expandedAreas:Rune_Cannonball",
-              "baseQuantity": 5,
-              "baseExperience": 375,
-              "categoryID": "melvorD:RuneGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Runite_Bar",
-                  "quantity": 5
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Rune_Shot",
-              "level": 72,
-              "productID": "expandedAreas:Rune_Shot",
-              "baseQuantity": 7,
-              "baseExperience": 75,
-              "categoryID": "melvorD:RuneGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Runite_Bar",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Rune_Handcannon",
-              "level": 88,
-              "productID": "expandedAreas:Rune_Handcannon",
-              "baseQuantity": 1,
-              "baseExperience": 750,
-              "categoryID": "melvorD:RuneGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Runite_Bar",
-                  "quantity": 10
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Rune_Pistol_Barrel",
-              "level": 89,
-              "productID": "expandedAreas:Rune_Pistol_Barrel",
-              "baseQuantity": 1,
-              "baseExperience": 150,
-              "categoryID": "melvorD:RuneGear",
-              "subcategoryID": "expandedAreas:FirearmComponents",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Runite_Bar",
-                  "quantity": 2
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Rune_Arquebus_Barrel",
-              "level": 90,
-              "productID": "expandedAreas:Rune_Arquebus_Barrel",
-              "baseQuantity": 1,
-              "baseExperience": 300,
-              "categoryID": "melvorD:RuneGear",
-              "subcategoryID": "expandedAreas:FirearmComponents",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Runite_Bar",
-                  "quantity": 4
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
               "id": "Silver_Dagger",
               "level": 77,
               "productID": "expandedAreas:Silver_Dagger",
@@ -61947,160 +59579,6 @@
                 {
                   "id": "melvorD:Silver_Bar",
                   "quantity": 2
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Silver_Cannonball",
-              "level": 81,
-              "productID": "expandedAreas:Silver_Cannonball",
-              "baseQuantity": 5,
-              "baseExperience": 425,
-              "categoryID": "expandedAreas:SilverGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Silver_Bar",
-                  "quantity": 5
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Silver_Shot",
-              "level": 82,
-              "productID": "expandedAreas:Silver_Shot",
-              "baseQuantity": 7,
-              "baseExperience": 85,
-              "categoryID": "expandedAreas:SilverGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Silver_Bar",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Silver_Handcannon",
-              "level": 93,
-              "productID": "expandedAreas:Silver_Handcannon",
-              "baseQuantity": 1,
-              "baseExperience": 850,
-              "categoryID": "expandedAreas:SilverGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Silver_Bar",
-                  "quantity": 10
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Silver_Pistol_Barrel",
-              "level": 94,
-              "productID": "expandedAreas:Silver_Pistol_Barrel",
-              "baseQuantity": 1,
-              "baseExperience": 170,
-              "categoryID": "expandedAreas:SilverGear",
-              "subcategoryID": "expandedAreas:FirearmComponents",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Silver_Bar",
-                  "quantity": 2
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Silver_Arquebus_Barrel",
-              "level": 95,
-              "productID": "expandedAreas:Silver_Arquebus_Barrel",
-              "baseQuantity": 1,
-              "baseExperience": 340,
-              "categoryID": "expandedAreas:SilverGear",
-              "subcategoryID": "expandedAreas:FirearmComponents",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Silver_Bar",
-                  "quantity": 4
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Dragon_Cannonball",
-              "level": 87,
-              "productID": "expandedAreas:Dragon_Cannonball",
-              "baseQuantity": 5,
-              "baseExperience": 500,
-              "categoryID": "melvorD:DragonGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Dragonite_Bar",
-                  "quantity": 5
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Dragon_Shot",
-              "level": 87,
-              "productID": "expandedAreas:Dragon_Shot",
-              "baseQuantity": 7,
-              "baseExperience": 100,
-              "categoryID": "melvorD:DragonGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Dragonite_Bar",
-                  "quantity": 1
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Dragon_Handcannon",
-              "level": 100,
-              "productID": "expandedAreas:Dragon_Handcannon",
-              "baseQuantity": 1,
-              "baseExperience": 1000,
-              "categoryID": "melvorD:DragonGear",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Dragonite_Bar",
-                  "quantity": 10
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Dragon_Pistol_Barrel",
-              "level": 101,
-              "productID": "expandedAreas:Dragon_Pistol_Barrel",
-              "baseQuantity": 1,
-              "baseExperience": 200,
-              "categoryID": "melvorD:DragonGear",
-              "subcategoryID": "expandedAreas:FirearmComponents",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Dragonite_Bar",
-                  "quantity": 2
-                }
-              ],
-              "currencyCosts": []
-            },
-            {
-              "id": "Dragon_Arquebus_Barrel",
-              "level": 102,
-              "productID": "expandedAreas:Dragon_Arquebus_Barrel",
-              "baseQuantity": 1,
-              "baseExperience": 400,
-              "categoryID": "melvorD:DragonGear",
-              "subcategoryID": "expandedAreas:FirearmComponents",
-              "itemCosts": [
-                {
-                  "id": "melvorD:Dragonite_Bar",
-                  "quantity": 4
                 }
               ],
               "currencyCosts": []

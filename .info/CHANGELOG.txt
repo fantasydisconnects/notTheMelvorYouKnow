@@ -702,6 +702,9 @@ SAE v0.9.6.4 - The Balance Patch Part 4
 
 # Fixes
 
+## Items
+- Minor desc. fixes
+
 ## Skills
 
 ### Crafting
