@@ -5032,7 +5032,6 @@
       }
     ],
     "shopPurchases": [
-      
       {
         "id": "melvorF:Woodcutters_Hat",
         "purchaseRequirements": [
@@ -7819,6 +7818,45 @@
                   "quantityMultiplier": 9
                 }
               ]
+            }
+          ]
+        }
+      },
+      {
+        "skillID": "melvorD:Magic",
+        "data": {
+          "altSpells": [
+            {
+              "id": "melvorF:SuperheatI",
+              "categories": {
+                "add": [
+                  "expandedAreas:Superheat"
+                ]
+              }
+            },
+            {
+              "id": "melvorF:SuperheatII",
+              "categories": {
+                "add": [
+                  "expandedAreas:Superheat"
+                ]
+              }
+            },
+            {
+              "id": "melvorF:SuperheatIII",
+              "categories": {
+                "add": [
+                  "expandedAreas:Superheat"
+                ]
+              }
+            },
+            {
+              "id": "melvorF:SuperheatIV",
+              "categories": {
+                "add": [
+                  "expandedAreas:Superheat"
+                ]
+              }
             }
           ]
         }

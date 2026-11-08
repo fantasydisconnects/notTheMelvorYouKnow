@@ -660,6 +660,8 @@ SAE v0.9.6.4 - The Balance Patch Part 4
 - Cringy custom descriptions have been removed…for now.
 
 ### Equipment
+- Bracelets now can only be equipped to the Gloves or Passive slots.
+- Bracelets and earrings made in Crafting have been rebalanced across the board, and given more unique effects related to different skills to make them more useful.
 - Monk Robes reworked to give +25% Prayer Points from Burying. Previously, gave -1 Prayer Point cost and +10% Prayer Point Preservation Chance.
 - Slayer Summoning Gear has been removed.
 - Wands of Frost, Fireball, and Lightning have been removed.
@@ -696,3 +698,10 @@ SAE v0.9.6.4 - The Balance Patch Part 4
 #### Recipes
 - All Elementalist gear now requires 500 Mind Essence instead of 1,000, and Eye of ____ has been replaced with Ancient Wizard ____. Same applies to Elementalist Staff, except needs Ancient Staff.
 - Pure Elementalist gear now requires 500 Spirit Essence and all Elementalist Staves.
+
+# Fixes
+
+## Skills
+
+### Crafting
+- Added missing recipes for accessories
