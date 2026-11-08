@@ -4621,6 +4621,7 @@
           "expandedAreas:Air_Expert_Wizard_Gloves",
           "expandedAreas:Air_Elementalist_Hat",
           "expandedAreas:Air_Elementalist_Robes",
+          "expandedAreas:Air_Elementalist_Bottoms",
           "expandedAreas:Air_Elementalist_Boots",
           "expandedAreas:Air_Elementalist_Gloves"
         ]
@@ -4632,6 +4633,7 @@
           "expandedAreas:Water_Expert_Wizard_Gloves",
           "expandedAreas:Water_Elementalist_Hat",
           "expandedAreas:Water_Elementalist_Robes",
+          "expandedAreas:Water_Elementalist_Bottoms",
           "expandedAreas:Water_Elementalist_Boots",
           "expandedAreas:Water_Elementalist_Gloves"
         ]
@@ -4654,10 +4656,12 @@
           "expandedAreas:Fire_Expert_Wizard_Gloves",
           "expandedAreas:Fire_Elementalist_Hat",
           "expandedAreas:Fire_Elementalist_Robes",
+          "expandedAreas:Fire_Elementalist_Bottoms",
           "expandedAreas:Fire_Elementalist_Boots",
           "expandedAreas:Fire_Elementalist_Gloves",
           "expandedAreas:Pure_Elementalist_Hat",
           "expandedAreas:Pure_Elementalist_Robes",
+          "expandedAreas:Pure_Elementalist_Bottoms",
           "expandedAreas:Pure_Elementalist_Boots",
           "expandedAreas:Pure_Elementalist_Gloves"
         ]
@@ -30761,20 +30765,96 @@
             "quantity": 1
           }
         ],
-        "modifiers": {
-          "magicMaxHit": [
-            {
-              "subcategoryID": "melvorD:Elemental",
-              "value": 15
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "itemID": "expandedAreas:Wispy_Page",
+              "operator": ">=",
+              "value": 1,
+              "type": "BankItem"
+            },
+            "modifiers": {
+              "magicMaxHit": [
+                {
+                  "subcategoryID": "melvorD:Elemental",
+                  "value": 4
+                }
+              ],
+              "magicAccuracyRating": [
+                {
+                  "subcategoryID": "melvorD:Elemental",
+                  "value": 4
+                }
+              ]
             }
-          ],
-          "magicAccuracyRating": [
-            {
-              "subcategoryID": "melvorD:Elemental",
-              "value": 15
+          },
+          {
+            "condition": {
+              "itemID": "expandedAreas:Waterlogged_Page",
+              "operator": ">=",
+              "value": 1,
+              "type": "BankItem"
+            },
+            "modifiers": {
+              "magicMaxHit": [
+                {
+                  "subcategoryID": "melvorD:Elemental",
+                  "value": 4
+                }
+              ],
+              "magicAccuracyRating": [
+                {
+                  "subcategoryID": "melvorD:Elemental",
+                  "value": 4
+                }
+              ]
             }
-          ]
-        }
+          },
+          {
+            "condition": {
+              "itemID": "expandedAreas:Soiled_Page",
+              "operator": ">=",
+              "value": 1,
+              "type": "BankItem"
+            },
+            "modifiers": {
+              "magicMaxHit": [
+                {
+                  "subcategoryID": "melvorD:Elemental",
+                  "value": 4
+                }
+              ],
+              "magicAccuracyRating": [
+                {
+                  "subcategoryID": "melvorD:Elemental",
+                  "value": 4
+                }
+              ]
+            }
+          },
+          {
+            "condition": {
+              "itemID": "expandedAreas:Burnt_Page",
+              "operator": ">=",
+              "value": 1,
+              "type": "BankItem"
+            },
+            "modifiers": {
+              "magicMaxHit": [
+                {
+                  "subcategoryID": "melvorD:Elemental",
+                  "value": 4
+                }
+              ],
+              "magicAccuracyRating": [
+                {
+                  "subcategoryID": "melvorD:Elemental",
+                  "value": 4
+                }
+              ]
+            }
+          }
+        ]
       },
       {
         "itemType": "Equipment",
@@ -30821,20 +30901,30 @@
             "quantity": 1
           }
         ],
-        "modifiers": {
-          "magicMaxHit": [
-            {
-              "subcategoryID": "melvorD:Air",
-              "value": 10
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "itemID": "expandedAreas:Wispy_Page",
+              "operator": ">=",
+              "value": 1,
+              "type": "BankItem"
+            },
+            "modifiers": {
+              "magicMaxHit": [
+                {
+                  "subcategoryID": "melvorD:Air",
+                  "value": 10
+                }
+              ],
+              "magicAccuracyRating": [
+                {
+                  "subcategoryID": "melvorD:Air",
+                  "value": 10
+                }
+              ]
             }
-          ],
-          "magicAccuracyRating": [
-            {
-              "subcategoryID": "melvorD:Air",
-              "value": 10
-            }
-          ]
-        }
+          }
+        ]
       },
       {
         "itemType": "Equipment",
@@ -30881,20 +30971,30 @@
             "quantity": 1
           }
         ],
-        "modifiers": {
-          "magicMaxHit": [
-            {
-              "subcategoryID": "melvorD:Water",
-              "value": 10
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "itemID": "expandedAreas:Waterlogged_Page",
+              "operator": ">=",
+              "value": 1,
+              "type": "BankItem"
+            },
+            "modifiers": {
+              "magicMaxHit": [
+                {
+                  "subcategoryID": "melvorD:Water",
+                  "value": 10
+                }
+              ],
+              "magicAccuracyRating": [
+                {
+                  "subcategoryID": "melvorD:Water",
+                  "value": 10
+                }
+              ]
             }
-          ],
-          "magicAccuracyRating": [
-            {
-              "subcategoryID": "melvorD:Water",
-              "value": 10
-            }
-          ]
-        }
+          }
+        ]
       },
       {
         "itemType": "Equipment",
@@ -30918,7 +31018,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Magic",
-            "level": 50
+            "level": 70
           }
         ],
         "equipmentStats": [
@@ -30941,20 +31041,30 @@
             "quantity": 1
           }
         ],
-        "modifiers": {
-          "magicMaxHit": [
-            {
-              "subcategoryID": "melvorD:Earth",
-              "value": 10
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "itemID": "expandedAreas:Soiled_Page",
+              "operator": ">=",
+              "value": 1,
+              "type": "BankItem"
+            },
+            "modifiers": {
+              "magicMaxHit": [
+                {
+                  "subcategoryID": "melvorD:Earth",
+                  "value": 10
+                }
+              ],
+              "magicAccuracyRating": [
+                {
+                  "subcategoryID": "melvorD:Earth",
+                  "value": 10
+                }
+              ]
             }
-          ],
-          "magicAccuracyRating": [
-            {
-              "subcategoryID": "melvorD:Earth",
-              "value": 10
-            }
-          ]
-        }
+          }
+        ]
       },
       {
         "itemType": "Equipment",
@@ -30978,7 +31088,7 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Magic",
-            "level": 50
+            "level": 70
           }
         ],
         "equipmentStats": [
@@ -31001,20 +31111,30 @@
             "quantity": 1
           }
         ],
-        "modifiers": {
-          "magicMaxHit": [
-            {
-              "subcategoryID": "melvorD:Fire",
-              "value": 10
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "itemID": "expandedAreas:Burnt_Page",
+              "operator": ">=",
+              "value": 1,
+              "type": "BankItem"
+            },
+            "modifiers": {
+              "magicMaxHit": [
+                {
+                  "subcategoryID": "melvorD:Fire",
+                  "value": 10
+                }
+              ],
+              "magicAccuracyRating": [
+                {
+                  "subcategoryID": "melvorD:Fire",
+                  "value": 10
+                }
+              ]
             }
-          ],
-          "magicAccuracyRating": [
-            {
-              "subcategoryID": "melvorD:Fire",
-              "value": 10
-            }
-          ]
-        }
+          }
+        ]
       },
       {
         "itemType": "Item",
@@ -36641,12 +36761,8 @@
             "value": 462
           },
           {
-            "key": "meleeStrengthBonus",
-            "value": 159
-          },
-          {
             "key": "damageReduction",
-            "value": 29
+            "value": 35
           }
         ],
         "ignoreCompletion": false,
@@ -37983,10 +38099,6 @@
             "value": 4200
           },
           {
-            "key": "meleeStrengthBonus",
-            "value": 217
-          },
-          {
             "key": "meleeDefenceBonus",
             "value": 252
           },
@@ -38035,10 +38147,6 @@
           {
             "key": "attackSpeed",
             "value": 3000
-          },
-          {
-            "key": "meleeStrengthBonus",
-            "value": 115
           },
           {
             "key": "meleeDefenceBonus",
@@ -38091,10 +38199,6 @@
             "value": 2400
           },
           {
-            "key": "rangedStrengthBonus",
-            "value": 143
-          },
-          {
             "key": "meleeDefenceBonus",
             "value": 90
           },
@@ -38143,10 +38247,6 @@
           {
             "key": "attackSpeed",
             "value": 3800
-          },
-          {
-            "key": "meleeStrengthBonus",
-            "value": 150
           },
           {
             "key": "meleeDefenceBonus",
@@ -38200,10 +38300,7 @@
             "key": "attackSpeed",
             "value": 3000
           },
-          {
-            "key": "meleeStrengthBonus",
-            "value": 105
-          },
+          
           {
             "key": "meleeDefenceBonus",
             "value": 230

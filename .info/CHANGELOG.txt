@@ -681,6 +681,7 @@ SAE v0.9.6.4 - The Balance Patch Part 4
 
 ## Monsters
 - All Secluded Monastery and Elemental Sanctuary monsters (excl. Ozamarathrax) drop Mind Essence, Nature Essence, or Spirit Essence. Monks = Mind, Guardian = Spirit, Sanctuary minibosses = Nature/Mind/Spirit.
+- All Barrows Siblings have had their Equipment Strength Bonuses removed. These were causing the siblings to have enormous max hits, disproportional to their combat levels.
 
 ## Shop Purchases
 

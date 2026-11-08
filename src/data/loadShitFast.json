@@ -14,7 +14,11 @@
     "combatPassives": [],
     "dungeons": [],
     "randomGems": [],
-    "items": [],
+    "items": [
+      {
+        
+      }
+    ],
     "itemUpgrades": [],
     "itemSynergies": [],
     "monsters": [],
