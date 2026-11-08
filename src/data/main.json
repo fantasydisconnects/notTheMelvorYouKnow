@@ -12596,6 +12596,7 @@
         "category": "Enhancement",
         "type": "Sigil",
         "media": "assets/bank/sigilpain.png",
+        "customDescription": "Enemy deals -4% damage when affected by 2 or more effects, and takes +4% DOT damage",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -12753,7 +12754,7 @@
         ],
         "equipmentStats": [],
         "modifiers": {
-          "attackInterval": -2,
+          "flatAttackInterval": -100,
           "onHitSlowMagnitude": 2
         }
       },
@@ -13160,7 +13161,7 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 2000
+        "sellsFor": 500
       },
       {
         "itemType": "Item",
@@ -13172,7 +13173,7 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 2500
+        "sellsFor": 625
       },
       {
         "itemType": "Item",
@@ -13184,7 +13185,7 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 3000
+        "sellsFor": 750
       },
       {
         "itemType": "Equipment",
@@ -13199,8 +13200,6 @@
         "sellsFor": 250,
         "tier": "none",
         "validSlots": [
-          "expandedAreas:Accessory1",
-          "expandedAreas:Accessory2",
           "Gloves",
           "Passive"
         ],
@@ -13211,7 +13210,7 @@
           "crafting30CurrencyGainChance": [
             {
               "currencyID": "melvorD:GP",
-              "value": 3
+              "value": 5
             }
           ]
         }
@@ -58594,6 +58593,438 @@
             "upgrades": []
           },
           "recipes": [
+            {
+              "id": "Air_Elementalist_Hat",
+              "level": 72,
+              "productID": "expandedAreas:Air_Elementalist_Hat",
+              "baseQuantity": 1,
+              "baseExperience": 147,
+              "categoryID": "melvorF:AirMagicGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Air_Rune",
+                  "quantity": 500
+                },
+                {
+                  "id": "melvorF:Nature_Rune",
+                  "quantity": 25
+                },
+                {
+                  "id": "expandedAreas:Mind_Essence",
+                  "quantity": 1000
+                },
+                {
+                  "id": "melvorD:Ancient_Wizard_Hat",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Air_Elementalist_Boots",
+              "level": 76,
+              "productID": "expandedAreas:Air_Elementalist_Boots",
+              "baseQuantity": 1,
+              "baseExperience": 151,
+              "categoryID": "melvorF:AirMagicGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Air_Rune",
+                  "quantity": 500
+                },
+                {
+                  "id": "melvorF:Nature_Rune",
+                  "quantity": 25
+                },
+                {
+                  "id": "expandedAreas:Mind_Essence",
+                  "quantity": 1000
+                },
+                {
+                  "id": "melvorD:Ancient_Wizard_Boots",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Air_Elementalist_Gloves",
+              "level": 80,
+              "productID": "expandedAreas:Air_Elementalist_Gloves",
+              "baseQuantity": 1,
+              "baseExperience": 155,
+              "categoryID": "melvorF:AirMagicGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Air_Rune",
+                  "quantity": 500
+                },
+                {
+                  "id": "melvorF:Nature_Rune",
+                  "quantity": 25
+                },
+                {
+                  "id": "expandedAreas:Mind_Essence",
+                  "quantity": 1000
+                },
+                {
+                  "id": "expandedAreas:Ancient_Wizard_Gloves",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Air_Elementalist_Robes",
+              "level": 84,
+              "productID": "expandedAreas:Air_Elementalist_Robes",
+              "baseQuantity": 1,
+              "baseExperience": 162,
+              "categoryID": "melvorF:AirMagicGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Air_Rune",
+                  "quantity": 500
+                },
+                {
+                  "id": "melvorF:Nature_Rune",
+                  "quantity": 25
+                },
+                {
+                  "id": "expandedAreas:Mind_Essence",
+                  "quantity": 1000
+                },
+                {
+                  "id": "melvorD:Ancient_Wizard_Robes",
+                  "quantity": 1
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Water_Elementalist_Hat",
+              "level": 76,
+              "productID": "expandedAreas:Water_Elementalist_Hat",
+              "baseQuantity": 1,
+              "baseExperience": 151,
+              "categoryID": "melvorF:WaterMagicGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Water_Rune",
+                  "quantity": 500
+                },
+                {
+                  "id": "melvorF:Nature_Rune",
+                  "quantity": 25
+                },
+                {
+                  "id": "expandedAreas:Mind_Essence",
+                  "quantity": 1000
+                },
+                {
+                  "id": "expandedAreas:Eye_of_Water",
+                  "quantity": 25
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Water_Elementalist_Boots",
+              "level": 80,
+              "productID": "expandedAreas:Water_Elementalist_Boots",
+              "baseQuantity": 1,
+              "baseExperience": 155,
+              "categoryID": "melvorF:WaterMagicGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Water_Rune",
+                  "quantity": 500
+                },
+                {
+                  "id": "melvorF:Nature_Rune",
+                  "quantity": 25
+                },
+                {
+                  "id": "expandedAreas:Mind_Essence",
+                  "quantity": 1000
+                },
+                {
+                  "id": "expandedAreas:Eye_of_Water",
+                  "quantity": 25
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Water_Elementalist_Gloves",
+              "level": 84,
+              "productID": "expandedAreas:Water_Elementalist_Gloves",
+              "baseQuantity": 1,
+              "baseExperience": 159,
+              "categoryID": "melvorF:WaterMagicGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Water_Rune",
+                  "quantity": 500
+                },
+                {
+                  "id": "melvorF:Nature_Rune",
+                  "quantity": 25
+                },
+                {
+                  "id": "expandedAreas:Mind_Essence",
+                  "quantity": 1000
+                },
+                {
+                  "id": "expandedAreas:Eye_of_Water",
+                  "quantity": 25
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Water_Elementalist_Robes",
+              "level": 88,
+              "productID": "expandedAreas:Water_Elementalist_Robes",
+              "baseQuantity": 1,
+              "baseExperience": 326,
+              "categoryID": "melvorF:WaterMagicGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Water_Rune",
+                  "quantity": 1000
+                },
+                {
+                  "id": "melvorF:Nature_Rune",
+                  "quantity": 50
+                },
+                {
+                  "id": "expandedAreas:Mind_Essence",
+                  "quantity": 4000
+                },
+                {
+                  "id": "expandedAreas:Eye_of_Water",
+                  "quantity": 100
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Earth_Elementalist_Hat",
+              "level": 80,
+              "productID": "expandedAreas:Earth_Elementalist_Hat",
+              "baseQuantity": 1,
+              "baseExperience": 155,
+              "categoryID": "melvorF:EarthMagicGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Earth_Rune",
+                  "quantity": 500
+                },
+                {
+                  "id": "melvorF:Nature_Rune",
+                  "quantity": 25
+                },
+                {
+                  "id": "expandedAreas:Mind_Essence",
+                  "quantity": 1000
+                },
+                {
+                  "id": "expandedAreas:Eye_of_Earth",
+                  "quantity": 25
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Earth_Elementalist_Boots",
+              "level": 84,
+              "productID": "expandedAreas:Earth_Elementalist_Boots",
+              "baseQuantity": 1,
+              "baseExperience": 159,
+              "categoryID": "melvorF:EarthMagicGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Earth_Rune",
+                  "quantity": 500
+                },
+                {
+                  "id": "melvorF:Nature_Rune",
+                  "quantity": 25
+                },
+                {
+                  "id": "expandedAreas:Mind_Essence",
+                  "quantity": 1000
+                },
+                {
+                  "id": "expandedAreas:Eye_of_Earth",
+                  "quantity": 25
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Earth_Elementalist_Gloves",
+              "level": 88,
+              "productID": "expandedAreas:Earth_Elementalist_Gloves",
+              "baseQuantity": 1,
+              "baseExperience": 163,
+              "categoryID": "melvorF:EarthMagicGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Earth_Rune",
+                  "quantity": 500
+                },
+                {
+                  "id": "melvorF:Nature_Rune",
+                  "quantity": 25
+                },
+                {
+                  "id": "expandedAreas:Mind_Essence",
+                  "quantity": 1000
+                },
+                {
+                  "id": "expandedAreas:Eye_of_Earth",
+                  "quantity": 25
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Earth_Elementalist_Robes",
+              "level": 92,
+              "productID": "expandedAreas:Earth_Elementalist_Robes",
+              "baseQuantity": 1,
+              "baseExperience": 334,
+              "categoryID": "melvorF:EarthMagicGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Earth_Rune",
+                  "quantity": 1000
+                },
+                {
+                  "id": "melvorF:Nature_Rune",
+                  "quantity": 50
+                },
+                {
+                  "id": "expandedAreas:Mind_Essence",
+                  "quantity": 4000
+                },
+                {
+                  "id": "expandedAreas:Eye_of_Earth",
+                  "quantity": 100
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Fire_Elementalist_Hat",
+              "level": 84,
+              "productID": "expandedAreas:Fire_Elementalist_Hat",
+              "baseQuantity": 1,
+              "baseExperience": 159,
+              "categoryID": "melvorF:FireMagicGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Fire_Rune",
+                  "quantity": 500
+                },
+                {
+                  "id": "melvorF:Nature_Rune",
+                  "quantity": 25
+                },
+                {
+                  "id": "expandedAreas:Mind_Essence",
+                  "quantity": 1000
+                },
+                {
+                  "id": "expandedAreas:Eye_of_Fire",
+                  "quantity": 25
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Fire_Elementalist_Boots",
+              "level": 88,
+              "productID": "expandedAreas:Fire_Elementalist_Boots",
+              "baseQuantity": 1,
+              "baseExperience": 163,
+              "categoryID": "melvorF:FireMagicGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Fire_Rune",
+                  "quantity": 500
+                },
+                {
+                  "id": "melvorF:Nature_Rune",
+                  "quantity": 25
+                },
+                {
+                  "id": "expandedAreas:Mind_Essence",
+                  "quantity": 1000
+                },
+                {
+                  "id": "expandedAreas:Eye_of_Fire",
+                  "quantity": 25
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Fire_Elementalist_Gloves",
+              "level": 92,
+              "productID": "expandedAreas:Fire_Elementalist_Gloves",
+              "baseQuantity": 1,
+              "baseExperience": 167,
+              "categoryID": "melvorF:FireMagicGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Fire_Rune",
+                  "quantity": 500
+                },
+                {
+                  "id": "melvorF:Nature_Rune",
+                  "quantity": 25
+                },
+                {
+                  "id": "expandedAreas:Mind_Essence",
+                  "quantity": 1000
+                },
+                {
+                  "id": "expandedAreas:Eye_of_Fire",
+                  "quantity": 25
+                }
+              ],
+              "currencyCosts": []
+            },
+            {
+              "id": "Fire_Elementalist_Robes",
+              "level": 96,
+              "productID": "expandedAreas:Fire_Elementalist_Robes",
+              "baseQuantity": 1,
+              "baseExperience": 342,
+              "categoryID": "melvorF:FireMagicGear",
+              "itemCosts": [
+                {
+                  "id": "melvorD:Fire_Rune",
+                  "quantity": 1000
+                },
+                {
+                  "id": "melvorF:Nature_Rune",
+                  "quantity": 50
+                },
+                {
+                  "id": "expandedAreas:Mind_Essence",
+                  "quantity": 4000
+                },
+                {
+                  "id": "expandedAreas:Eye_of_Fire",
+                  "quantity": 100
+                }
+              ],
+              "currencyCosts": []
+            },
             {
               "id": "SigilCat",
               "level": 40,
