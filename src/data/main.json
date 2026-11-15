@@ -15189,16 +15189,16 @@
         "sellsFor": 2500,
         "itemType": "Potion",
         "modifiers": {
-          "deadlyPoisonDOTDamageTaken": -50,
-          "poisonDOTDamageTaken": -60,
+          "deadlyPoisonDOTDamageTaken": -30,
+          "poisonDOTDamageTaken": -40,
           "effectIgnoreChance": [
             {
               "effectGroupID": "melvorD:DeadlyPoisonDOT",
-              "value": 50
+              "value": 30
             },
             {
               "effectGroupID": "melvorD:PoisonDOT",
-              "value": 60
+              "value": 40
             }
           ]
         },
@@ -15223,16 +15223,16 @@
         "sellsFor": 2600,
         "itemType": "Potion",
         "modifiers": {
-          "deadlyPoisonDOTDamageTaken": -70,
-          "poisonDOTDamageTaken": -80,
+          "deadlyPoisonDOTDamageTaken": -30,
+          "poisonDOTDamageTaken": -40,
           "effectIgnoreChance": [
             {
               "effectGroupID": "melvorD:DeadlyPoisonDOT",
-              "value": 70
+              "value": 30
             },
             {
               "effectGroupID": "melvorD:PoisonDOT",
-              "value": 80
+              "value": 40
             }
           ]
         },
@@ -15257,16 +15257,16 @@
         "sellsFor": 2700,
         "itemType": "Potion",
         "modifiers": {
-          "deadlyPoisonDOTDamageTaken": -90,
-          "poisonDOTDamageTaken": -100,
+          "deadlyPoisonDOTDamageTaken": -30,
+          "poisonDOTDamageTaken": -40,
           "effectIgnoreChance": [
             {
               "effectGroupID": "melvorD:DeadlyPoisonDOT",
-              "value": 90
+              "value": 30
             },
             {
               "effectGroupID": "melvorD:PoisonDOT",
-              "value": 100
+              "value": 40
             }
           ]
         },
@@ -15718,7 +15718,7 @@
           },
           {
             "chance": 5,
-            "effectID": "melvorD:DeadyPoison",
+            "effectID": "melvorD:DeadlyPoison",
             "appliesWhen": "CritWithAttack"
           }
         ]
@@ -15865,7 +15865,7 @@
           "expandedAreas:SwampSludge"
         ],
         "consumesItemOn": {
-          "itemID": "expandedAreas:Tanzanite_Scale",
+          "itemID": "expandedAreas:Tanzanite_Scales",
           "chance": 100,
           "matchers": [
             {

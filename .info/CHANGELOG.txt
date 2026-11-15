@@ -768,3 +768,14 @@ SAE v0.9.6.5 - The Balance Patch Part 5
  
 ## Shop Purchases
 - Needle giving negative production cost bonuses fixed. Changed to give XP bonus instead.
+
+SAE v0.9.6.6 - The Balance Patch Part 6
+# Additions
+
+# Changes
+
+## Items
+
+### Potions
+- Anti-Venom changed to give the same bonus from Tier I-IV. Previously, bonuses increased all the way to IV, which was far too powerful.
+- 
