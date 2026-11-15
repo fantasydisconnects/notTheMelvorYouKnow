@@ -1406,22 +1406,6 @@
         }
       },
       {
-        "id": "expandedAreas:Bag_of_Endless_Gold1",
-        "dropTable": {
-          "remove": [
-            "melvorD:Cabbage"
-          ],
-          "add": [
-            {
-              "itemID": "expandedAreas:Bag_of_Endless_Gold2",
-              "minQuantity": 2,
-              "maxQuantity": 2,
-              "weight": 1
-            }
-          ]
-        }
-      },
-      {
         "id": "melvorF:Rune_Crossbow",
         "equipmentStats": {
           "add": [

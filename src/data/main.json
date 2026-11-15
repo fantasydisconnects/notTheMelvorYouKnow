@@ -16366,138 +16366,18 @@
           "currencyGain": [
             {
               "currencyID": "melvorD:GP",
-              "value": 25
+              "value": 5
+            }
+          ],
+          "currencyGainPerDamageDealt": [
+            {
+              "currencyID":"melvorD:GP",
+              "value": 10
             }
           ]
         },
         "itemType": "Weapon",
         "attackType": "melee"
-      },
-      {
-        "id": "Pick_of_Colossal_Excavation",
-        "name": "Pick of Colossal Excavation",
-        "tier": "artifact",
-        "type": "Weapon",
-        "category": "Weapon",
-        "itemType": "Weapon",
-        "sellsFor": 100000000,
-        "media": "assets/bank/Pick_of_Colossal_Excavation.png",
-        "customDescription": "-25% Mining Interval, +50% Mining XP, and +200% increased Attack and Strength Levels when fighting Constructed monsters",
-        "attackType": "melee",
-        "validSlots": [
-          "Weapon",
-          "expandedAreas:Tool"
-        ],
-        "occupiesSlots": [
-          "Shield"
-        ],
-        "obtainFromItemLog": false,
-        "ignoreCompletion": false,
-        "golbinRaidExclusive": false,
-        "equipmentStats": [
-          {
-            "key": "attackSpeed",
-            "value": 2800
-          },
-          {
-            "key": "meleeStrengthBonus",
-            "value": 58
-          },
-          {
-            "key": "stabAttackBonus",
-            "value": 58
-          },
-          {
-            "key": "slashAttackBonus",
-            "value": -10
-          }
-        ],
-        "conditionalModifiers": [
-          {
-            "condition": {
-              "effectID": "expandedAreas:MonsterTypeConstructed",
-              "character": "Enemy",
-              "type": "CombatEffect"
-            },
-            "modifiers": {
-              "flatHiddenSkillLevelBasedOnLevels": [
-                {
-                  "skillID": "melvorD:Strength",
-                  "value": 200
-                },
-                {
-                  "skillID": "melvorD:Attack",
-                  "value": 200
-                }
-              ]
-            }
-          }
-        ],
-        "modifiers": {
-          "skillInterval": [
-            {
-              "skillID": "melvorD:Mining",
-              "realmID": "melvorD:Melvor",
-              "value": -25
-            }
-          ],
-          "skillXP": [
-            {
-              "skillID": "melvorD:Mining",
-              "value": 50
-            }
-          ]
-        },
-        "equipRequirements": [
-          {
-            "type": "SkillLevel",
-            "level": 70,
-            "skillID": "melvorD:Strength"
-          },
-          {
-            "type": "SkillLevel",
-            "level": 70,
-            "skillID": "melvorD:Mining"
-          }
-        ]
-      },
-      {
-        "id": "Skeleton_Key",
-        "name": "Skeleton Key",
-        "customDescription": "It seems this would fit into a skull-shaped lock...",
-        "category": "Key",
-        "type": "Key",
-        "media": "assets/bank/Skeleton_Key.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 1,
-        "itemType": "Item"
-      },
-      {
-        "id": "Mysterious_Chest",
-        "name": "Mysterious Chest (Locked)",
-        "category": "Misc",
-        "type": "Chest",
-        "media": "assets/bank/mysterious_chest.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 500,
-        "customDescription": "The keyhole appears to fit that of a skeleton key...",
-        "itemType": "Openable",
-        "dropTable": [
-          {
-            "itemID": "expandedAreas:Pick_of_Colossal_Excavation",
-            "minQuantity": 1,
-            "maxQuantity": 1,
-            "weight": 1
-          }
-        ],
-        "keyItem": {
-          "id": "expandedAreas:Skeleton_Key",
-          "quantity": 1
-        }
       },
       {
         "id": "Lamp",
@@ -16508,7 +16388,7 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 250000,
+        "sellsFor": 25000,
         "itemType": "Item"
       },
       {
@@ -16520,7 +16400,7 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 1000000,
+        "sellsFor": 100000,
         "itemType": "Item"
       },
       {
@@ -16532,7 +16412,7 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 100000,
+        "sellsFor": 10000,
         "itemType": "Item"
       },
       {
@@ -16545,121 +16425,7 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 20000
-      },
-      {
-        "id": "Bag_of_Endless_Gold1",
-        "name": "Bag of Endless Gold",
-        "category": "Openable",
-        "type": "Chest",
-        "media": "assets/bank/Bag_of_Endless_Gold.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 1,
-        "itemType": "Openable",
-        "dropTable": [
-          {
-            "itemID": "melvorD:Cabbage",
-            "minQuantity": 2,
-            "maxQuantity": 2,
-            "weight": 1
-          }
-        ]
-      },
-      {
-        "id": "Bag_of_Endless_Gold2",
-        "name": "Bag of Endless Gold",
-        "category": "Openable",
-        "type": "Chest",
-        "media": "assets/bank/Bag_of_Endless_Gold.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 1,
-        "itemType": "Openable",
-        "dropTable": [
-          {
-            "itemID": "expandedAreas:Bag_of_Endless_Gold1",
-            "minQuantity": 2,
-            "maxQuantity": 2,
-            "weight": 1
-          }
-        ]
-      },
-      {
-        "id": "Weapons_Cache",
-        "name": "Weapons Cache",
-        "category": "Openable",
-        "type": "Chest",
-        "media": "assets/bank/Weapons_Cache.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 15000,
-        "itemType": "Openable",
-        "dropTable": [
-          {
-            "itemID": "melvorD:Adamant_2H_Sword",
-            "minQuantity": 50,
-            "maxQuantity": 100,
-            "weight": 100
-          },
-          {
-            "itemID": "melvorD:Adamant_Battleaxe",
-            "minQuantity": 50,
-            "maxQuantity": 100,
-            "weight": 65
-          },
-          {
-            "itemID": "melvorD:Adamant_Dagger",
-            "minQuantity": 50,
-            "maxQuantity": 100,
-            "weight": 55
-          },
-          {
-            "itemID": "melvorD:Adamant_Sword",
-            "minQuantity": 50,
-            "maxQuantity": 100,
-            "weight": 45
-          },
-          {
-            "itemID": "melvorD:Adamant_Scimitar",
-            "minQuantity": 50,
-            "maxQuantity": 100,
-            "weight": 35
-          },
-          {
-            "itemID": "melvorF:Yew_Longbow",
-            "minQuantity": 50,
-            "maxQuantity": 100,
-            "weight": 35
-          },
-          {
-            "itemID": "melvorD:Adamant_Arrows",
-            "minQuantity": 500,
-            "maxQuantity": 1000,
-            "weight": 35
-          },
-          {
-            "itemID": "melvorF:Adamant_Crossbow",
-            "minQuantity": 50,
-            "maxQuantity": 100,
-            "weight": 20
-          },
-          {
-            "itemID": "melvorF:Topaz_Bolts",
-            "minQuantity": 250,
-            "maxQuantity": 500,
-            "weight": 20
-          },
-          {
-            "itemID": "melvorF:Ruby_Bolts",
-            "minQuantity": 250,
-            "maxQuantity": 500,
-            "weight": 10
-          }
-        ]
+        "sellsFor": 5000
       },
       {
         "itemType": "Openable",
@@ -16671,31 +16437,19 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 100000,
+        "sellsFor": 1000,
         "dropTable": [
           {
-            "minQuantity": 10,
-            "maxQuantity": 50,
+            "minQuantity": 1,
+            "maxQuantity": 5,
             "itemID": "expandedAreas:Treasure",
             "weight": 200
           },
           {
             "minQuantity": 1,
-            "maxQuantity": 10,
-            "itemID": "melvorF:Chest_Of_Gems",
-            "weight": 200
-          },
-          {
-            "minQuantity": 1,
-            "maxQuantity": 10,
-            "itemID": "expandedAreas:Weapons_Cache",
-            "weight": 200
-          },
-          {
-            "minQuantity": 1,
             "maxQuantity": 1,
-            "itemID": "expandedAreas:Bag_of_Endless_Gold1",
-            "weight": 10
+            "itemID": "melvorF:Chest_Of_Gems",
+            "weight": 15
           },
           {
             "minQuantity": 1,
