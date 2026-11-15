@@ -9409,6 +9409,7 @@
         "name": "Swamp of Desolation",
         "pauseOnBosses": false,
         "rewardItemIDs": [
+          "expandedAreas:Toxic_Hoard",
           "expandedAreas:Toxic_Hoard"
         ],
         "pet": {
@@ -15948,7 +15949,7 @@
         "category": "Combat",
         "type": "Weapon",
         "media": "assets/bank/Magmatic_Fangblade.png",
-        "customDescription": "Double the stats of this weapon if you have at least 100 Magma Scales in the bank. While the Enemy is affected by both Burn and Poison or both Burn and Deadly Poison, your attacks cannot miss and you have 50% crit chance.",
+        "customDescription": "While the Enemy is affected by both Burn and Poison or both Burn and Deadly Poison, your attacks cannot miss and you have 50% crit chance. Apply Burn on hit if the Enemy is afflicted by Poison or Deadly Poison.<br>Double the Equipment Stats of this weapon if you have at least 100 Magma Scales in the bank. Consumes 1 scale per attack.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -16090,124 +16091,238 @@
         "itemType": "Openable",
         "dropTable": [
           {
-            "itemID": "melvorD:Bones",
-            "minQuantity": 1000,
-            "maxQuantity": 2000,
-            "weight": 50
-          },
-          {
-            "itemID": "melvorF:Goo",
-            "minQuantity": 200,
-            "maxQuantity": 400,
-            "weight": 45
-          },
-          {
-            "itemID": "melvorF:Poison_Scales",
-            "minQuantity": 150,
-            "maxQuantity": 300,
-            "weight": 40
-          },
-          {
-            "itemID": "melvorF:Fine_Poison_Powder",
-            "minQuantity": 100,
-            "maxQuantity": 200,
-            "weight": 35
-          },
-          {
-            "itemID": "expandedAreas:Serpentine_Scales",
-            "minQuantity": 250,
-            "maxQuantity": 500,
-            "weight": 30
-          },
-          {
-            "itemID": "expandedAreas:Magmatic_Scales",
-            "minQuantity": 250,
-            "maxQuantity": 500,
-            "weight": 30
-          },
-          {
-            "itemID": "expandedAreas:Tanzanite_Scales",
-            "minQuantity": 250,
-            "maxQuantity": 500,
-            "weight": 30
-          },
-          {
-            "itemID": "melvorD:Bird_Nest",
-            "minQuantity": 5,
-            "maxQuantity": 10,
-            "weight": 25
-          },
-          {
-            "itemID": "melvorF:Herb_Sack",
-            "minQuantity": 5,
-            "maxQuantity": 10,
-            "weight": 20
-          },
-          {
-            "itemID": "melvorF:Crate_Of_Basic_Supplies",
-            "minQuantity": 1,
-            "maxQuantity": 1,
-            "weight": 20
-          },
-          {
-            "itemID": "melvorF:Herb_Box_II",
-            "minQuantity": 1,
-            "maxQuantity": 1,
-            "weight": 15
-          },
-          {
-            "itemID": "melvorF:Ore_Box_II",
-            "minQuantity": 1,
-            "maxQuantity": 1,
-            "weight": 15
-          },
-          {
-            "itemID": "melvorF:Food_Box_II",
-            "minQuantity": 1,
-            "maxQuantity": 1,
-            "weight": 10
-          },
-          {
-            "itemID": "melvorF:Chest_Of_Gems",
-            "minQuantity": 1,
-            "maxQuantity": 1,
-            "weight": 10
-          },
-          {
             "itemID": "expandedAreas:Tanzanite_Fang",
             "minQuantity": 1,
             "maxQuantity": 1,
-            "weight": 2
-          },
-          {
-            "itemID": "expandedAreas:Magmatic_Fang",
-            "minQuantity": 1,
-            "maxQuantity": 1,
-            "weight": 2
+            "weight": 40
           },
           {
             "itemID": "expandedAreas:Serpentine_Fang",
             "minQuantity": 1,
             "maxQuantity": 1,
-            "weight": 2
+            "weight": 40
+          },
+          {
+            "itemID": "expandedAreas:Magmatic_Fang",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 40
           },
           {
             "itemID": "expandedAreas:Zulrahs_Head_Tanzanite",
             "minQuantity": 1,
             "maxQuantity": 1,
-            "weight": 1
-          },
-          {
-            "itemID": "expandedAreas:Zulrahs_Head_Magmatic",
-            "minQuantity": 1,
-            "maxQuantity": 1,
-            "weight": 1
+            "weight": 40
           },
           {
             "itemID": "expandedAreas:Zulrahs_Head_Serpentine",
             "minQuantity": 1,
             "maxQuantity": 1,
-            "weight": 1
+            "weight": 40
+          },
+          {
+            "itemID": "expandedAreas:Zulrahs_Head_Magmatic",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 40
+          },
+          {
+            "itemID": "melvorD:Death_Rune",
+            "minQuantity": 125,
+            "maxQuantity": 250,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorF:Havoc_Rune",
+            "minQuantity": 100,
+            "maxQuantity": 200,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorD:Chaos_Rune",
+            "minQuantity": 200,
+            "maxQuantity": 400,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorD:Oxilyme_Herb",
+            "minQuantity": 15,
+            "maxQuantity": 30,
+            "weight": 333
+          },
+          {
+            "itemID": "melvorF:Poraxx_Herb",
+            "minQuantity": 12,
+            "maxQuantity": 25,
+            "weight": 333
+          },
+          {
+            "itemID": "melvorF:Pigtayle_Herb",
+            "minQuantity": 5,
+            "maxQuantity": 10,
+            "weight": 333
+          },
+          {
+            "itemID": "melvorF:Barrentoe_Herb",
+            "minQuantity": 5,
+            "maxQuantity": 10,
+            "weight": 333
+          },
+          {
+            "itemID": "expandedAreas:Palm_Tree_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 2,
+            "weight": 1111
+          },
+          {
+            "itemID": "expandedAreas:Papaya_Tree_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 2,
+            "weight": 909
+          },
+          {
+            "itemID": "expandedAreas:Pineapple_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 2,
+            "weight": 769
+          },
+          {
+            "itemID": "melvorD:Magic_Tree_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 2,
+            "weight": 667
+          },
+          {
+            "itemID": "melvorF:Poraxx_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 2,
+            "weight": 556
+          },
+          {
+            "itemID": "melvorF:Barrentoe_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 2,
+            "weight": 444
+          },
+          {
+            "itemID": "melvorD:Oxilyme_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 2,
+            "weight": 333
+          },
+          {
+            "itemID": "melvorF:Pigtayle_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 2,
+            "weight": 222
+          },
+          {
+            "itemID": "expandedAreas:Redwood_Tree_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 100
+          },
+          {
+            "itemID": "expandedAreas:Nature_Essence",
+            "minQuantity": 10,
+            "maxQuantity": 20,
+            "weight": 2500
+          },
+          {
+            "itemID": "melvorD:Runite_Ore",
+            "minQuantity": 10,
+            "maxQuantity": 20,
+            "weight": 2000
+          },
+          {
+            "itemID": "melvorD:Rune_Essence",
+            "minQuantity": 750,
+            "maxQuantity": 1500,
+            "weight": 1667
+          },
+          {
+            "itemID": "melvorD:Yew_Logs",
+            "minQuantity": 35,
+            "maxQuantity": 70,
+            "weight": 1429
+          },
+          {
+            "itemID": "melvorD:Adamantite_Bar",
+            "minQuantity": 20,
+            "maxQuantity": 40,
+            "weight": 1250
+          },
+          {
+            "itemID": "melvorD:Coal_Ore",
+            "minQuantity": 100,
+            "maxQuantity": 200,
+            "weight": 1111
+          },
+          {
+            "itemID": "melvorF:Stack_Of_Bones",
+            "minQuantity": 6,
+            "maxQuantity": 12,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorD:Mahogany_Logs",
+            "minQuantity": 50,
+            "maxQuantity": 100,
+            "weight": 909
+          },
+          {
+            "itemID": "melvorD:Raw_Shark",
+            "minQuantity": 17,
+            "maxQuantity": 35,
+            "weight": 833
+          },
+          {
+            "itemID": "melvorD:Manta_Ray",
+            "minQuantity": 17,
+            "maxQuantity": 35,
+            "weight": 769
+          },
+          {
+            "itemID": "melvorF:Ranged_Assistance_Potion_IV",
+            "minQuantity": 5,
+            "maxQuantity": 10,
+            "weight": 714
+          },
+          {
+            "itemID": "melvorF:Jadestone_Bolts",
+            "minQuantity": 6,
+            "maxQuantity": 12,
+            "weight": 667
+          },
+          {
+            "itemID": "expandedAreas:Booberry",
+            "minQuantity": 125,
+            "maxQuantity": 250,
+            "weight": 556
+          },
+          {
+            "itemID": "expandedAreas:Coconut",
+            "minQuantity": 10,
+            "maxQuantity": 20,
+            "weight": 444
+          },
+          {
+            "itemID": "expandedAreas:Tanzanite_Scales",
+            "minQuantity": 250,
+            "maxQuantity": 500,
+            "weight": 111
+          },
+          {
+            "itemID": "expandedAreas:Serpentine_Scales",
+            "minQuantity": 250,
+            "maxQuantity": 500,
+            "weight": 111
+          },
+          {
+            "itemID": "expandedAreas:Magmatic_Scales",
+            "minQuantity": 250,
+            "maxQuantity": 500,
+            "weight": 111
           }
         ]
       },

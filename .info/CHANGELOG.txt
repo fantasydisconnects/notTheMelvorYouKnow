@@ -776,6 +776,8 @@ SAE v0.9.6.6 - The Balance Patch Part 6
 
 ## Items
 
+### Openable
+- Toxic Hoard loot table adjusted to be more balanced and fair
+
 ### Potions
 - Anti-Venom changed to give the same bonus from Tier I-IV. Previously, bonuses increased all the way to IV, which was far too powerful.
-- 
