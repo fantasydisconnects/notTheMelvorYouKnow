@@ -16371,7 +16371,7 @@
           ],
           "currencyGainPerDamageDealt": [
             {
-              "currencyID":"melvorD:GP",
+              "currencyID": "melvorD:GP",
               "value": 10
             }
           ]
@@ -16489,19 +16489,61 @@
         "sellsFor": 2000,
         "itemType": "Potion",
         "modifiers": {
-          "accuracyRating": -10,
+          "autoEatThreshold": -5,
           "flatHiddenSkillLevelBasedOnLevels": [
+            {
+              "skillID": "melvorD:Hitpoints",
+              "value": 15
+            },
             {
               "skillID": "melvorD:Defence",
               "value": 20
+            },
+            {
+              "skillID": "melvorD:Attack",
+              "value": -10
+            },
+            {
+              "skillID": "melvorD:Strength",
+              "value": -10
+            },
+            {
+              "skillID": "melvorD:Ranged",
+              "value": -10
+            },
+            {
+              "skillID": "melvorD:Magic",
+              "value": -10
             }
           ],
-          "maxHit": -10,
-          "maxHitpoints": 15,
-          "flatMaxHitpoints": 2,
-          "autoEatThreshold": -10
+          "flatHiddenSkillLevel": [
+            {
+              "skillID": "melvorD:Hitpoints",
+              "value": 2
+            },
+            {
+              "skillID": "melvorD:Defence",
+              "value": 2
+            },
+            {
+              "skillID": "melvorD:Attack",
+              "value": -2
+            },
+            {
+              "skillID": "melvorD:Strength",
+              "value": -2
+            },
+            {
+              "skillID": "melvorD:Ranged",
+              "value": -2
+            },
+            {
+              "skillID": "melvorD:Magic",
+              "value": -2
+            }
+          ]
         },
-        "charges": 5,
+        "charges": 1,
         "tier": 0,
         "action": "melvorD:Combat",
         "consumesOn": [
@@ -16522,19 +16564,61 @@
         "sellsFor": 2500,
         "itemType": "Potion",
         "modifiers": {
-          "accuracyRating": -10,
+          "autoEatThreshold": -5,
           "flatHiddenSkillLevelBasedOnLevels": [
+            {
+              "skillID": "melvorD:Hitpoints",
+              "value": 15
+            },
             {
               "skillID": "melvorD:Defence",
               "value": 20
+            },
+            {
+              "skillID": "melvorD:Attack",
+              "value": -10
+            },
+            {
+              "skillID": "melvorD:Strength",
+              "value": -10
+            },
+            {
+              "skillID": "melvorD:Ranged",
+              "value": -10
+            },
+            {
+              "skillID": "melvorD:Magic",
+              "value": -10
             }
           ],
-          "maxHit": -10,
-          "maxHitpoints": 15,
-          "flatMaxHitpoints": 2,
-          "autoEatThreshold": -10
+          "flatHiddenSkillLevel": [
+            {
+              "skillID": "melvorD:Hitpoints",
+              "value": 2
+            },
+            {
+              "skillID": "melvorD:Defence",
+              "value": 2
+            },
+            {
+              "skillID": "melvorD:Attack",
+              "value": -2
+            },
+            {
+              "skillID": "melvorD:Strength",
+              "value": -2
+            },
+            {
+              "skillID": "melvorD:Ranged",
+              "value": -2
+            },
+            {
+              "skillID": "melvorD:Magic",
+              "value": -2
+            }
+          ]
         },
-        "charges": 10,
+        "charges": 2,
         "tier": 0,
         "action": "melvorD:Combat",
         "consumesOn": [
@@ -16555,19 +16639,61 @@
         "sellsFor": 3000,
         "itemType": "Potion",
         "modifiers": {
-          "accuracyRating": -10,
+          "autoEatThreshold": -5,
           "flatHiddenSkillLevelBasedOnLevels": [
+            {
+              "skillID": "melvorD:Hitpoints",
+              "value": 15
+            },
             {
               "skillID": "melvorD:Defence",
               "value": 20
+            },
+            {
+              "skillID": "melvorD:Attack",
+              "value": -10
+            },
+            {
+              "skillID": "melvorD:Strength",
+              "value": -10
+            },
+            {
+              "skillID": "melvorD:Ranged",
+              "value": -10
+            },
+            {
+              "skillID": "melvorD:Magic",
+              "value": -10
             }
           ],
-          "maxHit": -10,
-          "maxHitpoints": 15,
-          "flatMaxHitpoints": 2,
-          "autoEatThreshold": -10
+          "flatHiddenSkillLevel": [
+            {
+              "skillID": "melvorD:Hitpoints",
+              "value": 2
+            },
+            {
+              "skillID": "melvorD:Defence",
+              "value": 2
+            },
+            {
+              "skillID": "melvorD:Attack",
+              "value": -2
+            },
+            {
+              "skillID": "melvorD:Strength",
+              "value": -2
+            },
+            {
+              "skillID": "melvorD:Ranged",
+              "value": -2
+            },
+            {
+              "skillID": "melvorD:Magic",
+              "value": -2
+            }
+          ]
         },
-        "charges": 15,
+        "charges": 3,
         "tier": 0,
         "action": "melvorD:Combat",
         "consumesOn": [
@@ -16588,19 +16714,61 @@
         "sellsFor": 3500,
         "itemType": "Potion",
         "modifiers": {
-          "accuracyRating": -10,
+          "autoEatThreshold": -5,
           "flatHiddenSkillLevelBasedOnLevels": [
+            {
+              "skillID": "melvorD:Hitpoints",
+              "value": 15
+            },
             {
               "skillID": "melvorD:Defence",
               "value": 20
+            },
+            {
+              "skillID": "melvorD:Attack",
+              "value": -10
+            },
+            {
+              "skillID": "melvorD:Strength",
+              "value": -10
+            },
+            {
+              "skillID": "melvorD:Ranged",
+              "value": -10
+            },
+            {
+              "skillID": "melvorD:Magic",
+              "value": -10
             }
           ],
-          "maxHit": -10,
-          "maxHitpoints": 15,
-          "flatMaxHitpoints": 2,
-          "autoEatThreshold": -10
+          "flatHiddenSkillLevel": [
+            {
+              "skillID": "melvorD:Hitpoints",
+              "value": 2
+            },
+            {
+              "skillID": "melvorD:Defence",
+              "value": 2
+            },
+            {
+              "skillID": "melvorD:Attack",
+              "value": -2
+            },
+            {
+              "skillID": "melvorD:Strength",
+              "value": -2
+            },
+            {
+              "skillID": "melvorD:Ranged",
+              "value": -2
+            },
+            {
+              "skillID": "melvorD:Magic",
+              "value": -2
+            }
+          ]
         },
-        "charges": 20,
+        "charges": 4,
         "tier": 0,
         "action": "melvorD:Combat",
         "consumesOn": [

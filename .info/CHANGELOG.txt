@@ -783,14 +783,13 @@ SAE v0.9.6.6 - The Balance Patch Part 6
 ### Misc
 - Mysterious Skeleton Key removed from the game
 
-
 ### Openable
 - Toxic Hoard loot table adjusted to be more balanced and fair
 - Mysterious Chest removed from the game
 - Bag of Endless Gold removed from the game
 - Weapons Cache removed from the game
 - Items from Treasure Hoard have had their GP value greatly reduced, and drop quantity greatly reduced
-- 
 
 ### Potions
 - Anti-Venom changed to give the same bonus from Tier I-IV. Previously, bonuses increased all the way to IV, which was far too powerful.
+- Aeris Brew changed to add and subtract Flat Hidden Skill Levels. Auto Eat Threshold reduction reduced from -10% to -5%. At 35% Threshold with 115 HP and Auto Eat Tier III, this makes the player eat at 400 HP (the same as 40% Threshold at 99 HP). Potion charges significantly reduced: Tier I: 1, Tier II: 2, Tier III: 3, and Tier IV: 4. 
