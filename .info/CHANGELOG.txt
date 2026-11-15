@@ -709,3 +709,62 @@ SAE v0.9.6.4 - The Balance Patch Part 4
 
 ### Crafting
 - Added missing recipes for accessories
+
+SAE v0.9.6.5 - The Balance Patch Part 5
+# Additions
+
+# Changes
+
+## Items
+
+### Equipment
+- Bracelets can again be equipped to accessory slots
+- Platinum Jadestone Ring now gives -10% Skilling Interval, production cost reduction removed
+- Alchemist's Alembic can no longer be destroyed. Silly, silly.
+- Lucky Secateurs changed to give +20 Flat Additional Primary Product Quantity, combat stats removed, and 65 Farming level requirement removed.
+- Dragonslayer Crossbow resistance ignore chance increased to 30% to account for most Draconic creatures being on the opposing side of the Combat Triangle.
+- Dragonfire Armor dragonbreath damage taken reduced to -10% per piece (down from -15%).
+- Lancelott Summon no longer consumes on Enemy Attack
+- All Sigils now require level 40 in every Combat Skill for Minor Sigils, level 60 for Major, and, in a future update, level 80 for Master Sigils
+- Goldilocks weapon changed to 50% chance to consume Gold Bars when attacking.
+- Cursed Enhancements' regeneration effects have been reduced.
+- Combination Staves' runes provided increased to match the single element staves' 
+- Magmatic Helm renamed to Magma Helm
+- Magma Helm changed to give +5% chance to ignore Burn, Poison, and Deadly Poison; increased to +15% if you have at least 100 Magma Scales in the bank. Now also applies Burn, Poison, or Deadly Poison (chosen at random) when hit by the Enemy's first hit. 75 Hitpoint requirement removed. Synergy with Magma Blade removed.
+- Tanzanite helm changed to: Apply Frostburn, Poison, or Deadly Poison to the Enemy on your first hit against them. The Enemy takes +5% damage while affected by Frostburn, Poison, or Deadly Poison.<br>This bonus is increased to 10% if there are at least 100 Tanzanite Scales in your bank. A scale will be destroyed per attack.
+- Tanzanite Helm + Trident of the Swamp synergy removed.
+- Serpentine Helm changed to: Ignores Enemy immunity to Poison and Deadly Poison. 5% chance to apply Poison on hit and Deadly Poison on critical hit. Enemy takes +5% damage from Poison and Deadly Poison.<br>This bonus is increased to 10% if there are at least 100 Serpentine Scales in your bank. A scale will be destroyed per attack.
+- Serpentine Helm & Toxic Quickbow synergy remmoved.
+- Toxic Quickbow changed to: -0.2s Attack Interval against Poisoned targets.<br>This bonus is increased to -0.4s if there are at least 100 Serpentine Scales in your bank. A scale will be destroyed per attack. Attack Speed reduced to 1800 from 2000. Toxic Siphon changed to apply Deadly Poison 25% of the time.
+- Wand of the Swamp changed to: Consumes 1 Tanzanite Scale, 1 Death Rune, and 5 Fire Runes per attack. Must have at least 100 of each in the bank to attack. While the Enemy is affected by Frostburn, Poison, or Deadly Poison, it has +5% Attack Interval per effect affected by. Swamp Sludge changed to apply Frostburn, Poison, or Deadly Poison on hit. Item attack speed increased to 3.0s (down from 2.4s).
+- Magma Fangblade changed to: Double the stats of this weapon if you have at least 100 Magma Scales in the bank. While the Enemy is affected by both Burn and Poison or both Burn and Deadly Poison, your attacks cannot miss and you have 50% crit chance. Special attack removed.
+
+### Food
+- Fried Dragon Heads / Perfect Preservation chance increased to 90% / 95% to make them a bit more worth using as food
+
+### Misc. 
+- Opal, Spinel, and Quartz prices increased to 100, 140, and 180, respectively.
+
+### Openable
+- Geode drop table adjust slightly to make the curve favor semiprecious gems moderately over the standard gems, and heavily over the rare gems (e.g. Jadestone)
+
+## Shop Purchases
+- Thieving Tools changed to give +5% Minimum GP from Thieving and +5% chance for NPCs in Thieving to deal no damage per tier.
+
+## Skills
+
+### Thieving
+- Alchemist drop table amended to include Pigtayle Herbs
+- Herb Sack added as a drop to Petunia
+
+# Fixes
+
+## Items
+
+### Equipment
+- Alchemist's Alembic fixed to give +1 Flat Base Primary Product. Previously, it gave +25%, which did nothing.
+- Toxic Quickbow and Wand of the Swamp were giving % based increases to Equipment Strength rather than flat bonuses.
+- Wand of the Swamp now correctly consumes Tanzanite Scales when attacking.
+ 
+## Shop Purchases
+- Needle giving negative production cost bonuses fixed. Changed to give XP bonus instead.

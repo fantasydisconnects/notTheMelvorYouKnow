@@ -237,57 +237,37 @@
           }
         ],
         "prehitEffects": [],
-        "onhitEffects": [],
+        "onhitEffects": [
+          {
+            "tableID": "expandedAreas:TanzaniteHelm"
+          }
+        ],
         "cantMiss": false,
         "attackCount": 1,
         "attackInterval": 50,
         "lifesteal": 0,
         "name": "Swamp Sludge",
-        "description": "Perform an avoidable normal attack. Deals your normal damage + ${attackDamageMaxValue1}% of your Magic level.",
+        "description": "Perform an avoidable normal attack. Deals your normal damage + ${attackDamageMaxValue1}% of your Magic level. On hit, apply Frostburn, Poison, or Deadly Poison.",
         "descriptionGenerator": "Make an <avoidable> normal attack, dealing your normal damage + <damage>. Consumes Runes per hit.",
-        "usesRunesPerProc": true
-      },
-      {
-        "id": "Bloodboil",
-        "defaultChance": 10,
-        "damage": [
+        "usesRunesPerProc": true,
+        "extraRuneConsumption": [
           {
-            "damageType": "Custom",
-            "character": "Attacker",
-            "maxRoll": "PoisonMax35",
-            "maxPercent": 115,
-            "minRoll": "PoisonMin35",
-            "minPercent": 100,
-            "roll": true
-          }
-        ],
-        "prehitEffects": [],
-        "onhitEffects": [
-          {
-            "effectID": "melvorD:Burn",
-            "chance": 30
+            "id": "melvorD:Chaos_Rune",
+            "quantity": 1
           },
           {
-            "effectID": "melvorD:DeadlyPoison",
-            "condition": {
-              "effectID": "melvorD:Burn",
-              "character": "Enemy",
-              "type": "CombatEffect"
-            },
-            "chance": 30
+            "id": "melvorD:Death_Rune",
+            "quantity": 1
+          },
+          {
+            "id": "melvorD:Fire_Rune",
+            "quantity": 5
           }
-        ],
-        "cantMiss": false,
-        "attackCount": 1,
-        "attackInterval": 50,
-        "lifesteal": 0,
-        "name": "Bloodboil",
-        "description": "Perform an attack that deals ${attackDamageMaxValue0}% (150% if the enemy is poisoned) of your normal damage. On a hit has a ${onHitEffect0chance}% chance to inflict Burn that deals ${onHitEffect0DamageMaxValue0}% of the enemy's max hitpoints as damage over ${onHitEffect0duration}s. If the enemy is Burning, has a ${onHitEffect1chance}% chance to inflict Deadly Poison that deals ${onHitEffect1DamageMaxValue0}% of the enemy's max hit points as damage over ${onHitEffect1duration}s.",
-        "descriptionGenerator": "Perform an attack that deals <damage>. On a hit <hitEffect>."
+        ]
       },
       {
         "id": "ToxicSiphon",
-        "defaultChance": 20,
+        "defaultChance": 25,
         "damage": [
           {
             "damageType": "Normal",
@@ -298,7 +278,7 @@
         "onhitEffects": [
           {
             "effectID": "melvorD:DeadlyPoison",
-            "chance": 5
+            "chance": 25
           }
         ],
         "cantMiss": false,
@@ -6086,7 +6066,7 @@
             "combatEffects": [
               {
                 "effectID": "melvorD:Fear",
-                "chance": 1,
+                "chance": 2,
                 "appliesWhen": "PostAttack"
               }
             ]
@@ -6095,7 +6075,7 @@
         "parameters": [
           {
             "name": "maxStacks",
-            "initialValue": 4
+            "initialValue": 5
           }
         ],
         "behaviours": [
@@ -7620,6 +7600,40 @@
       }
     ],
     "combatEffectTables": [
+      {
+        "id": "MagmaHelm",
+        "table": [
+          {
+            "effectID": "melvorD:Burn",
+            "weight": 3
+          },
+          {
+            "effectID": "melvorD:Poison",
+            "weight": 2
+          },
+          {
+            "effectID": "melvorD:DeadlyPoison",
+            "weight": 1
+          }
+        ]
+      },
+      {
+        "id": "TanzaniteHelm",
+        "table": [
+          {
+            "effectID": "melvorD:Frostburn",
+            "weight": 3
+          },
+          {
+            "effectID": "melvorD:Poison",
+            "weight": 2
+          },
+          {
+            "effectID": "melvorD:DeadlyPoison",
+            "weight": 1
+          }
+        ]
+      },
       {
         "id": "ElementalistEffect",
         "table": [
@@ -9760,7 +9774,7 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 20,
+        "sellsFor": 100,
         "customDescription": "Semiprecious Gem"
       },
       {
@@ -9773,7 +9787,7 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 40,
+        "sellsFor": 120,
         "tier": "none",
         "validSlots": [
           "Ring",
@@ -9797,7 +9811,7 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 40,
+        "sellsFor": 120,
         "tier": "none",
         "validSlots": [
           "Amulet",
@@ -9825,7 +9839,7 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 40,
+        "sellsFor": 120,
         "tier": "none",
         "validSlots": [
           "Gloves",
@@ -9848,7 +9862,7 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 40,
+        "sellsFor": 120,
         "tier": "none",
         "validSlots": [
           "expandedAreas:Accessory1",
@@ -9877,7 +9891,7 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 65,
+        "sellsFor": 140,
         "customDescription": "Semiprecious Gem"
       },
       {
@@ -9890,7 +9904,7 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 80,
+        "sellsFor": 160,
         "tier": "none",
         "validSlots": [
           "Ring",
@@ -9914,7 +9928,7 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 80,
+        "sellsFor": 160,
         "tier": "none",
         "validSlots": [
           "Amulet",
@@ -9949,7 +9963,7 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 80,
+        "sellsFor": 160,
         "tier": "none",
         "validSlots": [
           "Gloves",
@@ -9977,7 +9991,7 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 80,
+        "sellsFor": 160,
         "tier": "none",
         "validSlots": [
           "expandedAreas:Accessory1",
@@ -10001,7 +10015,7 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 90,
+        "sellsFor": 180,
         "customDescription": "Semiprecious Gem"
       },
       {
@@ -10015,7 +10029,7 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 115,
+        "sellsFor": 200,
         "tier": "none",
         "validSlots": [
           "Ring",
@@ -10049,7 +10063,7 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 115,
+        "sellsFor": 200,
         "tier": "none",
         "validSlots": [
           "Amulet",
@@ -10076,6 +10090,8 @@
         "tier": "none",
         "validSlots": [
           "Gloves",
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
           "Passive"
         ],
         "occupiesSlots": [],
@@ -10100,7 +10116,7 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 115,
+        "sellsFor": 200,
         "tier": "none",
         "validSlots": [
           "expandedAreas:Accessory1",
@@ -10398,8 +10414,7 @@
         "equipRequirements": [],
         "equipmentStats": [],
         "modifiers": {
-          "skillCostReduction": 5,
-          "skillInterval": -5
+          "skillInterval": -10
         }
       },
       {
@@ -10451,6 +10466,8 @@
         "tier": "none",
         "validSlots": [
           "Gloves",
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
           "Passive"
         ],
         "occupiesSlots": [],
@@ -10642,6 +10659,8 @@
         "tier": "none",
         "validSlots": [
           "Gloves",
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
           "Passive"
         ],
         "occupiesSlots": [],
@@ -10724,31 +10743,31 @@
             "itemID": "expandedAreas:Opal",
             "minQuantity": 1,
             "maxQuantity": 5,
-            "weight": 200
+            "weight": 100
           },
           {
             "itemID": "expandedAreas:Spinel",
             "minQuantity": 1,
             "maxQuantity": 5,
-            "weight": 175
+            "weight": 90
           },
           {
             "itemID": "expandedAreas:Quartz",
             "minQuantity": 1,
             "maxQuantity": 4,
-            "weight": 150
+            "weight": 80
           },
           {
             "itemID": "melvorD:Topaz",
             "minQuantity": 1,
             "maxQuantity": 3,
-            "weight": 120
+            "weight": 60
           },
           {
             "itemID": "melvorD:Sapphire",
             "minQuantity": 1,
             "maxQuantity": 3,
-            "weight": 80
+            "weight": 50
           },
           {
             "itemID": "melvorD:Ruby",
@@ -10812,7 +10831,7 @@
         "type": "Food",
         "media": "assets/bank/Fried_Dragon_Heads.png",
         "modifiers": {
-          "foodPreservationChance": 50,
+          "foodPreservationChance": 90,
           "effectIgnoreChance": [
             {
               "effectGroupID": "melvorD:BurnDOT",
@@ -10842,7 +10861,7 @@
         "type": "Food",
         "media": "assets/bank/Fried_Dragon_Heads_Perfect.png",
         "modifiers": {
-          "foodPreservationChance": 65,
+          "foodPreservationChance": 95,
           "effectIgnoreChance": [
             {
               "effectGroupID": "melvorD:BurnDOT",
@@ -10989,7 +11008,7 @@
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 2000000,
-        "customDescription": "Versus Draconic monsters: +40% Ranged Accuracy and Ranged Strength Bonus, and +10% chance to ignore Enemy Resistance.",
+        "customDescription": "Versus Draconic monsters: +40% Ranged Accuracy and Ranged Strength Bonus from Equipment, and +30% chance to ignore Enemy Resistance.",
         "tier": "misc",
         "validSlots": [
           "Weapon"
@@ -11029,7 +11048,7 @@
               "ignoreResistanceWhenAttackingChance": [
                 {
                   "damageTypeID": "melvorD:Normal",
-                  "value": 10
+                  "value": 30
                 }
               ]
             }
@@ -11177,7 +11196,7 @@
         ],
         "modifiers": {
           "flatMaxHitpoints": 1,
-          "dragonBreathDamage": -15,
+          "dragonBreathDamage": -10,
           "burnDOTDamageTaken": -5
         }
       },
@@ -11236,7 +11255,7 @@
         ],
         "modifiers": {
           "flatMaxHitpoints": 1,
-          "dragonBreathDamage": -15,
+          "dragonBreathDamage": -10,
           "burnDOTDamageTaken": -5
         }
       },
@@ -11291,7 +11310,7 @@
         ],
         "modifiers": {
           "flatMaxHitpoints": 1,
-          "dragonBreathDamage": -15,
+          "dragonBreathDamage": -10,
           "burnDOTDamageTaken": -5
         }
       },
@@ -11371,9 +11390,6 @@
         "consumesOn": [
           {
             "type": "PlayerSummonAttack"
-          },
-          {
-            "type": "EnemyAttack"
           }
         ]
       },
@@ -11733,9 +11749,9 @@
         "occupiesSlots": [],
         "equipRequirements": [
           {
-            "skillID": "melvorD:Attack",
+            "type": "SkillLevel",
             "level": 60,
-            "type": "SkillLevel"
+            "skillID": "melvorD:Attack"
           },
           {
             "skillID": "melvorD:Strength",
@@ -11743,7 +11759,32 @@
             "type": "SkillLevel"
           },
           {
+            "skillID": "melvorD:Defence",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
             "skillID": "melvorD:Hitpoints",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Prayer",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Magic",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Ranged",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Slayer",
             "level": 60,
             "type": "SkillLevel"
           }
@@ -11889,7 +11930,32 @@
         "occupiesSlots": [],
         "equipRequirements": [
           {
-            "skillID": "melvorD:Attack",
+            "type": "SkillLevel",
+            "level": 60,
+            "skillID": "melvorD:Attack"
+          },
+          {
+            "skillID": "melvorD:Strength",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Defence",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Hitpoints",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Prayer",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Magic",
             "level": 60,
             "type": "SkillLevel"
           },
@@ -11899,7 +11965,7 @@
             "type": "SkillLevel"
           },
           {
-            "skillID": "melvorD:Astrology",
+            "skillID": "melvorD:Slayer",
             "level": 60,
             "type": "SkillLevel"
           }
@@ -11937,7 +12003,27 @@
         "occupiesSlots": [],
         "equipRequirements": [
           {
-            "skillID": "melvorD:Slayer",
+            "type": "SkillLevel",
+            "level": 60,
+            "skillID": "melvorD:Attack"
+          },
+          {
+            "skillID": "melvorD:Strength",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Defence",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Hitpoints",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Prayer",
             "level": 60,
             "type": "SkillLevel"
           },
@@ -11947,7 +12033,12 @@
             "type": "SkillLevel"
           },
           {
-            "skillID": "melvorD:Prayer",
+            "skillID": "melvorD:Ranged",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Slayer",
             "level": 60,
             "type": "SkillLevel"
           }
@@ -11955,6 +12046,7 @@
         "equipmentStats": [],
         "conditionalModifiers": [
           {
+            "description": "While Enemy is afflicted by Fear, takes +4% of Current HP as damage per attack",
             "condition": {
               "groupID": "melvorD:Fear",
               "type": "CombatEffectGroup",
@@ -11970,7 +12062,7 @@
             "effectID": "expandedAreas:SigilDread",
             "appliesWhen": "StartOfFight",
             "applyEffectWhenMerged": true,
-            "customDescription": "+1% chance to apply Fear, per Attack Turn, stacking up to 5 times (Stacks reset to 0 at maximum stacks)"
+            "customDescription": "+2% chance to apply Fear, per Attack Turn, stacking up to 5 times (Stacks reset to 0 at maximum stacks)"
           }
         ]
       },
@@ -11994,7 +12086,32 @@
         "occupiesSlots": [],
         "equipRequirements": [
           {
-            "skillID": "melvorD:Attack",
+            "type": "SkillLevel",
+            "level": 60,
+            "skillID": "melvorD:Attack"
+          },
+          {
+            "skillID": "melvorD:Strength",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Defence",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Hitpoints",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Prayer",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Magic",
             "level": 60,
             "type": "SkillLevel"
           },
@@ -12045,17 +12162,42 @@
         "occupiesSlots": [],
         "equipRequirements": [
           {
-            "skillID": "melvorD:Thieving",
+            "type": "SkillLevel",
+            "level": 60,
+            "skillID": "melvorD:Attack"
+          },
+          {
+            "skillID": "melvorD:Strength",
             "level": 60,
             "type": "SkillLevel"
           },
           {
-            "skillID": "melvorD:Township",
+            "skillID": "melvorD:Defence",
             "level": 60,
             "type": "SkillLevel"
           },
           {
-            "skillID": "melvorD:Cooking",
+            "skillID": "melvorD:Hitpoints",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Prayer",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Magic",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Ranged",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Slayer",
             "level": 60,
             "type": "SkillLevel"
           }
@@ -12217,12 +12359,42 @@
         "occupiesSlots": [],
         "equipRequirements": [
           {
-            "skillID": "melvorD:Summoning",
+            "type": "SkillLevel",
+            "level": 60,
+            "skillID": "melvorD:Attack"
+          },
+          {
+            "skillID": "melvorD:Strength",
             "level": 60,
             "type": "SkillLevel"
           },
           {
-            "skillID": "melvorD:Herblore",
+            "skillID": "melvorD:Defence",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Hitpoints",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Prayer",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Magic",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Ranged",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Slayer",
             "level": 60,
             "type": "SkillLevel"
           }
@@ -12271,9 +12443,9 @@
         "occupiesSlots": [],
         "equipRequirements": [
           {
-            "skillID": "melvorD:Attack",
+            "type": "SkillLevel",
             "level": 60,
-            "type": "SkillLevel"
+            "skillID": "melvorD:Attack"
           },
           {
             "skillID": "melvorD:Strength",
@@ -12282,6 +12454,31 @@
           },
           {
             "skillID": "melvorD:Defence",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Hitpoints",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Prayer",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Magic",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Ranged",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Slayer",
             "level": 60,
             "type": "SkillLevel"
           }
@@ -12313,6 +12510,16 @@
         "occupiesSlots": [],
         "equipRequirements": [
           {
+            "type": "SkillLevel",
+            "level": 60,
+            "skillID": "melvorD:Attack"
+          },
+          {
+            "skillID": "melvorD:Strength",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
             "skillID": "melvorD:Defence",
             "level": 60,
             "type": "SkillLevel"
@@ -12323,7 +12530,22 @@
             "type": "SkillLevel"
           },
           {
+            "skillID": "melvorD:Prayer",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
             "skillID": "melvorD:Magic",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Ranged",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Slayer",
             "level": 60,
             "type": "SkillLevel"
           }
@@ -12357,7 +12579,17 @@
         "occupiesSlots": [],
         "equipRequirements": [
           {
-            "skillID": "melvorD:Slayer",
+            "type": "SkillLevel",
+            "level": 60,
+            "skillID": "melvorD:Attack"
+          },
+          {
+            "skillID": "melvorD:Strength",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Defence",
             "level": 60,
             "type": "SkillLevel"
           },
@@ -12367,7 +12599,22 @@
             "type": "SkillLevel"
           },
           {
+            "skillID": "melvorD:Prayer",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
             "skillID": "melvorD:Magic",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Ranged",
+            "level": 60,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Slayer",
             "level": 60,
             "type": "SkillLevel"
           }
@@ -12404,12 +12651,42 @@
         "occupiesSlots": [],
         "equipRequirements": [
           {
-            "skillID": "melvorD:Astrology",
+            "type": "SkillLevel",
+            "level": 40,
+            "skillID": "melvorD:Attack"
+          },
+          {
+            "skillID": "melvorD:Strength",
             "level": 40,
             "type": "SkillLevel"
           },
           {
-            "skillID": "melvorD:Attack",
+            "skillID": "melvorD:Defence",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Hitpoints",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Prayer",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Magic",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Ranged",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Slayer",
             "level": 40,
             "type": "SkillLevel"
           }
@@ -12440,12 +12717,42 @@
         "occupiesSlots": [],
         "equipRequirements": [
           {
-            "skillID": "melvorD:Farming",
+            "type": "SkillLevel",
+            "level": 40,
+            "skillID": "melvorD:Attack"
+          },
+          {
+            "skillID": "melvorD:Strength",
             "level": 40,
             "type": "SkillLevel"
           },
           {
             "skillID": "melvorD:Defence",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Hitpoints",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Prayer",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Magic",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Ranged",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Slayer",
             "level": 40,
             "type": "SkillLevel"
           }
@@ -12486,12 +12793,42 @@
         "occupiesSlots": [],
         "equipRequirements": [
           {
+            "type": "SkillLevel",
+            "level": 40,
+            "skillID": "melvorD:Attack"
+          },
+          {
+            "skillID": "melvorD:Strength",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Defence",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
             "skillID": "melvorD:Hitpoints",
             "level": 40,
             "type": "SkillLevel"
           },
           {
-            "skillID": "melvorD:Fishing",
+            "skillID": "melvorD:Prayer",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Magic",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Ranged",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Slayer",
             "level": 40,
             "type": "SkillLevel"
           }
@@ -12538,12 +12875,42 @@
         "occupiesSlots": [],
         "equipRequirements": [
           {
-            "skillID": "melvorD:Firemaking",
+            "type": "SkillLevel",
+            "level": 40,
+            "skillID": "melvorD:Attack"
+          },
+          {
+            "skillID": "melvorD:Strength",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Defence",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Hitpoints",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Prayer",
             "level": 40,
             "type": "SkillLevel"
           },
           {
             "skillID": "melvorD:Magic",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Ranged",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Slayer",
             "level": 40,
             "type": "SkillLevel"
           }
@@ -12581,12 +12948,42 @@
         "occupiesSlots": [],
         "equipRequirements": [
           {
+            "type": "SkillLevel",
+            "level": 40,
+            "skillID": "melvorD:Attack"
+          },
+          {
+            "skillID": "melvorD:Strength",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
             "skillID": "melvorD:Defence",
             "level": 40,
             "type": "SkillLevel"
           },
           {
-            "skillID": "melvorD:Smithing",
+            "skillID": "melvorD:Hitpoints",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Prayer",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Magic",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Ranged",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Slayer",
             "level": 40,
             "type": "SkillLevel"
           }
@@ -12622,12 +13019,42 @@
         "occupiesSlots": [],
         "equipRequirements": [
           {
-            "skillID": "melvorD:Agility",
+            "type": "SkillLevel",
+            "level": 40,
+            "skillID": "melvorD:Attack"
+          },
+          {
+            "skillID": "melvorD:Strength",
             "level": 40,
             "type": "SkillLevel"
           },
           {
-            "skillID": "melvorD:Thieving",
+            "skillID": "melvorD:Defence",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Hitpoints",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Prayer",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Magic",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Ranged",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Slayer",
             "level": 40,
             "type": "SkillLevel"
           }
@@ -12658,12 +13085,42 @@
         "occupiesSlots": [],
         "equipRequirements": [
           {
+            "type": "SkillLevel",
+            "level": 40,
+            "skillID": "melvorD:Attack"
+          },
+          {
+            "skillID": "melvorD:Strength",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Defence",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
             "skillID": "melvorD:Hitpoints",
             "level": 40,
             "type": "SkillLevel"
           },
           {
-            "skillID": "melvorD:Strength",
+            "skillID": "melvorD:Prayer",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Magic",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Ranged",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Slayer",
             "level": 40,
             "type": "SkillLevel"
           }
@@ -12694,12 +13151,42 @@
         "occupiesSlots": [],
         "equipRequirements": [
           {
-            "skillID": "melvorD:Attack",
+            "type": "SkillLevel",
+            "level": 40,
+            "skillID": "melvorD:Attack"
+          },
+          {
+            "skillID": "melvorD:Strength",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Defence",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Hitpoints",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Prayer",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Magic",
             "level": 40,
             "type": "SkillLevel"
           },
           {
             "skillID": "melvorD:Ranged",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Slayer",
             "level": 40,
             "type": "SkillLevel"
           }
@@ -12742,12 +13229,42 @@
         "occupiesSlots": [],
         "equipRequirements": [
           {
+            "type": "SkillLevel",
+            "level": 40,
+            "skillID": "melvorD:Attack"
+          },
+          {
+            "skillID": "melvorD:Strength",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
             "skillID": "melvorD:Defence",
             "level": 40,
             "type": "SkillLevel"
           },
           {
+            "skillID": "melvorD:Hitpoints",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Prayer",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
             "skillID": "melvorD:Magic",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Ranged",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Slayer",
             "level": 40,
             "type": "SkillLevel"
           }
@@ -12791,7 +13308,37 @@
         "occupiesSlots": [],
         "equipRequirements": [
           {
-            "skillID": "melvorD:Attack",
+            "type": "SkillLevel",
+            "level": 40,
+            "skillID": "melvorD:Attack"
+          },
+          {
+            "skillID": "melvorD:Strength",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Defence",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Hitpoints",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Prayer",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Magic",
+            "level": 40,
+            "type": "SkillLevel"
+          },
+          {
+            "skillID": "melvorD:Ranged",
             "level": 40,
             "type": "SkillLevel"
           },
@@ -12863,6 +13410,8 @@
         "tier": "none",
         "validSlots": [
           "Gloves",
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
           "Passive"
         ],
         "occupiesSlots": [],
@@ -12892,6 +13441,8 @@
         "tier": "none",
         "validSlots": [
           "Gloves",
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
           "Passive"
         ],
         "occupiesSlots": [],
@@ -12960,6 +13511,8 @@
         "tier": "none",
         "validSlots": [
           "Gloves",
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
           "Passive"
         ],
         "occupiesSlots": [],
@@ -12983,6 +13536,8 @@
         "tier": "none",
         "validSlots": [
           "Gloves",
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
           "Passive"
         ],
         "occupiesSlots": [],
@@ -13027,6 +13582,8 @@
         "tier": "none",
         "validSlots": [
           "Gloves",
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
           "Passive"
         ],
         "occupiesSlots": [],
@@ -13059,6 +13616,8 @@
         "tier": "none",
         "validSlots": [
           "Gloves",
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
           "Passive"
         ],
         "occupiesSlots": [],
@@ -13088,6 +13647,8 @@
         "tier": "none",
         "validSlots": [
           "Gloves",
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
           "Passive"
         ],
         "occupiesSlots": [],
@@ -13111,6 +13672,8 @@
         "tier": "none",
         "validSlots": [
           "Gloves",
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
           "Passive"
         ],
         "occupiesSlots": [],
@@ -13135,6 +13698,8 @@
         "tier": "none",
         "validSlots": [
           "Gloves",
+          "expandedAreas:Accessory1",
+          "expandedAreas:Accessory2",
           "Passive"
         ],
         "occupiesSlots": [],
@@ -13178,7 +13743,7 @@
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/Goldilocks.png",
-        "customDescription": "Requires no Ammo. Instead, consumes Gold Bars when attacking.<br>Passive: +500% of Ranged Damage Dealt Gained as GP, +5% Ranged Crit Chance, and -10% Ranged Accuracy.",
+        "customDescription": "Requires no Ammo. Instead, 50% to consume a Gold Bar when attacking.<br>Passive: +500% of Ranged Damage Dealt Gained as GP, +5% Ranged Crit Chance, and -10% Ranged Accuracy.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -13220,7 +13785,7 @@
           ]
         },
         "consumesItemOn": {
-          "chance": 100,
+          "chance": 50,
           "itemID": "melvorD:Gold_Bar",
           "matchers": [
             {
@@ -13239,7 +13804,7 @@
         "category": "Thieving",
         "type": "Tool",
         "media": "assets/bank/Alchemists_Alembic.png",
-        "customDescription": "Passive: When equipped in the Tool Slot, you have +25% Base Primary Product Quantity in Herblore. 1/10,000 chance per Herblore action for the Alembic to be destroyed.",
+        "customDescription": "Passive: When equipped in the Tool Slot, you have +1 Flat Base Primary Product Quantity in Herblore.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -13252,19 +13817,10 @@
         "equipRequirements": [],
         "equipmentStats": [],
         "modifiers": {
-          "basePrimaryProductQuantity": [
+          "flatBasePrimaryProductQuantity": [
             {
               "skillID": "melvorD:Herblore",
-              "value": 25
-            }
-          ]
-        },
-        "consumesItemOn": {
-          "chance": 0.0001,
-          "itemID": "expandedAreas:Alchemists_Alembic",
-          "matchers": [
-            {
-              "type": "HerbloreAction"
+              "value": 1
             }
           ]
         }
@@ -13275,7 +13831,6 @@
         "category": "Tool",
         "type": "Tool",
         "media": "assets/bank/Lucky_Secateurs.png",
-        "customDescription": "Passive: When equipped in the Tool Slot, you gain 10% Farming Yield from all crops<br>Passive: When equipped in the Weapon Slot and used against Plants, you have +10% Max Hit and a 10% Chance to inflict a 100% Bleed on Hit.",
         "ignoreCompletion": false,
         "golbinRaidExclusive": false,
         "obtainFromItemLog": false,
@@ -13284,105 +13839,19 @@
         "itemType": "Weapon",
         "attackType": "melee",
         "validSlots": [
-          "Weapon",
           "expandedAreas:Tool"
         ],
         "occupiesSlots": [],
-        "combatEffects": [
-          {
-            "appliesWhen": "HitWithAttack",
-            "effectID": "melvorD:Bleed100",
-            "chance": 10,
-            "condition": {
-              "type": "Every",
-              "conditions": [
-                {
-                  "character": "Enemy",
-                  "effectID": "expandedAreas:MonsterTypePlantlike",
-                  "type": "CombatEffect"
-                },
-                {
-                  "character": "Player",
-                  "thisAttackType": "melee",
-                  "targetAttackType": "any",
-                  "type": "CombatType"
-                }
-              ]
-            }
-          }
-        ],
-        "conditionalModifiers": [
-          {
-            "condition": {
-              "type": "Every",
-              "conditions": [
-                {
-                  "character": "Enemy",
-                  "effectID": "expandedAreas:MonsterTypePlantlike",
-                  "type": "CombatEffect"
-                },
-                {
-                  "character": "Player",
-                  "thisAttackType": "melee",
-                  "targetAttackType": "any",
-                  "type": "CombatType"
-                }
-              ]
-            },
-            "modifiers": {
-              "maxHit": 10
-            }
-          }
-        ],
         "modifiers": {
-          "basePrimaryProductQuantity": [
+          "flatAdditionalPrimaryProductQuantity": [
             {
               "skillID": "melvorD:Farming",
-              "value": 10
+              "value": 20
             }
           ]
         },
-        "equipmentStats": [
-          {
-            "key": "attackSpeed",
-            "value": 3000
-          },
-          {
-            "key": "meleeStrengthBonus",
-            "value": 1
-          },
-          {
-            "key": "stabAttackBonus",
-            "value": 7
-          },
-          {
-            "key": "slashAttackBonus",
-            "value": 9
-          },
-          {
-            "key": "blockAttackBonus",
-            "value": -5
-          },
-          {
-            "key": "magicAttackBonus",
-            "value": 1
-          },
-          {
-            "key": "meleeDefenceBonus",
-            "value": 1
-          },
-          {
-            "key": "magicDefenceBonus",
-            "value": 1
-          }
-        ],
-        "equipRequirements": [
-          {
-            "skillID": "melvorD:Farming",
-            "level": 65,
-            "type": "SkillLevel"
-          }
-        ]
+        "equipmentStats": [],
+        "equipRequirements": []
       },
       {
         "itemType": "Equipment",
@@ -13430,7 +13899,7 @@
         "equipRequirements": [],
         "equipmentStats": [],
         "modifiers": {
-          "hitpointRegeneration": 50
+          "hitpointRegeneration": 25
         }
       },
       {
@@ -13452,7 +13921,7 @@
         "equipRequirements": [],
         "equipmentStats": [],
         "modifiers": {
-          "flatRegenerationInterval": -1500
+          "flatRegenerationInterval": -500
         }
       },
       {
@@ -13501,7 +13970,7 @@
         "equipRequirements": [],
         "equipmentStats": [],
         "modifiers": {
-          "hitpointRegeneration": 100
+          "hitpointRegeneration": 50
         }
       },
       {
@@ -13523,7 +13992,7 @@
         "equipRequirements": [],
         "equipmentStats": [],
         "modifiers": {
-          "flatRegenerationInterval": -3000
+          "flatRegenerationInterval": -1500
         }
       },
       {
@@ -13556,8 +14025,8 @@
         ],
         "modifiers": {
           "rebirthChance": 5,
-          "hitpointRegeneration": 100,
-          "flatRegenerationInterval": -3000,
+          "hitpointRegeneration": 75,
+          "flatRegenerationInterval": -2000,
           "effectIgnoreChance": [
             {
               "effectGroupID": "melvorD:PoisonDOT",
@@ -13928,7 +14397,7 @@
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 1200,
-        "customDescription": "Reduces the Air and Water Rune cost of Magic Spells by 2 when equipped as a Weapon.",
+        "customDescription": "Reduces the Air and Water Rune cost of Magic Spells by 5 when equipped as a Weapon.",
         "tier": "staff",
         "validSlots": [
           "Weapon"
@@ -13968,11 +14437,11 @@
         "providedRunes": [
           {
             "id": "melvorD:Air_Rune",
-            "quantity": 2
+            "quantity": 5
           },
           {
             "id": "melvorD:Water_Rune",
-            "quantity": 2
+            "quantity": 5
           }
         ],
         "itemType": "Weapon",
@@ -13988,7 +14457,7 @@
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 1300,
-        "customDescription": "Reduces the Air and Earth Rune cost of Magic Spells by 2 when equipped as a Weapon.",
+        "customDescription": "Reduces the Air and Earth Rune cost of Magic Spells by 5 when equipped as a Weapon.",
         "tier": "staff",
         "validSlots": [
           "Weapon"
@@ -14028,11 +14497,11 @@
         "providedRunes": [
           {
             "id": "melvorD:Air_Rune",
-            "quantity": 2
+            "quantity": 5
           },
           {
             "id": "melvorD:Earth_Rune",
-            "quantity": 2
+            "quantity": 5
           }
         ],
         "itemType": "Weapon",
@@ -14048,7 +14517,7 @@
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 1400,
-        "customDescription": "Reduces the Water and Earth Rune cost of Magic Spells by 2 when equipped as a Weapon.",
+        "customDescription": "Reduces the Water and Earth Rune cost of Magic Spells by 5 when equipped as a Weapon.",
         "tier": "staff",
         "validSlots": [
           "Weapon"
@@ -14088,11 +14557,11 @@
         "providedRunes": [
           {
             "id": "melvorD:Earth_Rune",
-            "quantity": 2
+            "quantity": 5
           },
           {
             "id": "melvorD:Water_Rune",
-            "quantity": 2
+            "quantity": 5
           }
         ],
         "itemType": "Weapon",
@@ -14108,7 +14577,7 @@
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 1500,
-        "customDescription": "Reduces the Air and Fire Rune cost of Magic Spells by 2 when equipped as a Weapon.",
+        "customDescription": "Reduces the Air and Fire Rune cost of Magic Spells by 5 when equipped as a Weapon.",
         "tier": "staff",
         "validSlots": [
           "Weapon"
@@ -14148,11 +14617,11 @@
         "providedRunes": [
           {
             "id": "melvorD:Air_Rune",
-            "quantity": 2
+            "quantity": 5
           },
           {
             "id": "melvorD:Fire_Rune",
-            "quantity": 2
+            "quantity": 5
           }
         ],
         "itemType": "Weapon",
@@ -14168,7 +14637,7 @@
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 1600,
-        "customDescription": "Reduces the Water and Fire Rune cost of Magic Spells by 2 when equipped as a Weapon.",
+        "customDescription": "Reduces the Water and Fire Rune cost of Magic Spells by 5 when equipped as a Weapon.",
         "tier": "staff",
         "validSlots": [
           "Weapon"
@@ -14208,11 +14677,11 @@
         "providedRunes": [
           {
             "id": "melvorD:Fire_Rune",
-            "quantity": 2
+            "quantity": 5
           },
           {
             "id": "melvorD:Water_Rune",
-            "quantity": 2
+            "quantity": 5
           }
         ],
         "itemType": "Weapon",
@@ -14228,7 +14697,7 @@
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 1700,
-        "customDescription": "Reduces the Earth and Fire Rune cost of Magic Spells by 2 when equipped as a Weapon.",
+        "customDescription": "Reduces the Earth and Fire Rune cost of Magic Spells by 5 when equipped as a Weapon.",
         "tier": "staff",
         "validSlots": [
           "Weapon"
@@ -14268,11 +14737,11 @@
         "providedRunes": [
           {
             "id": "melvorD:Fire_Rune",
-            "quantity": 2
+            "quantity": 5
           },
           {
             "id": "melvorD:Earth_Rune",
-            "quantity": 2
+            "quantity": 5
           }
         ],
         "itemType": "Weapon",
@@ -14288,7 +14757,7 @@
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 13000,
-        "customDescription": "Reduces the Air and Water Rune cost of Magic Spells by 3 when equipped as a Weapon.",
+        "customDescription": "Reduces the Air and Water Rune cost of Magic Spells by 7 when equipped as a Weapon.",
         "tier": "staff",
         "validSlots": [
           "Weapon"
@@ -14328,11 +14797,11 @@
         "providedRunes": [
           {
             "id": "melvorD:Air_Rune",
-            "quantity": 3
+            "quantity": 7
           },
           {
             "id": "melvorD:Water_Rune",
-            "quantity": 3
+            "quantity": 7
           }
         ],
         "itemType": "Weapon",
@@ -14348,7 +14817,7 @@
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 14000,
-        "customDescription": "Reduces the Air and Earth Rune cost of Magic Spells by 3 when equipped as a Weapon.",
+        "customDescription": "Reduces the Air and Earth Rune cost of Magic Spells by 7 when equipped as a Weapon.",
         "tier": "staff",
         "validSlots": [
           "Weapon"
@@ -14388,11 +14857,11 @@
         "providedRunes": [
           {
             "id": "melvorD:Air_Rune",
-            "quantity": 3
+            "quantity": 7
           },
           {
             "id": "melvorD:Earth_Rune",
-            "quantity": 3
+            "quantity": 7
           }
         ],
         "itemType": "Weapon",
@@ -14408,7 +14877,7 @@
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 15000,
-        "customDescription": "Reduces the Water and Earth Rune cost of Magic Spells by 3 when equipped as a Weapon.",
+        "customDescription": "Reduces the Water and Earth Rune cost of Magic Spells by 7 when equipped as a Weapon.",
         "tier": "staff",
         "validSlots": [
           "Weapon"
@@ -14448,11 +14917,11 @@
         "providedRunes": [
           {
             "id": "melvorD:Water_Rune",
-            "quantity": 3
+            "quantity": 7
           },
           {
             "id": "melvorD:Earth_Rune",
-            "quantity": 3
+            "quantity": 7
           }
         ],
         "itemType": "Weapon",
@@ -14468,7 +14937,7 @@
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 16000,
-        "customDescription": "Reduces the Fire and Air Rune cost of Magic Spells by 3 when equipped as a Weapon.",
+        "customDescription": "Reduces the Fire and Air Rune cost of Magic Spells by 7 when equipped as a Weapon.",
         "tier": "staff",
         "validSlots": [
           "Weapon"
@@ -14508,11 +14977,11 @@
         "providedRunes": [
           {
             "id": "melvorD:Fire_Rune",
-            "quantity": 3
+            "quantity": 7
           },
           {
             "id": "melvorD:Air_Rune",
-            "quantity": 3
+            "quantity": 7
           }
         ],
         "itemType": "Weapon",
@@ -14528,7 +14997,7 @@
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 17000,
-        "customDescription": "Reduces the Fire and Water Rune cost of Magic Spells by 3 when equipped as a Weapon.",
+        "customDescription": "Reduces the Fire and Water Rune cost of Magic Spells by 7 when equipped as a Weapon.",
         "tier": "staff",
         "validSlots": [
           "Weapon"
@@ -14568,11 +15037,11 @@
         "providedRunes": [
           {
             "id": "melvorD:Fire_Rune",
-            "quantity": 3
+            "quantity": 7
           },
           {
             "id": "melvorD:Water_Rune",
-            "quantity": 3
+            "quantity": 7
           }
         ],
         "itemType": "Weapon",
@@ -14588,7 +15057,7 @@
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 18000,
-        "customDescription": "Reduces the Fire and Earth Rune cost of Magic Spells by 3 when equipped as a Weapon.",
+        "customDescription": "Reduces the Fire and Earth Rune cost of Magic Spells by 7 when equipped as a Weapon.",
         "tier": "staff",
         "validSlots": [
           "Weapon"
@@ -14628,11 +15097,11 @@
         "providedRunes": [
           {
             "id": "melvorD:Fire_Rune",
-            "quantity": 3
+            "quantity": 7
           },
           {
             "id": "melvorD:Earth_Rune",
-            "quantity": 3
+            "quantity": 7
           }
         ],
         "itemType": "Weapon",
@@ -14653,7 +15122,7 @@
       {
         "itemType": "Item",
         "id": "Magmatic_Scales",
-        "name": "Magmatic Scales",
+        "name": "Magma Scales",
         "category": "Scales",
         "type": "Misc",
         "media": "assets/bank/Magmatic_Scales.png",
@@ -14885,15 +15354,15 @@
       {
         "itemType": "Equipment",
         "id": "Magmatic_Helm",
-        "name": "Magmatic Helm",
+        "name": "Magma Helm",
         "category": "Combat",
         "type": "Armour",
         "media": "assets/bank/Magmatic_Helm.png",
-        "customDescription": "+10% Chance to ignore Burn and +5% Chance to ignore Poison and Deadly Poison. +1% Chance each to inflict Burn or Deadly Poison on hit.<br>While there are at least 2,000 <strong>Magmatic Scales</strong> in your bank, +10% Chance to ignore Burn and +5% Chance to ignore Poison and Deadly Poison. Consumes 1 Magmatic Scale on hit.<br><hr>While equipped with <strong>Magmatic Fangblade</strong>, the enemy takes +5% damage from Burn and Deadly Poison.",
+        "customDescription": "Apply Burn, Poison, or Deadly Poison to the Enemy on its first hit against you. +5% chance to ignore Burn, Poison, and Deadly Poison.<br>This bonus is increased to 15% if there are at least 100 Magma Scales in your bank. A scale will be destroyed per Enemy attack.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 250000,
+        "sellsFor": 500000,
         "tier": "ancient",
         "validSlots": [
           "Helmet"
@@ -14903,11 +15372,6 @@
           {
             "type": "SkillLevel",
             "skillID": "melvorD:Defence",
-            "level": 75
-          },
-          {
-            "type": "SkillLevel",
-            "skillID": "melvorD:Hitpoints",
             "level": 75
           }
         ],
@@ -14946,19 +15410,22 @@
           "chance": 100,
           "matchers": [
             {
-              "type": "PlayerAttack",
-              "attackTypes": [
-                "melee"
-              ]
+              "type": "EnemyAttack"
             }
           ]
         },
+        "combatEffects": [
+          {
+            "appliesWhen": "HitByFirstAttack",
+            "tableID": "expandedAreas:MagmaHelm"
+          }
+        ],
         "conditionalModifiers": [
           {
             "condition": {
               "type": "BankItem",
               "itemID": "expandedAreas:Magmatic_Scales",
-              "value": 2000,
+              "value": 100,
               "operator": ">="
             },
             "modifiers": {
@@ -14969,11 +15436,11 @@
                 },
                 {
                   "effectGroupID": "melvorD:PoisonDOT",
-                  "value": 5
+                  "value": 10
                 },
                 {
                   "effectGroupID": "melvorD:DeadlyPoisonDOT",
-                  "value": 5
+                  "value": 10
                 }
               ]
             }
@@ -14983,7 +15450,7 @@
           "effectIgnoreChance": [
             {
               "effectGroupID": "melvorD:BurnDOT",
-              "value": 10
+              "value": 5
             },
             {
               "effectGroupID": "melvorD:PoisonDOT",
@@ -14994,31 +15461,7 @@
               "value": 5
             }
           ]
-        },
-        "combatEffects": [
-          {
-            "chance": 1,
-            "effectID": "melvorD:Burn",
-            "appliesWhen": "HitWithAttack",
-            "condition": {
-              "character": "Player",
-              "thisAttackType": "melee",
-              "targetAttackType": "any",
-              "type": "CombatType"
-            }
-          },
-          {
-            "chance": 1,
-            "effectID": "melvorD:DeadlyPoison",
-            "appliesWhen": "HitWithAttack",
-            "condition": {
-              "character": "Player",
-              "thisAttackType": "melee",
-              "targetAttackType": "any",
-              "type": "CombatType"
-            }
-          }
-        ]
+        }
       },
       {
         "itemType": "Equipment",
@@ -15027,11 +15470,11 @@
         "category": "Combat",
         "type": "Armour",
         "media": "assets/bank/Tanzanite_Helm.png",
-        "customDescription": "+10% Chance to ignore Frostburn and +5% Chance to ignore Poison and Deadly Poison. +1% Chance each to inflict Frostburn or Deadly Poison on hit.<br>While there are at least 2,000 <strong>Tanzanite Scales</strong> in your bank, +10% Chance to ignore Frostburn and +5% Chance to ignore Poison and Deadly Poison. Consumes 1 Tanzanite Scale on hit.<br><hr>While equipped with <strong>Wand of the Swamp</strong>, the enemy takes +5% damage from Frostburn and Deadly Poison.",
+        "customDescription": "Apply Frostburn, Poison, or Deadly Poison to the Enemy on your first hit against them. The Enemy takes +5% damage while affected by Frostburn, Poison, or Deadly Poison.<br>This bonus is increased to 10% if there are at least 100 Tanzanite Scales in your bank. A scale will be destroyed per attack.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 250000,
+        "sellsFor": 500000,
         "tier": "ancient",
         "validSlots": [
           "Helmet"
@@ -15096,10 +15539,7 @@
           "chance": 100,
           "matchers": [
             {
-              "type": "PlayerAttack",
-              "attackTypes": [
-                "magic"
-              ]
+              "type": "PlayerAttack"
             }
           ]
         },
@@ -15108,14 +15548,14 @@
             "condition": {
               "type": "BankItem",
               "itemID": "expandedAreas:Tanzanite_Scales",
-              "value": 2000,
+              "value": 100,
               "operator": ">="
             },
-            "modifiers": {
-              "effectIgnoreChance": [
+            "enemyModifiers": {
+              "damageTaken": [
                 {
                   "effectGroupID": "melvorD:Frostburn",
-                  "value": 10
+                  "value": 5
                 },
                 {
                   "effectGroupID": "melvorD:PoisonDOT",
@@ -15129,11 +15569,11 @@
             }
           }
         ],
-        "modifiers": {
-          "effectIgnoreChance": [
+        "enemyModifiers": {
+          "damageTaken": [
             {
               "effectGroupID": "melvorD:Frostburn",
-              "value": 10
+              "value": 5
             },
             {
               "effectGroupID": "melvorD:PoisonDOT",
@@ -15147,26 +15587,8 @@
         },
         "combatEffects": [
           {
-            "chance": 1,
-            "effectID": "melvorD:Frostburn",
-            "appliesWhen": "HitWithAttack",
-            "condition": {
-              "character": "Player",
-              "thisAttackType": "magic",
-              "targetAttackType": "any",
-              "type": "CombatType"
-            }
-          },
-          {
-            "chance": 1,
-            "effectID": "melvorD:DeadlyPoison",
-            "appliesWhen": "HitWithAttack",
-            "condition": {
-              "character": "Player",
-              "thisAttackType": "magic",
-              "targetAttackType": "any",
-              "type": "CombatType"
-            }
+            "tableID": "expandedAreas:TanzaniteHelm",
+            "appliesWhen": "HitWithFirstAttack"
           }
         ]
       },
@@ -15177,11 +15599,11 @@
         "category": "Combat",
         "type": "Armour",
         "media": "assets/bank/Serpentine_Helm.png",
-        "customDescription": "+15% Chance to ignore Poison and Deadly Poison. +2% Chance each to inflict Deadly Poison on hit.<br>While there are at least 2,000 <strong>Serpentine Scales</strong> in your bank, +15% Chance to ignore Poison and Deadly Poison. Consumes 1 Serpentine Scale on hit.<br><hr>While equipped with <strong>Toxic Quickbow</strong>, the enemy takes +10% damage from Deadly Poison.",
+        "customDescription": "Ignores Enemy immunity to Poison and Deadly Poison. 5% chance to apply Poison on hit and Deadly Poison on critical hit. Enemy takes +5% damage from Poison and Deadly Poison.<br>This bonus is increased to 10% if there are at least 100 Serpentine Scales in your bank. A scale will be destroyed per attack.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 250000,
+        "sellsFor": 500000,
         "tier": "ancient",
         "validSlots": [
           "Helmet"
@@ -15246,10 +15668,7 @@
           "chance": 100,
           "matchers": [
             {
-              "type": "PlayerAttack",
-              "attackTypes": [
-                "ranged"
-              ]
+              "type": "PlayerAttack"
             }
           ]
         },
@@ -15258,46 +15677,49 @@
             "condition": {
               "type": "BankItem",
               "itemID": "expandedAreas:Serpentine_Scales",
-              "value": 2000,
+              "value": 100,
               "operator": ">="
             },
-            "modifiers": {
+            "enemyModifiers": {
+              "poisonDOTDamageTaken": 5,
+              "deadlyPoisonDOTDamageTaken": 5,
               "effectIgnoreChance": [
                 {
                   "effectGroupID": "melvorD:PoisonDOT",
-                  "value": 15
+                  "value": -100
                 },
                 {
                   "effectGroupID": "melvorD:DeadlyPoisonDOT",
-                  "value": 15
+                  "value": -100
+                }
+              ],
+              "effectImmunity": [
+                {
+                  "effectGroupID": "melvorD:PoisonDOT",
+                  "value": 0
+                },
+                {
+                  "effectGroupID": "melvorD:DeadlyPoisonDOT",
+                  "value": 0
                 }
               ]
             }
           }
         ],
-        "modifiers": {
-          "effectIgnoreChance": [
-            {
-              "effectGroupID": "melvorD:PoisonDOT",
-              "value": 15
-            },
-            {
-              "effectGroupID": "melvorD:DeadlyPoisonDOT",
-              "value": 15
-            }
-          ]
+        "enemyModifiers": {
+          "poisonDOTDamageTaken": 5,
+          "deadlyPoisonDOTDamageTaken": 5
         },
         "combatEffects": [
           {
-            "chance": 2,
-            "effectID": "melvorD:DeadlyPoison",
-            "appliesWhen": "HitWithAttack",
-            "condition": {
-              "character": "Player",
-              "thisAttackType": "ranged",
-              "targetAttackType": "any",
-              "type": "CombatType"
-            }
+            "chance": 5,
+            "effectID": "melvorD:Poison",
+            "appliesWhen": "HitWithAttack"
+          },
+          {
+            "chance": 5,
+            "effectID": "melvorD:DeadyPoison",
+            "appliesWhen": "CritWithAttack"
           }
         ]
       },
@@ -15307,11 +15729,11 @@
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/Toxic_Quickbow.png",
-        "customDescription": "+2% Chance to inflict Deadly Poison on hit.<br>While there are at least 1,000 <strong>Serpentine Scales</strong> in your bank, this weapon's Ranged Attack and Strength bonuses are doubled. Consumes 1 Serpentine Scale on hit.<br><hr>While equipped with <strong>Serpentine Helm</strong>, the enemy takes +10% damage from Poison and Deadly Poison.<hr>",
+        "customDescription": "-0.2s Attack Interval against Poisoned targets.<br>This bonus is increased to -0.4s if there are at least 100 Serpentine Scales in your bank. A scale will be destroyed per attack.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 120000,
+        "sellsFor": 250000,
         "tier": "none",
         "validSlots": [
           "Weapon"
@@ -15329,7 +15751,7 @@
         "equipmentStats": [
           {
             "key": "attackSpeed",
-            "value": 2000
+            "value": 1800
           },
           {
             "key": "rangedAttackBonus",
@@ -15337,7 +15759,7 @@
           },
           {
             "key": "rangedStrengthBonus",
-            "value": 20
+            "value": 10
           }
         ],
         "specialAttacks": [
@@ -15348,10 +15770,7 @@
           "chance": 100,
           "matchers": [
             {
-              "type": "PlayerAttack",
-              "attackTypes": [
-                "ranged"
-              ]
+              "type": "PlayerAttack"
             }
           ]
         },
@@ -15360,20 +15779,41 @@
             "condition": {
               "type": "BankItem",
               "itemID": "expandedAreas:Serpentine_Scales",
-              "value": 1000,
+              "value": 100,
               "operator": ">="
             },
             "modifiers": {
-              "rangedStrengthBonus": 20,
+              "flatRangedStrengthBonus": 10,
               "flatRangedAttackBonus": 15
             }
-          }
-        ],
-        "combatEffects": [
+          },
           {
-            "appliesWhen": "HitWithAttack",
-            "chance": 2,
-            "effectID": "melvorD:DeadlyPoison"
+            "condition": {
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "BankItem",
+                  "itemID": "expandedAreas:Serpentine_Scales",
+                  "value": 100,
+                  "operator": ">="
+                },
+                {
+                  "type": "Some",
+                  "conditions": [
+                    {
+                      "type": "CombatEffectGroup",
+                      "character": "Enemy",
+                      "groupID": "melvorD:PoisonDOT"
+                    },
+                    {
+                      "type": "CombatEffectGroup",
+                      "character": "Enemy",
+                      "groupID": "melvorD:DeadlyPoisonDOT"
+                    }
+                  ]
+                }
+              ]
+            }
           }
         ],
         "itemType": "Weapon",
@@ -15386,11 +15826,11 @@
         "category": "Combat",
         "type": "Magic Wand",
         "media": "assets/bank/Wand_of_the_Swamp.png",
-        "customDescription": "+1% Chance each to inflict Frostburn or Deadly Poison on hit.<br>While there are at least 1,000 <strong>Tanzanite Scales</strong> in your bank, this weapon's Magic Attack and Damage bonuses are doubled. Consumes 1 Tanzanite Scale on hit.<br><hr>While equipped with <strong>Tanzanite Helm</strong>, the enemy takes +5% damage from Frostburn and Deadly Poison.<hr>",
+        "customDescription": "Consumes 1 Tanzanite Scale, 1 Death Rune, and 5 Fire Runes per attack. Must have at least 100 of each in the bank to attack. While the Enemy is affected by Frostburn, Poison, or Deadly Poison, it has +5% Attack Interval per effect affected by.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 200000,
+        "sellsFor": 250000,
         "tier": "dragon",
         "validSlots": [
           "Weapon"
@@ -15406,11 +15846,11 @@
         "equipmentStats": [
           {
             "key": "attackSpeed",
-            "value": 2400
+            "value": 3000
           },
           {
             "key": "magicAttackBonus",
-            "value": 15
+            "value": 30
           },
           {
             "key": "magicDefenceBonus",
@@ -15418,37 +15858,85 @@
           },
           {
             "key": "magicDamageBonus",
-            "value": 10
+            "value": 20
           }
         ],
-        "modifiers": {},
         "specialAttacks": [
           "expandedAreas:SwampSludge"
         ],
+        "consumesItemOn": {
+          "itemID": "expandedAreas:Tanzanite_Scale",
+          "chance": 100,
+          "matchers": [
+            {
+              "type": "PlayerAttack"
+            }
+          ]
+        },
         "conditionalModifiers": [
           {
             "condition": {
-              "type": "BankItem",
-              "itemID": "expandedAreas:Tanzanite_Scales",
-              "value": 1000,
-              "operator": ">="
+              "type": "Every",
+              "conditions": [
+                {
+                  "type": "BankItem",
+                  "itemID": "expandedAreas:Tanzanite_Scales",
+                  "value": 100,
+                  "operator": "<="
+                },
+                {
+                  "type": "BankItem",
+                  "itemID": "melvorD:Chaos_Rune",
+                  "value": 100,
+                  "operator": "<="
+                },
+                {
+                  "type": "BankItem",
+                  "itemID": "melvorD:Death_Rune",
+                  "value": 100,
+                  "operator": "<="
+                },
+                {
+                  "type": "BankItem",
+                  "itemID": "melvorD:Fire_Rune",
+                  "value": 100,
+                  "operator": "<="
+                }
+              ]
             },
             "modifiers": {
-              "flatMagicAttackBonus": 15,
-              "magicDamageBonus": 10
+              "cantAttack": 1
             }
-          }
-        ],
-        "combatEffects": [
-          {
-            "appliesWhen": "HitWithAttack",
-            "chance": 1,
-            "effectID": "melvorD:DeadlyPoison"
           },
           {
-            "appliesWhen": "HitWithAttack",
-            "chance": 1,
-            "effectID": "melvorD:Frostburn"
+            "condition": {
+              "groupID": "melvorD:Frostburn",
+              "character": "Enemy",
+              "type": "CombatEffectGroup"
+            },
+            "enemyModifiers": {
+              "attackInterval": 5
+            }
+          },
+          {
+            "condition": {
+              "groupID": "melvorD:PoisonDOT",
+              "character": "Enemy",
+              "type": "CombatEffectGroup"
+            },
+            "enemyModifiers": {
+              "attackInterval": 5
+            }
+          },
+          {
+            "condition": {
+              "groupID": "melvorD:DeadlyPoisonDOT",
+              "character": "Enemy",
+              "type": "CombatEffectGroup"
+            },
+            "enemyModifiers": {
+              "attackInterval": 5
+            }
           }
         ],
         "itemType": "Weapon",
@@ -15456,15 +15944,15 @@
       },
       {
         "id": "Magmatic_Fangblade",
-        "name": "Magmatic Fangblade",
+        "name": "Magma Fangblade",
         "category": "Combat",
         "type": "Weapon",
         "media": "assets/bank/Magmatic_Fangblade.png",
-        "customDescription": "+1% Chance each to inflict Burn or Deadly Poison on hit.<br>While there are at least 1,000 <strong>Magmatic Scales</strong> in your bank, this weapon's Melee Attack and Strength bonuses are doubled. Consumes 1 Magmatic Scale on hit.<br><hr>While equipped with <strong>Magmatic Helm</strong>, the enemy takes +5% damage from Burn and Deadly Poison.<hr>",
+        "customDescription": "Double the stats of this weapon if you have at least 100 Magma Scales in the bank. While the Enemy is affected by both Burn and Poison or both Burn and Deadly Poison, your attacks cannot miss and you have 50% crit chance.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 160000,
+        "sellsFor": 220000,
         "tier": "none",
         "validSlots": [
           "Weapon"
@@ -15499,30 +15987,12 @@
             "value": 30
           }
         ],
-        "specialAttacks": [
-          "expandedAreas:Bloodboil"
-        ],
-        "combatEffects": [
-          {
-            "appliesWhen": "HitWithAttack",
-            "chance": 1,
-            "effectID": "melvorD:DeadlyPoison"
-          },
-          {
-            "appliesWhen": "HitWithAttack",
-            "chance": 1,
-            "effectID": "melvorD:Burn"
-          }
-        ],
         "consumesItemOn": {
           "itemID": "expandedAreas:Magmatic_Scales",
           "chance": 100,
           "matchers": [
             {
-              "type": "PlayerAttack",
-              "attackTypes": [
-                "melee"
-              ]
+              "type": "PlayerAttack"
             }
           ]
         },
@@ -15531,7 +16001,7 @@
             "condition": {
               "type": "BankItem",
               "itemID": "expandedAreas:Magmatic_Scales",
-              "value": 1000,
+              "value": 100,
               "operator": ">="
             },
             "modifiers": {
@@ -15539,6 +16009,68 @@
               "flatSlashAttackBonus": 15,
               "flatBlockAttackBonus": 30,
               "flatMeleeStrengthBonus": 30
+            }
+          },
+          {
+            "condition": {
+              "type": "Some",
+              "conditions": [
+                {
+                  "type": "Every",
+                  "conditions": [
+                    {
+                      "character": "Enemy",
+                      "groupID": "melvorD:PoisonDOT",
+                      "type": "CombatEffectGroup"
+                    },
+                    {
+                      "character": "Enemy",
+                      "groupID": "melvorD:BurnDOT",
+                      "type": "CombatEffectGroup"
+                    }
+                  ]
+                },
+                {
+                  "type": "Every",
+                  "conditions": [
+                    {
+                      "character": "Enemy",
+                      "groupID": "melvorD:DeadlyPoisonDOT",
+                      "type": "CombatEffectGroup"
+                    },
+                    {
+                      "character": "Enemy",
+                      "groupID": "melvorD:BurnDOT",
+                      "type": "CombatEffectGroup"
+                    }
+                  ]
+                }
+              ]
+            },
+            "modifiers": {
+              "cantMiss": 1,
+              "critChance": 50
+            }
+          }
+        ],
+        "combatEffects": [
+          {
+            "appliesWhen": "HitWithAttack",
+            "effectID": "melvorD:Burn",
+            "condition": {
+              "type": "Some",
+              "conditions": [
+                {
+                  "character": "Enemy",
+                  "groupID": "melvorD:PoisonDOT",
+                  "type": "CombatEffectGroup"
+                },
+                {
+                  "character": "Enemy",
+                  "groupID": "melvorD:DeadlyPoisonDOT",
+                  "type": "CombatEffectGroup"
+                }
+              ]
             }
           }
         ],
@@ -30262,7 +30794,7 @@
         "name": "Fire Elementalist Boots",
         "category": "Combat",
         "type": "Magic Armour",
-        "media": "assets/media/bank/Fire_Elementalist_Boots.png",
+        "media": "assets/bank/Fire_Elementalist_Boots.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -30338,7 +30870,7 @@
         "name": "Fire Elementalist Bottoms",
         "category": "Combat",
         "type": "Magic Armour",
-        "media": "assets/media/bank/Fire_Elementalist_Bottoms.png",
+        "media": "assets/bank/Fire_Elementalist_Bottoms.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -30414,7 +30946,7 @@
         "name": "Fire Elementalist Robes",
         "category": "Combat",
         "type": "Magic Armour",
-        "media": "assets/media/bank/Fire_Elementalist_Robes.png",
+        "media": "assets/bank/Fire_Elementalist_Robes.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -30490,7 +31022,7 @@
         "name": "Fire Elementalist Hat",
         "category": "Combat",
         "type": "Magic Armour",
-        "media": "assets/media/bank/Fire_Elementalist_Hat.png",
+        "media": "assets/bank/Fire_Elementalist_Hat.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -30566,7 +31098,7 @@
         "name": "Fire Elementalist Gloves",
         "category": "Combat",
         "type": "Magic Armour",
-        "media": "assets/media/bank/Fire_Elementalist_Gloves.png",
+        "media": "assets/bank/Fire_Elementalist_Gloves.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -50775,10 +51307,10 @@
                 "value": 1
               }
             ],
-            "skillCostReduction": [
+            "skillXP": [
               {
                 "skillID": "melvorD:Crafting",
-                "value": -5
+                "value": 1
               }
             ]
           }
@@ -50800,7 +51332,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Iron Needle",
-        "customDescription": "+1% Crafting Mastery XP and -5% Crafting Production Costs. Total so far: +1%, -5%."
+        "customDescription": "+1% Crafting XP and Crafting Mastery XP. Total so far: +2%."
       },
       {
         "id": "Needle_Steel",
@@ -50815,10 +51347,10 @@
                 "value": 1
               }
             ],
-            "skillCostReduction": [
+            "skillXP": [
               {
                 "skillID": "melvorD:Crafting",
-                "value": -5
+                "value": 1
               }
             ]
           }
@@ -50852,7 +51384,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Steel Needle",
-        "customDescription": "+1% Crafting Mastery XP and -5% Crafting Production Costs. Total so far: +2%, -10%."
+        "customDescription": "+1% Crafting XP and Crafting Mastery XP. Total so far: +2%."
       },
       {
         "id": "Needle_Black",
@@ -50867,10 +51399,10 @@
                 "value": 1
               }
             ],
-            "skillCostReduction": [
+            "skillXP": [
               {
                 "skillID": "melvorD:Crafting",
-                "value": -5
+                "value": 1
               }
             ]
           }
@@ -50904,7 +51436,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Black Needle",
-        "customDescription": "+1% Crafting Mastery XP and -5% Crafting Production Costs. Total so far: +3%, -15%."
+        "customDescription": "+1% Crafting XP and Crafting Mastery XP. Total so far: +3%."
       },
       {
         "id": "Needle_Mithril",
@@ -50919,10 +51451,10 @@
                 "value": 1
               }
             ],
-            "skillCostReduction": [
+            "skillXP": [
               {
                 "skillID": "melvorD:Crafting",
-                "value": -5
+                "value": 1
               }
             ]
           }
@@ -50956,7 +51488,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Mithril Needle",
-        "customDescription": "+1% Crafting Mastery XP and -5% Crafting Production Costs. Total so far: +4%, -20%."
+        "customDescription": "+1% Crafting XP and Crafting Mastery XP. Total so far: +4%."
       },
       {
         "id": "Needle_Adamant",
@@ -50971,10 +51503,10 @@
                 "value": 1
               }
             ],
-            "skillCostReduction": [
+            "skillXP": [
               {
                 "skillID": "melvorD:Crafting",
-                "value": -5
+                "value": 1
               }
             ]
           }
@@ -51008,7 +51540,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Adamant Needle",
-        "customDescription": "+1% Crafting Mastery XP and -5% Crafting Production Costs. Total so far: +5% -25%."
+        "customDescription": "+1% Crafting XP and Crafting Mastery XP. Total so far: +5%."
       },
       {
         "id": "Needle_Rune",
@@ -51023,10 +51555,10 @@
                 "value": 1
               }
             ],
-            "skillCostReduction": [
+            "skillXP": [
               {
                 "skillID": "melvorD:Crafting",
-                "value": -5
+                "value": 1
               }
             ]
           }
@@ -51060,7 +51592,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Rune Needle",
-        "customDescription": "+1% Crafting Mastery XP and -5% Crafting Production Costs. Total so far: +6% -30%."
+        "customDescription": "+1% Crafting XP and Crafting Mastery XP. Total so far: +6%."
       },
       {
         "id": "Needle_Dragon",
@@ -51075,10 +51607,10 @@
                 "value": 1
               }
             ],
-            "skillCostReduction": [
+            "skillXP": [
               {
                 "skillID": "melvorD:Crafting",
-                "value": -5
+                "value": 1
               }
             ]
           }
@@ -51112,7 +51644,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Dragon Needle",
-        "customDescription": "+1% Crafting Mastery XP and -5% Crafting Production Costs. Total so far: +7% -35%."
+        "customDescription": "+1% Crafting XP and Crafting Mastery XP. Total so far: +7%."
       },
       {
         "id": "Thieving_Tools_Iron",
@@ -51121,12 +51653,13 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "skillInterval": [
+            "minThievingCurrencyGain": [
               {
-                "skillID": "melvorD:Thieving",
-                "value": -5
+                "currencyID": "melvorD:GP",
+                "value": 5
               }
-            ]
+            ],
+            "ignoreThievingDamageChance": 5
           }
         },
         "cost": {
@@ -51135,7 +51668,7 @@
             {
               "currency": "melvorD:GP",
               "type": "Fixed",
-              "cost": 2500000
+              "cost": 50000
             }
           ]
         },
@@ -51146,7 +51679,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Iron Thieving Tools",
-        "customDescription": "-5% Thieving Interval for a total of -5% applied from your Thieving Tools."
+        "customDescription": "+5% Minimum GP from Thieving and +5% chance for NPCs in Thieving to deal no damage. Total so far: +5%, +5%."
       },
       {
         "id": "Thieving_Tools_Steel",
@@ -51155,12 +51688,13 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "skillInterval": [
+            "minThievingCurrencyGain": [
               {
-                "skillID": "melvorD:Thieving",
-                "value": -5
+                "currencyID": "melvorD:GP",
+                "value": 5
               }
-            ]
+            ],
+            "ignoreThievingDamageChance": 5
           }
         },
         "cost": {
@@ -51169,7 +51703,7 @@
             {
               "currency": "melvorD:GP",
               "type": "Fixed",
-              "cost": 8000000
+              "cost": 150000
             }
           ]
         },
@@ -51192,7 +51726,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Steel Thieving Tools",
-        "customDescription": "-5% Thieving Interval for a total of -10% applied from your Thieving Tools."
+        "customDescription": "+5% Minimum GP from Thieving and +5% chance for NPCs in Thieving to deal no damage. Total so far: +10%, +10%."
       },
       {
         "id": "Thieving_Tools_Black",
@@ -51201,12 +51735,13 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "skillInterval": [
+            "minThievingCurrencyGain": [
               {
-                "skillID": "melvorD:Thieving",
-                "value": -5
+                "currencyID": "melvorD:GP",
+                "value": 5
               }
-            ]
+            ],
+            "ignoreThievingDamageChance": 5
           }
         },
         "cost": {
@@ -51215,7 +51750,7 @@
             {
               "currency": "melvorD:GP",
               "type": "Fixed",
-              "cost": 20000000
+              "cost": 300000
             }
           ]
         },
@@ -51238,7 +51773,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Black Thieving Tools",
-        "customDescription": "-5% Thieving Interval for a total of -15% applied from your Thieving Tools."
+        "customDescription": "+5% Minimum GP from Thieving and +5% chance for NPCs in Thieving to deal no damage. Total so far: +15%, +15%."
       },
       {
         "id": "Thieving_Tools_Mithril",
@@ -51247,12 +51782,13 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "skillInterval": [
+            "minThievingCurrencyGain": [
               {
-                "skillID": "melvorD:Thieving",
-                "value": -5
+                "currencyID": "melvorD:GP",
+                "value": 5
               }
-            ]
+            ],
+            "ignoreThievingDamageChance": 5
           }
         },
         "cost": {
@@ -51261,7 +51797,7 @@
             {
               "currency": "melvorD:GP",
               "type": "Fixed",
-              "cost": 40000000
+              "cost": 1000000
             }
           ]
         },
@@ -51284,7 +51820,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Mithril Thieving Tools",
-        "customDescription": "-5% Thieving Interval for a total of -20% applied from your Thieving Tools."
+        "customDescription": "+5% Minimum GP from Thieving and +5% chance for NPCs in Thieving to deal no damage. Total so far: +20%, +20%."
       },
       {
         "id": "Thieving_Tools_Adamant",
@@ -51293,12 +51829,13 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "skillInterval": [
+            "minThievingCurrencyGain": [
               {
-                "skillID": "melvorD:Thieving",
-                "value": -5
+                "currencyID": "melvorD:GP",
+                "value": 5
               }
-            ]
+            ],
+            "ignoreThievingDamageChance": 5
           }
         },
         "cost": {
@@ -51307,7 +51844,7 @@
             {
               "currency": "melvorD:GP",
               "type": "Fixed",
-              "cost": 70000000
+              "cost": 3000000
             }
           ]
         },
@@ -51330,7 +51867,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Adamant Thieving Tools",
-        "customDescription": "-5% Thieving Interval for a total of -25% applied from your Thieving Tools."
+        "customDescription": "+5% Minimum GP from Thieving and +5% chance for NPCs in Thieving to deal no damage. Total so far: +25%, +25%."
       },
       {
         "id": "Thieving_Tools_Rune",
@@ -51339,12 +51876,13 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "skillInterval": [
+            "minThievingCurrencyGain": [
               {
-                "skillID": "melvorD:Thieving",
-                "value": -5
+                "currencyID": "melvorD:GP",
+                "value": 5
               }
-            ]
+            ],
+            "ignoreThievingDamageChance": 5
           }
         },
         "cost": {
@@ -51353,7 +51891,7 @@
             {
               "currency": "melvorD:GP",
               "type": "Fixed",
-              "cost": 110000000
+              "cost": 6000000
             }
           ]
         },
@@ -51376,7 +51914,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Rune Thieving Tools",
-        "customDescription": "-5% Thieving Interval for a total of -30% applied from your Thieving Tools."
+        "customDescription": "+5% Minimum GP from Thieving and +5% chance for NPCs in Thieving to deal no damage. Total so far: +30%, +30%."
       },
       {
         "id": "Thieving_Tools_Dragon",
@@ -51385,12 +51923,13 @@
         "contains": {
           "items": [],
           "modifiers": {
-            "skillInterval": [
+            "minThievingCurrencyGain": [
               {
-                "skillID": "melvorD:Thieving",
-                "value": -5
+                "currencyID": "melvorD:GP",
+                "value": 5
               }
-            ]
+            ],
+            "ignoreThievingDamageChance": 5
           }
         },
         "cost": {
@@ -51399,7 +51938,7 @@
             {
               "currency": "melvorD:GP",
               "type": "Fixed",
-              "cost": 150000000
+              "cost": 10000000
             }
           ]
         },
@@ -51422,7 +51961,7 @@
         "buyLimitOverrides": [],
         "showBuyLimit": false,
         "customName": "Dragon Thieving Tools",
-        "customDescription": "-5% Thieving Interval for a total of -40% applied from your Thieving Tools."
+        "customDescription": "+5% Minimum GP from Thieving and +5% chance for NPCs in Thieving to deal no damage. Total so far: +35%, +35%."
       },
       {
         "id": "Trainers_Leather",
@@ -59815,6 +60354,12 @@
                   "weight": 35
                 },
                 {
+                  "itemID": "melvorF:Pigtayle_Herb",
+                  "minQuantity": 1,
+                  "maxQuantity": 1,
+                  "weight": 35
+                },
+                {
                   "itemID": "melvorF:Large_Horn",
                   "minQuantity": 1,
                   "maxQuantity": 1,
@@ -60023,6 +60568,12 @@
                   "minQuantity": 1,
                   "maxQuantity": 1,
                   "weight": 156
+                },
+                {
+                  "itemID": "melvorF:Herb_Sack",
+                  "minQuantity": 1,
+                  "maxQuantity": 1,
+                  "weight": 125
                 },
                 {
                   "itemID": "melvorD:Yew_Tree_Seed",
