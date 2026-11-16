@@ -782,6 +782,10 @@ SAE v0.9.6.6 - The Balance Patch Part 6
 - Helmet of DOOM!!! Slayer Task Length increased to +100% and Double Kill Chance increased to +100% (both up from 50%)
 - Various Barbarian equipment balance changes.
 
+### Food
+- Remove cringe descriptions from food
+- Remove conditional modifiers from all drinks (preparing for a future update to all Perfect foods and drinks)
+
 ### Misc
 - Mysterious Skeleton Key removed from the game
 
@@ -796,6 +800,10 @@ SAE v0.9.6.6 - The Balance Patch Part 6
 - Anti-Venom changed to give the same bonus from Tier I-IV. Previously, bonuses increased all the way to IV, which was far too powerful.
 - Aeris Brew changed to add and subtract Flat Hidden Skill Levels. Auto Eat Threshold reduction reduced from -10% to -5%. At 35% Threshold with 115 HP and Auto Eat Tier III, this makes the player eat at 400 HP (the same as 40% Threshold at 99 HP). Potion charges significantly reduced: Tier I: 4, Tier II: 8, Tier III: 12, and Tier IV: 16.
 - Barbar Strength increased to +25% of level added as hidden levels
+- Alcoholic Drinks used in Combat now have a 50% chance to apply Drunk at the start of the fight, lasts until the end. Mature drinks have a 100% chance. Drunk: +5% Attack Interval, -5% Accuracy, -5% Max Hit, -5% Evasion, -5% Total Resistance.
+- Alcoholic Drinks used outside of Combat give +5% Skill Interval and -5% Mastery XP.
+- Holy Cow Brew changed to -25% Prayer Point Cost -1, Mature changed to -50% -2.
+
 
 ## Shop Purchases
 - Candle moved to Slayer category, price reduced to 10 SC

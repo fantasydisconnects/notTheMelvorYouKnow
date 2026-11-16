@@ -4819,6 +4819,40 @@
     ],
     "combatEffects": [
       {
+        "id": "Drunk",
+        "templateID": "melvorD:StaticNonCountingModifier",
+        "name": "Drunk",
+        "media": "assets/combat/status/drunk.png",
+        "tooltipSpans": [
+          {
+            "type": "Stats",
+            "statGroupName": "stacks"
+          }
+        ],
+        "target": "Self",
+        "parameters": [],
+        "statGroups": [
+          {
+            "name": "stacks",
+            "modifiers": {
+              "attackInterval": 5,
+              "accuracyRating": -5,
+              "maxHit": -5,
+              "evasion": -5,
+              "resistance": [
+                {
+                  "damageTypeID": "melvorD:Normal",
+                  "value": -5
+                }
+              ]
+            }
+          }
+        ],
+        "effectGroups": [
+          "melvorD:Debuff"
+        ]
+      },
+      {
         "id": "EarthenBarrier",
         "templateID": "expandedAreas:DecrementalOnBeingHit",
         "name": "Earthen Barrier",
@@ -21715,7 +21749,7 @@
         "name": "Super Delicious Power Smoothie",
         "category": "Cooking",
         "type": "Food",
-        "media": "assets/bank/Super_Delicious_Power_Smoothie.png"
+        "media": "assets/bank/Super_Delicious_Power_Smoothie.png",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -22225,36 +22259,22 @@
         "sellsFor": 250,
         "itemType": "Potion",
         "modifiers": {
-          "foodHealingValue": 10,
+          "flatPrayerPointCost": -1,
           "prayerPointCost": -25
         },
         "combatEffects": [
           {
-            "effectID": "melvorD:Slow",
-            "chance": 25,
-            "appliesWhen": "StartOfFight",
-            "initialParams": [
-              {
-                "name": "turns",
-                "value": 2
-              },
-              {
-                "name": "magnitude",
-                "value": 15
-              }
-            ],
-            "targetOverride": "Self"
+            "effectID": "expandedAreas:Drunk",
+            "chance": 50,
+            "appliesWhen": "StartOfFight"
           }
         ],
         "charges": 5,
-        "tier": 3,
+        "tier": 2,
         "action": "melvorD:Combat",
         "consumesOn": [
           {
             "type": "PrayerPointConsumption"
-          },
-          {
-            "type": "FoodEaten"
           }
         ]
       },
@@ -22270,24 +22290,13 @@
         "sellsFor": 500,
         "itemType": "Potion",
         "modifiers": {
-          "foodHealingValue": 15,
-          "prayerPointCost": -30
+          "flatPrayerPointCost": -2,
+          "prayerPointCost": -50
         },
         "combatEffects": [
           {
-            "effectID": "melvorD:Slow",
-            "chance": 37.5,
-            "appliesWhen": "StartOfFight",
-            "initialParams": [
-              {
-                "name": "turns",
-                "value": 2
-              },
-              {
-                "name": "magnitude",
-                "value": 20
-              }
-            ]
+            "effectID": "expandedAreas:Drunk",
+            "appliesWhen": "StartOfFight"
           }
         ],
         "charges": 5,
@@ -22296,9 +22305,6 @@
         "consumesOn": [
           {
             "type": "PrayerPointConsumption"
-          },
-          {
-            "type": "FoodEaten"
           }
         ]
       },
@@ -22314,29 +22320,23 @@
         "sellsFor": 50,
         "itemType": "Potion",
         "modifiers": {
-          "farmingSeedCost": -25,
-          "skillXP": [
-            {
-              "skillID": "melvorD:Farming",
-              "value": 1.5
-            }
-          ],
-          "masteryXP": [
-            {
-              "skillID": "melvorD:Farming",
-              "value": 1.5
-            }
-          ],
-          "compostPreservationChance": -25,
           "basePrimaryProductQuantity": [
             {
               "skillID": "melvorD:Farming",
-              "value": -5
+              "value": 10
             }
-          ]
+          ],
+          "flatAdditionalPrimaryProductQuantity": [
+            {
+              "skillID": "melvorD:Farming",
+              "value": 1
+            }
+          ],
+          "skillInterval": 5,
+          "masteryXP": -5
         },
         "charges": 5,
-        "tier": 3,
+        "tier": 2,
         "action": "melvorD:Farming",
         "consumesOn": [
           {
@@ -22356,26 +22356,20 @@
         "sellsFor": 100,
         "itemType": "Potion",
         "modifiers": {
-          "farmingSeedCost": -37.5,
-          "skillXP": [
-            {
-              "skillID": "melvorD:Farming",
-              "value": 2
-            }
-          ],
-          "masteryXP": [
-            {
-              "skillID": "melvorD:Farming",
-              "value": 2
-            }
-          ],
-          "compostPreservationChance": -37.5,
           "basePrimaryProductQuantity": [
             {
               "skillID": "melvorD:Farming",
-              "value": -7.5
+              "value": 20
             }
-          ]
+          ],
+          "flatAdditionalPrimaryProductQuantity": [
+            {
+              "skillID": "melvorD:Farming",
+              "value": 2
+            }
+          ],
+          "skillInterval": 10,
+          "masteryXP": -10
         },
         "charges": 5,
         "tier": 3,
@@ -22399,29 +22393,32 @@
         "itemType": "Potion",
         "combatEffects": [
           {
-            "effectID": "melvorD:Bleed100",
-            "chance": 10,
-            "appliesWhen": "HitByAttack",
-            "initialParams": [
-              {
-                "name": "interval",
-                "value": 1000
-              }
-            ],
-            "targetOverride": "Self"
+            "effectID": "expandedAreas:Drunk",
+            "appliesWhen": "StartOfFight",
+            "chance": 50
           }
         ],
         "modifiers": {
-          "flatMaxHitpoints": 5,
-          "bleedLifesteal": 2.5,
-          "hitpointRegeneration": -50
+          "bleedLifesteal": 5
         },
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "groupID": "melvorD:BleedDOT",
+              "character": "Enemy",
+              "type": "CombatEffectGroup"
+            },
+            "modifiers": {
+              "lifesteal": 5
+            }
+          }
+        ],
         "charges": 5,
-        "tier": 3,
+        "tier": 2,
         "action": "melvorD:Combat",
         "consumesOn": [
           {
-            "type": "EnemyAttack"
+            "type": "PlayerAttack"
           }
         ]
       },
@@ -22438,29 +22435,31 @@
         "itemType": "Potion",
         "combatEffects": [
           {
-            "effectID": "melvorD:Bleed200",
-            "chance": 12.5,
-            "appliesWhen": "HitByAttack",
-            "initialParams": [
-              {
-                "name": "interval",
-                "value": 1000
-              }
-            ],
-            "targetOverride": "Self"
+            "effectID": "expandedAreas:Drunk",
+            "appliesWhen": "StartOfFight"
           }
         ],
         "modifiers": {
-          "flatMaxHitpoints": 7.5,
-          "bleedLifesteal": 3,
-          "hitpointRegeneration": -75
+          "bleedLifesteal": 10
         },
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "groupID": "melvorD:BleedDOT",
+              "character": "Enemy",
+              "type": "CombatEffectGroup"
+            },
+            "modifiers": {
+              "lifesteal": 10
+            }
+          }
+        ],
         "charges": 5,
         "tier": 3,
         "action": "melvorD:Combat",
         "consumesOn": [
           {
-            "type": "EnemyAttack"
+            "type": "PlayerAttack"
           }
         ]
       },
@@ -22475,9 +22474,13 @@
         "golbinRaidExclusive": false,
         "sellsFor": 300,
         "itemType": "Potion",
-        "modifiers": {
-          "burnDOTDamageTaken": 20
-        },
+        "combatEffects": [
+          {
+            "effectID": "expandedAreas:Drunk",
+            "chance": 50,
+            "appliesWhen": "StartOfFight"
+          }
+        ],
         "conditionalModifiers": [
           {
             "condition": {
@@ -22492,7 +22495,7 @@
           }
         ],
         "charges": 5,
-        "tier": 3,
+        "tier": 2,
         "action": "melvorD:Combat",
         "consumesOn": [
           {
@@ -22511,9 +22514,12 @@
         "golbinRaidExclusive": false,
         "sellsFor": 600,
         "itemType": "Potion",
-        "modifiers": {
-          "burnDOTDamageTaken": 40
-        },
+        "combatEffects": [
+          {
+            "effectID": "expandedAreas:Drunk",
+            "appliesWhen": "StartOfFight"
+          }
+        ],
         "conditionalModifiers": [
           {
             "condition": {
@@ -22522,8 +22528,8 @@
               "type": "CombatEffect"
             },
             "modifiers": {
-              "maxHit": 15,
-              "accuracyRating": 15
+              "maxHit": 10,
+              "accuracyRating": 10
             }
           }
         ],
@@ -22547,12 +22553,23 @@
         "golbinRaidExclusive": false,
         "sellsFor": 1200,
         "itemType": "Potion",
+        "combatEffects": [
+          {
+            "effectID": "expandedAreas:Drunk",
+            "appliesWhen": "StartOfFight",
+            "chance": 50
+          },
+          {
+            "effectID": "melvorD:Drowsy",
+            "appliesWhen": "PostAttack",
+            "chance": 10
+          }
+        ],
         "modifiers": {
-          "accuracyRating": -100,
           "attackInterval": -10
         },
         "charges": 5,
-        "tier": 3,
+        "tier": 2,
         "action": "melvorD:Combat",
         "consumesOn": [
           {
@@ -22571,8 +22588,18 @@
         "golbinRaidExclusive": false,
         "sellsFor": 2400,
         "itemType": "Potion",
+        "combatEffects": [
+          {
+            "effectID": "expandedAreas:Drunk",
+            "appliesWhen": "StartOfFight"
+          },
+          {
+            "effectID": "melvorD:Drowsy",
+            "appliesWhen": "PostAttack",
+            "chance": 20
+          }
+        ],
         "modifiers": {
-          "accuracyRating": -200,
           "attackInterval": -20
         },
         "charges": 5,
@@ -22593,31 +22620,31 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "tier": 3,
+        "tier": 2,
         "charges": 5,
         "action": "melvorD:Thieving",
         "sellsFor": 200,
         "itemType": "Potion",
         "modifiers": {
-          "thievingAutoSellPrice": [
+          "flatThievingCurrencyGain": [
             {
               "currencyID": "melvorD:GP",
-              "value": 3
+              "value": 25
             }
           ],
-          "thievingAreaUniqueChance": -40,
-          "thievingStunAvoidanceChance": [
+          "minThievingCurrencyGain": [
             {
-              "realmID": "melvorD:Melvor",
-              "value": -40
+              "currencyID": "melvorD:GP",
+              "value": 10
             }
-          ]
+          ],
+          "skillInterval": 5,
+          "masteryXP": -5
         },
         "consumesOn": [
           {
             "type": "ThievingAction",
-            "succesful": true,
-            "commonDropObtained": true
+            "succesful": true
           }
         ]
       },
@@ -22636,25 +22663,25 @@
         "sellsFor": 400,
         "itemType": "Potion",
         "modifiers": {
-          "thievingAutoSellPrice": [
+          "flatThievingCurrencyGain": [
             {
               "currencyID": "melvorD:GP",
-              "value": 5
+              "value": 50
             }
           ],
-          "thievingAreaUniqueChance": -60,
-          "thievingStunAvoidanceChance": [
+          "minThievingCurrencyGain": [
             {
-              "realmID": "melvorD:Melvor",
-              "value": -60
+              "currencyID": "melvorD:GP",
+              "value": 20
             }
-          ]
+          ],
+          "skillInterval": 10,
+          "masteryXP": -10
         },
         "consumesOn": [
           {
             "type": "ThievingAction",
-            "succesful": true,
-            "commonDropObtained": true
+            "succesful": true
           }
         ]
       },
@@ -22667,17 +22694,22 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "tier": 3,
+        "tier": 2,
         "charges": 5,
         "action": "melvorD:Combat",
         "sellsFor": 400,
         "itemType": "Potion",
         "modifiers": {
-          "rangedStrengthBonusWith2HWeapon": 15,
-          "flatRangedAccuracyBonusPerAttackInterval": 1,
-          "rangedAttackInterval": 10,
-          "meleeEvasion": -10
+          "rangedStrengthBonusWith2HWeapon": 10,
+          "flatRangedAccuracyBonusPerAttackInterval": 0.25
         },
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "expandedAreas:Drunk",
+            "chance": 50
+          }
+        ],
         "consumesOn": [
           {
             "type": "PlayerAttack",
@@ -22702,11 +22734,15 @@
         "sellsFor": 800,
         "itemType": "Potion",
         "modifiers": {
-          "rangedStrengthBonusWith2HWeapon": 22.5,
-          "flatRangedAccuracyBonusPerAttackInterval": 1.5,
-          "rangedAttackInterval": 15,
-          "meleeEvasion": -15
+          "rangedStrengthBonusWith2HWeapon": 20,
+          "flatRangedAccuracyBonusPerAttackInterval": 0.5
         },
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "expandedAreas:Drunk"
+          }
+        ],
         "consumesOn": [
           {
             "type": "PlayerAttack",
@@ -22725,19 +22761,18 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "tier": 3,
+        "tier": 2,
         "charges": 5,
         "action": "melvorD:Combat",
         "sellsFor": 2000,
         "itemType": "Potion",
         "modifiers": {
-          "damageDealtWith2Effects": 10
+          "damageDealtPerEffect": 2.5
         },
         "combatEffects": [
           {
             "appliesWhen": "StartOfFight",
-            "tableID": "melvorF:RandomCurse",
-            "targetOverride": "Self",
+            "tableID": "expandedAreas:Drunk",
             "chance": 50
           }
         ],
@@ -22762,13 +22797,12 @@
         "sellsFor": 8000,
         "itemType": "Potion",
         "modifiers": {
-          "damageDealtWith2Effects": 30
+          "damageDealtPerEffect": 5
         },
         "combatEffects": [
           {
             "appliesWhen": "StartOfFight",
-            "tableID": "melvorF:RandomCurse",
-            "targetOverride": "Self"
+            "tableID": "expandedAreas:Drunk"
           }
         ],
         "consumesOn": [
@@ -22786,26 +22820,26 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "tier": 3,
+        "tier": 2,
         "charges": 5,
         "action": "melvorD:Fishing",
         "sellsFor": 135,
         "itemType": "Potion",
         "modifiers": {
-          "skillInterval": [
+          "flatBasePrimaryProductQuantity": [
             {
               "skillID": "melvorD:Fishing",
-              "value": -5
+              "value": 1
             }
           ],
-          "offItemChance": 5,
-          "fishingSpecialChance": -5,
           "skillItemDoublingChance": [
             {
               "skillID": "melvorD:Fishing",
               "value": 5
             }
-          ]
+          ],
+          "masteryXP": -5,
+          "skillInterval": 5
         },
         "consumesOn": [
           {
@@ -22828,20 +22862,20 @@
         "sellsFor": 270,
         "itemType": "Potion",
         "modifiers": {
-          "skillInterval": [
+          "flatBasePrimaryProductQuantity": [
             {
               "skillID": "melvorD:Fishing",
-              "value": -10
+              "value": 2
             }
           ],
-          "offItemChance": 10,
-          "fishingSpecialChance": -10,
           "skillItemDoublingChance": [
             {
               "skillID": "melvorD:Fishing",
               "value": 10
             }
-          ]
+          ],
+          "masteryXP": -10,
+          "skillInterval": 10
         },
         "consumesOn": [
           {
@@ -22858,24 +22892,20 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "tier": 3,
+        "tier": 2,
         "charges": 5,
         "action": "melvorD:Cooking",
         "sellsFor": 305,
         "itemType": "Potion",
         "modifiers": {
-          "passiveCookingInterval": -15,
-          "skillCostReduction": [
-            {
-              "skillID": "melvorD:Cooking",
-              "value": -100
-            }
-          ]
+          "perfectCookChance": 5,
+          "successfulCookChance": 10,
+          "skillInterval": 5,
+          "masteryXP": -5
         },
         "consumesOn": [
           {
-            "type": "CookingAction",
-            "isPassiveCooking": true
+            "type": "CookingAction"
           }
         ]
       },
@@ -22894,18 +22924,14 @@
         "sellsFor": 610,
         "itemType": "Potion",
         "modifiers": {
-          "passiveCookingInterval": -30,
-          "skillCostReduction": [
-            {
-              "skillID": "melvorD:Cooking",
-              "value": -200
-            }
-          ]
+          "perfectCookChance": 5,
+          "successfulCookChance": 10,
+          "skillInterval": 5,
+          "masteryXP": -5
         },
         "consumesOn": [
           {
-            "type": "CookingAction",
-            "isPassiveCooking": true
+            "type": "CookingAction"
           }
         ]
       },
@@ -22918,24 +22944,21 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "tier": 3,
+        "tier": 2,
         "charges": 5,
         "action": "melvorD:Firemaking",
         "sellsFor": 65,
         "itemType": "Potion",
         "modifiers": {
-          "skillXP": [
-            {
-              "skillID": "melvorD:Firemaking",
-              "value": 5
-            }
-          ],
           "skillInterval": [
             {
               "skillID": "melvorD:Firemaking",
-              "value": 5
+              "value": -25
             }
-          ]
+          ],
+          "skillCostReduction": -50,
+          "skillXP": -5,
+          "masteryXP": -5
         },
         "consumesOn": [
           {
@@ -22961,18 +22984,15 @@
         "sellsFor": 130,
         "itemType": "Potion",
         "modifiers": {
-          "skillXP": [
-            {
-              "skillID": "melvorD:Firemaking",
-              "value": 7.5
-            }
-          ],
           "skillInterval": [
             {
               "skillID": "melvorD:Firemaking",
-              "value": 7.5
+              "value": -50
             }
-          ]
+          ],
+          "skillCostReduction": -100,
+          "skillXP": -10,
+          "masteryXP": -10
         },
         "consumesOn": [
           {
@@ -22992,7 +23012,7 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "tier": 3,
+        "tier": 2,
         "charges": 5,
         "action": "melvorD:Herblore",
         "sellsFor": 280,
@@ -23001,27 +23021,17 @@
           "skillPreservationChance": [
             {
               "skillID": "melvorD:Herblore",
-              "value": 10
-            }
-          ],
-          "masteryXP": [
-            {
-              "skillID": "melvorD:Herblore",
-              "value": -10
+              "value": 5
             }
           ],
           "skillItemDoublingChance": [
             {
               "skillID": "melvorD:Herblore",
-              "value": 10
+              "value": 5
             }
           ],
-          "skillXP": [
-            {
-              "skillID": "melvorD:Herblore",
-              "value": -10
-            }
-          ]
+          "skillInterval": 5,
+          "masteryXP": -5
         },
         "consumesOn": [
           {
@@ -23047,27 +23057,17 @@
           "skillPreservationChance": [
             {
               "skillID": "melvorD:Herblore",
-              "value": 15
-            }
-          ],
-          "masteryXP": [
-            {
-              "skillID": "melvorD:Herblore",
-              "value": -15
+              "value": 10
             }
           ],
           "skillItemDoublingChance": [
             {
               "skillID": "melvorD:Herblore",
-              "value": 15
+              "value": 10
             }
           ],
-          "skillXP": [
-            {
-              "skillID": "melvorD:Herblore",
-              "value": -15
-            }
-          ]
+          "skillInterval": 10,
+          "masteryXP": -10
         },
         "consumesOn": [
           {
@@ -23084,18 +23084,22 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "tier": 3,
+        "tier": 2,
         "charges": 5,
         "action": "melvorD:Combat",
         "sellsFor": 2000,
         "itemType": "Potion",
-        "enemyModifiers": {
-          "maxHit": 5
-        },
         "modifiers": {
           "dodgeChance": 5,
           "evasion": 10
         },
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "expandedAreas:Drunk",
+            "chance": 50
+          }
+        ],
         "consumesOn": [
           {
             "type": "EnemyAttack"
@@ -23116,13 +23120,16 @@
         "action": "melvorD:Combat",
         "sellsFor": 4000,
         "itemType": "Potion",
-        "enemyModifiers": {
-          "maxHit": 10
-        },
         "modifiers": {
-          "dodgeChance": 7.5,
-          "evasion": 15
+          "dodgeChance": 10,
+          "evasion": 20
         },
+        "combatEffects": [
+          {
+            "appliesWhen": "StartOfFight",
+            "effectID": "expandedAreas:Drunk"
+          }
+        ],
         "consumesOn": [
           {
             "type": "EnemyAttack"

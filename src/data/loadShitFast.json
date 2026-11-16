@@ -8,15 +8,15 @@
     "bankSortOrder": [],
     "combatAreas": [],
     "combatEffectGroups": [],
-    "combatEffects": [],
+    "combatEffects": [
+
+    ],
     "combatEffectTables": [],
     "combatEffectTemplates": [],
     "combatPassives": [],
     "dungeons": [],
     "randomGems": [],
-    "items": [
-    
-    ],
+    "items": [],
     "itemUpgrades": [],
     "itemSynergies": [],
     "monsters": [],
