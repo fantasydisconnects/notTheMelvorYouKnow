@@ -21339,7 +21339,6 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Basic_Curry.png",
-        "customDescription": "Simple, elegant, delicious.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -21353,7 +21352,6 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Spicy_Curry.png",
-        "customDescription": "Not as hot as I'd like it to be, but still spicy.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -21367,7 +21365,6 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Shrimp_Curry.png",
-        "customDescription": "Ahhh, nothing beats shrimp curry.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -21381,7 +21378,6 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Massaman_Curry.png",
-        "customDescription": "Had to make do with ingredients on hand, but it turned out pretty good!",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -21395,7 +21391,6 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Spicy_Papaya_Curry.png",
-        "customDescription": "Who knew fruit and curry would go so well together?",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -21409,7 +21404,6 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Gammonberry_Pie.png",
-        "customDescription": "Tastes like gammonberry.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -21423,7 +21417,6 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Booberry_Pie.png",
-        "customDescription": "Tastes like booberry. Spooky.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -21437,7 +21430,6 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Yellowberry_Pie.png",
-        "customDescription": "Tastes like yellowberry.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -21451,7 +21443,6 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Blueberry_Pie.png",
-        "customDescription": "Tastes like blueberry.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -21465,7 +21456,6 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Coconut_Cream_Pie.png",
-        "customDescription": "Heh heh—\"cream pie.\"",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -21479,7 +21469,6 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Mumuberry_Pie.png",
-        "customDescription": "Tastes like mumuberry.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -21493,7 +21482,6 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Pineapple_Cake.png",
-        "customDescription": "Rightside up.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -21507,7 +21495,6 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Coffee_Cake.png",
-        "customDescription": "Rich and smooth, but gives me the jitters.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -21521,7 +21508,6 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Dragonfruit_Cake.png",
-        "customDescription": "Don't know what I expected...",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -21535,7 +21521,6 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Stuffed_Pepper.png",
-        "customDescription": "Better than killing golbins!",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -21549,27 +21534,12 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Tomato_Juice.png",
-        "customDescription": "+10% Auto Eat Efficiency when at or below 25% Hitpoints.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 10,
         "itemType": "Food",
-        "healsFor": 8,
-        "conditionalModifiers": [
-          {
-            "description": "+10% Auto Eat Efficiency when at or below 25% Hitpoints.",
-            "condition": {
-              "character": "Player",
-              "type": "Hitpoints",
-              "operator": "<=",
-              "value": 25
-            },
-            "modifiers": {
-              "autoEatEfficiency": 10
-            }
-          }
-        ]
+        "healsFor": 8
       },
       {
         "id": "Strawberry_Juice",
@@ -21577,27 +21547,12 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Strawberry_Juice.png",
-        "customDescription": "+10% Auto Eat Efficiency when at or below 25% Hitpoints.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 20,
         "itemType": "Food",
-        "healsFor": 10,
-        "conditionalModifiers": [
-          {
-            "description": "+10% Auto Eat Efficiency when at or below 25% Hitpoints.",
-            "condition": {
-              "character": "Player",
-              "type": "Hitpoints",
-              "operator": "<=",
-              "value": 25
-            },
-            "modifiers": {
-              "autoEatEfficiency": 10
-            }
-          }
-        ]
+        "healsFor": 10
       },
       {
         "id": "Orange_Juice",
@@ -21605,27 +21560,12 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Orange_Juice.png",
-        "customDescription": "+10% Auto Eat Efficiency when at or below 25% Hitpoints.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 30,
         "itemType": "Food",
-        "healsFor": 10.5,
-        "conditionalModifiers": [
-          {
-            "description": "+10% Auto Eat Efficiency when at or below 25% Hitpoints.",
-            "condition": {
-              "character": "Player",
-              "type": "Hitpoints",
-              "operator": "<=",
-              "value": 25
-            },
-            "modifiers": {
-              "autoEatEfficiency": 10
-            }
-          }
-        ]
+        "healsFor": 10.5
       },
       {
         "id": "Cherry_Juice",
@@ -21633,27 +21573,12 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Cherry_Juice.png",
-        "customDescription": "+10% Auto Eat Efficiency when at or below 25% Hitpoints.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 20,
         "itemType": "Food",
-        "healsFor": 12,
-        "conditionalModifiers": [
-          {
-            "description": "+10% Auto Eat Efficiency when at or below 25% Hitpoints.",
-            "condition": {
-              "character": "Player",
-              "type": "Hitpoints",
-              "operator": "<=",
-              "value": 25
-            },
-            "modifiers": {
-              "autoEatEfficiency": 10
-            }
-          }
-        ]
+        "healsFor": 12
       },
       {
         "id": "Watermelon_Juice",
@@ -21661,27 +21586,12 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Watermelon_Juice.png",
-        "customDescription": "+10% Auto Eat Efficiency when at or below 25% Hitpoints.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 20,
         "itemType": "Food",
-        "healsFor": 14,
-        "conditionalModifiers": [
-          {
-            "description": "+10% Auto Eat Efficiency when at or below 25% Hitpoints.",
-            "condition": {
-              "character": "Player",
-              "type": "Hitpoints",
-              "operator": "<=",
-              "value": 25
-            },
-            "modifiers": {
-              "autoEatEfficiency": 10
-            }
-          }
-        ]
+        "healsFor": 14
       },
       {
         "id": "Pineapple_Juice",
@@ -21689,27 +21599,12 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Pineapple_Juice.png",
-        "customDescription": "+10% Auto Eat Efficiency when at or below 25% Hitpoints.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 20,
         "itemType": "Food",
-        "healsFor": 14.8,
-        "conditionalModifiers": [
-          {
-            "description": "+10% Auto Eat Efficiency when at or below 25% Hitpoints.",
-            "condition": {
-              "character": "Player",
-              "type": "Hitpoints",
-              "operator": "<=",
-              "value": 25
-            },
-            "modifiers": {
-              "autoEatEfficiency": 10
-            }
-          }
-        ]
+        "healsFor": 14.8
       },
       {
         "id": "Papaya_Juice",
@@ -21717,27 +21612,12 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Papaya_Juice.png",
-        "customDescription": "+10% Auto Eat Efficiency when at or below 25% Hitpoints.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 20,
         "itemType": "Food",
-        "healsFor": 15.4,
-        "conditionalModifiers": [
-          {
-            "description": "+10% Auto Eat Efficiency when at or below 25% Hitpoints.",
-            "condition": {
-              "character": "Player",
-              "type": "Hitpoints",
-              "operator": "<=",
-              "value": 25
-            },
-            "modifiers": {
-              "autoEatEfficiency": 10
-            }
-          }
-        ]
+        "healsFor": 15.4
       },
       {
         "id": "Green_Smoothie",
@@ -21745,27 +21625,12 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Green_Smoothie.png",
-        "customDescription": "+10% Auto Eat Efficiency when at or below 25% Hitpoints.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 20,
         "itemType": "Food",
-        "healsFor": 16,
-        "conditionalModifiers": [
-          {
-            "description": "+10% Auto Eat Efficiency when at or below 25% Hitpoints.",
-            "condition": {
-              "character": "Player",
-              "type": "Hitpoints",
-              "operator": "<=",
-              "value": 25
-            },
-            "modifiers": {
-              "autoEatEfficiency": 10
-            }
-          }
-        ]
+        "healsFor": 16
       },
       {
         "id": "Coconut_Water",
@@ -21773,27 +21638,12 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Coconut_Water.png",
-        "customDescription": "+10% Auto Eat Efficiency when at or below 25% Hitpoints.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 20,
         "itemType": "Food",
-        "healsFor": 17.2,
-        "conditionalModifiers": [
-          {
-            "description": "+10% Auto Eat Efficiency when at or below 25% Hitpoints.",
-            "condition": {
-              "character": "Player",
-              "type": "Hitpoints",
-              "operator": "<=",
-              "value": 25
-            },
-            "modifiers": {
-              "autoEatEfficiency": 10
-            }
-          }
-        ]
+        "healsFor": 17.2
       },
       {
         "id": "Carrot_Juice",
@@ -21801,27 +21651,12 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Carrot_Juice.png",
-        "customDescription": "+10% Auto Eat Efficiency when at or below 25% Hitpoints.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 20,
         "itemType": "Food",
-        "healsFor": 18.5,
-        "conditionalModifiers": [
-          {
-            "description": "+10% Auto Eat Efficiency when at or below 25% Hitpoints.",
-            "condition": {
-              "character": "Player",
-              "type": "Hitpoints",
-              "operator": "<=",
-              "value": 25
-            },
-            "modifiers": {
-              "autoEatEfficiency": 10
-            }
-          }
-        ]
+        "healsFor": 18.5
       },
       {
         "id": "Apple_Juice",
@@ -21829,27 +21664,12 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Apple_Juice.png",
-        "customDescription": "+10% Auto Eat Efficiency when at or below 25% Hitpoints.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 90,
         "itemType": "Food",
-        "healsFor": 19.1,
-        "conditionalModifiers": [
-          {
-            "description": "+10% Auto Eat Efficiency when at or below 25% Hitpoints.",
-            "condition": {
-              "character": "Player",
-              "type": "Hitpoints",
-              "operator": "<=",
-              "value": 25
-            },
-            "modifiers": {
-              "autoEatEfficiency": 10
-            }
-          }
-        ]
+        "healsFor": 19.1
       },
       {
         "id": "Coffee",
@@ -21857,36 +21677,12 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Coffee.png",
-        "customDescription": "+25% Chance to ignore Drowsy and Sleep when at or above 75% Hitpoints.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 200,
         "itemType": "Food",
-        "healsFor": 17,
-        "conditionalModifiers": [
-          {
-            "description": "+25% Chance to ignore Drowsy and Sleep when at or above 75% Hitpoints.",
-            "condition": {
-              "character": "Player",
-              "type": "Hitpoints",
-              "operator": ">=",
-              "value": 75
-            },
-            "modifiers": {
-              "effectIgnoreChance": [
-                {
-                  "effectGroupID": "melvorD:Drowsy",
-                  "value": 25
-                },
-                {
-                  "effectGroupID": "melvorD:Sleep",
-                  "value": 25
-                }
-              ]
-            }
-          }
-        ]
+        "healsFor": 17
       },
       {
         "id": "Coffee_Perfect",
@@ -21894,36 +21690,12 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Coffee_Perfect.png",
-        "customDescription": "+27.5% Chance to ignore Drowsy and Sleep when at or above 75% Hitpoints.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 400,
         "itemType": "Food",
-        "healsFor": 18.7,
-        "conditionalModifiers": [
-          {
-            "description": "+27.5% Chance to ignore Drowsy and Sleep when at or above 75% Hitpoints.",
-            "condition": {
-              "character": "Player",
-              "type": "Hitpoints",
-              "operator": ">=",
-              "value": 75
-            },
-            "modifiers": {
-              "effectIgnoreChance": [
-                {
-                  "effectGroupID": "melvorD:Drowsy",
-                  "value": 27.5
-                },
-                {
-                  "effectGroupID": "melvorD:Sleep",
-                  "value": 27.5
-                }
-              ]
-            }
-          }
-        ]
+        "healsFor": 18.7
       },
       {
         "id": "Dragonfruit_Smoothie",
@@ -21931,55 +21703,25 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Dragonfruit_Smoothie.png",
-        "customDescription": "+10% Auto Eat Efficiency when at or below 25% Hitpoints.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 100,
         "itemType": "Food",
-        "healsFor": 20.5,
-        "conditionalModifiers": [
-          {
-            "description": "+10% Auto Eat Efficiency when at or below 25% Hitpoints.",
-            "condition": {
-              "character": "Player",
-              "type": "Hitpoints",
-              "operator": "<=",
-              "value": 25
-            },
-            "modifiers": {
-              "autoEatEfficiency": 10
-            }
-          }
-        ]
+        "healsFor": 20.5
       },
       {
         "id": "Super_Delicious_Power_Smoothie",
         "name": "Super Delicious Power Smoothie",
         "category": "Cooking",
         "type": "Food",
-        "media": "assets/bank/Super_Delicious_Power_Smoothie.png",
-        "customDescription": "+15% Auto Eat Efficiency when at or below 25% Hitpoints.",
+        "media": "assets/bank/Super_Delicious_Power_Smoothie.png"
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 1500,
         "itemType": "Food",
-        "healsFor": 28,
-        "conditionalModifiers": [
-          {
-            "description": "+15% Auto Eat Efficiency when at or below 25% Hitpoints.",
-            "condition": {
-              "character": "Player",
-              "type": "Hitpoints",
-              "operator": "<=",
-              "value": 25
-            },
-            "modifiers": {
-              "autoEatEfficiency": 15
-            }
-          }
-        ]
+        "healsFor": 28
       },
       {
         "id": "Basic_Curry_Perfect",
@@ -21987,7 +21729,6 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Basic_Curry_Perfect.png",
-        "customDescription": "Like Basic Curry, but perfect.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -22001,7 +21742,6 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Spicy_Curry_Perfect.png",
-        "customDescription": "Like Spicy Curry, but perfect.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -22015,7 +21755,6 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Shrimp_Curry_Perfect.png",
-        "customDescription": "Like Shrimp Curry, but perfect.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -22029,7 +21768,6 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Massaman_Curry_Perfect.png",
-        "customDescription": "Like Massaman Curry, but perfect.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -22043,7 +21781,6 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Spicy_Papaya_Curry_Perfect.png",
-        "customDescription": "Like Spicy Papaya Curry, but perfect.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -22057,7 +21794,6 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Gammonberry_Pie_Perfect.png",
-        "customDescription": "Like Gammonberry Pie, but perfect.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -22071,7 +21807,6 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Booberry_Pie_Perfect.png",
-        "customDescription": "Like Booberry Pie, but perfect.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -22085,7 +21820,6 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Yellowberry_Pie_Perfect.png",
-        "customDescription": "Like Yellowberry Pie, but perfect.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -22099,7 +21833,6 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Blueberry_Pie_Perfect.png",
-        "customDescription": "Like Blueberry Pie, but perfect.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -22113,7 +21846,6 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Coconut_Cream_Pie_Perfect.png",
-        "customDescription": "Heh heh, it's the perfect \"cream pie.\"",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -22127,7 +21859,6 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Mumuberry_Pie_Perfect.png",
-        "customDescription": "Like Mumuberry Pie, but perfect.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -22141,7 +21872,6 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Pineapple_Cake_Perfect.png",
-        "customDescription": "Like Pineapple Cake, but perfect.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -22155,7 +21885,6 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Coffee_Cake_Perfect.png",
-        "customDescription": "Like Coffee Cake, but perfect. And more jitters.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -22169,7 +21898,6 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Dragonfruit_Cake_Perfect.png",
-        "customDescription": "Still don't know what I expected...",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -22183,7 +21911,6 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Stuffed_Pepper_Perfect.png",
-        "customDescription": "It's better than killing golbins <em>and</em> dragons!",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -22197,27 +21924,12 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Tomato_Juice_Perfect.png",
-        "customDescription": "+11% Auto Eat Efficiency when at or below 27.5% Hitpoints.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 11,
         "itemType": "Food",
-        "healsFor": 8.8,
-        "conditionalModifiers": [
-          {
-            "description": "+11% Auto Eat Efficiency when at or below 27.5% Hitpoints.",
-            "condition": {
-              "character": "Player",
-              "type": "Hitpoints",
-              "operator": "<=",
-              "value": 27.5
-            },
-            "modifiers": {
-              "autoEatEfficiency": 1
-            }
-          }
-        ]
+        "healsFor": 8.8
       },
       {
         "id": "Strawberry_Juice_Perfect",
@@ -22225,27 +21937,12 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Strawberry_Juice_Perfect.png",
-        "customDescription": "+11% Auto Eat Efficiency when at or below 27.5% Hitpoints.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 22,
         "itemType": "Food",
-        "healsFor": 11.0,
-        "conditionalModifiers": [
-          {
-            "description": "+11% Auto Eat Efficiency when at or below 27.5% Hitpoints.",
-            "condition": {
-              "character": "Player",
-              "type": "Hitpoints",
-              "operator": "<=",
-              "value": 27.5
-            },
-            "modifiers": {
-              "autoEatEfficiency": 11
-            }
-          }
-        ]
+        "healsFor": 11.0
       },
       {
         "id": "Orange_Juice_Perfect",
@@ -22253,27 +21950,12 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Orange_Juice_Perfect.png",
-        "customDescription": "+11% Auto Eat Efficiency when at or below 27.5% Hitpoints.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 33,
         "itemType": "Food",
-        "healsFor": 11.6,
-        "conditionalModifiers": [
-          {
-            "description": "+11% Auto Eat Efficiency when at or below 27.5% Hitpoints.",
-            "condition": {
-              "character": "Player",
-              "type": "Hitpoints",
-              "operator": "<=",
-              "value": 27.5
-            },
-            "modifiers": {
-              "autoEatEfficiency": 11
-            }
-          }
-        ]
+        "healsFor": 11.6
       },
       {
         "id": "Cherry_Juice_Perfect",
@@ -22281,27 +21963,12 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Cherry_Juice_Perfect.png",
-        "customDescription": "+11% Auto Eat Efficiency when at or below 27.5% Hitpoints.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 44,
         "itemType": "Food",
-        "healsFor": 13.2,
-        "conditionalModifiers": [
-          {
-            "description": "+11% Auto Eat Efficiency when at or below 27.5% Hitpoints.",
-            "condition": {
-              "character": "Player",
-              "type": "Hitpoints",
-              "operator": "<=",
-              "value": 27.5
-            },
-            "modifiers": {
-              "autoEatEfficiency": 11
-            }
-          }
-        ]
+        "healsFor": 13.2
       },
       {
         "id": "Watermelon_Juice_Perfect",
@@ -22309,27 +21976,12 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Watermelon_Juice_Perfect.png",
-        "customDescription": "+11% Auto Eat Efficiency when at or below 27.5% Hitpoints.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 55,
         "itemType": "Food",
-        "healsFor": 15.4,
-        "conditionalModifiers": [
-          {
-            "description": "+11% Auto Eat Efficiency when at or below 27.5% Hitpoints.",
-            "condition": {
-              "character": "Player",
-              "type": "Hitpoints",
-              "operator": "<=",
-              "value": 27.5
-            },
-            "modifiers": {
-              "autoEatEfficiency": 11
-            }
-          }
-        ]
+        "healsFor": 15.4
       },
       {
         "id": "Pineapple_Juice_Perfect",
@@ -22337,27 +21989,12 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Pineapple_Juice_Perfect.png",
-        "customDescription": "+11% Auto Eat Efficiency when at or below 27.5% Hitpoints.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 66,
         "itemType": "Food",
-        "healsFor": 16.3,
-        "conditionalModifiers": [
-          {
-            "description": "+11% Auto Eat Efficiency when at or below 27.5% Hitpoints.",
-            "condition": {
-              "character": "Player",
-              "type": "Hitpoints",
-              "operator": "<=",
-              "value": 27.5
-            },
-            "modifiers": {
-              "autoEatEfficiency": 11
-            }
-          }
-        ]
+        "healsFor": 16.3
       },
       {
         "id": "Papaya_Juice_Perfect",
@@ -22365,27 +22002,12 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Papaya_Juice_Perfect.png",
-        "customDescription": "+11% Auto Eat Efficiency when at or below 27.5% Hitpoints.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 77,
         "itemType": "Food",
-        "healsFor": 16.9,
-        "conditionalModifiers": [
-          {
-            "description": "+11% Auto Eat Efficiency when at or below 27.5% Hitpoints.",
-            "condition": {
-              "character": "Player",
-              "type": "Hitpoints",
-              "operator": "<=",
-              "value": 27.5
-            },
-            "modifiers": {
-              "autoEatEfficiency": 11
-            }
-          }
-        ]
+        "healsFor": 16.9
       },
       {
         "id": "Green_Smoothie_Perfect",
@@ -22393,27 +22015,12 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Green_Smoothie_Perfect.png",
-        "customDescription": "+11% Auto Eat Efficiency when at or below 27.5% Hitpoints.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 88,
         "itemType": "Food",
-        "healsFor": 17.6,
-        "conditionalModifiers": [
-          {
-            "description": "+11% Auto Eat Efficiency when at or below 27.5% Hitpoints.",
-            "condition": {
-              "character": "Player",
-              "type": "Hitpoints",
-              "operator": "<=",
-              "value": 27.5
-            },
-            "modifiers": {
-              "autoEatEfficiency": 11
-            }
-          }
-        ]
+        "healsFor": 17.6
       },
       {
         "id": "Coconut_Water_Perfect",
@@ -22421,27 +22028,12 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Coconut_Water_Perfect.png",
-        "customDescription": "+11% Auto Eat Efficiency when at or below 27.5% Hitpoints.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 99,
         "itemType": "Food",
-        "healsFor": 18.9,
-        "conditionalModifiers": [
-          {
-            "description": "+11% Auto Eat Efficiency when at or below 27.5% Hitpoints.",
-            "condition": {
-              "character": "Player",
-              "type": "Hitpoints",
-              "operator": "<=",
-              "value": 27.5
-            },
-            "modifiers": {
-              "autoEatEfficiency": 11
-            }
-          }
-        ]
+        "healsFor": 18.9
       },
       {
         "id": "Carrot_Juice_Perfect",
@@ -22449,27 +22041,12 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Carrot_Juice_Perfect.png",
-        "customDescription": "+11% Auto Eat Efficiency when at or below 27.5% Hitpoints.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 110,
         "itemType": "Food",
-        "healsFor": 20.4,
-        "conditionalModifiers": [
-          {
-            "description": "+11% Auto Eat Efficiency when at or below 27.5% Hitpoints.",
-            "condition": {
-              "character": "Player",
-              "type": "Hitpoints",
-              "operator": "<=",
-              "value": 27.5
-            },
-            "modifiers": {
-              "autoEatEfficiency": 11
-            }
-          }
-        ]
+        "healsFor": 20.4
       },
       {
         "id": "Apple_Juice_Perfect",
@@ -22477,27 +22054,12 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Apple_Juice_Perfect.png",
-        "customDescription": "+11% Auto Eat Efficiency when at or below 27.5% Hitpoints.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 120,
         "itemType": "Food",
-        "healsFor": 21,
-        "conditionalModifiers": [
-          {
-            "description": "+11% Auto Eat Efficiency when at or below 27.5% Hitpoints.",
-            "condition": {
-              "character": "Player",
-              "type": "Hitpoints",
-              "operator": "<=",
-              "value": 27.5
-            },
-            "modifiers": {
-              "autoEatEfficiency": 11
-            }
-          }
-        ]
+        "healsFor": 21
       },
       {
         "id": "Dragonfruit_Smoothie_Perfect",
@@ -22505,27 +22067,12 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Dragonfruit_Smoothie_Perfect.png",
-        "customDescription": "+11% Auto Eat Efficiency when at or below 27.5% Hitpoints.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 110,
         "itemType": "Food",
-        "healsFor": 22.6,
-        "conditionalModifiers": [
-          {
-            "description": "+11% Auto Eat Efficiency when at or below 27.5% Hitpoints.",
-            "condition": {
-              "character": "Player",
-              "type": "Hitpoints",
-              "operator": "<=",
-              "value": 27.5
-            },
-            "modifiers": {
-              "autoEatEfficiency": 11
-            }
-          }
-        ]
+        "healsFor": 22.6
       },
       {
         "id": "Super_Delicious_Power_Smoothie_Perfect",
@@ -22533,27 +22080,12 @@
         "category": "Cooking",
         "type": "Food",
         "media": "assets/bank/Super_Delicious_Power_Smoothie_Perfect.png",
-        "customDescription": "+16.5% Auto Eat Efficiency when at or below 27.5% Hitpoints.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 1650,
         "itemType": "Food",
-        "healsFor": 30.8,
-        "conditionalModifiers": [
-          {
-            "description": "+16.5% Auto Eat Efficiency when at or below 27.5% Hitpoints.",
-            "condition": {
-              "character": "Player",
-              "type": "Hitpoints",
-              "operator": "<=",
-              "value": 27.5
-            },
-            "modifiers": {
-              "autoEatEfficiency": 16.5
-            }
-          }
-        ]
+        "healsFor": 30.8
       },
       {
         "itemType": "Equipment",
@@ -22566,7 +22098,6 @@
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
         "sellsFor": 500,
-        "customDescription": "+20% Chance to Brew Mature Alcohol in Cooking, but takes 3x as long to Brew Alcohol. One item is consumed per Brewing action.",
         "tier": "none",
         "validSlots": [
           "Consumable"
@@ -22578,7 +22109,7 @@
           "perfectCookChance": [
             {
               "categoryID": "expandedAreas:Fermenting_Tank",
-              "value": 20
+              "value": 50
             }
           ],
           "skillInterval": [
@@ -22668,8 +22199,7 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 1,
-        "customDescription": "It's a bucket. And it's filled with, like, water, and stuff."
+        "sellsFor": 1
       },
       {
         "itemType": "Item",
@@ -22681,8 +22211,7 @@
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
-        "sellsFor": 1,
-        "customDescription": "A bag of ale yeast used for brewing ales, malts, and grog."
+        "sellsFor": 1
       },
       {
         "id": "Holy_Cow_Brew",
