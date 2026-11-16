@@ -781,6 +781,7 @@ SAE v0.9.6.6 - The Balance Patch Part 6
 - Pick of Colossal Excavation removed from the game
 - Helmet of DOOM!!! Slayer Task Length increased to +100% and Double Kill Chance increased to +100% (both up from 50%)
 - Various Barbarian equipment balance changes.
+- All Barrows equipment rebalanced. Descriptions made more clear.
 
 ### Food
 - Remove cringe descriptions from food
@@ -802,7 +803,7 @@ SAE v0.9.6.6 - The Balance Patch Part 6
 - Barbar Strength increased to +25% of level added as hidden levels
 - Alcoholic Drinks used in Combat now have a 50% chance to apply Drunk at the start of the fight, lasts until the end. Mature drinks have a 100% chance. Drunk: +5% Attack Interval, -5% Accuracy, -5% Max Hit, -5% Evasion, -5% Total Resistance.
 - Alcoholic Drinks used outside of Combat give +5% Skill Interval and -5% Mastery XP.
-- Holy Cow Brew changed to -25% Prayer Point Cost -1, Mature changed to -50% -2.
+- All alcoholic drinks rebalanced to be more useful, but not broken.
 
 
 ## Shop Purchases
