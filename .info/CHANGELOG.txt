@@ -812,6 +812,11 @@ SAE v0.9.6.6 - The Balance Patch Part 6
 
 # Fixes
 
+## Combat Areas
+
+### Challenges
+- Mole Lair now requires level 1 Slayer. This is a fix for the HCCO mod. Users using both SAE and HCCO should now not crash when trying to access the Mole Lair. Thanks @azcn for the fix! Credits to you, good sir.
+
 ## Items 
 
 ### Equipment

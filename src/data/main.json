@@ -2952,13 +2952,6 @@
       },
       {
         "insertAt": "After",
-        "afterID": "melvorD:Treasure_Chest",
-        "ids": [
-          "expandedAreas:Mysterious_Chest"
-        ]
-      },
-      {
-        "insertAt": "After",
         "afterID": "melvorF:Fighter_Amulet",
         "ids": [
           "expandedAreas:Earring_of_Protection"
@@ -2969,13 +2962,6 @@
         "afterID": "melvorF:Amulet_Of_Incantation",
         "ids": [
           "expandedAreas:Amulet_of_the_Damned"
-        ]
-      },
-      {
-        "insertAt": "After",
-        "afterID": "melvorD:Rusty_Key",
-        "ids": [
-          "expandedAreas:Skeleton_Key"
         ]
       },
       {
@@ -4208,13 +4194,6 @@
       },
       {
         "insertAt": "After",
-        "afterID": "melvorF:Miners_Helmet",
-        "ids": [
-          "expandedAreas:Pick_of_Colossal_Excavation"
-        ]
-      },
-      {
-        "insertAt": "After",
         "afterID": "melvorF:Skull_Cape",
         "ids": [
           "expandedAreas:Helmet_of_Doom"
@@ -4606,13 +4585,10 @@
         "afterID": "melvorF:Chest_Of_Gems",
         "ids": [
           "expandedAreas:Treasure_Hoard",
-          "expandedAreas:Weapons_Cache",
           "expandedAreas:Lamp",
           "expandedAreas:Crown",
           "expandedAreas:Goblet",
-          "expandedAreas:Treasure",
-          "expandedAreas:Bag_of_Endless_Gold1",
-          "expandedAreas:Bag_of_Endless_Gold2"
+          "expandedAreas:Treasure"
         ]
       },
       {
@@ -34047,7 +34023,6 @@
           "flatReflectDamage": 10
         }
       },
-      
       {
         "itemIDs": [
           "expandedAreas:Ahrims_Hood",
@@ -60695,6 +60670,11 @@
           {
             "type": "SlayerItem",
             "itemID": "expandedAreas:Candle"
+          },
+          {
+            "type": "SkillLevel",
+            "skillID": "melvorD:Slayer",
+            "level": 1
           }
         ],
         "pet": {
