@@ -16543,7 +16543,7 @@
             }
           ]
         },
-        "charges": 1,
+        "charges": 4,
         "tier": 0,
         "action": "melvorD:Combat",
         "consumesOn": [
@@ -16618,7 +16618,7 @@
             }
           ]
         },
-        "charges": 2,
+        "charges": 8,
         "tier": 0,
         "action": "melvorD:Combat",
         "consumesOn": [
@@ -16693,7 +16693,7 @@
             }
           ]
         },
-        "charges": 3,
+        "charges": 12,
         "tier": 0,
         "action": "melvorD:Combat",
         "consumesOn": [
@@ -16768,7 +16768,7 @@
             }
           ]
         },
-        "charges": 4,
+        "charges": 16,
         "tier": 0,
         "action": "melvorD:Combat",
         "consumesOn": [
@@ -17239,8 +17239,8 @@
         ],
         "combatEffects": [
           {
-            "customDescription": "70% chance when hit by an attack to gain +25% Flat Resistance for 1 turn",
-            "appliesWhen": "HitByAttack",
+            "customDescription": "70% chance when attacked to gain +25% Flat Resistance for 1 turn",
+            "appliesWhen": "BeingAttacked",
             "effectID": "expandedAreas:ElysianSpiritShield",
             "chance": 70
           }
@@ -17310,8 +17310,8 @@
         },
         "combatEffects": [
           {
-            "customDescription": "75% chance when hit by an attack to gain +30% Flat Resistance for 1 turn",
-            "appliesWhen": "HitByAttack",
+            "customDescription": "75% chance when attacked to gain +30% Flat Resistance for 1 turn",
+            "appliesWhen": "BeingAttacked",
             "effectID": "expandedAreas:DivineSpiritShield",
             "chance": 75
           }
@@ -19787,7 +19787,7 @@
         "category": "Combat",
         "type": "Armour",
         "media": "assets/bank/Barbarian_Berserker_Helm.png",
-        "customDescription": "Passive: While at or below 50% of your Maximum Hit Points, gain: +10% Melee Maximum Hit, -10% Attack Interval, +10% Melee Crit Chance, and -30% Global Evasion.<br><span class=\"text-warning\">When equipped with <strong>Barbarian Berserker Axe</strong>, gain +2% Melee Lifesteal.</span>",
+        "customDescription": "Passive: While at or below 50% of your Maximum Hit Points, gain: +10% Melee Maximum Hit, -10% Attack Interval, +5% Melee Crit Chance, and -30% Global Evasion.<br><span class=\"text-warning\">When equipped with <strong>Barbarian Berserker Axe</strong>, gain +2% Melee Lifesteal.</span>",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -19826,6 +19826,10 @@
             "value": 8
           },
           {
+            "key": "damageReduction",
+            "value": 5
+          },
+          {
             "key": "magicAttackBonus",
             "value": -16
           },
@@ -19854,7 +19858,7 @@
         "category": "Combat",
         "type": "Armour",
         "media": "assets/bank/Barbarian_Warrior_Helm.png",
-        "customDescription": "<span class=\"text-warning\">When equipped with <strong>Barbarian Longblade</strong>, gain +50% Melee Accuracy Rating.</span>",
+        "customDescription": "<span class=\"text-warning\">When equipped with <strong>Barbarian Longblade</strong>, gain +50% Slash Attack Bonus from Equipment.</span>",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -20063,7 +20067,7 @@
         "category": "Combat",
         "type": "Weapon",
         "media": "assets/bank/Barbarian_Longblade.png",
-        "customDescription": "<span class=\"text-warning\">When equipped with <strong>Barbarian Warrior Helm</strong>, gain +50% Melee Accuracy Rating.</span>",
+        "customDescription": "<span class=\"text-warning\">When equipped with <strong>Barbarian Warrior Helm</strong>, gain +50% Slash Attack Bonus from Equipment.</span>",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -20240,7 +20244,6 @@
         "category": "Fletching",
         "type": "Tool",
         "media": "assets/bank/Barbarian_Fletching_Knife.png",
-        "customDescription": "-0.5s Fletching Interval when fletching Shortbows, Longbows, and Standard Arrows when equipped.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -20269,12 +20272,12 @@
             {
               "skillID": "melvorD:Fletching",
               "value": -500,
-              "categoryID": "melvorF:Shortbows"
+              "categoryID": "expandedAreas:Thrownaxes"
             },
             {
               "skillID": "melvorD:Fletching",
               "value": -500,
-              "categoryID": "melvorF:Longbows"
+              "categoryID": "melvorF:Javelins"
             }
           ]
         },
@@ -20286,7 +20289,6 @@
         "category": "Herblore",
         "type": "Potion",
         "media": "assets/bank/Barbar.png",
-        "customDescription": "10% of your Strength Level added as Hidden Strength levels<br>50% of your Attack Level subtracted as Hidden Attack Levels",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -20308,7 +20310,7 @@
             },
             {
               "skillID": "melvorD:Strength",
-              "value": 10
+              "value": 25
             }
           ]
         }
@@ -20326,7 +20328,6 @@
         "itemType": "Potion",
         "tier": 0,
         "action": "melvorD:Combat",
-        "customDescription": "10% of your Strength Level added as Hidden Strength levels<br>50% of your Attack Level subtracted as Hidden Attack Levels",
         "consumesOn": [
           {
             "type": "PlayerAttack"
@@ -20341,7 +20342,7 @@
             },
             {
               "skillID": "melvorD:Strength",
-              "value": 10
+              "value": 25
             }
           ]
         }
@@ -20454,8 +20455,8 @@
         "equipRequirements": [],
         "equipmentStats": [],
         "modifiers": {
-          "slayerTaskLength": 50,
-          "doubleSlayerTaskKillChance": 50
+          "slayerTaskLength": 100,
+          "doubleSlayerTaskKillChance": 100
         }
       },
       {
@@ -34988,7 +34989,7 @@
           "expandedAreas:Barbarian_Warrior_Helm"
         ],
         "playerModifiers": {
-          "meleeAccuracyRating": [
+          "slashAttackBonus": [
             {
               "value": 50
             }
@@ -44752,7 +44753,7 @@
       {
         "id": "Candle",
         "media": "assets/bank/candle.png",
-        "category": "melvorD:Materials",
+        "category": "melvorF:Slayer",
         "contains": {
           "items": [
             {
@@ -44765,9 +44766,9 @@
           "items": [],
           "currencies": [
             {
-              "currency": "melvorD:GP",
+              "currency": "melvorD:SlayerCoins",
               "type": "Fixed",
-              "cost": 1000
+              "cost": 10
             }
           ]
         },
@@ -44781,7 +44782,7 @@
       {
         "id": "Helmet_of_Doom",
         "media": "assets/bank/Helmet_of_Doom.png",
-        "customDescription": "Slay them...must slay them all! ... Shred... And... Crush! The monsters...they are everywhere. Must...slay them all!",
+        "customDescription": "Slay them...must slay them all! ... Shred... And... Crush! The monsters...they are everywhere. Must...slay them all!<br>When equipped: x2 Slayer Task Length, and each kill counts as two.",
         "category": "melvorF:Slayer",
         "contains": {
           "items": [
@@ -44796,7 +44797,7 @@
           "currencies": [
             {
               "currency": "melvorD:SlayerCoins",
-              "cost": 5000000,
+              "cost": 500000,
               "type": "Fixed"
             }
           ]

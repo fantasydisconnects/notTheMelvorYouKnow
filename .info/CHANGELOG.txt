@@ -779,6 +779,7 @@ SAE v0.9.6.6 - The Balance Patch Part 6
 ### Equipment
 - Golden Sceptre currency gain reduced from 25% -> 5%, added 10% dmg gained as GP
 - Pick of Colossal Excavation removed from the game
+- Helmet of DOOM!!! Slayer Task Length increased to +100% and Double Kill Chance increased to +100% (both up from 50%)
 
 ### Misc
 - Mysterious Skeleton Key removed from the game
@@ -792,4 +793,15 @@ SAE v0.9.6.6 - The Balance Patch Part 6
 
 ### Potions
 - Anti-Venom changed to give the same bonus from Tier I-IV. Previously, bonuses increased all the way to IV, which was far too powerful.
-- Aeris Brew changed to add and subtract Flat Hidden Skill Levels. Auto Eat Threshold reduction reduced from -10% to -5%. At 35% Threshold with 115 HP and Auto Eat Tier III, this makes the player eat at 400 HP (the same as 40% Threshold at 99 HP). Potion charges significantly reduced: Tier I: 1, Tier II: 2, Tier III: 3, and Tier IV: 4. 
+- Aeris Brew changed to add and subtract Flat Hidden Skill Levels. Auto Eat Threshold reduction reduced from -10% to -5%. At 35% Threshold with 115 HP and Auto Eat Tier III, this makes the player eat at 400 HP (the same as 40% Threshold at 99 HP). Potion charges significantly reduced: Tier I: 4, Tier II: 8, Tier III: 12, and Tier IV: 16.
+
+## Shop Purchases
+- Candle moved to Slayer category, price reduced to 10 SC
+- Helmet of DOOM price reduced to 500K SC, description updated to include effects
+
+# Fixes
+
+## Items 
+
+### Equipment
+- Divine and Elysian Spirit Shield gain resistance effect fixed to trigger on being attacked as intended. Previously triggered after already hit.
