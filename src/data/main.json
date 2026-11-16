@@ -6738,14 +6738,14 @@
           },
           {
             "name": "maxStacks",
-            "initialValue": 40
+            "initialValue": 25
           }
         ],
         "statGroups": [
           {
             "name": "stacks",
             "modifiers": {
-              "flatMaxHit": -1
+              "damageDealt": -1
             }
           }
         ],
@@ -8732,7 +8732,7 @@
       {
         "id": "BlightedAura",
         "name": "Blighted Aura",
-        "customDescription": "25% Chance to inflict Blighted (-10 Maximum Hit, up to 40 Stacks) on hit.",
+        "customDescription": "25% Chance to inflict Blighted (-1% damage dealt, up to 25 Stacks) on hit.",
         "combatEffects": [
           {
             "appliesWhen": "HitWithAttack",
@@ -8756,7 +8756,7 @@
       {
         "id": "CorruptedHeart",
         "name": "Corrupted Heart",
-        "customDescription": "25% Chance to apply a 20% Slow for 2 turns on hit.",
+        "customDescription": "25% Chance to apply a 25% Slow for 2 turns on hit.",
         "combatEffects": [
           {
             "appliesWhen": "HitWithAttack",
@@ -8769,7 +8769,7 @@
               },
               {
                 "name": "magnitude",
-                "value": 20
+                "value": 25
               }
             ]
           }
@@ -8778,9 +8778,14 @@
       {
         "id": "DefiledBody",
         "name": "Defiled Body",
-        "customDescription": "Attacks roll twice and take the higher result.",
+        "customDescription": "Attacks have a 25% chance to ignore Resistance.",
         "modifiers": {
-          "attackRolls": 1
+          "ignoreResistanceWhenAttackingChance": [
+            {
+              "damageTypeID": "melvorD:Normal",
+              "value": 25
+            }
+          ]
         }
       },
       {
@@ -17358,7 +17363,7 @@
         "category": "Combat",
         "type": "Magic Armour",
         "media": "assets/bank/ahrims_hood.png",
-        "customDescription": "<span class=\"text-warning\">When all of <strong>Ahrim the Blighted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict Blighted (the enemy gets -10 Maximum Hit, stacking) on hit.</span>",
+        "customDescription": "<span class=\"text-warning\">When all of <strong>Ahrim the Blighted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict a stack of Blighted (-1% Damage Dealt per stack, up to 25 stacks) on hit.</span>",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -17407,7 +17412,7 @@
         "category": "Combat",
         "type": "Magic Armour",
         "media": "assets/bank/ahrims_robetop.png",
-        "customDescription": "<span class=\"text-warning\">When all of <strong>Ahrim the Blighted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict Blighted (the enemy gets -10 Maximum Hit, stacking) on hit.</span>",
+        "customDescription": "<span class=\"text-warning\">When all of <strong>Ahrim the Blighted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict a stack of Blighted (-1% Damage Dealt per stack, up to 25 stacks) on hit.</span>",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -17455,7 +17460,7 @@
         "category": "Combat",
         "type": "Magic Armour",
         "media": "assets/bank/ahrims_robeskirt.png",
-        "customDescription": "<span class=\"text-warning\">When all of <strong>Ahrim the Blighted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict Blighted (the enemy gets -10 Maximum Hit, stacking) on hit.</span>",
+        "customDescription": "<span class=\"text-warning\">When all of <strong>Ahrim the Blighted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict a stack of Blighted (-1% Damage Dealt per stack, up to 25 stacks) on hit.</span>",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -17504,7 +17509,7 @@
         "category": "Combat",
         "type": "Magic Staff",
         "media": "assets/bank/ahrims_staff.png",
-        "customDescription": "<span class=\"text-warning\">When all of <strong>Ahrim the Blighted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict Blighted (the enemy gets -10 Maximum Hit, stacking) on hit.</span>",
+        "customDescription": "<span class=\"text-warning\">When all of <strong>Ahrim the Blighted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict a stack of Blighted (-1% Damage Dealt per stack, up to 25 stacks) on hit.</span>",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -17547,7 +17552,7 @@
         "category": "Combat",
         "type": "Armour",
         "media": "assets/bank/dharoks_helm.png",
-        "customDescription": "<span class=\"text-warning\">When all of <strong>Dharok the Wretched's Equipment</strong> is worn, the following set bonus becomes active: for every 1 Hit Point below your maximum, gain +1% Maximum Hit.</span>",
+        "customDescription": "<span class=\"text-warning\">When all of <strong>Dharok the Wretched's Equipment</strong> is worn, the following set bonus becomes active: for every 10% of your HP missing, gain +10% Maximum Hit.</span>",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -17602,7 +17607,7 @@
         "category": "Combat",
         "type": "Armour",
         "media": "assets/bank/dharoks_platebody.png",
-        "customDescription": "<span class=\"text-warning\">When all of <strong>Dharok the Wretched's Equipment</strong> is worn, the following set bonus becomes active: for every 1 Hit Point below your maximum, gain +1% Maximum Hit.</span>",
+        "customDescription": "<span class=\"text-warning\">When all of <strong>Dharok the Wretched's Equipment</strong> is worn, the following set bonus becomes active: for every 10% of your HP missing, gain +10% Maximum Hit.</span>",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -17657,7 +17662,7 @@
         "category": "Combat",
         "type": "Armour",
         "media": "assets/bank/dharoks_platelegs.png",
-        "customDescription": "<span class=\"text-warning\">When all of <strong>Dharok the Wretched's Equipment</strong> is worn, the following set bonus becomes active: for every 1 Hit Point below your maximum, gain +1% Maximum Hit.</span>",
+        "customDescription": "<span class=\"text-warning\">When all of <strong>Dharok the Wretched's Equipment</strong> is worn, the following set bonus becomes active: for every 10% of your HP missing, gain +10% Maximum Hit.</span>",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -17713,7 +17718,7 @@
         "category": "Combat",
         "type": "Weapon",
         "media": "assets/bank/dharoks_greataxe.png",
-        "customDescription": "<span class=\"text-warning\">When all of <strong>Dharok the Wretched's Equipment</strong> is worn, the following set bonus becomes active: for every 1 Hit Point below your maximum, gain +1% Maximum Hit.</span>",
+        "customDescription": "<span class=\"text-warning\">When all of <strong>Dharok the Wretched's Equipment</strong> is worn, the following set bonus becomes active: for every 10% of your HP missing, gain +10% Maximum Hit.</span>",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -17990,7 +17995,7 @@
         "category": "Combat",
         "type": "Armour",
         "media": "assets/bank/karils_coif.png",
-        "customDescription": "<span class=\"text-warning\">When all of <strong>Karil the Tainted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict Tainted (-10% Ranged Evasion Rating, stacking) on hit.</span>",
+        "customDescription": "<span class=\"text-warning\">When all of <strong>Karil the Tainted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict a stack of Tainted (-1% Ranged Evasion Rating, up to 25 stacks) on hit.</span>",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -18046,7 +18051,7 @@
         "category": "Combat",
         "type": "Armour",
         "media": "assets/bank/karils_leathertop.png",
-        "customDescription": "<span class=\"text-warning\">When all of <strong>Karil the Tainted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict Tainted (-10% Ranged Evasion Rating, stacking) on hit.</span>",
+        "customDescription": "<span class=\"text-warning\">When all of <strong>Karil the Tainted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict a stack of Tainted (-1% Ranged Evasion Rating, up to 25 stacks) on hit.</span>",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -18102,7 +18107,7 @@
         "category": "Combat",
         "type": "Armour",
         "media": "assets/bank/karils_leatherskirt.png",
-        "customDescription": "<span class=\"text-warning\">When all of <strong>Karil the Tainted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict Tainted (-10% Ranged Evasion Rating, stacking) on hit.</span>",
+        "customDescription": "<span class=\"text-warning\">When all of <strong>Karil the Tainted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict a stack of Tainted (-1% Ranged Evasion Rating, up to 25 stacks) on hit.</span>",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -18156,11 +18161,11 @@
         "attackType": "ranged",
         "ammoTypeRequired": "Javelins",
         "id": "Karils_Crossbow",
-        "name": "Karil's Dual Hand Crossbows",
+        "name": "Karil's Dual Crossbows",
         "category": "Combat",
         "type": "Ranged Weapon",
         "media": "assets/bank/karils_hand_crossbow.png",
-        "customDescription": "Can only use <strong>Bolt Racks</strong> as Ammo.<br><span class=\"text-warning\">When all of <strong>Karil the Tainted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict 1 stack of Tainted Shot (-10% Ranged Evasion Rating, max 10 stacks) on hit.</span>",
+        "customDescription": "<span class=\"text-warning\">When all of <strong>Karil the Tainted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict a stack of Tainted (-1% Ranged Evasion Rating, up to 25 stacks) on hit.</span>",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -18227,7 +18232,7 @@
             "value": 55
           }
         ],
-        "ammoType": "Javelins",
+        "ammoType": "Bolts",
         "modifiers": {
           "ammoPreservationChance": 15
         }
@@ -18239,7 +18244,7 @@
         "category": "Combat",
         "type": "Armour",
         "media": "assets/bank/torags_helm.png",
-        "customDescription": "<span class=\"text-warning\">When all of <strong>Torag the Corrupted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict a 20% Slow on hit that lasts for 2 turns.</span>",
+        "customDescription": "<span class=\"text-warning\">When all of <strong>Torag the Corrupted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict a 25% Slow on hit that lasts for 2 turns.</span>",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -18294,7 +18299,7 @@
         "category": "Combat",
         "type": "Armour",
         "media": "assets/bank/torags_platebody.png",
-        "customDescription": "<span class=\"text-warning\">When all of <strong>Torag the Corrupted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict a 20% Slow on hit that lasts for 2 turns.</span>",
+        "customDescription": "<span class=\"text-warning\">When all of <strong>Torag the Corrupted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict a 25% Slow on hit that lasts for 2 turns.</span>",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -18349,7 +18354,7 @@
         "category": "Combat",
         "type": "Armour",
         "media": "assets/bank/torags_platelegs.png",
-        "customDescription": "<span class=\"text-warning\">When all of <strong>Torag the Corrupted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict a 20% Slow on hit that lasts for 2 turns.</span>",
+        "customDescription": "<span class=\"text-warning\">When all of <strong>Torag the Corrupted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict a 25% Slow on hit that lasts for 2 turns.</span>",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -18405,7 +18410,7 @@
         "category": "Combat",
         "type": "Weapon",
         "media": "assets/bank/torags_twinhammer.png",
-        "customDescription": "<span class=\"text-warning\">When all of <strong>Torag the Corrupted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict a 20% Slow on hit that lasts for 2 turns.</span>",
+        "customDescription": "<span class=\"text-warning\">When all of <strong>Torag the Corrupted's Equipment</strong> is worn, the following set bonus becomes active: +25% Chance to inflict a 25% Slow on hit that lasts for 2 turns.</span>",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -18466,7 +18471,7 @@
         "category": "Combat",
         "type": "Armour",
         "media": "assets/bank/veracs_helm.png",
-        "customDescription": "<span class=\"text-warning\">+3% Prayer Point Preservation Chance.<br><hr>When all of <strong>Verac the Defiled's Equipment</strong> is worn, the following set bonus becomes active: Your chance to hit an enemy is lucky (Roll twice, take the better result).</span>",
+        "customDescription": "-5% Prayer Point cost when equipped. <span class=\"text-warning\">When all of <strong>Verac the Defiled's Equipment</strong> is worn, +25% chance to ignore Resistance when attacking.</span>",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -18510,7 +18515,7 @@
           }
         ],
         "modifiers": {
-          "prayerPointPreservationChance": 3
+          "prayerPointCost": -5
         }
       },
       {
@@ -18520,7 +18525,7 @@
         "category": "Combat",
         "type": "Armour",
         "media": "assets/bank/veracs_brassard.png",
-        "customDescription": "<span class=\"text-warning\">+5% Prayer Point Preservation Chance.<br><hr>When all of <strong>Verac the Defiled's Equipment</strong> is worn, the following set bonus becomes active: Your chance to hit an enemy is lucky (Roll twice, take the better result).</span>",
+        "customDescription": "-5% Prayer Point cost when equipped. <span class=\"text-warning\">When all of <strong>Verac the Defiled's Equipment</strong> is worn, +25% chance to ignore Resistance when attacking.</span>",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -18564,7 +18569,7 @@
           }
         ],
         "modifiers": {
-          "prayerPointPreservationChance": 5
+          "prayerPointCost": -5
         }
       },
       {
@@ -18574,7 +18579,7 @@
         "category": "Combat",
         "type": "Armour",
         "media": "assets/bank/veracs_plateskirt.png",
-        "customDescription": "<span class=\"text-warning\">+4% Prayer Point Preservation Chance.<br><hr>When all of <strong>Verac the Defiled's Equipment</strong> is worn, the following set bonus becomes active: Your chance to hit an enemy is lucky (Roll twice, take the better result).</span>",
+        "customDescription": "-5% Prayer Point cost when equipped. <span class=\"text-warning\">When all of <strong>Verac the Defiled's Equipment</strong> is worn, +25% chance to ignore Resistance when attacking.</span>",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -18618,7 +18623,7 @@
           }
         ],
         "modifiers": {
-          "prayerPointPreservationChance": 4
+          "prayerPointCost": -5
         }
       },
       {
@@ -18629,7 +18634,7 @@
         "category": "Combat",
         "type": "Weapon",
         "media": "assets/bank/veracs_flail.png",
-        "customDescription": "<span class=\"text-warning\">+6% Prayer Point Preservation Chance.<br><hr>When all of <strong>Verac the Defiled's Equipment</strong> is worn, the following set bonus becomes active: Your chance to hit an enemy is lucky (Roll twice, take the better result).</span>",
+        "customDescription": "-5% Prayer Point cost when equipped. <span class=\"text-warning\">When all of <strong>Verac the Defiled's Equipment</strong> is worn, +25% chance to ignore Resistance when attacking.</span>",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -18674,7 +18679,7 @@
           "expandedAreas:DefilingStrike"
         ],
         "modifiers": {
-          "prayerPointPreservationChance": 6
+          "prayerPointCost": -5
         }
       },
       {
@@ -18684,7 +18689,7 @@
         "category": "Combat",
         "type": "Amulet",
         "media": "assets/bank/amulet_of_the_damned.png",
-        "customDescription": "When equipped with one of the Barrows Siblings' Equipment sets, gain one of the following effects:<br><ul><li><strong>Ahrim the Blighted</strong>: +5% Magic Max Hit (tripled against Melee).</li><li><strong>Dharok the Wretched</strong>: +5% Reflect Damage.</li><li><strong>Guthan the Infested</strong>: +100 Maximum Hitpoints but -10% Auto Eat Threshold.</li><li><strong>Karil the Tainted</strong>: -0.2s Attack Interval.</li><li><strong>Torag the Corrupted</strong>: +1% Global Evasion for every 1% missing HP.</li><li><strong>Verac the Defiled</strong>: +7% Prayer Preservation Chance.</li></ul>",
+        "customDescription": "When equipped with:<br><strong>- Ahrim the Blighted's Set</strong>: +5% Magic Max Hit (+15% against Melee).<br><strong>- Dharok the Wretched's Set</strong>: +5% Reflect Damage.<br><strong>- Guthan the Infested's Set</strong>:+25% Melee Lifesteal.<br><strong>- Karil the Tainted's Set</strong>: -0.2s Ranged Attack Interval.<br><strong>- Torag the Corrupted's Set</strong>: +10% Global Evasion for every 10% missing HP.<br><strong>- Verac the Defiled's Set</strong>: +25% chance to ignore Resistance when attacking.<br><strong>- Linza the Disgraced's Set: +100 Flat Reflect Damage</strong>",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -18724,10 +18729,7 @@
             "key": "magicDefenceBonus",
             "value": 3
           }
-        ],
-        "modifiers": {
-          "prayerPointPreservationChance": 3
-        }
+        ]
       },
       {
         "id": "Charnel_Chest",
@@ -31776,17 +31778,7 @@
         "sellsFor": 22,
         "itemType": "Potion",
         "modifiers": {
-          "burnDOTDamageTaken": -10,
-          "effectIgnoreChance": [
-            {
-              "effectGroupID": "melvorD:BurnDOT",
-              "value": 10
-            },
-            {
-              "effectGroupID": "melvorD:Frostburn",
-              "value": 10
-            }
-          ]
+          "burnDOTDamageTaken": -10
         },
         "charges": 10,
         "tier": 0,
@@ -31809,17 +31801,7 @@
         "sellsFor": 32,
         "itemType": "Potion",
         "modifiers": {
-          "burnDOTDamageTaken": -15,
-          "effectIgnoreChance": [
-            {
-              "effectGroupID": "melvorD:BurnDOT",
-              "value": 15
-            },
-            {
-              "effectGroupID": "melvorD:Frostburn",
-              "value": 15
-            }
-          ]
+          "burnDOTDamageTaken": -15
         },
         "charges": 15,
         "tier": 1,
@@ -31842,17 +31824,7 @@
         "sellsFor": 42,
         "itemType": "Potion",
         "modifiers": {
-          "burnDOTDamageTaken": -20,
-          "effectIgnoreChance": [
-            {
-              "effectGroupID": "melvorD:BurnDOT",
-              "value": 20
-            },
-            {
-              "effectGroupID": "melvorD:Frostburn",
-              "value": 20
-            }
-          ]
+          "burnDOTDamageTaken": -20
         },
         "charges": 20,
         "tier": 2,
@@ -31875,17 +31847,7 @@
         "sellsFor": 52,
         "itemType": "Potion",
         "modifiers": {
-          "burnDOTDamageTaken": -25,
-          "effectIgnoreChance": [
-            {
-              "effectGroupID": "melvorD:BurnDOT",
-              "value": 25
-            },
-            {
-              "effectGroupID": "melvorD:Frostburn",
-              "value": 25
-            }
-          ]
+          "burnDOTDamageTaken": -25
         },
         "charges": 25,
         "tier": 3,
@@ -32044,7 +32006,7 @@
         "sellsFor": 200,
         "itemType": "Potion",
         "modifiers": {
-          "dragonBreathDamage": -20
+          "dragonBreathDamage": -10
         },
         "charges": 10,
         "tier": 0,
@@ -32067,7 +32029,7 @@
         "sellsFor": 300,
         "itemType": "Potion",
         "modifiers": {
-          "dragonBreathDamage": -30
+          "dragonBreathDamage": -20
         },
         "charges": 15,
         "tier": 1,
@@ -32090,7 +32052,7 @@
         "sellsFor": 400,
         "itemType": "Potion",
         "modifiers": {
-          "dragonBreathDamage": -40
+          "dragonBreathDamage": -30
         },
         "charges": 20,
         "tier": 2,
@@ -32113,7 +32075,7 @@
         "sellsFor": 500,
         "itemType": "Potion",
         "modifiers": {
-          "dragonBreathDamage": -50
+          "dragonBreathDamage": -40
         },
         "charges": 25,
         "tier": 3,
@@ -32136,7 +32098,7 @@
         "sellsFor": 900,
         "itemType": "Potion",
         "modifiers": {
-          "dragonBreathDamage": -60
+          "dragonBreathDamage": -40
         },
         "charges": 5,
         "tier": 0,
@@ -32159,7 +32121,7 @@
         "sellsFor": 1300,
         "itemType": "Potion",
         "modifiers": {
-          "dragonBreathDamage": -70
+          "dragonBreathDamage": -50
         },
         "charges": 10,
         "tier": 1,
@@ -32182,7 +32144,7 @@
         "sellsFor": 1700,
         "itemType": "Potion",
         "modifiers": {
-          "dragonBreathDamage": -80
+          "dragonBreathDamage": -60
         },
         "charges": 15,
         "tier": 2,
@@ -32205,7 +32167,7 @@
         "sellsFor": 2100,
         "itemType": "Potion",
         "modifiers": {
-          "dragonBreathDamage": -90
+          "dragonBreathDamage": -70
         },
         "charges": 20,
         "tier": 3,
@@ -34082,38 +34044,10 @@
           "expandedAreas:Linzas_Longsword"
         ],
         "playerModifiers": {
-          "rolledReflectDamage": 50
+          "flatReflectDamage": 10
         }
       },
-      {
-        "itemIDs": [
-          "expandedAreas:Magmatic_Helm",
-          "expandedAreas:Magmatic_Fangblade"
-        ],
-        "enemyModifiers": {
-          "burnDOTDamageTaken": 5,
-          "deadlyPoisonDOTDamageTaken": 5
-        }
-      },
-      {
-        "itemIDs": [
-          "expandedAreas:Tanzanite_Helm",
-          "expandedAreas:Wand_of_the_Swamp"
-        ],
-        "enemyModifiers": {
-          "frostburnDamage": 5,
-          "deadlyPoisonDOTDamageTaken": 5
-        }
-      },
-      {
-        "itemIDs": [
-          "expandedAreas:Serpentine_Helm",
-          "expandedAreas:Toxic_Quickbow"
-        ],
-        "enemyModifiers": {
-          "deadlyPoisonDOTDamageTaken": 10
-        }
-      },
+      
       {
         "itemIDs": [
           "expandedAreas:Ahrims_Hood",
@@ -34295,7 +34229,7 @@
               },
               {
                 "name": "magnitude",
-                "value": 20
+                "value": 25
               }
             ]
           }
@@ -34309,7 +34243,12 @@
           "expandedAreas:Veracs_Flail"
         ],
         "playerModifiers": {
-          "attackRolls": 1
+          "ignoreResistanceWhenAttackingChance": [
+            {
+              "damageTypeID": "melvorD:Normal",
+              "value": 25
+            }
+          ]
         }
       },
       {
@@ -34345,7 +34284,7 @@
           "expandedAreas:Amulet_of_the_Damned"
         ],
         "playerModifiers": {
-          "lifesteal": 25
+          "meleeLifesteal": 25
         }
       },
       {
@@ -34479,7 +34418,7 @@
           "expandedAreas:Amulet_of_the_Damned"
         ],
         "playerModifiers": {
-          "damageTakenAddedAsPrayerPoints": 25
+          "prayerPointCost": -25
         }
       },
       {
@@ -34501,7 +34440,7 @@
         "playerModifiers": {
           "critChance": [
             {
-              "value": 10
+              "value": 5
             }
           ]
         }
@@ -34514,7 +34453,7 @@
         "playerModifiers": {
           "meleeLifesteal": [
             {
-              "value": 5
+              "value": 2
             }
           ]
         }
