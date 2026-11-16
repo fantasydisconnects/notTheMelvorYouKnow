@@ -4763,6 +4763,11 @@
     ],
     "combatEffectGroups": [
       {
+        "id": "Drunk",
+        "name": "Drunk",
+        "adjective": "Drunk"
+      },
+      {
         "id": "RandomT2PotionEffect",
         "name": "Random Tier II Potion Effect",
         "adjective": "under the effects of a random Tier II potion"
@@ -4825,6 +4830,7 @@
           }
         ],
         "effectGroups": [
+          "expandedAreas:Drunk",
           "melvorD:Debuff"
         ]
       },
@@ -9436,7 +9442,6 @@
         "id": "The_Dungeon",
         "name": "The Dungeon",
         "media": "assets/combat/dungeons/The_Dungeon.png",
-        "oneTimeRewardID": "expandedAreas:Skeleton_Key",
         "monsterIDs": [
           "melvorD:Golbin",
           "melvorD:RangedGolbin",
@@ -16094,254 +16099,6 @@
         "attackType": "melee"
       },
       {
-        "id": "Toxic_Hoard",
-        "name": "Toxic Hoard",
-        "category": "Openable",
-        "type": "Chest",
-        "media": "assets/bank/Toxic_Hoard.png",
-        "ignoreCompletion": false,
-        "obtainFromItemLog": false,
-        "golbinRaidExclusive": false,
-        "sellsFor": 5000,
-        "itemType": "Openable",
-        "dropTable": [
-          {
-            "itemID": "expandedAreas:Tanzanite_Fang",
-            "minQuantity": 1,
-            "maxQuantity": 1,
-            "weight": 40
-          },
-          {
-            "itemID": "expandedAreas:Serpentine_Fang",
-            "minQuantity": 1,
-            "maxQuantity": 1,
-            "weight": 40
-          },
-          {
-            "itemID": "expandedAreas:Magmatic_Fang",
-            "minQuantity": 1,
-            "maxQuantity": 1,
-            "weight": 40
-          },
-          {
-            "itemID": "expandedAreas:Zulrahs_Head_Tanzanite",
-            "minQuantity": 1,
-            "maxQuantity": 1,
-            "weight": 40
-          },
-          {
-            "itemID": "expandedAreas:Zulrahs_Head_Serpentine",
-            "minQuantity": 1,
-            "maxQuantity": 1,
-            "weight": 40
-          },
-          {
-            "itemID": "expandedAreas:Zulrahs_Head_Magmatic",
-            "minQuantity": 1,
-            "maxQuantity": 1,
-            "weight": 40
-          },
-          {
-            "itemID": "melvorD:Death_Rune",
-            "minQuantity": 125,
-            "maxQuantity": 250,
-            "weight": 1000
-          },
-          {
-            "itemID": "melvorF:Havoc_Rune",
-            "minQuantity": 100,
-            "maxQuantity": 200,
-            "weight": 1000
-          },
-          {
-            "itemID": "melvorD:Chaos_Rune",
-            "minQuantity": 200,
-            "maxQuantity": 400,
-            "weight": 1000
-          },
-          {
-            "itemID": "melvorD:Oxilyme_Herb",
-            "minQuantity": 15,
-            "maxQuantity": 30,
-            "weight": 333
-          },
-          {
-            "itemID": "melvorF:Poraxx_Herb",
-            "minQuantity": 12,
-            "maxQuantity": 25,
-            "weight": 333
-          },
-          {
-            "itemID": "melvorF:Pigtayle_Herb",
-            "minQuantity": 5,
-            "maxQuantity": 10,
-            "weight": 333
-          },
-          {
-            "itemID": "melvorF:Barrentoe_Herb",
-            "minQuantity": 5,
-            "maxQuantity": 10,
-            "weight": 333
-          },
-          {
-            "itemID": "expandedAreas:Palm_Tree_Seed",
-            "minQuantity": 1,
-            "maxQuantity": 2,
-            "weight": 1111
-          },
-          {
-            "itemID": "expandedAreas:Papaya_Tree_Seed",
-            "minQuantity": 1,
-            "maxQuantity": 2,
-            "weight": 909
-          },
-          {
-            "itemID": "expandedAreas:Pineapple_Seed",
-            "minQuantity": 1,
-            "maxQuantity": 2,
-            "weight": 769
-          },
-          {
-            "itemID": "melvorD:Magic_Tree_Seed",
-            "minQuantity": 1,
-            "maxQuantity": 2,
-            "weight": 667
-          },
-          {
-            "itemID": "melvorF:Poraxx_Seed",
-            "minQuantity": 1,
-            "maxQuantity": 2,
-            "weight": 556
-          },
-          {
-            "itemID": "melvorF:Barrentoe_Seed",
-            "minQuantity": 1,
-            "maxQuantity": 2,
-            "weight": 444
-          },
-          {
-            "itemID": "melvorD:Oxilyme_Seed",
-            "minQuantity": 1,
-            "maxQuantity": 2,
-            "weight": 333
-          },
-          {
-            "itemID": "melvorF:Pigtayle_Seed",
-            "minQuantity": 1,
-            "maxQuantity": 2,
-            "weight": 222
-          },
-          {
-            "itemID": "expandedAreas:Redwood_Tree_Seed",
-            "minQuantity": 1,
-            "maxQuantity": 1,
-            "weight": 100
-          },
-          {
-            "itemID": "expandedAreas:Nature_Essence",
-            "minQuantity": 10,
-            "maxQuantity": 20,
-            "weight": 2500
-          },
-          {
-            "itemID": "melvorD:Runite_Ore",
-            "minQuantity": 10,
-            "maxQuantity": 20,
-            "weight": 2000
-          },
-          {
-            "itemID": "melvorD:Rune_Essence",
-            "minQuantity": 750,
-            "maxQuantity": 1500,
-            "weight": 1667
-          },
-          {
-            "itemID": "melvorD:Yew_Logs",
-            "minQuantity": 35,
-            "maxQuantity": 70,
-            "weight": 1429
-          },
-          {
-            "itemID": "melvorD:Adamantite_Bar",
-            "minQuantity": 20,
-            "maxQuantity": 40,
-            "weight": 1250
-          },
-          {
-            "itemID": "melvorD:Coal_Ore",
-            "minQuantity": 100,
-            "maxQuantity": 200,
-            "weight": 1111
-          },
-          {
-            "itemID": "melvorF:Stack_Of_Bones",
-            "minQuantity": 6,
-            "maxQuantity": 12,
-            "weight": 1000
-          },
-          {
-            "itemID": "melvorD:Mahogany_Logs",
-            "minQuantity": 50,
-            "maxQuantity": 100,
-            "weight": 909
-          },
-          {
-            "itemID": "melvorD:Raw_Shark",
-            "minQuantity": 17,
-            "maxQuantity": 35,
-            "weight": 833
-          },
-          {
-            "itemID": "melvorD:Manta_Ray",
-            "minQuantity": 17,
-            "maxQuantity": 35,
-            "weight": 769
-          },
-          {
-            "itemID": "melvorF:Ranged_Assistance_Potion_IV",
-            "minQuantity": 5,
-            "maxQuantity": 10,
-            "weight": 714
-          },
-          {
-            "itemID": "melvorF:Jadestone_Bolts",
-            "minQuantity": 6,
-            "maxQuantity": 12,
-            "weight": 667
-          },
-          {
-            "itemID": "expandedAreas:Booberry",
-            "minQuantity": 125,
-            "maxQuantity": 250,
-            "weight": 556
-          },
-          {
-            "itemID": "expandedAreas:Coconut",
-            "minQuantity": 10,
-            "maxQuantity": 20,
-            "weight": 444
-          },
-          {
-            "itemID": "expandedAreas:Tanzanite_Scales",
-            "minQuantity": 250,
-            "maxQuantity": 500,
-            "weight": 111
-          },
-          {
-            "itemID": "expandedAreas:Serpentine_Scales",
-            "minQuantity": 250,
-            "maxQuantity": 500,
-            "weight": 111
-          },
-          {
-            "itemID": "expandedAreas:Magmatic_Scales",
-            "minQuantity": 250,
-            "maxQuantity": 500,
-            "weight": 111
-          }
-        ]
-      },
-      {
         "id": "Golden_Sceptre",
         "name": "Golden Sceptre",
         "category": "Loot",
@@ -16498,6 +16255,7 @@
         "category": "Herblore",
         "type": "Potion",
         "media": "assets/bank/aerisbrew1.png",
+        "customDescription": "-5% Auto Eat Threshold, +15% + 2 Hitpoints Level (hidden), +20% + 2 Defence Level (hidden), and -10% - 2 all other Combat Skill Levels.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -16573,6 +16331,7 @@
         "category": "Herblore",
         "type": "Potion",
         "media": "assets/bank/aerisbrew2.png",
+        "customDescription": "-5% Auto Eat Threshold, +15% + 2 Hitpoints Level (hidden), +20% + 2 Defence Level (hidden), and -10% - 2 all other Combat Skill Levels.",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -16645,6 +16404,7 @@
       {
         "id": "Aeris_Brew_III",
         "name": "Aeris Brew III",
+        "customDescription": "-5% Auto Eat Threshold, +15% + 2 Hitpoints Level (hidden), +20% + 2 Defence Level (hidden), and -10% - 2 all other Combat Skill Levels.",
         "category": "Herblore",
         "type": "Potion",
         "media": "assets/bank/aerisbrew3.png",
@@ -16720,6 +16480,7 @@
       {
         "id": "Aeris_Brew_IV",
         "name": "Aeris Brew IV",
+        "customDescription": "-5% Auto Eat Threshold, +15% + 2 Hitpoints Level (hidden), +20% + 2 Defence Level (hidden), and -10% - 2 all other Combat Skill Levels.",
         "category": "Herblore",
         "type": "Potion",
         "media": "assets/bank/aerisbrew4.png",
@@ -20301,6 +20062,7 @@
         "category": "Herblore",
         "type": "Potion",
         "media": "assets/bank/Barbar.png",
+        "customDescription": "+25% Strength Level (hidden), -50% Attack Level (hidden)",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -20333,6 +20095,7 @@
         "category": "Herblore",
         "type": "Potion",
         "media": "assets/bank/Keg_of_Barbar.png",
+        "customDescription": "+25% Strength Level (hidden), -50% Attack Level (hidden)",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
         "golbinRaidExclusive": false,
@@ -22242,6 +22005,7 @@
         },
         "combatEffects": [
           {
+            "customDescription": "50% chance to get Drunk (5% penalty to Attack Interval, Accuracy, Max Hit, Evasion, and Total Resistance) at the Start of the Fight",
             "effectID": "expandedAreas:Drunk",
             "chance": 50,
             "appliesWhen": "StartOfFight"
@@ -22273,6 +22037,7 @@
         },
         "combatEffects": [
           {
+            "customDescription": "Get Drunk (5% penalty to Attack Interval, Accuracy, Max Hit, Evasion, and Total Resistance) at the Start of the Fight",
             "effectID": "expandedAreas:Drunk",
             "appliesWhen": "StartOfFight"
           }
@@ -22371,6 +22136,7 @@
         "itemType": "Potion",
         "combatEffects": [
           {
+            "customDescription": "50% chance to get Drunk (5% penalty to Attack Interval, Accuracy, Max Hit, Evasion, and Total Resistance) at the Start of the Fight",
             "effectID": "expandedAreas:Drunk",
             "appliesWhen": "StartOfFight",
             "chance": 50
@@ -22381,6 +22147,7 @@
         },
         "conditionalModifiers": [
           {
+            "description": "+5% Lifesteal when Enemy is Bleeding",
             "condition": {
               "groupID": "melvorD:BleedDOT",
               "character": "Enemy",
@@ -22413,6 +22180,7 @@
         "itemType": "Potion",
         "combatEffects": [
           {
+            "customDescription": "Get Drunk (5% penalty to Attack Interval, Accuracy, Max Hit, Evasion, and Total Resistance) at the Start of the Fight",
             "effectID": "expandedAreas:Drunk",
             "appliesWhen": "StartOfFight"
           }
@@ -22422,6 +22190,7 @@
         },
         "conditionalModifiers": [
           {
+            "description": "+10% Lifesteal when Enemy is Bleeding",
             "condition": {
               "groupID": "melvorD:BleedDOT",
               "character": "Enemy",
@@ -22454,6 +22223,7 @@
         "itemType": "Potion",
         "combatEffects": [
           {
+            "customDescription": "50% chance to get Drunk (5% penalty to Attack Interval, Accuracy, Max Hit, Evasion, and Total Resistance) at the Start of the Fight",
             "effectID": "expandedAreas:Drunk",
             "chance": 50,
             "appliesWhen": "StartOfFight"
@@ -22461,6 +22231,7 @@
         ],
         "conditionalModifiers": [
           {
+            "description": "+10% Max Hit and Accuracy against Draconic Monsters",
             "condition": {
               "effectID": "expandedAreas:MonsterTypeDraconic",
               "character": "Enemy",
@@ -22494,20 +22265,22 @@
         "itemType": "Potion",
         "combatEffects": [
           {
+            "customDescription": "Get Drunk (5% penalty to Attack Interval, Accuracy, Max Hit, Evasion, and Total Resistance) at the Start of the Fight",
             "effectID": "expandedAreas:Drunk",
             "appliesWhen": "StartOfFight"
           }
         ],
         "conditionalModifiers": [
           {
+            "description": "+15% Max Hit and Accuracy against Draconic Monsters",
             "condition": {
               "effectID": "expandedAreas:MonsterTypeDraconic",
               "character": "Enemy",
               "type": "CombatEffect"
             },
             "modifiers": {
-              "maxHit": 10,
-              "accuracyRating": 10
+              "maxHit": 15,
+              "accuracyRating": 15
             }
           }
         ],
@@ -22533,6 +22306,7 @@
         "itemType": "Potion",
         "combatEffects": [
           {
+            "customDescription": "50% chance to get Drunk (5% penalty to Attack Interval, Accuracy, Max Hit, Evasion, and Total Resistance) at the Start of the Fight",
             "effectID": "expandedAreas:Drunk",
             "appliesWhen": "StartOfFight",
             "chance": 50
@@ -22568,6 +22342,7 @@
         "itemType": "Potion",
         "combatEffects": [
           {
+            "customDescription": "Get Drunk (5% penalty to Attack Interval, Accuracy, Max Hit, Evasion, and Total Resistance) at the Start of the Fight",
             "effectID": "expandedAreas:Drunk",
             "appliesWhen": "StartOfFight"
           },
@@ -22683,6 +22458,7 @@
         },
         "combatEffects": [
           {
+            "customDescription": "50% chance to get Drunk (5% penalty to Attack Interval, Accuracy, Max Hit, Evasion, and Total Resistance) at the Start of the Fight",
             "appliesWhen": "StartOfFight",
             "effectID": "expandedAreas:Drunk",
             "chance": 50
@@ -22717,6 +22493,7 @@
         },
         "combatEffects": [
           {
+            "customDescription": "Get Drunk (5% penalty to Attack Interval, Accuracy, Max Hit, Evasion, and Total Resistance) at the Start of the Fight",
             "appliesWhen": "StartOfFight",
             "effectID": "expandedAreas:Drunk"
           }
@@ -22749,8 +22526,9 @@
         },
         "combatEffects": [
           {
+            "customDescription": "50% chance to get Drunk (5% penalty to Attack Interval, Accuracy, Max Hit, Evasion, and Total Resistance) at the Start of the Fight",
             "appliesWhen": "StartOfFight",
-            "tableID": "expandedAreas:Drunk",
+            "effectID": "expandedAreas:Drunk",
             "chance": 50
           }
         ],
@@ -22779,8 +22557,9 @@
         },
         "combatEffects": [
           {
+            "customDescription": "Get Drunk (5% penalty to Attack Interval, Accuracy, Max Hit, Evasion, and Total Resistance) at the Start of the Fight",
             "appliesWhen": "StartOfFight",
-            "tableID": "expandedAreas:Drunk"
+            "effectID": "expandedAreas:Drunk"
           }
         ],
         "consumesOn": [
@@ -22902,10 +22681,10 @@
         "sellsFor": 610,
         "itemType": "Potion",
         "modifiers": {
-          "perfectCookChance": 5,
-          "successfulCookChance": 10,
-          "skillInterval": 5,
-          "masteryXP": -5
+          "perfectCookChance": 10,
+          "successfulCookChance": 20,
+          "skillInterval": 10,
+          "masteryXP": -10
         },
         "consumesOn": [
           {
@@ -23073,6 +22852,7 @@
         },
         "combatEffects": [
           {
+            "customDescription": "50% chance to get Drunk (5% penalty to Attack Interval, Accuracy, Max Hit, Evasion, and Total Resistance) at the Start of the Fight",
             "appliesWhen": "StartOfFight",
             "effectID": "expandedAreas:Drunk",
             "chance": 50
@@ -23104,6 +22884,7 @@
         },
         "combatEffects": [
           {
+            "customDescription": "Get Drunk (5% penalty to Attack Interval, Accuracy, Max Hit, Evasion, and Total Resistance) at the Start of the Fight",
             "appliesWhen": "StartOfFight",
             "effectID": "expandedAreas:Drunk"
           }
@@ -34006,6 +33787,254 @@
             "minQuantity": 1,
             "maxQuantity": 1,
             "weight": 1
+          }
+        ]
+      },
+      {
+        "id": "Toxic_Hoard",
+        "name": "Toxic Hoard",
+        "category": "Openable",
+        "type": "Chest",
+        "media": "assets/bank/Toxic_Hoard.png",
+        "ignoreCompletion": false,
+        "obtainFromItemLog": false,
+        "golbinRaidExclusive": false,
+        "sellsFor": 5000,
+        "itemType": "Openable",
+        "dropTable": [
+          {
+            "itemID": "expandedAreas:Tanzanite_Fang",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 40
+          },
+          {
+            "itemID": "expandedAreas:Serpentine_Fang",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 40
+          },
+          {
+            "itemID": "expandedAreas:Magmatic_Fang",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 40
+          },
+          {
+            "itemID": "expandedAreas:Zulrahs_Head_Tanzanite",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 40
+          },
+          {
+            "itemID": "expandedAreas:Zulrahs_Head_Serpentine",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 40
+          },
+          {
+            "itemID": "expandedAreas:Zulrahs_Head_Magmatic",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 40
+          },
+          {
+            "itemID": "melvorD:Death_Rune",
+            "minQuantity": 125,
+            "maxQuantity": 250,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorF:Havoc_Rune",
+            "minQuantity": 100,
+            "maxQuantity": 200,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorD:Chaos_Rune",
+            "minQuantity": 200,
+            "maxQuantity": 400,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorD:Oxilyme_Herb",
+            "minQuantity": 15,
+            "maxQuantity": 30,
+            "weight": 333
+          },
+          {
+            "itemID": "melvorF:Poraxx_Herb",
+            "minQuantity": 12,
+            "maxQuantity": 25,
+            "weight": 333
+          },
+          {
+            "itemID": "melvorF:Pigtayle_Herb",
+            "minQuantity": 5,
+            "maxQuantity": 10,
+            "weight": 333
+          },
+          {
+            "itemID": "melvorF:Barrentoe_Herb",
+            "minQuantity": 5,
+            "maxQuantity": 10,
+            "weight": 333
+          },
+          {
+            "itemID": "expandedAreas:Palm_Tree_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 2,
+            "weight": 1111
+          },
+          {
+            "itemID": "expandedAreas:Papaya_Tree_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 2,
+            "weight": 909
+          },
+          {
+            "itemID": "expandedAreas:Pineapple_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 2,
+            "weight": 769
+          },
+          {
+            "itemID": "melvorD:Magic_Tree_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 2,
+            "weight": 667
+          },
+          {
+            "itemID": "melvorF:Poraxx_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 2,
+            "weight": 556
+          },
+          {
+            "itemID": "melvorF:Barrentoe_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 2,
+            "weight": 444
+          },
+          {
+            "itemID": "melvorD:Oxilyme_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 2,
+            "weight": 333
+          },
+          {
+            "itemID": "melvorF:Pigtayle_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 2,
+            "weight": 222
+          },
+          {
+            "itemID": "expandedAreas:Redwood_Tree_Seed",
+            "minQuantity": 1,
+            "maxQuantity": 1,
+            "weight": 100
+          },
+          {
+            "itemID": "expandedAreas:Nature_Essence",
+            "minQuantity": 10,
+            "maxQuantity": 20,
+            "weight": 2500
+          },
+          {
+            "itemID": "melvorD:Runite_Ore",
+            "minQuantity": 10,
+            "maxQuantity": 20,
+            "weight": 2000
+          },
+          {
+            "itemID": "melvorD:Rune_Essence",
+            "minQuantity": 750,
+            "maxQuantity": 1500,
+            "weight": 1667
+          },
+          {
+            "itemID": "melvorD:Yew_Logs",
+            "minQuantity": 35,
+            "maxQuantity": 70,
+            "weight": 1429
+          },
+          {
+            "itemID": "melvorD:Adamantite_Bar",
+            "minQuantity": 20,
+            "maxQuantity": 40,
+            "weight": 1250
+          },
+          {
+            "itemID": "melvorD:Coal_Ore",
+            "minQuantity": 100,
+            "maxQuantity": 200,
+            "weight": 1111
+          },
+          {
+            "itemID": "melvorF:Stack_Of_Bones",
+            "minQuantity": 6,
+            "maxQuantity": 12,
+            "weight": 1000
+          },
+          {
+            "itemID": "melvorD:Mahogany_Logs",
+            "minQuantity": 50,
+            "maxQuantity": 100,
+            "weight": 909
+          },
+          {
+            "itemID": "melvorD:Raw_Shark",
+            "minQuantity": 17,
+            "maxQuantity": 35,
+            "weight": 833
+          },
+          {
+            "itemID": "melvorD:Manta_Ray",
+            "minQuantity": 17,
+            "maxQuantity": 35,
+            "weight": 769
+          },
+          {
+            "itemID": "melvorF:Ranged_Assistance_Potion_IV",
+            "minQuantity": 5,
+            "maxQuantity": 10,
+            "weight": 714
+          },
+          {
+            "itemID": "melvorF:Jadestone_Bolts",
+            "minQuantity": 6,
+            "maxQuantity": 12,
+            "weight": 667
+          },
+          {
+            "itemID": "expandedAreas:Booberry",
+            "minQuantity": 125,
+            "maxQuantity": 250,
+            "weight": 556
+          },
+          {
+            "itemID": "expandedAreas:Coconut",
+            "minQuantity": 10,
+            "maxQuantity": 20,
+            "weight": 444
+          },
+          {
+            "itemID": "expandedAreas:Tanzanite_Scales",
+            "minQuantity": 250,
+            "maxQuantity": 500,
+            "weight": 111
+          },
+          {
+            "itemID": "expandedAreas:Serpentine_Scales",
+            "minQuantity": 250,
+            "maxQuantity": 500,
+            "weight": 111
+          },
+          {
+            "itemID": "expandedAreas:Magmatic_Scales",
+            "minQuantity": 250,
+            "maxQuantity": 500,
+            "weight": 111
           }
         ]
       }
@@ -57049,25 +57078,7 @@
               "expandedAreas:MinersQuarry"
             ]
           },
-          "rareDrops": [
-            {
-              "itemID": "melvorD:Gold_Topaz_Ring",
-              "altItemID": "expandedAreas:Mysterious_Chest",
-              "quantity": 1,
-              "requirements": [
-                {
-                  "type": "ItemFound",
-                  "itemID": "expandedAreas:Skeleton_Key"
-                }
-              ],
-              "chance": {
-                "type": "TotalMasteryScaling",
-                "maxChance": 0.0005,
-                "baseChance": 0.000005,
-                "scalingFactor": 4e-8
-              }
-            }
-          ],
+          
           "rockData": [
             {
               "id": "Platinum_Ore",
@@ -59322,7 +59333,7 @@
           ],
           "minibar": {
             "defaultItems": [
-              "expandedAreas:Pick_of_Colossal_Excavation",
+              "expandedAreas:Infernal_Hammer",
               "melvorF:Blacksmiths_Hat",
               "melvorF:Blacksmiths_Body",
               "melvorF:Blacksmiths_Leggings",
