@@ -6502,134 +6502,7 @@
           "melvorD:Buff"
         ]
       },
-      {
-        "id": "DarkEnergySap",
-        "templateID": "melvorD:StackingSelfCountingModifier",
-        "name": "Dark Energy Sap",
-        "media": "assets/combat/status/darkenergysap.png",
-        "target": "Target",
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 5
-          },
-          {
-            "name": "initialStacks",
-            "initialValue": 1
-          },
-          {
-            "name": "stacksToAdd",
-            "initialValue": 1
-          },
-          {
-            "name": "maxStacks",
-            "initialValue": 20
-          }
-        ],
-        "statGroups": [
-          {
-            "name": "stacks",
-            "modifiers": {
-              "maxHitpoints": -2.5
-            }
-          }
-        ],
-        "effectGroups": [
-          "melvorD:Debuff"
-        ]
-      },
-      {
-        "id": "DarkEnergySapPlayer",
-        "templateID": "melvorD:StackingSelfCountingModifier",
-        "name": "Dark Energy Sap",
-        "media": "assets/combat/status/darkenergysap.png",
-        "target": "Target",
-        "parameters": [
-          {
-            "name": "turns",
-            "initialValue": 3
-          },
-          {
-            "name": "initialStacks",
-            "initialValue": 1
-          },
-          {
-            "name": "stacksToAdd",
-            "initialValue": 1
-          },
-          {
-            "name": "maxStacks",
-            "initialValue": 10
-          }
-        ],
-        "statGroups": [
-          {
-            "name": "stacks",
-            "modifiers": {
-              "maxHitpoints": -2
-            }
-          }
-        ],
-        "effectGroups": [
-          "melvorD:Debuff"
-        ]
-      },
-      {
-        "id": "CorporealBeastHeal0",
-        "templateID": "melvorD:Regen",
-        "name": "Dark Energy Heal",
-        "parameters": [
-          {
-            "name": "procs",
-            "initialValue": 1
-          },
-          {
-            "name": "interval",
-            "initialValue": 50
-          }
-        ],
-        "damageGroups": [
-          {
-            "name": "totalHealing",
-            "damage": [
-              {
-                "roll": false,
-                "character": "Attacker",
-                "maxRoll": "MaxHP",
-                "maxPercent": 5
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "DarkEnergyHealPlayer",
-        "templateID": "melvorD:Regen",
-        "name": "Dark Energy Heal",
-        "parameters": [
-          {
-            "name": "procs",
-            "initialValue": 1
-          },
-          {
-            "name": "interval",
-            "initialValue": 50
-          }
-        ],
-        "damageGroups": [
-          {
-            "name": "totalHealing",
-            "damage": [
-              {
-                "roll": false,
-                "character": "Attacker",
-                "maxRoll": "MaxHP",
-                "maxPercent": 0.5
-              }
-            ]
-          }
-        ]
-      },
+
       {
         "id": "BlightedAura",
         "templateID": "melvorD:StaticSelfCountingModifier",
@@ -17923,7 +17796,7 @@
         "name": "Karil's Repeating Crossbow",
         "category": "Combat",
         "type": "Ranged Weapon",
-        "media": "assets/bank/karils_hand_crossbow.png",
+        "media": "assets/bank/karils_crossbow.png",
         "customDescription": "<span class=\"text-warning\">When all of <strong>Karil the Tainted's Equipment</strong> is worn: +25% Chance to inflict a stack of Taint (-4% Ranged Evasion per stack, up to 25 stacks) on hit.</span>",
         "ignoreCompletion": false,
         "obtainFromItemLog": false,
