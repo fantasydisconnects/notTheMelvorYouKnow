@@ -88,10 +88,9 @@
     "combatEffectGroups": [],
     "combatEffects": [],
     "combatEffectTables": [],
-    "combatEffectTemplates": [
-
-    ],
+    "combatEffectTemplates": [],
     "combatPassives": [
+
       {
         "id": "Defender",
         "name": "Defender",

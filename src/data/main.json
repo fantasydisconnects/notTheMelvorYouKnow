@@ -806,7 +806,7 @@
             "damageType": "Custom",
             "character": "Attacker",
             "maxRoll": "Fixed",
-            "maxPercent": 71,
+            "maxPercent": 51,
             "roll": false
           }
         ],
@@ -825,7 +825,7 @@
         ],
         "cantMiss": false,
         "attackCount": 3,
-        "attackInterval": 1300,
+        "attackInterval": 2400,
         "lifesteal": 0,
         "name": "Stomp",
         "description": "Stamp the ground ${hitCount} times over ${duration}s, dealing ${attackDamageMaxValue0} damage each, each with a ${onHitEffect0chance}% chance on hit to inflict Stun for ${onHitEffect0turns} turn (Avoidable).",
@@ -860,7 +860,7 @@
             "initialParams": [
               {
                 "name": "turns",
-                "value": 2
+                "value": 1
               }
             ]
           }
@@ -2626,94 +2626,6 @@
           "melvorD:Fire",
           "melvorD:Elemental"
         ]
-      },
-      {
-        "id": "GraveTouch",
-        "name": "Grave Touch",
-        "media": "assets/combat/magic/grave_touch.png",
-        "level": 30,
-        "runesRequired": [
-          {
-            "id": "melvorD:Death_Rune",
-            "quantity": 1
-          },
-          {
-            "id": "melvorF:Spirit_Rune",
-            "quantity": 1
-          }
-        ],
-        "maxHit": 10,
-        "combatEffects": [
-          {
-            "chance": 25,
-            "effectID": "expandedAreas:HealImmunity",
-            "appliesWhen": "HitWithAttack",
-            "targetOverride": "Target",
-            "initialParams": [
-              {
-                "name": "turns",
-                "value": 3
-              }
-            ]
-          }
-        ],
-        "categories": [
-          "expandedAreas:Spirit",
-          "expandedAreas:Death"
-        ],
-        "spellbook": "expandedAreas:Occult",
-        "requiredItemID": "melvorF:Book_of_Occults"
-      },
-      {
-        "id": "WitherAway",
-        "name": "Wither Away",
-        "media": "assets/combat/magic/witheraway.svg",
-        "level": 65,
-        "runesRequired": [
-          {
-            "id": "melvorD:Death_Rune",
-            "quantity": 4
-          },
-          {
-            "id": "melvorD:Body_Rune",
-            "quantity": 6
-          },
-          {
-            "id": "melvorD:Blood_Rune",
-            "quantity": 2
-          }
-        ],
-        "maxHit": 20,
-        "combatEffects": [
-          {
-            "customDescription": "<br>Against Plantlike Monsters: 100% Chance to inflict Wither on hit (Enemy has -5% Max HP for 10 turns, takes 20% Max HP as damage over 20s)",
-            "appliesWhen": "HitWithAttack",
-            "chance": 100,
-            "condition": {
-              "character": "Enemy",
-              "effectID": "expandedAreas:MonsterTypePlantlike",
-              "type": "CombatEffect"
-            },
-            "effectID": "expandedAreas:Wither"
-          },
-          {
-            "customDescription": "<br>Against all other non-Undead Monsters: 25% Chance to inflict Wither on hit (Enemy has -5% Max HP for 10 turns, takes 20% Max HP as damage over 20s)",
-            "appliesWhen": "HitWithAttack",
-            "chance": 25,
-            "effectID": "expandedAreas:Wither",
-            "condition": {
-              "inverted": true,
-              "character": "Enemy",
-              "effectID": "expandedAreas:MonsterTypeUndead",
-              "type": "CombatEffect"
-            }
-          }
-        ],
-        "categories": [
-          "expandedAreas:Death"
-        ],
-        "spellbook": "expandedAreas:Occult",
-        "requiredItemID": "melvorF:Book_of_Occults"
       }
     ],
     "auroraSpells": [
@@ -4662,6 +4574,18 @@
     ],
     "combatAreas": [
       {
+        "id": "Corporeal_Beast_Lair",
+        "name": "Lair of Abhorrence",
+        "media": "assets/combat/combatAreas/corp.png",
+        "difficulty": [
+          5
+        ],
+        "monsterIDs": [
+          "expandedAreas:Corporeal_Beast"
+        ],
+        "entryRequirements": []
+      },
+      {
         "id": "Freeskies",
         "name": "The Freeskies",
         "media": "assets/combat/special/Freeskies.png",
@@ -6163,14 +6087,14 @@
           },
           {
             "name": "interval",
-            "initialValue": 2000
+            "initialValue": 3000
           }
         ],
         "statGroups": [
           {
             "name": "debuff",
             "modifiers": {
-              "maxHitpoints": -5
+              "maxHitpoints": -1
             }
           }
         ],
@@ -6182,7 +6106,7 @@
                 "character": "Target",
                 "roll": false,
                 "maxRoll": "MaxHP",
-                "maxPercent": 20
+                "maxPercent": 100
               }
             ],
             "applyDamageModifiers": false,
@@ -7966,7 +7890,7 @@
             },
             {
               "type": "String",
-              "value": "Taking 20% of Max HP as damage over 20s"
+              "value": "Taking 100% of Max HP as damage over 30s"
             },
             {
               "type": "Turns",
@@ -8124,12 +8048,49 @@
     ],
     "combatPassives": [
       {
-        "id": "VulnerabilityMelee",
-        "name": "Vulnerable to Melee",
-        "playerModifiers": {
-          "meleeAccuracyRating": 100,
-          "meleeMaxHit": 100
-        }
+        "id": "ProtectiveAura",
+        "name": "Protective Aura",
+        "customDescription": "he Enemy takes 50% less damage unless your attack style is Melee and your Stab Attack Bonus is >= 100.",
+        "conditionalModifiers": [
+          {
+            "modifiers": {
+              "damageDealt": -50
+            },
+            "condition": {
+              "type": "Some",
+              "conditions": [
+                {
+                  "type": "CombatType",
+                  "character": "Player",
+                  "thisAttackType": "ranged",
+                  "targetAttackType": "any"
+                },
+                {
+                  "type": "CombatType",
+                  "character": "Player",
+                  "thisAttackType": "magic",
+                  "targetAttackType": "any"
+                },
+                {
+                  "type": "Every",
+                  "conditions": [
+                    {
+                      "type": "EquipStatCompare",
+                      "statKey": "stabAttackBonus",
+                      "operator": "<"
+                    },
+                    {
+                      "type": "CombatType",
+                      "character": "Player",
+                      "thisAttackType": "melee",
+                      "targetAttackType": "any"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
       },
       {
         "id": "UndeadIII",
@@ -8484,7 +8445,7 @@
       {
         "id": "UnfairBossImmunities",
         "name": "Unfair Boss Immunities",
-        "customDescription": "Immune to Stun and Stunlikes, Poison, Fear, Drowsy, Death Magic, and Sleep",
+        "customDescription": "Immune to Stun and Stunlikes, Poison, Fear, Drowsy, and Sleep",
         "modifiers": {
           "effectImmunity": [
             {
@@ -8525,61 +8486,40 @@
       {
         "id": "DarkEnergyCore",
         "name": "Dark Energy Core",
-        "customDescription": "A little alien follows you around, applying 1 stack of Dark Energy Sap, reducing your max HP by 2.5% per hit (30% chance, up to 20 stacks). Periodically, the Beast will also heal for 5% of its maximum HP. When the Beast reaches 50% HP, the Core gives it 25% lifesteal and regen equal to 0.5% of the Beast's max HP.",
+        "customDescription": "When the Enemy takes damage >= 32 or attacks while below 50% HP, there's a 12.5% chance for a dark core of energy to spawn. When it does, it applies Wither, which deals 100% of your max HP over 30s and gives you -5% Max HP for 10 turns. While you are affected by Wither, the Enemy has +25% HP Regen.",
+        "conditionalModifiers": [
+          {
+            "condition": {
+              "character": "Player",
+              "effectID": "expandedAreas:Wither",
+              "type": "CombatEffect"
+            },
+            "modifiers": {
+              "hitpointRegeneration": 25
+            }
+          }
+        ],
         "combatEffects": [
           {
-            "appliesWhen": "PostAttack",
-            "effectID": "expandedAreas:DarkEnergySap",
-            "chance": 30
+            "appliesWhen": "HitByAttack",
+            "effectID": "expandedAreas:Wither",
+            "chance": 12.5,
+            "condition": {
+              "type": "DamageDealt",
+              "operator": ">",
+              "rhValue": 31
+            }
           },
           {
             "appliesWhen": "PostAttack",
-            "effectID": "expandedAreas:CorporealBeastHeal0",
-            "chance": 30
-          }
-        ],
-        "conditionalModifiers": [
-          {
+            "effectID": "expandedAreas:Wither",
+            "chance": 12.5,
             "condition": {
+              "character": "Enemy",
               "type": "Hitpoints",
-              "character": "Player",
-              "operator": "<=",
+              "operator": "<",
               "value": 50
-            },
-            "modifiers": {
-              "hPRegenBasedOnMaxHP": 0.5,
-              "lifesteal": 25
             }
-          }
-        ]
-      },
-      {
-        "id": "StabMeOrElse",
-        "name": "Stab Me or Else",
-        "customDescription": "You have 100% reduced Global Accuracy if you do not have a Stab Attack Bonus of at least 100.",
-        "conditionalModifiers": [
-          {
-            "condition": {
-              "type": "Some",
-              "conditions": [
-                {
-                  "statKey": "stabAttackBonus",
-                  "type": "EquipStatCompare",
-                  "operator": "<"
-                },
-                {
-                  "targetAttackType": "melee",
-                  "thisAttackType": "any",
-                  "character": "Enemy",
-                  "type": "CombatType",
-                  "inverted": true
-                }
-              ]
-            },
-            "modifiers": {
-              "accuracyRating": -100
-            },
-            "isNegative": true
           }
         ]
       },
@@ -8627,7 +8567,7 @@
       {
         "id": "BonusXP50",
         "name": "Bonus XP +50%",
-        "customDescription": "This monster provides 50% bonus combat XP",
+        "customDescription": "This monster provides +50% Combat XP",
         "playerModifiers": {
           "skillXP": [
             {
@@ -16966,33 +16906,14 @@
         ],
         "modifiers": {
           "prayerPointCost": 750,
-          "damageTakenAddedAsPrayerPoints": 4,
+          "damageTakenAddedAsPrayerPoints": 40,
           "flatResistanceWithActivePrayer": [
             {
               "damageTypeID": "melvorD:Normal",
               "value": 4
             }
           ]
-        },
-        "combatEffects": [
-          {
-            "customDescription": "30% chance on attacking to apply 1 stack that reduces Enemy Max HP by 2% per stack (up to 10 stacks)",
-            "appliesWhen": "PostAttack",
-            "effectID": "expandedAreas:DarkEnergySapPlayer",
-            "chance": 30
-          },
-          {
-            "customDescription": "30% chance on attacking to instantly regen for 0.5% of your Max HP",
-            "appliesWhen": "PostAttack",
-            "effectID": "expandedAreas:DarkEnergyHealPlayer",
-            "chance": 30,
-            "condition": {
-              "effectID": "expandedAreas:DarkEnergySapPlayer",
-              "character": "Enemy",
-              "type": "CombatEffect"
-            }
-          }
-        ]
+        }
       },
       {
         "itemType": "Equipment",
@@ -38243,16 +38164,16 @@
         "name": "Abhorrent Beast",
         "media": "assets/combat/monsters/corp.png",
         "levels": {
-          "Hitpoints": 4000,
-          "Attack": 640,
-          "Strength": 640,
-          "Defence": 620,
-          "Ranged": 300,
-          "Magic": 700
+          "Hitpoints": 2000,
+          "Attack": 320,
+          "Strength": 320,
+          "Defence": 310,
+          "Ranged": 150,
+          "Magic": 350
         },
         "pet": {
           "id": "expandedAreas:Dark_Core",
-          "quantity": 500
+          "quantity": 50
         },
         "equipmentStats": [
           {
@@ -38265,32 +38186,30 @@
           },
           {
             "key": "meleeDefenceBonus",
-            "value": 100
+            "value": 50
           },
           {
             "key": "magicDefenceBonus",
-            "value": 300
+            "value": 150
           },
           {
             "key": "rangedDefenceBonus",
-            "value": 460
+            "value": 230
           },
           {
             "key": "damageReduction",
-            "value": 50
+            "value": 25
           }
         ],
         "ignoreCompletion": false,
         "attackType": "magic",
         "specialAttacks": [
           "expandedAreas:Stomp",
-          "expandedAreas:TheTongue",
-          "melvorF:CurseofFear",
-          "melvorF:PenetratingSpikeShot"
+          "expandedAreas:TheTongue"
         ],
         "passives": [
+          "expandedAreas:ProtectiveAura",
           "expandedAreas:UnfairBossImmunities",
-          "expandedAreas:VulnerabilityMelee",
           "expandedAreas:DarkEnergyCore"
         ],
         "lootChance": 100,
@@ -60786,33 +60705,6 @@
       }
     ],
     "slayerAreas": [
-      {
-        "id": "Corporeal_Beast_Lair",
-        "name": "Lair of Abhorrence",
-        "media": "assets/combat/combatAreas/corp.png",
-        "difficulty": [
-          6
-        ],
-        "monsterIDs": [
-          "expandedAreas:Corporeal_Beast"
-        ],
-        "entryRequirements": [],
-        "pet": {
-          "petID": "expandedAreas:Dark_Core",
-          "weight": 5000
-        },
-        "areaEffectDescription": "The Abhorrent Beast takes ${effectValue}% less damage from Magic and Ranged attacks. You have -${effectValue}% Magic and Ranged Accuracy.",
-        "areaEffect": {
-          "target": "Player",
-          "magnitude": 150,
-          "modifiers": {
-            "rangedMaxHit": -1,
-            "rangedAccuracyRating": -1,
-            "magicMaxHit": -1,
-            "magicAccuracyRating": -1
-          }
-        }
-      },
       {
         "id": "Mole_Lair",
         "name": "Big Ol' Mole Hole",
