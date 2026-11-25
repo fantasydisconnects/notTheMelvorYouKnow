@@ -821,3 +821,72 @@ SAE v0.9.6.6 - The Balance Patch Part 6
 
 ### Equipment
 - Divine and Elysian Spirit Shield gain resistance effect fixed to trigger on being attacked as intended. Previously triggered after already hit.
+
+SAE v0.9.6.6 - The Balance Patch Part 6
+# Additions
+
+## Combat
+
+### Combat effects
+
+#### Corruption
+- Torag and Torag's set now apply 1 stack of Corruption, which gives +2% Attack Interval per stack, up to 25 stacks.
+
+#### Defiled
+- Verac and Verac's set now have a 25% chance for attacks to automatically hit.
+
+# Changes
+
+## Combat
+
+### Combat effects
+
+#### Blighted
+- Ahrim's Blight effect changed to decrease flat melee max hit by 10 per stack, up to 100 stacks.
+
+#### Tainted
+- Karil's Taint effect changed to give enemy -4% Ranged Evasion per stack, up to 25 stacks.
+
+### Special attacks
+
+#### Defiling Strike
+- Removed.
+
+## Items
+
+### Equipment
+
+#### Bolt Racks
+- Ranged Strength Bonus increased to +80 and decreased to +0 UNLESS equipped with Karil's Crossbow. That should fix any of the issues the bolts were having previously.
+
+#### Karil's Armor
+- All Karil's armor equipment stats changed to match Ancient D-hide (U)
+
+#### Karil's Dual Crossbows
+- Changed back to Karil's Repeating Crossbow. Now has 25% chance to fire two simultaneous shots that deal 100% on the first, and 50% on the second. Attack Interval decreased to 2.8s. Ranged attack and strength bonus slightly increased to compensate.
+
+#### Guthan's Warspear
+- Damaged Reduction removed. Stats changed to +150 Stab, Slash, Block, and Strength. Defence decreased to +75.
+
+#### Linza's Longsword
+- Equipment stats increased to +100 Stab, +118 Slash, +118 Block, and +201 Strength. Melee Defence Bonus decreased to +21.
+
+#### Torag's Twinhammer
+- Equipment stats changed to +100 Slash and Block, +300 Strength, 4.2s attack interval
+
+#### Verac's Flail
+- Equipment stats changed to +25 Stab, +110 Slash and Block, +165 Strength, 3.3s attack interval
+
+### Openable
+- Charnel Chest and Barrows Sarcophagi have had their bolt rack reward amounts doubled.
+
+## Item Synergies
+
+### Guthan's set + Amulet of the Damned
+- Now gives +100 Flat Max HP
+
+### Torag's set + Amulet of the Damned
+- Now gives +10% Defence Levels added as Hidden Levels per 10% HP missing
+
+### Verac's set + Amulet of the Damned
+- Now gives -7 Flat Prayer Point Cost

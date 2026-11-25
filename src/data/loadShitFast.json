@@ -2,18 +2,118 @@
   "$schema": "https://melvoridle.com/assets/schema/gameData.json",
   "namespace": "expandedAreas",
   "data": {
-    "attacks": [],
+    "attacks": [
+      {
+        "id": "Parry",
+        "name": "Parry",
+        "description": "The Enemy's sunken eyes gaze deeply into your soul, inflicting Fear for ${onHitEffect0turns} turn(s).",
+        "descriptionGenerator": "The Enemy gazes at you. <HitEffect>.",
+        "defaultChance": 25,
+        "damage": [],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Fear",
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "cantMiss": true,
+        "canNormalAttack": true,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "TerrifyingGaze",
+        "name": "TerrifyingGaze",
+        "description": "The Enemy's sunken eyes gaze deeply into your soul, inflicting Fear for ${onHitEffect0turns} turn(s).",
+        "descriptionGenerator": "The Enemy gazes at you. <HitEffect>.",
+        "defaultChance": 25,
+        "damage": [],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "effectID": "melvorD:Fear",
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "cantMiss": true,
+        "canNormalAttack": true,
+        "attackCount": 1,
+        "attackInterval": 50,
+        "lifesteal": 0,
+        "usesRunesPerProc": false
+      },
+      {
+        "id": "RottenFist",
+        "name": "Rotten Fist",
+        "description": "The Enemy attacks twice, each dealing up to ${attackDamageMaxValue0}% of its normal damage. On a hit, has a ${onHitEffect0chance}% chance to apply a random Curse.",
+        "descriptionGenerator": "Make <count> attacks that deal <damage>. On hit, <hitEffect>.",
+        "defaultChance": 75,
+        "damage": [
+          {
+            "damageType": "Normal",
+            "amplitude": 100
+          }
+        ],
+        "prehitEffects": [],
+        "onhitEffects": [
+          {
+            "tableID": "melvorF:RandomCurse",
+            "chance": 25
+          }
+        ],
+        "cantMiss": false,
+        "attackCount": 2,
+        "attackInterval": 500,
+        "lifesteal": 0,
+        "usesRunesPerProc": false
+      }
+    ],
     "attackSpells": [],
     "auroraSpells": [],
     "bankSortOrder": [],
     "combatAreas": [],
     "combatEffectGroups": [],
-    "combatEffects": [
+    "combatEffects": [],
+    "combatEffectTables": [],
+    "combatEffectTemplates": [
 
     ],
-    "combatEffectTables": [],
-    "combatEffectTemplates": [],
-    "combatPassives": [],
+    "combatPassives": [
+      {
+        "id": "Defender",
+        "name": "Defender",
+        "combatEffects": [
+          {
+            "appliesWhen": "BeingAttacked",
+            "chance": 25,
+            "effectID": "expandedAreas:Reinforce",
+            "initialParams": [
+              {
+                "name": "turns",
+                "value": 1
+              },
+              {
+                "name": "magnitude",
+                "value": 50
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "dungeons": [],
     "randomGems": [],
     "items": [],

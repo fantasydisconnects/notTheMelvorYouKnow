@@ -3639,6 +3639,12 @@
       },
       {
         "id": "melvorF:Mummy",
+        "specialAttacks": {
+          "add": [
+            "expandedAreas:RottenFist",
+            "expandedAreas:TerrifyingGaze"
+          ]
+        },
         "passives": {
           "add": [
             "expandedAreas:MonsterTypeUndead"
@@ -4676,7 +4682,8 @@
         },
         "passives": {
           "add": [
-            "expandedAreas:MonsterTypeStrange"
+            "expandedAreas:MonsterTypeHellish",
+            "expandedAreas:MonsterTypeHumanoid"
           ]
         }
       },
